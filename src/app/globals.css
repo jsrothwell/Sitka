@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  /* Sitka Light Mode Tokens */
+  --background: 250 250 250;
+  --surface: 255 255 255;
+  --surface-raised: 255 255 255;
+  --surface-overlay: 255 255 255;
+  --border: 229 229 229;
+  --border-subtle: 245 245 245;
+  --text-primary: 23 23 23;
+  --text-secondary: 82 82 82;
+  --text-tertiary: 163 163 163;
+  --accent: 139 109 255;
+  --accent-subtle: 226 221 255;
+  --accent-foreground: 255 255 255;
+
+  /* Glass effect tokens */
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 0 0 1px rgba(0,0,0,0.06), 0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+
+  --sidebar-width: 260px;
+  --header-height: 60px;
+}
+
+.dark {
+  /* Sitka Dark Mode Tokens */
+  --background: 10 10 10;
+  --surface: 23 23 23;
+  --surface-raised: 30 30 30;
+  --surface-overlay: 38 38 38;
+  --border: 38 38 38;
+  --border-subtle: 30 30 30;
+  --text-primary: 250 250 250;
+  --text-secondary: 163 163 163;
+  --text-tertiary: 82 82 82;
+  --accent: 139 109 255;
+  --accent-subtle: 66 35 163;
+  --accent-foreground: 255 255 255;
+
+  --glass-bg: rgba(23, 23, 23, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 8px 40px rgba(0,0,0,0.4), 0 2px 12px rgba(0,0,0,0.3);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: rgb(var(--background));
+  color: rgb(var(--text-primary));
+  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Liquid Glass utility */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--border));
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--text-tertiary));
+}
+
+/* Smooth theme transitions */
+body,
+.glass,
+nav,
+aside {
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid rgb(var(--accent));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(139, 109, 255, 0.2);
+  color: rgb(var(--text-primary));
+}
