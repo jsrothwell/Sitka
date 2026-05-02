@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import { Play } from "lucide-react";
 import { cn } from "@/lib/cn";
 
@@ -11,7 +10,7 @@ const CURVES = [
     token: "motion.easing.spring",
     css: "cubic-bezier(0.16, 1, 0.3, 1)",
     swift: ".spring(response: 0.4, dampingFraction: 0.8)",
-    framer: { type: "spring", stiffness: 300, damping: 30 },
+    duration: "600ms",
     description: "The default for interactive elements. Energetic exit, settled arrival.",
   },
   {
@@ -19,7 +18,7 @@ const CURVES = [
     token: "motion.easing.springBouncy",
     css: "cubic-bezier(0.34, 1.56, 0.64, 1)",
     swift: ".spring(response: 0.4, dampingFraction: 0.6)",
-    framer: { type: "spring", stiffness: 400, damping: 20 },
+    duration: "600ms",
     description: "For playful micro-interactions. Overshoots briefly before settling.",
   },
   {
@@ -27,7 +26,7 @@ const CURVES = [
     token: "motion.easing.easeOut",
     css: "cubic-bezier(0, 0, 0.2, 1)",
     swift: ".easeOut(duration: 0.25)",
-    framer: { duration: 0.25, ease: [0, 0, 0.2, 1] },
+    duration: "400ms",
     description: "Elements entering from off-screen. Fast start, slow settle.",
   },
   {
@@ -35,7 +34,7 @@ const CURVES = [
     token: "motion.easing.easeIn",
     css: "cubic-bezier(0.4, 0, 1, 1)",
     swift: ".easeIn(duration: 0.2)",
-    framer: { duration: 0.2, ease: [0.4, 0, 1, 1] },
+    duration: "400ms",
     description: "Elements leaving the screen. Builds speed before exit.",
   },
   {
@@ -43,7 +42,7 @@ const CURVES = [
     token: "motion.easing.easeInOut",
     css: "cubic-bezier(0.4, 0, 0.2, 1)",
     swift: ".easeInOut(duration: 0.3)",
-    framer: { duration: 0.3, ease: [0.4, 0, 0.2, 1] },
+    duration: "500ms",
     description: "Cross-fades and morph transitions. Symmetric, balanced.",
   },
   {
@@ -51,7 +50,7 @@ const CURVES = [
     token: "motion.easing.linear",
     css: "linear",
     swift: ".linear(duration: 0.15)",
-    framer: { duration: 0.15, ease: "linear" },
+    duration: "500ms",
     description: "Looping animations only — spinners, progress, continuous motion.",
   },
 ] as const;
@@ -63,6 +62,30 @@ const DURATIONS = [
   { name: "Slow", value: "400ms", use: "Page transitions, modal open/close" },
   { name: "Slower", value: "600ms", use: "Onboarding, first-load emphasis" },
 ];
+
+function Ball({ css, duration }: { css: string; duration: string }) {
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    // Double rAF: first frame lets the element mount at left:12px with no
+    // transition, second frame applies the transition and triggers the animation.
+    const id = requestAnimationFrame(() => {
+      requestAnimationFrame(() => setActive(true));
+    });
+    return () => cancelAnimationFrame(id);
+  }, []);
+
+  return (
+    <div
+      className="absolute top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg bg-[rgb(var(--accent))]"
+      style={{
+        left: active ? "calc(100% - 44px)" : "12px",
+        transition: active ? `left ${duration} ${css}` : "none",
+        boxShadow: "0 0 0 1px rgb(var(--accent) / 0.3), 0 0 12px rgb(var(--accent) / 0.25)",
+      }}
+    />
+  );
+}
 
 function CurveDemo({ curve }: { curve: (typeof CURVES)[number] }) {
   const [key, setKey] = useState(0);
@@ -85,13 +108,7 @@ function CurveDemo({ curve }: { curve: (typeof CURVES)[number] }) {
 
       {/* Animation strip */}
       <div className="relative h-12 mb-4 bg-[rgb(var(--background))] rounded-lg border border-[rgb(var(--border))] overflow-hidden">
-        <motion.div
-          key={key}
-          initial={{ x: 12 }}
-          animate={{ x: "calc(100% - 44px)" }}
-          transition={curve.framer as Parameters<typeof motion.div>[0]["transition"]}
-          className="absolute top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg bg-[rgb(var(--accent))] shadow-[0_0_0_1px_rgba(139,109,255,0.3),0_0_12px_rgba(139,109,255,0.3)]"
-        />
+        <Ball key={key} css={curve.css} duration={curve.duration} />
       </div>
 
       <p className="text-[12px] text-[rgb(var(--text-secondary))] mb-3 leading-relaxed">

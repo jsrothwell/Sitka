@@ -5,6 +5,7 @@ import { PropsTable } from "@/components/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, Download, Plus, Trash2 } from "lucide-react";
+import { ButtonMobileDemo } from "@/components/docs/ComponentMobileDemos";
 
 export const metadata: Metadata = { title: "Button" };
 
@@ -501,6 +502,42 @@ export default function ButtonPage() {
                   <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{row.property}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px]">{row.value}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]"><code className="font-mono text-[11px]">{row.easing}</code></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Mobile */}
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Mobile</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
+          Buttons on touch screens need larger hit areas and thoughtful sizing. Use the viewport toggle above any preview to see how buttons reflow at 390px.
+        </p>
+        <ComponentPreview className="mb-6">
+          <ButtonMobileDemo />
+        </ComponentPreview>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                {["Scenario", "Guidance"].map((h) => (
+                  <th key={h} className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { scenario: "Touch target", guidance: "Minimum 44×44 pt. The md size (h-10 / 40px) is borderline — prefer lg for primary CTAs on mobile." },
+                { scenario: "Primary CTA", guidance: "Use w-full on the primary action at the bottom of a form or screen. Full-width buttons are easier to tap and establish visual hierarchy." },
+                { scenario: "Icon-only buttons", guidance: "Use size=\"icon\" (44px) not a smaller size. Add a tooltip or visible label nearby since hover tooltips don't work on touch." },
+                { scenario: "Haptic feedback", guidance: "On iOS/Android, trigger UIImpactFeedbackGenerator or Vibration.vibrate() on press for tactile confirmation on destructive or primary actions." },
+                { scenario: "Button groups", guidance: "Avoid more than 2 side-by-side buttons on narrow screens. Stack vertically or use a split-button to consolidate." },
+              ].map((row, i) => (
+                <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
+                  <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap">{row.scenario}</td>
+                  <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.guidance}</td>
                 </tr>
               ))}
             </tbody>

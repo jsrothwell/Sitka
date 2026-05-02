@@ -51,7 +51,7 @@ export function ColorPalette() {
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Brand</h2>
         <p className="text-[13px] text-[rgb(var(--text-secondary))] mb-4">
-          The violet spectrum. <code className="font-mono text-[rgb(var(--accent))]">brand.500</code> is the primary accent.
+          The spruce green spectrum. <code className="font-mono text-[rgb(var(--accent))]">brand.500</code> is the primary accent.
         </p>
         <div className="grid grid-cols-5 md:grid-cols-11 gap-2">
           {Object.entries(tokens.color.brand).map(([k, v]) => (
@@ -118,7 +118,7 @@ export function ColorPalette() {
                 { token: "--border", light: "neutral.200 (#e5e5e5)", dark: "neutral.800 (#262626)" },
                 { token: "--text-primary", light: "neutral.900 (#171717)", dark: "neutral.50 (#fafafa)" },
                 { token: "--text-secondary", light: "neutral.600 (#525252)", dark: "neutral.400 (#a3a3a3)" },
-                { token: "--accent", light: "brand.500 (#8b6dff)", dark: "brand.500 (#8b6dff)" },
+                { token: "--accent", light: "brand.500 (#34a865)", dark: "brand.500 (#34a865)" },
               ].map((row, i) => (
                 <tr key={row.token} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
                   <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{row.token}</code></td>

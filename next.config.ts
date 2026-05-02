@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  turbopack: {
-    root: __dirname,
-  },
+  // Configured for Webpack to bypass Turbopack root-inference issues
 };
 
 export default nextConfig;

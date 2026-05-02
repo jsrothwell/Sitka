@@ -1,0 +1,590 @@
+import type { Metadata } from "next";
+import { PageHeader } from "@/components/docs/PageHeader";
+import { ComponentPreview } from "@/components/ui/ComponentPreview";
+import { PlatformTabs } from "@/components/ui/PlatformTabs";
+import { CreateProjectForm, MultiStepForm } from "@/components/docs/FormDemo";
+
+export const metadata: Metadata = { title: "Form" };
+
+const CODE = {
+  react: {
+    filename: "CreateProjectForm.tsx",
+    code: `"use client";
+
+import { useState } from "react";
+import { Input } from "@/components/ui/Input";
+import { RadioGroup, Radio } from "@/components/ui/Radio";
+import { Switch } from "@/components/ui/Switch";
+import { Button } from "@/components/ui/Button";
+
+type FormValues = {
+  name: string;
+  description: string;
+  visibility: "private" | "team" | "public";
+  emailAlerts: boolean;
+};
+
+export function CreateProjectForm() {
+  const [values, setValues] = useState<FormValues>({
+    name: "", description: "", visibility: "private", emailAlerts: true,
+  });
+  const [errors, setErrors] = useState<Partial<FormValues>>({});
+  const [loading, setLoading] = useState(false);
+
+  function validate() {
+    const errs: Partial<Record<keyof FormValues, string>> = {};
+    if (!values.name.trim()) errs.name = "Project name is required.";
+    else if (values.name.trim().length < 3) errs.name = "Must be at least 3 characters.";
+    return errs;
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    const errs = validate();
+    if (Object.keys(errs).length) { setErrors(errs); return; }
+    setLoading(true);
+    await submitToAPI(values);
+    setLoading(false);
+  }
+
+  return (
+    <form onSubmit={handleSubmit} noValidate className="space-y-6">
+      {/* Section: Basic info */}
+      <fieldset className="space-y-4">
+        <legend className="text-label-uppercase">Basic info</legend>
+        <Input
+          label="Project name"
+          value={values.name}
+          onChange={(e) => {
+            setValues({ ...values, name: e.target.value });
+            setErrors({ ...errors, name: "" });
+          }}
+          onBlur={() => setErrors(validate())}
+          error={errors.name}
+          required
+        />
+      </fieldset>
+
+      {/* Section: Visibility */}
+      <fieldset className="space-y-3">
+        <legend className="text-label-uppercase">Visibility</legend>
+        <RadioGroup value={values.visibility} onChange={(v) => setValues({ ...values, visibility: v })}>
+          <Radio value="private" label="Private"  helperText="Only you" />
+          <Radio value="team"    label="Team"      helperText="All members" />
+          <Radio value="public"  label="Public"    helperText="Anyone with the link" />
+        </RadioGroup>
+      </fieldset>
+
+      {/* Section: Notifications */}
+      <fieldset className="space-y-3">
+        <legend className="text-label-uppercase">Notifications</legend>
+        <Switch
+          label="Email alerts"
+          checked={values.emailAlerts}
+          onChange={(e) => setValues({ ...values, emailAlerts: e.target.checked })}
+        />
+      </fieldset>
+
+      <Button type="submit" loading={loading}>Create project</Button>
+    </form>
+  );
+}`,
+  },
+  html: {
+    filename: "form.html",
+    code: `<form class="sitka-form" id="createProjectForm" novalidate>
+
+  <!-- Section -->
+  <fieldset class="form-section">
+    <legend class="form-section-title">Basic info</legend>
+
+    <div class="form-field">
+      <label class="form-label" for="projectName">
+        Project name <span class="form-required" aria-hidden="true">*</span>
+      </label>
+      <input
+        class="form-input"
+        id="projectName"
+        type="text"
+        placeholder="e.g. Design System v2"
+        required
+        minlength="3"
+        aria-describedby="projectNameError"
+      />
+      <p class="form-error" id="projectNameError" role="alert" hidden></p>
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="projectDesc">Description</label>
+      <textarea class="form-textarea" id="projectDesc" rows="3"
+        placeholder="What is this project for?"></textarea>
+    </div>
+  </fieldset>
+
+  <hr class="form-divider" />
+
+  <!-- Visibility radio group -->
+  <fieldset class="form-section">
+    <legend class="form-section-title">Visibility</legend>
+    <div class="form-radio-group" role="radiogroup" aria-labelledby="visibilityLegend">
+      <label class="form-radio">
+        <input type="radio" name="visibility" value="private" checked />
+        <span class="form-radio-box"></span>
+        <span class="form-radio-label">
+          Private
+          <span class="form-radio-helper">Only you can see this project</span>
+        </span>
+      </label>
+      <label class="form-radio">
+        <input type="radio" name="visibility" value="team" />
+        <span class="form-radio-box"></span>
+        <span class="form-radio-label">
+          Team
+          <span class="form-radio-helper">All team members can edit</span>
+        </span>
+      </label>
+      <label class="form-radio">
+        <input type="radio" name="visibility" value="public" />
+        <span class="form-radio-box"></span>
+        <span class="form-radio-label">
+          Public
+          <span class="form-radio-helper">Anyone with the link can view</span>
+        </span>
+      </label>
+    </div>
+  </fieldset>
+
+  <hr class="form-divider" />
+
+  <!-- Switches -->
+  <fieldset class="form-section">
+    <legend class="form-section-title">Notifications</legend>
+    <label class="form-switch">
+      <input type="checkbox" role="switch" checked aria-checked="true" />
+      <span class="form-switch-track">
+        <span class="form-switch-thumb"></span>
+      </span>
+      <span class="form-switch-label">
+        Email alerts
+        <span class="form-switch-helper">Activity in this project</span>
+      </span>
+    </label>
+  </fieldset>
+
+  <!-- Actions -->
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Create project</button>
+  </div>
+
+</form>
+
+<style>
+  .sitka-form { display: flex; flex-direction: column; gap: 0; }
+
+  .form-section {
+    border: none; padding: 0 0 24px;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .form-section-title {
+    display: block;
+    font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.07em;
+    color: rgb(var(--text-tertiary));
+    margin-bottom: 4px;
+  }
+
+  .form-field { display: flex; flex-direction: column; gap: 6px; }
+
+  .form-label {
+    font-size: 12px; font-weight: 500;
+    color: rgb(var(--text-secondary));
+  }
+  .form-required { color: rgb(var(--accent)); }
+
+  .form-input, .form-textarea {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 8px;
+    border: 1px solid rgb(var(--border));
+    background: rgb(var(--surface));
+    color: rgb(var(--text-primary));
+    font-size: 13px;
+    outline: none;
+    transition: border-color 150ms;
+  }
+  .form-textarea { height: auto; padding: 8px 12px; resize: vertical; }
+  .form-input:focus, .form-textarea:focus {
+    border-color: rgb(var(--accent));
+    box-shadow: 0 0 0 3px rgb(var(--accent) / 0.15);
+  }
+  .form-input[aria-invalid="true"] {
+    border-color: #f87171;
+    box-shadow: 0 0 0 3px rgba(248,113,113,.15);
+  }
+
+  .form-error {
+    font-size: 12px; color: #f87171;
+    display: flex; align-items: center; gap: 4px;
+  }
+
+  .form-radio-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-radio {
+    display: flex; align-items: flex-start; gap: 10px; cursor: pointer;
+  }
+  .form-radio input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .form-radio-box {
+    width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; margin-top: 1px;
+    border: 1.5px solid rgb(var(--border));
+    background: rgb(var(--surface));
+    transition: all 150ms;
+  }
+  .form-radio input:checked + .form-radio-box {
+    border-color: rgb(var(--accent));
+    background: rgb(var(--accent));
+    box-shadow: inset 0 0 0 3px rgb(var(--surface));
+  }
+  .form-radio-label {
+    display: flex; flex-direction: column; gap: 1px;
+    font-size: 13px; color: rgb(var(--text-primary));
+  }
+  .form-radio-helper { font-size: 11px; color: rgb(var(--text-tertiary)); }
+
+  .form-switch {
+    display: flex; align-items: flex-start; gap: 10px; cursor: pointer;
+  }
+  .form-switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .form-switch-track {
+    width: 36px; height: 20px; border-radius: 10px; flex-shrink: 0; margin-top: 1px;
+    background: rgb(var(--border));
+    transition: background 150ms;
+    position: relative;
+  }
+  .form-switch input:checked ~ .form-switch-track {
+    background: rgb(var(--accent));
+  }
+  .form-switch-thumb {
+    position: absolute; top: 2px; left: 2px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: white;
+    transition: transform 150ms;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  }
+  .form-switch input:checked ~ .form-switch-track .form-switch-thumb {
+    transform: translateX(16px);
+  }
+  .form-switch-label {
+    display: flex; flex-direction: column; gap: 1px;
+    font-size: 13px; color: rgb(var(--text-primary));
+  }
+  .form-switch-helper { font-size: 11px; color: rgb(var(--text-tertiary)); }
+
+  .form-divider {
+    border: none;
+    border-top: 1px solid rgb(var(--border-subtle));
+    margin: 0 0 24px;
+  }
+
+  .form-actions {
+    display: flex; justify-content: flex-end;
+    padding-top: 4px;
+  }
+</style>
+
+<script>
+  const form = document.getElementById("createProjectForm");
+  const nameInput = document.getElementById("projectName");
+  const nameError = document.getElementById("projectNameError");
+
+  function validateName() {
+    const val = nameInput.value.trim();
+    if (!val) return "Project name is required.";
+    if (val.length < 3) return "Must be at least 3 characters.";
+    return "";
+  }
+
+  nameInput.addEventListener("blur", () => {
+    const msg = validateName();
+    nameError.hidden = !msg;
+    nameError.textContent = msg;
+    nameInput.setAttribute("aria-invalid", msg ? "true" : "false");
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const msg = validateName();
+    if (msg) {
+      nameError.hidden = false;
+      nameError.textContent = msg;
+      nameInput.setAttribute("aria-invalid", "true");
+      nameInput.focus();
+      return;
+    }
+    // Submit to API…
+  });
+</script>`,
+  },
+  swift: {
+    filename: "CreateProjectView.swift",
+    code: `import SwiftUI
+
+enum Visibility: String, CaseIterable {
+    case private_ = "Private"
+    case team     = "Team"
+    case public_  = "Public"
+
+    var helper: String {
+        switch self {
+        case .private_: return "Only you can see this project"
+        case .team:     return "All team members can edit"
+        case .public_:  return "Anyone with the link can view"
+        }
+    }
+}
+
+struct CreateProjectView: View {
+    @State private var name          = ""
+    @State private var description   = ""
+    @State private var visibility    = Visibility.private_
+    @State private var emailAlerts   = true
+    @State private var weeklyDigest  = false
+    @State private var nameError     = ""
+    @State private var isSubmitting  = false
+    @State private var submitted     = false
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                // ── Basic info ────────────────────────────────────
+                Section("Basic Info") {
+                    TextField("Project name", text: $name)
+                        .onChange(of: name) { nameError = "" }
+                    if !nameError.isEmpty {
+                        Label(nameError, systemImage: "exclamationmark.circle")
+                            .foregroundStyle(.red)
+                            .font(.caption)
+                    }
+
+                    TextField("Description (optional)", text: $description, axis: .vertical)
+                        .lineLimit(3...6)
+                }
+
+                // ── Visibility ────────────────────────────────────
+                Section("Visibility") {
+                    Picker("Visibility", selection: $visibility) {
+                        ForEach(Visibility.allCases, id: \\.self) { v in
+                            Text(v.rawValue).tag(v)
+                        }
+                    }
+                    .pickerStyle(.inline)
+                    .labelsHidden()
+
+                    if visibility == .public_ {
+                        Label("Public projects are visible to anyone.", systemImage: "exclamationmark.triangle")
+                            .foregroundStyle(.orange)
+                            .font(.caption)
+                    }
+                }
+
+                // ── Notifications ─────────────────────────────────
+                Section("Notifications") {
+                    Toggle(isOn: $emailAlerts) {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Email alerts")
+                            Text("Activity in this project")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    Toggle(isOn: $weeklyDigest) {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Weekly digest")
+                            Text("Summary every Monday morning")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("New Project")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Create") {
+                        guard validate() else { return }
+                        Task { await createProject() }
+                    }
+                    .disabled(isSubmitting)
+                    .overlay {
+                        if isSubmitting {
+                            ProgressView().scaleEffect(0.7)
+                        }
+                    }
+                }
+            }
+            .alert("Project Created", isPresented: $submitted) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text("\\(name) is ready to go.")
+            }
+        }
+    }
+
+    func validate() -> Bool {
+        if name.trimmingCharacters(in: .whitespaces).isEmpty {
+            nameError = "Project name is required."
+            return false
+        }
+        if name.count < 3 {
+            nameError = "Must be at least 3 characters."
+            return false
+        }
+        return true
+    }
+
+    func createProject() async {
+        isSubmitting = true
+        try? await Task.sleep(for: .seconds(1.4))
+        isSubmitting = false
+        submitted    = true
+    }
+}
+
+#Preview {
+    CreateProjectView()
+}`,
+  },
+};
+
+export default function FormPage() {
+  return (
+    <div>
+      <PageHeader
+        title="Form"
+        description="A collection of form patterns — single-section forms, multi-step wizards, inline validation, and success states. Forms are the primary input surface in product UIs; these patterns cover the common cases."
+      />
+
+      {/* Single-page form */}
+      <section className="mb-12">
+        <h2 className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4">
+          Single-page form
+        </h2>
+        <ComponentPreview>
+          <div className="w-full max-w-lg mx-auto p-6 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))]">
+            <CreateProjectForm />
+          </div>
+        </ComponentPreview>
+        <p className="text-[12px] text-[rgb(var(--text-tertiary))] mt-3">
+          Submit with an empty or short name to see inline validation. Hit Create project to see the loading and success states.
+        </p>
+      </section>
+
+      {/* Multi-step form */}
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Multi-step form</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
+          Use a step indicator when the form has three or more logical groups and showing them all at once
+          would be overwhelming. Each step validates before advancing — users cannot skip ahead.
+        </p>
+        <ComponentPreview>
+          <div className="w-full max-w-lg mx-auto p-6 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))]">
+            <MultiStepForm />
+          </div>
+        </ComponentPreview>
+      </section>
+
+      {/* Validation model */}
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Validation timing</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                {["Trigger", "When to use", "Example"].map((h) => (
+                  <th key={h} className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["onBlur",       "Required fields, format checks",              "Email must contain @. Show error after user leaves the field."],
+                ["onChange",     "Character count, real-time strength meter",   "Password strength bar updates as user types."],
+                ["onSubmit",     "Full form sweep + server validation",         "Catch any missed fields before the API call. Show all errors at once."],
+                ["Server error", "Uniqueness, permission, business rules",      "\"That email is already taken.\" Map API error to the relevant field."],
+              ].map(([trigger, when, example], i) => (
+                <tr key={trigger} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{trigger}</code></td>
+                  <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{when}</td>
+                  <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{example}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Implementation */}
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
+        <PlatformTabs code={CODE} />
+      </section>
+
+      {/* Design decisions */}
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Design decisions</h2>
+        <ul className="space-y-4 text-[14px] text-[rgb(var(--text-secondary))]">
+          {[
+            {
+              title: "Use fieldsets and legends for grouping",
+              body: "fieldset/legend is the correct semantic element for a group of related controls. Use section titles (small caps, text-tertiary) as visual equivalents when you style the legend visually.",
+            },
+            {
+              title: "Never validate on first focus",
+              body: "Show errors on blur or on submit — never while the user is still typing into a fresh field. Premature errors feel accusatory and cause rage-clicks.",
+            },
+            {
+              title: "Multi-step: validate before advancing",
+              body: "Prevent advancing past a step with invalid fields. Show errors immediately when the user hits Continue, then scroll/focus to the first error.",
+            },
+            {
+              title: "Success state replaces the form",
+              body: "On submit success, replace the form with a confirmation state instead of showing a toast. The form surface itself communicating completion is clearer than an overlay that disappears.",
+            },
+            {
+              title: "Loading state disables the submit button",
+              body: "Prevent double-submission by disabling (or replacing) the button while the request is in flight. Show a spinner or label change (\"Creating…\") so the user knows work is happening.",
+            },
+          ].map(({ title, body }) => (
+            <li key={title} className="flex gap-2">
+              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span><strong className="text-[rgb(var(--text-primary))]">{title}.</strong> {body}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Accessibility */}
+      <section>
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
+        <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
+          {[
+            "Every input must have an associated <label> — either via htmlFor/id, or by wrapping. Never use placeholder as the only label.",
+            "Error messages must be linked to their input via aria-describedby and have role=\"alert\" so screen readers announce them immediately.",
+            "Required fields: add aria-required=\"true\" to the input and a visible indicator (asterisk) with aria-hidden=\"true\" on the decorative mark.",
+            "On submit failure, move focus to the first errored field (or an error summary at the top) so keyboard users know where to go.",
+            "Use <fieldset> + <legend> for radio groups and checkbox groups — not just divs with a paragraph title.",
+            "The submit button should never be the only way to submit: Enter on the last text field should also trigger submission (the default browser behavior — don't suppress it with e.preventDefault unconditionally).",
+          ].map((item) => (
+            <li key={item} className="flex gap-2">
+              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  );
+}

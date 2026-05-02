@@ -1,13 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Sidebar } from "./Sidebar";
 import { Header } from "./Header";
 import { CommandPalette } from "@/components/search/CommandPalette";
-import { motion } from "framer-motion";
 
 export function DocsShell({ children }: { children: React.ReactNode }) {
   const [searchOpen, setSearchOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Close mobile sidebar on navigation
+  useEffect(() => {
+    setSidebarOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -22,22 +29,22 @@ export function DocsShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-screen bg-[rgb(var(--background))]">
-      <Sidebar onSearchOpen={() => setSearchOpen(true)} />
+      <Sidebar
+        onSearchOpen={() => setSearchOpen(true)}
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
 
-      <div
-        className="flex-1 flex flex-col"
-        style={{ marginLeft: "var(--sidebar-width)" }}
-      >
-        <Header />
+      {/* Content column */}
+      <div className="flex flex-col flex-1 min-w-0 md:ml-[var(--sidebar-width)]">
+        <Header onMenuOpen={() => setSidebarOpen(true)} />
 
-        <motion.main
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="flex-1 px-8 pt-[calc(var(--header-height)+48px)] pb-20 max-w-4xl mx-auto w-full"
+        <main
+          className="flex-1 min-w-0 pb-32 px-5 md:pl-[clamp(3.5rem,8%,7rem)] md:pr-[clamp(2.5rem,6%,5rem)] max-w-[900px]"
+          style={{ paddingTop: "calc(var(--header-height) + 2.5rem)" }}
         >
           {children}
-        </motion.main>
+        </main>
       </div>
 
       <CommandPalette open={searchOpen} onClose={() => setSearchOpen(false)} />

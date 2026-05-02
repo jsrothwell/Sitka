@@ -9,17 +9,15 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, badge, className }: PageHeaderProps) {
   return (
-    <div className={cn("mb-10", className)}>
+    <div className={cn("mb-10 pb-8 border-b border-[rgb(var(--border))]", className)}>
       {badge && (
-        <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] mb-4">
+        <div className="inline-flex items-center gap-1.5 mb-4 px-2.5 py-1 rounded-full border border-[rgb(var(--accent-muted))] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[10px] font-semibold uppercase tracking-wider">
           <span className="w-1.5 h-1.5 rounded-full bg-current" />
           {badge}
-        </span>
+        </div>
       )}
-      <h1 className="text-[32px] font-semibold tracking-tight text-[rgb(var(--text-primary))] leading-tight mb-3">
-        {title}
-      </h1>
-      <p className="text-[16px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-2xl">
+      <h1 className="mb-2.5">{title}</h1>
+      <p className="text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg">
         {description}
       </p>
     </div>

@@ -2,102 +2,137 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/cn";
 import { navigation } from "@/lib/navigation";
-import { Search, Hexagon } from "lucide-react";
+import { Search, X } from "lucide-react";
 
-interface SidebarProps {
+export function Sidebar({
+  onSearchOpen,
+  isOpen,
+  onClose,
+}: {
   onSearchOpen?: () => void;
-}
-
-export function Sidebar({ onSearchOpen }: SidebarProps) {
+  isOpen?: boolean;
+  onClose?: () => void;
+}) {
   const pathname = usePathname();
 
   return (
-    <aside
-      className="fixed left-0 top-0 h-screen flex flex-col z-30"
-      style={{ width: "var(--sidebar-width)" }}
-    >
-      {/* Glass background */}
-      <div className="absolute inset-0 glass border-r border-[rgb(var(--border))]" />
+    <>
+      {/* Mobile backdrop */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-20 bg-black/50 md:hidden"
+          onClick={onClose}
+          aria-hidden="true"
+        />
+      )}
 
-      <div className="relative flex flex-col h-full overflow-hidden">
-        {/* Logo */}
-        <div className="flex items-center gap-2.5 px-5 h-[var(--header-height)] border-b border-[rgb(var(--border))]">
-          <div className="w-7 h-7 rounded-lg bg-[rgb(var(--accent))] flex items-center justify-center shadow-glow">
-            <Hexagon className="w-4 h-4 text-white fill-white/20" strokeWidth={1.5} />
+      <aside
+        className={cn(
+          "fixed left-0 top-0 bottom-0 z-30 flex flex-col transition-transform duration-300 ease-in-out",
+          "md:translate-x-0",
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        )}
+        style={{
+          width: "var(--sidebar-width)",
+          borderRight: "1px solid rgb(var(--border-subtle))",
+          backgroundColor: "rgb(var(--surface))",
+          backdropFilter: "blur(10px) saturate(160%)",
+          WebkitBackdropFilter: "blur(10px) saturate(160%)",
+        }}
+      >
+      {/* ── Logo ─────────────────────────────────────── */}
+      <div
+        className="sidebar-section flex items-center gap-2.5 shrink-0 border-b border-[rgb(var(--border))]"
+        style={{ height: "var(--header-height)" }}
+      >
+        <Link
+          href="/"
+          className="flex items-center gap-2.5 min-w-0 hover:opacity-80 transition-standard"
+        >
+          <div className="w-6 h-6 rounded-[5px] bg-[rgb(var(--accent))] flex items-center justify-center shrink-0">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path
+                d="M6 1.5L10.5 4.125V7.875L6 10.5L1.5 7.875V4.125L6 1.5Z"
+                stroke="white"
+                strokeWidth="1.25"
+                strokeLinejoin="round"
+              />
+            </svg>
           </div>
-          <span className="font-semibold text-[15px] tracking-tight text-[rgb(var(--text-primary))]">
+          <span className="font-semibold text-[14px] tracking-tight text-[rgb(var(--text-primary))] leading-none">
             Sitka
           </span>
-          <span className="ml-auto text-[10px] font-medium px-1.5 py-0.5 rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]">
-            v1.0
-          </span>
-        </div>
+        </Link>
+        <span className="font-mono text-[10px] font-medium px-1.5 py-0.5 rounded-[var(--radius-sm)] bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-tertiary))] border border-[rgb(var(--border))]">
+          v1.0
+        </span>
+        {/* Close button — mobile only */}
+        <button
+          onClick={onClose}
+          className="md:hidden ml-auto p-1.5 rounded-[var(--radius)] text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface-raised))] hover:text-[rgb(var(--text-primary))] transition-standard"
+          aria-label="Close navigation"
+        >
+          <X className="w-4 h-4" />
+        </button>
+      </div>
 
-        {/* Search trigger */}
-        <div className="px-3 py-3 border-b border-[rgb(var(--border))]">
-          <button
-            onClick={onSearchOpen}
-            className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-[rgb(var(--text-secondary))] bg-[rgb(var(--surface))] border border-[rgb(var(--border))] hover:border-[rgb(var(--accent))] transition-colors text-sm group"
-          >
-            <Search className="w-3.5 h-3.5 flex-shrink-0" />
-            <span className="flex-1 text-left text-[13px]">Search...</span>
-            <kbd className="hidden sm:flex items-center gap-0.5 text-[10px] font-medium text-[rgb(var(--text-tertiary))] bg-[rgb(var(--border))] px-1.5 py-0.5 rounded-md">
-              ⌘K
-            </kbd>
-          </button>
-        </div>
+      {/* ── Search trigger ───────────────────────────── */}
+      <div className="sidebar-section pt-4 pb-2 shrink-0">
+        <button
+          onClick={onSearchOpen}
+          className="w-full flex items-center gap-2.5 rounded-[var(--radius-md)] text-[13px] text-[rgb(var(--text-tertiary))] bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] hover:border-[rgb(var(--accent-muted))] hover:text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface-hover))] transition-standard"
+          style={{ height: "2.25rem", paddingLeft: "0.75rem", paddingRight: "0.75rem" }}
+        >
+          <Search className="w-3.5 h-3.5 shrink-0" strokeWidth={2} />
+          <span className="flex-1 text-left">Search…</span>
+          <kbd className="font-mono text-[10px] px-1.5 py-0.5 rounded-[var(--radius-sm)] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] text-[rgb(var(--text-tertiary))] leading-none">
+            ⌘K
+          </kbd>
+        </button>
+      </div>
 
-        {/* Nav */}
-        <nav className="flex-1 overflow-y-auto px-3 py-3 space-y-5">
-          {navigation.map((section) => (
-            <div key={section.title}>
-              <p className="px-2 mb-1 text-[10px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">
-                {section.title}
-              </p>
-              <ul className="space-y-0.5">
-                {section.items.map((item) => {
-                  const isActive = pathname === item.href;
-                  return (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        className={cn(
-                          "relative flex items-center gap-2 px-2 py-1.5 rounded-md text-[13px] transition-colors",
-                          isActive
-                            ? "text-[rgb(var(--accent))] font-medium"
-                            : "text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--surface))]"
-                        )}
-                      >
-                        {isActive && (
-                          <motion.div
-                            layoutId="sidebar-active"
-                            className="absolute inset-0 rounded-md bg-[rgb(var(--accent-subtle))]"
-                            transition={{ type: "spring", stiffness: 400, damping: 40 }}
-                          />
-                        )}
-                        <span className="relative z-10">{item.title}</span>
-                        {item.badge && (
-                          <span className="relative z-10 ml-auto text-[9px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-[rgb(var(--accent))] text-white">
-                            {item.badge}
-                          </span>
-                        )}
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          ))}
-        </nav>
+      {/* ── Nav ──────────────────────────────────────── */}
+      <nav className="sidebar-section flex-1 overflow-y-auto py-3 flex flex-col gap-6">
+        {navigation.map((section) => (
+          <div key={section.title}>
+            <p className="label-mono mb-2">{section.title}</p>
+            <ul className="flex flex-col gap-0.5">
+              {section.items.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        "flex items-center gap-2 px-2 py-1.5 rounded-[var(--radius)] text-[13px] font-medium transition-standard",
+                        isActive
+                          ? "bg-[rgb(var(--accent-subtle))]"
+                          : "text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--surface-raised))]"
+                      )}
+                    style={isActive ? { color: "var(--nav-active-color)" } : undefined}
+                    >
+                      {item.title}
+                      {item.badge && (
+                        <span className="ml-auto text-[9px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-[var(--radius-sm)] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]">
+                          {item.badge}
+                        </span>
+                      )}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ))}
+      </nav>
 
-        {/* Footer */}
-        <div className="px-4 py-4 border-t border-[rgb(var(--border))] text-[11px] text-[rgb(var(--text-tertiary))]">
-          Sitka Design System © 2026
-        </div>
+      {/* ── Footer ───────────────────────────────────── */}
+      <div className="sidebar-section py-3.5 border-t border-[rgb(var(--border))] shrink-0">
+        <p className="label-mono">Sitka Engineering</p>
       </div>
     </aside>
+    </>
   );
 }
