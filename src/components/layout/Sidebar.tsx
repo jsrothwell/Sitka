@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/cn";
 import { navigation } from "@/lib/navigation";
@@ -51,16 +52,9 @@ export function Sidebar({
           href="/"
           className="flex items-center gap-2.5 min-w-0 hover:opacity-80 transition-standard"
         >
-          <div className="w-6 h-6 rounded-[5px] bg-[rgb(var(--accent))] flex items-center justify-center shrink-0">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <path
-                d="M6 1.5L10.5 4.125V7.875L6 10.5L1.5 7.875V4.125L6 1.5Z"
-                stroke="white"
-                strokeWidth="1.25"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
+          <span className="w-6 h-6 rounded-full bg-white shrink-0 flex items-center justify-center overflow-hidden">
+            <Image src="/sitka-logo.png" width={22} height={22} alt="Sitka logo" />
+          </span>
           <span className="font-semibold text-[14px] tracking-tight text-[rgb(var(--text-primary))] leading-none">
             Sitka
           </span>
