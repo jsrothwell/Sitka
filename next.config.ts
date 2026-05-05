@@ -3,7 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Configured for Webpack to bypass Turbopack root-inference issues
   output: "export",
-  basePath: "", // Set this to your GitHub repository name if deploying to a project site (e.g., "/sitka-design-system")
+  basePath: "/Sitka",
+  assetPrefix: "/Sitka",
   
   // Ensure images and assets work with static export
   images: {

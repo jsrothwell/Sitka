@@ -49,6 +49,43 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: github-pages
+          path: out
+
+      - name: Deploy to root of gh-pages
+        run: |
+          cd gh-pages
+          # Remove all existing files except .git and .nojekyll
+          find . -maxdepth 1 -not -name '.git' -not -name '.nojekyll' -not -name '.' -exec rm -rf {} +
+          # Copy new build output to root
+          cp -r ../out/* .
+          cp -r ../out/.well-known ./.well-known 2>/dev/null || true
+          # Ensure .nojekyll exists
+          touch .nojekyll
+          # Configure git
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          # Add all files
+          git add -A
+          # Commit only if there are changes
+          if ! git diff --cached --quiet; then
+            git commit -m "Deploy to GitHub Pages [skip ci]"
+            git push origin gh-pages
+          else
+            echo "No changes to deploy"
+          fi
+
