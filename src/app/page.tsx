@@ -49,8 +49,7 @@ export default function HomePage() {
             lineHeight: 1.1,
           }}
         >
-          The design system for{" "}
-          <span style={{ color: "var(--nav-active-color)" }}>serious&nbsp;products.</span>
+          Sitka Design System
         </h1>
 
         <p
