@@ -221,7 +221,7 @@ struct Snackbar: View {
     let action: Action?
     
     enum Variant {
-        case `default`, success, error, warning
+        case 'default', success, error, warning
         
         var color: Color {
             switch self {
@@ -488,7 +488,7 @@ export default function SnackbarPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Usage guidelines</h2>
         <div className="grid grid-cols-2 gap-4">
-          {[n            { type: "do", items: ["Use for non-critical, transient feedback", "Keep messages concise (1-2 lines max)", "Provide action for undoable operations", "Pause timer on hover/focus for accessibility"] },
+           {[{ type: "do", items: ["Use for non-critical, transient feedback", "Keep messages concise (1-2 lines max)", "Provide action for undoable operations", "Pause timer on hover/focus for accessibility"] },
             { type: "dont", items: ["Don't use for critical errors (use banner/modal)", "Avoid stacking more than 2-3 at once", "Don't require reading for critical info", "Avoid long messages that wrap"] },
           ].map(({ type, items }) => (
             <div key={type} className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
@@ -532,7 +532,7 @@ export default function SnackbarPage() {
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
         <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
-          {[n            "Use role='status' with aria-live='polite' for informational messages.",
+           {["Use role='status' with aria-live='polite' for informational messages.",
             "Use role='alert' only for critical errors requiring immediate attention.",
             "Provide aria-label on dismiss button for screen readers.",
             "Don't rely on color alone — include text and icons.",

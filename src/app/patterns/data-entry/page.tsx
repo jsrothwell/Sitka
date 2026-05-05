@@ -1,3 +1,5 @@
+"use client";
+
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
@@ -54,7 +56,7 @@ export function DataEntryForm({ fields, onSubmit, submitLabel = "Save" }: DataEn
 
   function validate(field: FormField, value: any): string | undefined {
     if (field.required && !value?.toString().trim()) {
-      return \`\${field.label} is required\`;
+       return field.label + " is required";
     }
     if (field.type === "email" && value && !/^[^@]+@[^@]+\.[^@]+$/.test(value)) {
       return "Enter a valid email address";
@@ -100,7 +102,7 @@ export function DataEntryForm({ fields, onSubmit, submitLabel = "Save" }: DataEn
                 "transition-colors resize-none",
                 field.error && "border-[#f87171] focus:ring-[#f87171]/20"
               )}
-              placeholder={`Enter \${field.label.toLowerCase()}...`}
+               placeholder={"Enter " + field.label.toLowerCase() + "..."}
             />
           ) : field.type === "select" ? (
             <select
@@ -137,7 +139,7 @@ export function DataEntryForm({ fields, onSubmit, submitLabel = "Save" }: DataEn
               onBlur={() => updateField(field.name, field.value)}
               error={field.error}
               required={field.required}
-              placeholder={`Enter \${field.label.toLowerCase()}...`}
+               placeholder={"Enter " + field.label.toLowerCase() + "..."}
             />
           )}
 
@@ -852,7 +854,7 @@ export default function DataEntryPage() {
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
         <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
-          {[n            "Always provide associated <label> elements for inputs, use aria-label as fallback.",
+           {["Always provide associated <label> elements for inputs, use aria-label as fallback.",
             "Error messages must be linked via aria-describedby and have role='alert' for screen readers.",
             "Required fields need aria-required='true' and visually indicate the requirement.",
             "After validation errors, move focus to the first error or provide a summary at the top.",

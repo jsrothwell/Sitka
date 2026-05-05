@@ -58,7 +58,7 @@ const nextConfig: NextConfig = {
 
 **Workflow:**
 1. Checkout code
-2. Setup Node.js 20
+2. Setup Node.js 24
 3. Install dependencies
 4. Build application
 5. Upload `out/` as artifact
@@ -170,7 +170,7 @@ npm run build
 
 ### Prerequisites
 1. GitHub repository
-2. Node.js 20+ (for local testing)
+2. Node.js 24+ (for local testing)
 3. npm or yarn
 
 ### Steps
@@ -292,7 +292,7 @@ npm run serve
 ## Troubleshooting
 
 ### Build Fails
-- Check Node.js version (use 20.x)
+- Check Node.js version (use 24.x)
 - Increase memory: `NODE_OPTIONS='--max-old-space-size=4096'`
 - Clear cache: `rm -rf node_modules/.cache`
 

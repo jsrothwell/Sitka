@@ -54,7 +54,7 @@ find out -name "*.html" | head -20
 ## ✅ GitHub Actions Workflow
 
 - [x] `.github/workflows/deploy.yml` created
-- [x] Correct Node.js version (20)
+- [x] Correct Node.js version (24)
 - [x] Proper caching configured
 - [x] Artifact upload configured
 - [x] Pages deployment configured

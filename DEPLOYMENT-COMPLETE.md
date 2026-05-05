@@ -59,14 +59,14 @@ const nextConfig: NextConfig = {
 - ✅ Automatic builds on push to main/master
 - ✅ Automatic builds on pull requests
 - ✅ Manual trigger option
-- ✅ Node.js 20 with proper memory settings
+- ✅ Node.js 24 with proper memory settings
 - ✅ Uploads `out/` directory as artifact
 - ✅ Deploys to GitHub Pages
 - ✅ Cancels previous deployments (concurrency)
 
 ### Workflow Steps
 1. **Checkout** - Gets repository code
-2. **Setup Node.js** - Installs Node 20 with npm cache
+2. **Setup Node.js** - Installs Node 24 with npm cache
 3. **Install Dependencies** - Runs `npm ci` for clean install
 4. **Build** - Runs `npm run build` (static export)
 5. **Upload Artifact** - Stores `out/` directory

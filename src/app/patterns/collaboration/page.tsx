@@ -547,7 +547,7 @@ export default function CollaborationPatternPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Usage guidelines</h2>
         <div className="grid grid-cols-2 gap-4">
-          {[n            { type: "do", items: ["Show live presence for collaborative documents", "Provide multiple sharing options (link, email, copy)", "Use avatar stacks to show collaborators efficiently", "Offer granular permission controls"] },
+           {[{ type: "do", items: ["Show live presence for collaborative documents", "Provide multiple sharing options (link, email, copy)", "Use avatar stacks to show collaborators efficiently", "Offer granular permission controls"] },
             { type: "dont", items: ["Don't show full names in crowded avatar stacks", "Avoid auto-sharing without explicit consent", "Don't expose sensitive data in share previews", "Avoid overwhelming users with too many collaboration options"] },
           ].map(({ type, items }) => (
             <div key={type} className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
@@ -579,7 +579,7 @@ export default function CollaborationPatternPage() {
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
         <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
-          {[n            "Share buttons must have descriptive aria-labels for screen readers.",
+           {["Share buttons must have descriptive aria-labels for screen readers.",
             "Presence indicators should announce changes for assistive technology.",
             "Collaborator avatars need alt text with names.",
             "Real-time content changes should have polite aria-live announcements.",

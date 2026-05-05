@@ -81,7 +81,7 @@ export function Slider({
           )}
           {showValue && (
             <span className="text-[12px] font-medium text-[rgb(var(--text-primary))]">
-              {isRange ? `${minVal} – ${maxVal}` : minVal}
+               {isRange ? minVal + " – " + maxVal : minVal}
             </span>
           )}
         </div>
@@ -93,8 +93,8 @@ export function Slider({
         <div
           className="absolute h-[3px] rounded-full bg-[rgb(var(--accent))]"
           style={{
-            left: `${getPercentage(minVal)}%`,
-            width: `${getPercentage(maxVal) - getPercentage(minVal)}%`,
+             left: getPercentage(minVal) + "%",
+             width: getPercentage(maxVal) - getPercentage(minVal) + "%",
           }}
         />
         {/* Thumbs */}
@@ -108,7 +108,7 @@ export function Slider({
               disabled && "opacity-40 cursor-not-allowed"
             )}
             style={{
-              left: `${getPercentage(val)}%`,
+               left: getPercentage(val) + "%",
               transform: "translateX(-50%)",
               top: "50%",
               marginTop: "-6px",
@@ -420,7 +420,7 @@ export default function SliderPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Usage guidelines</h2>
         <div className="grid grid-cols-2 gap-4">
-          {[n            { type: "do", items: ["Use sliders for continuous values, not discrete choices", "Provide clear min/max labels to define the range", "Default to a meaningful middle value, not extremes", "Allow precise input via keyboard arrows and Shift for larger steps"] },
+           {[{ type: "do", items: ["Use sliders for continuous values, not discrete choices", "Provide clear min/max labels to define the range", "Default to a meaningful middle value, not extremes", "Allow precise input via keyboard arrows and Shift for larger steps"] },
             { type: "dont", items: ["Don't use sliders for binary choices (use a switch instead)", "Avoid sliders when precision is critical (use numeric input)", "Don't hide the current value — always show it", "Don't use more than 2 thumbs for range selection"] },
           ].map(({ type, items }) => (
             <div key={type} className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
@@ -458,7 +458,7 @@ export default function SliderPage() {
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
         <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
-          {[n            "Sliders must have an associated label via aria-label or aria-labelledby.",
+           {["Sliders must have an associated label via aria-label or aria-labelledby.",
             "Keyboard: Arrow keys adjust by step; Shift + arrow keys adjust by 10× step.",
             "Range sliders must have aria-valuemin, aria-valuemax, and aria-valuenow on each thumb.",
             "Provide visible focus indicators on thumbs for keyboard users.",

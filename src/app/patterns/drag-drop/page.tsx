@@ -1,3 +1,5 @@
+"use client";
+
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
@@ -636,7 +638,7 @@ export default function DragAndDropPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Usage guidelines</h2>
         <div className="grid grid-cols-2 gap-4">
-          {[n            { type: "do", items: ["Provide clear visual affordances for draggable items (e.g., grip handles)", "Show immediate feedback during drag (ghost image, opacity change)", "Indicate valid drop targets with highlighting", "Support keyboard alternatives for accessibility"] },
+           {[{ type: "do", items: ["Provide clear visual affordances for draggable items (e.g., grip handles)", "Show immediate feedback during drag (ghost image, opacity change)", "Indicate valid drop targets with highlighting", "Support keyboard alternatives for accessibility"] },
             { type: "dont", items: ["Don't require drag for essential tasks (provide alternative controls)", "Avoid drag in small click targets (hard to initiate)", "Don't allow dropping in invalid areas without feedback", "Avoid excessive drag distance for simple reordering"] },
           ].map(({ type, items }) => (
             <div key={type} className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
@@ -668,7 +670,7 @@ export default function DragAndDropPage() {
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
         <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
-          {[n            "Provide keyboard alternatives for all drag operations (e.g., Move Up/Down buttons).",
+           {["Provide keyboard alternatives for all drag operations (e.g., Move Up/Down buttons).",
             "Use aria-grabbed to indicate drag state for screen readers.",
             "Announce drops with aria-live regions when order changes.",
             "Ensure drop targets are focusable and indicate focus state.",

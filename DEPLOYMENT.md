@@ -5,7 +5,7 @@ This guide explains how to deploy the Sitka Design System documentation to GitHu
 ## Prerequisites
 
 - A GitHub repository (either a user/organization site or a project site)
-- Node.js 20+ (for local development/testing)
+- Node.js 24+ (for local development/testing)
 
 ## Configuration
 

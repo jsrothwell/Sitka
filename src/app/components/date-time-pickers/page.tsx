@@ -223,9 +223,9 @@ export function TimePicker({
     for (let minutes = minTotal; minutes <= maxTotal; minutes += step) {
       const h = Math.floor(minutes / 60);
       const m = minutes % 60;
-      const time24 = `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
+      const time24 = String(h).padStart(2, "0") + ":" + String(m).padStart(2, "0");
       const time12 = format === "12h"
-        ? `${h % 12 || 12}:${String(m).padStart(2, "0")} ${h < 12 ? "AM" : "PM"}`
+        ? (h % 12 || 12) + ":" + String(m).padStart(2, "0") + " " + (h < 12 ? "AM" : "PM")
         : time24;
       times.push({ value: time24, label: time12 });
     }
@@ -487,7 +487,7 @@ export default function DateTimePickersPage() {
               if (day < 1 || day > 31) return null;
               return (
                 <g key={i}>
-                  <rect x={34 + col * 36} y={190 + row * 28} width="28" height="28} rx="6" fill={day === 15 ? "rgb(var(--accent))" : "transparent"} />
+                   <rect x={34 + col * 36} y={190 + row * 28} width="28" height="28" rx="6" fill={day === 15 ? "rgb(var(--accent))" : "transparent"} />
                   <text x={48 + col * 36} y={210 + row * 28} textAnchor="middle" fontSize="12" fill={day === 15 ? "white" : "rgb(var(--text-primary))"} fontWeight={day === 15 ? "600" : "400"}>{day}</text>
                 </g>
               );
@@ -539,7 +539,7 @@ export default function DateTimePickersPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Usage guidelines</h2>
         <div className="grid grid-cols-2 gap-4">
-          {[n            { type: "do", items: ["Provide a clear label indicating what date is needed", "Set sensible min/max boundaries to prevent invalid dates", "Default to today or a meaningful date, not an arbitrary past date", "Include a placeholder showing the expected format"] },
+          {[{ type: "do", items: ["Provide a clear label indicating what date is needed", "Set sensible min/max boundaries to prevent invalid dates", "Default to today or a meaningful date, not an arbitrary past date", "Include a placeholder showing the expected format"] },
             { type: "dont", items: ["Don't make users type dates manually in most cases", "Avoid date pickers for birth dates far in the past (use age input)", "Don't rely on date pickers alone — always validate on the server", "Avoid calendar widgets that require excessive scrolling"] },
           ].map(({ type, items }) => (
             <div key={type} className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
@@ -581,7 +581,7 @@ export default function DateTimePickersPage() {
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
         <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
-          {[n            "Date pickers must have associated labels via aria-label or aria-labelledby.",
+           {["Date pickers must have associated labels via aria-label or aria-labelledby.",
             "Keyboard: Arrow keys navigate days; PageUp/PageDown change months; Home/End go to start/end of week.",
             "Time pickers must announce the currently focused time option.",
             "ESC key should close open pickers; Enter should select the focused date/time.",

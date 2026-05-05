@@ -494,7 +494,7 @@ export default function CarouselPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Usage guidelines</h2>
         <div className="grid grid-cols-2 gap-4">
-          {[n            { type: "do", items: ["Provide manual controls in addition to autoplay", "Pause on hover to allow reading content", "Include visible indicators showing current position", "Make controls large enough for touch targets (44px minimum)"] },
+           {[{ type: "do", items: ["Provide manual controls in addition to autoplay", "Pause on hover to allow reading content", "Include visible indicators showing current position", "Make controls large enough for touch targets (44px minimum)"] },
             { type: "dont", items: ["Don't use carousels for critical content (users may miss it)", "Avoid auto-rotating too quickly (minimum 5s per slide)", "Don't rely on autoplay alone — always provide manual navigation", "Avoid excessive slides (3-5 is usually optimal)"] },
           ].map(({ type, items }) => (
             <div key={type} className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
@@ -532,7 +532,7 @@ export default function CarouselPage() {
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
         <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
-          {[n            "Carousel region must have aria-label describing its purpose.",
+           {["Carousel region must have aria-label describing its purpose.",
             "Each slide must have aria-roledescription='slide' and aria-label indicating position.",
             "Auto-rotation must pause on hover and focus for accessibility.",
             "Controls must have clear aria-labels (e.g., 'Previous slide', 'Next slide').",
