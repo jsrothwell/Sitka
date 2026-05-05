@@ -13,7 +13,7 @@ const SCALE = [
   { name: "Body", size: "15px", weight: "400", tracking: "0", use: "Default body copy" },
   { name: "Body SM", size: "13px", weight: "400", tracking: "0", use: "Secondary descriptions" },
   { name: "Caption", size: "11px", weight: "500", tracking: "0.04em", use: "Labels, metadata, timestamps" },
-  { name: "Overline", size: "10px", weight: "700", tracking: "0.1em", use: "Section labels (UPPERCASE)" },
+  { name: "Overline", size: "16px", weight: "600", tracking: "1px", use: "Section labels (UPPERCASE)" },
   { name: "Code", size: "13px", weight: "400", tracking: "0", use: "Inline code, token values" },
 ];
 

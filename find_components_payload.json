@@ -1,0 +1,1 @@
+{"script":"const results = [];\nfor (const page of figma.root.children) {\n  results.push({ pageName: page.name, pageId: page.id });\n  // We don't need to setCurrentPageAsync just to get names/ids of children if we don't need to deep-search,\n  // but for COMPONENT_SET we might want to see where they are.\n}\nreturn results;\n"}

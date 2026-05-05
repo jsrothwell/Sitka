@@ -51,7 +51,7 @@ export function ColorPalette() {
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Brand</h2>
         <p className="text-[13px] text-[rgb(var(--text-secondary))] mb-4">
-          The spruce green spectrum. <code className="font-mono text-[rgb(var(--accent))]">brand.500</code> is the primary accent.
+          The core palette. <code className="font-mono text-[rgb(var(--accent))]">brand.cyan</code> is the primary alert and reminder color.
         </p>
         <div className="grid grid-cols-5 md:grid-cols-11 gap-2">
           {Object.entries(tokens.color.brand).map(([k, v]) => (
@@ -63,7 +63,7 @@ export function ColorPalette() {
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Neutral</h2>
         <p className="text-[13px] text-[rgb(var(--text-secondary))] mb-4">
-          True neutral grays — no color cast. Used for surfaces, borders, and text.
+          True neutral grays — no color cast. Matches Sitka Design System standards.
         </p>
         <div className="grid grid-cols-5 md:grid-cols-13 gap-2">
           {Object.entries(tokens.color.neutral).map(([k, v]) => (
@@ -115,10 +115,10 @@ export function ColorPalette() {
               {[
                 { token: "--background", light: "neutral.50 (#fafafa)", dark: "neutral.950 (#0a0a0a)" },
                 { token: "--surface", light: "neutral.0 (#ffffff)", dark: "neutral.900 (#171717)" },
-                { token: "--border", light: "neutral.200 (#e5e5e5)", dark: "neutral.800 (#262626)" },
-                { token: "--text-primary", light: "neutral.900 (#171717)", dark: "neutral.50 (#fafafa)" },
-                { token: "--text-secondary", light: "neutral.600 (#525252)", dark: "neutral.400 (#a3a3a3)" },
-                { token: "--accent", light: "brand.500 (#34a865)", dark: "brand.500 (#34a865)" },
+                { token: "--border", light: "neutral.200 (#e5e5e5)", dark: "neutral.800 (#282828)" },
+                { token: "--text-primary", light: "neutral.800 (#282828)", dark: "neutral.50 (#fafafa)" },
+                { token: "--text-secondary", light: "neutral.500 (#747474)", dark: "neutral.400 (#a7a7ac)" },
+                { token: "--accent", light: "brand.cyan (#00C0E8)", dark: "brand.cyan (#00C0E8)" },
               ].map((row, i) => (
                 <tr key={row.token} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
                   <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{row.token}</code></td>

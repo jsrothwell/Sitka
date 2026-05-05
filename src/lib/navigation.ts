@@ -78,6 +78,17 @@ export const navigation: NavSection[] = [
     ],
   },
   {
+    title: "Libraries",
+    items: [
+      { title: "Overview",       href: "/libraries" },
+      { title: "React · Next.js", href: "/libraries/react" },
+      { title: "React · Vite",   href: "/libraries/vite" },
+      { title: "Tokens Only",    href: "/libraries/tokens" },
+      { title: "iOS · SwiftUI",  href: "/libraries/ios" },
+      { title: "Figma",          href: "/libraries/figma" },
+    ],
+  },
+  {
     title: "Tokens",
     items: [
       { title: "Design Tokens", href: "/tokens" },

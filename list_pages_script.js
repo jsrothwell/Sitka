@@ -1,0 +1,1 @@
+return figma.root.children.map(p => ({ name: p.name, id: p.id }));

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "mcp": {
+    "example-local": {
+      "type": "local",
+      "command": ["node", "./mcp/server.js"],
+      "enabled": true
+    },
+    "figma-remote": {
+      "type": "remote",
+      "url": "https://mcp.figma.com/mcp",
+      "enabled": true
+    }
+  }
+}
