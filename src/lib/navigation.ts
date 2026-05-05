@@ -64,13 +64,17 @@ export const navigation: NavSection[] = [
   {
     title: "Patterns",
     items: [
-      { title: "Master Detail",      href: "/patterns/master-detail" },
-      { title: "Navbar",             href: "/patterns/navbar" },
-      { title: "Form",               href: "/patterns/form" },
-      { title: "Onboarding",         href: "/patterns/onboarding" },
-      { title: "Settings",           href: "/patterns/settings" },
-      { title: "Media Player",       href: "/patterns/media-player" },
-      { title: "Mobile Navigation",  href: "/patterns/mobile-navigation" },
+      { title: "Master Detail",        href: "/patterns/master-detail" },
+      { title: "Navbar",               href: "/patterns/navbar" },
+      { title: "Form",                 href: "/patterns/form" },
+      { title: "Form Layout",          href: "/forms/layout" },
+      { title: "Form Validation",      href: "/forms/validation" },
+      { title: "Onboarding",           href: "/patterns/onboarding" },
+      { title: "Settings",             href: "/patterns/settings" },
+      { title: "Notifications · Mobile",  href: "/notifications/mobile" },
+      { title: "Notifications · Desktop", href: "/notifications/desktop" },
+      { title: "Media Player",         href: "/patterns/media-player" },
+      { title: "Mobile Navigation",    href: "/patterns/mobile-navigation" },
     ],
   },
   {
@@ -82,20 +86,6 @@ export const navigation: NavSection[] = [
       { title: "Write clear interface copy",     href: "/how-tos/write-for-interfaces" },
       { title: "Visualise data accessibly",      href: "/how-tos/data-visualisation" },
       { title: "Design an onboarding flow",      href: "/how-tos/onboarding-flow" },
-    ],
-  },
-  {
-    title: "Notifications",
-    items: [
-      { title: "Mobile",  href: "/notifications/mobile" },
-      { title: "Desktop", href: "/notifications/desktop" },
-    ],
-  },
-  {
-    title: "Forms",
-    items: [
-      { title: "Layout",     href: "/forms/layout" },
-      { title: "Validation", href: "/forms/validation" },
     ],
   },
   {

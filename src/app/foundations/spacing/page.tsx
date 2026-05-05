@@ -92,6 +92,92 @@ export default function SpacingPage() {
         </div>
       </section>
 
+      {/* ── In context ───────────────────────────────── */}
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-6">In context</h2>
+        <p className="text-[13px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
+          Spacing decisions compound. Getting card padding, row gaps, and icon insets right together is what makes density feel intentional.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {/* Card anatomy */}
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-3">Card — spacing tokens applied</p>
+            <div className="rounded-[14px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-6 flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <span className="w-9 h-9 rounded-[10px] bg-[rgb(var(--surface-raised))] shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <p className="text-[13px] font-semibold text-[rgb(var(--text-primary))]">Project Alpha</p>
+                  <p className="text-[11px] text-[rgb(var(--text-tertiary))]">Updated 2h ago</p>
+                </div>
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full border border-[rgb(var(--border))] text-[rgb(var(--text-tertiary))]">Active</span>
+              </div>
+              <p className="text-[13px] text-[rgb(var(--text-secondary))] leading-relaxed">
+                Design system tokens, component library and Figma integration for the core product team.
+              </p>
+              <div className="flex items-center gap-2 pt-0.5 border-t border-[rgb(var(--border-subtle))]">
+                <div className="flex -space-x-1.5">
+                  {["#34a865","#60a5fa","#f59e0b"].map((c) => (
+                    <span key={c} className="w-5 h-5 rounded-full border-2 border-[rgb(var(--surface))]" style={{ background: c }} />
+                  ))}
+                </div>
+                <span className="text-[11px] text-[rgb(var(--text-tertiary))] ml-1">3 members</span>
+              </div>
+            </div>
+            <div className="mt-3 grid grid-cols-2 gap-2 text-[11px] text-[rgb(var(--text-secondary))]">
+              {[
+                { label: "Card padding", token: "spacing.6 (24px)" },
+                { label: "Header gap", token: "spacing.3 (12px)" },
+                { label: "Section gap", token: "spacing.4 (16px)" },
+                { label: "Avatar overlap", token: "spacing.1 (4px)" },
+              ].map(({ label, token }) => (
+                <div key={label} className="flex flex-col gap-0.5 px-3 py-2 rounded-lg bg-[rgb(var(--surface))] border border-[rgb(var(--border))]">
+                  <span className="text-[rgb(var(--text-tertiary))]">{label}</span>
+                  <code className="font-mono text-[10px]" style={{ color: "var(--nav-active-color)" }}>{token}</code>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* List row anatomy */}
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-3">List row — spacing tokens applied</p>
+            <div className="rounded-[14px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] overflow-hidden">
+              {[
+                { label: "Notifications", sub: "Push, email, and in-app", value: "All" },
+                { label: "Privacy", sub: "Data and permissions", value: "" },
+                { label: "Appearance", sub: "Theme, font size, density", value: "System" },
+                { label: "Keyboard shortcuts", sub: "View and customize", value: "" },
+              ].map(({ label, sub, value }, i, arr) => (
+                <div
+                  key={label}
+                  className={`flex items-center gap-3 px-4 py-3.5 ${i < arr.length - 1 ? "border-b border-[rgb(var(--border-subtle))]" : ""}`}
+                >
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[13px] font-medium text-[rgb(var(--text-primary))]">{label}</p>
+                    <p className="text-[11px] text-[rgb(var(--text-tertiary))]">{sub}</p>
+                  </div>
+                  {value && <span className="text-[12px] text-[rgb(var(--text-secondary))]">{value}</span>}
+                  <span className="text-[rgb(var(--text-tertiary))]">›</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-3 grid grid-cols-2 gap-2 text-[11px] text-[rgb(var(--text-secondary))]">
+              {[
+                { label: "Row padding (h)", token: "spacing.4 (16px)" },
+                { label: "Row padding (v)", token: "spacing.3.5 (14px)" },
+                { label: "Icon-label gap", token: "spacing.3 (12px)" },
+                { label: "Row divider gap", token: "spacing.0 (flush)" },
+              ].map(({ label, token }) => (
+                <div key={label} className="flex flex-col gap-0.5 px-3 py-2 rounded-lg bg-[rgb(var(--surface))] border border-[rgb(var(--border))]">
+                  <span className="text-[rgb(var(--text-tertiary))]">{label}</span>
+                  <code className="font-mono text-[10px]" style={{ color: "var(--nav-active-color)" }}>{token}</code>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Reference table ──────────────────────────── */}
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Token Reference</h2>
