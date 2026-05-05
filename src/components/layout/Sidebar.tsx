@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/cn";
 import { navigation } from "@/lib/navigation";
@@ -20,7 +19,7 @@ export function Sidebar({
 
   return (
     <>
-      {/* Mobile backdrop */}
+      {/* ── Mobile backdrop ────────────────────────────── */}
       {isOpen && (
         <div
           className="fixed inset-0 z-20 bg-black/50 md:hidden"
@@ -43,7 +42,7 @@ export function Sidebar({
           WebkitBackdropFilter: "blur(10px) saturate(160%)",
         }}
       >
-      {/* ── Logo ─────────────────────────────────────── */}
+      {/* ── Logo ──────────────────────────────────────── */}
       <div
         className="sidebar-section flex items-center gap-2.5 shrink-0 border-b border-[rgb(var(--border))]"
         style={{ height: "var(--header-height)" }}
@@ -53,7 +52,7 @@ export function Sidebar({
           className="flex items-center gap-2.5 min-w-0 hover:opacity-80 transition-standard"
         >
           <span className="w-6 h-6 rounded-full bg-white shrink-0 flex items-center justify-center overflow-hidden">
-            <Image src="/sitka-logo.png" width={22} height={22} alt="Sitka logo" />
+            <img src="/sitka-logo.png" width={22} height={22} alt="Sitka logo" className="w-full h-full object-contain" />
           </span>
           <span className="font-semibold text-[14px] tracking-tight text-[rgb(var(--text-primary))] leading-none">
             Sitka
@@ -72,7 +71,7 @@ export function Sidebar({
         </button>
       </div>
 
-      {/* ── Search trigger ───────────────────────────── */}
+      {/* ── Search trigger ────────────────────────────── */}
       <div className="sidebar-section pt-4 pb-2 shrink-0">
         <button
           onClick={onSearchOpen}
@@ -105,8 +104,8 @@ export function Sidebar({
                           ? "bg-[rgb(var(--accent-subtle))]"
                           : "text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--surface-raised))]"
                       )}
-                    style={isActive ? { color: "var(--nav-active-color)" } : undefined}
-                    >
+                      style={isActive ? { color: "var(--nav-active-color)" } : undefined}
+                      >
                       {item.title}
                       {item.badge && (
                         <span className="ml-auto text-[9px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-[var(--radius-sm)] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]">
@@ -122,7 +121,7 @@ export function Sidebar({
         ))}
       </nav>
 
-      {/* ── Footer ───────────────────────────────────── */}
+      {/* ── Footer ────────────────────────────────────── */}
       <div className="sidebar-section py-3.5 border-t border-[rgb(var(--border))] shrink-0">
         <p className="label-mono">Sitka Engineering</p>
       </div>
@@ -130,3 +129,4 @@ export function Sidebar({
     </>
   );
 }
+
