@@ -34,6 +34,7 @@ export const navigation: NavSection[] = [
       { title: "Interaction", href: "/foundations/interaction" },
       { title: "Writing", href: "/foundations/writing" },
       { title: "Data Visualisation", href: "/foundations/data-viz" },
+      { title: "Charting",           href: "/foundations/charting" },
       { title: "Glass", href: "/foundations/glass" },
       { title: "Shadows", href: "/foundations/shadows" },
       { title: "Border Radius", href: "/foundations/border-radius" },
@@ -75,6 +76,7 @@ export const navigation: NavSection[] = [
       { title: "Notifications · Desktop", href: "/notifications/desktop" },
       { title: "Media Player",         href: "/patterns/media-player" },
       { title: "Mobile Navigation",    href: "/patterns/mobile-navigation" },
+      { title: "Mobile Widgets",       href: "/patterns/mobile-widgets" },
     ],
   },
   {
