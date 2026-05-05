@@ -1,3 +1,7 @@
+export const FEATURES = {
+  figmaLibrary: false,
+};
+
 export interface NavItem {
   title: string;
   href: string;
@@ -102,7 +106,7 @@ export const navigation: NavSection[] = [
       { title: "React · Vite",   href: "/libraries/vite" },
       { title: "Tokens Only",    href: "/libraries/tokens" },
       { title: "iOS · SwiftUI",  href: "/libraries/ios" },
-      { title: "Figma",          href: "/libraries/figma" },
+      ...(FEATURES.figmaLibrary ? [{ title: "Figma", href: "/libraries/figma" }] : []),
     ],
   },
   {

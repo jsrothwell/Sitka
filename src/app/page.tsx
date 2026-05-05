@@ -41,20 +41,22 @@ export default function HomePage() {
     <div>
       {/* ── Hero ──────────────────────────────────────── */}
       <section className="pt-4 pb-14 border-b border-[rgb(var(--border))]">
-        <span className="w-20 h-20 rounded-full bg-white mb-7 flex items-center justify-center overflow-hidden shrink-0">
-          <Image src="/sitka-logo.png" width={76} height={76} alt="Sitka logo" />
-        </span>
-        <h1
-          className="mb-6 max-w-[560px]"
-          style={{
-            fontSize: "clamp(2.5rem, 5vw, 3.25rem)",
-            fontWeight: 700,
-            letterSpacing: "-0.02em",
-            lineHeight: 1.1,
-          }}
-        >
-          Sitka Design System
-        </h1>
+        <div className="flex items-center gap-5 mb-6">
+          <span className="w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden shrink-0">
+            <Image src="/sitka-logo.png" width={76} height={76} alt="Sitka logo" />
+          </span>
+          <h1
+            className="max-w-[560px]"
+            style={{
+              fontSize: "clamp(2.5rem, 5vw, 3.25rem)",
+              fontWeight: 700,
+              letterSpacing: "-0.02em",
+              lineHeight: 1.1,
+            }}
+          >
+            <span style={{ color: "var(--nav-active-color)" }}>Sitka</span> Design System
+          </h1>
+        </div>
 
         <p
           className="text-[rgb(var(--text-secondary))] max-w-[480px] mb-9"
