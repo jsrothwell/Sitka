@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, Box, Layers, Sparkles, Zap } from "lucide-react";
 
 export const metadata: Metadata = { title: "Introduction" };
@@ -43,7 +42,7 @@ export default function HomePage() {
       <section className="pt-4 pb-14 border-b border-[rgb(var(--border))]">
         <div className="flex items-center gap-5 mb-6">
           <span className="w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden shrink-0">
-            <Image src="/sitka-logo.png" width={76} height={76} alt="Sitka logo" />
+            <img src="/sitka-logo.png" width={76} height={76} alt="Sitka logo" className="w-full h-full object-contain" />
           </span>
           <h1
             className="max-w-[560px]"
