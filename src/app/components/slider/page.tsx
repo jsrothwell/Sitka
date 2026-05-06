@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { PropsTable } from "@/components/docs/PropsTable";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
@@ -478,10 +478,24 @@ export default function SliderPage() {
 
 function CustomSliderDemo({ label, min, max, value, onChange, defaultValue, showValue }: any) {
   const [val, setVal] = useState(value ?? defaultValue ?? min);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const dragging = useRef(false);
+
   const handleChange = (v: number) => {
     setVal(v);
     onChange?.(v);
   };
+
+  const pct = ((val - min) / (max - min)) * 100;
+
+  function getValueAtX(clientX: number): number {
+    const track = trackRef.current;
+    if (!track) return min;
+    const rect = track.getBoundingClientRect();
+    const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+    return Math.round(ratio * (max - min) + min);
+  }
+
   return (
     <div className="space-y-2">
       {(label || showValue) && (
@@ -490,19 +504,16 @@ function CustomSliderDemo({ label, min, max, value, onChange, defaultValue, show
           {showValue && <span className="text-[12px] font-medium text-[rgb(var(--text-primary))]">{val}</span>}
         </div>
       )}
-      <div className="relative h-2 flex items-center">
+      <div className="relative h-2 flex items-center" ref={trackRef}>
         <div className="absolute h-[3px] rounded-full w-full bg-[rgb(var(--border))]" />
         <div
           className="absolute h-[3px] rounded-full bg-[rgb(var(--accent))]"
-          style={{
-            left: `${((val - min) / (max - min)) * 100}%`,
-            width: `${((val - min) / (max - min)) * 100}%`,
-          }}
+          style={{ left: "0%", width: `${pct}%` }}
         />
         <div
-          className="absolute w-4 h-4 rounded-full border-2 bg-white border-[rgb(var(--accent))] cursor-pointer"
+          className="absolute w-4 h-4 rounded-full border-2 bg-white border-[rgb(var(--accent))] cursor-pointer touch-none"
           style={{
-            left: `${((val - min) / (max - min)) * 100}%`,
+            left: `${pct}%`,
             transform: "translateX(-50%)",
             top: "50%",
             marginTop: "-6px",
@@ -513,10 +524,19 @@ function CustomSliderDemo({ label, min, max, value, onChange, defaultValue, show
           aria-valuemax={max}
           aria-valuenow={val}
           aria-label={label}
+          onPointerDown={(e) => {
+            dragging.current = true;
+            (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+          }}
+          onPointerMove={(e) => {
+            if (!dragging.current) return;
+            handleChange(getValueAtX(e.clientX));
+          }}
+          onPointerUp={() => { dragging.current = false; }}
           onKeyDown={(e) => {
             const delta = e.shiftKey ? 10 : 1;
-            if (e.key === "ArrowLeft" && val > min) handleChange(val - delta);
-            if (e.key === "ArrowRight" && val < max) handleChange(val + delta);
+            if (e.key === "ArrowLeft") { e.preventDefault(); handleChange(Math.max(min, val - delta)); }
+            if (e.key === "ArrowRight") { e.preventDefault(); handleChange(Math.min(max, val + delta)); }
           }}
         />
       </div>
@@ -529,12 +549,25 @@ function CustomSliderDemo({ label, min, max, value, onChange, defaultValue, show
 }
 
 function CustomRangeSliderDemo({ label, min, max, value, onChange, showValue }: any) {
-  const [vals, setVals] = useState(value ?? [min, max]);
-  const handleChange = (v: number[]) => {
+  const [vals, setVals] = useState<[number, number]>(value ?? [min, max]);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const activeThumb = useRef<number | null>(null);
+
+  const handleChange = (v: [number, number]) => {
     setVals(v);
     onChange?.(v);
   };
+
   const pct = (v: number) => ((v - min) / (max - min)) * 100;
+
+  function getValueAtX(clientX: number): number {
+    const track = trackRef.current;
+    if (!track) return min;
+    const rect = track.getBoundingClientRect();
+    const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+    return Math.round(ratio * (max - min) + min);
+  }
+
   return (
     <div className="space-y-2">
       {(label || showValue) && (
@@ -547,16 +580,16 @@ function CustomRangeSliderDemo({ label, min, max, value, onChange, showValue }: 
           )}
         </div>
       )}
-      <div className="relative h-2 flex items-center">
+      <div className="relative h-2 flex items-center" ref={trackRef}>
         <div className="absolute h-[3px] rounded-full w-full bg-[rgb(var(--border))]" />
         <div
           className="absolute h-[3px] rounded-full bg-[rgb(var(--accent))]"
           style={{ left: `${pct(vals[0])}%`, width: `${pct(vals[1]) - pct(vals[0])}%` }}
         />
-        {[0, 1].map((i) => (
+        {([0, 1] as const).map((i) => (
           <div
             key={i}
-            className="absolute w-4 h-4 rounded-full border-2 bg-white border-[rgb(var(--accent))] cursor-pointer"
+            className="absolute w-4 h-4 rounded-full border-2 bg-white border-[rgb(var(--accent))] cursor-pointer touch-none"
             style={{
               left: `${pct(vals[i])}%`,
               transform: "translateX(-50%)",
@@ -569,12 +602,29 @@ function CustomRangeSliderDemo({ label, min, max, value, onChange, showValue }: 
             aria-valuemax={max}
             aria-valuenow={vals[i]}
             aria-label={`${label} ${i === 0 ? "minimum" : "maximum"}`}
+            onPointerDown={(e) => {
+              activeThumb.current = i;
+              (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+            }}
+            onPointerMove={(e) => {
+              if (activeThumb.current !== i) return;
+              const newVal = getValueAtX(e.clientX);
+              const newVals: [number, number] = [...vals] as [number, number];
+              newVals[i] = newVal;
+              if (i === 0 && newVals[0] >= newVals[1]) newVals[0] = newVals[1] - 1;
+              if (i === 1 && newVals[1] <= newVals[0]) newVals[1] = newVals[0] + 1;
+              handleChange(newVals);
+            }}
+            onPointerUp={() => { activeThumb.current = null; }}
             onKeyDown={(e) => {
               const delta = e.shiftKey ? 10 : 1;
-              const newVals = [...vals] as [number, number];
-              if (e.key === "ArrowLeft" && vals[i] > min + (i === 1 ? 1 : 0)) newVals[i] -= delta;
-              if (e.key === "ArrowRight" && vals[i] < max - (i === 0 ? 1 : 0)) newVals[i] += delta;
-              if (newVals[0] <= newVals[1]) handleChange(newVals);
+              const newVals: [number, number] = [...vals] as [number, number];
+              if (e.key === "ArrowLeft") newVals[i] = Math.max(i === 0 ? min : vals[0] + 1, vals[i] - delta);
+              if (e.key === "ArrowRight") newVals[i] = Math.min(i === 1 ? max : vals[1] - 1, vals[i] + delta);
+              if (newVals[0] !== vals[0] || newVals[1] !== vals[1]) {
+                e.preventDefault();
+                handleChange(newVals);
+              }
             }}
           />
         ))}
