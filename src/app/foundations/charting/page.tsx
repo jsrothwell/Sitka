@@ -221,14 +221,14 @@ function SankeyDiagram() {
 
 // ── Alluvial diagram ──────────────────────────────────────────────────────────
 //
-// Subscription plan distribution over three quarters.
-// Each column shows how the total distributes across tiers.
-// Ribbons connect same-tier bands across periods, showing continuity and drift.
+// JobFlo application pipeline stage distribution over three months.
+// Each column shows the percentage of all tracked applications in each stage.
+// Ribbons show how the same stage persists and shifts across months.
 //
-// Data (totals normalised to 100):
-//   Q1: Free=50, Basic=30, Pro=15, Enterprise=5
-//   Q2: Free=42, Basic=32, Pro=20, Enterprise=6
-//   Q3: Free=36, Basic=29, Pro=27, Enterprise=8
+// Data (totals normalised to 100%):
+//   Jan 2025: Wishlist=45, Applied=35, Screening=15, Interview=5
+//   Feb 2025: Wishlist=30, Applied=38, Screening=22, Interview=10
+//   Mar 2025: Wishlist=20, Applied=35, Screening=28, Interview=17
 //
 // Scale: (260 – 3×8) / 100 = 2.36 px/unit
 
@@ -236,47 +236,47 @@ function AlluvialDiagram() {
   const W = 560, H = 260;
   const NW = 18; // column node width
 
-  type TierKey = "free" | "basic" | "pro" | "enterprise";
-  const TIERS: Record<TierKey, { color: string; label: string }> = {
-    free:       { color: P.green,  label: "Free" },
-    basic:      { color: P.blue,   label: "Basic" },
-    pro:        { color: P.amber,  label: "Pro" },
-    enterprise: { color: P.purple, label: "Enterprise" },
+  type StageKey = "wishlist" | "applied" | "screening" | "interview";
+  const STAGES: Record<StageKey, { color: string; label: string }> = {
+    wishlist:  { color: P.green,  label: "Wishlist" },
+    applied:   { color: P.blue,   label: "Applied" },
+    screening: { color: P.amber,  label: "Screening" },
+    interview: { color: P.purple, label: "Interview" },
   };
 
   type ColData = { h: number; y: number };
-  type Column = Record<TierKey, ColData>;
+  type Column = Record<StageKey, ColData>;
 
   // Pre-computed node heights and y positions (scale=2.36, gap=8)
   const cols: { label: string; x: number; nodes: Column }[] = [
     {
-      label: "Q1 2024",
+      label: "Jan 2025",
       x: 0,
       nodes: {
-        free:       { h: 118, y: 0   },
-        basic:      { h: 71,  y: 126 },
-        pro:        { h: 35,  y: 205 },
-        enterprise: { h: 12,  y: 248 },
+        wishlist:  { h: 106, y: 0   },
+        applied:   { h: 83,  y: 114 },
+        screening: { h: 35,  y: 205 },
+        interview: { h: 12,  y: 248 },
       },
     },
     {
-      label: "Q2 2024",
+      label: "Feb 2025",
       x: 271,
       nodes: {
-        free:       { h: 99,  y: 0   },
-        basic:      { h: 75,  y: 107 },
-        pro:        { h: 47,  y: 190 },
-        enterprise: { h: 15,  y: 245 },
+        wishlist:  { h: 71,  y: 0   },
+        applied:   { h: 89,  y: 79  },
+        screening: { h: 52,  y: 176 },
+        interview: { h: 23,  y: 236 },
       },
     },
     {
-      label: "Q3 2024",
+      label: "Mar 2025",
       x: 542,
       nodes: {
-        free:       { h: 85,  y: 0   },
-        basic:      { h: 68,  y: 93  },
-        pro:        { h: 64,  y: 169 },
-        enterprise: { h: 19,  y: 241 },
+        wishlist:  { h: 47,  y: 0   },
+        applied:   { h: 83,  y: 55  },
+        screening: { h: 66,  y: 146 },
+        interview: { h: 40,  y: 220 },
       },
     },
   ];
@@ -288,12 +288,12 @@ function AlluvialDiagram() {
     const rCol = cols[ci + 1];
     const lx = lCol.x + NW;
     const rx = rCol.x;
-    for (const key of Object.keys(TIERS) as TierKey[]) {
+    for (const key of Object.keys(STAGES) as StageKey[]) {
       const l = lCol.nodes[key];
       const r = rCol.nodes[key];
       bands.push({
         path: ribbon(lx, l.y, l.y + l.h, rx, r.y, r.y + r.h),
-        color: TIERS[key].color,
+        color: STAGES[key].color,
       });
     }
   }
@@ -325,9 +325,9 @@ function AlluvialDiagram() {
               {col.label}
             </text>
 
-            {(Object.keys(TIERS) as TierKey[]).map((key) => {
+            {(Object.keys(STAGES) as StageKey[]).map((key) => {
               const { h, y } = col.nodes[key];
-              const { color, label } = TIERS[key];
+              const { color, label } = STAGES[key];
               if (h < 4) return null;
               return (
                 <g key={key}>
@@ -351,10 +351,10 @@ function AlluvialDiagram() {
       })}
 
       {/* Change annotations */}
-      {/* Free: shrinking */}
-      <text x={130} y={44} fontSize={9} fill={P.tertiary} textAnchor="middle">Free ↓ 50→36%</text>
-      {/* Pro: growing */}
-      <text x={130} y={213} fontSize={9} fill={P.tertiary} textAnchor="middle">Pro ↑ 15→27%</text>
+      {/* Wishlist: shrinking — pipeline maturing */}
+      <text x={130} y={44} fontSize={9} fill={P.tertiary} textAnchor="middle">Wishlist ↓ 45→20%</text>
+      {/* Interview: growing — applications advancing */}
+      <text x={130} y={252} fontSize={9} fill={P.tertiary} textAnchor="middle">Interview ↑ 5→17%</text>
     </svg>
   );
 }
@@ -634,18 +634,18 @@ export function SankeyChart({ nodes, links, width, height }: {
       <section className="mb-14">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Alluvial diagrams</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
-          An Alluvial diagram is a specialisation of Sankey where each column represents a point in time and each row of bands represents the same category persisting across periods. The vertical position and height of a band shows the category's share; the drift between columns reveals migration — users upgrading, downgrading, or churning.
+          An Alluvial diagram is a specialisation of Sankey where each column represents a point in time and each row of bands represents the same category persisting across periods. The vertical position and height of a band shows the category's share; the drift between columns reveals movement — in JobFlo, applications advancing through the pipeline, stalling in a stage, or reaching terminal outcomes like Rejected or Accepted.
         </p>
 
         <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--background))] p-6 mb-6">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4">Subscription tier distribution across three quarters</p>
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4">JobFlo application pipeline stage distribution — Jan to Mar 2025</p>
           <AlluvialDiagram />
           <div className="flex items-center gap-5 mt-4 justify-center">
             {[
-              { color: P.green,  label: "Free" },
-              { color: P.blue,   label: "Basic" },
-              { color: P.amber,  label: "Pro" },
-              { color: P.purple, label: "Enterprise" },
+              { color: P.green,  label: "Wishlist" },
+              { color: P.blue,   label: "Applied" },
+              { color: P.amber,  label: "Screening" },
+              { color: P.purple, label: "Interview" },
             ].map(({ color, label }) => (
               <span key={label} className="flex items-center gap-2 text-[11px] text-[rgb(var(--text-tertiary))]">
                 <span className="w-3 h-3 rounded-sm shrink-0" style={{ background: color }} />
@@ -660,11 +660,11 @@ export function SankeyChart({ nodes, links, width, height }: {
           {[
             {
               signal: "Band height increases",
-              meaning: "That tier's share of the total grew between periods. The band expands upward or downward depending on position.",
+              meaning: "That stage's share of the total grew between periods. The band expands upward or downward depending on position.",
             },
             {
               signal: "Band height decreases",
-              meaning: "That tier's share shrank. The most diagnostic case: Free shrinking while Pro grows signals healthy upgrades.",
+              meaning: "That stage's share shrank. The most diagnostic case: Wishlist shrinking while Interview grows signals a healthy, advancing pipeline.",
             },
             {
               signal: "Band crosses another",
@@ -790,7 +790,7 @@ export function AlluvialChart({ bands, lx, rx }: {
             { rule: "Position intelligently", body: "Default right of cursor. Flip left when within 140px of the right viewport edge. Never cover the data the tooltip is describing." },
             { rule: "Format values consistently", body: "Match the axis format: if the y-axis shows £M, the tooltip shows £42.3M — not 42300000. Use the same number of decimal places for all series." },
             { rule: "Sankey tooltips", body: "Show the link's flow value and percentage of source total on hover. Highlight the hovered link by increasing its opacity; dim all others to 15%." },
-            { rule: "Alluvial tooltips", body: "Show the band's category name, current period value, and delta from the previous period (▲ 5pp or ▼ 8pp). Highlight the full band across all columns." },
+            { rule: "Alluvial tooltips", body: "Show the stage name, current period percentage, and delta from the previous period (▲ 5pp or ▼ 8pp). Highlight the full band across all columns." },
           ].map(({ rule, body }) => (
             <div key={rule} className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
               <span className="text-[12px] font-semibold text-[rgb(var(--text-primary))] block mb-1">{rule}</span>
