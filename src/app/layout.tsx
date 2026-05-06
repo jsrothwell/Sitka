@@ -16,14 +16,39 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const BASE_URL = "https://jsrothwell.github.io/Sitka";
+const OG_DESCRIPTION =
+  "A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: {
     template: "%s — Sitka Design System",
     default: "Sitka Design System",
   },
-  description:
-    "A premium design system for building high-quality digital products across Web, iOS, and macOS.",
+  description: OG_DESCRIPTION,
   keywords: ["design system", "components", "tokens", "React", "SwiftUI"],
+  openGraph: {
+    title: "Sitka Design System",
+    description: OG_DESCRIPTION,
+    url: BASE_URL,
+    siteName: "Sitka Design System",
+    images: [
+      {
+        url: `${BASE_URL}/og-preview.png`,
+        width: 1200,
+        height: 630,
+        alt: "Sitka Design System",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sitka Design System",
+    description: OG_DESCRIPTION,
+    images: [`${BASE_URL}/og-preview.png`],
+  },
 };
 
 // Blocking script: runs before hydration to apply tokens directly on the root
