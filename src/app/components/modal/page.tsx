@@ -266,6 +266,92 @@ struct SitkaModal<Content: View, Footer: View>: View {
     }
 }`,
   },
+  macos: {
+    filename: "SitkaModal+macOS.swift",
+    code: `import SwiftUI
+
+// On macOS, modals are presented as sheets attached to a window
+// or as separate panels. SitkaModal uses SwiftUI's .sheet() on macOS
+// rather than a full-screen overlay, matching HIG conventions.
+
+struct SitkaModal<Content: View, Footer: View>: View {
+    @Binding var isPresented: Bool
+    let title: String
+    var description: String? = nil
+    @ViewBuilder let content: () -> Content
+    @ViewBuilder let footer: () -> Footer
+
+    var body: some View {
+        // Trigger view — in real usage this would be a Button
+        EmptyView()
+            .sheet(isPresented: $isPresented) {
+                VStack(alignment: .leading, spacing: 0) {
+                    // Header
+                    HStack(alignment: .top) {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(title)
+                                .font(.system(size: 15, weight: .semibold))
+                            if let desc = description {
+                                Text(desc)
+                                    .font(.system(size: 13))
+                                    .foregroundColor(Color(.secondaryLabelColor))
+                            }
+                        }
+                        Spacer()
+                        Button { isPresented = false } label: {
+                            Image(systemName: "xmark")
+                                .font(.system(size: 11, weight: .medium))
+                                .foregroundColor(Color(.secondaryLabelColor))
+                                .padding(5)
+                                .background(Color(NSColor.quaternaryLabelColor).opacity(0.15))
+                                .clipShape(RoundedRectangle(cornerRadius: 6))
+                        }
+                        .buttonStyle(.plain)
+                        .keyboardShortcut(.escape, modifiers: [])
+                    }
+                    .padding(20)
+
+                    Divider()
+
+                    content()
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 16)
+
+                    Divider()
+
+                    HStack {
+                        Spacer()
+                        footer()
+                    }
+                    .padding(16)
+                }
+                .background(Color(NSColor.windowBackgroundColor))
+                .frame(minWidth: 400, maxWidth: 480)
+            }
+    }
+}
+
+#Preview {
+    @Previewable @State var show = true
+
+    Button("Open modal") { show = true }
+        .overlay {
+            SitkaModal(
+                isPresented: $show,
+                title: "Confirm deletion",
+                description: "This action cannot be undone."
+            ) {
+                Text("All files will be removed permanently.")
+                    .font(.system(size: 13))
+                    .foregroundColor(Color(.secondaryLabelColor))
+            } footer: {
+                Button("Cancel") { show = false }
+                Button("Delete", role: .destructive) { show = false }
+            }
+        }
+        .padding()
+}`,
+  },
 };
 
 export default function ModalPage() {

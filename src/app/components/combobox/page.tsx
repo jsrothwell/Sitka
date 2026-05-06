@@ -287,11 +287,11 @@ struct SitkaCombobox: View {
             }
             .padding(.horizontal, 10)
             .padding(.vertical, 8)
-            .background(Color(NSColor.controlBackgroundColor))
+            .background(Color(UIColor.secondarySystemBackground))
             .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .stroke(isExpanded ? Color.accentColor : Color(NSColor.separatorColor), lineWidth: 1)
+                    .stroke(isExpanded ? Color.accentColor : Color(UIColor.separator), lineWidth: 1)
             )
 
             if isExpanded && !filtered.isEmpty {
@@ -318,12 +318,118 @@ struct SitkaCombobox: View {
                     .padding(4)
                 }
                 .frame(maxHeight: 200)
-                .background(Color(NSColor.controlBackgroundColor))
+                .background(Color(UIColor.secondarySystemBackground))
                 .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                 .shadow(color: .black.opacity(0.15), radius: 8, x: 0, y: 4)
             }
         }
     }
+}`,
+  },
+  macos: {
+    filename: "SitkaCombobox+macOS.swift",
+    code: `import SwiftUI
+
+// On macOS, use a Menu-based picker for simple single-select,
+// or a SearchField + popover for full combobox behavior.
+
+struct ComboboxOption: Identifiable, Hashable {
+    let id = UUID()
+    let value: String
+    let label: String
+}
+
+// Full combobox with search field + popover dropdown
+struct SitkaCombobox: View {
+    let options: [ComboboxOption]
+    @Binding var selected: ComboboxOption?
+    var placeholder: String = "Select…"
+
+    @State private var query = ""
+    @State private var isExpanded = false
+
+    private var filtered: [ComboboxOption] {
+        query.isEmpty ? options : options.filter {
+            $0.label.localizedCaseInsensitiveContains(query)
+        }
+    }
+
+    var body: some View {
+        HStack {
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(Color(.secondaryLabelColor))
+                .font(.system(size: 12))
+
+            TextField(placeholder, text: $query)
+                .textFieldStyle(.plain)
+                .font(.system(size: 13))
+                .onSubmit {
+                    if let first = filtered.first {
+                        selected = first
+                        query = first.label
+                        isExpanded = false
+                    }
+                }
+                .onChange(of: query) { isExpanded = !query.isEmpty }
+
+            if !query.isEmpty {
+                Button { query = ""; selected = nil } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundColor(Color(.secondaryLabelColor))
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(.horizontal, 8)
+        .padding(.vertical, 6)
+        .background(Color(NSColor.controlBackgroundColor))
+        .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 6, style: .continuous)
+                .stroke(isExpanded ? Color.accentColor : Color(NSColor.separatorColor), lineWidth: 1)
+        )
+        .popover(isPresented: $isExpanded, arrowEdge: .bottom) {
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: 1) {
+                    ForEach(filtered) { opt in
+                        Button {
+                            selected = opt
+                            query = opt.label
+                            isExpanded = false
+                        } label: {
+                            Text(opt.label)
+                                .font(.system(size: 13, weight: selected == opt ? .semibold : .regular))
+                                .foregroundColor(selected == opt ? .accentColor : Color(.labelColor))
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 5)
+                                .background(selected == opt ? Color.accentColor.opacity(0.1) : Color.clear)
+                                .clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous))
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding(6)
+            }
+            .frame(minWidth: 200, maxHeight: 220)
+        }
+    }
+}
+
+let languages = [
+    ComboboxOption(value: "ts",    label: "TypeScript"),
+    ComboboxOption(value: "rs",    label: "Rust"),
+    ComboboxOption(value: "go",    label: "Go"),
+    ComboboxOption(value: "py",    label: "Python"),
+    ComboboxOption(value: "swift", label: "Swift"),
+]
+
+#Preview {
+    @Previewable @State var selected: ComboboxOption? = nil
+
+    SitkaCombobox(options: languages, selected: $selected, placeholder: "Select a language…")
+        .frame(width: 240)
+        .padding()
 }`,
   },
 };

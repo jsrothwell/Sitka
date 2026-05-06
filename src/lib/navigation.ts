@@ -111,6 +111,7 @@ export const navigation: NavSection[] = [
       { title: "React · Vite",   href: "/libraries/vite" },
       { title: "Tokens Only",    href: "/libraries/tokens" },
       { title: "iOS · SwiftUI",  href: "/libraries/ios" },
+      { title: "macOS · SwiftUI", href: "/libraries/macos" },
       ...(FEATURES.figmaLibrary ? [{ title: "Figma", href: "/libraries/figma" }] : []),
     ],
   },

@@ -247,6 +247,94 @@ struct SitkaCard<Content: View>: View {
     .padding()
 }`,
   },
+  macos: {
+    filename: "SitkaCard+macOS.swift",
+    code: `import SwiftUI
+
+enum SitkaCardVariant {
+    case defaultStyle, elevated, ghost, accent
+}
+
+struct SitkaCard<Content: View>: View {
+    var variant: SitkaCardVariant = .defaultStyle
+    var isInteractive: Bool = false
+    let action: (() -> Void)?
+    @ViewBuilder let content: () -> Content
+
+    var body: some View {
+        Group {
+            if isInteractive, let action {
+                Button(action: action) { cardBody }
+                    .buttonStyle(PlainButtonStyle())
+            } else {
+                cardBody
+            }
+        }
+    }
+
+    private var cardBody: some View {
+        content()
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+            .background(background)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .stroke(borderColor, lineWidth: 1)
+            )
+            .shadow(color: shadowColor, radius: shadowRadius, x: 0, y: 1)
+    }
+
+    private var background: some View {
+        Group {
+            switch variant {
+            case .defaultStyle: Color(NSColor.controlBackgroundColor)
+            case .elevated:     Color(NSColor.windowBackgroundColor)
+            case .ghost:        Color(NSColor.quaternaryLabelColor).opacity(0.06)
+            case .accent:       Color.accentColor.opacity(0.08)
+            }
+        }
+    }
+
+    private var borderColor: Color {
+        switch variant {
+        case .defaultStyle, .elevated: Color(NSColor.separatorColor)
+        case .ghost:                   Color.clear
+        case .accent:                  Color.accentColor.opacity(0.35)
+        }
+    }
+
+    private var shadowColor: Color {
+        variant == .elevated ? Color.black.opacity(0.08) : .clear
+    }
+
+    private var shadowRadius: CGFloat {
+        variant == .elevated ? 8 : 0
+    }
+}
+
+// MARK: - Preview
+#Preview {
+    VStack(spacing: 12) {
+        SitkaCard {
+            VStack(alignment: .leading, spacing: 0) {
+                Text("Default card")
+                    .font(.system(size: 13, weight: .semibold))
+                    .padding()
+            }
+        }
+        SitkaCard(variant: .elevated) {
+            Text("Elevated card").font(.system(size: 13)).padding()
+        }
+        SitkaCard(variant: .accent) {
+            Text("Accent card").font(.system(size: 13)).padding()
+        }
+        SitkaCard(isInteractive: true, action: {}) {
+            Text("Interactive card").font(.system(size: 13)).padding()
+        }
+    }
+    .padding()
+    .frame(width: 320)
+}`,
+  },
 };
 
 export default function CardPage() {

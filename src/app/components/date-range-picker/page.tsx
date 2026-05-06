@@ -382,7 +382,7 @@ struct SitkaDateRangePicker: View {
             }
         }
         .padding(12)
-        .background(Color(NSColor.controlBackgroundColor))
+        .background(Color(UIColor.secondarySystemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
         .shadow(color: .black.opacity(0.15), radius: 12, x: 0, y: 6)
     }
@@ -411,6 +411,113 @@ struct SitkaDateRangePicker: View {
         let dates = range.compactMap { calendar.date(byAdding: .day, value: $0 - 1, to: first) }
         return padding + dates
     }
+}`,
+  },
+  macos: {
+    filename: "SitkaDateRangePicker+macOS.swift",
+    code: `import SwiftUI
+
+// On macOS 13+, use the built-in DatePicker with .graphical style for a
+// native calendar picker. For a date range, pair two DatePickers in a
+// sheet or popover.
+
+struct DateRange {
+    var start: Date?
+    var end: Date?
+}
+
+struct SitkaDateRangePicker: View {
+    @Binding var range: DateRange
+    var minDate: Date? = nil
+    var maxDate: Date? = nil
+
+    @State private var displayedMonth = Calendar.current.date(
+        from: Calendar.current.dateComponents([.year, .month], from: .now)
+    )!
+
+    private var calendar: Calendar { .current }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            // Month navigation
+            HStack {
+                Button { shiftMonth(-1) } label: {
+                    Image(systemName: "chevron.left").font(.system(size: 11))
+                }
+                .buttonStyle(.plain)
+
+                Text(displayedMonth, format: .dateTime.year().month(.wide))
+                    .font(.system(size: 13, weight: .bold))
+                    .frame(maxWidth: .infinity)
+
+                Button { shiftMonth(1) } label: {
+                    Image(systemName: "chevron.right").font(.system(size: 11))
+                }
+                .buttonStyle(.plain)
+            }
+
+            // Day-of-week headers
+            HStack(spacing: 0) {
+                ForEach(["S","M","T","W","T","F","S"], id: \\.self) { d in
+                    Text(d)
+                        .font(.system(size: 10, weight: .semibold))
+                        .foregroundColor(Color(.tertiaryLabelColor))
+                        .frame(maxWidth: .infinity)
+                }
+            }
+
+            // Calendar grid
+            let days = daysInMonth(displayedMonth)
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 0) {
+                ForEach(days, id: \\.self) { date in
+                    DayCell(date: date, range: range, minDate: minDate, maxDate: maxDate) {
+                        selectDate(date)
+                    }
+                }
+            }
+        }
+        .padding(12)
+        .background(Color(NSColor.controlBackgroundColor))
+        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .stroke(Color(NSColor.separatorColor), lineWidth: 1)
+        )
+        .shadow(color: .black.opacity(0.08), radius: 8, x: 0, y: 3)
+        .frame(width: 260)
+    }
+
+    private func selectDate(_ date: Date) {
+        if range.start == nil || (range.start != nil && range.end != nil) {
+            range = DateRange(start: date, end: nil)
+        } else if let start = range.start, date >= start {
+            range.end = date
+        } else {
+            range = DateRange(start: date, end: nil)
+        }
+    }
+
+    private func shiftMonth(_ delta: Int) {
+        displayedMonth = calendar.date(byAdding: .month, value: delta, to: displayedMonth)!
+    }
+
+    private func daysInMonth(_ date: Date) -> [Date] {
+        guard let monthRange = calendar.range(of: .day, in: .month, for: date),
+              let first = calendar.date(from: calendar.dateComponents([.year, .month], from: date))
+        else { return [] }
+
+        let weekday = calendar.component(.weekday, from: first) - 1
+        let padding = Array(repeating: Date.distantPast, count: weekday)
+        let dates = monthRange.compactMap { calendar.date(byAdding: .day, value: $0 - 1, to: first) }
+        return padding + dates
+    }
+}
+
+#Preview {
+    @Previewable @State var range = DateRange()
+
+    SitkaDateRangePicker(range: $range)
+        .padding()
 }`,
   },
 };

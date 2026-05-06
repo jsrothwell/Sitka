@@ -249,6 +249,100 @@ struct SitkaPicker<Value: Hashable>: View {
     }
 }`,
   },
+  macos: {
+    filename: "SitkaFormControls+macOS.swift",
+    code: `import SwiftUI
+
+// On macOS, SwiftUI provides native controls that automatically match
+// the platform's appearance. Prefer these over custom implementations.
+
+// Checkbox — use Toggle with .checkbox style
+struct SitkaCheckbox: View {
+    let label: String
+    @Binding var isChecked: Bool
+
+    var body: some View {
+        Toggle(label, isOn: $isChecked)
+            .toggleStyle(.checkbox)
+    }
+}
+
+// Radio group — use Picker with .radioGroup style
+struct SitkaRadioGroup<Value: Hashable & CaseIterable>: View {
+    let label: String
+    let options: [(label: String, value: Value)]
+    @Binding var selection: Value
+
+    var body: some View {
+        Picker(label, selection: $selection) {
+            ForEach(options, id: \\.value) { opt in
+                Text(opt.label).tag(opt.value)
+            }
+        }
+        .pickerStyle(.radioGroup)
+    }
+}
+
+// Switch — standard Toggle (same as iOS, no style override needed)
+struct SitkaSwitch: View {
+    let label: String
+    @Binding var isOn: Bool
+
+    var body: some View {
+        Toggle(label, isOn: $isOn)
+            .tint(Color.accentColor)
+    }
+}
+
+// Select (Picker) — .menu style works on macOS 12+; use .popUpButton for older targets
+struct SitkaPicker<Value: Hashable>: View {
+    let label: String
+    let options: [(label: String, value: Value)]
+    @Binding var selection: Value
+
+    var body: some View {
+        Picker(label, selection: $selection) {
+            ForEach(options, id: \\.value) { opt in
+                Text(opt.label).tag(opt.value)
+            }
+        }
+        .pickerStyle(.menu)
+        .fixedSize()
+    }
+}
+
+// Usage in a settings form
+enum Frequency: String, CaseIterable { case daily, weekly, monthly }
+
+#Preview {
+    Form {
+        Section("Notifications") {
+            SitkaCheckbox(label: "Email alerts", isChecked: .constant(true))
+            SitkaCheckbox(label: "Push notifications", isChecked: .constant(false))
+        }
+        Section("Frequency") {
+            SitkaRadioGroup(
+                label: "Send reports",
+                options: [("Daily", Frequency.daily), ("Weekly", .weekly), ("Monthly", .monthly)],
+                selection: .constant(.weekly)
+            )
+        }
+        Section("Appearance") {
+            SitkaSwitch(label: "Dark mode", isOn: .constant(true))
+        }
+        Section("Export format") {
+            SitkaPicker(
+                label: "Format",
+                options: [("CSV", "csv"), ("JSON", "json"), ("PDF", "pdf")],
+                selection: .constant("csv")
+            )
+        }
+    }
+    .formStyle(.grouped)
+    .frame(width: 360)
+    .padding()
+}`,
+  },
 };
 
 export default function FormControlsPage() {

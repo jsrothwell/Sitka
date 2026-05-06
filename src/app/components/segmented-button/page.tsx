@@ -221,6 +221,124 @@ struct SitkaSegmentedButton<T: Hashable>: View {
     .padding()
 }`,
   },
+  macos: {
+    filename: "SitkaSegmentedButton+macOS.swift",
+    code: `import SwiftUI
+
+// On macOS 14+, use the native Picker with .segmented style —
+// it renders as a proper NSSegmentedControl and handles keyboard navigation automatically.
+
+struct SitkaSegmentedButton<Value: Hashable>: View {
+    struct Option {
+        let value: Value
+        var label: String? = nil
+        var systemImage: String? = nil
+    }
+
+    let options: [Option]
+    @Binding var selection: Value
+
+    var body: some View {
+        Picker("", selection: $selection) {
+            ForEach(options.indices, id: \\.self) { i in
+                let opt = options[i]
+                Group {
+                    if let img = opt.systemImage, let lbl = opt.label {
+                        Label(lbl, systemImage: img)
+                    } else if let img = opt.systemImage {
+                        Image(systemName: img)
+                    } else if let lbl = opt.label {
+                        Text(lbl)
+                    }
+                }
+                .tag(opt.value)
+            }
+        }
+        .pickerStyle(.segmented)
+        .fixedSize()
+    }
+}
+
+// For a fully custom segmented control (e.g. when you need per-segment badges):
+struct SitkaCustomSegmented<Value: Hashable>: View {
+    struct Option {
+        let value: Value
+        var label: String? = nil
+        var systemImage: String? = nil
+    }
+
+    let options: [Option]
+    @Binding var selection: Value
+
+    var body: some View {
+        HStack(spacing: 2) {
+            ForEach(options.indices, id: \\.self) { i in
+                let opt = options[i]
+                let isSelected = selection == opt.value
+
+                Button {
+                    selection = opt.value
+                } label: {
+                    HStack(spacing: 5) {
+                        if let img = opt.systemImage {
+                            Image(systemName: img).font(.system(size: 12, weight: .medium))
+                        }
+                        if let lbl = opt.label {
+                            Text(lbl).font(.system(size: 12, weight: .medium))
+                        }
+                    }
+                    .foregroundColor(
+                        isSelected ? Color(.labelColor) : Color(.secondaryLabelColor)
+                    )
+                    .frame(height: 26)
+                    .padding(.horizontal, 10)
+                    .background(isSelected ? Color(NSColor.controlBackgroundColor) : Color.clear)
+                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5, style: .continuous)
+                            .stroke(isSelected ? Color(NSColor.separatorColor) : Color.clear, lineWidth: 1)
+                    )
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(3)
+        .background(Color(NSColor.windowBackgroundColor))
+        .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 8, style: .continuous)
+                .stroke(Color(NSColor.separatorColor), lineWidth: 1)
+        )
+    }
+}
+
+#Preview {
+    @Previewable @State var view = "grid"
+
+    VStack(spacing: 16) {
+        // Native NSSegmentedControl
+        SitkaSegmentedButton(
+            options: [
+                .init(value: "grid",  label: "Grid", systemImage: "square.grid.2x2"),
+                .init(value: "list",  label: "List", systemImage: "list.bullet"),
+                .init(value: "map",   label: "Map",  systemImage: "map"),
+            ],
+            selection: $view
+        )
+
+        // Custom variant
+        SitkaCustomSegmented(
+            options: [
+                .init(value: "grid",  label: "Grid", systemImage: "square.grid.2x2"),
+                .init(value: "list",  label: "List", systemImage: "list.bullet"),
+                .init(value: "map",   label: "Map",  systemImage: "map"),
+            ],
+            selection: $view
+        )
+    }
+    .padding()
+}`,
+  },
 };
 
 export default function SegmentedButtonPage() {

@@ -232,6 +232,91 @@ struct SitkaAvatar: View {
     .padding()
 }`,
   },
+  macos: {
+    filename: "SitkaAvatar+macOS.swift",
+    code: `import SwiftUI
+
+enum SitkaAvatarSize { case xs, sm, md, lg, xl }
+enum SitkaAvatarStatus { case online, offline, away, busy }
+
+struct SitkaAvatar: View {
+    let alt: String
+    var initials: String? = nil
+    var imageURL: URL? = nil
+    var size: SitkaAvatarSize = .md
+    var status: SitkaAvatarStatus? = nil
+
+    var body: some View {
+        ZStack(alignment: .bottomTrailing) {
+            Circle()
+                .fill(Color.accentColor.opacity(0.12))
+                .frame(width: diameter, height: diameter)
+                .overlay {
+                    if let url = imageURL {
+                        AsyncImage(url: url) { image in
+                            image.resizable().scaledToFill()
+                        } placeholder: { Color.clear }
+                        .clipShape(Circle())
+                    } else {
+                        Text(resolvedInitials)
+                            .font(.system(size: fontSize, weight: .semibold))
+                            .foregroundColor(.accentColor)
+                    }
+                }
+                .accessibilityLabel(alt)
+
+            if let status {
+                Circle()
+                    .fill(statusColor(status))
+                    .frame(width: dotDiameter, height: dotDiameter)
+                    .overlay(Circle().stroke(Color(NSColor.windowBackgroundColor), lineWidth: dotBorder))
+                    .accessibilityLabel(statusLabel(status))
+            }
+        }
+    }
+
+    private var resolvedInitials: String {
+        if let i = initials { return String(i.prefix(2)).uppercased() }
+        let words = alt.split(separator: " ")
+        if words.count >= 2 { return String(words.first!.prefix(1) + words.last!.prefix(1)).uppercased() }
+        return String(alt.prefix(2)).uppercased()
+    }
+
+    private var diameter: CGFloat {
+        switch size { case .xs: 20; case .sm: 28; case .md: 36; case .lg: 44; case .xl: 56 }
+    }
+    private var fontSize: CGFloat {
+        switch size { case .xs: 8; case .sm: 10; case .md: 12; case .lg: 14; case .xl: 17 }
+    }
+    private var dotDiameter: CGFloat {
+        switch size { case .xs: 5; case .sm: 7; case .md: 9; case .lg: 11; case .xl: 13 }
+    }
+    private var dotBorder: CGFloat { size == .xs ? 1.5 : 2 }
+
+    private func statusColor(_ s: SitkaAvatarStatus) -> Color {
+        switch s {
+        case .online:  Color(hex: "#10b981")
+        case .offline: Color(.tertiaryLabelColor)
+        case .away:    Color(hex: "#f59e0b")
+        case .busy:    Color(hex: "#f87171")
+        }
+    }
+    private func statusLabel(_ s: SitkaAvatarStatus) -> String {
+        switch s { case .online: "Online"; case .offline: "Offline"; case .away: "Away"; case .busy: "Busy" }
+    }
+}
+
+#Preview {
+    HStack(spacing: 10) {
+        SitkaAvatar(alt: "Jamieson Rothwell", size: .xl, status: .online)
+        SitkaAvatar(alt: "Sam Park",    size: .lg, status: .away)
+        SitkaAvatar(alt: "Lena Müller", size: .md, status: .busy)
+        SitkaAvatar(alt: "Dev Bot",     size: .sm, status: .offline)
+        SitkaAvatar(alt: "A",           size: .xs)
+    }
+    .padding()
+}`,
+  },
 };
 
 export default function AvatarPage() {

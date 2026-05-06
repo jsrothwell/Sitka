@@ -195,6 +195,111 @@ struct SitkaTable<RowValue: Identifiable>: View {
     }
 }`,
   },
+  macos: {
+    filename: "SitkaTable+macOS.swift",
+    code: `import SwiftUI
+
+// On macOS 13+, use the native SwiftUI Table view — it provides
+// sortable columns, multi-selection, and proper VoiceOver support for free.
+
+struct Member: Identifiable {
+    let id = UUID()
+    var name: String
+    var role: String
+    var status: String
+    var joined: String
+}
+
+struct MemberTable: View {
+    @State private var members = [
+        Member(name: "Jamieson Rothwell", role: "Admin",    status: "Active",   joined: "Jan 2023"),
+        Member(name: "Sam Park",          role: "Editor",   status: "Active",   joined: "Mar 2023"),
+        Member(name: "Lena Müller",       role: "Viewer",   status: "Inactive", joined: "Jul 2023"),
+        Member(name: "Dev Bot",           role: "API User", status: "Active",   joined: "Sep 2023"),
+    ]
+    @State private var sortOrder = [KeyPathComparator(\\Member.name)]
+    @State private var selection: Set<Member.ID> = []
+
+    var body: some View {
+        Table(members, selection: $selection, sortOrder: $sortOrder) {
+            TableColumn("Name", value: \\.name) { member in
+                Text(member.name).fontWeight(.medium)
+            }
+            TableColumn("Role",   value: \\.role)
+            TableColumn("Status", value: \\.status) { member in
+                Text(member.status)
+                    .foregroundColor(member.status == "Active" ? .green : .secondary)
+            }
+            TableColumn("Joined", value: \\.joined)
+        }
+        .onChange(of: sortOrder) { _, newOrder in
+            members.sort(using: newOrder)
+        }
+    }
+}
+
+// For simpler read-only tables without sorting, a List + custom row works well:
+struct SitkaReadOnlyTable<RowValue: Identifiable>: View {
+    struct Column {
+        let title: String
+        let keyPath: KeyPath<RowValue, String>
+    }
+
+    let columns: [Column]
+    let rows: [RowValue]
+    var striped: Bool = false
+
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack {
+                ForEach(columns.indices, id: \\.self) { i in
+                    Text(columns[i].title)
+                        .font(.system(size: 11, weight: .semibold))
+                        .foregroundColor(Color(.tertiaryLabelColor))
+                        .textCase(.uppercase)
+                        .tracking(0.5)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .background(Color(NSColor.controlBackgroundColor))
+
+            Divider()
+
+            ForEach(Array(rows.enumerated()), id: \\.element.id) { idx, row in
+                HStack {
+                    ForEach(columns.indices, id: \\.self) { i in
+                        Text(row[keyPath: columns[i].keyPath])
+                            .font(.system(size: 13))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                }
+                .padding(.horizontal, 12)
+                .padding(.vertical, 8)
+                .background(
+                    striped && idx % 2 == 1
+                        ? Color(NSColor.alternatingContentBackgroundColors.last ?? .clear)
+                        : Color.clear
+                )
+
+                if idx < rows.count - 1 { Divider().opacity(0.4) }
+            }
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 8, style: .continuous)
+                .stroke(Color(NSColor.separatorColor), lineWidth: 1)
+        )
+    }
+}
+
+#Preview {
+    MemberTable()
+        .frame(width: 600, height: 200)
+        .padding()
+}`,
+  },
 };
 
 export default function TablePage() {

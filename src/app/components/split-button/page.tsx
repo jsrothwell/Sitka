@@ -209,6 +209,106 @@ struct SitkaSplitButton: View {
     .padding()
 }`,
   },
+  macos: {
+    filename: "SitkaSplitButton+macOS.swift",
+    code: `import SwiftUI
+
+struct SplitButtonMenuItem: Identifiable {
+    let id = UUID()
+    let label: String
+    var systemImage: String? = nil
+    var isDanger: Bool = false
+    let action: () -> Void
+}
+
+struct SitkaSplitButton: View {
+    let label: String
+    let action: () -> Void
+    let items: [SplitButtonMenuItem]
+    var systemImage: String? = nil
+    var keyboardShortcut: KeyEquivalent? = nil
+    var modifiers: EventModifiers = .command
+
+    var body: some View {
+        HStack(spacing: 0) {
+            // Primary action segment
+            Button(action: action) {
+                HStack(spacing: 6) {
+                    if let img = systemImage {
+                        Image(systemName: img).font(.system(size: 12, weight: .medium))
+                    }
+                    Text(label).font(.system(size: 13, weight: .medium))
+                }
+                .padding(.horizontal, 12)
+                .frame(height: 28)
+                .background(Color(NSColor.controlBackgroundColor))
+            }
+            .buttonStyle(.plain)
+            .modify { view in
+                if let key = keyboardShortcut {
+                    view.keyboardShortcut(key, modifiers: modifiers)
+                } else {
+                    view
+                }
+            }
+
+            // Divider
+            Rectangle()
+                .fill(Color(NSColor.separatorColor))
+                .frame(width: 1, height: 16)
+
+            // Dropdown trigger
+            Menu {
+                ForEach(items) { item in
+                    Button(role: item.isDanger ? .destructive : .none) {
+                        item.action()
+                    } label: {
+                        if let img = item.systemImage {
+                            Label(item.label, systemImage: img)
+                        } else {
+                            Text(item.label)
+                        }
+                    }
+                }
+            } label: {
+                Image(systemName: "chevron.down")
+                    .font(.system(size: 10, weight: .medium))
+                    .frame(width: 24, height: 28)
+                    .background(Color(NSColor.controlBackgroundColor))
+            }
+            .menuStyle(.borderlessButton)
+            .fixedSize()
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 6, style: .continuous)
+                .stroke(Color(NSColor.separatorColor), lineWidth: 1)
+        )
+    }
+}
+
+extension View {
+    @ViewBuilder
+    func modify<T: View>(@ViewBuilder transform: (Self) -> T) -> some View {
+        transform(self)
+    }
+}
+
+#Preview {
+    SitkaSplitButton(
+        label: "Export",
+        action: { },
+        items: [
+            SplitButtonMenuItem(label: "Export as CSV",  systemImage: "doc.text", action: { }),
+            SplitButtonMenuItem(label: "Export as JSON", systemImage: "doc.text", action: { }),
+            SplitButtonMenuItem(label: "Delete export",  systemImage: "trash",    action: { }, isDanger: true),
+        ],
+        systemImage: "square.and.arrow.up",
+        keyboardShortcut: "e"
+    )
+    .padding()
+}`,
+  },
 };
 
 export default function SplitButtonPage() {

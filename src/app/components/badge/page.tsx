@@ -190,6 +190,84 @@ struct SitkaBadge: View {
     .padding()
 }`,
   },
+  macos: {
+    filename: "SitkaBadge+macOS.swift",
+    code: `import SwiftUI
+
+enum SitkaBadgeVariant {
+    case defaultStyle, primary, success, warning, danger, ghost
+}
+
+struct SitkaBadge: View {
+    let label: String
+    var variant: SitkaBadgeVariant = .defaultStyle
+    var showDot: Bool = false
+
+    var body: some View {
+        HStack(spacing: 4) {
+            if showDot {
+                Circle()
+                    .fill(dotColor)
+                    .frame(width: 6, height: 6)
+            }
+            Text(label)
+                .font(.system(size: 11, weight: .medium))
+                .foregroundColor(foregroundColor)
+        }
+        .padding(.horizontal, 8)
+        .padding(.vertical, 2)
+        .background(backgroundColor)
+        .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 5, style: .continuous)
+                .stroke(borderColor, lineWidth: 1)
+        )
+    }
+
+    private var foregroundColor: Color {
+        switch variant {
+        case .defaultStyle: return Color(.secondaryLabelColor)
+        case .primary:  return Color.accentColor
+        case .success:  return Color(hex: "#10b981")
+        case .warning:  return Color(hex: "#f59e0b")
+        case .danger:   return Color(hex: "#f87171")
+        case .ghost:    return Color(.tertiaryLabelColor)
+        }
+    }
+
+    private var backgroundColor: Color {
+        switch variant {
+        case .defaultStyle: return Color(NSColor.quaternaryLabelColor).opacity(0.1)
+        case .primary:  return Color.accentColor.opacity(0.1)
+        case .success:  return Color(hex: "#10b981").opacity(0.1)
+        case .warning:  return Color(hex: "#f59e0b").opacity(0.1)
+        case .danger:   return Color(hex: "#f87171").opacity(0.1)
+        case .ghost:    return Color.clear
+        }
+    }
+
+    private var borderColor: Color { foregroundColor.opacity(0.3) }
+    private var dotColor: Color { foregroundColor }
+}
+
+#Preview {
+    VStack(spacing: 10) {
+        HStack {
+            SitkaBadge(label: "Default")
+            SitkaBadge(label: "Primary",  variant: .primary)
+            SitkaBadge(label: "Success",  variant: .success)
+            SitkaBadge(label: "Warning",  variant: .warning)
+            SitkaBadge(label: "Danger",   variant: .danger)
+        }
+        HStack {
+            SitkaBadge(label: "Online",   variant: .success, showDot: true)
+            SitkaBadge(label: "Degraded", variant: .warning, showDot: true)
+            SitkaBadge(label: "Incident", variant: .danger,  showDot: true)
+        }
+    }
+    .padding()
+}`,
+  },
 };
 
 export default function BadgePage() {

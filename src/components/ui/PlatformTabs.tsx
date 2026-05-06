@@ -5,24 +5,27 @@ import { motion } from "framer-motion";
 import { CodeBlock } from "./CodeBlock";
 import { cn } from "@/lib/cn";
 
-export type Platform = "react" | "html" | "swift";
+export type Platform = "react" | "html" | "swift" | "macos";
 
 export interface PlatformCode {
   react: { code: string; filename?: string };
   html: { code: string; filename?: string };
   swift: { code: string; filename?: string };
+  macos?: { code: string; filename?: string };
 }
 
 const TAB_LABELS: Record<Platform, string> = {
   react: "React / TSX",
-  html: "HTML / CSS",
-  swift: "SwiftUI",
+  html:  "HTML / CSS",
+  swift: "SwiftUI · iOS",
+  macos: "SwiftUI · macOS",
 };
 
 const TAB_LANG: Record<Platform, string> = {
   react: "tsx",
-  html: "html",
+  html:  "html",
   swift: "swift",
+  macos: "swift",
 };
 
 interface PlatformTabsProps {
@@ -33,11 +36,15 @@ interface PlatformTabsProps {
 export function PlatformTabs({ code, className }: PlatformTabsProps) {
   const [active, setActive] = useState<Platform>("react");
 
+  const platforms: Platform[] = ["react", "html", "swift", ...(code.macos ? (["macos"] as Platform[]) : [])];
+
+  const currentCode = code[active] ?? code.swift;
+
   return (
     <div className={cn("rounded-xl overflow-hidden border border-[rgb(var(--border))]", className)}>
       {/* Tab bar */}
       <div className="flex bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
-        {(Object.keys(TAB_LABELS) as Platform[]).map((platform) => (
+        {platforms.map((platform) => (
           <button
             key={platform}
             onClick={() => setActive(platform)}
@@ -60,11 +67,11 @@ export function PlatformTabs({ code, className }: PlatformTabsProps) {
         ))}
       </div>
 
-      {/* Code panel - no border since container has it */}
+      {/* Code panel */}
       <CodeBlock
-        code={code[active].code}
+        code={currentCode.code}
         language={TAB_LANG[active]}
-        filename={code[active].filename}
+        filename={currentCode.filename}
         className="rounded-none border-0"
       />
     </div>

@@ -251,6 +251,90 @@ struct SitkaBreadcrumb: View {
     .padding()
 }`,
   },
+  macos: {
+    filename: "SitkaBreadcrumb+macOS.swift",
+    code: `import SwiftUI
+
+struct BreadcrumbItem: Identifiable {
+    let id = UUID()
+    let label: String
+    var href: String? = nil
+}
+
+struct SitkaBreadcrumb: View {
+    let items: [BreadcrumbItem]
+    var maxVisible: Int? = nil
+
+    @State private var isExpanded = false
+
+    private var visibleItems: [BreadcrumbItem] {
+        guard let max = maxVisible, items.count > max, !isExpanded else { return items }
+        return [items.first!, BreadcrumbItem(label: "…"), items.last!]
+    }
+
+    var body: some View {
+        HStack(spacing: 3) {
+            ForEach(Array(visibleItems.enumerated()), id: \\.element.id) { idx, item in
+                let isLast = idx == visibleItems.count - 1
+
+                if item.label == "…" {
+                    Button("…") { isExpanded = true }
+                        .buttonStyle(.plain)
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundColor(Color(.secondaryLabelColor))
+                } else if isLast {
+                    Text(item.label)
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(Color(.labelColor))
+                } else if item.href != nil {
+                    Button(item.label) {
+                        if let href = item.href, let url = URL(string: href) {
+                            NSWorkspace.shared.open(url)
+                        }
+                    }
+                    .buttonStyle(.plain)
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundColor(.accentColor)
+                } else {
+                    Text(item.label)
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundColor(Color(.secondaryLabelColor))
+                }
+
+                if !isLast {
+                    Text("›")
+                        .font(.system(size: 11))
+                        .foregroundColor(Color(.tertiaryLabelColor))
+                }
+            }
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(items.last?.label ?? "")
+    }
+}
+
+#Preview {
+    VStack(alignment: .leading, spacing: 12) {
+        SitkaBreadcrumb(items: [
+            BreadcrumbItem(label: "Settings", href: "/settings"),
+            BreadcrumbItem(label: "Billing",  href: "/settings/billing"),
+            BreadcrumbItem(label: "Payment Methods"),
+        ])
+
+        SitkaBreadcrumb(
+            maxVisible: 3,
+            items: [
+                BreadcrumbItem(label: "Home",       href: "/"),
+                BreadcrumbItem(label: "Projects",   href: "/projects"),
+                BreadcrumbItem(label: "Web App",    href: "/projects/web-app"),
+                BreadcrumbItem(label: "Components", href: "/projects/web-app/components"),
+                BreadcrumbItem(label: "Breadcrumb"),
+            ]
+        )
+    }
+    .padding()
+}`,
+  },
 };
 
 // ── Page ──────────────────────────────────────────────────────────────────────

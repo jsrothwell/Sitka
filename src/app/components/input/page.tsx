@@ -270,6 +270,82 @@ struct SitkaInput: View {
     .padding()
 }`,
   },
+  macos: {
+    filename: "SitkaInput+macOS.swift",
+    code: `import SwiftUI
+
+// SitkaInput for macOS — AppKit color tokens and macOS focus ring.
+
+struct SitkaInput: View {
+    let label: String
+    @Binding var text: String
+    var placeholder: String = ""
+    var helpText: String? = nil
+    var error: String? = nil
+    var leftSystemImage: String? = nil
+    var isDisabled: Bool = false
+
+    @FocusState private var isFocused: Bool
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(label)
+                .font(.system(size: 12, weight: .medium))
+                .foregroundColor(Color(.labelColor))
+
+            HStack(spacing: 8) {
+                if let icon = leftSystemImage {
+                    Image(systemName: icon)
+                        .font(.system(size: 13))
+                        .foregroundColor(Color(.secondaryLabelColor))
+                }
+                TextField(placeholder, text: $text)
+                    .textFieldStyle(.plain)
+                    .font(.system(size: 13))
+                    .focused($isFocused)
+                    .disabled(isDisabled)
+            }
+            .padding(.horizontal, 10)
+            .padding(.vertical, 7)
+            .background(Color(NSColor.controlBackgroundColor))
+            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 8, style: .continuous)
+                    .stroke(
+                        error != nil    ? Color.red :
+                        isFocused       ? Color.accentColor :
+                        Color(NSColor.separatorColor),
+                        lineWidth: (error != nil || isFocused) ? 1.5 : 1
+                    )
+            )
+            .opacity(isDisabled ? 0.45 : 1)
+
+            if let error {
+                Text(error).font(.system(size: 11)).foregroundColor(.red)
+            } else if let help = helpText {
+                Text(help).font(.system(size: 11)).foregroundColor(Color(.secondaryLabelColor))
+            }
+        }
+    }
+}
+
+#Preview {
+    @Previewable @State var email    = ""
+    @Previewable @State var password = ""
+
+    Form {
+        SitkaInput(label: "Email",    text: $email,
+                   placeholder: "you@example.com",
+                   leftSystemImage: "envelope")
+        SitkaInput(label: "Password", text: $password,
+                   error: "Must be at least 8 characters.",
+                   leftSystemImage: "lock")
+    }
+    .formStyle(.grouped)
+    .padding()
+    .frame(width: 360)
+}`,
+  },
 };
 
 export default function InputPage() {

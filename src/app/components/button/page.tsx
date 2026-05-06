@@ -368,6 +368,99 @@ struct SitkaButton: View {
     .padding()
 }`,
   },
+  macos: {
+    filename: "SitkaButton+macOS.swift",
+    code: `import SwiftUI
+
+// macOS SitkaButton — same API as iOS, AppKit-aligned colors and
+// first-class keyboard shortcut support.
+
+struct SitkaButton: View {
+    let title: String
+    var variant: SitkaButtonVariant = .primary
+    var size: SitkaButtonSize = .medium
+    var isLoading: Bool = false
+    var isDisabled: Bool = false
+    var leftIcon: String? = nil
+    var rightIcon: String? = nil
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 6) {
+                if isLoading {
+                    ProgressView().scaleEffect(0.7).tint(foregroundColor)
+                } else if let icon = leftIcon {
+                    Image(systemName: icon)
+                        .font(.system(size: size.fontSize - 1, weight: .medium))
+                }
+                Text(title)
+                    .font(.system(size: size.fontSize, weight: .medium))
+                if !isLoading, let icon = rightIcon {
+                    Image(systemName: icon)
+                        .font(.system(size: size.fontSize - 1, weight: .medium))
+                }
+            }
+            .foregroundColor(foregroundColor)
+            .padding(.horizontal, size.horizontalPadding)
+            .frame(minHeight: size.height)
+            .background(background)
+            .clipShape(RoundedRectangle(cornerRadius: size.cornerRadius, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: size.cornerRadius, style: .continuous)
+                    .stroke(borderColor, lineWidth: 1)
+            )
+        }
+        .buttonStyle(.plain)
+        .disabled(isDisabled || isLoading)
+        .opacity(isDisabled ? 0.45 : 1)
+    }
+
+    private var foregroundColor: Color {
+        switch variant {
+        case .primary:   return .white
+        case .secondary: return Color(.labelColor)
+        case .ghost:     return Color(.labelColor)
+        case .danger:    return .white
+        case .glass:     return .white
+        }
+    }
+
+    private var background: some View {
+        Group {
+            switch variant {
+            case .primary:   Color.accentColor
+            case .secondary: Color(NSColor.controlBackgroundColor)
+            case .ghost:     Color.clear
+            case .danger:    Color.red
+            case .glass:     Color(NSColor.windowBackgroundColor).opacity(0.6)
+            }
+        }
+    }
+
+    private var borderColor: Color {
+        switch variant {
+        case .secondary: Color(NSColor.separatorColor)
+        case .glass:     Color(NSColor.separatorColor).opacity(0.5)
+        default:         .clear
+        }
+    }
+}
+
+// macOS: attach keyboard shortcuts at the call site
+#Preview {
+    VStack(spacing: 10) {
+        SitkaButton(title: "Save",   variant: .primary,   action: {})
+            .keyboardShortcut("s", modifiers: .command)
+        SitkaButton(title: "Cancel", variant: .secondary, action: {})
+            .keyboardShortcut(.escape, modifiers: [])
+        SitkaButton(title: "Delete", variant: .danger,    action: {})
+            .keyboardShortcut(.delete, modifiers: .command)
+    }
+    .padding(24)
+    .frame(width: 280)
+}`,
+  },
 };
 
 export default function ButtonPage() {

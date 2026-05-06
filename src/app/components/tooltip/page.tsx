@@ -214,6 +214,96 @@ struct SitkaTooltip<Content: View>: View {
     .padding(60)
 }`,
   },
+  macos: {
+    filename: "SitkaTooltip+macOS.swift",
+    code: `import SwiftUI
+
+// On macOS, prefer the native .help() modifier — it shows a system tooltip on hover
+// and respects reduced-motion settings automatically.
+
+extension View {
+    func sitkaTooltip(_ label: String) -> some View {
+        self.help(label)
+    }
+}
+
+// For cases where you need a custom-styled tooltip, use the same overlay approach:
+struct SitkaCustomTooltip<Content: View>: View {
+    let label: String
+    var placement: Edge = .top
+    @ViewBuilder let content: () -> Content
+
+    @State private var isVisible = false
+
+    var body: some View {
+        content()
+            .onHover { hovering in
+                withAnimation(.easeInOut(duration: 0.15)) { isVisible = hovering }
+            }
+            .overlay(alignment: overlayAlignment) {
+                if isVisible {
+                    Text(label)
+                        .font(.system(size: 11, weight: .medium))
+                        .foregroundColor(Color(.labelColor))
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 5)
+                        .background(Color(NSColor.controlBackgroundColor))
+                        .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 6, style: .continuous)
+                                .stroke(Color(NSColor.separatorColor), lineWidth: 1)
+                        )
+                        .shadow(color: .black.opacity(0.1), radius: 6, x: 0, y: 2)
+                        .fixedSize()
+                        .allowsHitTesting(false)
+                        .offset(tooltipOffset)
+                        .transition(.opacity.combined(with: .scale(scale: 0.95, anchor: anchor)))
+                }
+            }
+    }
+
+    private var overlayAlignment: Alignment {
+        switch placement {
+        case .top:      .top
+        case .bottom:   .bottom
+        case .leading:  .leading
+        case .trailing: .trailing
+        }
+    }
+
+    private var tooltipOffset: CGSize {
+        switch placement {
+        case .top:      CGSize(width: 0, height: -32)
+        case .bottom:   CGSize(width: 0, height: 32)
+        case .leading:  CGSize(width: -80, height: 0)
+        case .trailing: CGSize(width: 80, height: 0)
+        }
+    }
+
+    private var anchor: UnitPoint {
+        switch placement {
+        case .top:      .bottom
+        case .bottom:   .top
+        case .leading:  .trailing
+        case .trailing: .leading
+        }
+    }
+}
+
+#Preview {
+    HStack(spacing: 40) {
+        // Native system tooltip (recommended)
+        Button("Hover me (native)") {}
+            .sitkaTooltip("Native macOS tooltip")
+
+        // Custom styled tooltip
+        SitkaCustomTooltip(label: "Custom tooltip", placement: .trailing) {
+            Button("Or me (custom)") {}
+        }
+    }
+    .padding(60)
+}`,
+  },
 };
 
 export default function TooltipPage() {

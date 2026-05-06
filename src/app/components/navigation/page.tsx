@@ -223,6 +223,115 @@ struct SitkaTabs<Content: View>: View {
     .padding()
 }`,
   },
+  macos: {
+    filename: "SitkaTabs+macOS.swift",
+    code: `import SwiftUI
+
+// On macOS, the native TabView with .tabViewStyle(.automatic) renders
+// as an NSTabView, which is the platform-standard way to show tabbed content.
+
+struct SitkaTab: Identifiable {
+    let id: String
+    let label: String
+    var systemImage: String? = nil
+    var badge: String? = nil
+}
+
+// Option A: native NSTabView (recommended for settings panels, inspector panes)
+struct SitkaTabView<Content: View>: View {
+    let tabs: [SitkaTab]
+    @Binding var selection: String
+    @ViewBuilder let content: (String) -> Content
+
+    var body: some View {
+        TabView(selection: $selection) {
+            ForEach(tabs) { tab in
+                content(tab.id)
+                    .tabItem {
+                        if let img = tab.systemImage {
+                            Label(tab.label, systemImage: img)
+                        } else {
+                            Text(tab.label)
+                        }
+                    }
+                    .tag(tab.id)
+                    .badge(tab.badge.flatMap(Int.init) ?? 0)
+            }
+        }
+    }
+}
+
+// Option B: custom underline tab bar (matches web/iOS visual style)
+struct SitkaTabs<Content: View>: View {
+    let tabs: [SitkaTab]
+    @State private var activeId: String
+    @ViewBuilder let content: (String) -> Content
+
+    init(tabs: [SitkaTab], defaultId: String? = nil, @ViewBuilder content: @escaping (String) -> Content) {
+        self.tabs = tabs
+        self._activeId = State(initialValue: defaultId ?? tabs.first?.id ?? "")
+        self.content = content
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            HStack(spacing: 0) {
+                ForEach(tabs) { tab in
+                    Button(action: { activeId = tab.id }) {
+                        HStack(spacing: 5) {
+                            Text(tab.label)
+                                .font(.system(size: 12, weight: .medium))
+                            if let badge = tab.badge {
+                                Text(badge)
+                                    .font(.system(size: 10, weight: .semibold))
+                                    .padding(.horizontal, 5)
+                                    .padding(.vertical, 1)
+                                    .background(Color.accentColor.opacity(0.15))
+                                    .foregroundColor(.accentColor)
+                                    .clipShape(Capsule())
+                            }
+                        }
+                        .foregroundColor(
+                            activeId == tab.id ? Color(.labelColor) : Color(.tertiaryLabelColor)
+                        )
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 8)
+                        .overlay(alignment: .bottom) {
+                            if activeId == tab.id {
+                                Rectangle()
+                                    .fill(Color.accentColor)
+                                    .frame(height: 2)
+                                    .clipShape(Capsule())
+                            }
+                        }
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .animation(.spring(response: 0.22, dampingFraction: 0.8), value: activeId)
+                }
+            }
+            .padding(.horizontal, 4)
+
+            Divider()
+
+            content(activeId)
+                .padding(.top, 12)
+        }
+    }
+}
+
+#Preview {
+    SitkaTabs(tabs: [
+        SitkaTab(id: "overview", label: "Overview"),
+        SitkaTab(id: "versions", label: "Versions", badge: "3"),
+        SitkaTab(id: "settings", label: "Settings"),
+    ]) { active in
+        Text("Active: \\(active)")
+            .padding()
+    }
+    .frame(width: 400)
+    .padding()
+}`,
+  },
 };
 
 export default function NavigationPage() {
