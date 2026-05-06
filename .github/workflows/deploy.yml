@@ -11,16 +11,14 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,51 +36,12 @@ jobs:
       - name: Build
         run: npm run build
         env:
+          NODE_ENV: production
           NODE_OPTIONS: "--max-old-space-size=4096"
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v7
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          name: build-output
-          path: ./out
-
-  deploy:
-    environment:
-      name: github-pages
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Download artifact
-        uses: actions/download-artifact@v8
-        with:
-          name: build-output
-          path: out
-
-      - name: Deploy to root of gh-pages
-        run: |
-          cd gh-pages
-          # Remove all existing files except .git and .nojekyll
-          find . -maxdepth 1 -not -name '.git' -not -name '.nojekyll' -not -name '.' -exec rm -rf {} +
-          # Copy new build output to root
-          cp -r ../out/* .
-          cp -r ../out/.well-known ./.well-known 2>/dev/null || true
-          # Ensure .nojekyll exists
-          touch .nojekyll
-          # Configure git
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
-          # Add all files
-          git add -A
-          # Commit only if there are changes
-          if ! git diff --cached --quiet; then
-            git commit -m "Deploy to GitHub Pages [skip ci]"
-            git push origin gh-pages
-          else
-            echo "No changes to deploy"
-          fi
+          folder: out
+          branch: gh-pages
+          clean: true
