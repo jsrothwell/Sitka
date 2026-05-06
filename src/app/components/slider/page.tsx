@@ -291,10 +291,10 @@ struct VolumeSlider: View {
 };
 
 const STATES = [
-  { state: "Default", thumb: "bg-white border-[rgb(var(--accent))]", fill: "bg-[rgb(var(--border))]", note: "Resting state" },
-  { state: "Hover", thumb: "bg-white border-[rgb(var(--accent))] scale-110", fill: "bg-[rgb(var(--border))]", note: "Cursor over thumb" },
-  { state: "Active", thumb: "bg-white border-[rgb(var(--accent))] scale-110", fill: "bg-[rgb(var(--accent)]", note: "Dragging thumb" },
-  { state: "Disabled", thumb: "bg-white border-[rgb(var(--border))] opacity-40", fill: "bg-[rgb(var(--border))]", note: "Not interactive" },
+  { state: "Default", thumbClass: "bg-white border-[rgb(var(--accent))]", accentFill: true, wrapperClass: "", note: "Resting state" },
+  { state: "Hover", thumbClass: "bg-white border-[rgb(var(--accent))] scale-110", accentFill: true, wrapperClass: "", note: "Cursor over thumb" },
+  { state: "Active", thumbClass: "bg-white border-[rgb(var(--accent))] scale-125", accentFill: true, wrapperClass: "", note: "Dragging thumb" },
+  { state: "Disabled", thumbClass: "bg-white border-[rgb(var(--border))]", accentFill: false, wrapperClass: "opacity-40", note: "Not interactive" },
 ];
 
 export default function SliderPage() {
@@ -402,11 +402,19 @@ export default function SliderPage() {
                 <tr key={s.state} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{s.state}</td>
                   <td className="px-4 py-3">
-                    <div className="flex items-center gap-3">
-                      <div className={`w-4 h-4 rounded-full border-2 ${s.thumb}`} />
-                      <div className="flex-1 h-[3px] rounded-full">
-                        <div className={`h-full rounded-full ${s.fill} w-3/4`} />
-                      </div>
+                    <div className={`relative flex items-center w-44 h-5 ${s.wrapperClass}`}>
+                      {/* Track */}
+                      <div className="absolute h-[3px] rounded-full w-full bg-[rgb(var(--border))]" />
+                      {/* Fill */}
+                      <div
+                        className={`absolute h-[3px] rounded-full ${s.accentFill ? "bg-[rgb(var(--accent))]" : "bg-[rgb(var(--border))]"}`}
+                        style={{ left: "0%", width: "60%" }}
+                      />
+                      {/* Thumb */}
+                      <div
+                        className={`absolute w-4 h-4 rounded-full border-2 ${s.thumbClass}`}
+                        style={{ left: "60%", transform: "translateX(-50%)" }}
+                      />
                     </div>
                   </td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{s.note}</td>
