@@ -123,7 +123,7 @@ export function Sidebar({
 
       {/* ── Footer ────────────────────────────────────── */}
       <div className="sidebar-section py-3.5 border-t border-[rgb(var(--border))] shrink-0">
-        <p className="label-mono">Sitka Engineering</p>
+        <p className="label-mono">Sitka</p>
       </div>
     </aside>
     </>

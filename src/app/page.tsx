@@ -105,15 +105,19 @@ export default function HomePage() {
 
       {/* ── Footer ────────────────────────────────────── */}
       <section className="pt-8 pb-2 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <p className="label-mono">Sitka Engineering Standards · v1.0.0</p>
+        <p className="label-mono">Sitka Standards · v1.0.0</p>
         <div className="flex items-center gap-5">
-          {["Changelog", "License", "Status"].map((item) => (
+          {[
+            { label: "Changelog", href: "/changelog" },
+            { label: "License",   href: "/license" },
+            { label: "Status",    href: "/status" },
+          ].map(({ label, href }) => (
             <a
-              key={item}
-              href="#"
+              key={label}
+              href={href}
               className="label-mono hover:text-[rgb(var(--text-primary))] transition-standard"
             >
-              {item}
+              {label}
             </a>
           ))}
         </div>
