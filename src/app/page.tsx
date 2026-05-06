@@ -62,7 +62,7 @@ export default function HomePage() {
           style={{ fontSize: "clamp(1rem, 2vw, 1.1875rem)", lineHeight: 1.65, fontWeight: 500 }}
         >
           Sitka bridges engineering and design with a single source of truth —
-          consistent, accessible, and built to scale across Web and iOS.
+          consistent, accessible, and built to scale across Web, iOS, and macOS.
         </p>
 
       </section>

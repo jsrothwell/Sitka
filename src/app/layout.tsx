@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: "Sitka Design System",
   },
   description:
-    "A premium design system for building high-quality digital products across Web and iOS.",
+    "A premium design system for building high-quality digital products across Web, iOS, and macOS.",
   keywords: ["design system", "components", "tokens", "React", "SwiftUI"],
 };
 

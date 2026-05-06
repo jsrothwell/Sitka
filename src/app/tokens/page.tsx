@@ -9,7 +9,7 @@ export default function TokensPage() {
     <div>
       <PageHeader
         title="Design Tokens"
-        description="All design decisions are expressed as tokens — named values that map intent to implementation across Web and iOS. Changes to tokens propagate everywhere."
+        description="All design decisions are expressed as tokens — named values that map intent to implementation across Web, iOS, and macOS. Changes to tokens propagate everywhere."
       />
       <TokensGrid />
     </div>
