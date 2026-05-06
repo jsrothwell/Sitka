@@ -41,6 +41,8 @@ export const navigation: NavSection[] = [
       { title: "Empty States", href: "/foundations/empty-states" },
       { title: "Loading States", href: "/foundations/loading-states" },
       { title: "AI Agent Standards", href: "/foundations/ai-agents" },
+      { title: "Desktop Layout", href: "/foundations/desktop-layout" },
+      { title: "Keyboard Shortcuts", href: "/foundations/keyboard-shortcuts" },
     ],
   },
   {
@@ -64,7 +66,10 @@ export const navigation: NavSection[] = [
       { title: "Snackbar",       href: "/components/snackbar" },
       { title: "Date & Time Picker", href: "/components/date-time-pickers" },
       { title: "Slider",         href: "/components/slider" },
-      { title: "Carousel",       href: "/components/carousel" },
+      { title: "Carousel",          href: "/components/carousel" },
+      { title: "Breadcrumb",        href: "/components/breadcrumb" },
+      { title: "Combobox",          href: "/components/combobox" },
+      { title: "Date Range Picker", href: "/components/date-range-picker" },
     ],
   },
   {
