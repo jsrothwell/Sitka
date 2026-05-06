@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
@@ -9,7 +8,6 @@ import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { Plus, Trash2, Save, X } from "lucide-react";
 
-export const metadata: Metadata = { title: "Data Entry" };
 
 const CODE = {
   react: {

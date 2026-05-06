@@ -1,9 +1,7 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { CodeBlock } from "@/components/ui/CodeBlock";
 
-export const metadata: Metadata = { title: "React · Vite — Libraries" };
 
 export default function LibraryVitePage() {
   return (

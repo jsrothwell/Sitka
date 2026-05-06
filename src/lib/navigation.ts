@@ -60,6 +60,11 @@ export const navigation: NavSection[] = [
       { title: "Segmented Button", href: "/components/segmented-button" },
       { title: "Bottom Tab Bar", href: "/components/bottom-tab-bar" },
       { title: "Bottom Sheet",   href: "/components/bottom-sheet" },
+      { title: "Chip",           href: "/components/chip" },
+      { title: "Snackbar",       href: "/components/snackbar" },
+      { title: "Date & Time Picker", href: "/components/date-time-pickers" },
+      { title: "Slider",         href: "/components/slider" },
+      { title: "Carousel",       href: "/components/carousel" },
     ],
   },
   {
@@ -77,6 +82,9 @@ export const navigation: NavSection[] = [
       { title: "Media Player",         href: "/patterns/media-player" },
       { title: "Mobile Navigation",    href: "/patterns/mobile-navigation" },
       { title: "Mobile Widgets",       href: "/patterns/mobile-widgets" },
+      { title: "Collaboration & Sharing", href: "/patterns/collaboration" },
+      { title: "Drag and Drop",        href: "/patterns/drag-drop" },
+      { title: "Data Entry",           href: "/patterns/data-entry" },
     ],
   },
   {

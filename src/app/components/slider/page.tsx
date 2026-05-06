@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { PropsTable } from "@/components/docs/PropsTable";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 
-export const metadata: Metadata = { title: "Slider" };
 
 const PROPS = [
   { name: "value", type: "number | number[]", required: true, description: "Current slider value(s). Single number for single thumb, array for range." },

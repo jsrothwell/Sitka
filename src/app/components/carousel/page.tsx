@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { cn } from "@/lib/cn";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { PropsTable } from "@/components/docs/PropsTable";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
-
-export const metadata: Metadata = { title: "Carousel" };
 
 const CAROUSEL_PROPS = [
   { name: "items", type: "ReactNode[]", required: true, description: "Array of items to display in carousel." },
@@ -53,14 +55,12 @@ export function Carousel({
     goTo(currentIndex - 1);
   }, [currentIndex, goTo]);
 
-  // Auto-advance
   useEffect(() => {
     if (interval <= 0 || isPaused) return;
     const timer = setInterval(next, interval);
     return () => clearInterval(timer);
   }, [next, interval, isPaused]);
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") prev();
@@ -78,7 +78,6 @@ export function Carousel({
       role="region"
       aria-label="Carousel"
     >
-      {/* Slides container */}
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{ transform: \`translateX(-\${currentIndex * 100}%)\` }}
@@ -96,7 +95,6 @@ export function Carousel({
         ))}
       </div>
 
-      {/* Previous button */}
       {showControls && items.length > 1 && (
         <button
           onClick={prev}
@@ -107,7 +105,6 @@ export function Carousel({
         </button>
       )}
 
-      {/* Next button */}
       {showControls && items.length > 1 && (
         <button
           onClick={next}
@@ -118,7 +115,6 @@ export function Carousel({
         </button>
       )}
 
-      {/* Indicators */}
       {showIndicators && items.length > 1 && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
           {items.map((_, i) => (
@@ -128,7 +124,7 @@ export function Carousel({
               className={cn(
                 "w-2 h-2 rounded-full transition-all",
                 i === currentIndex
-                  ? "bg-white w-6" 
+                  ? "bg-white w-6"
                   : "bg-white/50 hover:bg-white/70"
               )}
               aria-label={\`Go to slide \${i + 1}\`}
@@ -168,26 +164,18 @@ export function Carousel({
       </div>
     </div>
   </div>
-  
+
   <button class="carousel-btn carousel-prev" aria-label="Previous slide">‹</button>
   <button class="carousel-btn carousel-next" aria-label="Next slide">›</button>
-  
+
   <div class="carousel-indicators"></div>
 </div>
 
 <style>
-.carousel {
-  position: relative; overflow: hidden; border-radius: 12px;
-}
-.carousel-track {
-  display: flex; transition: transform 0.5s ease-in-out;
-}
-.carousel-slide {
-  min-width: 100%; position: relative;
-}
-.carousel-image {
-  width: 100%; height: 400px; object-fit: cover;
-}
+.carousel { position: relative; overflow: hidden; border-radius: 12px; }
+.carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+.carousel-slide { min-width: 100%; position: relative; }
+.carousel-image { width: 100%; height: 400px; object-fit: cover; }
 .carousel-caption {
   position: absolute; bottom: 0; left: 0; right: 0;
   background: linear-gradient(transparent, rgba(0,0,0,0.7));
@@ -195,9 +183,8 @@ export function Carousel({
 }
 .carousel-btn {
   position: absolute; top: 50%; transform: translateY(-50%);
-  background: white/80; border: none; padding: 12px;
-  border-radius: 50%; cursor: pointer; font-size: 18px;
-  transition: background 0.2s;
+  background: rgba(255,255,255,0.8); border: none; padding: 12px;
+  border-radius: 50%; cursor: pointer; font-size: 18px; transition: background 0.2s;
 }
 .carousel-btn:hover { background: white; }
 .carousel-prev { left: 12px; }
@@ -208,7 +195,7 @@ export function Carousel({
 }
 .carousel-indicator {
   width: 8px; height: 8px; border-radius: 50%;
-  background: white/50; border: none; cursor: pointer;
+  background: rgba(255,255,255,0.5); border: none; cursor: pointer;
 }
 .carousel-indicator.active { background: white; width: 24px; border-radius: 4px; }
 </style>
@@ -220,8 +207,8 @@ const slides = track.querySelectorAll('.carousel-slide');
 const indicators = carousel.querySelector('.carousel-indicators');
 const prevBtn = carousel.querySelector('.carousel-prev');
 const nextBtn = carousel.querySelector('.carousel-next');
+let current = 0;
 
-// Create indicators
 slides.forEach((_, i) => {
   const btn = document.createElement('button');
   btn.className = 'carousel-indicator' + (i === 0 ? ' active' : '');
@@ -231,7 +218,6 @@ slides.forEach((_, i) => {
 });
 
 const indicatorBtns = indicators.querySelectorAll('.carousel-indicator');
-let current = 0;
 
 function updateSlides() {
   track.style.transform = \`translateX(-\${current * 100}%)\`;
@@ -239,25 +225,12 @@ function updateSlides() {
   indicatorBtns.forEach((b, i) => b.classList.toggle('active', i === current));
 }
 
-function goTo(index) {
-  current = index;
-  updateSlides();
-}
-
-function next() {
-  current = (current + 1) % slides.length;
-  updateSlides();
-}
-
-function prev() {
-  current = (current - 1 + slides.length) % slides.length;
-  updateSlides();
-}
+function goTo(index) { current = index; updateSlides(); }
+function next() { current = (current + 1) % slides.length; updateSlides(); }
+function prev() { current = (current - 1 + slides.length) % slides.length; updateSlides(); }
 
 prevBtn.addEventListener('click', prev);
 nextBtn.addEventListener('click', next);
-
-// Auto-advance
 setInterval(next, 5000);
 </script>`,
   },
@@ -270,7 +243,7 @@ struct CarouselView<Item: Identifiable, Content: View>: View {
     let content: (Item) -> Content
     @State private var currentIndex = 0
     @State private var timer: Timer?
-    
+
     var body: some View {
         ZStack {
             TabView(selection: $currentIndex) {
@@ -280,19 +253,9 @@ struct CarouselView<Item: Identifiable, Content: View>: View {
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            
-            // Gradient overlay at bottom for text readability
-            LinearGradient(
-                gradient: Gradient(colors: [.clear, .black.opacity(0.3)]),
-                startPoint: .center,
-                endPoint: .bottom
-            )
-            .frame(height: 60)
-            .offset(y: 60)
-            
-            // Page indicators
+
             HStack {
-                ForEach(Array(items.enumerated()), id: \.offset) { index, _ in
+                ForEach(Array(items.enumerated()), id: \\.offset) { index, _ in
                     Circle()
                         .fill(index == currentIndex ? Color.white : Color.white.opacity(0.5))
                         .frame(width: 8, height: 8)
@@ -300,14 +263,10 @@ struct CarouselView<Item: Identifiable, Content: View>: View {
             }
             .offset(y: 70)
         }
-        .onAppear {
-            startTimer()
-        }
-        .onDisappear {
-            timer?.invalidate()
-        }
+        .onAppear { startTimer() }
+        .onDisappear { timer?.invalidate() }
     }
-    
+
     private func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
             withAnimation(.easeInOut(duration: 0.5)) {
@@ -317,64 +276,11 @@ struct CarouselView<Item: Identifiable, Content: View>: View {
     }
 }
 
-// Example usage
-struct ProductCarousel: View {
-    let products = [
-        ("Mountains", "#4A90D9"),
-        ("Ocean", "#17B8A3"),
-        ("Forest", "#3DA852"),
-        ("Desert", "#E2A03A"),
-    ]
-    
-    var body: some View {
-        CarouselView(items: products.enumerated().map { index, item in
-            (id: index, item: item)
-        }) { item in
-            ZStack {
-                Color(hex: item.item.1)
-                    .ignoresSafeArea()
-                VStack {
-                    Text(item.item.0)
-                        .font(.largeTitle.bold())
-                        .foregroundColor(.white)
-                    Text("Beautiful \(item.item.0)")
-                        .font(.title3)
-                        .foregroundColor(.white.opacity(0.8))
-                }
-            }
-        }
-    }
-}
-
-extension Color {
-    init(hex: String) {
-        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int: UInt64 = 0
-        Scanner(string: hex).scanHexInt64(&int)
-        let a, r, g, b: UInt64
-        switch hex.count {
-        case 3: // RGB (12-bit)
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        default:
-            (a, r, g, b) = (255, 1, 1, 1)
-        }
-        self.init(
-            .sRGB,
-            red: Double(r) / 255,
-            green: Double(g) / 255,
-            blue: Double(b) / 255,
-            opacity: Double(a) / 255
-        )
-    }
-}
-
 #Preview {
     CarouselView(items: [1, 2, 3, 4]) { item in
         ZStack {
             Color.blue.gradient
-            Text("Slide \(item)")
+            Text("Slide \\(item)")
                 .font(.largeTitle.bold())
                 .foregroundColor(.white)
         }
@@ -405,7 +311,6 @@ export default function CarouselPage() {
         description="Display content in a horizontally scrolling container with automatic or manual navigation. Supports autoplay, keyboard controls, and touch gestures for mobile."
       />
 
-      {/* Basic carousel */}
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Basic carousel</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
@@ -418,7 +323,6 @@ export default function CarouselPage() {
         </ComponentPreview>
       </section>
 
-      {/* Use cases */}
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Use cases</h2>
         <div className="grid grid-cols-2 gap-4">
@@ -431,36 +335,28 @@ export default function CarouselPage() {
         </div>
       </section>
 
-      {/* Anatomy */}
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-6">Anatomy</h2>
         <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--background))] p-8 flex items-center justify-center">
           <svg viewBox="0 0 400 200" width="400" height="200" className="max-w-full">
-            {/* Carousel container */}
             <rect x="20" y="20" width="360" height="160" rx="12" fill="rgb(var(--surface))" stroke="rgb(var(--border))" strokeWidth="1" />
-            {/* Current slide */}
             <rect x="24" y="24" width="352" height="152" rx="8" fill="rgb(var(--accent-subtle))" />
             <text x="200" y="90" textAnchor="middle" fontSize="16" fontWeight="600" fill="rgb(var(--accent))">Slide Content</text>
-            {/* Prev button */}
             <circle cx="48" cy="100" r="20" fill="white" fillOpacity="0.8" />
             <text x="42" y="106" textAnchor="middle" fontSize="16">‹</text>
-            {/* Next button */}
             <circle cx="352" cy="100" r="20" fill="white" fillOpacity="0.8" />
             <text x="346" y="106" textAnchor="middle" fontSize="16">›</text>
-            {/* Indicators */}
             <g transform="translate(200, 172)">
               {[0, 1, 2].map((i) => (
-                <circle key={i} cx={(i - 1) * 12} cy="0" r="4" fill={i === 1 ? "white" : "white"} fillOpacity={i === 1 ? "1" : "0.5"} />
+                <circle key={i} cx={(i - 1) * 12} cy="0" r="4" fill="white" fillOpacity={i === 1 ? "1" : "0.5"} />
               ))}
             </g>
-            {/* Labels */}
             <text x="68" y="36" fontSize="9" fill="rgb(var(--text-tertiary))">CONTROLS</text>
             <text x="200" y="188" fontSize="9" fill="rgb(var(--text-tertiary))" textAnchor="middle">INDICATORS</text>
           </svg>
         </div>
       </section>
 
-      {/* States */}
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Interaction states</h2>
         <div className="overflow-hidden rounded-xl border border-[rgb(var(--border))]">
@@ -490,12 +386,12 @@ export default function CarouselPage() {
         </div>
       </section>
 
-      {/* Usage guidelines */}
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Usage guidelines</h2>
         <div className="grid grid-cols-2 gap-4">
-           {[{ type: "do", items: ["Provide manual controls in addition to autoplay", "Pause on hover to allow reading content", "Include visible indicators showing current position", "Make controls large enough for touch targets (44px minimum)"] },
-            { type: "dont", items: ["Don't use carousels for critical content (users may miss it)", "Avoid auto-rotating too quickly (minimum 5s per slide)", "Don't rely on autoplay alone — always provide manual navigation", "Avoid excessive slides (3-5 is usually optimal)"] },
+          {[
+            { type: "do", items: ["Provide manual controls in addition to autoplay", "Pause on hover to allow reading content", "Include visible indicators showing current position", "Make controls large enough for touch targets (44px minimum)"] },
+            { type: "dont", items: ["Don't use carousels for critical content (users may miss it)", "Avoid auto-rotating too quickly (minimum 5s per slide)", "Don't rely on autoplay alone — always provide manual navigation", "Avoid excessive slides (3–5 is usually optimal)"] },
           ].map(({ type, items }) => (
             <div key={type} className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
               <div className={`px-4 py-2.5 border-b border-[rgb(var(--border))] text-[11px] font-semibold uppercase tracking-wider ${
@@ -516,23 +412,21 @@ export default function CarouselPage() {
         </div>
       </section>
 
-      {/* Props */}
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5">Props</h2>
         <PropsTable props={CAROUSEL_PROPS} />
       </section>
 
-      {/* Implementation */}
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <PlatformTabs code={CODE} />
       </section>
 
-      {/* Accessibility */}
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
         <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
-           {["Carousel region must have aria-label describing its purpose.",
+          {[
+            "Carousel region must have aria-label describing its purpose.",
             "Each slide must have aria-roledescription='slide' and aria-label indicating position.",
             "Auto-rotation must pause on hover and focus for accessibility.",
             "Controls must have clear aria-labels (e.g., 'Previous slide', 'Next slide').",
@@ -550,7 +444,7 @@ export default function CarouselPage() {
   );
 }
 
-function CarouselDemo({ items }: { items: any[] }) {
+function CarouselDemo({ items }: { items: { id: number; title: string; color: string }[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -562,17 +456,9 @@ function CarouselDemo({ items }: { items: any[] }) {
     return () => clearInterval(timer);
   }, [items.length, isPaused]);
 
-  const goTo = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  const prev = () => {
-    setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
-  };
-
-  const next = () => {
-    setCurrentIndex((prev) => (prev + 1) % items.length);
-  };
+  const goTo = (index: number) => setCurrentIndex(index);
+  const prev = () => setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
+  const next = () => setCurrentIndex((prev) => (prev + 1) % items.length);
 
   return (
     <div
@@ -582,7 +468,7 @@ function CarouselDemo({ items }: { items: any[] }) {
     >
       <div
         className="flex transition-transform duration-500 ease-in-out"
-        style={{ transform: \`translateX(-\${currentIndex * 100}%)\` }}
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {items.map((item) => (
           <div key={item.id} className="w-full flex-shrink-0">
@@ -621,7 +507,7 @@ function CarouselDemo({ items }: { items: any[] }) {
               "w-2 h-2 rounded-full transition-all",
               i === currentIndex ? "bg-white w-6" : "bg-white/50 hover:bg-white/70"
             )}
-            aria-label={\`Go to slide \${i + 1}\`}
+            aria-label={`Go to slide ${i + 1}`}
             aria-current={i === currentIndex ? "true" : "false"}
           />
         ))}

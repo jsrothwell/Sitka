@@ -1,10 +1,8 @@
-import type { Metadata } from "next";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { NavbarDemo, SidebarNavDemo } from "@/components/docs/NavbarDemo";
 
-export const metadata: Metadata = { title: "Navbar" };
 
 const CODE = {
   react: {

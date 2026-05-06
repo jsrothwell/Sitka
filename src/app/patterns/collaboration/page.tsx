@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 
-export const metadata: Metadata = { title: "Collaboration and Sharing" };
 
 const CODE = {
   react: {
@@ -464,6 +465,85 @@ struct CollaborationView: View {
 }`,
   },
 };
+
+function CollaborationDemo() {
+  const [copied, setCopied] = useState(false);
+
+  const users = [
+    { id: "1", name: "Jamie", initials: "JR", color: "#22c55e" },
+    { id: "2", name: "Alex", initials: "AS", color: "#3b82f6" },
+    { id: "3", name: "Sam", initials: "SK", color: "#f59e0b" },
+  ];
+
+  const handleCopy = () => {
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* Presence bar */}
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="flex -space-x-2">
+            {users.map((u) => (
+              <div
+                key={u.id}
+                className="w-8 h-8 rounded-full border-2 border-[rgb(var(--surface))] flex items-center justify-center text-[11px] font-semibold text-white"
+                style={{ background: u.color }}
+                title={u.name}
+              >
+                {u.initials}
+              </div>
+            ))}
+          </div>
+          <div className="flex items-center gap-1.5">
+            <div className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
+            <span className="text-[12px] text-[rgb(var(--text-tertiary))]">3 people active</span>
+          </div>
+        </div>
+
+        <div className="flex gap-2">
+          <button
+            onClick={handleCopy}
+            className="px-3 py-1.5 rounded-lg text-[12px] font-medium border border-[rgb(var(--border))] bg-[rgb(var(--surface))] text-[rgb(var(--text-secondary))] hover:border-[rgb(var(--accent))] transition-colors"
+          >
+            {copied ? "Copied!" : "Copy link"}
+          </button>
+          <button className="px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[rgb(var(--accent))] text-white hover:opacity-90 transition-opacity">
+            Share
+          </button>
+        </div>
+      </div>
+
+      {/* Document list */}
+      <div className="space-y-2">
+        {[
+          { title: "Design System v2.0", collab: ["JR", "AS", "SK", "+1"], time: "2 min ago", color: "#22c55e" },
+          { title: "Q2 Roadmap", collab: ["JR", "AS"], time: "1 hr ago", color: "#3b82f6" },
+        ].map((doc) => (
+          <div key={doc.title} className="flex items-center justify-between p-3 rounded-lg border border-[rgb(var(--border))] bg-[rgb(var(--background))]">
+            <div>
+              <p className="text-[13px] font-medium text-[rgb(var(--text-primary))]">{doc.title}</p>
+              <p className="text-[11px] text-[rgb(var(--text-tertiary))]">Updated {doc.time}</p>
+            </div>
+            <div className="flex -space-x-1">
+              {doc.collab.map((c, i) => (
+                <div
+                  key={i}
+                  className="w-6 h-6 rounded-full border-2 border-[rgb(var(--surface))] flex items-center justify-center text-[9px] font-semibold text-white"
+                  style={{ background: i === 0 ? doc.color : i === 1 ? "#6366f1" : "#94a3b8" }}
+                >
+                  {c}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 const PATTERN_EXAMPLES = [
   { type: "Real-time editing", desc: "Multiple users editing a document simultaneously with live cursor tracking" },

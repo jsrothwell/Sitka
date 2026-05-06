@@ -1,12 +1,10 @@
 "use client";
 
-import type { Metadata } from "next";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { useState } from "react";
 
-export const metadata: Metadata = { title: "Drag and Drop" };
 
 const CODE = {
   react: {
@@ -393,6 +391,45 @@ columns.forEach(col => {
   });
 });
 </script>`,
+  },
+  swift: {
+    filename: "DragDropView.swift",
+    code: `import SwiftUI
+
+struct DraggableItem: Identifiable {
+    let id = UUID()
+    var title: String
+}
+
+struct ReorderableList: View {
+    @State private var items = [
+        DraggableItem(title: "Design mockups"),
+        DraggableItem(title: "Write copy"),
+        DraggableItem(title: "Build prototype"),
+        DraggableItem(title: "Run user tests"),
+    ]
+
+    var body: some View {
+        List {
+            ForEach(items) { item in
+                HStack {
+                    Image(systemName: "line.3.horizontal")
+                        .foregroundStyle(.secondary)
+                    Text(item.title)
+                }
+                .padding(.vertical, 4)
+            }
+            .onMove { from, to in
+                items.move(fromOffsets: from, toOffset: to)
+            }
+        }
+        .environment(\\.editMode, .constant(.active))
+    }
+}
+
+#Preview {
+    ReorderableList()
+}`,
   },
 };
 

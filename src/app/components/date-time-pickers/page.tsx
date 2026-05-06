@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { PropsTable } from "@/components/docs/PropsTable";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 
-export const metadata: Metadata = { title: "Date and Time Pickers" };
 
 const DATE_PICKER_PROPS = [
   { name: "value", type: "Date", description: "Currently selected date." },
@@ -471,7 +472,7 @@ export default function DateTimePickersPage() {
             {/* Calendar popup */}
             <rect x="20" y="120" width="280" height="160" rx="12" fill="rgb(var(--surface-raised))" stroke="rgb(var(--border))" strokeWidth="1" />
             {/* Header */}
-            <rect x="20" y="120" width="280" height="40" fill="rgb(var(--surface))" rx="12" rxTopLeft="12" rxTopRight="12" />
+            <rect x="20" y="120" width="280" height="40" fill="rgb(var(--surface))" rx="12" />
             <text x="160" y="146" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgb(var(--text-primary))">January 2024</text>
             <text x="60" y="146" textAnchor="middle" fontSize="14" fill="rgb(var(--text-secondary))">‹</text>
             <text x="260" y="146" textAnchor="middle" fontSize="14" fill="rgb(var(--text-secondary))">›</text>

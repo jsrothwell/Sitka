@@ -6,7 +6,7 @@
     "node": ">=24"
   },
   "scripts": {
-    "dev": "MALLOC_ARENA_MAX=2 NODE_OPTIONS='--max-old-space-size=4096' node node_modules/next/dist/bin/next dev --webpack",
+    "dev": "MALLOC_ARENA_MAX=2 NODE_OPTIONS='--max-old-space-size=4096' node node_modules/next/dist/bin/next dev",
     "build": "MALLOC_ARENA_MAX=2 NODE_OPTIONS='--max-old-space-size=4096' node node_modules/next/dist/bin/next build",
     "export": "npm run build",
     "start": "node node_modules/next/dist/bin/next start",
@@ -19,9 +19,10 @@
     "cmdk": "^1.1.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.14.0",
-    "next": "^16.2.4",
+    "next": "^9.3.3",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "run-deepseek-cli": "^0.1.1",
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {

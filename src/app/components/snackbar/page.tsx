@@ -1,10 +1,13 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
+import { CheckCircle, AlertCircle, AlertTriangle } from "lucide-react";
+import { cn } from "@/lib/cn";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { PropsTable } from "@/components/docs/PropsTable";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 
-export const metadata: Metadata = { title: "Snackbar" };
 
 const SNACKBAR_PROPS = [
   { name: "open", type: "boolean", required: true, description: "Controls snackbar visibility." },
