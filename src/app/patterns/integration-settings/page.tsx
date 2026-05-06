@@ -412,8 +412,8 @@ export default function IntegrationSettingsPage() {
         badge="New"
       />
 
-      <section>
-        <h2>Demo</h2>
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Demo</h2>
         <ComponentPreview>
           <div style={{ padding: 20, display: "flex", flexDirection: "column", gap: 10 }}>
             {INTEGRATIONS.map((integration) => {
@@ -495,55 +495,103 @@ export default function IntegrationSettingsPage() {
         </ComponentPreview>
       </section>
 
-      <section>
-        <h2>Card anatomy</h2>
-        <table>
-          <thead>
-            <tr><th>Element</th><th>Description</th><th>Token</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Service logo</td><td>40×40 rounded rect, brand logo image or initial fallback</td><td><code>--surface-raised</code></td></tr>
-            <tr><td>Name</td><td>14 px semibold</td><td>—</td></tr>
-            <tr><td>Status badge</td><td>Connected = success green; Disconnected = neutral gray</td><td><code>--status-success</code>, <code>--border</code></td></tr>
-            <tr><td>Description</td><td>12 px, secondary colour</td><td><code>--text-secondary</code></td></tr>
-            <tr><td>Sync row</td><td>Timestamp or error message with icon, 11 px</td><td><code>--text-tertiary</code> / <code>--status-danger</code></td></tr>
-            <tr><td>Connected tint</td><td>Card background gets <code>--status-success / 0.04</code> fill</td><td><code>--status-success</code></td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Card anatomy</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Element</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Description</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Token</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Service logo</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">40×40 rounded rect, brand logo image or initial fallback</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface-raised</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Name</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">14 px semibold</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">—</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Status badge</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Connected = success green; Disconnected = neutral gray</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success</code>, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--border</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Description</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">12 px, secondary colour</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-secondary</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Sync row</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Timestamp or error message with icon, 11 px</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-tertiary</code> / <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-danger</code></td>
+              </tr>
+              <tr className="bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Connected tint</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Card background gets <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success / 0.04</code> fill</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Auth flow</h2>
-        <p>
-          Tapping <strong>Connect</strong> opens either:
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Auth flow</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-3">
+          Tapping <strong className="text-[rgb(var(--text-primary))]">Connect</strong> opens either:
         </p>
-        <ul>
-          <li>An inline expanded section with an API key input + "Test & Connect" button (for API-key integrations)</li>
+        <ul className="list-disc list-inside space-y-2 text-[14px] text-[rgb(var(--text-secondary))] mb-3">
+          <li>An inline expanded section with an API key input + &ldquo;Test &amp; Connect&rdquo; button (for API-key integrations)</li>
           <li>A bottom sheet or modal with OAuth instructions (for OAuth integrations)</li>
         </ul>
-        <p>
-          The "Test & Connect" button shows a loading spinner during the API check and surfaces
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
+          The &ldquo;Test &amp; Connect&rdquo; button shows a loading spinner during the API check and surfaces
           error messages inline. On success, the card transitions to the Connected state with an
           animation.
         </p>
       </section>
 
-      <section>
-        <h2>Sync status indicators</h2>
-        <table>
-          <thead>
-            <tr><th>State</th><th>Icon</th><th>Colour</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Sync OK</td><td>checkmark.circle.fill</td><td><code>--status-success</code></td></tr>
-            <tr><td>Sync error</td><td>exclamationmark.triangle.fill</td><td><code>--status-danger</code></td></tr>
-            <tr><td>Syncing now</td><td>Spinner</td><td><code>--text-tertiary</code></td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Sync status indicators</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">State</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Icon</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Colour</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Sync OK</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">checkmark.circle.fill</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Sync error</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">exclamationmark.triangle.fill</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-danger</code></td>
+              </tr>
+              <tr className="bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Syncing now</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Spinner</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-tertiary</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Implementation</h2>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Implementation</h2>
         <PlatformTabs code={CODE} />
       </section>
     </div>

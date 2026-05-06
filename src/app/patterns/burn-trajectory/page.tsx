@@ -489,9 +489,9 @@ export default function BurnTrajectoryPage() {
         badge="New"
       />
 
-      <section>
-        <h2>Demo</h2>
-        <p>
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Demo</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4 leading-relaxed">
           Historical spend (solid line), forecast (dashed), planned pace (dotted), and budget
           ceiling (red dashed). The today marker is the vertical dashed line.
         </p>
@@ -544,52 +544,104 @@ export default function BurnTrajectoryPage() {
         </ComponentPreview>
       </section>
 
-      <section>
-        <h2>Line styles</h2>
-        <table>
-          <thead>
-            <tr><th>Line</th><th>Weight</th><th>Dash</th><th>Colour</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Historical</td><td>2 px</td><td>Solid</td><td>Status colour</td></tr>
-            <tr><td>Forecast</td><td>1.5 px</td><td>[5, 3]</td><td>Status colour 55%</td></tr>
-            <tr><td>Planned pace</td><td>1 px</td><td>[2, 3]</td><td>Gray 30%</td></tr>
-            <tr><td>Budget ceiling</td><td>1 px</td><td>[3, 3]</td><td><code>--status-danger</code> 35%</td></tr>
-            <tr><td>Today line</td><td>1 px</td><td>[2, 2]</td><td>Secondary 35%</td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10 mt-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Line styles</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Line</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Weight</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Dash</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Colour</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Historical</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">2 px</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Solid</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Status colour</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Forecast</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">1.5 px</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">[5, 3]</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Status colour 55%</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Planned pace</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">1 px</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">[2, 3]</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Gray 30%</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Budget ceiling</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">1 px</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">[3, 3]</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-danger</code> 35%</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Today line</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">1 px</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">[2, 2]</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Secondary 35%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Markers and fills</h2>
-        <table>
-          <thead>
-            <tr><th>Element</th><th>Spec</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Today dot</td><td>6 px filled circle, status colour</td></tr>
-            <tr><td>Exhaustion dot</td><td>6 px filled circle, <code>--status-danger</code></td></tr>
-            <tr><td>Historical area</td><td>Status colour 7% fill</td></tr>
-            <tr><td>Forecast area</td><td>Status colour 3% fill</td></tr>
-            <tr><td>Highlighted metric tile</td><td>Status colour border</td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Markers and fills</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Element</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Spec</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Today dot</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">6 px filled circle, status colour</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Exhaustion dot</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">6 px filled circle, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-danger</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Historical area</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Status colour 7% fill</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Forecast area</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Status colour 3% fill</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Highlighted metric tile</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Status colour border</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Supporting panels</h2>
-        <p>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Supporting panels</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-3 leading-relaxed">
           Below the chart, render two rows of supporting data:
         </p>
-        <ol>
+        <ol className="list-decimal list-inside space-y-2 text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           <li><strong>KPI panel:</strong> two paired stat tiles — Exhaustion Date and Projected-at-End.</li>
           <li><strong>Burn rate metrics:</strong> 4-column row — Weekly burn, Recent daily, Avg daily, Planned daily. Highlight the most relevant tile with a status-colour border.</li>
           <li><strong>Scenario cards:</strong> 3-column layout — Optimistic (−20%), Current Pace, Pessimistic (+20%). Current pace tile has an accent border. Each shows estimated exhaustion date.</li>
         </ol>
       </section>
 
-      <section>
-        <h2>Implementation</h2>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Implementation</h2>
         <PlatformTabs code={CODE} />
       </section>
     </div>

@@ -329,8 +329,8 @@ export default function TeamCapacityPage() {
         badge="New"
       />
 
-      <section>
-        <h2>Demo</h2>
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Demo</h2>
         <ComponentPreview>
           <div style={{ padding: 20 }}>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
@@ -376,48 +376,90 @@ export default function TeamCapacityPage() {
         </ComponentPreview>
       </section>
 
-      <section>
-        <h2>Status thresholds</h2>
-        <table>
-          <thead>
-            <tr><th>Utilization</th><th>Status</th><th>Token</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>&lt; 70%</td><td>Available</td><td><code>--status-success</code></td></tr>
-            <tr><td>70–89%</td><td>Moderate</td><td><code>--status-warning</code></td></tr>
-            <tr><td>90–100%</td><td>Near Full</td><td><code>--status-caution</code></td></tr>
-            <tr><td>&gt; 100%</td><td>Overloaded</td><td><code>--status-danger</code></td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10 mt-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Status thresholds</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Utilization</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Status</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Token</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">&lt; 70%</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Available</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">70–89%</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Moderate</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-warning</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">90–100%</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Near Full</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-caution</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">&gt; 100%</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Overloaded</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-danger</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Card anatomy</h2>
-        <table>
-          <thead>
-            <tr><th>Element</th><th>Spec</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Arc Gauge</td><td>80 px, 8 px track, centred in card</td></tr>
-            <tr><td>Name</td><td>12 px semibold</td></tr>
-            <tr><td>Hours</td><td>10 px, <code>--text-tertiary</code>, format: <code>Xh / Yh</code></td></tr>
-            <tr><td>Status badge</td><td>Capsule pill, 10 px semibold, status colour on status/0.15 background</td></tr>
-            <tr><td>Overloaded tint</td><td>Card background gets <code>--status-danger / 0.08</code> fill</td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Card anatomy</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Element</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Spec</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Arc Gauge</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">80 px, 8 px track, centred in card</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Name</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">12 px semibold</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Hours</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">10 px, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-tertiary</code>, format: <code className="font-mono text-[11px] text-[rgb(var(--accent))]">Xh / Yh</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Status badge</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Capsule pill, 10 px semibold, status colour on status/0.15 background</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Overloaded tint</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Card background gets <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-danger / 0.08</code> fill</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Grid layout</h2>
-        <p>
-          Use <code>grid-template-columns: repeat(auto-fill, minmax(140px, 1fr))</code> for responsive
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Grid layout</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed">
+          Use <code className="font-mono text-[11px] text-[rgb(var(--accent))]">grid-template-columns: repeat(auto-fill, minmax(140px, 1fr))</code> for responsive
           behaviour. On macOS with wide panels, this yields 5–6 columns. On iPhone it collapses to 2.
           Minimum column width is 140 px to keep gauges legible.
         </p>
       </section>
 
-      <section>
-        <h2>Implementation</h2>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Implementation</h2>
         <PlatformTabs code={CODE} />
       </section>
     </div>

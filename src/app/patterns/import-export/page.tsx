@@ -463,8 +463,8 @@ export default function ImportExportPage() {
         badge="New"
       />
 
-      <section>
-        <h2>Demo</h2>
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Demo</h2>
         <ComponentPreview>
           <div style={{ padding: 24, maxWidth: 480, margin: "0 auto" }}>
             {/* Tab switcher */}
@@ -584,38 +584,58 @@ export default function ImportExportPage() {
         </ComponentPreview>
       </section>
 
-      <section>
-        <h2>Import flow states</h2>
-        <table>
-          <thead>
-            <tr><th>Phase</th><th>UI</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Idle</td><td>Drop zone with dashed border, upload icon, format hint</td></tr>
-            <tr><td>Drag over</td><td>Glass surface activates: <code>backdrop-filter</code>, accent border, specular top edge</td></tr>
-            <tr><td>Uploading</td><td>Progress bar at ~40%, "Uploading…" label</td></tr>
-            <tr><td>Processing</td><td>Progress bar at ~85%, "Processing rows…" label</td></tr>
-            <tr><td>Results</td><td>3-tile summary (imported / skipped / errors) + scrollable error table</td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10 mt-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Import flow states</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Phase</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">UI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Idle</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Drop zone with dashed border, upload icon, format hint</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Drag over</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Glass surface activates: <code className="font-mono text-[11px] text-[rgb(var(--accent))]">backdrop-filter</code>, accent border, specular top edge</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Uploading</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Progress bar at ~40%, &ldquo;Uploading…&rdquo; label</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Processing</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Progress bar at ~85%, &ldquo;Processing rows…&rdquo; label</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Results</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">3-tile summary (imported / skipped / errors) + scrollable error table</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Drop zone glass behaviour</h2>
-        <p>
-          The drop zone uses <code>backdrop-filter: blur(8px) saturate(160%)</code> and a specular
-          inset highlight (<code>inset 0 1px 0 rgba(255,255,255,0.08)</code>) when a file is dragged
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Drop zone glass behaviour</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4 leading-relaxed">
+          The drop zone uses <code className="font-mono text-[11px] text-[rgb(var(--accent))]">backdrop-filter: blur(8px) saturate(160%)</code> and a specular
+          inset highlight (<code className="font-mono text-[11px] text-[rgb(var(--accent))]">inset 0 1px 0 rgba(255,255,255,0.08)</code>) when a file is dragged
           over it. This is the same Liquid Glass treatment used on the Feature Gate overlay and the
-          Context Menu — the brightening mimics <code>sfBrandLitSurface</code>.
+          Context Menu — the brightening mimics <code className="font-mono text-[11px] text-[rgb(var(--accent))]">sfBrandLitSurface</code>.
         </p>
-        <p>
-          Apply <code>@media (prefers-reduced-transparency)</code> fallback: replace the backdrop
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed">
+          Apply <code className="font-mono text-[11px] text-[rgb(var(--accent))]">@media (prefers-reduced-transparency)</code> fallback: replace the backdrop
           filter with a solid accent-tinted background.
         </p>
       </section>
 
-      <section>
-        <h2>Implementation</h2>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Implementation</h2>
         <PlatformTabs code={CODE} />
       </section>
     </div>

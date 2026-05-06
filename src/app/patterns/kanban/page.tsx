@@ -501,60 +501,108 @@ export default function KanbanPage() {
         badge="New"
       />
 
-      <section>
-        <h2>Demo</h2>
-        <p>Drag cards between columns. The column highlights when it is a valid drop target.</p>
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Demo</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4 leading-relaxed">Drag cards between columns. The column highlights when it is a valid drop target.</p>
         <ComponentPreview>
           <KanbanDemo />
         </ComponentPreview>
       </section>
 
-      <section>
-        <h2>Anatomy</h2>
-        <table>
-          <thead>
-            <tr><th>Element</th><th>Description</th><th>Token / spec</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Column header</td><td>Status dot + uppercase label + count badge + add button</td><td>12 px semibold, tracking 0.8</td></tr>
-            <tr><td>Accent strip</td><td>1.5 px gradient bar below header (status colour → transparent)</td><td>Status colour</td></tr>
-            <tr><td>Drop target</td><td>Column fill and border shift to status colour on drag-over</td><td><code>--border-subtle</code> → status/0.4</td></tr>
-            <tr><td>Card surface</td><td>Raised surface with card shadow; lifted on hover</td><td><code>--surface-raised</code>, <code>--shadow-card</code></td></tr>
-            <tr><td>Card tags</td><td>Capsule pills, max 2 + overflow count</td><td>Source colour / 0.15 background</td></tr>
-            <tr><td>Empty column</td><td>Ghost label centred at 32 px vertical padding</td><td><code>--text-tertiary</code></td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10 mt-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Anatomy</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Element</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Description</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Token / spec</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Column header</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Status dot + uppercase label + count badge + add button</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">12 px semibold, tracking 0.8</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Accent strip</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">1.5 px gradient bar below header (status colour → transparent)</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Status colour</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Drop target</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Column fill and border shift to status colour on drag-over</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--border-subtle</code> → status/0.4</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Card surface</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Raised surface with card shadow; lifted on hover</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface-raised</code>, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--shadow-card</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Card tags</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Capsule pills, max 2 + overflow count</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Source colour / 0.15 background</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Empty column</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Ghost label centred at 32 px vertical padding</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-tertiary</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Animations</h2>
-        <table>
-          <thead>
-            <tr><th>Trigger</th><th>Property</th><th>Curve</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Card drop</td><td>Layout reflow</td><td><code>spring(response: 0.3, damping: 0.7)</code></td></tr>
-            <tr><td>Column hover</td><td>Background + border colour</td><td><code>easeInOut 0.15s</code></td></tr>
-            <tr><td>Card hover</td><td>Shadow level + translateY(−1px)</td><td><code>easeOut 0.12s</code></td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Animations</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Trigger</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Property</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Curve</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Card drop</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Layout reflow</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">spring(response: 0.3, damping: 0.7)</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Column hover</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Background + border colour</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">easeInOut 0.15s</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Card hover</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Shadow level + translateY(−1px)</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">easeOut 0.12s</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Context menu (desktop)</h2>
-        <p>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Context menu (desktop)</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4 leading-relaxed">
           On macOS and right-click desktop, each card exposes a context menu for keyboard-driven
-          column changes. See the <a href="/components/context-menu">Context Menu</a> component.
+          column changes. See the <a href="/components/context-menu" className="text-[rgb(var(--accent))] hover:underline">Context Menu</a> component.
         </p>
-        <ul>
+        <ul className="list-disc list-inside space-y-2 text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           <li>Group 1: <strong>Move to …</strong> — one item per column (excluding current)</li>
           <li>Divider</li>
           <li>Destructive: <strong>Delete</strong> (danger colour, requires confirmation)</li>
         </ul>
       </section>
 
-      <section>
-        <h2>Implementation</h2>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Implementation</h2>
         <PlatformTabs code={CODE} />
       </section>
     </div>

@@ -494,9 +494,9 @@ export default function ColorPickerPage() {
         badge="New"
       />
 
-      <section>
-        <h2>Demo</h2>
-        <p>
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Demo</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           Select a swatch or type a hex value. The preview button updates in real time, demonstrating
           how the chosen colour renders with automatically-computed foreground text.
         </p>
@@ -505,15 +505,16 @@ export default function ColorPickerPage() {
         </ComponentPreview>
       </section>
 
-      <section>
-        <h2>Accessible foreground algorithm</h2>
-        <p>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessible foreground algorithm</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
           The picker always computes a legible foreground (black or white) for the selected
           colour using the WCAG relative luminance formula. This ensures button labels and preview
           text are always readable regardless of brand colour choice.
         </p>
-        <pre>
-          <code>{`// WCAG 2.1 relative luminance → choose black or white
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-4">
+          <pre className="p-4 text-[13px] font-mono text-[rgb(var(--text-secondary))] overflow-x-auto bg-[rgb(var(--surface))]">
+            <code>{`// WCAG 2.1 relative luminance → choose black or white
 function accessibleForeground(bgHex: string): "#000000" | "#ffffff" {
   const { r, g, b } = hexToRgb(bgHex);
   const linearize = (c: number) => {
@@ -523,21 +524,23 @@ function accessibleForeground(bgHex: string): "#000000" | "#ffffff" {
   const lum = 0.2126 * linearize(r) + 0.7152 * linearize(g) + 0.0722 * linearize(b);
   return lum > 0.179 ? "#000000" : "#ffffff";
 }`}</code>
-        </pre>
-        <p>
-          This is the web equivalent of Warren's <code>accessibleForeground(on:)</code> Swift
+          </pre>
+        </div>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
+          This is the web equivalent of Warren&apos;s <code className="font-mono text-[11px] text-[rgb(var(--accent))]">accessibleForeground(on:)</code> Swift
           function. Use it whenever rendering text or icons on a user-chosen colour.
         </p>
       </section>
 
-      <section>
-        <h2>Dynamic brand token</h2>
-        <p>
-          When the user selects a colour, write it to the <code>--brand-user</code> CSS variable
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Dynamic brand token</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
+          When the user selects a colour, write it to the <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--brand-user</code> CSS variable
           on the document root. Other tokens resolve through it automatically:
         </p>
-        <pre>
-          <code>{`// Apply user-chosen brand colour globally
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <pre className="p-4 text-[13px] font-mono text-[rgb(var(--text-secondary))] overflow-x-auto bg-[rgb(var(--surface))]">
+            <code>{`// Apply user-chosen brand colour globally
 document.documentElement.style.setProperty(
   "--brand-user",
   \`\${r} \${g} \${b}\`   // space-separated RGB triplet for composability
@@ -547,11 +550,12 @@ document.documentElement.style.setProperty(
 :root {
   --accent: var(--brand-user, 255 107 53);  /* fallback to Sitka Coral */
 }`}</code>
-        </pre>
+          </pre>
+        </div>
       </section>
 
-      <section>
-        <h2>Implementation</h2>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Implementation</h2>
         <PlatformTabs code={CODE} />
       </section>
 

@@ -613,9 +613,9 @@ export default function FeatureGatePage() {
         badge="New"
       />
 
-      <section>
-        <h2>Inline gate</h2>
-        <p>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Inline gate</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4 leading-relaxed">
           The inline variant blurs the locked content in place and overlays a glass CTA. Use this
           for feature sections within a larger screen — it preserves layout while signalling premium
           content.
@@ -625,9 +625,9 @@ export default function FeatureGatePage() {
         </ComponentPreview>
       </section>
 
-      <section>
-        <h2>Sheet paywall</h2>
-        <p>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Sheet paywall</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4 leading-relaxed">
           The sheet variant opens a focused modal with feature highlights and a pricing CTA. Use
           this when the user explicitly triggers a locked action, such as tapping a locked nav item.
         </p>
@@ -636,59 +636,61 @@ export default function FeatureGatePage() {
         </ComponentPreview>
       </section>
 
-      <section>
-        <h2>Anatomy</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Layer</th>
-              <th>Description</th>
-              <th>Token</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Blur content</td>
-              <td>Children rendered at blur(4px) with pointer-events disabled</td>
-              <td>—</td>
-            </tr>
-            <tr>
-              <td>Glass surface</td>
-              <td>backdrop-filter blur(20px) saturate(160%)</td>
-              <td><code>--surface-glass</code></td>
-            </tr>
-            <tr>
-              <td>Specular edge</td>
-              <td>inset 0 1px 0 rgba(255,255,255,0.08) — hairline on top</td>
-              <td>—</td>
-            </tr>
-            <tr>
-              <td>Icon well</td>
-              <td>44×44 rounded rect, accent-tinted background</td>
-              <td><code>--accent / 0.15</code></td>
-            </tr>
-            <tr>
-              <td>Upgrade button</td>
-              <td>Solid accent fill, white label</td>
-              <td><code>--accent</code></td>
-            </tr>
-          </tbody>
-        </table>
+      <section className="mb-10 mt-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Anatomy</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Layer</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Description</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Token</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Blur content</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Children rendered at blur(4px) with pointer-events disabled</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">—</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Glass surface</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">backdrop-filter blur(20px) saturate(160%)</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface-glass</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Specular edge</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">inset 0 1px 0 rgba(255,255,255,0.08) — hairline on top</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">—</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Icon well</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">44×44 rounded rect, accent-tinted background</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--accent / 0.15</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Upgrade button</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Solid accent fill, white label</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--accent</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Usage guidelines</h2>
-        <ul>
-          <li>Always show enough of the locked content to communicate value — don't hide it entirely.</li>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Usage guidelines</h2>
+        <ul className="list-disc list-inside space-y-2 text-[14px] text-[rgb(var(--text-secondary))] mb-5">
+          <li>Always show enough of the locked content to communicate value — don&apos;t hide it entirely.</li>
           <li>Keep the feature name concise (2–4 words). Put extra context in the description line.</li>
           <li>The upgrade CTA must always be visible and tappable, even on small screens.</li>
-          <li>Apply <code>prefers-reduced-transparency</code> fallback: replace <code>backdrop-filter</code> with a solid <code>--surface</code> background.</li>
+          <li>Apply <code className="font-mono text-[11px] text-[rgb(var(--accent))]">prefers-reduced-transparency</code> fallback: replace <code className="font-mono text-[11px] text-[rgb(var(--accent))]">backdrop-filter</code> with a solid <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface</code> background.</li>
           <li>Do not gate core navigation or destructive/dangerous actions — only feature upsells.</li>
         </ul>
       </section>
 
-      <section>
-        <h2>Implementation</h2>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Implementation</h2>
         <PlatformTabs code={CODE} />
       </section>
 

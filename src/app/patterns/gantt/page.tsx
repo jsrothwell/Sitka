@@ -471,9 +471,9 @@ export default function GanttPage() {
         badge="New"
       />
 
-      <section>
-        <h2>Demo</h2>
-        <p>Quarter zoom (5 px/day). Scroll horizontally to explore the full year.</p>
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Demo</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4 leading-relaxed">Quarter zoom (5 px/day). Scroll horizontally to explore the full year.</p>
         <ComponentPreview>
           <div style={{ fontSize: 13 }}>
             {/* Toolbar */}
@@ -547,29 +547,64 @@ export default function GanttPage() {
         </ComponentPreview>
       </section>
 
-      <section>
-        <h2>Layout spec</h2>
-        <table>
-          <thead>
-            <tr><th>Element</th><th>Spec</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Label column</td><td>228 px fixed, sticky on horizontal scroll, <code>--surface</code> background</td></tr>
-            <tr><td>Month header</td><td>32 px, sticky top, 10–11 px semibold uppercase, <code>--text-tertiary</code></td></tr>
-            <tr><td>Zoom levels</td><td>Year = 2.5 px/day, Quarter = 5 px/day, Month = 12 px/day</td></tr>
-            <tr><td>Grid fills</td><td>Alternating <code>--surface</code> / <code>--surface-raised/0.4</code> month strips</td></tr>
-            <tr><td>Month dividers</td><td>0.5 px <code>--border-subtle</code></td></tr>
-            <tr><td>Project bar</td><td>20 px tall, 4 px radius; track at 18% opacity, logged fill at 65%</td></tr>
-            <tr><td>Assignment sub-row</td><td>36 px row, 14 px tall pill at 45% opacity, 16 px left indent</td></tr>
-            <tr><td>Today line</td><td>2 px solid <code>--accent</code> capsule</td></tr>
-            <tr><td>Milestone</td><td>10×10 diamond (45° rotated rect), colour-coded, tappable</td></tr>
-            <tr><td>Dependency arrow</td><td>Orthogonal elbow path, dashed [5,3], red at <code>isAtRisk: true</code></td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10 mt-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Layout spec</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Element</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Spec</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Label column</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">228 px fixed, sticky on horizontal scroll, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface</code> background</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Month header</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">32 px, sticky top, 10–11 px semibold uppercase, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-tertiary</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Zoom levels</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Year = 2.5 px/day, Quarter = 5 px/day, Month = 12 px/day</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Grid fills</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Alternating <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface</code> / <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface-raised/0.4</code> month strips</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Month dividers</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">0.5 px <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--border-subtle</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Project bar</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">20 px tall, 4 px radius; track at 18% opacity, logged fill at 65%</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Assignment sub-row</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">36 px row, 14 px tall pill at 45% opacity, 16 px left indent</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Today line</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">2 px solid <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--accent</code> capsule</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Milestone</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">10×10 diamond (45° rotated rect), colour-coded, tappable</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Dependency arrow</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Orthogonal elbow path, dashed [5,3], red at <code className="font-mono text-[11px] text-[rgb(var(--accent))]">isAtRisk: true</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Implementation</h2>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Implementation</h2>
         <PlatformTabs code={CODE} />
       </section>
     </div>

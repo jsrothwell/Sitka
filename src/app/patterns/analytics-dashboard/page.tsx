@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import { PageHeader } from "@/components/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { TrendingUp, TrendingDown, Users, BarChart3, Clock, Target } from "lucide-react";
-
-export const metadata: Metadata = { title: "Analytics Dashboard" };
 
 const CODE = {
   react: {
@@ -346,8 +346,8 @@ export default function AnalyticsDashboardPage() {
         badge="New"
       />
 
-      <section>
-        <h2>Demo</h2>
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Demo</h2>
         <ComponentPreview>
           <div style={{ fontFamily: "inherit", display: "flex", flexDirection: "column", gap: 0 }}>
             {/* Sticky-style header */}
@@ -394,40 +394,60 @@ export default function AnalyticsDashboardPage() {
         </ComponentPreview>
       </section>
 
-      <section>
-        <h2>Layout spec</h2>
-        <table>
-          <thead>
-            <tr><th>Zone</th><th>Spec</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Sticky header</td><td>56 px, view title + time-range Segmented Button, <code>--background</code> backing, bottom divider</td></tr>
-            <tr><td>KPI row</td><td>Equal-width tiles in HStack, gap <code>--spacing-lg</code>; collapses to 2-col on narrow</td></tr>
-            <tr><td>Primary chart zone</td><td>1fr flexible chart + 300 px companion (donut or breakdown list)</td></tr>
-            <tr><td>Section headers</td><td>11 px semibold, letter-spacing 0.8, <code>--text-tertiary</code>, uppercase — matches <code>label-mono</code></td></tr>
-            <tr><td>Empty states</td><td>Inline <code>EmptyState</code> per chart tile; never full-page replacement</td></tr>
-            <tr><td>Dashboard background</td><td><code>--background</code>, not <code>--surface</code></td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10 mt-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Layout spec</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Zone</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Spec</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Sticky header</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">56 px, view title + time-range Segmented Button, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--background</code> backing, bottom divider</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">KPI row</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Equal-width tiles in HStack, gap <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--spacing-lg</code>; collapses to 2-col on narrow</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Primary chart zone</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">1fr flexible chart + 300 px companion (donut or breakdown list)</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Section headers</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">11 px semibold, letter-spacing 0.8, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-tertiary</code>, uppercase — matches <code className="font-mono text-[11px] text-[rgb(var(--accent))]">label-mono</code></td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Empty states</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Inline <code className="font-mono text-[11px] text-[rgb(var(--accent))]">EmptyState</code> per chart tile; never full-page replacement</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Dashboard background</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--background</code>, not <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Time range picker</h2>
-        <p>
-          Use the <a href="/components/segmented-button">Segmented Button</a> locked to these options:
-          <strong>7 Days / 30 Days / 90 Days / All Time</strong>. Place it in the sticky header row,
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Time range picker</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed">
+          Use the <a href="/components/segmented-button" className="text-[rgb(var(--accent))] hover:underline">Segmented Button</a> locked to these options:
+          <strong> 7 Days / 30 Days / 90 Days / All Time</strong>. Place it in the sticky header row,
           right-aligned. The picker drives all chart and KPI data on the same screen.
         </p>
       </section>
 
-      <section>
-        <h2>Implementation</h2>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Implementation</h2>
         <PlatformTabs code={CODE} />
       </section>
     </div>
   );
 }
 
-function useState<T>(initial: T): [T, (v: T) => void] {
-  return [initial, () => {}];
-}

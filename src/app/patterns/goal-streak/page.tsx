@@ -397,52 +397,80 @@ export default function GoalStreakPage() {
         badge="New"
       />
 
-      <section>
-        <h2>Demo</h2>
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Demo</h2>
         <ComponentPreview>
           <GoalStreakDemo />
         </ComponentPreview>
       </section>
 
-      <section>
-        <h2>Anatomy</h2>
-        <table>
-          <thead>
-            <tr><th>Column</th><th>Contents</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Progress (2fr)</td><td>Label + count / goal + animated progress bar + goal-met checkmark</td></tr>
-            <tr><td>Current streak (1fr)</td><td>🔥 or 💤 emoji + large rounded-digit number + "day streak" unit</td></tr>
-            <tr><td>Best streak (1fr)</td><td>🏆 emoji + number + "best streak" unit</td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10 mt-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Anatomy</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Column</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Contents</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Progress (2fr)</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Label + count / goal + animated progress bar + goal-met checkmark</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Current streak (1fr)</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">🔥 or 💤 emoji + large rounded-digit number + &ldquo;day streak&rdquo; unit</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Best streak (1fr)</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">🏆 emoji + number + &ldquo;best streak&rdquo; unit</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>States</h2>
-        <table>
-          <thead>
-            <tr><th>State</th><th>Behaviour</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>In progress</td><td>Bar fills with <code>--accent</code>; streak shows 🔥 if &gt; 0, else 💤</td></tr>
-            <tr><td>Goal met</td><td>Bar transitions to <code>--status-success</code>; card surface gets <code>--accent / 0.06</code> tint (<code>sfBrandLitSurface</code>); checkmark appears</td></tr>
-            <tr><td>Zero progress</td><td>Bar empty; streak shows 💤; best streak preserved</td></tr>
-          </tbody>
-        </table>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">States</h2>
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">State</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Behaviour</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">In progress</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Bar fills with <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--accent</code>; streak shows 🔥 if &gt; 0, else 💤</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Goal met</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Bar transitions to <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success</code>; card surface gets <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--accent / 0.06</code> tint (<code className="font-mono text-[11px] text-[rgb(var(--accent))]">sfBrandLitSurface</code>); checkmark appears</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Zero progress</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Bar empty; streak shows 💤; best streak preserved</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Animation</h2>
-        <p>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Animation</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed">
           The progress bar animates on mount with a spring curve:{" "}
-          <code>spring(response: 0.5, dampingFraction: 0.75)</code>. This gives the bar a subtle
+          <code className="font-mono text-[11px] text-[rgb(var(--accent))]">spring(response: 0.5, dampingFraction: 0.75)</code>. This gives the bar a subtle
           overshoot that communicates momentum without being distracting.
         </p>
       </section>
 
-      <section>
-        <h2>Implementation</h2>
+      <section className="mb-10">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Implementation</h2>
         <PlatformTabs code={CODE} />
       </section>
     </div>
