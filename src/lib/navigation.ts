@@ -122,6 +122,12 @@ export const navigation: NavSection[] = [
       { title: "Token Export", href: "/tokens/export" },
     ],
   },
+  {
+    title: "Tools",
+    items: [
+      { title: "Theme Customizer", href: "/tools/theme-customizer" },
+    ],
+  },
 ];
 
 export const allSearchableItems = navigation.flatMap((section) =>
