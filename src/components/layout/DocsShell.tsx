@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Sidebar } from "./Sidebar";
 import { Header } from "./Header";
+import { TableOfContents } from "./TableOfContents";
 import { CommandPalette } from "@/components/search/CommandPalette";
 
 export function DocsShell({ children }: { children: React.ReactNode }) {
@@ -39,12 +40,24 @@ export function DocsShell({ children }: { children: React.ReactNode }) {
       <div className="flex flex-col flex-1 min-w-0 md:ml-[var(--sidebar-width)]">
         <Header onMenuOpen={() => setSidebarOpen(true)} />
 
-        <main
-          className="flex-1 min-w-0 pb-32 px-5 md:pl-[clamp(3.5rem,8%,7rem)] md:pr-[clamp(2.5rem,6%,5rem)] max-w-[900px]"
-          style={{ paddingTop: "calc(var(--header-height) + 2.5rem)" }}
-        >
-          {children}
-        </main>
+        <div className="flex flex-1 min-w-0">
+          <main
+            className="flex-1 min-w-0 pb-32 px-5 md:pl-[clamp(3.5rem,8%,7rem)] md:pr-[clamp(2rem,5%,4rem)]"
+            style={{ paddingTop: "calc(var(--header-height) + 2.5rem)", maxWidth: "860px" }}
+          >
+            {children}
+          </main>
+
+          {/* Right ToC — visible on xl screens only */}
+          <aside
+            className="hidden xl:block w-52 shrink-0 pr-8"
+            style={{ paddingTop: "calc(var(--header-height) + 3rem)" }}
+          >
+            <div className="sticky" style={{ top: "calc(var(--header-height) + 2rem)" }}>
+              <TableOfContents key={pathname} />
+            </div>
+          </aside>
+        </div>
       </div>
 
       <CommandPalette open={searchOpen} onClose={() => setSearchOpen(false)} />
