@@ -1,0 +1,275 @@
+1:"$Sreact.fragment"
+2:I[46017,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","/Sitka/_next/static/chunks/0dgnkhp~u3xrx.js"],"ComponentPreview"]
+3:I[5014,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","/Sitka/_next/static/chunks/0dgnkhp~u3xrx.js"],"default"]
+10:I[64147,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","/Sitka/_next/static/chunks/0dgnkhp~u3xrx.js"],"PlatformTabs"]
+15:I[97367,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+16:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":[["$","div",null,{"className":"inline-flex items-center gap-1.5 mb-4 px-2.5 py-1 rounded-full border border-[rgb(var(--accent-muted))] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[10px] font-semibold uppercase tracking-wider","children":[["$","span",null,{"className":"w-1.5 h-1.5 rounded-full bg-current"}],"New"]}],["$","h1",null,{"className":"mb-2.5","children":"Analytics Dashboard"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"A pattern for composing KPI tiles, charts, and tables into a cohesive analytics screen with a sticky time-range header. Mirrors Warren's InsightsView and JobFlo's AnalyticsView."}]]}],["$","section",null,{"children":[["$","h2",null,{"children":"Demo"}],["$","$L2",null,{"children":["$","div",null,{"style":{"fontFamily":"inherit","display":"flex","flexDirection":"column","gap":0},"children":[["$","div",null,{"style":{"height":52,"display":"flex","alignItems":"center","justifyContent":"space-between","padding":"0 20px","borderBottom":"1px solid rgb(var(--border))","marginBottom":20},"children":[["$","span",null,{"style":{"fontSize":15,"fontWeight":700},"children":"Analytics"}],["$","div",null,{"style":{"display":"flex","gap":2,"padding":3,"borderRadius":8,"background":"rgb(var(--surface-raised))","border":"1px solid rgb(var(--border))"},"children":[["$","span","7 Days",{"style":{"padding":"4px 12px","borderRadius":6,"fontSize":12,"fontWeight":500,"background":"transparent","color":"rgb(var(--text-secondary))"},"children":"7 Days"}],["$","span","30 Days",{"style":{"padding":"4px 12px","borderRadius":6,"fontSize":12,"fontWeight":500,"background":"rgb(var(--accent))","color":"#fff"},"children":"30 Days"}],["$","span","90 Days",{"style":{"padding":"4px 12px","borderRadius":6,"fontSize":12,"fontWeight":500,"background":"transparent","color":"rgb(var(--text-secondary))"},"children":"90 Days"}],["$","span","All Time",{"style":{"padding":"4px 12px","borderRadius":6,"fontSize":12,"fontWeight":500,"background":"transparent","color":"rgb(var(--text-secondary))"},"children":"All Time"}]]}]]}],["$","div",null,{"style":{"padding":"0 20px 20px","display":"flex","flexDirection":"column","gap":20},"children":[["$","p",null,{"style":{"fontSize":11,"fontWeight":600,"letterSpacing":"0.08em","textTransform":"uppercase","color":"rgb(var(--text-tertiary))","margin":0},"children":"Overview"}],["$","div",null,{"style":{"display":"grid","gridTemplateColumns":"repeat(4, 1fr)","gap":10},"children":[["$","div",null,{"style":{"padding":16,"borderRadius":12,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))","boxShadow":"var(--shadow-card)","display":"flex","flexDirection":"column","gap":10},"children":[["$","div",null,{"style":{"display":"flex","alignItems":"flex-start","justifyContent":"space-between"},"children":[["$","div",null,{"style":{"width":36,"height":36,"borderRadius":9,"background":"#6366F120","display":"flex","alignItems":"center","justifyContent":"center","color":"#6366F1","boxShadow":"inset 0 1px 0 rgba(255,255,255,0.12)"},"children":["$","$L3",null,{"iconNode":[["path",{"d":"M3 3v16a2 2 0 0 0 2 2h16","key":"c24i48"}],["path",{"d":"M18 17V9","key":"2bz60n"}],["path",{"d":"M13 17V5","key":"1frdt8"}],["path",{"d":"M8 17v-3","key":"17ska0"}]],"className":"lucide-chart-column","size":16}]}],["$","span",null,{"style":{"fontSize":11,"fontWeight":600,"color":"rgb(var(--status-success))","background":"rgba(var(--status-success / 0.12))","padding":"2px 7px","borderRadius":99},"children":"+12%"}]]}],["$","div",null,{"children":[["$","div",null,{"style":{"fontSize":22,"fontWeight":700,"fontVariantNumeric":"tabular-nums","letterSpacing":"-0.01em"},"children":"1,284"}],["$","div",null,{"style":{"fontSize":12,"color":"rgb(var(--text-tertiary))","marginTop":2},"children":"Applications"}]]}]]}],["$","div",null,{"style":{"padding":16,"borderRadius":12,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))","boxShadow":"var(--shadow-card)","display":"flex","flexDirection":"column","gap":10},"children":[["$","div",null,{"style":{"display":"flex","alignItems":"flex-start","justifyContent":"space-between"},"children":[["$","div",null,{"style":{"width":36,"height":36,"borderRadius":9,"background":"#3B82F620","display":"flex","alignItems":"center","justifyContent":"center","color":"#3B82F6","boxShadow":"inset 0 1px 0 rgba(255,255,255,0.12)"},"children":"$L4"}],"$L5"]}],"$L6"]}],"$L7","$L8"]}],"$L9","$La"]}]]}]}]]}],"$Lb","$Lc","$Ld"]}],["$Le"],"$Lf"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"rLJACECUUoZySIuwx-tpS"}
+4:["$","$L3",null,{"iconNode":[["path",{"d":"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2","key":"1yyitq"}],["path",{"d":"M16 3.128a4 4 0 0 1 0 7.744","key":"16gr8j"}],["path",{"d":"M22 21v-2a4 4 0 0 0-3-3.87","key":"kshegd"}],["circle",{"cx":"9","cy":"7","r":"4","key":"nufk8"}]],"className":"lucide-users","size":16}]
+5:["$","span",null,{"style":{"fontSize":11,"fontWeight":600,"color":"rgb(var(--status-success))","background":"rgba(var(--status-success / 0.12))","padding":"2px 7px","borderRadius":99},"children":"+3%"}]
+6:["$","div",null,{"children":[["$","div",null,{"style":{"fontSize":22,"fontWeight":700,"fontVariantNumeric":"tabular-nums","letterSpacing":"-0.01em"},"children":"34%"}],["$","div",null,{"style":{"fontSize":12,"color":"rgb(var(--text-tertiary))","marginTop":2},"children":"Interview Rate"}]]}]
+7:["$","div",null,{"style":{"padding":16,"borderRadius":12,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))","boxShadow":"var(--shadow-card)","display":"flex","flexDirection":"column","gap":10},"children":[["$","div",null,{"style":{"display":"flex","alignItems":"flex-start","justifyContent":"space-between"},"children":[["$","div",null,{"style":{"width":36,"height":36,"borderRadius":9,"background":"#F59E0B20","display":"flex","alignItems":"center","justifyContent":"center","color":"#F59E0B","boxShadow":"inset 0 1px 0 rgba(255,255,255,0.12)"},"children":["$","$L3",null,{"iconNode":[["circle",{"cx":"12","cy":"12","r":"10","key":"1mglay"}],["path",{"d":"M12 6v6l4 2","key":"mmk7yg"}]],"className":"lucide-clock","size":16}]}],["$","span",null,{"style":{"fontSize":11,"fontWeight":600,"color":"rgb(var(--status-success))","background":"rgba(var(--status-success / 0.12))","padding":"2px 7px","borderRadius":99},"children":"-1.4d"}]]}],["$","div",null,{"children":[["$","div",null,{"style":{"fontSize":22,"fontWeight":700,"fontVariantNumeric":"tabular-nums","letterSpacing":"-0.01em"},"children":"8.2d"}],["$","div",null,{"style":{"fontSize":12,"color":"rgb(var(--text-tertiary))","marginTop":2},"children":"Avg Response"}]]}]]}]
+8:["$","div",null,{"style":{"padding":16,"borderRadius":12,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))","boxShadow":"var(--shadow-card)","display":"flex","flexDirection":"column","gap":10},"children":[["$","div",null,{"style":{"display":"flex","alignItems":"flex-start","justifyContent":"space-between"},"children":[["$","div",null,{"style":{"width":36,"height":36,"borderRadius":9,"background":"#10B98120","display":"flex","alignItems":"center","justifyContent":"center","color":"#10B981","boxShadow":"inset 0 1px 0 rgba(255,255,255,0.12)"},"children":["$","$L3",null,{"iconNode":[["circle",{"cx":"12","cy":"12","r":"10","key":"1mglay"}],["circle",{"cx":"12","cy":"12","r":"6","key":"1vlfrh"}],["circle",{"cx":"12","cy":"12","r":"2","key":"1c9p78"}]],"className":"lucide-target","size":16}]}],["$","span",null,{"style":{"fontSize":11,"fontWeight":600,"color":"rgb(var(--status-success))","background":"rgba(var(--status-success / 0.12))","padding":"2px 7px","borderRadius":99},"children":"+2"}]]}],["$","div",null,{"children":[["$","div",null,{"style":{"fontSize":22,"fontWeight":700,"fontVariantNumeric":"tabular-nums","letterSpacing":"-0.01em"},"children":"6"}],["$","div",null,{"style":{"fontSize":12,"color":"rgb(var(--text-tertiary))","marginTop":2},"children":"Active Pipelines"}]]}]]}]
+9:["$","p",null,{"style":{"fontSize":11,"fontWeight":600,"letterSpacing":"0.08em","textTransform":"uppercase","color":"rgb(var(--text-tertiary))","margin":0},"children":"Stage Funnel"}]
+a:["$","div",null,{"style":{"padding":16,"borderRadius":12,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))","boxShadow":"var(--shadow-card)","display":"flex","flexDirection":"column","gap":10},"children":[["$","div","Applied",{"style":{"display":"flex","alignItems":"center","gap":12},"children":[["$","span",null,{"style":{"width":80,"fontSize":12,"color":"rgb(var(--text-secondary))","textAlign":"right","flexShrink":0},"children":"Applied"}],["$","div",null,{"style":{"flex":1,"height":20,"borderRadius":4,"background":"rgb(var(--surface-raised))","overflow":"hidden"},"children":["$","div",null,{"style":{"height":"100%","width":"100%","background":"#6366F1","borderRadius":4,"transition":"width 0.4s"}}]}],["$","span",null,{"style":{"width":50,"fontSize":12,"fontWeight":600,"fontVariantNumeric":"tabular-nums"},"children":"1,284"}]]}],["$","div","Screening",{"style":{"display":"flex","alignItems":"center","gap":12},"children":[["$","span",null,{"style":{"width":80,"fontSize":12,"color":"rgb(var(--text-secondary))","textAlign":"right","flexShrink":0},"children":"Screening"}],["$","div",null,{"style":{"flex":1,"height":20,"borderRadius":4,"background":"rgb(var(--surface-raised))","overflow":"hidden"},"children":["$","div",null,{"style":{"height":"100%","width":"34.112149532710276%","background":"#3B82F6","borderRadius":4,"transition":"width 0.4s"}}]}],["$","span",null,{"style":{"width":50,"fontSize":12,"fontWeight":600,"fontVariantNumeric":"tabular-nums"},"children":"438"}]]}],["$","div","Interview",{"style":{"display":"flex","alignItems":"center","gap":12},"children":[["$","span",null,{"style":{"width":80,"fontSize":12,"color":"rgb(var(--text-secondary))","textAlign":"right","flexShrink":0},"children":"Interview"}],["$","div",null,{"style":{"flex":1,"height":20,"borderRadius":4,"background":"rgb(var(--surface-raised))","overflow":"hidden"},"children":["$","div",null,{"style":{"height":"100%","width":"14.174454828660435%","background":"#F59E0B","borderRadius":4,"transition":"width 0.4s"}}]}],["$","span",null,{"style":{"width":50,"fontSize":12,"fontWeight":600,"fontVariantNumeric":"tabular-nums"},"children":"182"}]]}],["$","div","Offer",{"style":{"display":"flex","alignItems":"center","gap":12},"children":[["$","span",null,{"style":{"width":80,"fontSize":12,"color":"rgb(var(--text-secondary))","textAlign":"right","flexShrink":0},"children":"Offer"}],["$","div",null,{"style":{"flex":1,"height":20,"borderRadius":4,"background":"rgb(var(--surface-raised))","overflow":"hidden"},"children":["$","div",null,{"style":{"height":"100%","width":"2.64797507788162%","background":"#10B981","borderRadius":4,"transition":"width 0.4s"}}]}],["$","span",null,{"style":{"width":50,"fontSize":12,"fontWeight":600,"fontVariantNumeric":"tabular-nums"},"children":"34"}]]}],["$","div","Hired",{"style":{"display":"flex","alignItems":"center","gap":12},"children":[["$","span",null,{"style":{"width":80,"fontSize":12,"color":"rgb(var(--text-secondary))","textAlign":"right","flexShrink":0},"children":"Hired"}],["$","div",null,{"style":{"flex":1,"height":20,"borderRadius":4,"background":"rgb(var(--surface-raised))","overflow":"hidden"},"children":["$","div",null,{"style":{"height":"100%","width":"0.9345794392523363%","background":"#10B981","borderRadius":4,"transition":"width 0.4s"}}]}],["$","span",null,{"style":{"width":50,"fontSize":12,"fontWeight":600,"fontVariantNumeric":"tabular-nums"},"children":"12"}]]}]]}]
+b:["$","section",null,{"children":[["$","h2",null,{"children":"Layout spec"}],["$","table",null,{"children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Zone"}],["$","th",null,{"children":"Spec"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":"Sticky header"}],["$","td",null,{"children":["56 px, view title + time-range Segmented Button, ",["$","code",null,{"children":"--background"}]," backing, bottom divider"]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"KPI row"}],["$","td",null,{"children":["Equal-width tiles in HStack, gap ",["$","code",null,{"children":"--spacing-lg"}],"; collapses to 2-col on narrow"]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Primary chart zone"}],["$","td",null,{"children":"1fr flexible chart + 300 px companion (donut or breakdown list)"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Section headers"}],["$","td",null,{"children":["11 px semibold, letter-spacing 0.8, ",["$","code",null,{"children":"--text-tertiary"}],", uppercase — matches ",["$","code",null,{"children":"label-mono"}]]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Empty states"}],["$","td",null,{"children":["Inline ",["$","code",null,{"children":"EmptyState"}]," per chart tile; never full-page replacement"]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Dashboard background"}],["$","td",null,{"children":[["$","code",null,{"children":"--background"}],", not ",["$","code",null,{"children":"--surface"}]]}]]}]]}]]}]]}]
+c:["$","section",null,{"children":[["$","h2",null,{"children":"Time range picker"}],["$","p",null,{"children":["Use the ",["$","a",null,{"href":"/components/segmented-button","children":"Segmented Button"}]," locked to these options:",["$","strong",null,{"children":"7 Days / 30 Days / 90 Days / All Time"}],". Place it in the sticky header row, right-aligned. The picker drives all chart and KPI data on the same screen."]}]]}]
+11:Taa6,"use client";
+
+import { useState } from "react";
+
+type TimeRange = "7d" | "30d" | "90d" | "all";
+
+interface KPIData {
+  label: string;
+  value: string;
+  delta?: string;
+  trend?: "up" | "down" | "flat";
+  icon?: React.ReactNode;
+}
+
+export function AnalyticsDashboard() {
+  const [range, setRange] = useState<TimeRange>("30d");
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+      {/* Sticky header */}
+      <div style={{
+        position: "sticky",
+        top: 0,
+        height: 56,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        padding: "0 20px",
+        background: "rgb(var(--background))",
+        borderBottom: "1px solid rgb(var(--border))",
+        zIndex: 10,
+      }}>
+        <h1 style={{ fontSize: 16, fontWeight: 700, margin: 0 }}>Analytics</h1>
+        <TimeRangePicker value={range} onChange={setRange} />
+      </div>
+
+      <div style={{ padding: 20, display: "flex", flexDirection: "column", gap: 20 }}>
+        {/* KPI row */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12 }}>
+          <KPITile label="Total Applications" value="1,284" delta="+12%" trend="up" />
+          <KPITile label="Interview Rate" value="34%" delta="+3%" trend="up" />
+          <KPITile label="Avg. Response Time" value="8.2d" delta="-1.4d" trend="up" />
+          <KPITile label="Active Pipelines" value="6" delta="+2" trend="up" />
+        </div>
+
+        {/* Primary chart zone */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 300px", gap: 12 }}>
+          <ChartTile title="Applications Over Time">
+            {/* Chart content */}
+          </ChartTile>
+          <ChartTile title="Stage Breakdown">
+            {/* Donut / breakdown */}
+          </ChartTile>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function TimeRangePicker({ value, onChange }: { value: TimeRange; onChange: (v: TimeRange) => void }) {
+  const options: [TimeRange, string][] = [["7d","7 Days"],["30d","30 Days"],["90d","90 Days"],["all","All Time"]];
+  return (
+    <div style={{ display: "flex", gap: 2, padding: 3, borderRadius: 8, background: "rgb(var(--surface-raised))", border: "1px solid rgb(var(--border))" }}>
+      {options.map(([key, label]) => (
+        <button key={key} onClick={() => onChange(key)} style={{
+          padding: "4px 12px", borderRadius: 6, fontSize: 12, fontWeight: 500,
+          border: "none", cursor: "pointer",
+          background: value === key ? "rgb(var(--accent))" : "transparent",
+          color: value === key ? "#fff" : "rgb(var(--text-secondary))",
+          transition: "background 0.15s",
+        }}>{label}</button>
+      ))}
+    </div>
+  );
+}12:T6db,<div class="analytics-dashboard">
+  <!-- Sticky header: 56px -->
+  <header class="analytics-header">
+    <h1 class="analytics-header__title">Analytics</h1>
+    <!-- Time range picker (Segmented Button) -->
+    <div class="segmented" role="group">
+      <button class="segmented__btn">7 Days</button>
+      <button class="segmented__btn segmented__btn--active">30 Days</button>
+      <button class="segmented__btn">90 Days</button>
+      <button class="segmented__btn">All Time</button>
+    </div>
+  </header>
+
+  <div class="analytics-body">
+    <!-- KPI row: 4 equal tiles -->
+    <section class="kpi-row">
+      <div class="kpi-tile"><!-- … --></div>
+      <div class="kpi-tile"><!-- … --></div>
+      <div class="kpi-tile"><!-- … --></div>
+      <div class="kpi-tile"><!-- … --></div>
+    </section>
+
+    <!-- Primary chart zone: 1fr + 300px companion -->
+    <section class="chart-zone">
+      <div class="chart-tile chart-tile--primary"><!-- main chart --></div>
+      <div class="chart-tile chart-tile--companion"><!-- donut or breakdown list --></div>
+    </section>
+
+    <!-- Full-width section -->
+    <section class="full-width-section">
+      <!-- utilization grid or table -->
+    </section>
+  </div>
+</div>
+
+<style>
+.analytics-header {
+  position: sticky;
+  top: 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: rgb(var(--background));
+  border-bottom: 1px solid rgb(var(--border));
+  z-index: 10;
+}
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+@media (max-width: 768px) {
+  .kpi-row { grid-template-columns: repeat(2, 1fr); }
+}
+.chart-zone {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 12px;
+}
+</style>13:Taa7,import SwiftUI
+
+// Mirrors Warren's InsightsView and JobFlo's AnalyticsView
+
+enum TimeRange: String, CaseIterable, Identifiable {
+    case sevenDays = "7d"
+    case thirtyDays = "30d"
+    case ninetyDays = "90d"
+    case allTime = "all"
+
+    var id: String { rawValue }
+    var label: String {
+        switch self {
+        case .sevenDays: "7 Days"
+        case .thirtyDays: "30 Days"
+        case .ninetyDays: "90 Days"
+        case .allTime: "All Time"
+        }
+    }
+}
+
+struct AnalyticsDashboard: View {
+    @State private var range: TimeRange = .thirtyDays
+
+    var body: some View {
+        ScrollView {
+            LazyVStack(spacing: 20, pinnedViews: [.sectionHeaders]) {
+                Section {
+                    VStack(spacing: 20) {
+                        kpiRow
+                        chartZone
+                        utilizationGrid
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 20)
+                } header: {
+                    stickyHeader
+                }
+            }
+        }
+        .background(Color.sfBackground)
+    }
+
+    private var stickyHeader: some View {
+        HStack {
+            Text("Analytics")
+                .font(.system(size: 16, weight: .bold))
+            Spacer()
+            Picker("Range", selection: $range) {
+                ForEach(TimeRange.allCases) { r in
+                    Text(r.label).tag(r)
+                }
+            }
+            .pickerStyle(.segmented)
+            .fixedSize()
+        }
+        .padding(.horizontal, 20)
+        .frame(height: 56)
+        .background(.regularMaterial)
+        .overlay(alignment: .bottom) { Divider() }
+    }
+
+    private var kpiRow: some View {
+        // Responsive: HStack on iPad/Mac, 2-col grid on iPhone
+        AdaptiveGrid(minWidth: 160) {
+            KPITile(icon: Image(systemName: "doc.text"),
+                    value: "1,284", label: "Applications",
+                    delta: "+12%", trend: .up)
+            KPITile(icon: Image(systemName: "calendar"),
+                    value: "34%", label: "Interview Rate",
+                    delta: "+3%", trend: .up)
+            KPITile(icon: Image(systemName: "clock"),
+                    value: "8.2d", label: "Avg Response",
+                    delta: "-1.4d", trend: .up)
+            KPITile(icon: Image(systemName: "chart.bar"),
+                    value: "6", label: "Active Pipelines",
+                    delta: "+2", trend: .up)
+        }
+    }
+
+    private var chartZone: some View {
+        HStack(alignment: .top, spacing: 12) {
+            ApplicationsChart()
+                .frame(maxWidth: .infinity)
+            StageBreakdown()
+                .frame(width: 300)
+        }
+    }
+}14:T42e,// macOS — uses NavigationSplitView sidebar layout.
+// Analytics view sits in the detail column with full-width charts.
+// Warren's InsightsView is the primary reference.
+
+struct AnalyticsDetailView: View {
+    @State private var range: TimeRange = .thirtyDays
+
+    var body: some View {
+        VStack(spacing: 0) {
+            toolbar
+            ScrollView {
+                VStack(alignment: .leading, spacing: 24) {
+                    // Section labels: 11px semibold, tracking 0.8, tertiary colour
+                    sectionLabel("Overview")
+                    kpiRow
+                    sectionLabel("Performance")
+                    chartZone
+                    sectionLabel("Utilization")
+                    utilizationGrid
+                }
+                .padding(24)
+            }
+        }
+    }
+
+    private func sectionLabel(_ title: String) -> some View {
+        Text(title)
+            .font(.system(size: 11, weight: .semibold))
+            .kerning(0.8)
+            .foregroundStyle(.sfTextTertiary)
+            .textCase(.uppercase)
+    }
+}d:["$","section",null,{"children":[["$","h2",null,{"children":"Implementation"}],["$","$L10",null,{"code":{"react":{"filename":"AnalyticsDashboard.tsx","code":"$11"},"html":{"filename":"analytics-dashboard.html","code":"$12"},"swift":{"filename":"AnalyticsDashboard.swift","code":"$13"},"macos":{"filename":"AnalyticsDashboard.swift","code":"$14"}}}]]}]
+e:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0dgnkhp~u3xrx.js","async":true}]
+f:["$","$L15",null,{"children":["$","$16",null,{"name":"Next.MetadataOutlet","children":"$@17"}]}]
+17:null

@@ -1,0 +1,426 @@
+1:"$Sreact.fragment"
+3:I[15290,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"ThemeProvider"]
+4:I[46693,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"DocsShell"]
+5:I[39756,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"default"]
+6:I[37457,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"default"]
+10:I[68027,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"default",1]
+:HL["/Sitka/_next/static/chunks/02w~p~n74b171.css","style"]
+:HL["/Sitka/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Sitka/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:T7d1,
+  try {
+    var t = localStorage.getItem('sitka-theme');
+    var dark = t === 'dark' || ((!t || t === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var r = document.documentElement;
+    if (dark) {
+      r.classList.add('dark');
+      r.style.colorScheme = 'dark';
+      r.style.setProperty('--background',      '9 9 12');
+      r.style.setProperty('--surface',         '13 13 17');
+      r.style.setProperty('--surface-raised',  '22 22 28');
+      r.style.setProperty('--surface-hover',   '32 32 40');
+      r.style.setProperty('--border',          '38 38 48');
+      r.style.setProperty('--border-subtle',   '26 26 33');
+      r.style.setProperty('--text-primary',    '242 242 246');
+      r.style.setProperty('--text-secondary',  '155 155 170');
+      r.style.setProperty('--text-tertiary',   '100 100 115');
+      r.style.setProperty('--accent-subtle',   '10 38 21');
+      r.style.setProperty('--accent-muted',    '20 72 39');
+      r.style.setProperty('--nav-active-color','rgb(52, 168, 101)');
+      r.style.setProperty('--card-tint-bg',    'rgb(12, 28, 18)');
+    } else {
+      r.style.colorScheme = 'light';
+      r.style.setProperty('--background',      '252 252 253');
+      r.style.setProperty('--surface',         '255 255 255');
+      r.style.setProperty('--surface-raised',  '246 246 248');
+      r.style.setProperty('--surface-hover',   '240 240 244');
+      r.style.setProperty('--border',          '224 224 231');
+      r.style.setProperty('--border-subtle',   '240 240 244');
+      r.style.setProperty('--text-primary',    '15 15 18');
+      r.style.setProperty('--text-secondary',  '85 85 99');
+      r.style.setProperty('--text-tertiary',   '130 130 147');
+      r.style.setProperty('--accent-subtle',   '232 248 239');
+      r.style.setProperty('--accent-muted',    '166 220 190');
+      r.style.setProperty('--nav-active-color','rgb(33, 150, 83)');
+      r.style.setProperty('--card-tint-bg',    'rgba(11, 55, 30, 0.06)');
+    }
+  } catch(e) {}
+0:{"P":null,"c":["","patterns","integration-settings",""],"q":"","i":false,"f":[[["",{"children":["patterns",{"children":["integration-settings",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/02w~p~n74b171.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Sitka/_next/static/chunks/0ybqtblkevdno.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/Sitka/_next/static/chunks/0k5z7kppmca1z.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"inter_7b064e0d-module__MOT0tq__variable jetbrains_mono_9a2f2d6c-module__wsyXyG__variable","suppressHydrationWarning":true,"children":["$","body",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{"children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L7","$L8"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],"$L9","$La"]}]}]]}],{"children":["$Lb",{"children":["$Lc",{"children":["$Ld",{},null,false,null]},null,false,"$@e"]},null,false,"$@e"]},null,false,null],"$Lf",false]],"m":"$undefined","G":["$10",["$L11"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"rLJACECUUoZySIuwx-tpS"}
+12:I[79520,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],""]
+13:I[46017,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","/Sitka/_next/static/chunks/0dgnkhp~u3xrx.js"],"ComponentPreview"]
+14:I[5014,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","/Sitka/_next/static/chunks/0dgnkhp~u3xrx.js"],"default"]
+1f:I[97367,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"ViewportBoundary"]
+21:I[97367,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"MetadataBoundary"]
+22:"$Sreact.suspense"
+7:["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}]
+8:["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]
+9:["$","$L12",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-SC89RP965Q","strategy":"afterInteractive"}]
+a:["$","$L12",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n          gtag('config', 'G-SC89RP965Q');\n        "}]
+b:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+c:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":[["$","div",null,{"className":"inline-flex items-center gap-1.5 mb-4 px-2.5 py-1 rounded-full border border-[rgb(var(--accent-muted))] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[10px] font-semibold uppercase tracking-wider","children":[["$","span",null,{"className":"w-1.5 h-1.5 rounded-full bg-current"}],"New"]}],["$","h1",null,{"className":"mb-2.5","children":"Integration Settings"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"A list of third-party service cards with connection status, sync health, and an inline auth flow. Composes Card, Badge, and Form components. Reference: Warren's Slack, Teams, and Harvest settings views."}]]}],["$","section",null,{"children":[["$","h2",null,{"children":"Demo"}],["$","$L13",null,{"children":["$","div",null,{"style":{"padding":20,"display":"flex","flexDirection":"column","gap":10},"children":[["$","div","slack",{"style":{"display":"flex","alignItems":"flex-start","gap":14,"padding":"16px 20px","borderRadius":12,"background":"rgb(var(--status-success) / 0.04)","border":"1px solid rgb(var(--border))","boxShadow":"var(--shadow-card)"},"children":[["$","div",null,{"style":{"width":40,"height":40,"borderRadius":10,"background":"rgb(var(--surface-raised))","border":"1px solid rgb(var(--border))","display":"flex","alignItems":"center","justifyContent":"center","fontSize":18,"fontWeight":700,"flexShrink":0},"children":"S"}],["$","div",null,{"style":{"flex":1,"minWidth":0},"children":[["$","div",null,{"style":{"display":"flex","alignItems":"center","gap":8,"marginBottom":4},"children":[["$","span",null,{"style":{"fontSize":14,"fontWeight":600},"children":"Slack"}],["$","span",null,{"style":{"fontSize":11,"fontWeight":600,"padding":"2px 8px","borderRadius":99,"background":"rgb(var(--status-success) / 0.12)","color":"rgb(var(--status-success))"},"children":"Connected"}]]}],["$","p",null,{"style":{"fontSize":12,"color":"rgb(var(--text-secondary))","marginBottom":6},"children":"Post status updates and notifications to channels."}],["$","div",null,{"style":{"display":"flex","alignItems":"center","gap":5,"fontSize":11},"children":[["$","$L14",null,{"ref":"$undefined","iconNode":[["circle",{"cx":"12","cy":"12","r":"10","key":"1mglay"}],["path",{"d":"m9 12 2 2 4-4","key":"dzmm74"}]],"className":"lucide-circle-check","size":12,"color":"rgb(var(--status-success))"}],["$","span",null,{"style":{"color":"rgb(var(--text-tertiary))"},"children":["Last synced ","2 mins ago"]}]]}]]}],["$","div",null,{"style":{"display":"flex","gap":6,"flexShrink":0},"children":[["$","button",null,{"title":"Sync now","style":{"padding":8,"borderRadius":7,"border":"1px solid rgb(var(--border))","background":"rgb(var(--surface-raised))","cursor":"pointer","display":"flex"},"children":["$","$L14",null,{"ref":"$undefined","iconNode":[["path",{"d":"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8","key":"1357e3"}],["path",{"d":"M3 3v5h5","key":"1xhq8a"}]],"className":"lucide-rotate-ccw","size":14,"color":"rgb(var(--text-secondary))"}]}],["$","button",null,{"title":"Configure","style":{"padding":8,"borderRadius":7,"border":"1px solid rgb(var(--border))","background":"rgb(var(--surface-raised))","cursor":"pointer","display":"flex"},"children":["$","$L14",null,{"ref":"$undefined","iconNode":[["path",{"d":"M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915","key":"1i5ecw"}],["circle",{"cx":"12","cy":"12","r":"3","key":"1v7zrd"}]],"className":"lucide-settings","size":14,"color":"rgb(var(--text-secondary))"}]}],["$","button",null,{"title":"Disconnect","style":{"padding":8,"borderRadius":7,"border":"1px solid rgb(var(--border))","background":"rgb(var(--surface-raised))","cursor":"pointer","display":"flex"},"children":["$","$L14",null,{"ref":"$undefined","iconNode":[["path",{"d":"m19 5 3-3","key":"yk6iyv"}],["path",{"d":"m2 22 3-3","key":"19mgm9"}],["path",{"d":"M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z","key":"goz73y"}],["path",{"d":"M7.5 13.5 10 11","key":"7xgeeb"}],["path",{"d":"M10.5 16.5 13 14","key":"10btkg"}],["path",{"d":"m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z","key":"1snsnr"}]],"className":"lucide-unplug","size":14,"color":"rgb(var(--status-danger))"}]}]]}]]}],"$L15","$L16","$L17"]}]}]]}],"$L18","$L19","$L1a","$L1b"]}],["$L1c"],"$L1d"]}]
+1e:[]
+e:"$W1e"
+f:["$","$1","h",{"children":[null,["$","$L1f",null,{"children":"$L20"}],["$","div",null,{"hidden":true,"children":["$","$L21",null,{"children":["$","$22",null,{"name":"Next.Metadata","children":"$L23"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+11:["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/02w~p~n74b171.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+24:I[64147,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","/Sitka/_next/static/chunks/0dgnkhp~u3xrx.js"],"PlatformTabs"]
+28:I[97367,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+15:["$","div","harvest",{"style":{"display":"flex","alignItems":"flex-start","gap":14,"padding":"16px 20px","borderRadius":12,"background":"rgb(var(--status-success) / 0.04)","border":"1px solid rgb(var(--border))","boxShadow":"var(--shadow-card)"},"children":[["$","div",null,{"style":{"width":40,"height":40,"borderRadius":10,"background":"rgb(var(--surface-raised))","border":"1px solid rgb(var(--border))","display":"flex","alignItems":"center","justifyContent":"center","fontSize":18,"fontWeight":700,"flexShrink":0},"children":"H"}],["$","div",null,{"style":{"flex":1,"minWidth":0},"children":[["$","div",null,{"style":{"display":"flex","alignItems":"center","gap":8,"marginBottom":4},"children":[["$","span",null,{"style":{"fontSize":14,"fontWeight":600},"children":"Harvest"}],["$","span",null,{"style":{"fontSize":11,"fontWeight":600,"padding":"2px 8px","borderRadius":99,"background":"rgb(var(--status-success) / 0.12)","color":"rgb(var(--status-success))"},"children":"Connected"}]]}],["$","p",null,{"style":{"fontSize":12,"color":"rgb(var(--text-secondary))","marginBottom":6},"children":"Sync tracked time entries and billable hours."}],["$","div",null,{"style":{"display":"flex","alignItems":"center","gap":5,"fontSize":11},"children":[["$","$L14",null,{"ref":"$undefined","iconNode":[["circle",{"cx":"12","cy":"12","r":"10","key":"1mglay"}],["line",{"x1":"12","x2":"12","y1":"8","y2":"12","key":"1pkeuh"}],["line",{"x1":"12","x2":"12.01","y1":"16","y2":"16","key":"4dfq90"}]],"className":"lucide-circle-alert","size":12,"color":"rgb(var(--status-danger))"}],["$","span",null,{"style":{"color":"rgb(var(--status-danger))"},"children":"Rate limit exceeded — retry in 10 min"}]]}]]}],["$","div",null,{"style":{"display":"flex","gap":6,"flexShrink":0},"children":[["$","button",null,{"title":"Sync now","style":{"padding":8,"borderRadius":7,"border":"1px solid rgb(var(--border))","background":"rgb(var(--surface-raised))","cursor":"pointer","display":"flex"},"children":["$","$L14",null,{"ref":"$undefined","iconNode":"$d:props:children:0:props:children:1:props:children:1:props:children:props:children:0:props:children:2:props:children:0:props:children:props:iconNode","className":"lucide-rotate-ccw","size":14,"color":"rgb(var(--text-secondary))"}]}],["$","button",null,{"title":"Configure","style":{"padding":8,"borderRadius":7,"border":"1px solid rgb(var(--border))","background":"rgb(var(--surface-raised))","cursor":"pointer","display":"flex"},"children":["$","$L14",null,{"ref":"$undefined","iconNode":"$d:props:children:0:props:children:1:props:children:1:props:children:props:children:0:props:children:2:props:children:1:props:children:props:iconNode","className":"lucide-settings","size":14,"color":"rgb(var(--text-secondary))"}]}],["$","button",null,{"title":"Disconnect","style":{"padding":8,"borderRadius":7,"border":"1px solid rgb(var(--border))","background":"rgb(var(--surface-raised))","cursor":"pointer","display":"flex"},"children":["$","$L14",null,{"ref":"$undefined","iconNode":"$d:props:children:0:props:children:1:props:children:1:props:children:props:children:0:props:children:2:props:children:2:props:children:props:iconNode","className":"lucide-unplug","size":14,"color":"rgb(var(--status-danger))"}]}]]}]]}]
+16:["$","div","teams",{"style":{"display":"flex","alignItems":"flex-start","gap":14,"padding":"16px 20px","borderRadius":12,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))","boxShadow":"var(--shadow-card)"},"children":[["$","div",null,{"style":{"width":40,"height":40,"borderRadius":10,"background":"rgb(var(--surface-raised))","border":"1px solid rgb(var(--border))","display":"flex","alignItems":"center","justifyContent":"center","fontSize":18,"fontWeight":700,"flexShrink":0},"children":"T"}],["$","div",null,{"style":{"flex":1,"minWidth":0},"children":[["$","div",null,{"style":{"display":"flex","alignItems":"center","gap":8,"marginBottom":4},"children":[["$","span",null,{"style":{"fontSize":14,"fontWeight":600},"children":"Teams"}],["$","span",null,{"style":{"fontSize":11,"fontWeight":600,"padding":"2px 8px","borderRadius":99,"background":"rgb(var(--border-subtle))","color":"rgb(var(--text-tertiary))"},"children":"Disconnected"}]]}],["$","p",null,{"style":{"fontSize":12,"color":"rgb(var(--text-secondary))","marginBottom":6},"children":"Receive daily summaries in Microsoft Teams."}],false]}],["$","div",null,{"style":{"display":"flex","gap":6,"flexShrink":0},"children":["$","button",null,{"style":{"display":"flex","alignItems":"center","gap":6,"padding":"7px 14px","borderRadius":7,"background":"rgb(var(--accent))","color":"#fff","border":"none","cursor":"pointer","fontSize":13,"fontWeight":600},"children":[["$","$L14",null,{"ref":"$undefined","iconNode":[["path",{"d":"M12 22v-5","key":"1ega77"}],["path",{"d":"M15 8V2","key":"18g5xt"}],["path",{"d":"M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z","key":"1xoxul"}],["path",{"d":"M9 8V2","key":"14iosj"}]],"className":"lucide-plug","size":13}],"Connect"]}]}]]}]
+17:["$","div","notion",{"style":{"display":"flex","alignItems":"flex-start","gap":14,"padding":"16px 20px","borderRadius":12,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))","boxShadow":"var(--shadow-card)"},"children":[["$","div",null,{"style":{"width":40,"height":40,"borderRadius":10,"background":"rgb(var(--surface-raised))","border":"1px solid rgb(var(--border))","display":"flex","alignItems":"center","justifyContent":"center","fontSize":18,"fontWeight":700,"flexShrink":0},"children":"N"}],["$","div",null,{"style":{"flex":1,"minWidth":0},"children":[["$","div",null,{"style":{"display":"flex","alignItems":"center","gap":8,"marginBottom":4},"children":[["$","span",null,{"style":{"fontSize":14,"fontWeight":600},"children":"Notion"}],["$","span",null,{"style":{"fontSize":11,"fontWeight":600,"padding":"2px 8px","borderRadius":99,"background":"rgb(var(--border-subtle))","color":"rgb(var(--text-tertiary))"},"children":"Disconnected"}]]}],["$","p",null,{"style":{"fontSize":12,"color":"rgb(var(--text-secondary))","marginBottom":6},"children":"Export completed tasks to a Notion database."}],false]}],["$","div",null,{"style":{"display":"flex","gap":6,"flexShrink":0},"children":["$","button",null,{"style":{"display":"flex","alignItems":"center","gap":6,"padding":"7px 14px","borderRadius":7,"background":"rgb(var(--accent))","color":"#fff","border":"none","cursor":"pointer","fontSize":13,"fontWeight":600},"children":[["$","$L14",null,{"ref":"$undefined","iconNode":"$16:props:children:2:props:children:props:children:0:props:iconNode","className":"lucide-plug","size":13}],"Connect"]}]}]]}]
+18:["$","section",null,{"children":[["$","h2",null,{"children":"Card anatomy"}],["$","table",null,{"children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Element"}],["$","th",null,{"children":"Description"}],["$","th",null,{"children":"Token"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":"Service logo"}],["$","td",null,{"children":"40×40 rounded rect, brand logo image or initial fallback"}],["$","td",null,{"children":["$","code",null,{"children":"--surface-raised"}]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Name"}],["$","td",null,{"children":"14 px semibold"}],["$","td",null,{"children":"—"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Status badge"}],["$","td",null,{"children":"Connected = success green; Disconnected = neutral gray"}],["$","td",null,{"children":[["$","code",null,{"children":"--status-success"}],", ",["$","code",null,{"children":"--border"}]]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Description"}],["$","td",null,{"children":"12 px, secondary colour"}],["$","td",null,{"children":["$","code",null,{"children":"--text-secondary"}]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Sync row"}],["$","td",null,{"children":"Timestamp or error message with icon, 11 px"}],["$","td",null,{"children":[["$","code",null,{"children":"--text-tertiary"}]," / ",["$","code",null,{"children":"--status-danger"}]]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Connected tint"}],["$","td",null,{"children":["Card background gets ",["$","code",null,{"children":"--status-success / 0.04"}]," fill"]}],["$","td",null,{"children":["$","code",null,{"children":"--status-success"}]}]]}]]}]]}]]}]
+19:["$","section",null,{"children":[["$","h2",null,{"children":"Auth flow"}],["$","p",null,{"children":["Tapping ",["$","strong",null,{"children":"Connect"}]," opens either:"]}],["$","ul",null,{"children":[["$","li",null,{"children":"An inline expanded section with an API key input + \"Test & Connect\" button (for API-key integrations)"}],["$","li",null,{"children":"A bottom sheet or modal with OAuth instructions (for OAuth integrations)"}]]}],["$","p",null,{"children":"The \"Test & Connect\" button shows a loading spinner during the API check and surfaces error messages inline. On success, the card transitions to the Connected state with an animation."}]]}]
+1a:["$","section",null,{"children":[["$","h2",null,{"children":"Sync status indicators"}],["$","table",null,{"children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"State"}],["$","th",null,{"children":"Icon"}],["$","th",null,{"children":"Colour"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":"Sync OK"}],["$","td",null,{"children":"checkmark.circle.fill"}],["$","td",null,{"children":["$","code",null,{"children":"--status-success"}]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Sync error"}],["$","td",null,{"children":"exclamationmark.triangle.fill"}],["$","td",null,{"children":["$","code",null,{"children":"--status-danger"}]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Syncing now"}],["$","td",null,{"children":"Spinner"}],["$","td",null,{"children":["$","code",null,{"children":"--text-tertiary"}]}]]}]]}]]}]]}]
+25:T15b8,import { useState } from "react";
+
+interface Integration {
+  id: string;
+  name: string;
+  description: string;
+  status: "connected" | "disconnected";
+  lastSync?: string | null;
+  syncError?: string | null;
+}
+
+export function IntegrationCard({ integration }: { integration: Integration }) {
+  const [showAuth, setShowAuth] = useState(false);
+  const isConnected = integration.status === "connected";
+
+  return (
+    <div
+      style={{
+        padding: "16px 20px",
+        borderRadius: 12,
+        background: isConnected
+          ? "rgb(var(--status-success) / 0.04)"
+          : "rgb(var(--surface))",
+        border: "1px solid rgb(var(--border))",
+        boxShadow: "var(--shadow-card)",
+        display: "flex",
+        alignItems: "flex-start",
+        gap: 14,
+      }}
+    >
+      {/* Service logo placeholder */}
+      <div
+        style={{
+          width: 40,
+          height: 40,
+          borderRadius: 10,
+          background: "rgb(var(--surface-raised))",
+          border: "1px solid rgb(var(--border))",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: 18,
+          flexShrink: 0,
+        }}
+      >
+        {integration.name[0]}
+      </div>
+
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+          <span style={{ fontSize: 14, fontWeight: 600 }}>{integration.name}</span>
+
+          {/* Status badge */}
+          <span style={{
+            fontSize: 11, fontWeight: 600, padding: "2px 8px", borderRadius: 99,
+            background: isConnected ? "rgb(var(--status-success) / 0.12)" : "rgb(var(--border))",
+            color: isConnected ? "rgb(var(--status-success))" : "rgb(var(--text-tertiary))",
+          }}>
+            {isConnected ? "Connected" : "Disconnected"}
+          </span>
+        </div>
+
+        <p style={{ fontSize: 12, color: "rgb(var(--text-secondary))", marginBottom: 8 }}>
+          {integration.description}
+        </p>
+
+        {/* Sync status */}
+        {isConnected && (
+          <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11, color: "rgb(var(--text-tertiary))" }}>
+            {integration.syncError ? (
+              <>
+                <AlertCircle size={12} color="rgb(var(--status-danger))" />
+                <span style={{ color: "rgb(var(--status-danger))" }}>{integration.syncError}</span>
+              </>
+            ) : (
+              <>
+                <CheckCircle2 size={12} color="rgb(var(--status-success))" />
+                <span>Last synced {integration.lastSync}</span>
+              </>
+            )}
+          </div>
+        )}
+
+        {/* Auth flow */}
+        {showAuth && !isConnected && (
+          <div style={{
+            marginTop: 12,
+            padding: 14,
+            borderRadius: 8,
+            background: "rgb(var(--surface-raised))",
+            border: "1px solid rgb(var(--border))",
+            fontSize: 13,
+          }}>
+            <p style={{ marginBottom: 10, fontWeight: 500 }}>Connect {integration.name}</p>
+            <input
+              type="text"
+              placeholder="Paste your API key or OAuth token"
+              style={{
+                width: "100%",
+                padding: "8px 12px",
+                borderRadius: 7,
+                border: "1px solid rgb(var(--border))",
+                background: "rgb(var(--surface))",
+                fontSize: 13,
+                boxSizing: "border-box",
+              }}
+            />
+            <div style={{ display: "flex", gap: 8, marginTop: 10 }}>
+              <button style={{ padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "#fff", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}>
+                Test & Connect
+              </button>
+              <button onClick={() => setShowAuth(false)} style={{ padding: "7px 14px", borderRadius: 7, background: "transparent", border: "1px solid rgb(var(--border))", cursor: "pointer", fontSize: 13 }}>
+                Cancel
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Action buttons */}
+      <div style={{ display: "flex", gap: 6, flexShrink: 0 }}>
+        {isConnected ? (
+          <>
+            <button title="Sync now" style={{ padding: 8, borderRadius: 7, border: "1px solid rgb(var(--border))", background: "rgb(var(--surface-raised))", cursor: "pointer" }}>
+              <RotateCcw size={14} color="rgb(var(--text-secondary))" />
+            </button>
+            <button title="Configure" style={{ padding: 8, borderRadius: 7, border: "1px solid rgb(var(--border))", background: "rgb(var(--surface-raised))", cursor: "pointer" }}>
+              <Settings size={14} color="rgb(var(--text-secondary))" />
+            </button>
+            <button title="Disconnect" style={{ padding: 8, borderRadius: 7, border: "1px solid rgb(var(--border))", background: "rgb(var(--surface-raised))", cursor: "pointer" }}>
+              <Unplug size={14} color="rgb(var(--status-danger))" />
+            </button>
+          </>
+        ) : (
+          <button
+            onClick={() => setShowAuth(true)}
+            style={{ display: "flex", alignItems: "center", gap: 6, padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "#fff", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}
+          >
+            <Plug size={13} />
+            Connect
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}26:T9a3,<div class="integration-list">
+  <!-- Connected card -->
+  <div class="integration-card integration-card--connected">
+    <div class="integration-card__logo">S</div>
+    <div class="integration-card__body">
+      <div class="integration-card__header">
+        <span class="integration-card__name">Slack</span>
+        <span class="badge badge--success">Connected</span>
+      </div>
+      <p class="integration-card__description">
+        Post status updates and notifications to channels.
+      </p>
+      <div class="integration-card__sync">
+        <svg class="sync-icon sync-icon--success"><!-- checkmark --></svg>
+        Last synced 2 mins ago
+      </div>
+    </div>
+    <div class="integration-card__actions">
+      <button class="btn-icon" title="Sync now"><!-- rotate icon --></button>
+      <button class="btn-icon" title="Configure"><!-- settings icon --></button>
+      <button class="btn-icon btn-icon--danger" title="Disconnect"><!-- unplug icon --></button>
+    </div>
+  </div>
+
+  <!-- Disconnected card -->
+  <div class="integration-card">
+    <div class="integration-card__logo">H</div>
+    <div class="integration-card__body">
+      <div class="integration-card__header">
+        <span class="integration-card__name">Harvest</span>
+        <span class="badge badge--neutral">Disconnected</span>
+      </div>
+      <p class="integration-card__description">
+        Sync tracked time entries and billable hours.
+      </p>
+    </div>
+    <div class="integration-card__actions">
+      <button class="btn btn--accent">Connect</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.integration-list { display: flex; flex-direction: column; gap: 10px; }
+.integration-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: rgb(var(--surface));
+  border: 1px solid rgb(var(--border));
+  box-shadow: var(--shadow-card);
+}
+.integration-card--connected {
+  background: rgb(var(--status-success) / 0.04);
+}
+.integration-card__logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgb(var(--border));
+  background: rgb(var(--surface-raised));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.integration-card__actions { display: flex; gap: 6px; margin-left: auto; }
+.btn-icon { padding: 8px; border-radius: 7px; border: 1px solid rgb(var(--border)); background: rgb(var(--surface-raised)); cursor: pointer; }
+</style>27:T1313,import SwiftUI
+
+// Mirrors Warren's Slack/Teams/Harvest integration views
+
+struct IntegrationSettingsView: View {
+    @State private var integrations: [Integration] = Integration.all
+    @State private var authIntegration: Integration? = nil
+
+    var body: some View {
+        ScrollView {
+            LazyVStack(spacing: 10) {
+                ForEach($integrations) { $integration in
+                    IntegrationCard(integration: $integration) {
+                        authIntegration = integration
+                    }
+                }
+            }
+            .padding(20)
+        }
+        .sheet(item: $authIntegration) { integration in
+            AuthFlow(integration: integration)
+        }
+    }
+}
+
+struct IntegrationCard: View {
+    @Binding var integration: Integration
+    let onConnect: () -> Void
+
+    var isConnected: Bool { integration.status == .connected }
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 14) {
+            // Service logo
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.sfSurface)
+                .frame(width: 40, height: 40)
+                .overlay {
+                    Text(String(integration.name.prefix(1)))
+                        .font(.system(size: 18, weight: .semibold))
+                }
+                .overlay { RoundedRectangle(cornerRadius: 10).stroke(Color.sfBorder) }
+
+            VStack(alignment: .leading, spacing: 4) {
+                HStack {
+                    Text(integration.name)
+                        .font(.system(size: 14, weight: .semibold))
+
+                    // Status badge
+                    Text(isConnected ? "Connected" : "Disconnected")
+                        .font(.system(size: 11, weight: .semibold))
+                        .padding(.horizontal, 8).padding(.vertical, 2)
+                        .background(isConnected ? Color.sfStatusSuccess.opacity(0.12) : Color.sfBorder)
+                        .foregroundStyle(isConnected ? .sfStatusSuccess : .sfTextTertiary)
+                        .clipShape(Capsule())
+                }
+
+                Text(integration.description)
+                    .font(.system(size: 12))
+                    .foregroundStyle(.sfTextSecondary)
+
+                // Sync status
+                if isConnected {
+                    if let error = integration.syncError {
+                        Label(error, systemImage: "exclamationmark.triangle.fill")
+                            .font(.system(size: 11))
+                            .foregroundStyle(.sfStatusDanger)
+                    } else if let lastSync = integration.lastSync {
+                        Label("Last synced \(lastSync)", systemImage: "checkmark.circle.fill")
+                            .font(.system(size: 11))
+                            .foregroundStyle(.sfStatusSuccess)
+                    }
+                }
+            }
+
+            Spacer()
+
+            // Actions
+            HStack(spacing: 6) {
+                if isConnected {
+                    Button { syncNow() } label: { Image(systemName: "arrow.clockwise") }
+                        .buttonStyle(.borderless)
+                    Button { configure() } label: { Image(systemName: "gear") }
+                        .buttonStyle(.borderless)
+                    Button { disconnect() } label: { Image(systemName: "xmark.circle") }
+                        .buttonStyle(.borderless)
+                        .foregroundStyle(.sfStatusDanger)
+                } else {
+                    Button("Connect") { onConnect() }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.sfBrand(.accent))
+                }
+            }
+        }
+        .padding(16)
+        .background(isConnected ? Color.sfStatusSuccess.opacity(0.04) : Color.sfSurface)
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .overlay { RoundedRectangle(cornerRadius: 12).stroke(Color.sfBorder) }
+        .shadow(.card)
+    }
+}
+
+struct AuthFlow: View {
+    let integration: Integration
+    @State private var apiKey = ""
+    @State private var isTesting = false
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section("API Key") {
+                    SecureField("Paste your API key", text: $apiKey)
+                }
+                Section {
+                    Button(isTesting ? "Testing…" : "Test & Connect") {
+                        testAndConnect()
+                    }
+                    .disabled(apiKey.isEmpty || isTesting)
+                }
+            }
+            .navigationTitle("Connect \(integration.name)")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { dismiss() }
+                }
+            }
+        }
+    }
+}1b:["$","section",null,{"children":[["$","h2",null,{"children":"Implementation"}],["$","$L24",null,{"code":{"react":{"filename":"IntegrationSettings.tsx","code":"$25"},"html":{"filename":"integration-settings.html","code":"$26"},"swift":{"filename":"IntegrationSettingsView.swift","code":"$27"},"macos":{"filename":"IntegrationSettingsView.swift","code":"// macOS — same SwiftUI. Warren uses dedicated windows for each OAuth flow.\n\nextension IntegrationCard {\n    // macOS adds sync error inline alert (not just an icon + text)\n    @ViewBuilder\n    var syncErrorAlert: some View {\n        if let error = integration.syncError {\n            GroupBox {\n                HStack {\n                    Image(systemName: \"exclamationmark.triangle.fill\")\n                        .foregroundStyle(.sfStatusDanger)\n                    VStack(alignment: .leading) {\n                        Text(\"Sync failed\")\n                            .font(.system(size: 12, weight: .semibold))\n                        Text(error)\n                            .font(.system(size: 11))\n                            .foregroundStyle(.sfTextSecondary)\n                    }\n                    Spacer()\n                    Button(\"Retry\") { syncNow() }\n                        .buttonStyle(.bordered)\n                }\n            }\n        }\n    }\n}"}}}]]}]
+1c:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0dgnkhp~u3xrx.js","async":true,"nonce":"$undefined"}]
+1d:["$","$L28",null,{"children":["$","$22",null,{"name":"Next.MetadataOutlet","children":"$@29"}]}]
+20:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+2a:I[27201,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"IconMark"]
+23:[["$","title","0",{"children":"Integration Settings — Sitka Design System"}],["$","meta","1",{"name":"description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","2",{"name":"keywords","content":"design system,components,tokens,React,SwiftUI"}],["$","meta","3",{"property":"og:title","content":"Sitka Design System"}],["$","meta","4",{"property":"og:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","5",{"property":"og:url","content":"https://jsrothwell.github.io/Sitka/"}],["$","meta","6",{"property":"og:site_name","content":"Sitka Design System"}],["$","meta","7",{"property":"og:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Sitka Design System"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Sitka Design System"}],["$","meta","14",{"name":"twitter:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","15",{"name":"twitter:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","link","16",{"rel":"icon","href":"/Sitka/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L2a","17",{}]]
+29:null

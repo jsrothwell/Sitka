@@ -1,0 +1,361 @@
+1:"$Sreact.fragment"
+2:I[46017,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","/Sitka/_next/static/chunks/0dgnkhp~u3xrx.js"],"ComponentPreview"]
+e:I[64147,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","/Sitka/_next/static/chunks/0dgnkhp~u3xrx.js"],"PlatformTabs"]
+13:I[97367,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+14:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":[["$","div",null,{"className":"inline-flex items-center gap-1.5 mb-4 px-2.5 py-1 rounded-full border border-[rgb(var(--accent-muted))] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[10px] font-semibold uppercase tracking-wider","children":[["$","span",null,{"className":"w-1.5 h-1.5 rounded-full bg-current"}],"New"]}],["$","h1",null,{"className":"mb-2.5","children":"Burn / Budget Trajectory"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"A financial forecasting chart showing historical spend, projected burn rate, and budget ceiling. Reference implementation from Warren's BurnTrajectoryChart."}]]}],["$","section",null,{"children":[["$","h2",null,{"children":"Demo"}],["$","p",null,{"children":"Historical spend (solid line), forecast (dashed), planned pace (dotted), and budget ceiling (red dashed). The today marker is the vertical dashed line."}],["$","$L2",null,{"children":["$","div",null,{"style":{"padding":16},"children":[["$","div",null,{"style":{"padding":16,"borderRadius":12,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))","boxShadow":"var(--shadow-card)"},"children":[["$","svg",null,{"width":"100%","viewBox":"0 0 640 200","style":{"display":"block","overflow":"visible"},"children":[["$","line",null,{"x1":56,"y1":35.30434782608697,"x2":624,"y2":35.30434782608697,"stroke":"rgba(248,113,113,0.5)","strokeWidth":"1","strokeDasharray":"3,3"}],["$","path",null,{"d":"M 56.0 153.3 L 108.6 142.6 L 161.1 131.8 L 208.6 121.1 L 261.2 110.4 L 312.0 99.7 L 364.6 88.9 L 415.5 78.2 L 468.0 67.5 L 520.6 56.8 L 571.4 46.0 L 624.0 35.3","fill":"none","stroke":"rgba(128,128,128,0.35)","strokeWidth":"1","strokeDasharray":"2,3"}],[["$","path",null,{"d":"M 364.6 82.9 L 415.5 71.3 L 468.0 59.8 L 520.6 48.2 L 571.4 36.6 L 624.0 25.0 L624.0,164 L364.6,164 Z","fill":"#F59E0B","fillOpacity":0.04}],["$","path",null,{"d":"M 364.6 82.9 L 415.5 71.3 L 468.0 59.8 L 520.6 48.2 L 571.4 36.6 L 624.0 25.0","fill":"none","stroke":"#F59E0B","strokeWidth":"1.5","strokeOpacity":0.55,"strokeDasharray":"5,3"}]],[["$","path",null,{"d":"M 56.0 154.1 L 108.6 142.2 L 161.1 131.0 L 208.6 121.3 L 261.2 115.9 L 312.0 110.2 L312.0,164 L56.0,164 Z","fill":"#F59E0B","fillOpacity":0.08}],["$","path",null,{"d":"M 56.0 154.1 L 108.6 142.2 L 161.1 131.0 L 208.6 121.3 L 261.2 115.9 L 312.0 110.2","fill":"none","stroke":"#F59E0B","strokeWidth":"2"}]],["$","line",null,{"x1":322.14178875870647,"y1":16,"x2":322.14178875870647,"y2":164,"stroke":"rgba(128,128,128,0.35)","strokeWidth":"1","strokeDasharray":"2,2"}],["$","circle",null,{"cx":312.0238805970149,"cy":110.23001023289868,"r":"5","fill":"#F59E0B"}],[["$","text","0",{"x":50,"y":20,"textAnchor":"end","fontSize":10,"fill":"rgba(128,128,128,0.8)","children":["$$",138,"k"]}],["$","text","0.25",{"x":50,"y":57,"textAnchor":"end","fontSize":10,"fill":"rgba(128,128,128,0.8)","children":["$$",104,"k"]}],["$","text","0.5",{"x":50,"y":94,"textAnchor":"end","fontSize":10,"fill":"rgba(128,128,128,0.8)","children":["$$",69,"k"]}],["$","text","0.75",{"x":50,"y":131,"textAnchor":"end","fontSize":10,"fill":"rgba(128,128,128,0.8)","children":["$$",35,"k"]}],["$","text","1",{"x":50,"y":168,"textAnchor":"end","fontSize":10,"fill":"rgba(128,128,128,0.8)","children":["$$",0,"k"]}]],[["$","text","2025-12-01T00:00:00.000Z",{"x":56,"y":184,"textAnchor":"middle","fontSize":10,"fill":"rgba(128,128,128,0.8)","children":"Dec"}],["$","text","2026-02-01T00:00:00.000Z",{"x":161.1223880597015,"y":184,"textAnchor":"middle","fontSize":10,"fill":"rgba(128,128,128,0.8)","children":"Feb"}],["$","text","2026-04-01T00:00:00.000Z",{"x":261.1582089552239,"y":184,"textAnchor":"middle","fontSize":10,"fill":"rgba(128,128,128,0.8)","children":"Apr"}],["$","text","2026-06-01T00:00:00.000Z",{"x":364.58507462686566,"y":184,"textAnchor":"middle","fontSize":10,"fill":"rgba(128,128,128,0.8)","children":"Jun"}],["$","text","2026-08-01T00:00:00.000Z",{"x":468.0119402985075,"y":184,"textAnchor":"middle","fontSize":10,"fill":"rgba(128,128,128,0.8)","children":"Aug"}],["$","text","2026-10-01T00:00:00.000Z",{"x":571.4388059701492,"y":184,"textAnchor":"middle","fontSize":10,"fill":"rgba(128,128,128,0.8)","children":"Oct"}]]]}],["$","div",null,{"style":{"display":"flex","gap":16,"marginTop":8,"fontSize":11,"color":"rgb(var(--text-tertiary))"},"children":[["$","div","Actual",{"style":{"display":"flex","alignItems":"center","gap":6},"children":[["$","div",null,{"style":{"borderTop":"2px solid #F59E0B","width":20}}],"Actual"]}],"$L3","$L4","$L5"]}]]}],"$L6","$L7"]}]}]]}],"$L8","$L9","$La","$Lb"]}],["$Lc"],"$Ld"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"rLJACECUUoZySIuwx-tpS"}
+3:["$","div","Forecast",{"style":{"display":"flex","alignItems":"center","gap":6},"children":[["$","div",null,{"style":{"borderTop":"1.5px dashed #F59E0B","width":20,"opacity":0.6}}],"Forecast"]}]
+4:["$","div","Planned",{"style":{"display":"flex","alignItems":"center","gap":6},"children":[["$","div",null,{"style":{"borderTop":"1px dashed rgba(128,128,128,0.5)","width":20}}],"Planned"]}]
+5:["$","div","Budget ceiling",{"style":{"display":"flex","alignItems":"center","gap":6},"children":[["$","div",null,{"style":{"borderTop":"1px dashed rgba(248,113,113,0.6)","width":20}}],"Budget ceiling"]}]
+6:["$","div",null,{"style":{"display":"grid","gridTemplateColumns":"repeat(4, 1fr)","gap":10,"marginTop":14},"children":[["$","div","Weekly Burn",{"style":{"padding":"10px 12px","borderRadius":8,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--status-warning))","textAlign":"center"},"children":[["$","div",null,{"style":{"fontSize":14,"fontWeight":700,"fontVariantNumeric":"tabular-nums"},"children":"$$4,200"}],["$","div",null,{"style":{"fontSize":11,"color":"rgb(var(--text-tertiary))","marginTop":3},"children":"Weekly Burn"}]]}],["$","div","Recent Daily",{"style":{"padding":"10px 12px","borderRadius":8,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))","textAlign":"center"},"children":[["$","div",null,{"style":{"fontSize":14,"fontWeight":700,"fontVariantNumeric":"tabular-nums"},"children":"$$600"}],["$","div",null,{"style":{"fontSize":11,"color":"rgb(var(--text-tertiary))","marginTop":3},"children":"Recent Daily"}]]}],["$","div","Avg Daily",{"style":{"padding":"10px 12px","borderRadius":8,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))","textAlign":"center"},"children":[["$","div",null,{"style":{"fontSize":14,"fontWeight":700,"fontVariantNumeric":"tabular-nums"},"children":"$$540"}],["$","div",null,{"style":{"fontSize":11,"color":"rgb(var(--text-tertiary))","marginTop":3},"children":"Avg Daily"}]]}],["$","div","Planned Daily",{"style":{"padding":"10px 12px","borderRadius":8,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))","textAlign":"center"},"children":[["$","div",null,{"style":{"fontSize":14,"fontWeight":700,"fontVariantNumeric":"tabular-nums"},"children":"$$480"}],["$","div",null,{"style":{"fontSize":11,"color":"rgb(var(--text-tertiary))","marginTop":3},"children":"Planned Daily"}]]}]]}]
+7:["$","div",null,{"style":{"display":"grid","gridTemplateColumns":"repeat(3, 1fr)","gap":10,"marginTop":12},"children":[["$","div","Optimistic",{"style":{"padding":"12px 14px","borderRadius":10,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))"},"children":[["$","div",null,{"style":{"fontSize":12,"fontWeight":600,"marginBottom":4},"children":"Optimistic"}],["$","div",null,{"style":{"fontSize":11,"color":"rgb(var(--text-tertiary))","marginBottom":8},"children":"−20% burn rate"}],["$","div",null,{"style":{"fontSize":13,"fontWeight":700},"children":"Mar 2027"}],["$","div",null,{"style":{"fontSize":10,"color":"rgb(var(--text-tertiary))"},"children":"Est. exhaustion"}]]}],["$","div","Current Pace",{"style":{"padding":"12px 14px","borderRadius":10,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--accent))"},"children":[["$","div",null,{"style":{"fontSize":12,"fontWeight":600,"marginBottom":4},"children":"Current Pace"}],["$","div",null,{"style":{"fontSize":11,"color":"rgb(var(--text-tertiary))","marginBottom":8},"children":"Steady burn rate"}],["$","div",null,{"style":{"fontSize":13,"fontWeight":700},"children":"Oct 2026"}],["$","div",null,{"style":{"fontSize":10,"color":"rgb(var(--text-tertiary))"},"children":"Est. exhaustion"}]]}],["$","div","Pessimistic",{"style":{"padding":"12px 14px","borderRadius":10,"background":"rgb(var(--surface))","border":"1px solid rgb(var(--border))"},"children":[["$","div",null,{"style":{"fontSize":12,"fontWeight":600,"marginBottom":4},"children":"Pessimistic"}],["$","div",null,{"style":{"fontSize":11,"color":"rgb(var(--text-tertiary))","marginBottom":8},"children":"+20% burn rate"}],["$","div",null,{"style":{"fontSize":13,"fontWeight":700},"children":"Jul 2026"}],["$","div",null,{"style":{"fontSize":10,"color":"rgb(var(--text-tertiary))"},"children":"Est. exhaustion"}]]}]]}]
+8:["$","section",null,{"children":[["$","h2",null,{"children":"Line styles"}],["$","table",null,{"children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Line"}],["$","th",null,{"children":"Weight"}],["$","th",null,{"children":"Dash"}],["$","th",null,{"children":"Colour"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":"Historical"}],["$","td",null,{"children":"2 px"}],["$","td",null,{"children":"Solid"}],["$","td",null,{"children":"Status colour"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Forecast"}],["$","td",null,{"children":"1.5 px"}],["$","td",null,{"children":"[5, 3]"}],["$","td",null,{"children":"Status colour 55%"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Planned pace"}],["$","td",null,{"children":"1 px"}],["$","td",null,{"children":"[2, 3]"}],["$","td",null,{"children":"Gray 30%"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Budget ceiling"}],["$","td",null,{"children":"1 px"}],["$","td",null,{"children":"[3, 3]"}],["$","td",null,{"children":[["$","code",null,{"children":"--status-danger"}]," 35%"]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Today line"}],["$","td",null,{"children":"1 px"}],["$","td",null,{"children":"[2, 2]"}],["$","td",null,{"children":"Secondary 35%"}]]}]]}]]}]]}]
+9:["$","section",null,{"children":[["$","h2",null,{"children":"Markers and fills"}],["$","table",null,{"children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Element"}],["$","th",null,{"children":"Spec"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":"Today dot"}],["$","td",null,{"children":"6 px filled circle, status colour"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Exhaustion dot"}],["$","td",null,{"children":["6 px filled circle, ",["$","code",null,{"children":"--status-danger"}]]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Historical area"}],["$","td",null,{"children":"Status colour 7% fill"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Forecast area"}],["$","td",null,{"children":"Status colour 3% fill"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Highlighted metric tile"}],["$","td",null,{"children":"Status colour border"}]]}]]}]]}]]}]
+a:["$","section",null,{"children":[["$","h2",null,{"children":"Supporting panels"}],["$","p",null,{"children":"Below the chart, render two rows of supporting data:"}],["$","ol",null,{"children":[["$","li",null,{"children":[["$","strong",null,{"children":"KPI panel:"}]," two paired stat tiles — Exhaustion Date and Projected-at-End."]}],["$","li",null,{"children":[["$","strong",null,{"children":"Burn rate metrics:"}]," 4-column row — Weekly burn, Recent daily, Avg daily, Planned daily. Highlight the most relevant tile with a status-colour border."]}],["$","li",null,{"children":[["$","strong",null,{"children":"Scenario cards:"}]," 3-column layout — Optimistic (−20%), Current Pace, Pessimistic (+20%). Current pace tile has an accent border. Each shows estimated exhaustion date."]}]]}]]}]
+f:T1621,"use client";
+
+import { useRef, useEffect } from "react";
+
+interface BurnDataPoint {
+  date: Date;
+  actual?: number;    // undefined for future dates
+  forecast?: number;  // undefined for past dates
+  planned: number;
+}
+
+interface BurnChartProps {
+  data: BurnDataPoint[];
+  budget: number;
+  currency?: string;
+  status?: "success" | "warning" | "danger";
+}
+
+export function BurnTrajectoryChart({
+  data,
+  budget,
+  currency = "$",
+  status = "success",
+}: BurnChartProps) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  const statusColor = {
+    success: "rgb(var(--status-success))",
+    warning: "rgb(var(--status-warning))",
+    danger:  "rgb(var(--status-danger))",
+  }[status];
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d")!;
+    const { width, height } = canvas;
+
+    // DPR scaling
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    ctx.scale(dpr, dpr);
+
+    const pad = { top: 20, right: 20, bottom: 40, left: 60 };
+    const w = width - pad.left - pad.right;
+    const h = height - pad.top - pad.bottom;
+
+    const maxVal = budget * 1.15;
+    const today = new Date();
+    const minDate = data[0].date.getTime();
+    const maxDate = data[data.length - 1].date.getTime();
+    const dateRange = maxDate - minDate;
+
+    function toX(date: Date) { return pad.left + ((date.getTime() - minDate) / dateRange) * w; }
+    function toY(val: number) { return pad.top + h - (val / maxVal) * h; }
+
+    ctx.clearRect(0, 0, width, height);
+
+    // Grid lines (horizontal)
+    ctx.strokeStyle = "rgba(128,128,128,0.12)";
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 4; i++) {
+      const y = pad.top + (h / 4) * i;
+      ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(pad.left + w, y); ctx.stroke();
+    }
+
+    // Budget ceiling line
+    const budgetY = toY(budget);
+    ctx.setLineDash([3, 3]);
+    ctx.strokeStyle = "rgba(248,113,113,0.5)";
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.left, budgetY); ctx.lineTo(pad.left + w, budgetY); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Planned pace line
+    ctx.setLineDash([2, 3]);
+    ctx.strokeStyle = "rgba(128,128,128,0.35)";
+    ctx.lineWidth = 1;
+    const plannedPoints = data.filter((d) => d.planned !== undefined);
+    if (plannedPoints.length > 1) {
+      ctx.beginPath();
+      plannedPoints.forEach((d, i) => {
+        const x = toX(d.date); const y = toY(d.planned);
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+    }
+    ctx.setLineDash([]);
+
+    // Forecast area
+    const futurePoints = data.filter((d) => d.forecast !== undefined);
+    if (futurePoints.length > 1) {
+      ctx.beginPath();
+      futurePoints.forEach((d, i) => {
+        const x = toX(d.date); const y = toY(d.forecast!);
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.lineTo(toX(futurePoints[futurePoints.length - 1].date), pad.top + h);
+      ctx.lineTo(toX(futurePoints[0].date), pad.top + h);
+      ctx.closePath();
+      ctx.fillStyle = statusColor.replace("rgb(", "rgba(").replace(")", " / 0.04)").replace(" / 0.04)", ", 0.04)");
+      ctx.fill();
+
+      // Forecast line (dashed)
+      ctx.setLineDash([5, 3]);
+      ctx.strokeStyle = statusColor.replace("rgb(", "rgba(").replace(")", " / 0.55)").replace(" / 0.55)", ", 0.55)");
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      futurePoints.forEach((d, i) => {
+        const x = toX(d.date); const y = toY(d.forecast!);
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    // Historical area
+    const pastPoints = data.filter((d) => d.actual !== undefined);
+    if (pastPoints.length > 1) {
+      ctx.beginPath();
+      pastPoints.forEach((d, i) => {
+        const x = toX(d.date); const y = toY(d.actual!);
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.lineTo(toX(pastPoints[pastPoints.length - 1].date), pad.top + h);
+      ctx.lineTo(toX(pastPoints[0].date), pad.top + h);
+      ctx.closePath();
+      ctx.fillStyle = statusColor.replace("rgb(", "rgba(").replace(")", " / 0.07)").replace(" / 0.07)", ", 0.07)");
+      ctx.fill();
+
+      // Historical line (solid)
+      ctx.strokeStyle = statusColor;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      pastPoints.forEach((d, i) => {
+        const x = toX(d.date); const y = toY(d.actual!);
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+    }
+
+    // Today line
+    const todayX = toX(today);
+    ctx.setLineDash([2, 2]);
+    ctx.strokeStyle = "rgba(128,128,128,0.35)";
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(todayX, pad.top); ctx.lineTo(todayX, pad.top + h); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Today dot
+    const todayData = data.find((d) => d.actual !== undefined && Math.abs(d.date.getTime() - today.getTime()) < 4 * 86_400_000);
+    if (todayData) {
+      const ty = toY(todayData.actual!);
+      ctx.beginPath(); ctx.arc(todayX, ty, 5, 0, Math.PI * 2);
+      ctx.fillStyle = statusColor; ctx.fill();
+    }
+
+    // Y-axis labels
+    ctx.fillStyle = "rgba(128,128,128,0.8)";
+    ctx.font = "11px -apple-system, sans-serif";
+    ctx.textAlign = "right";
+    for (let i = 0; i <= 4; i++) {
+      const val = (maxVal / 4) * (4 - i);
+      const y = pad.top + (h / 4) * i;
+      ctx.fillText(`${currency}${Math.round(val / 1000)}k`, pad.left - 6, y + 4);
+    }
+  }, [data, budget, statusColor, currency]);
+
+  return <canvas ref={canvasRef} style={{ width: "100%", height: 200, display: "block" }} />;
+}10:T6f0,<!-- Burn Trajectory is Canvas-based for performance.
+     Use the React or Swift implementation.
+     This snippet shows the KPI panel and metric tiles below the chart. -->
+
+<div class="burn-chart-tile">
+  <canvas id="burnChart" width="600" height="200"></canvas>
+</div>
+
+<!-- KPI panel -->
+<div class="burn-kpi-panel">
+  <div class="kpi-card">
+    <div class="kpi-card__icon">📅</div>
+    <div class="kpi-card__value">Oct 12</div>
+    <div class="kpi-card__label">Exhaustion Date</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-card__icon">💰</div>
+    <div class="kpi-card__value">$142k</div>
+    <div class="kpi-card__label">Projected at End</div>
+  </div>
+</div>
+
+<!-- Burn rate metrics row -->
+<div class="burn-metrics">
+  <div class="burn-metric burn-metric--highlighted">
+    <span class="burn-metric__value">$4,200</span>
+    <span class="burn-metric__label">Weekly Burn</span>
+  </div>
+  <div class="burn-metric">
+    <span class="burn-metric__value">$600</span>
+    <span class="burn-metric__label">Recent Daily</span>
+  </div>
+  <div class="burn-metric">
+    <span class="burn-metric__value">$540</span>
+    <span class="burn-metric__label">Avg Daily</span>
+  </div>
+  <div class="burn-metric">
+    <span class="burn-metric__value">$480</span>
+    <span class="burn-metric__label">Planned Daily</span>
+  </div>
+</div>
+
+<style>
+.burn-kpi-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.burn-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 12px; }
+.burn-metric { padding: 12px; border-radius: 10px; border: 1px solid rgb(var(--border)); background: rgb(var(--surface)); text-align: center; }
+.burn-metric--highlighted { border-color: rgb(var(--status-warning)); }
+</style>11:Td7f,import SwiftUI
+
+// Warren's BurnTrajectoryChart — Canvas-based implementation
+
+struct BurnTrajectoryChart: View {
+    let data: [BurnDataPoint]
+    let budget: Double
+    let status: BurnStatus
+
+    var statusColor: Color {
+        switch status {
+        case .onTrack:  .sfStatusSuccess
+        case .atRisk:   .sfStatusWarning
+        case .overBudget: .sfStatusDanger
+        }
+    }
+
+    var body: some View {
+        Canvas { ctx, size in
+            let frame = CGRect(origin: .init(x: 60, y: 20),
+                               size: .init(width: size.width - 80, height: size.height - 60))
+
+            drawGrid(ctx, frame: frame)
+            drawPlannedPace(ctx, frame: frame)
+            drawBudgetCeiling(ctx, frame: frame)
+            drawForecastArea(ctx, frame: frame)
+            drawHistoricalArea(ctx, frame: frame)
+            drawTodayLine(ctx, frame: frame)
+            drawTodayDot(ctx, frame: frame)
+            drawYAxisLabels(ctx, frame: frame, size: size)
+        }
+        .frame(height: 200)
+    }
+
+    // Historical: 2px solid, statusColor
+    private func drawHistoricalArea(_ ctx: GraphicsContext, frame: CGRect) {
+        let pastPoints = data.filter { $0.actual != nil }
+        guard pastPoints.count > 1 else { return }
+
+        var areaPath = Path()
+        // Build area fill path
+        areaPath.move(to: toPoint(pastPoints[0].date, pastPoints[0].actual!, frame: frame))
+        pastPoints.dropFirst().forEach { d in
+            areaPath.addLine(to: toPoint(d.date, d.actual!, frame: frame))
+        }
+        areaPath.addLine(to: CGPoint(x: toX(pastPoints.last!.date, frame: frame), y: frame.maxY))
+        areaPath.addLine(to: CGPoint(x: frame.minX, y: frame.maxY))
+        areaPath.closeSubpath()
+
+        ctx.fill(areaPath, with: .color(statusColor.opacity(0.07)))
+
+        var linePath = Path()
+        linePath.move(to: toPoint(pastPoints[0].date, pastPoints[0].actual!, frame: frame))
+        pastPoints.dropFirst().forEach { d in
+            linePath.addLine(to: toPoint(d.date, d.actual!, frame: frame))
+        }
+        ctx.stroke(linePath, with: .color(statusColor), style: StrokeStyle(lineWidth: 2))
+    }
+
+    // Forecast: 1.5px dashed [5,3], statusColor 55%
+    private func drawForecastArea(_ ctx: GraphicsContext, frame: CGRect) {
+        let futurePoints = data.filter { $0.forecast != nil }
+        guard futurePoints.count > 1 else { return }
+
+        var path = Path()
+        path.move(to: toPoint(futurePoints[0].date, futurePoints[0].forecast!, frame: frame))
+        futurePoints.dropFirst().forEach { d in
+            path.addLine(to: toPoint(d.date, d.forecast!, frame: frame))
+        }
+        ctx.stroke(path, with: .color(statusColor.opacity(0.55)),
+                   style: StrokeStyle(lineWidth: 1.5, dash: [5, 3]))
+    }
+
+    // Budget ceiling: 1px dashed [3,3], sfRed 35%
+    private func drawBudgetCeiling(_ ctx: GraphicsContext, frame: CGRect) {
+        let y = toY(budget, frame: frame)
+        var path = Path()
+        path.move(to: CGPoint(x: frame.minX, y: y))
+        path.addLine(to: CGPoint(x: frame.maxX, y: y))
+        ctx.stroke(path, with: .color(.sfStatusDanger.opacity(0.35)),
+                   style: StrokeStyle(lineWidth: 1, dash: [3, 3]))
+    }
+}
+
+struct BurnDataPoint {
+    let date: Date
+    var actual: Double?    // nil for future
+    var forecast: Double?  // nil for past
+    let planned: Double
+}
+
+enum BurnStatus { case onTrack, atRisk, overBudget }12:T5a5,// macOS — same Canvas-based chart, adds scenario cards below
+
+struct BurnDashboard: View {
+    let chart: BurnChartData
+
+    var body: some View {
+        VStack(spacing: 20) {
+            // Chart tile
+            BurnTrajectoryChart(data: chart.data, budget: chart.budget, status: chart.status)
+                .padding(16)
+                .background(Color.sfCanvasBackground)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .overlay { RoundedRectangle(cornerRadius: 12).stroke(Color.sfBorder) }
+
+            // KPI row
+            HStack(spacing: 12) {
+                StatTile(icon: "calendar", value: chart.exhaustionDate, label: "Exhaustion Date")
+                StatTile(icon: "dollarsign.circle", value: chart.projectedAtEnd, label: "Projected at End")
+            }
+
+            // Metric tiles
+            HStack(spacing: 10) {
+                ForEach(chart.metrics) { metric in
+                    MetricTile(metric: metric, isHighlighted: metric.id == chart.highlightedMetricId)
+                }
+            }
+
+            // Scenario cards
+            HStack(spacing: 12) {
+                ScenarioCard(label: "Optimistic", multiplier: 0.80, budget: chart.budget)
+                ScenarioCard(label: "Current Pace", multiplier: 1.00, budget: chart.budget, isCurrent: true)
+                ScenarioCard(label: "Pessimistic", multiplier: 1.20, budget: chart.budget)
+            }
+        }
+    }
+}b:["$","section",null,{"children":[["$","h2",null,{"children":"Implementation"}],["$","$Le",null,{"code":{"react":{"filename":"BurnTrajectoryChart.tsx","code":"$f"},"html":{"filename":"burn-trajectory.html","code":"$10"},"swift":{"filename":"BurnTrajectoryChart.swift","code":"$11"},"macos":{"filename":"BurnTrajectoryChart.swift","code":"$12"}}}]]}]
+c:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0dgnkhp~u3xrx.js","async":true}]
+d:["$","$L13",null,{"children":["$","$14",null,{"name":"Next.MetadataOutlet","children":"$@15"}]}]
+15:null

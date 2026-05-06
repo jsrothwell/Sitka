@@ -1,0 +1,382 @@
+1:"$Sreact.fragment"
+b:I[64147,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","/Sitka/_next/static/chunks/0gq949d2-7.01.js"],"PlatformTabs"]
+15:I[97367,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+16:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"KPI Tile"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"Dashboard metric card. Surfaces a single number with context — icon well, trend delta, optional progress bar, and semantic variant colouring. Composes Card, Badge, and Progress Bar primitives."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","div",null,{"className":"grid grid-cols-2 gap-3 sm:grid-cols-4","children":[["$","div","Active Users",{"className":"rounded-[var(--radius-lg)] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4 flex flex-col gap-3","style":{"boxShadow":"var(--shadow-card)"},"children":[["$","div",null,{"className":"flex items-start justify-between gap-2","children":[["$","div",null,{"className":"w-11 h-11 rounded-[var(--radius-md)] flex items-center justify-center shrink-0 relative overflow-hidden","style":{"background":"color-mix(in srgb, rgb(var(--accent)) 15%, transparent)"},"children":[["$","div",null,{"className":"absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"}],["$","svg",null,{"className":"w-5 h-5","viewBox":"0 0 24 24","fill":"none","stroke":"rgb(var(--accent))","strokeWidth":2,"children":[["$","circle",null,{"cx":"12","cy":"12","r":"10"}],["$","path",null,{"d":"M12 6v6l4 2"}]]}]]}],["$","span",null,{"className":"flex items-center gap-1 text-[10px] font-semibold rounded-full px-2 py-0.5","style":{"background":"rgba(16,185,129,0.12)","color":"rgb(var(--status-success))"},"children":["↑"," ",12,"%"]}]]}],["$","div",null,{"children":[["$","p",null,{"className":"text-[22px] font-bold leading-none tracking-tight text-[rgb(var(--text-primary))]","style":{"fontVariantNumeric":"tabular-nums"},"children":"2,847"}],["$","p",null,{"className":"text-[11px] text-[rgb(var(--text-tertiary))] mt-1","children":"of 3,000 target"}]]}],["$","p",null,{"className":"text-[12px] font-medium text-[rgb(var(--text-secondary))]","children":"Active Users"}],["$","div",null,{"className":"h-1 rounded-full overflow-hidden","style":{"background":"rgb(var(--progress-track))"},"children":["$","div",null,{"className":"h-full rounded-full","style":{"width":"85%","background":"rgb(var(--accent))"}}]}]]}],["$","div","Revenue",{"className":"rounded-[var(--radius-lg)] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4 flex flex-col gap-3","style":{"boxShadow":"var(--shadow-card)"},"children":[["$","div",null,{"className":"flex items-start justify-between gap-2","children":[["$","div",null,{"className":"w-11 h-11 rounded-[var(--radius-md)] flex items-center justify-center shrink-0 relative overflow-hidden","style":{"background":"color-mix(in srgb, rgb(var(--status-success)) 15%, transparent)"},"children":[["$","div",null,{"className":"absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"}],["$","svg",null,{"className":"w-5 h-5","viewBox":"0 0 24 24","fill":"none","stroke":"rgb(var(--status-success))","strokeWidth":2,"children":[["$","circle",null,{"cx":"12","cy":"12","r":"10"}],["$","path",null,{"d":"M12 6v6l4 2"}]]}]]}],["$","span",null,{"className":"flex items-center gap-1 text-[10px] font-semibold rounded-full px-2 py-0.5","style":{"background":"rgba(16,185,129,0.12)","color":"rgb(var(--status-success))"},"children":["↑"," ",8,"%"]}]]}],["$","div",null,{"children":[["$","p",null,{"className":"text-[22px] font-bold leading-none tracking-tight text-[rgb(var(--text-primary))]","style":{"fontVariantNumeric":"tabular-nums"},"children":"$$48.2K"}],["$","p",null,{"className":"text-[11px] text-[rgb(var(--text-tertiary))] mt-1","children":"this month"}]]}],["$","p",null,{"className":"text-[12px] font-medium text-[rgb(var(--text-secondary))]","children":"Revenue"}],"$L2"]}],"$L3","$L4"]}]]}],"$L5","$L6","$L7","$L8"]}],["$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"rLJACECUUoZySIuwx-tpS"}
+2:["$","div",null,{"className":"h-1 rounded-full overflow-hidden","style":{"background":"rgb(var(--progress-track))"},"children":["$","div",null,{"className":"h-full rounded-full","style":{"width":"72%","background":"rgb(var(--status-success))"}}]}]
+3:["$","div","Open Issues",{"className":"rounded-[var(--radius-lg)] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4 flex flex-col gap-3","style":{"boxShadow":"var(--shadow-card)"},"children":[["$","div",null,{"className":"flex items-start justify-between gap-2","children":[["$","div",null,{"className":"w-11 h-11 rounded-[var(--radius-md)] flex items-center justify-center shrink-0 relative overflow-hidden","style":{"background":"color-mix(in srgb, rgb(var(--status-warning)) 15%, transparent)"},"children":[["$","div",null,{"className":"absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"}],["$","svg",null,{"className":"w-5 h-5","viewBox":"0 0 24 24","fill":"none","stroke":"rgb(var(--status-warning))","strokeWidth":2,"children":[["$","circle",null,{"cx":"12","cy":"12","r":"10"}],["$","path",null,{"d":"M12 6v6l4 2"}]]}]]}],["$","span",null,{"className":"flex items-center gap-1 text-[10px] font-semibold rounded-full px-2 py-0.5","style":{"background":"rgba(248,113,113,0.12)","color":"rgb(var(--status-danger))"},"children":["↓"," ",5,"%"]}]]}],["$","div",null,{"children":[["$","p",null,{"className":"text-[22px] font-bold leading-none tracking-tight text-[rgb(var(--text-primary))]","style":{"fontVariantNumeric":"tabular-nums"},"children":"23"}],["$","p",null,{"className":"text-[11px] text-[rgb(var(--text-tertiary))] mt-1","children":"4 critical"}]]}],["$","p",null,{"className":"text-[12px] font-medium text-[rgb(var(--text-secondary))]","children":"Open Issues"}],["$","div",null,{"className":"h-1 rounded-full overflow-hidden","style":{"background":"rgb(var(--progress-track))"},"children":["$","div",null,{"className":"h-full rounded-full","style":{"width":"46%","background":"rgb(var(--status-warning))"}}]}]]}]
+4:["$","div","Error Rate",{"className":"rounded-[var(--radius-lg)] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4 flex flex-col gap-3","style":{"boxShadow":"var(--shadow-card)"},"children":[["$","div",null,{"className":"flex items-start justify-between gap-2","children":[["$","div",null,{"className":"w-11 h-11 rounded-[var(--radius-md)] flex items-center justify-center shrink-0 relative overflow-hidden","style":{"background":"color-mix(in srgb, rgb(var(--status-danger)) 15%, transparent)"},"children":[["$","div",null,{"className":"absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"}],["$","svg",null,{"className":"w-5 h-5","viewBox":"0 0 24 24","fill":"none","stroke":"rgb(var(--status-danger))","strokeWidth":2,"children":[["$","circle",null,{"cx":"12","cy":"12","r":"10"}],["$","path",null,{"d":"M12 6v6l4 2"}]]}]]}],["$","span",null,{"className":"flex items-center gap-1 text-[10px] font-semibold rounded-full px-2 py-0.5","style":{"background":"rgba(16,185,129,0.12)","color":"rgb(var(--status-success))"},"children":["↑"," ",2,"%"]}]]}],["$","div",null,{"children":[["$","p",null,{"className":"text-[22px] font-bold leading-none tracking-tight text-[rgb(var(--text-primary))]","style":{"fontVariantNumeric":"tabular-nums"},"children":"0.4%"}],["$","p",null,{"className":"text-[11px] text-[rgb(var(--text-tertiary))] mt-1","children":"last 24h"}]]}],["$","p",null,{"className":"text-[12px] font-medium text-[rgb(var(--text-secondary))]","children":"Error Rate"}],["$","div",null,{"className":"h-1 rounded-full overflow-hidden","style":{"background":"rgb(var(--progress-track))"},"children":["$","div",null,{"className":"h-full rounded-full","style":{"width":"8%","background":"rgb(var(--status-danger))"}}]}]]}]
+5:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Anatomy"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Slot",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Slot"}],["$","th","Element",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Element"}],["$","th","Required",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Required"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Icon well"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"44×44 rounded rect, accent-tinted background, specular top edge"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"No"}]]}],["$","tr","1",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Trend badge"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Capsule with directional arrow + delta %, semantic colour"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"No"}]]}],["$","tr","2",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Value"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"22 px bold monospaced digit, tabular-nums variant"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Yes"}]]}],["$","tr","3",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Subtitle"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"11 px tertiary — goal context, secondary metric"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"No"}]]}],["$","tr","4",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Label"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"12 px medium secondary — metric name"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Yes"}]]}],["$","tr","5",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Progress bar"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"4 px mini progress bar anchored to card bottom"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"No"}]]}]]}]]}]}]]}]
+c:Tee8,import { cn } from "@/lib/cn";
+import { TrendingUp, TrendingDown, Minus } from "lucide-react";
+
+interface KPITileTrend {
+  value: number;
+  label?: string;
+  direction: "up" | "down" | "neutral";
+}
+
+interface KPITileProps {
+  title: string;
+  value: string | number;
+  icon?: React.ReactNode;
+  trend?: KPITileTrend;
+  variant?: "default" | "accent" | "success" | "warning" | "danger";
+  progress?: number;
+  subtitle?: string;
+  className?: string;
+}
+
+const variantConfig = {
+  default:  { well: "bg-[rgb(var(--accent-subtle))]",        icon: "text-[rgb(var(--accent))]" },
+  accent:   { well: "bg-[rgb(var(--accent-subtle))]",        icon: "text-[rgb(var(--accent))]" },
+  success:  { well: "bg-[rgb(var(--status-success)/0.12)]",  icon: "text-[rgb(var(--status-success))]" },
+  warning:  { well: "bg-[rgb(var(--status-warning)/0.12)]",  icon: "text-[rgb(var(--status-warning))]" },
+  danger:   { well: "bg-[rgb(var(--status-danger)/0.12)]",   icon: "text-[rgb(var(--status-danger))]" },
+};
+
+const progressColors = {
+  default: "rgb(var(--accent))",
+  accent:  "rgb(var(--accent))",
+  success: "rgb(var(--status-success))",
+  warning: "rgb(var(--status-warning))",
+  danger:  "rgb(var(--status-danger))",
+};
+
+export function KPITile({
+  title, value, icon, trend, variant = "default",
+  progress, subtitle, className,
+}: KPITileProps) {
+  const cfg = variantConfig[variant];
+
+  return (
+    <div
+      className={cn(
+        "rounded-[var(--radius-lg)] border border-[rgb(var(--border))] bg-[rgb(var(--surface))]",
+        "p-4 flex flex-col gap-3",
+        "shadow-[var(--shadow-card)]",
+        className
+      )}
+    >
+      <div className="flex items-start justify-between gap-3">
+        {icon && (
+          <div className={cn("w-11 h-11 rounded-[var(--radius-md)] flex items-center justify-center shrink-0 relative overflow-hidden", cfg.well)}>
+            {/* Specular top-edge highlight */}
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
+            <span className={cn("w-5 h-5", cfg.icon)}>{icon}</span>
+          </div>
+        )}
+        {trend && (
+          <div className={cn(
+            "flex items-center gap-1 text-[11px] font-medium rounded-full px-2 py-0.5 ml-auto shrink-0",
+            trend.direction === "up"      && "bg-[rgb(var(--status-success)/0.12)] text-[rgb(var(--status-success))]",
+            trend.direction === "down"    && "bg-[rgb(var(--status-danger)/0.12)]  text-[rgb(var(--status-danger))]",
+            trend.direction === "neutral" && "bg-[rgb(var(--surface-raised))]      text-[rgb(var(--text-tertiary))]",
+          )}>
+            {trend.direction === "up"      && <TrendingUp className="w-3 h-3" />}
+            {trend.direction === "down"    && <TrendingDown className="w-3 h-3" />}
+            {trend.direction === "neutral" && <Minus className="w-3 h-3" />}
+            {Math.abs(trend.value)}%{trend.label && <span className="ml-0.5 opacity-70">{trend.label}</span>}
+          </div>
+        )}
+      </div>
+
+      <div>
+        <p className="text-[22px] font-bold leading-none tracking-tight text-[rgb(var(--text-primary))] font-[var(--font-mono)]">
+          {value}
+        </p>
+        {subtitle && (
+          <p className="text-[11px] text-[rgb(var(--text-tertiary))] mt-1">{subtitle}</p>
+        )}
+      </div>
+
+      <p className="text-[12px] font-medium text-[rgb(var(--text-secondary))]">{title}</p>
+
+      {progress !== undefined && (
+        <div className="relative h-1 rounded-full overflow-hidden" style={{ background: "rgb(var(--progress-track))" }}>
+          <div className="absolute inset-y-0 left-0 rounded-full" style={{ width: `${Math.min(100, progress)}%`, background: progressColors[variant] }} />
+        </div>
+      )}
+    </div>
+  );
+}d:T9c3,<div class="kpi-tile">
+  <div class="kpi-header">
+    <div class="kpi-icon-well">
+      <svg class="kpi-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+    </div>
+    <span class="kpi-trend kpi-trend-up">
+      ↑ 12%
+    </span>
+  </div>
+
+  <div class="kpi-value">2,847</div>
+  <div class="kpi-subtitle">of 3,000 target</div>
+  <div class="kpi-label">Active Users</div>
+
+  <div class="kpi-progress">
+    <div class="kpi-progress-fill" style="width: 85%"></div>
+  </div>
+</div>
+
+<style>
+  .kpi-tile {
+    background: rgb(var(--surface));
+    border: 1px solid rgb(var(--border));
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: var(--shadow-card);
+    min-width: 200px;
+  }
+
+  .kpi-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .kpi-icon-well {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: rgb(var(--accent-subtle));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .kpi-icon-well::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  }
+  .kpi-icon { width: 20px; height: 20px; color: rgb(var(--accent)); }
+
+  .kpi-trend {
+    font-size: 11px; font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 9999px;
+  }
+  .kpi-trend-up   { background: rgba(16,185,129,0.12); color: #10b981; }
+  .kpi-trend-down { background: rgba(248,113,113,0.12); color: #f87171; }
+
+  .kpi-value    { font-size: 22px; font-weight: 700; letter-spacing: -0.03em; color: rgb(var(--text-primary)); font-variant-numeric: tabular-nums; }
+  .kpi-subtitle { font-size: 11px; color: rgb(var(--text-tertiary)); margin-top: -6px; }
+  .kpi-label    { font-size: 12px; font-weight: 500; color: rgb(var(--text-secondary)); }
+
+  .kpi-progress {
+    height: 4px; background: rgb(var(--progress-track));
+    border-radius: 9999px; overflow: hidden;
+  }
+  .kpi-progress-fill {
+    height: 100%; background: rgb(var(--accent));
+    border-radius: 9999px;
+    transition: width 0.5s ease;
+  }
+</style>e:T1251,import SwiftUI
+
+struct KPITrend {
+    var value: Double
+    var label: String?
+    enum Direction { case up, down, neutral }
+    var direction: Direction
+}
+
+enum KPIVariant { case `default`, accent, success, warning, danger }
+
+struct KPITile: View {
+    let title: String
+    let value: String
+    var icon: String? = nil          // SF Symbol name
+    var trend: KPITrend? = nil
+    var variant: KPIVariant = .default
+    var progress: Double? = nil      // 0–100
+    var subtitle: String? = nil
+
+    private var accentColor: Color {
+        switch variant {
+        case .default, .accent: return .accentColor
+        case .success: return Color(hex: "#10b981")
+        case .warning: return Color(hex: "#f59e0b")
+        case .danger:  return Color(hex: "#f87171")
+        }
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(alignment: .top) {
+                if let symbol = icon {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(accentColor.opacity(0.12))
+                            .frame(width: 44, height: 44)
+                        // Specular top edge
+                        VStack {
+                            LinearGradient(colors: [.white.opacity(0.2), .clear], startPoint: .top, endPoint: .bottom)
+                                .frame(height: 8)
+                                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                            Spacer()
+                        }
+                        .frame(width: 44, height: 44)
+                        Image(systemName: symbol)
+                            .font(.system(size: 20, weight: .medium))
+                            .foregroundStyle(accentColor)
+                    }
+                }
+                Spacer()
+                if let t = trend {
+                    trendBadge(t)
+                }
+            }
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text(value)
+                    .font(.system(size: 22, weight: .bold, design: .monospaced))
+                    .foregroundStyle(.primary)
+                if let sub = subtitle {
+                    Text(sub)
+                        .font(.system(size: 11))
+                        .foregroundStyle(.tertiary)
+                }
+            }
+
+            Text(title)
+                .font(.system(size: 12, weight: .medium))
+                .foregroundStyle(.secondary)
+
+            if let p = progress {
+                GeometryReader { geo in
+                    ZStack(alignment: .leading) {
+                        Capsule().fill(Color(.systemFill)).frame(height: 4)
+                        Capsule().fill(accentColor)
+                            .frame(width: geo.size.width * min(1, p / 100), height: 4)
+                    }
+                }.frame(height: 4)
+            }
+        }
+        .padding(16)
+        .background(Color(.secondarySystemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(Color(.separator), lineWidth: 1))
+        .shadow(color: .black.opacity(0.07), radius: 12, y: 2)
+    }
+
+    @ViewBuilder
+    private func trendBadge(_ t: KPITrend) -> some View {
+        let color: Color = t.direction == .up ? Color(hex: "#10b981") : t.direction == .down ? Color(hex: "#f87171") : .secondary
+        HStack(spacing: 3) {
+            Image(systemName: t.direction == .up ? "arrow.up.right" : t.direction == .down ? "arrow.down.right" : "minus")
+                .font(.system(size: 10, weight: .semibold))
+            Text("\(Int(abs(t.value)))%\(t.label.map { " " + $0 } ?? "")")
+                .font(.system(size: 11, weight: .medium))
+        }
+        .foregroundStyle(color)
+        .padding(.horizontal, 8).padding(.vertical, 3)
+        .background(color.opacity(0.12))
+        .clipShape(Capsule())
+    }
+}
+
+#Preview {
+    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
+        KPITile(title: "Active Users", value: "2,847", icon: "person.3.fill",
+                trend: .init(value: 12, direction: .up), progress: 85, subtitle: "of 3,000 goal")
+        KPITile(title: "Revenue", value: "$48.2K", icon: "banknote.fill",
+                trend: .init(value: 3, label: "vs last month", direction: .down), variant: .success)
+        KPITile(title: "Open Tasks", value: "142", icon: "checkmark.circle.fill", variant: .warning, progress: 62)
+        KPITile(title: "Incidents", value: "3", icon: "exclamationmark.triangle.fill", variant: .danger)
+    }
+    .padding()
+}f:Tbbe,import SwiftUI
+
+// macOS — same component, AppKit color roles, no system fill
+struct KPITile: View {
+    let title: String
+    let value: String
+    var icon: String? = nil
+    var trend: KPITrend? = nil
+    var variant: KPIVariant = .default
+    var progress: Double? = nil
+    var subtitle: String? = nil
+
+    private var accentColor: Color {
+        switch variant {
+        case .default, .accent: return .accentColor
+        case .success: return Color(hex: "#10b981")
+        case .warning: return Color(hex: "#f59e0b")
+        case .danger:  return Color(red: 0.97, green: 0.44, blue: 0.44)
+        }
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(alignment: .top) {
+                if let sym = icon {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(accentColor.opacity(0.10))
+                            .frame(width: 40, height: 40)
+                        Image(systemName: sym)
+                            .font(.system(size: 18, weight: .medium))
+                            .foregroundStyle(accentColor)
+                    }
+                }
+                Spacer()
+                if let t = trend {
+                    let c: Color = t.direction == .up ? Color(hex: "#10b981") : t.direction == .down ? Color(hex: "#f87171") : .secondary
+                    HStack(spacing: 2) {
+                        Image(systemName: t.direction == .up ? "arrow.up.right" : "arrow.down.right")
+                            .font(.system(size: 9, weight: .bold))
+                        Text("\(Int(abs(t.value)))%")
+                            .font(.system(size: 11, weight: .medium))
+                    }
+                    .foregroundStyle(c)
+                    .padding(.horizontal, 6).padding(.vertical, 2)
+                    .background(c.opacity(0.10))
+                    .clipShape(Capsule())
+                }
+            }
+
+            Text(value)
+                .font(.system(size: 20, weight: .bold, design: .monospaced))
+
+            if let sub = subtitle {
+                Text(sub).font(.system(size: 10)).foregroundStyle(.tertiary)
+            }
+
+            Text(title).font(.system(size: 11, weight: .medium)).foregroundStyle(.secondary)
+
+            if let p = progress {
+                GeometryReader { geo in
+                    ZStack(alignment: .leading) {
+                        Capsule().fill(Color(.separatorColor).opacity(0.25)).frame(height: 3)
+                        Capsule().fill(accentColor).frame(width: geo.size.width * min(1, p/100), height: 3)
+                    }
+                }.frame(height: 3)
+            }
+        }
+        .padding(14)
+        .background(Color(NSColor.controlBackgroundColor))
+        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(Color(.separatorColor), lineWidth: 1))
+    }
+}6:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","$Lb",null,{"code":{"react":{"filename":"KPITile.tsx","code":"$c"},"html":{"filename":"kpi-tile.html","code":"$d"},"swift":{"filename":"KPITile.swift","code":"$e"},"macos":{"filename":"KPITile+macOS.swift","code":"$f"}}}]]}]
+7:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5","children":"Props"}],["$","div",null,{"className":"overflow-hidden rounded-xl border border-[rgb(var(--border))]","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]","children":[["$","th","Prop",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Prop"}],["$","th","Type",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Type"}],["$","th","Default",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Default"}],["$","th","Description",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Description"}]]}]}],["$","tbody",null,{"children":[["$","tr","title",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["title","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Metric label displayed below the value."}]]}],["$","tr","value",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["value","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string | number"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Primary metric value. Pass formatted strings for currency or large numbers."}]]}],["$","tr","icon",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["icon","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"ReactNode"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Icon rendered in the 44×44 accent-tinted icon well."}]]}],["$","tr","trend",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["trend","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"{ value: number; label?: string; direction: \"up\" | \"down\" | \"neutral\" }"}]}],"$L10","$L11"]}],"$L12","$L13","$L14"]}]]}]}]]}]
+8:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","KPI tiles are non-interactive — they are not focusable and do not receive keyboard events.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"KPI tiles are non-interactive — they are not focusable and do not receive keyboard events."]}],["$","li","Trend direction is communicated visually and via the label text; do not rely solely on the arrow icon.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Trend direction is communicated visually and via the label text; do not rely solely on the arrow icon."]}],["$","li","For live-updating metrics, wrap the tile in an aria-live='polite' region so screen readers announce changes.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"For live-updating metrics, wrap the tile in an aria-live='polite' region so screen readers announce changes."]}],["$","li","Icon wells use aria-hidden='true' — the metric value and label carry the accessible meaning.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Icon wells use aria-hidden='true' — the metric value and label carry the accessible meaning."]}]]}]]}]
+9:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0gq949d2-7.01.js","async":true}]
+a:["$","$L15",null,{"children":["$","$16",null,{"name":"Next.MetadataOutlet","children":"$@17"}]}]
+10:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}]
+11:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Optional delta indicator. Positive direction = green arrow, negative = red."}]
+12:["$","tr","variant",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["variant","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"default\" | \"accent\" | \"success\" | \"warning\" | \"danger\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"default\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Tints the icon well and activates the brand-lit surface on accent variant."}]]}]
+13:["$","tr","progress",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["progress","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"number"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"0–100. When set, renders a mini progress bar beneath the value."}]]}]
+14:["$","tr","subtitle",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["subtitle","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Secondary line below value — useful for goal context (e.g. 'of 50 target')."}]]}]
+17:null

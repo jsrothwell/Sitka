@@ -1,0 +1,307 @@
+1:"$Sreact.fragment"
+b:I[64147,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","/Sitka/_next/static/chunks/0gq949d2-7.01.js"],"PlatformTabs"]
+15:I[97367,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+16:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Progress Bar"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"Non-interactive progress indicator. Communicates completion, health, or utilization through a filled track. Four semantic variants, three sizes, and an indeterminate shimmer mode."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-6 flex flex-col gap-5","children":[["$","div","Default (65%)",{"className":"flex flex-col gap-1.5","children":[["$","div",null,{"className":"flex justify-between items-center","children":[["$","span",null,{"className":"text-[12px] text-[rgb(var(--text-secondary))]","children":"Default (65%)"}],["$","span",null,{"className":"text-[11px] font-medium text-[rgb(var(--text-tertiary))]","children":[65,"%"]}]]}],["$","div",null,{"className":"relative w-full rounded-full overflow-hidden","style":{"height":6,"background":"rgb(var(--progress-track))","boxShadow":"inset 0 1px 0 rgba(0,0,0,0.12)"},"children":[["$","div",null,{"className":"h-full rounded-full","style":{"width":"65%","background":"rgb(var(--accent))"}}],["$","div",null,{"className":"absolute inset-x-0 top-0 pointer-events-none","style":{"height":1,"background":"linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)"}}]]}]]}],["$","div","Success (100%)",{"className":"flex flex-col gap-1.5","children":[["$","div",null,{"className":"flex justify-between items-center","children":[["$","span",null,{"className":"text-[12px] text-[rgb(var(--text-secondary))]","children":"Success (100%)"}],["$","span",null,{"className":"text-[11px] font-medium text-[rgb(var(--text-tertiary))]","children":[100,"%"]}]]}],["$","div",null,{"className":"relative w-full rounded-full overflow-hidden","style":{"height":6,"background":"rgb(var(--progress-track))","boxShadow":"inset 0 1px 0 rgba(0,0,0,0.12)"},"children":[["$","div",null,{"className":"h-full rounded-full","style":{"width":"100%","background":"rgb(var(--progress-fill-success))"}}],["$","div",null,{"className":"absolute inset-x-0 top-0 pointer-events-none","style":{"height":1,"background":"linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)"}}]]}]]}],["$","div","Warning (80%)",{"className":"flex flex-col gap-1.5","children":[["$","div",null,{"className":"flex justify-between items-center","children":[["$","span",null,{"className":"text-[12px] text-[rgb(var(--text-secondary))]","children":"Warning (80%)"}],["$","span",null,{"className":"text-[11px] font-medium text-[rgb(var(--text-tertiary))]","children":[80,"%"]}]]}],["$","div",null,{"className":"relative w-full rounded-full overflow-hidden","style":{"height":6,"background":"rgb(var(--progress-track))","boxShadow":"inset 0 1px 0 rgba(0,0,0,0.12)"},"children":[["$","div",null,{"className":"h-full rounded-full","style":{"width":"80%","background":"rgb(var(--progress-fill-warning))"}}],["$","div",null,{"className":"absolute inset-x-0 top-0 pointer-events-none","style":{"height":1,"background":"linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)"}}]]}]]}],["$","div","Danger (95%)",{"className":"flex flex-col gap-1.5","children":[["$","div",null,{"className":"flex justify-between items-center","children":[["$","span",null,{"className":"text-[12px] text-[rgb(var(--text-secondary))]","children":"Danger (95%)"}],["$","span",null,{"className":"text-[11px] font-medium text-[rgb(var(--text-tertiary))]","children":[95,"%"]}]]}],["$","div",null,{"className":"relative w-full rounded-full overflow-hidden","style":{"height":6,"background":"rgb(var(--progress-track))","boxShadow":"inset 0 1px 0 rgba(0,0,0,0.12)"},"children":[["$","div",null,{"className":"h-full rounded-full","style":{"width":"95%","background":"rgb(var(--progress-fill-danger))"}}],"$L2"]}]]}]]}]]}],"$L3","$L4","$L5","$L6","$L7","$L8"]}],["$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"rLJACECUUoZySIuwx-tpS"}
+2:["$","div",null,{"className":"absolute inset-x-0 top-0 pointer-events-none","style":{"height":1,"background":"linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)"}}]
+3:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Sizes"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["Three track heights for different information densities. Use ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"sm"}]," inside dense table rows and list items; ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"lg"}]," for prominent hero metrics."]}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-6 flex flex-col gap-5","children":[["$","div","sm",{"className":"flex items-center gap-4","children":[["$","span",null,{"className":"text-[11px] font-mono text-[rgb(var(--text-tertiary))] w-6 shrink-0","children":"sm"}],["$","div",null,{"className":"flex-1 relative rounded-full overflow-hidden","style":{"height":4,"background":"rgb(var(--progress-track))"},"children":["$","div",null,{"className":"h-full rounded-full","style":{"width":"55%","background":"rgb(var(--accent))"}}]}],["$","span",null,{"className":"text-[11px] text-[rgb(var(--text-tertiary))] w-7 shrink-0","children":[4,"px"]}]]}],["$","div","md",{"className":"flex items-center gap-4","children":[["$","span",null,{"className":"text-[11px] font-mono text-[rgb(var(--text-tertiary))] w-6 shrink-0","children":"md"}],["$","div",null,{"className":"flex-1 relative rounded-full overflow-hidden","style":{"height":6,"background":"rgb(var(--progress-track))"},"children":["$","div",null,{"className":"h-full rounded-full","style":{"width":"55%","background":"rgb(var(--accent))"}}]}],["$","span",null,{"className":"text-[11px] text-[rgb(var(--text-tertiary))] w-7 shrink-0","children":[6,"px"]}]]}],["$","div","lg",{"className":"flex items-center gap-4","children":[["$","span",null,{"className":"text-[11px] font-mono text-[rgb(var(--text-tertiary))] w-6 shrink-0","children":"lg"}],["$","div",null,{"className":"flex-1 relative rounded-full overflow-hidden","style":{"height":8,"background":"rgb(var(--progress-track))"},"children":["$","div",null,{"className":"h-full rounded-full","style":{"width":"55%","background":"rgb(var(--accent))"}}]}],["$","span",null,{"className":"text-[11px] text-[rgb(var(--text-tertiary))] w-7 shrink-0","children":[8,"px"]}]]}]]}]]}]
+4:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Indeterminate"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["When end value is unknown — file upload, background job, AI generation — show a shimmer sweep instead of a static fill. Set ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"aria-busy=\"true\""}]," and omit ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"aria-valuenow"}],"."]}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-6","children":["$","div",null,{"className":"relative w-full rounded-full overflow-hidden","style":{"height":6,"background":"rgb(var(--progress-track))"},"children":["$","div",null,{"className":"absolute inset-y-0 w-1/3 rounded-full animate-[shimmer_1.4s_ease-in-out_infinite]","style":{"background":"rgb(var(--accent))"}}]}]}]]}]
+5:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Tokens"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Token",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Token"}],["$","th","Dark",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Dark"}],["$","th","Light",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Light"}],["$","th","Use",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Use"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"--progress-track"}]}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]","children":"#26261e"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]","children":"#e0e0e7"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Track background"}]]}],["$","tr","1",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"--progress-fill-success"}]}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]","children":"#10b981"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]","children":"#10b981"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Success fill"}]]}],["$","tr","2",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"--progress-fill-warning"}]}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]","children":"#f59e0b"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]","children":"#f59e0b"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Warning fill"}]]}],["$","tr","3",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"--progress-fill-danger"}]}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]","children":"#f87171"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]","children":"#ef4444"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Danger fill"}]]}]]}]]}]}]]}]
+c:T8d6,import { cn } from "@/lib/cn";
+
+interface ProgressBarProps {
+  value?: number;
+  max?: number;
+  variant?: "default" | "success" | "warning" | "danger";
+  size?: "sm" | "md" | "lg";
+  indeterminate?: boolean;
+  showValue?: boolean;
+  label?: string;
+  className?: string;
+}
+
+const fillColors = {
+  default: "rgb(var(--accent))",
+  success: "rgb(var(--progress-fill-success))",
+  warning: "rgb(var(--progress-fill-warning))",
+  danger:  "rgb(var(--progress-fill-danger))",
+};
+
+const heights = { sm: 4, md: 6, lg: 8 };
+
+export function ProgressBar({
+  value = 0,
+  max = 100,
+  variant = "default",
+  size = "md",
+  indeterminate = false,
+  showValue = false,
+  label,
+  className,
+}: ProgressBarProps) {
+  const pct = Math.min(100, Math.max(0, (value / max) * 100));
+  const h = heights[size];
+
+  return (
+    <div className={cn("w-full", className)}>
+      {showValue && (
+        <div className="flex justify-end mb-1">
+          <span className="text-[11px] font-medium text-[rgb(var(--text-tertiary))]">
+            {Math.round(pct)}%
+          </span>
+        </div>
+      )}
+      <div
+        role="progressbar"
+        aria-valuenow={indeterminate ? undefined : value}
+        aria-valuemin={0}
+        aria-valuemax={max}
+        aria-label={label}
+        aria-busy={indeterminate}
+        className="relative overflow-hidden rounded-full"
+        style={{
+          height: h,
+          background: "rgb(var(--progress-track))",
+          boxShadow: "inset 0 1px 0 rgba(0,0,0,0.12)",
+        }}
+      >
+        {/* Specular top-edge highlight */}
+        <div
+          className="absolute inset-x-0 top-0 pointer-events-none"
+          style={{
+            height: 1,
+            background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)",
+          }}
+        />
+        {indeterminate ? (
+          <div
+            className="absolute inset-y-0 w-1/3 rounded-full animate-[shimmer_1.4s_ease-in-out_infinite]"
+            style={{ background: fillColors[variant] }}
+          />
+        ) : (
+          <div
+            className="h-full rounded-full transition-[width] duration-500 ease-out"
+            style={{ width: `${pct}%`, background: fillColors[variant] }}
+          />
+        )}
+      </div>
+    </div>
+  );
+}d:T95c,<!-- Determinate -->
+<div class="progress" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Upload progress">
+  <div class="progress-fill" style="width: 65%"></div>
+</div>
+
+<!-- Success variant -->
+<div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-fill progress-success" style="width: 100%"></div>
+</div>
+
+<!-- Warning variant -->
+<div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-fill progress-warning" style="width: 80%"></div>
+</div>
+
+<!-- Danger variant -->
+<div class="progress" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-fill progress-danger" style="width: 95%"></div>
+</div>
+
+<!-- Indeterminate -->
+<div class="progress" role="progressbar" aria-busy="true" aria-label="Loading">
+  <div class="progress-fill progress-indeterminate"></div>
+</div>
+
+<!-- Sizes -->
+<div class="progress progress-sm"><div class="progress-fill" style="width: 40%"></div></div>
+<div class="progress progress-md"><div class="progress-fill" style="width: 40%"></div></div>
+<div class="progress progress-lg"><div class="progress-fill" style="width: 40%"></div></div>
+
+<style>
+  .progress {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: rgb(var(--progress-track));
+    border-radius: 9999px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 0 rgba(0,0,0,0.12);
+  }
+  .progress::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+    pointer-events: none;
+  }
+  .progress-fill {
+    height: 100%;
+    background: rgb(var(--accent));
+    border-radius: 9999px;
+    transition: width 500ms ease;
+  }
+  .progress-success { background: rgb(var(--progress-fill-success)); }
+  .progress-warning { background: rgb(var(--progress-fill-warning)); }
+  .progress-danger  { background: rgb(var(--progress-fill-danger)); }
+
+  .progress-sm { height: 4px; }
+  .progress-md { height: 6px; }
+  .progress-lg { height: 8px; }
+
+  @keyframes sweep {
+    0%   { transform: translateX(-200%); }
+    100% { transform: translateX(500%); }
+  }
+  .progress-indeterminate {
+    width: 33%;
+    animation: sweep 1.4s ease-in-out infinite;
+  }
+</style>e:Td34,import SwiftUI
+
+enum SitkaProgressVariant { case `default`, success, warning, danger }
+enum SitkaProgressSize    { case sm, md, lg }
+
+struct SitkaProgressBar: View {
+    var value: Double = 0
+    var max: Double = 100
+    var variant: SitkaProgressVariant = .default
+    var size: SitkaProgressSize = .md
+    var indeterminate: Bool = false
+    var showValue: Bool = false
+    var label: String? = nil
+
+    @State private var shimmerOffset: CGFloat = -1
+
+    private var pct: Double { min(1, max(0, value / max)) }
+
+    private var fillColor: Color {
+        switch variant {
+        case .default: return Color.accentColor
+        case .success: return Color(hex: "#10b981")
+        case .warning: return Color(hex: "#f59e0b")
+        case .danger:  return Color(hex: "#f87171")
+        }
+    }
+
+    private var trackHeight: CGFloat {
+        switch size { case .sm: return 4; case .md: return 6; case .lg: return 8 }
+    }
+
+    var body: some View {
+        VStack(alignment: .trailing, spacing: 4) {
+            if showValue {
+                Text("\(Int(pct * 100))%")
+                    .font(.system(size: 11, weight: .medium))
+                    .foregroundStyle(.secondary)
+            }
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(Color(.systemFill))
+                        .frame(height: trackHeight)
+                    if indeterminate {
+                        Capsule()
+                            .fill(fillColor)
+                            .frame(width: geo.size.width * 0.33, height: trackHeight)
+                            .offset(x: shimmerOffset * geo.size.width)
+                            .onAppear {
+                                withAnimation(.linear(duration: 1.4).repeatForever(autoreverses: false)) {
+                                    shimmerOffset = 1.5
+                                }
+                            }
+                    } else {
+                        Capsule()
+                            .fill(fillColor)
+                            .frame(width: geo.size.width * pct, height: trackHeight)
+                            .animation(.easeOut(duration: 0.5), value: pct)
+                    }
+                    // Specular top-edge highlight
+                    Capsule()
+                        .fill(LinearGradient(
+                            colors: [.white.opacity(0.18), .clear],
+                            startPoint: .top, endPoint: .bottom
+                        ))
+                        .frame(height: trackHeight / 2)
+                        .frame(maxHeight: .infinity, alignment: .top)
+                }
+            }
+            .frame(height: trackHeight)
+            .accessibilityValue(indeterminate ? "In progress" : "\(Int(pct * 100)) percent")
+            .accessibilityLabel(label ?? "Progress")
+        }
+    }
+}
+
+#Preview {
+    VStack(spacing: 20) {
+        SitkaProgressBar(value: 65, showValue: true)
+        SitkaProgressBar(value: 100, variant: .success, showValue: true)
+        SitkaProgressBar(value: 80, variant: .warning, showValue: true)
+        SitkaProgressBar(value: 95, variant: .danger, showValue: true)
+        SitkaProgressBar(indeterminate: true, label: "Loading")
+        SitkaProgressBar(value: 45, size: .sm)
+        SitkaProgressBar(value: 45, size: .lg)
+    }
+    .padding()
+}f:T6e4,import SwiftUI
+
+// macOS — identical API, AppKit color roles
+struct SitkaProgressBar: View {
+    var value: Double = 0
+    var max: Double = 100
+    var variant: SitkaProgressVariant = .default
+    var size: SitkaProgressSize = .md
+    var indeterminate: Bool = false
+    var showValue: Bool = false
+
+    private var pct: Double { Swift.min(1, Swift.max(0, value / max)) }
+
+    private var fillColor: Color {
+        switch variant {
+        case .default: return .accentColor
+        case .success: return Color(hex: "#10b981")
+        case .warning: return Color(hex: "#f59e0b")
+        case .danger:  return Color(red: 0.97, green: 0.44, blue: 0.44)
+        }
+    }
+
+    private var trackHeight: CGFloat {
+        switch size { case .sm: return 4; case .md: return 6; case .lg: return 8 }
+    }
+
+    var body: some View {
+        HStack(spacing: 8) {
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule().fill(Color(.separatorColor).opacity(0.3))
+                        .frame(height: trackHeight)
+                    if indeterminate {
+                        ProgressView().scaleEffect(0.5)
+                    } else {
+                        Capsule().fill(fillColor)
+                            .frame(width: geo.size.width * pct, height: trackHeight)
+                            .animation(.easeOut(duration: 0.45), value: pct)
+                    }
+                }
+            }
+            .frame(height: trackHeight)
+            if showValue {
+                Text("\(Int(pct * 100))%")
+                    .font(.system(size: 11, weight: .medium))
+                    .foregroundStyle(.secondary)
+                    .frame(width: 32, alignment: .trailing)
+            }
+        }
+    }
+}6:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","$Lb",null,{"code":{"react":{"filename":"ProgressBar.tsx","code":"$c"},"html":{"filename":"progress-bar.html","code":"$d"},"swift":{"filename":"SitkaProgressBar.swift","code":"$e"},"macos":{"filename":"SitkaProgressBar+macOS.swift","code":"$f"}}}]]}]
+7:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5","children":"Props"}],["$","div",null,{"className":"overflow-hidden rounded-xl border border-[rgb(var(--border))]","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]","children":[["$","th","Prop",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Prop"}],["$","th","Type",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Type"}],["$","th","Default",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Default"}],["$","th","Description",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Description"}]]}]}],["$","tbody",null,{"children":[["$","tr","value",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["value","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"number"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Current progress value between 0 and max."}]]}],["$","tr","max",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["max","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"number"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"100"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Maximum value. Percentage is computed as value / max."}]]}],["$","tr","variant",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["variant","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"default\" | \"success\" | \"warning\" | \"danger\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"default\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Semantic fill colour — maps to the corresponding status token."}]]}],["$","tr","size",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["size","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"sm\" | \"md\" | \"lg\""}]}],"$L10","$L11"]}],"$L12","$L13","$L14"]}]]}]}]]}]
+8:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Use role=\"progressbar\" with aria-valuenow, aria-valuemin, and aria-valuemax on determinate bars.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Use role=\"progressbar\" with aria-valuenow, aria-valuemin, and aria-valuemax on determinate bars."]}],["$","li","For indeterminate bars, set aria-busy=\"true\" and omit aria-valuenow — do not set it to 0.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"For indeterminate bars, set aria-busy=\"true\" and omit aria-valuenow — do not set it to 0."]}],["$","li","Always provide an aria-label or a visible text label linked with aria-labelledby.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Always provide an aria-label or a visible text label linked with aria-labelledby."]}],["$","li","Colour alone does not convey variant meaning — pair the variant with a label (e.g., \"Budget: 95% — Critical\").",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Colour alone does not convey variant meaning — pair the variant with a label (e.g., \"Budget: 95% — Critical\")."]}],["$","li","Progress bars are non-interactive and never receive keyboard focus.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Progress bars are non-interactive and never receive keyboard focus."]}]]}]]}]
+9:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0gq949d2-7.01.js","async":true}]
+a:["$","$L15",null,{"children":["$","$16",null,{"name":"Next.MetadataOutlet","children":"$@17"}]}]
+10:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"md\""}]}]
+11:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Track height: sm = 4 px, md = 6 px, lg = 8 px."}]
+12:["$","tr","indeterminate",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["indeterminate","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"false"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Shows a shimmer sweep animation when the end value is unknown."}]]}]
+13:["$","tr","showValue",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["showValue","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"false"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Renders a percentage label above the right edge of the track."}]]}]
+14:["$","tr","label",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["label","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Accessible label attached via aria-label. Required for screen readers."}]]}]
+17:null

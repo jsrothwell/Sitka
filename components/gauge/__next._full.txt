@@ -1,0 +1,343 @@
+1:"$Sreact.fragment"
+3:I[15290,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"ThemeProvider"]
+4:I[46693,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"DocsShell"]
+5:I[39756,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"default"]
+6:I[37457,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"default"]
+10:I[68027,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"default",1]
+:HL["/Sitka/_next/static/chunks/02w~p~n74b171.css","style"]
+:HL["/Sitka/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Sitka/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:T7d1,
+  try {
+    var t = localStorage.getItem('sitka-theme');
+    var dark = t === 'dark' || ((!t || t === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var r = document.documentElement;
+    if (dark) {
+      r.classList.add('dark');
+      r.style.colorScheme = 'dark';
+      r.style.setProperty('--background',      '9 9 12');
+      r.style.setProperty('--surface',         '13 13 17');
+      r.style.setProperty('--surface-raised',  '22 22 28');
+      r.style.setProperty('--surface-hover',   '32 32 40');
+      r.style.setProperty('--border',          '38 38 48');
+      r.style.setProperty('--border-subtle',   '26 26 33');
+      r.style.setProperty('--text-primary',    '242 242 246');
+      r.style.setProperty('--text-secondary',  '155 155 170');
+      r.style.setProperty('--text-tertiary',   '100 100 115');
+      r.style.setProperty('--accent-subtle',   '10 38 21');
+      r.style.setProperty('--accent-muted',    '20 72 39');
+      r.style.setProperty('--nav-active-color','rgb(52, 168, 101)');
+      r.style.setProperty('--card-tint-bg',    'rgb(12, 28, 18)');
+    } else {
+      r.style.colorScheme = 'light';
+      r.style.setProperty('--background',      '252 252 253');
+      r.style.setProperty('--surface',         '255 255 255');
+      r.style.setProperty('--surface-raised',  '246 246 248');
+      r.style.setProperty('--surface-hover',   '240 240 244');
+      r.style.setProperty('--border',          '224 224 231');
+      r.style.setProperty('--border-subtle',   '240 240 244');
+      r.style.setProperty('--text-primary',    '15 15 18');
+      r.style.setProperty('--text-secondary',  '85 85 99');
+      r.style.setProperty('--text-tertiary',   '130 130 147');
+      r.style.setProperty('--accent-subtle',   '232 248 239');
+      r.style.setProperty('--accent-muted',    '166 220 190');
+      r.style.setProperty('--nav-active-color','rgb(33, 150, 83)');
+      r.style.setProperty('--card-tint-bg',    'rgba(11, 55, 30, 0.06)');
+    }
+  } catch(e) {}
+0:{"P":null,"c":["","components","gauge",""],"q":"","i":false,"f":[[["",{"children":["components",{"children":["gauge",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/02w~p~n74b171.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Sitka/_next/static/chunks/0ybqtblkevdno.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/Sitka/_next/static/chunks/0k5z7kppmca1z.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"inter_7b064e0d-module__MOT0tq__variable jetbrains_mono_9a2f2d6c-module__wsyXyG__variable","suppressHydrationWarning":true,"children":["$","body",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{"children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L7","$L8"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],"$L9","$La"]}]}]]}],{"children":["$Lb",{"children":["$Lc",{"children":["$Ld",{},null,false,null]},null,false,"$@e"]},null,false,"$@e"]},null,false,null],"$Lf",false]],"m":"$undefined","G":["$10",["$L11"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"rLJACECUUoZySIuwx-tpS"}
+12:I[79520,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],""]
+1d:I[97367,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"ViewportBoundary"]
+1f:I[97367,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"MetadataBoundary"]
+20:"$Sreact.suspense"
+7:["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}]
+8:["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]
+9:["$","$L12",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-SC89RP965Q","strategy":"afterInteractive"}]
+a:["$","$L12",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n          gtag('config', 'G-SC89RP965Q');\n        "}]
+b:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+c:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Gauge"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"270° arc ring for utilization, capacity, and completion metrics. Auto-colours by threshold — green below 70%, amber below 90%, orange to 100%, red when over. Pairs with the KPI Tile and Team Capacity grid."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-6 flex gap-8 justify-center flex-wrap","children":[["$","div","Alex C.",{"className":"flex flex-col items-center gap-2","children":[["$","div",null,{"className":"relative","style":{"width":80,"height":80},"children":[["$","svg",null,{"width":80,"height":80,"viewBox":"0 0 80 80","children":[["$","path",null,{"d":"M 14.54415587728429 65.45584412271572 A 36 36 0 1 1 65.45584412271575 65.45584412271569","fill":"none","stroke":"rgb(var(--progress-track))","strokeWidth":8,"strokeLinecap":"round"}],["$","path",null,{"d":"M 14.54415587728429 65.45584412271572 A 36 36 0 0 1 31.595966901187417 4.994682865683643","fill":"none","stroke":"#10b981","strokeWidth":8,"strokeLinecap":"round"}]]}],["$","div",null,{"className":"absolute inset-0 flex flex-col items-center justify-center","children":[["$","span",null,{"className":"text-[14px] font-bold text-[rgb(var(--text-primary))]","children":"45%"}],["$","span",null,{"className":"text-[9px] text-[rgb(var(--text-tertiary))]","children":"Available"}]]}]]}],["$","span",null,{"className":"text-[11px] font-medium text-[rgb(var(--text-secondary))]","children":"Alex C."}]]}],["$","div","Sam P.",{"className":"flex flex-col items-center gap-2","children":[["$","div",null,{"className":"relative","style":{"width":80,"height":80},"children":[["$","svg",null,{"width":80,"height":80,"viewBox":"0 0 80 80","children":[["$","path",null,{"d":"M 14.54415587728429 65.45584412271572 A 36 36 0 1 1 65.45584412271575 65.45584412271569","fill":"none","stroke":"rgb(var(--progress-track))","strokeWidth":8,"strokeLinecap":"round"}],["$","path",null,{"d":"M 14.54415587728429 65.45584412271572 A 36 36 0 1 1 74.8689938006307 31.047164062065207","fill":"none","stroke":"#f59e0b","strokeWidth":8,"strokeLinecap":"round"}]]}],["$","div",null,{"className":"absolute inset-0 flex flex-col items-center justify-center","children":[["$","span",null,{"className":"text-[14px] font-bold text-[rgb(var(--text-primary))]","children":"78%"}],["$","span",null,{"className":"text-[9px] text-[rgb(var(--text-tertiary))]","children":"Moderate"}]]}]]}],["$","span",null,{"className":"text-[11px] font-medium text-[rgb(var(--text-secondary))]","children":"Sam P."}]]}],["$","div","Dana K.",{"className":"flex flex-col items-center gap-2","children":[["$","div",null,{"className":"relative","style":{"width":80,"height":80},"children":[["$","svg",null,{"width":80,"height":80,"viewBox":"0 0 80 80","children":[["$","path",null,{"d":"M 14.54415587728429 65.45584412271572 A 36 36 0 1 1 65.45584412271575 65.45584412271569","fill":"none","stroke":"rgb(var(--progress-track))","strokeWidth":8,"strokeLinecap":"round"}],["$","path",null,{"d":"M 14.54415587728429 65.45584412271572 A 36 36 0 1 1 70.69504591674733 58.80994832977414","fill":"none","stroke":"#f97316","strokeWidth":8,"strokeLinecap":"round"}]]}],["$","div",null,{"className":"absolute inset-0 flex flex-col items-center justify-center","children":[["$","span",null,{"className":"text-[14px] font-bold text-[rgb(var(--text-primary))]","children":"95%"}],["$","span",null,{"className":"text-[9px] text-[rgb(var(--text-tertiary))]","children":"Near Full"}]]}]]}],["$","span",null,{"className":"text-[11px] font-medium text-[rgb(var(--text-secondary))]","children":"Dana K."}]]}],["$","div","Lee R.",{"className":"flex flex-col items-center gap-2","children":[["$","div",null,{"className":"relative","style":{"width":80,"height":80},"children":["$L13","$L14"]}],"$L15"]}]]}]]}],"$L16","$L17","$L18","$L19"]}],["$L1a"],"$L1b"]}]
+1c:[]
+e:"$W1c"
+f:["$","$1","h",{"children":[null,["$","$L1d",null,{"children":"$L1e"}],["$","div",null,{"hidden":true,"children":["$","$L1f",null,{"children":["$","$20",null,{"name":"Next.Metadata","children":"$L21"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+11:["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/02w~p~n74b171.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+26:I[64147,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","/Sitka/_next/static/chunks/0gq949d2-7.01.js"],"PlatformTabs"]
+30:I[97367,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+13:["$","svg",null,{"width":80,"height":80,"viewBox":"0 0 80 80","children":[["$","path",null,{"d":"M 14.54415587728429 65.45584412271572 A 36 36 0 1 1 65.45584412271575 65.45584412271569","fill":"none","stroke":"rgb(var(--progress-track))","strokeWidth":8,"strokeLinecap":"round"}],["$","path",null,{"d":"M 14.54415587728429 65.45584412271572 A 36 36 0 1 1 65.45584412271575 65.45584412271569","fill":"none","stroke":"#f87171","strokeWidth":8,"strokeLinecap":"round"}]]}]
+14:["$","div",null,{"className":"absolute inset-0 flex flex-col items-center justify-center","children":[["$","span",null,{"className":"text-[14px] font-bold text-[rgb(var(--text-primary))]","children":"108%"}],["$","span",null,{"className":"text-[9px] text-[rgb(var(--text-tertiary))]","children":"Overloaded"}]]}]
+15:["$","span",null,{"className":"text-[11px] font-medium text-[rgb(var(--text-secondary))]","children":"Lee R."}]
+16:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Status thresholds"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["The ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"auto"}],"variant derives colour from utilization percentage. These thresholds match Warren's team-capacity model and are the Sitka convention for all capacity indicators."]}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Range",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Range"}],["$","th","Variant",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Variant"}],["$","th","Colour",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Colour"}],["$","th","Meaning",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Meaning"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-mono text-[12px] text-[rgb(var(--text-secondary))]","children":"0–69%"}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"success"}]}],["$","td",null,{"className":"px-4 py-3","children":["$","span",null,{"className":"flex items-center gap-2","children":[["$","span",null,{"className":"w-3 h-3 rounded-full","style":{"background":"#10b981"}}],["$","span",null,{"className":"font-mono text-[11px] text-[rgb(var(--text-secondary))]","children":"#10b981"}]]}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Available — capacity to spare"}]]}],["$","tr","1",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-mono text-[12px] text-[rgb(var(--text-secondary))]","children":"70–89%"}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"warning"}]}],["$","td",null,{"className":"px-4 py-3","children":["$","span",null,{"className":"flex items-center gap-2","children":[["$","span",null,{"className":"w-3 h-3 rounded-full","style":{"background":"#f59e0b"}}],["$","span",null,{"className":"font-mono text-[11px] text-[rgb(var(--text-secondary))]","children":"#f59e0b"}]]}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Moderate — approaching full"}]]}],["$","tr","2",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-mono text-[12px] text-[rgb(var(--text-secondary))]","children":"90–100%"}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"caution"}]}],["$","td",null,{"className":"px-4 py-3","children":["$","span",null,{"className":"flex items-center gap-2","children":[["$","span",null,{"className":"w-3 h-3 rounded-full","style":{"background":"#f97316"}}],["$","span",null,{"className":"font-mono text-[11px] text-[rgb(var(--text-secondary))]","children":"#f97316"}]]}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Near Full — limited availability"}]]}],["$","tr","3",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":["$L22","$L23","$L24","$L25"]}]]}]]}]}]]}]
+27:Tb73,interface GaugeProps {
+  value: number;
+  max?: number;
+  size?: number;
+  strokeWidth?: number;
+  variant?: "auto" | "success" | "warning" | "caution" | "danger";
+  label?: string;
+  sublabel?: string;
+}
+
+const STATUS_COLORS = {
+  success: "rgb(var(--status-success))",
+  warning: "rgb(var(--status-warning))",
+  caution: "rgb(var(--status-caution))",
+  danger:  "rgb(var(--status-danger))",
+};
+
+function resolveVariant(pct: number, override: GaugeProps["variant"]) {
+  if (override !== "auto") return override!;
+  if (pct < 70)  return "success";
+  if (pct < 90)  return "warning";
+  if (pct < 101) return "caution";
+  return "danger";
+}
+
+export function Gauge({
+  value, max = 100, size = 80, strokeWidth = 8,
+  variant = "auto", label, sublabel,
+}: GaugeProps) {
+  const pct   = Math.min(100, Math.max(0, (value / max) * 100));
+  const color = STATUS_COLORS[resolveVariant(pct, variant)];
+
+  // 270° sweep starting at 135° (bottom-left), ending at 45° (bottom-right)
+  const SWEEP   = 270;
+  const START   = 135;
+  const r       = (size - strokeWidth) / 2;
+  const cx      = size / 2;
+  const cy      = size / 2;
+
+  function polarToXY(deg: number) {
+    const rad = (deg * Math.PI) / 180;
+    return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+  }
+
+  function arcPath(startDeg: number, sweepDeg: number) {
+    const s   = polarToXY(startDeg);
+    const e   = polarToXY(startDeg + sweepDeg);
+    const large = sweepDeg > 180 ? 1 : 0;
+    return `M ${s.x} ${s.y} A ${r} ${r} 0 ${large} 1 ${e.x} ${e.y}`;
+  }
+
+  const trackPath = arcPath(START, SWEEP);
+  const fillPath  = arcPath(START, (pct / 100) * SWEEP);
+
+  return (
+    <div className="flex flex-col items-center gap-1" style={{ width: size }}>
+      <div className="relative" style={{ width: size, height: size }}>
+        <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+          {/* Track */}
+          <path
+            d={trackPath}
+            fill="none"
+            stroke="rgb(var(--progress-track))"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          {/* Fill */}
+          {pct > 0 && (
+            <path
+              d={fillPath}
+              fill="none"
+              stroke={color}
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+              style={{ transition: "stroke-dasharray 0.4s ease-out" }}
+            />
+          )}
+        </svg>
+        {/* Centre label */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <span className="font-bold text-[rgb(var(--text-primary))]" style={{ fontSize: size * 0.17 }}>
+            {label ?? `${Math.round(pct)}%`}
+          </span>
+          {sublabel && (
+            <span className="text-[rgb(var(--text-tertiary))]" style={{ fontSize: size * 0.11 }}>
+              {sublabel}
+            </span>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}28:T892,<!-- Gauge is SVG-based. See the React implementation for a reusable component. -->
+<!-- Below is a standalone HTML + JS example: -->
+
+<div class="gauge-wrapper" id="gauge-root"></div>
+
+<script>
+function renderGauge({ value, max = 100, size = 80, strokeWidth = 8, variant = "auto", label, sublabel }) {
+  const pct   = Math.min(100, Math.max(0, (value / max) * 100));
+  const SWEEP = 270, START = 135;
+  const r  = (size - strokeWidth) / 2;
+  const cx = size / 2, cy = size / 2;
+
+  const colors = {
+    success: "#10b981", warning: "#f59e0b",
+    caution: "#f97316", danger: "#f87171",
+  };
+
+  const resolvedVariant = variant !== "auto" ? variant
+    : pct < 70 ? "success" : pct < 90 ? "warning" : pct < 101 ? "caution" : "danger";
+  const color = colors[resolvedVariant];
+
+  function polar(deg) {
+    const rad = deg * Math.PI / 180;
+    return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
+  }
+
+  function arc(startDeg, sweepDeg) {
+    const [sx, sy] = polar(startDeg);
+    const [ex, ey] = polar(startDeg + sweepDeg);
+    const large = sweepDeg > 180 ? 1 : 0;
+    return `M ${sx} ${sy} A ${r} ${r} 0 ${large} 1 ${ex} ${ey}`;
+  }
+
+  const trackPath = arc(START, SWEEP);
+  const fillPath  = arc(START, (pct / 100) * SWEEP);
+  const fontSize  = size * 0.17;
+
+  document.getElementById("gauge-root").innerHTML = `
+    <div style="position:relative;width:${size}px;height:${size}px">
+      <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+        <path d="${trackPath}" fill="none" stroke="rgb(var(--progress-track))"
+              stroke-width="${strokeWidth}" stroke-linecap="round"/>
+        ${pct > 0 ? `<path d="${fillPath}" fill="none" stroke="${color}"
+              stroke-width="${strokeWidth}" stroke-linecap="round"/>` : ""}
+      </svg>
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+        <span style="font-size:${fontSize}px;font-weight:700">${label ?? Math.round(pct) + "%"}</span>
+        ${sublabel ? `<span style="font-size:${size * 0.11}px;color:#646473">${sublabel}</span>` : ""}
+      </div>
+    </div>
+  `;
+}
+
+renderGauge({ value: 68, sublabel: "34h / 40h" });
+</script>29:Ta78,import SwiftUI
+
+enum GaugeVariant { case auto, success, warning, caution, danger }
+
+struct SitkaGauge: View {
+    let value: Double
+    var max: Double = 100
+    var size: CGFloat = 80
+    var strokeWidth: CGFloat = 8
+    var variant: GaugeVariant = .auto
+    var label: String? = nil
+    var sublabel: String? = nil
+
+    private var pct: Double { Swift.min(1, Swift.max(0, value / max)) }
+
+    private var resolvedVariant: GaugeVariant {
+        guard variant == .auto else { return variant }
+        if pct < 0.70 { return .success }
+        if pct < 0.90 { return .warning }
+        if pct < 1.01 { return .caution }
+        return .danger
+    }
+
+    private var fillColor: Color {
+        switch resolvedVariant {
+        case .auto:    return .accentColor
+        case .success: return Color(hex: "#10b981")
+        case .warning: return Color(hex: "#f59e0b")
+        case .caution: return Color(hex: "#f97316")
+        case .danger:  return Color(hex: "#f87171")
+        }
+    }
+
+    // 270° sweep, starting at 135°
+    private var startAngle: Angle { .degrees(135) }
+    private var endAngle:   Angle { .degrees(135 + 270 * pct) }
+
+    var body: some View {
+        ZStack {
+            // Track
+            Circle()
+                .trim(from: 0, to: 0.75)
+                .stroke(Color(.systemFill), style: StrokeStyle(lineWidth: strokeWidth, lineCap: .round))
+                .frame(width: size - strokeWidth, height: size - strokeWidth)
+                .rotationEffect(.degrees(135))
+
+            // Fill
+            Circle()
+                .trim(from: 0, to: 0.75 * pct)
+                .stroke(fillColor, style: StrokeStyle(lineWidth: strokeWidth, lineCap: .round))
+                .frame(width: size - strokeWidth, height: size - strokeWidth)
+                .rotationEffect(.degrees(135))
+                .animation(.easeOut(duration: 0.4), value: pct)
+
+            // Centre label
+            VStack(spacing: 1) {
+                Text(label ?? "\(Int(pct * 100))%")
+                    .font(.system(size: size * 0.17, weight: .bold, design: .rounded))
+                if let sub = sublabel {
+                    Text(sub)
+                        .font(.system(size: size * 0.11))
+                        .foregroundStyle(.tertiary)
+                }
+            }
+        }
+        .frame(width: size, height: size)
+    }
+}
+
+#Preview {
+    LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4), spacing: 20) {
+        SitkaGauge(value: 45, sublabel: "Available")
+        SitkaGauge(value: 78, sublabel: "Moderate")
+        SitkaGauge(value: 94, sublabel: "Near Full")
+        SitkaGauge(value: 108, sublabel: "Overloaded")
+    }
+    .padding()
+}2a:T542,import SwiftUI
+
+// macOS — same component, no changes needed.
+// The gauge SVG arc approach works identically on macOS.
+// Use SitkaGauge from the iOS implementation directly.
+
+// Example placement in a LazyVGrid for team capacity cards:
+#Preview("Team Capacity") {
+    let members = [
+        ("Alex", 36.0, 40.0),
+        ("Sam",  38.0, 40.0),
+        ("Dana", 42.0, 40.0),
+        ("Lee",   28.0, 40.0),
+    ]
+    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 4), spacing: 12) {
+        ForEach(members, id: \.0) { name, hours, capacity in
+            VStack(spacing: 6) {
+                SitkaGauge(value: hours, max: capacity, size: 72, sublabel: "\(Int(hours))h")
+                Text(name)
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(.primary)
+                Text("\(Int(hours))h / \(Int(capacity))h")
+                    .font(.system(size: 10))
+                    .foregroundStyle(.tertiary)
+            }
+            .padding(12)
+            .background(Color(.controlBackgroundColor))
+            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous).stroke(Color(.separatorColor), lineWidth: 1))
+        }
+    }
+    .padding()
+    .frame(width: 500)
+}17:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","$L26",null,{"code":{"react":{"filename":"Gauge.tsx","code":"$27"},"html":{"filename":"gauge.html","code":"$28"},"swift":{"filename":"SitkaGauge.swift","code":"$29"},"macos":{"filename":"SitkaGauge+macOS.swift","code":"$2a"}}}]]}]
+18:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5","children":"Props"}],["$","div",null,{"className":"overflow-hidden rounded-xl border border-[rgb(var(--border))]","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]","children":[["$","th","Prop",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Prop"}],["$","th","Type",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Type"}],["$","th","Default",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Default"}],["$","th","Description",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Description"}]]}]}],["$","tbody",null,{"children":[["$","tr","value",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["value","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"number"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Current value between 0 and max."}]]}],["$","tr","max",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["max","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"number"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"100"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Maximum value."}]]}],["$","tr","size",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["size","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"number"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"80"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Diameter in pixels."}]]}],["$","tr","strokeWidth",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["strokeWidth","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"number"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"$L2b"}],"$L2c"]}],"$L2d","$L2e","$L2f"]}]]}]}]]}]
+19:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Wrap the SVG in a div with role='img' and aria-label conveying both value and meaning (e.g. 'Sam Park: 78% utilization, Moderate').",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Wrap the SVG in a div with role='img' and aria-label conveying both value and meaning (e.g. 'Sam Park: 78% utilization, Moderate')."]}],["$","li","Colour alone does not convey status — always pair the gauge with a visible text label showing the variant name.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Colour alone does not convey status — always pair the gauge with a visible text label showing the variant name."]}],["$","li","The arc is decorative; use aria-hidden='true' on the SVG and expose the accessible value via the wrapper label.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The arc is decorative; use aria-hidden='true' on the SVG and expose the accessible value via the wrapper label."]}],["$","li","At very small sizes (< 48px), the centre percentage may be illegible — use the sublabel to show absolute values (e.g. '34h') instead.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"At very small sizes (< 48px), the centre percentage may be illegible — use the sublabel to show absolute values (e.g. '34h') instead."]}]]}]]}]
+1a:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0gq949d2-7.01.js","async":true,"nonce":"$undefined"}]
+1b:["$","$L30",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@31"}]}]
+22:["$","td",null,{"className":"px-4 py-3 font-mono text-[12px] text-[rgb(var(--text-secondary))]","children":"> 100%"}]
+23:["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"danger"}]}]
+24:["$","td",null,{"className":"px-4 py-3","children":["$","span",null,{"className":"flex items-center gap-2","children":[["$","span",null,{"className":"w-3 h-3 rounded-full","style":{"background":"#f87171"}}],["$","span",null,{"className":"font-mono text-[11px] text-[rgb(var(--text-secondary))]","children":"#f87171"}]]}]}]
+25:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Overloaded — exceeded capacity"}]
+2b:["$","code",null,{"className":"font-mono text-[11px]","children":"8"}]
+2c:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Track stroke thickness."}]
+2d:["$","tr","variant",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["variant","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"auto\" | \"success\" | \"warning\" | \"caution\" | \"danger\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"auto\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Colour override. 'auto' derives from status thresholds (<70% success, <90% warning, <101% caution, >100% danger)."}]]}]
+2e:["$","tr","label",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["label","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Short text rendered in the centre of the arc. Defaults to percentage."}]]}]
+2f:["$","tr","sublabel",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["sublabel","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Secondary line beneath the label — useful for units (e.g. 'h / 40h')."}]]}]
+1e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+32:I[27201,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/0ybqtblkevdno.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"IconMark"]
+21:[["$","title","0",{"children":"Gauge — Sitka Design System"}],["$","meta","1",{"name":"description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","2",{"name":"keywords","content":"design system,components,tokens,React,SwiftUI"}],["$","meta","3",{"property":"og:title","content":"Sitka Design System"}],["$","meta","4",{"property":"og:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","5",{"property":"og:url","content":"https://jsrothwell.github.io/Sitka/"}],["$","meta","6",{"property":"og:site_name","content":"Sitka Design System"}],["$","meta","7",{"property":"og:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Sitka Design System"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Sitka Design System"}],["$","meta","14",{"name":"twitter:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","15",{"name":"twitter:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","link","16",{"rel":"icon","href":"/Sitka/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L32","17",{}]]
+31:null
