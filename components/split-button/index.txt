@@ -1,0 +1,330 @@
+1:"$Sreact.fragment"
+3:I[82541,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ThemeProvider"]
+4:I[88452,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"DocsShell"]
+5:I[2790,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+6:I[45379,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+10:I[41146,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default",1]
+:HL["/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","style"]
+:HL["/Sitka/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Sitka/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:T7d1,
+  try {
+    var t = localStorage.getItem('sitka-theme');
+    var dark = t === 'dark' || ((!t || t === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var r = document.documentElement;
+    if (dark) {
+      r.classList.add('dark');
+      r.style.colorScheme = 'dark';
+      r.style.setProperty('--background',      '9 9 12');
+      r.style.setProperty('--surface',         '13 13 17');
+      r.style.setProperty('--surface-raised',  '22 22 28');
+      r.style.setProperty('--surface-hover',   '32 32 40');
+      r.style.setProperty('--border',          '38 38 48');
+      r.style.setProperty('--border-subtle',   '26 26 33');
+      r.style.setProperty('--text-primary',    '242 242 246');
+      r.style.setProperty('--text-secondary',  '155 155 170');
+      r.style.setProperty('--text-tertiary',   '100 100 115');
+      r.style.setProperty('--accent-subtle',   '10 38 21');
+      r.style.setProperty('--accent-muted',    '20 72 39');
+      r.style.setProperty('--nav-active-color','rgb(52, 168, 101)');
+      r.style.setProperty('--card-tint-bg',    'rgb(12, 28, 18)');
+    } else {
+      r.style.colorScheme = 'light';
+      r.style.setProperty('--background',      '252 252 253');
+      r.style.setProperty('--surface',         '255 255 255');
+      r.style.setProperty('--surface-raised',  '246 246 248');
+      r.style.setProperty('--surface-hover',   '240 240 244');
+      r.style.setProperty('--border',          '224 224 231');
+      r.style.setProperty('--border-subtle',   '240 240 244');
+      r.style.setProperty('--text-primary',    '15 15 18');
+      r.style.setProperty('--text-secondary',  '85 85 99');
+      r.style.setProperty('--text-tertiary',   '130 130 147');
+      r.style.setProperty('--accent-subtle',   '232 248 239');
+      r.style.setProperty('--accent-muted',    '166 220 190');
+      r.style.setProperty('--nav-active-color','rgb(33, 150, 83)');
+      r.style.setProperty('--card-tint-bg',    'rgba(11, 55, 30, 0.06)');
+    }
+  } catch(e) {}
+0:{"P":null,"c":["","components","split-button",""],"q":"","i":false,"f":[[["",{"children":["components",{"children":["split-button",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Sitka/_next/static/chunks/04.natf_9zy-6.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Sitka/_next/static/chunks/05jbn25z0-c7i.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/Sitka/_next/static/chunks/077bcbxhcexta.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/Sitka/_next/static/chunks/090isu0jqq8wu.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"inter_7b064e0d-module__MOT0tq__variable jetbrains_mono_9a2f2d6c-module__wsyXyG__variable","suppressHydrationWarning":true,"children":["$","body",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{"children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L7","$L8"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],"$L9","$La"]}]}]]}],{"children":["$Lb",{"children":["$Lc",{"children":["$Ld",{},null,false,null]},null,false,"$@e"]},null,false,"$@e"]},null,false,null],"$Lf",false]],"m":"$undefined","G":["$10",["$L11"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"RUQIyAf0qAkfAB-SIdmO1"}
+12:I[35412,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],""]
+13:I[60701,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/09kd0jkv30ez2.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"ComponentPreview"]
+14:I[96052,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/09kd0jkv30ez2.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"SplitButtonDemo"]
+15:I[96052,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/09kd0jkv30ez2.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"SplitButtonSizesDemo"]
+20:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ViewportBoundary"]
+22:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"MetadataBoundary"]
+23:"$Sreact.suspense"
+7:["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}]
+8:["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]
+9:["$","$L12",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-SC89RP965Q","strategy":"afterInteractive"}]
+a:["$","$L12",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n          gtag('config', 'G-SC89RP965Q');\n        "}]
+b:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+c:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Split Button"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"A compound control that combines a primary action with a dropdown of secondary actions. The left segment triggers the default action immediately; the right chevron reveals the full menu."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","$L13",null,{"children":["$","$L14",null,{}]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"When to use"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"A split button collapses a group of related actions into a single control when one action is clearly the default. It reduces visual clutter without hiding important secondary paths."}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Use a split button when…",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Use a split button when…"}],["$","th","Use separate buttons when…",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Use separate buttons when…"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"One action is clearly primary"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Actions are equally weighted"}]]}],["$","tr","1",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Secondary actions are rarely needed"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Users need to see all options at a glance"}]]}],["$","tr","2",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Space is constrained"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Actions have different destructive risk levels"}]]}],["$","tr","3",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Deploy, export, or send patterns"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"You have more than ~5 secondary actions"}]]}]]}]]}]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Sizes"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"All three Button sizes. The chevron segment width scales proportionally."}],["$","$L13",null,{"children":["$","$L15",null,{}]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],"$L16","$L17"]}],"$L18","$L19","$L1a","$L1b"]}],["$L1c","$L1d"],"$L1e"]}]
+1f:[]
+e:"$W1f"
+f:["$","$1","h",{"children":[null,["$","$L20",null,{"children":"$L21"}],["$","div",null,{"hidden":true,"children":["$","$L22",null,{"children":["$","$23",null,{"name":"Next.Metadata","children":"$L24"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+11:["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+25:I[78241,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/09kd0jkv30ez2.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"PlatformTabs"]
+32:I[38352,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/09kd0jkv30ez2.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"SplitButtonMobileDemo"]
+33:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+16:["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["The dropdown is portaled to"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"document.body"}]," via"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"createPortal"}]," — it is never clipped by"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"overflow: hidden"}]," ","ancestors. Position is computed from"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"getBoundingClientRect"}]," ","on open. Click-outside dismissal is wired via a"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"mousedown"}]," ","listener on"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"document"}],"."]}]
+26:T7fd,<div class="split-btn">
+  <button class="split-btn-main btn btn-secondary">
+    Export
+  </button>
+  <div class="split-btn-divider"></div>
+  <button class="split-btn-chevron btn btn-secondary" aria-haspopup="menu" aria-expanded="false">
+    <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+  <div class="split-btn-menu" role="menu" hidden>
+    <button class="split-btn-item" role="menuitem">Export as CSV</button>
+    <button class="split-btn-item" role="menuitem">Export as JSON</button>
+    <button class="split-btn-item split-btn-item-danger" role="menuitem">Delete export</button>
+  </div>
+</div>
+
+<style>
+  .split-btn { position: relative; display: inline-flex; align-items: stretch; }
+
+  .split-btn-main {
+    border-radius: 8px 0 0 8px !important;
+    border-right: none !important;
+  }
+  .split-btn-chevron {
+    border-radius: 0 8px 8px 0 !important;
+    border-left: none !important;
+    padding: 0 8px;
+  }
+  .split-btn-divider {
+    width: 1px;
+    background: rgb(var(--border));
+    align-self: center;
+    height: 60%;
+  }
+
+  .chevron-icon {
+    width: 14px; height: 14px;
+    stroke: currentColor; fill: none; stroke-width: 2;
+    transition: transform 150ms;
+  }
+  [aria-expanded="true"] .chevron-icon { transform: rotate(180deg); }
+
+  .split-btn-menu {
+    position: absolute;
+    top: calc(100% + 4px); left: 0;
+    min-width: 100%;
+    background: rgb(var(--surface-raised));
+    border: 1px solid rgb(var(--border));
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,.2);
+    padding: 4px 0;
+    z-index: 999;
+  }
+  .split-btn-item {
+    display: flex; align-items: center; gap: 10px;
+    width: 100%; padding: 8px 12px;
+    font-size: 13px; text-align: left;
+    background: none; border: none; cursor: pointer;
+    color: rgb(var(--text-primary));
+    transition: background 100ms;
+  }
+  .split-btn-item:hover { background: rgb(var(--surface)); }
+  .split-btn-item-danger { color: #f87171; }
+  .split-btn-item-danger:hover { background: rgba(248,113,113,.1); }
+</style>27:Ta7f,import SwiftUI
+
+struct SplitButtonMenuItem: Identifiable {
+    let id = UUID()
+    let label: String
+    let systemImage: String?
+    let action: () -> Void
+    var isDanger: Bool = false
+}
+
+struct SitkaSplitButton: View {
+    let label: String
+    let action: () -> Void
+    let items: [SplitButtonMenuItem]
+    var systemImage: String? = nil
+
+    var body: some View {
+        HStack(spacing: 0) {
+            // Primary action
+            Button(action: action) {
+                HStack(spacing: 6) {
+                    if let img = systemImage {
+                        Image(systemName: img)
+                            .font(.system(size: 13, weight: .medium))
+                    }
+                    Text(label)
+                        .font(.system(size: 13, weight: .medium))
+                }
+                .padding(.horizontal, 14)
+                .frame(height: 40)
+                .background(Color(UIColor.secondarySystemBackground))
+            }
+            .buttonStyle(.plain)
+
+            // Divider
+            Rectangle()
+                .fill(Color(UIColor.separator))
+                .frame(width: 1, height: 20)
+
+            // Dropdown trigger
+            Menu {
+                ForEach(items) { item in
+                    Button(role: item.isDanger ? .destructive : .none) {
+                        item.action()
+                    } label: {
+                        if let img = item.systemImage {
+                            Label(item.label, systemImage: img)
+                        } else {
+                            Text(item.label)
+                        }
+                    }
+                }
+            } label: {
+                Image(systemName: "chevron.down")
+                    .font(.system(size: 11, weight: .medium))
+                    .frame(width: 32, height: 40)
+                    .background(Color(UIColor.secondarySystemBackground))
+            }
+            .menuStyle(.borderlessButton)
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .stroke(Color(UIColor.separator), lineWidth: 1)
+        )
+    }
+}
+
+#Preview {
+    SitkaSplitButton(
+        label: "Export",
+        action: { },
+        items: [
+            SplitButtonMenuItem(label: "Export as CSV",  systemImage: "doc.text",  action: { }),
+            SplitButtonMenuItem(label: "Export as JSON", systemImage: "doc.text",  action: { }),
+            SplitButtonMenuItem(label: "Delete export",  systemImage: "trash",     action: { }, isDanger: true),
+        ],
+        systemImage: "square.and.arrow.up"
+    )
+    .padding()
+}28:Tc5f,import SwiftUI
+
+struct SplitButtonMenuItem: Identifiable {
+    let id = UUID()
+    let label: String
+    var systemImage: String? = nil
+    var isDanger: Bool = false
+    let action: () -> Void
+}
+
+struct SitkaSplitButton: View {
+    let label: String
+    let action: () -> Void
+    let items: [SplitButtonMenuItem]
+    var systemImage: String? = nil
+    var keyboardShortcut: KeyEquivalent? = nil
+    var modifiers: EventModifiers = .command
+
+    var body: some View {
+        HStack(spacing: 0) {
+            // Primary action segment
+            Button(action: action) {
+                HStack(spacing: 6) {
+                    if let img = systemImage {
+                        Image(systemName: img).font(.system(size: 12, weight: .medium))
+                    }
+                    Text(label).font(.system(size: 13, weight: .medium))
+                }
+                .padding(.horizontal, 12)
+                .frame(height: 28)
+                .background(Color(NSColor.controlBackgroundColor))
+            }
+            .buttonStyle(.plain)
+            .modify { view in
+                if let key = keyboardShortcut {
+                    view.keyboardShortcut(key, modifiers: modifiers)
+                } else {
+                    view
+                }
+            }
+
+            // Divider
+            Rectangle()
+                .fill(Color(NSColor.separatorColor))
+                .frame(width: 1, height: 16)
+
+            // Dropdown trigger
+            Menu {
+                ForEach(items) { item in
+                    Button(role: item.isDanger ? .destructive : .none) {
+                        item.action()
+                    } label: {
+                        if let img = item.systemImage {
+                            Label(item.label, systemImage: img)
+                        } else {
+                            Text(item.label)
+                        }
+                    }
+                }
+            } label: {
+                Image(systemName: "chevron.down")
+                    .font(.system(size: 10, weight: .medium))
+                    .frame(width: 24, height: 28)
+                    .background(Color(NSColor.controlBackgroundColor))
+            }
+            .menuStyle(.borderlessButton)
+            .fixedSize()
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 6, style: .continuous)
+                .stroke(Color(NSColor.separatorColor), lineWidth: 1)
+        )
+    }
+}
+
+extension View {
+    @ViewBuilder
+    func modify<T: View>(@ViewBuilder transform: (Self) -> T) -> some View {
+        transform(self)
+    }
+}
+
+#Preview {
+    SitkaSplitButton(
+        label: "Export",
+        action: { },
+        items: [
+            SplitButtonMenuItem(label: "Export as CSV",  systemImage: "doc.text", action: { }),
+            SplitButtonMenuItem(label: "Export as JSON", systemImage: "doc.text", action: { }),
+            SplitButtonMenuItem(label: "Delete export",  systemImage: "trash",    action: { }, isDanger: true),
+        ],
+        systemImage: "square.and.arrow.up",
+        keyboardShortcut: "e"
+    )
+    .padding()
+}17:["$","$L25",null,{"code":{"react":{"filename":"SplitButton.tsx","code":"import { SplitButton } from \"@/components/ui/SplitButton\";\nimport { Download, FileText, Archive } from \"lucide-react\";\n\n<SplitButton\n  label=\"Export\"\n  variant=\"secondary\"\n  leftIcon={<Download className=\"w-4 h-4\" />}\n  onClick={() => exportDefault()}\n  items={[\n    {\n      label: \"Export as CSV\",\n      icon: <FileText className=\"w-3.5 h-3.5\" />,\n      onClick: () => exportCSV(),\n    },\n    {\n      label: \"Export as JSON\",\n      icon: <FileText className=\"w-3.5 h-3.5\" />,\n      onClick: () => exportJSON(),\n    },\n    {\n      label: \"Delete export\",\n      icon: <Archive className=\"w-3.5 h-3.5\" />,\n      onClick: () => deleteExport(),\n      danger: true,\n    },\n  ]}\n/>"},"html":{"filename":"split-button.html","code":"$26"},"swift":{"filename":"SitkaSplitButton.swift","code":"$27"},"macos":{"filename":"SitkaSplitButton+macOS.swift","code":"$28"}}}]
+18:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5","children":"SplitButton props"}],["$","div",null,{"className":"overflow-hidden rounded-xl border border-[rgb(var(--border))]","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]","children":[["$","th","Prop",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Prop"}],["$","th","Type",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Type"}],["$","th","Default",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Default"}],["$","th","Description",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Description"}]]}]}],["$","tbody",null,{"children":[["$","tr","label",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["label","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Label for the primary action button."}]]}],["$","tr","onClick",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["onClick","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"() => void"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Handler for the primary action."}]]}],["$","tr","items",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["items","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"SplitButtonItem[]"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Menu items shown in the dropdown."}]]}],["$","tr","variant",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["variant","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"primary\" | \"secondary\" | \"ghost\" | \"danger\" | \"glass\""}]}],"$L29","$L2a"]}],"$L2b","$L2c","$L2d","$L2e"]}]]}]}]]}]
+19:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5","children":"SplitButtonItem"}],["$","div",null,{"className":"overflow-hidden rounded-xl border border-[rgb(var(--border))]","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]","children":[["$","th","Prop",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Prop"}],["$","th","Type",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Type"}],["$","th","Default",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Default"}],["$","th","Description",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Description"}]]}]}],["$","tbody",null,{"children":[["$","tr","label",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["label","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Menu item label."}]]}],["$","tr","icon",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["icon","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"ReactNode"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Optional icon rendered to the left."}]]}],["$","tr","onClick",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["onClick","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"() => void"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Handler called when the item is selected."}]]}],["$","tr","disabled",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["disabled","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],"$L2f","$L30"]}],"$L31"]}]]}]}]]}]
+1a:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Mobile"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Split buttons have two small adjacent tap targets — the primary action and the chevron — which can be error-prone on touch. Adapt the layout for narrow screens."}],["$","$L13",null,{"className":"mb-6","children":["$","$L32",null,{}]}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Scenario",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Scenario"}],["$","th","Guidance",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Guidance"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Chevron tap target"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"The divider + chevron section should be at least 44px wide on mobile — wider than the default 32px. Consider a separate touch target area that expands beyond the visible chevron."}]]}],["$","tr","1",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Simplify on mobile"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"If the secondary actions are rarely used, hide the split on mobile and show only the primary action. Put secondary actions in a separate overflow menu (⋯) in the toolbar."}]]}],["$","tr","2",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Dropdown positioning"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"On mobile, the dropdown can be clipped by the bottom of the screen. Position it above the button when there is less than 200px of space below."}]]}],["$","tr","3",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Full-width variant"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"In bottom action bars, a full-width split button works well: left ~80% is the primary action, right ~20% is the chevron. Divide with a 1px vertical separator."}]]}]]}]]}]}]]}]
+1b:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","The chevron button has aria-haspopup=\"menu\" and aria-expanded so screen readers announce it as a menu trigger.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The chevron button has aria-haspopup=\"menu\" and aria-expanded so screen readers announce it as a menu trigger."]}],["$","li","The dropdown has role=\"menu\"; each item has role=\"menuitem\".",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The dropdown has role=\"menu\"; each item has role=\"menuitem\"."]}],["$","li","Keyboard: Enter/Space on the chevron opens the menu. Arrow keys move between items. Escape closes.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Keyboard: Enter/Space on the chevron opens the menu. Arrow keys move between items. Escape closes."]}],["$","li","The primary action and the chevron are separate focusable elements — Tab visits them independently.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The primary action and the chevron are separate focusable elements — Tab visits them independently."]}],["$","li","Danger items should describe what they do in plain language, not just label them \"Delete\".",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Danger items should describe what they do in plain language, not just label them \"Delete\"."]}]]}]]}]
+1c:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/09kd0jkv30ez2.js","async":true,"nonce":"$undefined"}]
+1d:["$","script","script-1",{"src":"/Sitka/_next/static/chunks/0fi~f9476zu~_.js","async":true,"nonce":"$undefined"}]
+1e:["$","$L33",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@34"}]}]
+29:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"primary\""}]}]
+2a:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Visual style — matches Button variants."}]
+2b:["$","tr","size",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["size","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"sm\" | \"md\" | \"lg\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"md\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Height and padding — matches Button sizes."}]]}]
+2c:["$","tr","leftIcon",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["leftIcon","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"ReactNode"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Icon rendered to the left of the label."}]]}]
+2d:["$","tr","disabled",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["disabled","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"false"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Disables both the action button and the chevron."}]]}]
+2e:["$","tr","loading",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["loading","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"false"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Disables interaction (loading state)."}]]}]
+2f:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}]
+30:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Grays out and disables the item."}]
+31:["$","tr","danger",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["danger","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Renders the item in red — for destructive actions."}]]}]
+21:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+35:I[88599,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"IconMark"]
+24:[["$","title","0",{"children":"Split Button — Sitka Design System"}],["$","meta","1",{"name":"description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","2",{"name":"keywords","content":"design system,components,tokens,React,SwiftUI"}],["$","meta","3",{"property":"og:title","content":"Sitka Design System"}],["$","meta","4",{"property":"og:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","5",{"property":"og:url","content":"https://jsrothwell.github.io/Sitka/"}],["$","meta","6",{"property":"og:site_name","content":"Sitka Design System"}],["$","meta","7",{"property":"og:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Sitka Design System"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Sitka Design System"}],["$","meta","14",{"name":"twitter:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","15",{"name":"twitter:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","link","16",{"rel":"icon","href":"/Sitka/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L35","17",{}]]
+34:null

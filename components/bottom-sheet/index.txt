@@ -1,0 +1,281 @@
+1:"$Sreact.fragment"
+3:I[82541,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ThemeProvider"]
+4:I[88452,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"DocsShell"]
+5:I[2790,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+6:I[45379,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+10:I[41146,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default",1]
+:HL["/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","style"]
+:HL["/Sitka/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Sitka/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:T7d1,
+  try {
+    var t = localStorage.getItem('sitka-theme');
+    var dark = t === 'dark' || ((!t || t === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var r = document.documentElement;
+    if (dark) {
+      r.classList.add('dark');
+      r.style.colorScheme = 'dark';
+      r.style.setProperty('--background',      '9 9 12');
+      r.style.setProperty('--surface',         '13 13 17');
+      r.style.setProperty('--surface-raised',  '22 22 28');
+      r.style.setProperty('--surface-hover',   '32 32 40');
+      r.style.setProperty('--border',          '38 38 48');
+      r.style.setProperty('--border-subtle',   '26 26 33');
+      r.style.setProperty('--text-primary',    '242 242 246');
+      r.style.setProperty('--text-secondary',  '155 155 170');
+      r.style.setProperty('--text-tertiary',   '100 100 115');
+      r.style.setProperty('--accent-subtle',   '10 38 21');
+      r.style.setProperty('--accent-muted',    '20 72 39');
+      r.style.setProperty('--nav-active-color','rgb(52, 168, 101)');
+      r.style.setProperty('--card-tint-bg',    'rgb(12, 28, 18)');
+    } else {
+      r.style.colorScheme = 'light';
+      r.style.setProperty('--background',      '252 252 253');
+      r.style.setProperty('--surface',         '255 255 255');
+      r.style.setProperty('--surface-raised',  '246 246 248');
+      r.style.setProperty('--surface-hover',   '240 240 244');
+      r.style.setProperty('--border',          '224 224 231');
+      r.style.setProperty('--border-subtle',   '240 240 244');
+      r.style.setProperty('--text-primary',    '15 15 18');
+      r.style.setProperty('--text-secondary',  '85 85 99');
+      r.style.setProperty('--text-tertiary',   '130 130 147');
+      r.style.setProperty('--accent-subtle',   '232 248 239');
+      r.style.setProperty('--accent-muted',    '166 220 190');
+      r.style.setProperty('--nav-active-color','rgb(33, 150, 83)');
+      r.style.setProperty('--card-tint-bg',    'rgba(11, 55, 30, 0.06)');
+    }
+  } catch(e) {}
+0:{"P":null,"c":["","components","bottom-sheet",""],"q":"","i":false,"f":[[["",{"children":["components",{"children":["bottom-sheet",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Sitka/_next/static/chunks/04.natf_9zy-6.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Sitka/_next/static/chunks/05jbn25z0-c7i.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/Sitka/_next/static/chunks/077bcbxhcexta.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/Sitka/_next/static/chunks/090isu0jqq8wu.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"inter_7b064e0d-module__MOT0tq__variable jetbrains_mono_9a2f2d6c-module__wsyXyG__variable","suppressHydrationWarning":true,"children":["$","body",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{"children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L7","$L8"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],"$L9","$La"]}]}]]}],{"children":["$Lb",{"children":["$Lc",{"children":["$Ld",{},null,false,null]},null,false,"$@e"]},null,false,"$@e"]},null,false,null],"$Lf",false]],"m":"$undefined","G":["$10",["$L11"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"RUQIyAf0qAkfAB-SIdmO1"}
+12:I[35412,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],""]
+13:I[60701,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/03g-rmhok80a_.js"],"ComponentPreview"]
+14:I[1558,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/03g-rmhok80a_.js"],"BottomSheetDemo"]
+1d:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ViewportBoundary"]
+1f:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"MetadataBoundary"]
+20:"$Sreact.suspense"
+7:["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}]
+8:["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]
+9:["$","$L12",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-SC89RP965Q","strategy":"afterInteractive"}]
+a:["$","$L12",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n          gtag('config', 'G-SC89RP965Q');\n        "}]
+b:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+c:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Bottom Sheet"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"A panel that slides up from the bottom of the screen. Used for contextual actions, navigation overflow, and secondary content that doesn't warrant a full page or modal. Portaled to document.body; dismissed by backdrop tap, Escape, or drag."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","$L13",null,{"children":["$","$L14",null,{}]}],["$","p",null,{"className":"text-[12px] text-[rgb(var(--text-tertiary))] mt-3","children":["Each button previews a different"," ",["$","code",null,{"className":"font-mono","children":"snapHeight"}],". Tap the backdrop or Escape to dismiss."]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Snap heights"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Value",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Value"}],["$","th","Height",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Height"}],["$","th","Best for",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Best for"}]]}]}],["$","tbody",null,{"children":[["$","tr","\"auto\"",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"\"auto\""}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"max-h: 85vh — fits to content"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Navigation lists, action menus, short forms"}]]}],["$","tr","\"half\"",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"\"half\""}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"h: 50vh — fixed half screen"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Filter panels, media pickers, quick views"}]]}],["$","tr","\"full\"",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"\"full\""}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"h: 90vh — near full screen"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Long forms, detail views, multi-step flows"}]]}]]}]]}]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["The sheet is portaled to"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"document.body"}]," via"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"createPortal"}]," — it is never clipped by ","$L15"," ","ancestors. Body scroll is locked while open. Dismiss handlers cover backdrop click and Escape key."]}],"$L16"]}],"$L17","$L18","$L19"]}],["$L1a"],"$L1b"]}]
+1c:[]
+e:"$W1c"
+f:["$","$1","h",{"children":[null,["$","$L1d",null,{"children":"$L1e"}],["$","div",null,{"hidden":true,"children":["$","$L1f",null,{"children":["$","$20",null,{"name":"Next.Metadata","children":"$L21"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+11:["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+22:I[78241,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/03g-rmhok80a_.js"],"PlatformTabs"]
+2a:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+15:["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"overflow: hidden"}]
+23:T544,import { useState } from "react";
+import { BottomSheet } from "@/components/ui/BottomSheet";
+import { Button } from "@/components/ui/Button";
+import { Home, Settings, HelpCircle, ChevronRight } from "lucide-react";
+
+export function Example() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>Open sheet</Button>
+
+      <BottomSheet
+        open={open}
+        onClose={() => setOpen(false)}
+        title="Navigation"
+        snapHeight="auto"
+      >
+        <nav className="space-y-1">
+          {[
+            { label: "Home",     icon: Home },
+            { label: "Settings", icon: Settings },
+            { label: "Help",     icon: HelpCircle },
+          ].map(({ label, icon: Icon }) => (
+            <button
+              key={label}
+              onClick={() => setOpen(false)}
+              className="w-full flex items-center gap-3 px-3 py-3 rounded-xl
+                         text-[14px] font-medium text-text-secondary
+                         hover:bg-surface hover:text-text-primary transition-colors"
+            >
+              <Icon className="w-4 h-4" />
+              <span className="flex-1">{label}</span>
+              <ChevronRight className="w-3.5 h-3.5 text-text-tertiary" />
+            </button>
+          ))}
+        </nav>
+      </BottomSheet>
+    </>
+  );
+}24:Tf9a,<button id="openSheet" class="btn btn-secondary">Open sheet</button>
+
+<div class="sheet-overlay" id="sheetOverlay" aria-hidden="true" hidden></div>
+
+<div class="sheet" role="dialog" aria-modal="true" aria-label="Navigation" id="sheet" hidden>
+  <div class="sheet-handle-wrap">
+    <div class="sheet-handle"></div>
+  </div>
+  <div class="sheet-header">
+    <h2 class="sheet-title">Navigation</h2>
+    <button class="sheet-close" id="closeSheet" aria-label="Close">
+      <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="sheet-body">
+    <nav>
+      <button class="sheet-item">
+        <svg class="sheet-icon" viewBox="0 0 24 24"><path d="M3 12L12 3l9 9v8a1 1 0 01-1 1h-5v-5H9v5H4a1 1 0 01-1-1z"/></svg>
+        <span>Home</span>
+        <svg class="sheet-chevron" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <button class="sheet-item">
+        <svg class="sheet-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20v-1a8 8 0 0116 0v1"/></svg>
+        <span>Settings</span>
+        <svg class="sheet-chevron" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </nav>
+  </div>
+</div>
+
+<style>
+  .sheet-overlay {
+    position: fixed; inset: 0; z-index: 40;
+    background: rgba(0,0,0,.5);
+    backdrop-filter: blur(2px);
+  }
+
+  .sheet {
+    position: fixed;
+    bottom: 0; left: 0; right: 0; z-index: 50;
+    max-height: 85vh;
+    display: flex; flex-direction: column;
+    background: rgb(var(--surface-raised));
+    border-top: 1px solid rgb(var(--border));
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -8px 40px rgba(0,0,0,.3);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .sheet-handle-wrap { padding: 12px 0 4px; display: flex; justify-content: center; }
+  .sheet-handle { width: 40px; height: 3px; border-radius: 999px; background: rgb(var(--border)); }
+
+  .sheet-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 16px 12px;
+    border-bottom: 1px solid rgb(var(--border-subtle));
+  }
+  .sheet-title { font-size: 15px; font-weight: 600; color: rgb(var(--text-primary)); }
+  .sheet-close {
+    width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    border: none; background: rgb(var(--surface)); cursor: pointer;
+    color: rgb(var(--text-secondary));
+  }
+  .sheet-close svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+  .sheet-body { flex: 1; overflow-y: auto; padding: 16px; }
+
+  .sheet-item {
+    width: 100%; display: flex; align-items: center; gap: 12px;
+    padding: 12px; border-radius: 12px;
+    font-size: 14px; font-weight: 500;
+    border: none; background: none; cursor: pointer; text-align: left;
+    color: rgb(var(--text-secondary));
+    transition: background 100ms;
+  }
+  .sheet-item:hover { background: rgb(var(--surface)); color: rgb(var(--text-primary)); }
+  .sheet-item span { flex: 1; }
+  .sheet-icon  { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; flex-shrink: 0; }
+  .sheet-chevron { width: 14px; height: 14px; stroke: rgb(var(--text-tertiary)); fill: none; stroke-width: 2; flex-shrink: 0; }
+</style>
+
+<script>
+  const openBtn  = document.getElementById("openSheet");
+  const closeBtn = document.getElementById("closeSheet");
+  const sheet    = document.getElementById("sheet");
+  const overlay  = document.getElementById("sheetOverlay");
+
+  function openSheet() {
+    sheet.hidden   = false;
+    overlay.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+  function closeSheet() {
+    sheet.hidden   = true;
+    overlay.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  openBtn.addEventListener("click", openSheet);
+  closeBtn.addEventListener("click", closeSheet);
+  overlay.addEventListener("click", closeSheet);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeSheet(); });
+</script>25:T665,import SwiftUI
+
+// SwiftUI equivalent: .sheet with detents (iOS 16+)
+
+struct ContentView: View {
+    @State private var sheetOpen = false
+
+    var body: some View {
+        Button("Open sheet") { sheetOpen = true }
+            .buttonStyle(.bordered)
+            .sheet(isPresented: $sheetOpen) {
+                NavigationSheetView()
+                    // Snap heights — use .presentationDetents
+                    .presentationDetents([.medium, .large])
+                    .presentationDragIndicator(.visible)
+                    .presentationCornerRadius(20)
+            }
+    }
+}
+
+struct NavigationSheetView: View {
+    @Environment(\.dismiss) private var dismiss
+
+    let items: [(String, String)] = [
+        ("house",       "Home"),
+        ("gearshape",   "Settings"),
+        ("questionmark.circle", "Help"),
+    ]
+
+    var body: some View {
+        NavigationStack {
+            List(items, id: \.1) { item in
+                Label(item.1, systemImage: item.0)
+                    .onTapGesture { dismiss() }
+            }
+            .listStyle(.plain)
+            .navigationTitle("Navigation")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button { dismiss() } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+        }
+    }
+}
+
+// For iOS 15 compatibility, use .halfModal or a custom UIPresentationController.
+// .presentationDetents is iOS 16+.
+
+#Preview {
+    ContentView()
+}16:["$","$L22",null,{"code":{"react":{"filename":"BottomSheet.tsx","code":"$23"},"html":{"filename":"bottom-sheet.html","code":"$24"},"swift":{"filename":"SitkaBottomSheet.swift","code":"$25"}}}]
+17:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5","children":"Props"}],["$","div",null,{"className":"overflow-hidden rounded-xl border border-[rgb(var(--border))]","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]","children":[["$","th","Prop",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Prop"}],["$","th","Type",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Type"}],["$","th","Default",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Default"}],["$","th","Description",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Description"}]]}]}],["$","tbody",null,{"children":[["$","tr","open",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["open","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Controls visibility. Sheet unmounts when false."}]]}],["$","tr","onClose",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["onClose","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"() => void"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Called on backdrop tap, Escape key, or close button."}]]}],["$","tr","title",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["title","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Optional header title. Renders a title + close button row when provided."}]]}],["$","tr","children",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["children","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"ReactNode"}]}],"$L26","$L27"]}],"$L28","$L29"]}]]}]}]]}]
+18:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Mobile"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Scenario",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Scenario"}],["$","th","Guidance",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Guidance"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Drag to dismiss"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Add a swipe-down gesture handler that maps drag velocity to a close threshold. Most users expect this pattern from native apps — a drag handle without swipe support feels broken."}]]}],["$","tr","1",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Virtual keyboard"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"When a sheet contains inputs, pair it with Visual Viewport API or use env(keyboard-inset-height) so the sheet shrinks when the keyboard appears rather than being pushed off-screen."}]]}],["$","tr","2",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Safe area insets"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Add padding-bottom: env(safe-area-inset-bottom, 0px) inside the sheet content so items aren't obscured by the home indicator on modern iPhones."}]]}],["$","tr","3",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Scroll chaining"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"overscroll-behavior: contain on the sheet body prevents scroll from propagating to the page behind the backdrop while the sheet is open."}]]}],["$","tr","4",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Nested navigation"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"For multi-step flows inside a sheet, push views horizontally within the sheet — don't stack sheets. Stacked sheets are confusing and unexpected on mobile."}]]}]]}]]}]}]]}]
+19:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","The sheet panel has role=\"dialog\" and aria-modal=\"true\". Provide aria-label equal to the title, or use aria-labelledby pointing to the title element.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The sheet panel has role=\"dialog\" and aria-modal=\"true\". Provide aria-label equal to the title, or use aria-labelledby pointing to the title element."]}],["$","li","Focus must be trapped inside the sheet while it is open. The first focusable element (or the title) should receive focus on open.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Focus must be trapped inside the sheet while it is open. The first focusable element (or the title) should receive focus on open."]}],["$","li","Escape key dismisses the sheet and returns focus to the trigger. Implement this even if a close button is present.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Escape key dismisses the sheet and returns focus to the trigger. Implement this even if a close button is present."]}],["$","li","Background content should be inert (aria-hidden) while the sheet is open so screen reader users cannot navigate behind the overlay.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Background content should be inert (aria-hidden) while the sheet is open so screen reader users cannot navigate behind the overlay."]}],["$","li","The drag handle is decorative — do not add role or aria to it. Provide a close button as the primary dismiss affordance for keyboard/AT users.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The drag handle is decorative — do not add role or aria to it. Provide a close button as the primary dismiss affordance for keyboard/AT users."]}]]}]]}]
+1a:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/03g-rmhok80a_.js","async":true,"nonce":"$undefined"}]
+1b:["$","$L2a",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@2b"}]}]
+26:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}]
+27:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Content rendered in the scrollable body."}]
+28:["$","tr","snapHeight",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["snapHeight","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"auto\" | \"half\" | \"full\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"auto\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Sheet height. auto = max 85vh; half = 50vh; full = 90vh."}]]}]
+29:["$","tr","className",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["className","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Extra classes on the sheet panel."}]]}]
+1e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+2c:I[88599,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"IconMark"]
+21:[["$","title","0",{"children":"Bottom Sheet — Sitka Design System"}],["$","meta","1",{"name":"description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","2",{"name":"keywords","content":"design system,components,tokens,React,SwiftUI"}],["$","meta","3",{"property":"og:title","content":"Sitka Design System"}],["$","meta","4",{"property":"og:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","5",{"property":"og:url","content":"https://jsrothwell.github.io/Sitka/"}],["$","meta","6",{"property":"og:site_name","content":"Sitka Design System"}],["$","meta","7",{"property":"og:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Sitka Design System"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Sitka Design System"}],["$","meta","14",{"name":"twitter:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","15",{"name":"twitter:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","link","16",{"rel":"icon","href":"/Sitka/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L2c","17",{}]]
+2b:null

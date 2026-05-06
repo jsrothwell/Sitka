@@ -1,0 +1,305 @@
+1:"$Sreact.fragment"
+2:I[60701,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0.7sdx6jye8or.js"],"ComponentPreview"]
+3:I[25788,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0.7sdx6jye8or.js"],"MasterDetailDemo"]
+c:I[78241,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0.7sdx6jye8or.js"],"PlatformTabs"]
+10:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+11:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Master Detail"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"A two-panel layout where a list of items (master) drives a contextual detail view on the right. Collapses to a single-panel push navigation on narrow screens."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","$L2",null,{"children":["$","$L3",null,{}]}],["$","p",null,{"className":"text-[12px] text-[rgb(var(--text-tertiary))] mt-3","children":"On narrow screens, tap any row to push to the detail view. Hit Back to return to the list."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"When to use"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Master–detail works best when you have a collection of similar items and rich per-item content that would waste space if shown for every row."}],["$","div",null,{"className":"grid md:grid-cols-2 gap-4","children":[["$","div","Good fits",{"className":"rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-5","children":[["$","h3",null,{"className":"text-[13px] font-semibold mb-3 text-emerald-500","children":"Good fits"}],["$","ul",null,{"className":"space-y-2","children":[["$","li","Email / messaging inboxes",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-emerald-500 mt-0.5","children":"→"}],"Email / messaging inboxes"]}],["$","li","CRM contact or lead views",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-emerald-500 mt-0.5","children":"→"}],"CRM contact or lead views"]}],["$","li","Settings pages with categories",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-emerald-500 mt-0.5","children":"→"}],"Settings pages with categories"]}],["$","li","File browsers and asset managers",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-emerald-500 mt-0.5","children":"→"}],"File browsers and asset managers"]}],["$","li","Issue trackers and task lists",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-emerald-500 mt-0.5","children":"→"}],"Issue trackers and task lists"]}]]}]]}],["$","div","Poor fits",{"className":"rounded-xl border border-red-400/20 bg-red-400/5 p-5","children":[["$","h3",null,{"className":"text-[13px] font-semibold mb-3 text-red-400","children":"Poor fits"}],["$","ul",null,{"className":"space-y-2","children":[["$","li","Simple lists where all data fits in one view",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-red-400 mt-0.5","children":"→"}],"Simple lists where all data fits in one view"]}],["$","li","Workflows requiring both panels simultaneously",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-red-400 mt-0.5","children":"→"}],"Workflows requiring both panels simultaneously"]}],["$","li","Content where comparison across items matters",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-red-400 mt-0.5","children":"→"}],"Content where comparison across items matters"]}],["$","li","Very shallow item counts (< 5 items)",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":["$L4","Very shallow item counts (< 5 items)"]}]]}]]}]]}]]}],"$L5","$L6","$L7","$L8","$L9"]}],["$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"RUQIyAf0qAkfAB-SIdmO1"}
+4:["$","span",null,{"className":"text-red-400 mt-0.5","children":"→"}]
+5:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Layout anatomy"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"The pattern composes three zones. Each has a clear responsibility."}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Zone",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Zone"}],["$","th","Width",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Width"}],["$","th","Responsibility",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Responsibility"}]]}]}],["$","tbody",null,{"children":[["$","tr","Master (list)",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"Master (list)"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"240–320px fixed"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Scannable rows. One item is always selected. Owns the selection state."}]]}],["$","tr","Divider",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"Divider"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"1px"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Visual boundary. Can be a drag handle for resizable layouts."}]]}],["$","tr","Detail",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"Detail"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"flex: 1 (remaining)"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Rich content for the selected item. Scrolls independently of the list."}]]}]]}]]}]}]]}]
+6:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Responsive behavior"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"On narrow screens the two panels cannot coexist. The correct pattern is a push navigation — selecting an item slides the detail in from the right, replacing the list. A back button returns to the list."}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Breakpoint",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Breakpoint"}],["$","th","Layout",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Layout"}],["$","th","Behavior",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Behavior"}]]}]}],["$","tbody",null,{"children":[["$","tr","≥ 768px (md)",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"≥ 768px (md)"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Side by side"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Both panels visible. Selecting a row updates the detail in place."}]]}],["$","tr","< 768px",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"< 768px"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Single panel"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Only one panel visible at a time. Row tap pushes detail. Back button returns to list."}]]}]]}]]}]}]]}]
+d:T75e,"use client";
+
+import { useState } from "react";
+
+interface Item { id: number; title: string; /* … */ }
+
+export function MasterDetail({ items }: { items: Item[] }) {
+  const [selected, setSelected] = useState<Item>(items[0]);
+  const [showDetail, setShowDetail] = useState(false);
+
+  return (
+    <div className="flex h-full border rounded-xl overflow-hidden">
+
+      {/* Master list — hidden on mobile when detail is open */}
+      <div className={cn(
+        "w-[260px] flex-shrink-0 border-r flex flex-col",
+        showDetail && "hidden md:flex"
+      )}>
+        <div className="px-4 py-3 border-b">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-muted">
+            {items.length} items
+          </p>
+        </div>
+        <div className="flex-1 overflow-y-auto">
+          {items.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => { setSelected(item); setShowDetail(true); }}
+              className={cn(
+                "w-full px-4 py-3 text-left border-b last:border-0 transition-colors",
+                selected.id === item.id
+                  ? "bg-accent-subtle text-accent"
+                  : "hover:bg-surface"
+              )}
+            >
+              {item.title}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Detail — hidden on mobile when list is shown */}
+      <div className={cn("flex-1 flex flex-col", !showDetail && "hidden md:flex")}>
+        {/* Back button — mobile only */}
+        <button
+          onClick={() => setShowDetail(false)}
+          className="md:hidden px-4 py-3 border-b text-left text-accent"
+        >
+          ← Back
+        </button>
+        <div className="flex-1 overflow-y-auto p-6">
+          {/* Render selected item detail */}
+          <h1>{selected.title}</h1>
+        </div>
+      </div>
+
+    </div>
+  );
+}e:Td8d,<div class="master-detail">
+
+  <!-- Master panel -->
+  <nav class="master-panel" id="masterPanel">
+    <div class="master-header">
+      <span class="master-count">5 items</span>
+    </div>
+    <ul class="master-list" role="listbox" aria-label="Items">
+      <li class="master-item master-item--selected"
+          role="option" aria-selected="true"
+          onclick="selectItem(this, 'item-1')">
+        Jamieson Rothwell
+      </li>
+      <li class="master-item" role="option" aria-selected="false"
+          onclick="selectItem(this, 'item-2')">
+        Sam Park
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Detail panel -->
+  <main class="detail-panel" id="detailPanel">
+    <button class="back-btn" onclick="showMaster()" aria-label="Back to list">
+      ← Back
+    </button>
+    <div id="item-1" class="detail-content">
+      <h1>Jamieson Rothwell</h1>
+      <!-- Detail content -->
+    </div>
+    <div id="item-2" class="detail-content" hidden>
+      <h1>Sam Park</h1>
+    </div>
+  </main>
+
+</div>
+
+<style>
+  .master-detail {
+    display: flex;
+    height: 100%;
+    border: 1px solid rgb(var(--border));
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .master-panel {
+    width: 260px;
+    flex-shrink: 0;
+    border-right: 1px solid rgb(var(--border));
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .master-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgb(var(--border));
+  }
+
+  .master-list {
+    flex: 1;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0; margin: 0;
+  }
+
+  .master-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(var(--border-subtle));
+    font-size: 13px;
+    color: rgb(var(--text-primary));
+    transition: background 100ms;
+  }
+  .master-item:hover { background: rgb(var(--surface)); }
+  .master-item--selected {
+    background: rgb(var(--accent-subtle));
+    color: rgb(var(--accent));
+  }
+
+  .detail-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 0;
+  }
+
+  .detail-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+  }
+
+  .back-btn {
+    display: none; /* shown on mobile */
+    padding: 12px 16px;
+    border-bottom: 1px solid rgb(var(--border));
+    background: none; border-top: none;
+    color: rgb(var(--accent));
+    font-size: 13px; cursor: pointer;
+    text-align: left;
+  }
+
+  /* Mobile breakpoint */
+  @media (max-width: 768px) {
+    .master-detail { position: relative; }
+
+    .master-panel { width: 100%; border-right: none; }
+    .detail-panel {
+      position: absolute; inset: 0;
+      background: rgb(var(--background));
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .detail-panel.is-open { transform: translateX(0); }
+    .back-btn { display: block; }
+  }
+</style>
+
+<script>
+  function selectItem(el, id) {
+    document.querySelectorAll(".master-item")
+      .forEach(i => { i.classList.remove("master-item--selected"); i.ariaSelected = "false"; });
+    el.classList.add("master-item--selected");
+    el.ariaSelected = "true";
+
+    document.querySelectorAll(".detail-content")
+      .forEach(d => d.hidden = true);
+    document.getElementById(id).hidden = false;
+
+    // Mobile: slide in detail panel
+    document.getElementById("detailPanel").classList.add("is-open");
+  }
+
+  function showMaster() {
+    document.getElementById("detailPanel").classList.remove("is-open");
+  }
+</script>f:Tba0,import SwiftUI
+
+struct Contact: Identifiable, Hashable {
+    let id: Int
+    let name: String
+    let role: String
+    // … more fields
+}
+
+struct MasterDetailView: View {
+    let contacts: [Contact]
+    @State private var selectedContact: Contact?
+
+    var body: some View {
+        NavigationSplitView {
+            // Master — list column
+            List(contacts, selection: $selectedContact) { contact in
+                NavigationLink(value: contact) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(contact.name)
+                            .font(.system(size: 13, weight: .medium))
+                        Text(contact.role)
+                            .font(.system(size: 11))
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(.vertical, 4)
+                }
+            }
+            .navigationTitle("Team")
+            .listStyle(.sidebar)
+        } detail: {
+            // Detail — right column
+            if let contact = selectedContact {
+                ContactDetailView(contact: contact)
+            } else {
+                ContentUnavailableView(
+                    "Select a contact",
+                    systemImage: "person.circle",
+                    description: Text("Choose a team member from the list")
+                )
+            }
+        }
+    }
+}
+
+struct ContactDetailView: View {
+    let contact: Contact
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                // Hero header
+                HStack(spacing: 16) {
+                    Circle()
+                        .fill(Color.accentColor.opacity(0.2))
+                        .frame(width: 64, height: 64)
+                        .overlay(
+                            Text(contact.name.prefix(2).uppercased())
+                                .font(.system(size: 20, weight: .semibold))
+                                .foregroundColor(.accentColor)
+                        )
+
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(contact.name)
+                            .font(.title2.weight(.semibold))
+                        Text(contact.role)
+                            .foregroundColor(.secondary)
+                    }
+                }
+
+                Divider()
+
+                // Details
+                // Add more rows here…
+            }
+            .padding(24)
+        }
+        .navigationTitle(contact.name)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button("Edit") { }
+            }
+        }
+    }
+}
+
+#Preview {
+    MasterDetailView(contacts: [
+        Contact(id: 1, name: "Jamieson Rothwell", role: "Founder"),
+        Contact(id: 2, name: "Sam Park",          role: "Engineer"),
+        Contact(id: 3, name: "Lena Müller",       role: "Designer"),
+    ])
+}7:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["The React implementation uses a single"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"showDetail"}]," ","boolean to toggle panel visibility on mobile. On desktop, both panels are always rendered and visible — no JS is needed to switch between them, just"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"md:flex"}]," and"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"hidden"}]," ","utility classes. The SwiftUI implementation uses"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"NavigationSplitView"}]," ","which handles the column/stack transition automatically."]}],["$","$Lc",null,{"code":{"react":{"filename":"MasterDetail.tsx","code":"$d"},"html":{"filename":"master-detail.html","code":"$e"},"swift":{"filename":"MasterDetailView.swift","code":"$f"}}}]]}]
+8:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Design decisions"}],["$","ul",null,{"className":"space-y-4 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Always have a selection",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Always have a selection","."]}]," ","On load, default-select the first item so the detail panel is never empty. An empty detail state creates a jarring visual hole."]}]]}],["$","li","Keep the master list narrow",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Keep the master list narrow","."]}]," ","240–320px is the sweet spot. Wider and the detail panel loses valuable real estate. Narrower and row content gets truncated too aggressively."]}]]}],["$","li","Selected row highlight",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Selected row highlight","."]}]," ","Use a subtle accent background (not a strong color) for the selected row. The detail panel already makes the selection obvious — the list highlight is just a secondary cue."]}]]}],["$","li","Independent scroll areas",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Independent scroll areas","."]}]," ","The master list and the detail both scroll independently. The outer container has overflow: hidden; each panel has overflow-y: auto with flex: 1."]}]]}],["$","li","Back button on mobile",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Back button on mobile","."]}]," ","Use native browser history (router.push / NavigationLink) when possible so the hardware back button and gesture work without extra code."]}]]}]]}]]}]
+9:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","The master list should have role=\"listbox\" and each item role=\"option\" with aria-selected.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The master list should have role=\"listbox\" and each item role=\"option\" with aria-selected."]}],["$","li","When a new item is selected, move focus to the detail heading so keyboard and screen reader users know the panel has updated.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"When a new item is selected, move focus to the detail heading so keyboard and screen reader users know the panel has updated."]}],["$","li","The back button on mobile must be visible and focusable — don't hide it with opacity or pointer-events-none.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The back button on mobile must be visible and focusable — don't hide it with opacity or pointer-events-none."]}],["$","li","Both panels should be keyboard reachable via Tab. On desktop, Tab should cycle: list → detail → list.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Both panels should be keyboard reachable via Tab. On desktop, Tab should cycle: list → detail → list."]}],["$","li","On mobile, when the detail slides in, trap focus within it until the user presses Back.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"On mobile, when the detail slides in, trap focus within it until the user presses Back."]}]]}]]}]
+a:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0.7sdx6jye8or.js","async":true}]
+b:["$","$L10",null,{"children":["$","$11",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]
+12:null

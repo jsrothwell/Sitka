@@ -1,0 +1,148 @@
+1:"$Sreact.fragment"
+3:I[82541,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ThemeProvider"]
+4:I[88452,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"DocsShell"]
+5:I[2790,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+6:I[45379,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+10:I[41146,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default",1]
+:HL["/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","style"]
+:HL["/Sitka/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Sitka/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:T7d1,
+  try {
+    var t = localStorage.getItem('sitka-theme');
+    var dark = t === 'dark' || ((!t || t === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var r = document.documentElement;
+    if (dark) {
+      r.classList.add('dark');
+      r.style.colorScheme = 'dark';
+      r.style.setProperty('--background',      '9 9 12');
+      r.style.setProperty('--surface',         '13 13 17');
+      r.style.setProperty('--surface-raised',  '22 22 28');
+      r.style.setProperty('--surface-hover',   '32 32 40');
+      r.style.setProperty('--border',          '38 38 48');
+      r.style.setProperty('--border-subtle',   '26 26 33');
+      r.style.setProperty('--text-primary',    '242 242 246');
+      r.style.setProperty('--text-secondary',  '155 155 170');
+      r.style.setProperty('--text-tertiary',   '100 100 115');
+      r.style.setProperty('--accent-subtle',   '10 38 21');
+      r.style.setProperty('--accent-muted',    '20 72 39');
+      r.style.setProperty('--nav-active-color','rgb(52, 168, 101)');
+      r.style.setProperty('--card-tint-bg',    'rgb(12, 28, 18)');
+    } else {
+      r.style.colorScheme = 'light';
+      r.style.setProperty('--background',      '252 252 253');
+      r.style.setProperty('--surface',         '255 255 255');
+      r.style.setProperty('--surface-raised',  '246 246 248');
+      r.style.setProperty('--surface-hover',   '240 240 244');
+      r.style.setProperty('--border',          '224 224 231');
+      r.style.setProperty('--border-subtle',   '240 240 244');
+      r.style.setProperty('--text-primary',    '15 15 18');
+      r.style.setProperty('--text-secondary',  '85 85 99');
+      r.style.setProperty('--text-tertiary',   '130 130 147');
+      r.style.setProperty('--accent-subtle',   '232 248 239');
+      r.style.setProperty('--accent-muted',    '166 220 190');
+      r.style.setProperty('--nav-active-color','rgb(33, 150, 83)');
+      r.style.setProperty('--card-tint-bg',    'rgba(11, 55, 30, 0.06)');
+    }
+  } catch(e) {}
+0:{"P":null,"c":["","libraries","ios",""],"q":"","i":false,"f":[[["",{"children":["libraries",{"children":["ios",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Sitka/_next/static/chunks/04.natf_9zy-6.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Sitka/_next/static/chunks/05jbn25z0-c7i.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/Sitka/_next/static/chunks/077bcbxhcexta.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/Sitka/_next/static/chunks/090isu0jqq8wu.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"inter_7b064e0d-module__MOT0tq__variable jetbrains_mono_9a2f2d6c-module__wsyXyG__variable","suppressHydrationWarning":true,"children":["$","body",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{"children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L7","$L8"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],"$L9","$La"]}]}]]}],{"children":["$Lb",{"children":["$Lc",{"children":["$Ld",{},null,false,null]},null,false,"$@e"]},null,false,"$@e"]},null,false,null],"$Lf",false]],"m":"$undefined","G":["$10",["$L11"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"RUQIyAf0qAkfAB-SIdmO1"}
+12:I[35412,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],""]
+13:I[20646,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0xj7il9kgcswu.js"],""]
+14:I[51334,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0xj7il9kgcswu.js"],"CodeBlock"]
+1d:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ViewportBoundary"]
+1f:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"MetadataBoundary"]
+20:"$Sreact.suspense"
+7:["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}]
+8:["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]
+9:["$","$L12",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-SC89RP965Q","strategy":"afterInteractive"}]
+a:["$","$L12",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n          gtag('config', 'G-SC89RP965Q');\n        "}]
+b:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+c:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+15:T9a9,import SwiftUI
+
+public enum SitkaTokens {
+
+  // MARK: — Color
+  public enum Color {
+    // Brand
+    public static let brandCyan    = SwiftUI.Color(hex: "#00C0E8")
+    public static let brand500     = SwiftUI.Color(hex: "#34a865")
+    public static let brand600     = SwiftUI.Color(hex: "#289452")
+
+    // Semantic
+    public static let success      = SwiftUI.Color(hex: "#22c55e")
+    public static let warning      = SwiftUI.Color(hex: "#f59e0b")
+    public static let error        = SwiftUI.Color(hex: "#ef4444")
+    public static let info         = SwiftUI.Color(hex: "#3b82f6")
+
+    // Dark-mode surface
+    public static let background   = SwiftUI.Color(hex: "#09090c")
+    public static let surface      = SwiftUI.Color(hex: "#0d0d11")
+    public static let surfaceRaised = SwiftUI.Color(hex: "#16161c")
+    public static let accent       = brandCyan
+    public static let textPrimary  = SwiftUI.Color(hex: "#f2f2f6")
+    public static let textSecondary = SwiftUI.Color(hex: "#9b9baa")
+  }
+
+  // MARK: — Spacing
+  public enum Spacing {
+    public static let s1: CGFloat = 4
+    public static let s2: CGFloat = 8
+    public static let s3: CGFloat = 12
+    public static let s4: CGFloat = 16
+    public static let s5: CGFloat = 20
+    public static let s6: CGFloat = 24
+    public static let s8: CGFloat = 32
+    public static let s10: CGFloat = 40
+    public static let s12: CGFloat = 48
+    public static let s16: CGFloat = 64
+  }
+
+  // MARK: — Border Radius
+  public enum Radius {
+    public static let sm: CGFloat = 6
+    public static let md: CGFloat = 10
+    public static let lg: CGFloat = 14
+    public static let xl: CGFloat = 20
+    public static let full: CGFloat = 9999
+  }
+
+  // MARK: — Typography
+  public enum Typography {
+    public static let fontSans = "Inter"
+    public static let sizeXS: CGFloat = 11
+    public static let sizeSM: CGFloat = 13
+    public static let sizeBase: CGFloat = 15
+    public static let sizeLG: CGFloat = 17
+    public static let sizeXL: CGFloat = 20
+    public static let size2XL: CGFloat = 24
+  }
+}
+
+// MARK: — Color hex helper
+private extension SwiftUI.Color {
+  init(hex: String) {
+    let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+    var int: UInt64 = 0
+    Scanner(string: hex).scanHexInt64(&int)
+    let r = Double((int >> 16) & 0xff) / 255
+    let g = Double((int >>  8) & 0xff) / 255
+    let b = Double( int        & 0xff) / 255
+    self.init(red: r, green: g, blue: b)
+  }
+}d:["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":[["$","div",null,{"className":"inline-flex items-center gap-1.5 mb-4 px-2.5 py-1 rounded-full border border-[rgb(var(--accent-muted))] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[10px] font-semibold uppercase tracking-wider","children":[["$","span",null,{"className":"w-1.5 h-1.5 rounded-full bg-current"}],"Library"]}],["$","h1",null,{"className":"mb-2.5","children":"iOS · SwiftUI"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"Bring Sitka's color, spacing, radius, shadow, and typography tokens into a SwiftUI project as typed Swift constants — generated from the same source JSON that powers the web."}]]}],["$","div",null,{"className":"space-y-12","children":[["$","section",null,{"children":[["$","div",null,{"className":"flex items-center gap-2.5 mb-3","children":[["$","span",null,{"className":"flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold","children":"1"}],["$","h2",null,{"className":"text-[18px] font-semibold text-[rgb(var(--text-primary))]","children":"Download the Swift token file"}]]}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-4","children":["Go to the"," ",["$","$L13",null,{"href":"/tokens/export","className":"text-[rgb(var(--accent))] underline underline-offset-2","children":"Token Export"}]," ","page and download ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"SitkaTokens.swift"}],". It is auto-generated from ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"tokens.json"}]," — regenerate whenever tokens change."]}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-4","children":"Or generate it yourself using Style Dictionary:"}],["$","$L14",null,{"language":"bash","code":"npx style-dictionary build --config style-dictionary.config.js\n# outputs dist/SitkaTokens.swift"}]]}],["$","section",null,{"children":[["$","div",null,{"className":"flex items-center gap-2.5 mb-3","children":[["$","span",null,{"className":"flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold","children":"2"}],["$","h2",null,{"className":"text-[18px] font-semibold text-[rgb(var(--text-primary))]","children":"Add to your Xcode project"}]]}],["$","ol",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))] ml-4 list-decimal","children":[["$","li",null,{"children":["Drag ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"SitkaTokens.swift"}]," into your Xcode project navigator."]}],["$","li",null,{"children":["In the ",["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":"Add Files"}]," dialog, ensure ",["$","em",null,{"children":"Copy items if needed"}]," is checked."]}],["$","li",null,{"children":"Make sure the file is added to your app target."}]]}]]}],["$","section",null,{"children":[["$","div",null,{"className":"flex items-center gap-2.5 mb-3","children":[["$","span",null,{"className":"flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold","children":"3"}],["$","h2",null,{"className":"text-[18px] font-semibold text-[rgb(var(--text-primary))]","children":"What's in SitkaTokens.swift"}]]}],["$","$L14",null,{"language":"swift","filename":"SitkaTokens.swift","code":"$15"}]]}],"$L16","$L17","$L18","$L19"]}]]}],["$L1a"],"$L1b"]}]
+1c:[]
+e:"$W1c"
+f:["$","$1","h",{"children":[null,["$","$L1d",null,{"children":"$L1e"}],["$","div",null,{"hidden":true,"children":["$","$L1f",null,{"children":["$","$20",null,{"name":"Next.Metadata","children":"$L21"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+11:["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+22:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+16:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3","children":"Usage examples"}],["$","h3",null,{"className":"text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2 mt-5","children":"Colors"}],["$","$L14",null,{"language":"swift","code":"Text(\"Hello Sitka\")\n    .foregroundStyle(SitkaTokens.Color.textPrimary)\n\nRectangle()\n    .fill(SitkaTokens.Color.accent)\n    .frame(height: 2)"}],["$","h3",null,{"className":"text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2 mt-6","children":"Spacing & radius"}],["$","$L14",null,{"language":"swift","code":"VStack(spacing: SitkaTokens.Spacing.s4) {\n    Text(\"Card title\")\n    Text(\"Subtitle\")\n        .foregroundStyle(SitkaTokens.Color.textSecondary)\n}\n.padding(SitkaTokens.Spacing.s6)\n.background(SitkaTokens.Color.surface)\n.clipShape(RoundedRectangle(cornerRadius: SitkaTokens.Radius.lg))"}],["$","h3",null,{"className":"text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2 mt-6","children":"Primary button"}],["$","$L14",null,{"language":"swift","code":"struct SitkaButton: View {\n    let title: String\n    var action: () -> Void\n\n    var body: some View {\n        Button(action: action) {\n            Text(title)\n                .font(.system(size: SitkaTokens.Typography.sizeSM, weight: .medium))\n                .foregroundStyle(.white)\n                .padding(.horizontal, SitkaTokens.Spacing.s5)\n                .frame(height: 40)\n                .background(SitkaTokens.Color.accent)\n                .clipShape(RoundedRectangle(cornerRadius: SitkaTokens.Radius.md))\n        }\n        .buttonStyle(.plain)\n    }\n}\n\n// Usage\nSitkaButton(title: \"Get Started\") {\n    print(\"tapped\")\n}"}]]}]
+17:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3","children":"Dark / Light mode"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-4","children":["Sitka is dark-first. To support both modes, define adaptive colors using"," ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"UIColor"}]," or Color Assets in Xcode and reference the same semantic names:"]}],["$","$L14",null,{"language":"swift","code":"// In Assets.xcassets / SitkaColors.xcassets\n// Create a Color Set named \"background\" with:\n//   Light: #FAFAFA\n//   Dark:  #09090C\n// Then use it as:\nColor(\"background\")"}]]}]
+18:["$","section",null,{"className":"rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))] p-5","children":[["$","h2",null,{"className":"text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-3","children":"Requirements"}],["$","div",null,{"className":"grid grid-cols-3 gap-3 text-[13px]","children":[["$","div","Swift",{"children":[["$","p",null,{"className":"text-[rgb(var(--text-tertiary))] text-[11px] uppercase font-semibold tracking-wide","children":"Swift"}],["$","p",null,{"className":"text-[rgb(var(--text-primary))] font-mono","children":"5.9+"}]]}],["$","div","iOS",{"children":[["$","p",null,{"className":"text-[rgb(var(--text-tertiary))] text-[11px] uppercase font-semibold tracking-wide","children":"iOS"}],["$","p",null,{"className":"text-[rgb(var(--text-primary))] font-mono","children":"16+"}]]}],["$","div","Xcode",{"children":[["$","p",null,{"className":"text-[rgb(var(--text-tertiary))] text-[11px] uppercase font-semibold tracking-wide","children":"Xcode"}],["$","p",null,{"className":"text-[rgb(var(--text-primary))] font-mono","children":"15+"}]]}]]}]]}]
+19:["$","p",null,{"className":"text-[13px] text-[rgb(var(--text-tertiary))]","children":["Back to"," ",["$","$L13",null,{"href":"/libraries","className":"text-[rgb(var(--accent))] underline underline-offset-2","children":"all libraries"}],"."]}]
+1a:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0xj7il9kgcswu.js","async":true,"nonce":"$undefined"}]
+1b:["$","$L22",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@23"}]}]
+1e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+24:I[88599,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"IconMark"]
+21:[["$","title","0",{"children":"iOS · SwiftUI — Libraries — Sitka Design System"}],["$","meta","1",{"name":"description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","2",{"name":"keywords","content":"design system,components,tokens,React,SwiftUI"}],["$","meta","3",{"property":"og:title","content":"Sitka Design System"}],["$","meta","4",{"property":"og:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","5",{"property":"og:url","content":"https://jsrothwell.github.io/Sitka/"}],["$","meta","6",{"property":"og:site_name","content":"Sitka Design System"}],["$","meta","7",{"property":"og:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Sitka Design System"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Sitka Design System"}],["$","meta","14",{"name":"twitter:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","15",{"name":"twitter:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","link","16",{"rel":"icon","href":"/Sitka/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L24","17",{}]]
+23:null

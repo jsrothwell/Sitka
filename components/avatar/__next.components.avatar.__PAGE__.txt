@@ -1,0 +1,262 @@
+1:"$Sreact.fragment"
+2:I[60701,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0au0c34rvho66.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"ComponentPreview"]
+13:I[78241,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0au0c34rvho66.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"PlatformTabs"]
+1a:I[38352,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0au0c34rvho66.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"AvatarMobileDemo"]
+1b:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+1c:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Avatar"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"User representation with image, initials fallback, five sizes, and four status indicators. AvatarGroup stacks multiple avatars with an overlap ring."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","$L2",null,{"grid":true,"children":[["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-16 h-16","aria-label":"Jamieson Rothwell","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[19px]","children":"JR"}]}],["$","span",null,{"aria-label":"online","className":"absolute rounded-full ring-[rgb(var(--surface))] bg-emerald-500 w-3.5 h-3.5 ring-[3px] bottom-1 right-1"}]]}],["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-12 h-12","aria-label":"Sam Park","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[15px]","children":"SP"}]}],["$","span",null,{"aria-label":"away","className":"absolute rounded-full ring-[rgb(var(--surface))] bg-amber-400 w-3 h-3 ring-2 bottom-0.5 right-0.5"}]]}],["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-10 h-10","aria-label":"Lena Müller","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[13px]","children":"LM"}]}],["$","span",null,{"aria-label":"busy","className":"absolute rounded-full ring-[rgb(var(--surface))] bg-red-400 w-2.5 h-2.5 ring-2 bottom-0.5 right-0.5"}]]}],["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-8 h-8","aria-label":"Dev Bot","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[11px]","children":"DB"}]}],["$","span",null,{"aria-label":"offline","className":"absolute rounded-full ring-[rgb(var(--surface))] bg-[rgb(var(--text-tertiary))] w-2 h-2 ring-2 bottom-0 right-0"}]]}],["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-6 h-6","aria-label":"A","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[9px]","children":"A"}]}],"$undefined"]}]]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Sizes"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["Five sizes cover icon-scale (","xs","), compact lists (","sm","), standard UI (","md","), profile cards (","lg","), and hero sections (","xl",")."]}],["$","$L2",null,{"children":[["$","div","xs",{"className":"flex flex-col items-center gap-2","children":[["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-6 h-6","aria-label":"Jamieson Rothwell","role":"img","children":"$L3"}],"$undefined"]}],"$L4"]}],"$L5","$L6","$L7","$L8"]}]]}],"$L9","$La","$Lb","$Lc","$Ld","$Le","$Lf"]}],["$L10","$L11"],"$L12"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"RUQIyAf0qAkfAB-SIdmO1"}
+3:["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[9px]","children":"JR"}]
+4:["$","code",null,{"className":"text-[10px] font-mono text-[rgb(var(--text-tertiary))]","children":"xs"}]
+5:["$","div","sm",{"className":"flex flex-col items-center gap-2","children":[["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-8 h-8","aria-label":"Jamieson Rothwell","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[11px]","children":"JR"}]}],"$undefined"]}],["$","code",null,{"className":"text-[10px] font-mono text-[rgb(var(--text-tertiary))]","children":"sm"}]]}]
+6:["$","div","md",{"className":"flex flex-col items-center gap-2","children":[["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-10 h-10","aria-label":"Jamieson Rothwell","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[13px]","children":"JR"}]}],"$undefined"]}],["$","code",null,{"className":"text-[10px] font-mono text-[rgb(var(--text-tertiary))]","children":"md"}]]}]
+7:["$","div","lg",{"className":"flex flex-col items-center gap-2","children":[["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-12 h-12","aria-label":"Jamieson Rothwell","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[15px]","children":"JR"}]}],"$undefined"]}],["$","code",null,{"className":"text-[10px] font-mono text-[rgb(var(--text-tertiary))]","children":"lg"}]]}]
+8:["$","div","xl",{"className":"flex flex-col items-center gap-2","children":[["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-16 h-16","aria-label":"Jamieson Rothwell","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[19px]","children":"JR"}]}],"$undefined"]}],["$","code",null,{"className":"text-[10px] font-mono text-[rgb(var(--text-tertiary))]","children":"xl"}]]}]
+9:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Status"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"A dot in the bottom-right corner communicates presence. The dot is sized proportionally and ringed with the surface color to lift it off any background."}],["$","$L2",null,{"children":[["$","div","online",{"className":"flex flex-col items-center gap-2","children":[["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-10 h-10","aria-label":"Sam Park","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[13px]","children":"SP"}]}],["$","span",null,{"aria-label":"online","className":"absolute rounded-full ring-[rgb(var(--surface))] bg-emerald-500 w-2.5 h-2.5 ring-2 bottom-0.5 right-0.5"}]]}],["$","code",null,{"className":"text-[10px] font-mono text-[rgb(var(--text-tertiary))]","children":"online"}]]}],["$","div","away",{"className":"flex flex-col items-center gap-2","children":[["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-10 h-10","aria-label":"Sam Park","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[13px]","children":"SP"}]}],["$","span",null,{"aria-label":"away","className":"absolute rounded-full ring-[rgb(var(--surface))] bg-amber-400 w-2.5 h-2.5 ring-2 bottom-0.5 right-0.5"}]]}],["$","code",null,{"className":"text-[10px] font-mono text-[rgb(var(--text-tertiary))]","children":"away"}]]}],["$","div","busy",{"className":"flex flex-col items-center gap-2","children":[["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-10 h-10","aria-label":"Sam Park","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[13px]","children":"SP"}]}],["$","span",null,{"aria-label":"busy","className":"absolute rounded-full ring-[rgb(var(--surface))] bg-red-400 w-2.5 h-2.5 ring-2 bottom-0.5 right-0.5"}]]}],["$","code",null,{"className":"text-[10px] font-mono text-[rgb(var(--text-tertiary))]","children":"busy"}]]}],["$","div","offline",{"className":"flex flex-col items-center gap-2","children":[["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-10 h-10","aria-label":"Sam Park","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[13px]","children":"SP"}]}],["$","span",null,{"aria-label":"offline","className":"absolute rounded-full ring-[rgb(var(--surface))] bg-[rgb(var(--text-tertiary))] w-2.5 h-2.5 ring-2 bottom-0.5 right-0.5"}]]}],["$","code",null,{"className":"text-[10px] font-mono text-[rgb(var(--text-tertiary))]","children":"offline"}]]}]]}]]}]
+a:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Initials fallback"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["When no ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"src"}]," is provided, initials are derived from the ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"alt"}]," prop (first + last word). Pass ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"initials"}]," to override."]}],["$","$L2",null,{"children":[["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-10 h-10","aria-label":"Jamieson Rothwell","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[13px]","children":"JR"}]}],"$undefined"]}],["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-10 h-10","aria-label":"Sam Park","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[13px]","children":"SP"}]}],"$undefined"]}],["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-10 h-10","aria-label":"Claude","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[13px]","children":"AI"}]}],"$undefined"]}],["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-10 h-10","aria-label":"X","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[13px]","children":"X"}]}],"$undefined"]}]]}]]}]
+b:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Avatar group"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":[["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"AvatarGroup"}]," stacks avatars with a negative margin and a surface-colored ring to separate them visually."]}],["$","$L2",null,{"children":["$","div",null,{"className":"flex items-center","children":[["$","span","0",{"className":"relative inline-flex ring-2 ring-[rgb(var(--surface))] rounded-full","children":["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-8 h-8","aria-label":"Jamieson Rothwell","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[11px]","children":"JR"}]}],"$undefined"]}]}],["$","span","1",{"className":"relative inline-flex ring-2 ring-[rgb(var(--surface))] rounded-full -ml-2","children":["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-8 h-8","aria-label":"Sam Park","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[11px]","children":"SP"}]}],"$undefined"]}]}],["$","span","2",{"className":"relative inline-flex ring-2 ring-[rgb(var(--surface))] rounded-full -ml-2","children":["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-8 h-8","aria-label":"Lena Müller","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[11px]","children":"LM"}]}],"$undefined"]}]}],["$","span","3",{"className":"relative inline-flex ring-2 ring-[rgb(var(--surface))] rounded-full -ml-2","children":["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-8 h-8","aria-label":"Amir Karimi","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[11px]","children":"AK"}]}],"$undefined"]}]}],["$","span","4",{"className":"relative inline-flex ring-2 ring-[rgb(var(--surface))] rounded-full -ml-2","children":["$","span",null,{"className":"relative inline-flex flex-shrink-0","children":[["$","span",null,{"className":"inline-flex items-center justify-center rounded-full overflow-hidden bg-[rgb(var(--accent-muted))] select-none w-8 h-8","aria-label":"Dev Bot","role":"img","children":["$","span",null,{"className":"font-semibold text-[rgb(var(--accent))] text-[11px]","children":"DB"}]}],"$undefined"]}]}]]}]}]]}]
+14:T8e0,<!-- Image avatar -->
+<span class="avatar" aria-label="Jamieson Rothwell">
+  <img src="/avatars/jamieson.jpg" alt="Jamieson Rothwell" />
+</span>
+
+<!-- Initials fallback -->
+<span class="avatar" aria-label="Jamieson Rothwell">
+  <span class="avatar-initials">JR</span>
+</span>
+
+<!-- With status dot -->
+<span class="avatar avatar-with-status">
+  <span class="avatar-initials">SP</span>
+  <span class="avatar-status avatar-status-online" aria-label="online"></span>
+</span>
+
+<!-- Avatar group -->
+<div class="avatar-group">
+  <span class="avatar avatar-sm"><span class="avatar-initials">SP</span></span>
+  <span class="avatar avatar-sm"><span class="avatar-initials">LM</span></span>
+  <span class="avatar avatar-sm"><span class="avatar-initials">AK</span></span>
+</div>
+
+<style>
+  .avatar {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgb(var(--accent-muted));
+    user-select: none;
+    flex-shrink: 0;
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+  .avatar-initials {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(var(--accent));
+    line-height: 1;
+  }
+
+  /* Sizes */
+  .avatar-xs { width: 24px; height: 24px; }
+  .avatar-xs .avatar-initials { font-size: 9px; }
+  .avatar-sm { width: 32px; height: 32px; }
+  .avatar-sm .avatar-initials { font-size: 11px; }
+  .avatar-lg { width: 48px; height: 48px; }
+  .avatar-lg .avatar-initials { font-size: 15px; }
+  .avatar-xl { width: 64px; height: 64px; }
+  .avatar-xl .avatar-initials { font-size: 19px; }
+
+  /* Status dot */
+  .avatar-with-status { overflow: visible; }
+  .avatar-status {
+    position: absolute;
+    bottom: 1px; right: 1px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    border: 2px solid rgb(var(--surface));
+  }
+  .avatar-status-online  { background: #10b981; }
+  .avatar-status-offline { background: rgb(var(--text-tertiary)); }
+  .avatar-status-away    { background: #f59e0b; }
+  .avatar-status-busy    { background: #f87171; }
+
+  /* Group */
+  .avatar-group { display: flex; align-items: center; }
+  .avatar-group .avatar + .avatar { margin-left: -8px; ring: 2px solid rgb(var(--surface)); }
+</style>15:Tc2b,import SwiftUI
+
+enum SitkaAvatarStatus { case online, offline, away, busy }
+enum SitkaAvatarSize   { case xs, sm, md, lg, xl }
+
+struct SitkaAvatar: View {
+    var imageURL: URL? = nil
+    var alt: String = ""
+    var initials: String? = nil
+    var size: SitkaAvatarSize = .md
+    var status: SitkaAvatarStatus? = nil
+
+    var body: some View {
+        ZStack(alignment: .bottomTrailing) {
+            Circle()
+                .fill(Color.accentColor.opacity(0.2))
+                .frame(width: diameter, height: diameter)
+                .overlay {
+                    if let url = imageURL {
+                        AsyncImage(url: url) { image in
+                            image.resizable().scaledToFill()
+                        } placeholder: { Color.clear }
+                        .clipShape(Circle())
+                    } else {
+                        Text(resolvedInitials)
+                            .font(.system(size: fontSize, weight: .semibold))
+                            .foregroundColor(.accentColor)
+                    }
+                }
+                .accessibilityLabel(alt)
+
+            if let status {
+                Circle()
+                    .fill(statusColor(status))
+                    .frame(width: dotDiameter, height: dotDiameter)
+                    .overlay(Circle().stroke(Color(UIColor.systemBackground), lineWidth: dotBorder))
+                    .accessibilityLabel(statusLabel(status))
+            }
+        }
+    }
+
+    private var resolvedInitials: String {
+        if let i = initials { return String(i.prefix(2)).uppercased() }
+        let words = alt.split(separator: " ")
+        if words.count >= 2 { return String(words.first!.prefix(1) + words.last!.prefix(1)).uppercased() }
+        return String(alt.prefix(2)).uppercased()
+    }
+
+    private var diameter: CGFloat {
+        switch size { case .xs: 24; case .sm: 32; case .md: 40; case .lg: 48; case .xl: 64 }
+    }
+    private var fontSize: CGFloat {
+        switch size { case .xs: 9; case .sm: 11; case .md: 13; case .lg: 15; case .xl: 19 }
+    }
+    private var dotDiameter: CGFloat {
+        switch size { case .xs: 6; case .sm: 8; case .md: 10; case .lg: 12; case .xl: 14 }
+    }
+    private var dotBorder: CGFloat { size == .xs ? 1.5 : 2 }
+
+    private func statusColor(_ s: SitkaAvatarStatus) -> Color {
+        switch s {
+        case .online:  Color(hex: "#10b981")
+        case .offline: Color(UIColor.tertiaryLabel)
+        case .away:    Color(hex: "#f59e0b")
+        case .busy:    Color(hex: "#f87171")
+        }
+    }
+    private func statusLabel(_ s: SitkaAvatarStatus) -> String {
+        switch s { case .online: "Online"; case .offline: "Offline"; case .away: "Away"; case .busy: "Busy" }
+    }
+}
+
+#Preview {
+    HStack(spacing: 12) {
+        SitkaAvatar(alt: "Jamieson Rothwell", size: .xl, status: .online)
+        SitkaAvatar(alt: "Sam Park",    size: .lg, status: .away)
+        SitkaAvatar(alt: "Lena Müller", size: .md, status: .busy)
+        SitkaAvatar(alt: "Dev Bot",     size: .sm, status: .offline)
+        SitkaAvatar(alt: "A",           size: .xs)
+    }
+    .padding()
+}16:Tc27,import SwiftUI
+
+enum SitkaAvatarSize { case xs, sm, md, lg, xl }
+enum SitkaAvatarStatus { case online, offline, away, busy }
+
+struct SitkaAvatar: View {
+    let alt: String
+    var initials: String? = nil
+    var imageURL: URL? = nil
+    var size: SitkaAvatarSize = .md
+    var status: SitkaAvatarStatus? = nil
+
+    var body: some View {
+        ZStack(alignment: .bottomTrailing) {
+            Circle()
+                .fill(Color.accentColor.opacity(0.12))
+                .frame(width: diameter, height: diameter)
+                .overlay {
+                    if let url = imageURL {
+                        AsyncImage(url: url) { image in
+                            image.resizable().scaledToFill()
+                        } placeholder: { Color.clear }
+                        .clipShape(Circle())
+                    } else {
+                        Text(resolvedInitials)
+                            .font(.system(size: fontSize, weight: .semibold))
+                            .foregroundColor(.accentColor)
+                    }
+                }
+                .accessibilityLabel(alt)
+
+            if let status {
+                Circle()
+                    .fill(statusColor(status))
+                    .frame(width: dotDiameter, height: dotDiameter)
+                    .overlay(Circle().stroke(Color(NSColor.windowBackgroundColor), lineWidth: dotBorder))
+                    .accessibilityLabel(statusLabel(status))
+            }
+        }
+    }
+
+    private var resolvedInitials: String {
+        if let i = initials { return String(i.prefix(2)).uppercased() }
+        let words = alt.split(separator: " ")
+        if words.count >= 2 { return String(words.first!.prefix(1) + words.last!.prefix(1)).uppercased() }
+        return String(alt.prefix(2)).uppercased()
+    }
+
+    private var diameter: CGFloat {
+        switch size { case .xs: 20; case .sm: 28; case .md: 36; case .lg: 44; case .xl: 56 }
+    }
+    private var fontSize: CGFloat {
+        switch size { case .xs: 8; case .sm: 10; case .md: 12; case .lg: 14; case .xl: 17 }
+    }
+    private var dotDiameter: CGFloat {
+        switch size { case .xs: 5; case .sm: 7; case .md: 9; case .lg: 11; case .xl: 13 }
+    }
+    private var dotBorder: CGFloat { size == .xs ? 1.5 : 2 }
+
+    private func statusColor(_ s: SitkaAvatarStatus) -> Color {
+        switch s {
+        case .online:  Color(hex: "#10b981")
+        case .offline: Color(.tertiaryLabelColor)
+        case .away:    Color(hex: "#f59e0b")
+        case .busy:    Color(hex: "#f87171")
+        }
+    }
+    private func statusLabel(_ s: SitkaAvatarStatus) -> String {
+        switch s { case .online: "Online"; case .offline: "Offline"; case .away: "Away"; case .busy: "Busy" }
+    }
+}
+
+#Preview {
+    HStack(spacing: 10) {
+        SitkaAvatar(alt: "Jamieson Rothwell", size: .xl, status: .online)
+        SitkaAvatar(alt: "Sam Park",    size: .lg, status: .away)
+        SitkaAvatar(alt: "Lena Müller", size: .md, status: .busy)
+        SitkaAvatar(alt: "Dev Bot",     size: .sm, status: .offline)
+        SitkaAvatar(alt: "A",           size: .xs)
+    }
+    .padding()
+}c:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Avatar is a server component — no client-side state. The status dot and initials derivation are pure rendering logic."}],["$","$L13",null,{"code":{"react":{"filename":"Avatar.tsx","code":"import { Avatar, AvatarGroup } from \"@/components/ui/Avatar\";\n\n// Image avatar\n<Avatar src=\"/avatars/jamieson.jpg\" alt=\"Jamieson Rothwell\" />\n\n// Initials fallback (derived from alt)\n<Avatar alt=\"Jamieson Rothwell\" />        // → JR\n<Avatar alt=\"Claude\" initials=\"AI\" />     // → AI (explicit override)\n\n// Sizes\n<Avatar alt=\"Sam Park\" size=\"xs\" />\n<Avatar alt=\"Sam Park\" size=\"sm\" />\n<Avatar alt=\"Sam Park\" size=\"md\" />\n<Avatar alt=\"Sam Park\" size=\"lg\" />\n<Avatar alt=\"Sam Park\" size=\"xl\" />\n\n// Status indicators\n<Avatar alt=\"Sam Park\"    status=\"online\"  />\n<Avatar alt=\"Lena Müller\" status=\"away\"    />\n<Avatar alt=\"Dev Bot\"     status=\"busy\"    />\n<Avatar alt=\"Amir Karimi\" status=\"offline\" />\n\n// Avatar group\n<AvatarGroup>\n  <Avatar alt=\"Sam Park\"    size=\"sm\" />\n  <Avatar alt=\"Lena Müller\" size=\"sm\" />\n  <Avatar alt=\"Amir Karimi\" size=\"sm\" />\n  <Avatar alt=\"Dev Bot\"     size=\"sm\" />\n</AvatarGroup>"},"html":{"filename":"avatar.html","code":"$14"},"swift":{"filename":"SitkaAvatar.swift","code":"$15"},"macos":{"filename":"SitkaAvatar+macOS.swift","code":"$16"}}}]]}]
+d:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5","children":"Props"}],["$","div",null,{"className":"overflow-hidden rounded-xl border border-[rgb(var(--border))]","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]","children":[["$","th","Prop",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Prop"}],["$","th","Type",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Type"}],["$","th","Default",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Default"}],["$","th","Description",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Description"}]]}]}],["$","tbody",null,{"children":[["$","tr","src",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["src","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Image URL. When provided, renders an <img> inside the avatar."}]]}],["$","tr","alt",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["alt","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Accessible name. Used as the aria-label and to derive initials when src is absent."}]]}],["$","tr","initials",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["initials","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Explicit 1–2 character override for the fallback initials."}]]}],["$","tr","size",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["size","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\""}]}],"$L17","$L18"]}],"$L19"]}]]}]}]]}]
+e:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Mobile"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Avatars are primarily visual. On mobile, ensure interactive avatar areas meet touch target minimums and that AvatarGroup stacks don't overflow their containers."}],["$","$L2",null,{"className":"mb-6","children":["$","$L1a",null,{}]}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Scenario",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Scenario"}],["$","th","Guidance",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Guidance"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Tap target"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"If an avatar opens a profile or triggers an action, wrap it in a button with at least 44×44px of tappable area even if the avatar itself is smaller (e.g. sm at 24px)."}]]}],["$","tr","1",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"AvatarGroup on narrow screens"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Reduce the visible count or decrease avatar size when the group would overflow its container. Expose the \"+N\" overflow count rather than clipping silently."}]]}],["$","tr","2",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Image loading"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"On slow mobile connections, avatar images may take time to load. The initials fallback is rendered before the image resolves — ensure the initials + background color always look correct."}]]}],["$","tr","3",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Status dots on small sizes"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Status dots at xs/sm avatar sizes can become too small to notice. Only show status on md+ avatars, or increase the dot size relative to the avatar."}]]}]]}]]}]}]]}]
+f:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Always provide alt — it becomes the aria-label for the avatar container.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Always provide alt — it becomes the aria-label for the avatar container."]}],["$","li","Status dots have aria-label set to the status string (\"online\", \"away\", etc.).",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Status dots have aria-label set to the status string (\"online\", \"away\", etc.)."]}],["$","li","When src is present the inner <img> receives alt; the outer span gets role=img.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"When src is present the inner <img> receives alt; the outer span gets role=img."]}],["$","li","Initials-only avatars are decorative when the user's name is already visible nearby — in that case pass aria-hidden to the avatar.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Initials-only avatars are decorative when the user's name is already visible nearby — in that case pass aria-hidden to the avatar."]}],["$","li","AvatarGroup has no semantic role; describe the group with a nearby heading or aria-label on the parent.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"AvatarGroup has no semantic role; describe the group with a nearby heading or aria-label on the parent."]}]]}]]}]
+10:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0au0c34rvho66.js","async":true}]
+11:["$","script","script-1",{"src":"/Sitka/_next/static/chunks/0fi~f9476zu~_.js","async":true}]
+12:["$","$L1b",null,{"children":["$","$1c",null,{"name":"Next.MetadataOutlet","children":"$@1d"}]}]
+17:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"md\""}]}]
+18:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Controls diameter, font size, and status dot size."}]
+19:["$","tr","status",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["status","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"online\" | \"offline\" | \"away\" | \"busy\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Renders a colored dot indicator in the bottom-right corner."}]]}]
+1d:null

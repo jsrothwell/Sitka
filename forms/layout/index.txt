@@ -1,0 +1,232 @@
+1:"$Sreact.fragment"
+3:I[82541,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ThemeProvider"]
+4:I[88452,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"DocsShell"]
+5:I[2790,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+6:I[45379,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+10:I[41146,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default",1]
+:HL["/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","style"]
+:HL["/Sitka/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Sitka/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:T7d1,
+  try {
+    var t = localStorage.getItem('sitka-theme');
+    var dark = t === 'dark' || ((!t || t === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var r = document.documentElement;
+    if (dark) {
+      r.classList.add('dark');
+      r.style.colorScheme = 'dark';
+      r.style.setProperty('--background',      '9 9 12');
+      r.style.setProperty('--surface',         '13 13 17');
+      r.style.setProperty('--surface-raised',  '22 22 28');
+      r.style.setProperty('--surface-hover',   '32 32 40');
+      r.style.setProperty('--border',          '38 38 48');
+      r.style.setProperty('--border-subtle',   '26 26 33');
+      r.style.setProperty('--text-primary',    '242 242 246');
+      r.style.setProperty('--text-secondary',  '155 155 170');
+      r.style.setProperty('--text-tertiary',   '100 100 115');
+      r.style.setProperty('--accent-subtle',   '10 38 21');
+      r.style.setProperty('--accent-muted',    '20 72 39');
+      r.style.setProperty('--nav-active-color','rgb(52, 168, 101)');
+      r.style.setProperty('--card-tint-bg',    'rgb(12, 28, 18)');
+    } else {
+      r.style.colorScheme = 'light';
+      r.style.setProperty('--background',      '252 252 253');
+      r.style.setProperty('--surface',         '255 255 255');
+      r.style.setProperty('--surface-raised',  '246 246 248');
+      r.style.setProperty('--surface-hover',   '240 240 244');
+      r.style.setProperty('--border',          '224 224 231');
+      r.style.setProperty('--border-subtle',   '240 240 244');
+      r.style.setProperty('--text-primary',    '15 15 18');
+      r.style.setProperty('--text-secondary',  '85 85 99');
+      r.style.setProperty('--text-tertiary',   '130 130 147');
+      r.style.setProperty('--accent-subtle',   '232 248 239');
+      r.style.setProperty('--accent-muted',    '166 220 190');
+      r.style.setProperty('--nav-active-color','rgb(33, 150, 83)');
+      r.style.setProperty('--card-tint-bg',    'rgba(11, 55, 30, 0.06)');
+    }
+  } catch(e) {}
+0:{"P":null,"c":["","forms","layout",""],"q":"","i":false,"f":[[["",{"children":["forms",{"children":["layout",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Sitka/_next/static/chunks/04.natf_9zy-6.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Sitka/_next/static/chunks/05jbn25z0-c7i.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/Sitka/_next/static/chunks/077bcbxhcexta.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/Sitka/_next/static/chunks/090isu0jqq8wu.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"inter_7b064e0d-module__MOT0tq__variable jetbrains_mono_9a2f2d6c-module__wsyXyG__variable","suppressHydrationWarning":true,"children":["$","body",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{"children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L7","$L8"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],"$L9","$La"]}]}]]}],{"children":["$Lb",{"children":["$Lc",{"children":["$Ld",{},null,false,null]},null,false,"$@e"]},null,false,"$@e"]},null,false,null],"$Lf",false]],"m":"$undefined","G":["$10",["$L11"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"RUQIyAf0qAkfAB-SIdmO1"}
+12:I[35412,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],""]
+13:I[60701,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0s2gqxh21lzhr.js"],"ComponentPreview"]
+14:I[60382,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0s2gqxh21lzhr.js"],"StackedLayoutDemo"]
+15:I[60382,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0s2gqxh21lzhr.js"],"TwoColumnLayoutDemo"]
+16:I[60382,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0s2gqxh21lzhr.js"],"InlineLayoutDemo"]
+1e:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ViewportBoundary"]
+20:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"MetadataBoundary"]
+21:"$Sreact.suspense"
+7:["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}]
+8:["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]
+9:["$","$L12",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-SC89RP965Q","strategy":"afterInteractive"}]
+a:["$","$L12",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n          gtag('config', 'G-SC89RP965Q');\n        "}]
+b:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+c:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Form Layout"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"Three layout patterns for arranging form fields: stacked (labels above inputs), two-column (grid), and inline (labels beside inputs). Choose based on the density of the form and the available width."}]]}],["$","section",null,{"className":"mb-14","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1","children":"Stacked"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Labels sit directly above their inputs. The default layout for most forms — scannable, accessible, and works at any viewport width. Use for sign-up flows, settings pages, and anywhere the form is narrow or on mobile."}],["$","$L13",null,{"children":["$","$L14",null,{}]}]]}],["$","section",null,{"className":"mb-14","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1","children":"Two-column"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["A CSS grid with two equal columns. Related fields (first name / last name, city / country) sit on the same row. Wider fields span both columns with"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"col-span-2"}],". Only use at widths ≥ 560 px — switch to stacked on mobile."]}],["$","$L13",null,{"children":["$","$L15",null,{}]}]]}],["$","section",null,{"className":"mb-14","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1","children":"Inline"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Labels align right in a fixed-width column; inputs fill the remaining space. Most compact option — good for settings panels and admin interfaces where vertical space is at a premium. Avoid on narrow screens or forms longer than ~6 fields."}],["$","$L13",null,{"children":["$","$L16",null,{}]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Pattern comparison"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Layout",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Layout"}],["$","th","Min width",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Min width"}],["$","th","Best for",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Best for"}],["$","th","Avoid when",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Avoid when"}]]}]}],["$","tbody",null,{"children":[["$","tr","Stacked",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Stacked"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"Any"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Sign-up, checkout, mobile-first flows"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Very wide viewports with only 2–3 short fields"}]]}],"$L17","$L18"]}]]}]}]]}],"$L19","$L1a"]}],["$L1b"],"$L1c"]}]
+1d:[]
+e:"$W1d"
+f:["$","$1","h",{"children":[null,["$","$L1e",null,{"children":"$L1f"}],["$","div",null,{"hidden":true,"children":["$","$L20",null,{"children":["$","$21",null,{"name":"Next.Metadata","children":"$L22"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+11:["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+23:I[78241,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0s2gqxh21lzhr.js"],"PlatformTabs"]
+27:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+17:["$","tr","Two-column",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Two-column"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"560 px"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Profile edit, address forms, related field pairs"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Mobile, or when field labels have very different lengths"}]]}]
+18:["$","tr","Inline",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Inline"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"480 px"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Settings panels, admin forms, compact data entry"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Long labels (>20 chars), mobile, more than 8 fields"}]]}]
+19:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Responsive guidance"}],["$","ul",null,{"className":"space-y-4 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Always fall back to stacked below 560 px",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Always fall back to stacked below 560 px","."]}]," ","Two-column and inline layouts compress too much on narrow screens. Use a media query or Tailwind's sm: prefix to switch to a single-column stacked layout on mobile."]}]]}],["$","li","Label width in inline layouts",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Label width in inline layouts","."]}]," ","A fixed label column (112–128 px) works for most English labels. For localized UIs, switch to a percentage width or fluid label that can wrap — German and Finnish labels routinely double in length."]}]]}],["$","li","Grid gaps over margins",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Grid gaps over margins","."]}]," ","Use gap-x/gap-y on the grid container rather than adding margin to individual fields. It's easier to adjust spacing globally and avoids margin-collapse edge cases."]}]]}],["$","li","Full-width submit buttons on mobile",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Full-width submit buttons on mobile","."]}]," ","A full-width button (w-full) on narrow screens gives a larger touch target and feels more native. On desktop, right-aligned buttons at natural width are more appropriate."]}]]}]]}]]}]
+24:T8c6,// Stacked — labels above inputs, full width
+function StackedForm() {
+  return (
+    <form className="space-y-4 max-w-md">
+      <div className="space-y-1">
+        <label className="block text-[12px] font-medium text-text-secondary">First name</label>
+        <Input placeholder="Jordan" />
+      </div>
+      <div className="space-y-1">
+        <label className="block text-[12px] font-medium text-text-secondary">Email</label>
+        <Input type="email" placeholder="jordan@example.com" />
+      </div>
+      <Button type="submit" className="w-full">Save</Button>
+    </form>
+  );
+}
+
+// Two-column — grid with full-width exceptions
+function TwoColumnForm() {
+  return (
+    <form className="grid grid-cols-2 gap-4 max-w-2xl">
+      <div className="space-y-1">
+        <label className="block text-[12px] font-medium text-text-secondary">First name</label>
+        <Input placeholder="Jordan" />
+      </div>
+      <div className="space-y-1">
+        <label className="block text-[12px] font-medium text-text-secondary">Last name</label>
+        <Input placeholder="Smith" />
+      </div>
+      <div className="col-span-2 space-y-1">
+        <label className="block text-[12px] font-medium text-text-secondary">Email</label>
+        <Input type="email" placeholder="jordan@example.com" />
+      </div>
+      <div className="col-span-2 flex justify-end">
+        <Button type="submit">Save</Button>
+      </div>
+    </form>
+  );
+}
+
+// Inline — label on left, input on right
+function InlineForm() {
+  return (
+    <form className="space-y-3 max-w-lg">
+      {[
+        { label: "Display name", placeholder: "Jordan Smith" },
+        { label: "Email",        placeholder: "jordan@example.com" },
+      ].map(({ label, placeholder }) => (
+        <div key={label} className="flex items-center gap-4">
+          <label className="w-28 flex-shrink-0 text-[12px] font-medium text-text-secondary text-right">
+            {label}
+          </label>
+          <div className="flex-1">
+            <Input placeholder={placeholder} />
+          </div>
+        </div>
+      ))}
+      <div className="flex items-center gap-4">
+        <div className="w-28 flex-shrink-0" />
+        <Button type="submit">Update</Button>
+      </div>
+    </form>
+  );
+}25:T767,<!-- Stacked -->
+<form class="form-stacked">
+  <div class="field">
+    <label class="field-label" for="name">First name</label>
+    <input class="input" id="name" type="text" placeholder="Jordan" />
+  </div>
+  <div class="field">
+    <label class="field-label" for="email">Email</label>
+    <input class="input" id="email" type="email" placeholder="jordan@example.com" />
+  </div>
+  <button class="btn btn-primary btn-full" type="submit">Save</button>
+</form>
+
+<!-- Two-column -->
+<form class="form-grid">
+  <div class="field">
+    <label class="field-label" for="first">First name</label>
+    <input class="input" id="first" type="text" />
+  </div>
+  <div class="field">
+    <label class="field-label" for="last">Last name</label>
+    <input class="input" id="last" type="text" />
+  </div>
+  <div class="field col-span-2">
+    <label class="field-label" for="email2">Email</label>
+    <input class="input" id="email2" type="email" />
+  </div>
+</form>
+
+<!-- Inline -->
+<form class="form-inline">
+  <div class="inline-row">
+    <label class="inline-label" for="display">Display name</label>
+    <input class="input" id="display" type="text" placeholder="Jordan Smith" />
+  </div>
+</form>
+
+<style>
+  .field { display: flex; flex-direction: column; gap: 4px; }
+  .field-label { font-size: 12px; font-weight: 500; color: rgb(var(--text-secondary)); }
+  .form-stacked { display: flex; flex-direction: column; gap: 16px; max-width: 400px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 640px; }
+  .col-span-2 { grid-column: span 2; }
+  .form-inline { display: flex; flex-direction: column; gap: 12px; max-width: 480px; }
+  .inline-row { display: flex; align-items: center; gap: 16px; }
+  .inline-label { width: 112px; flex-shrink: 0; font-size: 12px; font-weight: 500; color: rgb(var(--text-secondary)); text-align: right; }
+  .btn-full { width: 100%; }
+</style>26:T4c7,import SwiftUI
+
+// Stacked (VStack) — default SwiftUI Form style
+struct StackedFormView: View {
+    @State private var name  = ""
+    @State private var email = ""
+
+    var body: some View {
+        Form {
+            Section {
+                TextField("First name", text: $name)
+                TextField("Email", text: $email)
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
+            }
+            Section {
+                Button("Save") { /* submit */ }
+            }
+        }
+        .formStyle(.grouped) // iOS 16+
+    }
+}
+
+// Inline (LabeledContent) — label + control side by side
+struct InlineFormView: View {
+    @State private var name  = ""
+    @State private var tz    = "pt"
+
+    var body: some View {
+        Form {
+            LabeledContent("Display name") {
+                TextField("Jordan Smith", text: $name)
+                    .multilineTextAlignment(.trailing)
+            }
+            LabeledContent("Timezone") {
+                Picker("Timezone", selection: $tz) {
+                    Text("Pacific").tag("pt")
+                    Text("Eastern").tag("et")
+                }
+                .labelsHidden()
+            }
+        }
+    }
+}1a:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","$L23",null,{"code":{"react":{"filename":"FormLayouts.tsx","code":"$24"},"html":{"filename":"form-layouts.html","code":"$25"},"swift":{"filename":"FormLayouts.swift","code":"$26"}}}]]}]
+1b:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0s2gqxh21lzhr.js","async":true,"nonce":"$undefined"}]
+1c:["$","$L27",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@28"}]}]
+1f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+29:I[88599,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"IconMark"]
+22:[["$","title","0",{"children":"Form Layout — Sitka Design System"}],["$","meta","1",{"name":"description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","2",{"name":"keywords","content":"design system,components,tokens,React,SwiftUI"}],["$","meta","3",{"property":"og:title","content":"Sitka Design System"}],["$","meta","4",{"property":"og:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","5",{"property":"og:url","content":"https://jsrothwell.github.io/Sitka/"}],["$","meta","6",{"property":"og:site_name","content":"Sitka Design System"}],["$","meta","7",{"property":"og:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Sitka Design System"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Sitka Design System"}],["$","meta","14",{"name":"twitter:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","15",{"name":"twitter:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","link","16",{"rel":"icon","href":"/Sitka/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L29","17",{}]]
+28:null

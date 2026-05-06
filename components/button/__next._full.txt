@@ -1,0 +1,449 @@
+1:"$Sreact.fragment"
+3:I[82541,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ThemeProvider"]
+4:I[88452,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"DocsShell"]
+5:I[2790,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+6:I[45379,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+10:I[41146,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default",1]
+:HL["/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","style"]
+:HL["/Sitka/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Sitka/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:T7d1,
+  try {
+    var t = localStorage.getItem('sitka-theme');
+    var dark = t === 'dark' || ((!t || t === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var r = document.documentElement;
+    if (dark) {
+      r.classList.add('dark');
+      r.style.colorScheme = 'dark';
+      r.style.setProperty('--background',      '9 9 12');
+      r.style.setProperty('--surface',         '13 13 17');
+      r.style.setProperty('--surface-raised',  '22 22 28');
+      r.style.setProperty('--surface-hover',   '32 32 40');
+      r.style.setProperty('--border',          '38 38 48');
+      r.style.setProperty('--border-subtle',   '26 26 33');
+      r.style.setProperty('--text-primary',    '242 242 246');
+      r.style.setProperty('--text-secondary',  '155 155 170');
+      r.style.setProperty('--text-tertiary',   '100 100 115');
+      r.style.setProperty('--accent-subtle',   '10 38 21');
+      r.style.setProperty('--accent-muted',    '20 72 39');
+      r.style.setProperty('--nav-active-color','rgb(52, 168, 101)');
+      r.style.setProperty('--card-tint-bg',    'rgb(12, 28, 18)');
+    } else {
+      r.style.colorScheme = 'light';
+      r.style.setProperty('--background',      '252 252 253');
+      r.style.setProperty('--surface',         '255 255 255');
+      r.style.setProperty('--surface-raised',  '246 246 248');
+      r.style.setProperty('--surface-hover',   '240 240 244');
+      r.style.setProperty('--border',          '224 224 231');
+      r.style.setProperty('--border-subtle',   '240 240 244');
+      r.style.setProperty('--text-primary',    '15 15 18');
+      r.style.setProperty('--text-secondary',  '85 85 99');
+      r.style.setProperty('--text-tertiary',   '130 130 147');
+      r.style.setProperty('--accent-subtle',   '232 248 239');
+      r.style.setProperty('--accent-muted',    '166 220 190');
+      r.style.setProperty('--nav-active-color','rgb(33, 150, 83)');
+      r.style.setProperty('--card-tint-bg',    'rgba(11, 55, 30, 0.06)');
+    }
+  } catch(e) {}
+0:{"P":null,"c":["","components","button",""],"q":"","i":false,"f":[[["",{"children":["components",{"children":["button",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Sitka/_next/static/chunks/04.natf_9zy-6.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Sitka/_next/static/chunks/05jbn25z0-c7i.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/Sitka/_next/static/chunks/077bcbxhcexta.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/Sitka/_next/static/chunks/090isu0jqq8wu.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"inter_7b064e0d-module__MOT0tq__variable jetbrains_mono_9a2f2d6c-module__wsyXyG__variable","suppressHydrationWarning":true,"children":["$","body",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{"children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L7","$L8"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],"$L9","$La"]}]}]]}],{"children":["$Lb",{"children":["$Lc",{"children":["$Ld",{},null,false,null]},null,false,"$@e"]},null,false,"$@e"]},null,false,null],"$Lf",false]],"m":"$undefined","G":["$10",["$L11"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"RUQIyAf0qAkfAB-SIdmO1"}
+12:I[35412,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],""]
+13:I[60701,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/12839jujohvfm.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"ComponentPreview"]
+14:I[22567,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/12839jujohvfm.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"Button"]
+15:I[51043,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/12839jujohvfm.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"default"]
+1f:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ViewportBoundary"]
+21:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"MetadataBoundary"]
+22:"$Sreact.suspense"
+7:["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}]
+8:["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]
+9:["$","$L12",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-SC89RP965Q","strategy":"afterInteractive"}]
+a:["$","$L12",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n          gtag('config', 'G-SC89RP965Q');\n        "}]
+b:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+c:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":[["$","div",null,{"className":"inline-flex items-center gap-1.5 mb-4 px-2.5 py-1 rounded-full border border-[rgb(var(--accent-muted))] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[10px] font-semibold uppercase tracking-wider","children":[["$","span",null,{"className":"w-1.5 h-1.5 rounded-full bg-current"}],"Gold Standard"]}],["$","h1",null,{"className":"mb-2.5","children":"Button"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"The foundational interactive element. Every variant, size, and state is defined here and serves as the template for all future component entries."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","$L13",null,{"grid":true,"children":[["$","$L14",null,{"variant":"primary","children":"Primary"}],["$","$L14",null,{"variant":"secondary","children":"Secondary"}],["$","$L14",null,{"variant":"ghost","children":"Ghost"}],["$","$L14",null,{"variant":"danger","children":"Danger"}],["$","$L14",null,{"variant":"glass","children":"Glass"}]]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Sizes"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Three sizes cover the full range of UI contexts: compact lists, standard forms, and prominent hero actions."}],["$","$L13",null,{"children":[["$","$L14",null,{"size":"sm","children":"Small"}],["$","$L14",null,{"size":"md","children":"Medium"}],["$","$L14",null,{"size":"lg","children":"Large"}]]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"With Icons"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Icons amplify intent. Use a left icon to set context, a right icon to suggest directionality."}],["$","$L13",null,{"children":[["$","$L14",null,{"leftIcon":["$","$L15",null,{"ref":"$undefined","iconNode":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"M12 5v14","key":"s699le"}]],"className":"lucide-plus w-4 h-4"}],"children":"New Item"}],["$","$L14",null,{"rightIcon":["$","$L15",null,{"ref":"$undefined","iconNode":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"m12 5 7 7-7 7","key":"xquz4c"}]],"className":"lucide-arrow-right w-4 h-4"}],"children":"Continue"}],["$","$L14",null,{"variant":"secondary","leftIcon":["$","$L15",null,{"ref":"$undefined","iconNode":[["path",{"d":"M12 15V3","key":"m9g1x1"}],["path",{"d":"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4","key":"ih7n3h"}],["path",{"d":"m7 10 5 5 5-5","key":"brsn70"}]],"className":"lucide-download w-4 h-4"}],"children":"Export"}],["$","$L14",null,{"variant":"danger","leftIcon":["$","$L15",null,{"ref":"$undefined","iconNode":[["path",{"d":"M10 11v6","key":"nco0om"}],["path",{"d":"M14 11v6","key":"outv1u"}],["path",{"d":"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6","key":"miytrc"}],["path",{"d":"M3 6h18","key":"d0wm0j"}],["path",{"d":"M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2","key":"e791ji"}]],"className":"lucide-trash2 lucide-trash-2 w-4 h-4"}],"children":"Delete"}]]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"States"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"All interactive states are handled. Loading replaces content with a spinner; disabled dims and removes pointer events."}],["$","$L13",null,{"children":[["$","$L14",null,{"loading":true,"children":"Loading"}],["$","$L14",null,{"disabled":true,"children":"Disabled"}],["$","$L14",null,{"variant":"secondary","loading":true,"children":"Saving…"}],["$","$L14",null,{"variant":"secondary","disabled":true,"children":"Unavailable"}]]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Full implementations for every platform. The React version uses a forwardRef pattern for ref forwarding. The SwiftUI version uses a custom press-state modifier for spring feedback."}],"$L16"]}],"$L17","$L18","$L19","$L1a"]}],["$L1b","$L1c"],"$L1d"]}]
+1e:[]
+e:"$W1e"
+f:["$","$1","h",{"children":[null,["$","$L1f",null,{"children":"$L20"}],["$","div",null,{"hidden":true,"children":["$","$L21",null,{"children":["$","$22",null,{"name":"Next.Metadata","children":"$L23"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+11:["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+24:I[78241,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/12839jujohvfm.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"PlatformTabs"]
+2d:I[38352,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/12839jujohvfm.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"ButtonMobileDemo"]
+2e:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+25:Tb44,<!-- CSS variables are defined in tokens.css -->
+
+<!-- Primary -->
+<button class="btn btn-primary">Get Started</button>
+
+<!-- Secondary -->
+<button class="btn btn-secondary">Learn More</button>
+
+<!-- Ghost -->
+<button class="btn btn-ghost">Cancel</button>
+
+<!-- Danger -->
+<button class="btn btn-danger">Delete Account</button>
+
+<!-- Sizes -->
+<button class="btn btn-primary btn-sm">Small</button>
+<button class="btn btn-primary btn-md">Medium</button>
+<button class="btn btn-primary btn-lg">Large</button>
+
+<!-- With icon -->
+<button class="btn btn-primary">
+  <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M5 12h14M12 5l7 7-7 7"/>
+  </svg>
+  Continue
+</button>
+
+<!-- Loading -->
+<button class="btn btn-primary btn-loading" disabled>
+  <span class="btn-spinner"></span>
+  Saving...
+</button>
+
+<!-- Disabled -->
+<button class="btn btn-primary" disabled>Unavailable</button>
+
+<style>
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+    outline: none;
+    user-select: none;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-brand-500);
+    outline-offset: 2px;
+  }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+
+  /* Variants */
+  .btn-primary {
+    background: var(--color-brand-500);
+    color: #fff;
+    box-shadow: 0 0 0 1px rgba(139,109,255,.3), 0 2px 8px rgba(139,109,255,.25);
+  }
+  .btn-primary:hover { opacity: 0.9; }
+
+  .btn-secondary {
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+  }
+  .btn-secondary:hover { border-color: var(--color-brand-500); color: var(--color-brand-500); }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--color-text-secondary);
+  }
+  .btn-ghost:hover { background: var(--color-surface); color: var(--color-text-primary); }
+
+  .btn-danger {
+    background: #ef4444;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(239,68,68,.3);
+  }
+  .btn-danger:hover { background: #dc2626; }
+
+  /* Sizes */
+  .btn-sm  { height: 32px; padding: 0 12px; font-size: 12px; border-radius: 8px; }
+  .btn-md  { height: 40px; padding: 0 16px; font-size: 13px; border-radius: 8px; }
+  .btn-lg  { height: 48px; padding: 0 20px; font-size: 15px; border-radius: 12px; }
+
+  /* Icon */
+  .btn-icon { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+  /* Spinner */
+  .btn-spinner {
+    width: 16px; height: 16px;
+    border: 2px solid rgba(255,255,255,.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>26:T14ba,import SwiftUI
+
+// MARK: - Button Variant
+enum SitkaButtonVariant {
+    case primary, secondary, ghost, danger, glass
+}
+
+// MARK: - Button Size
+enum SitkaButtonSize {
+    case small, medium, large
+
+    var height: CGFloat {
+        switch self {
+        case .small:  return 32
+        case .medium: return 40
+        case .large:  return 48
+        }
+    }
+
+    var horizontalPadding: CGFloat {
+        switch self {
+        case .small:  return 12
+        case .medium: return 16
+        case .large:  return 20
+        }
+    }
+
+    var fontSize: CGFloat {
+        switch self {
+        case .small:  return 12
+        case .medium: return 13
+        case .large:  return 15
+        }
+    }
+
+    var cornerRadius: CGFloat {
+        switch self {
+        case .small, .medium: return 10
+        case .large:          return 14
+        }
+    }
+}
+
+// MARK: - SitkaButton
+struct SitkaButton: View {
+    let title: String
+    var variant: SitkaButtonVariant = .primary
+    var size: SitkaButtonSize = .medium
+    var isLoading: Bool = false
+    var isDisabled: Bool = false
+    var leftIcon: String? = nil  // SF Symbol name
+    var rightIcon: String? = nil
+    let action: () -> Void
+
+    @State private var isPressed = false
+    @Environment(\.colorScheme) private var colorScheme
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: iconSpacing) {
+                if isLoading {
+                    ProgressView()
+                        .scaleEffect(0.7)
+                        .tint(foregroundColor)
+                } else if let icon = leftIcon {
+                    Image(systemName: icon)
+                        .font(.system(size: size.fontSize - 1, weight: .medium))
+                }
+
+                Text(title)
+                    .font(.system(size: size.fontSize, weight: .medium))
+
+                if !isLoading, let icon = rightIcon {
+                    Image(systemName: icon)
+                        .font(.system(size: size.fontSize - 1, weight: .medium))
+                }
+            }
+            .foregroundColor(foregroundColor)
+            .frame(height: size.height)
+            .padding(.horizontal, size.horizontalPadding)
+            .background(backgroundView)
+            .clipShape(RoundedRectangle(cornerRadius: size.cornerRadius, style: .continuous))
+            .overlay(borderOverlay)
+            .shadow(color: shadowColor, radius: shadowRadius, x: 0, y: 2)
+            .scaleEffect(isPressed ? 0.97 : 1.0)
+            .opacity(isDisabled ? 0.4 : 1.0)
+        }
+        .buttonStyle(PlainButtonStyle())
+        .disabled(isDisabled || isLoading)
+        .pressAction(
+            onPress: { withAnimation(.spring(response: 0.2, dampingFraction: 0.8)) { isPressed = true } },
+            onRelease: { withAnimation(.spring(response: 0.2, dampingFraction: 0.8)) { isPressed = false } }
+        )
+    }
+
+    // MARK: - Computed Styling
+    private var foregroundColor: Color {
+        switch variant {
+        case .primary, .danger: return .white
+        case .secondary, .ghost, .glass:
+            return Color(UIColor.label)
+        }
+    }
+
+    @ViewBuilder
+    private var backgroundView: some View {
+        switch variant {
+        case .primary:
+            Color(hex: "#8B6DFF")
+        case .secondary:
+            Color(UIColor.secondarySystemBackground)
+        case .ghost:
+            Color.clear
+        case .danger:
+            Color(hex: "#EF4444")
+        case .glass:
+            Color(UIColor.systemBackground).opacity(0.72)
+                .background(.ultraThinMaterial)
+        }
+    }
+
+    @ViewBuilder
+    private var borderOverlay: some View {
+        switch variant {
+        case .secondary:
+            RoundedRectangle(cornerRadius: size.cornerRadius, style: .continuous)
+                .stroke(Color(UIColor.separator), lineWidth: 1)
+        case .glass:
+            RoundedRectangle(cornerRadius: size.cornerRadius, style: .continuous)
+                .stroke(Color.white.opacity(0.2), lineWidth: 1)
+        default:
+            EmptyView()
+        }
+    }
+
+    private var shadowColor: Color {
+        switch variant {
+        case .primary:  return Color(hex: "#8B6DFF").opacity(0.3)
+        case .danger:   return Color(hex: "#EF4444").opacity(0.3)
+        default:        return .clear
+        }
+    }
+
+    private var shadowRadius: CGFloat {
+        switch variant {
+        case .primary, .danger: return 8
+        default: return 0
+        }
+    }
+
+    private var iconSpacing: CGFloat {
+        switch size {
+        case .small:  return 6
+        case .medium: return 8
+        case .large:  return 10
+        }
+    }
+}
+
+// MARK: - Preview
+#Preview {
+    VStack(spacing: 16) {
+        SitkaButton(title: "Get Started", variant: .primary)  { }
+        SitkaButton(title: "Learn More", variant: .secondary) { }
+        SitkaButton(title: "Cancel",     variant: .ghost)     { }
+        SitkaButton(title: "Delete",     variant: .danger)    { }
+        SitkaButton(title: "Continue",   variant: .primary, rightIcon: "arrow.right") { }
+        SitkaButton(title: "Saving…",    variant: .primary, isLoading: true) { }
+        SitkaButton(title: "Small",      variant: .primary, size: .small) { }
+        SitkaButton(title: "Large",      variant: .primary, size: .large) { }
+    }
+    .padding()
+}27:Tc4c,import SwiftUI
+
+// macOS SitkaButton — same API as iOS, AppKit-aligned colors and
+// first-class keyboard shortcut support.
+
+struct SitkaButton: View {
+    let title: String
+    var variant: SitkaButtonVariant = .primary
+    var size: SitkaButtonSize = .medium
+    var isLoading: Bool = false
+    var isDisabled: Bool = false
+    var leftIcon: String? = nil
+    var rightIcon: String? = nil
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 6) {
+                if isLoading {
+                    ProgressView().scaleEffect(0.7).tint(foregroundColor)
+                } else if let icon = leftIcon {
+                    Image(systemName: icon)
+                        .font(.system(size: size.fontSize - 1, weight: .medium))
+                }
+                Text(title)
+                    .font(.system(size: size.fontSize, weight: .medium))
+                if !isLoading, let icon = rightIcon {
+                    Image(systemName: icon)
+                        .font(.system(size: size.fontSize - 1, weight: .medium))
+                }
+            }
+            .foregroundColor(foregroundColor)
+            .padding(.horizontal, size.horizontalPadding)
+            .frame(minHeight: size.height)
+            .background(background)
+            .clipShape(RoundedRectangle(cornerRadius: size.cornerRadius, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: size.cornerRadius, style: .continuous)
+                    .stroke(borderColor, lineWidth: 1)
+            )
+        }
+        .buttonStyle(.plain)
+        .disabled(isDisabled || isLoading)
+        .opacity(isDisabled ? 0.45 : 1)
+    }
+
+    private var foregroundColor: Color {
+        switch variant {
+        case .primary:   return .white
+        case .secondary: return Color(.labelColor)
+        case .ghost:     return Color(.labelColor)
+        case .danger:    return .white
+        case .glass:     return .white
+        }
+    }
+
+    private var background: some View {
+        Group {
+            switch variant {
+            case .primary:   Color.accentColor
+            case .secondary: Color(NSColor.controlBackgroundColor)
+            case .ghost:     Color.clear
+            case .danger:    Color.red
+            case .glass:     Color(NSColor.windowBackgroundColor).opacity(0.6)
+            }
+        }
+    }
+
+    private var borderColor: Color {
+        switch variant {
+        case .secondary: Color(NSColor.separatorColor)
+        case .glass:     Color(NSColor.separatorColor).opacity(0.5)
+        default:         .clear
+        }
+    }
+}
+
+// macOS: attach keyboard shortcuts at the call site
+#Preview {
+    VStack(spacing: 10) {
+        SitkaButton(title: "Save",   variant: .primary,   action: {})
+            .keyboardShortcut("s", modifiers: .command)
+        SitkaButton(title: "Cancel", variant: .secondary, action: {})
+            .keyboardShortcut(.escape, modifiers: [])
+        SitkaButton(title: "Delete", variant: .danger,    action: {})
+            .keyboardShortcut(.delete, modifiers: .command)
+    }
+    .padding(24)
+    .frame(width: 280)
+}16:["$","$L24",null,{"code":{"react":{"filename":"Button.tsx","code":"import { Button } from \"@/components/ui/Button\";\nimport { ArrowRight, Download } from \"lucide-react\";\n\n// Primary — the default call-to-action\n<Button variant=\"primary\">Get Started</Button>\n\n// Secondary — for supporting actions\n<Button variant=\"secondary\">Learn More</Button>\n\n// Ghost — for low-emphasis, inline actions\n<Button variant=\"ghost\">Cancel</Button>\n\n// Danger — destructive actions\n<Button variant=\"danger\">Delete Account</Button>\n\n// Glass — for overlays and hero sections\n<Button variant=\"glass\">Explore</Button>\n\n// With icons\n<Button leftIcon={<Download className=\"w-4 h-4\" />}>\n  Download\n</Button>\n<Button rightIcon={<ArrowRight className=\"w-4 h-4\" />}>\n  Continue\n</Button>\n\n// Sizes\n<Button size=\"sm\">Small</Button>\n<Button size=\"md\">Medium</Button>\n<Button size=\"lg\">Large</Button>\n\n// Loading state\n<Button loading>Saving...</Button>\n\n// Disabled\n<Button disabled>Unavailable</Button>"},"html":{"filename":"button.html","code":"$25"},"swift":{"filename":"SitkaButton.swift","code":"$26"},"macos":{"filename":"SitkaButton+macOS.swift","code":"$27"}}}]
+17:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5","children":"Props"}],["$","div",null,{"className":"overflow-hidden rounded-xl border border-[rgb(var(--border))]","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]","children":[["$","th","Prop",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Prop"}],["$","th","Type",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Type"}],["$","th","Default",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Default"}],["$","th","Description",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Description"}]]}]}],["$","tbody",null,{"children":[["$","tr","variant",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["variant","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"primary\" | \"secondary\" | \"ghost\" | \"danger\" | \"glass\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"primary\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Controls the visual style of the button."}]]}],["$","tr","size",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["size","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"sm\" | \"md\" | \"lg\" | \"icon\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"md\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Sets the height, padding, and font size."}]]}],["$","tr","loading",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["loading","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"false"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Shows a spinner and disables interaction."}]]}],["$","tr","leftIcon",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["leftIcon","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"ReactNode"}]}],"$L28","$L29"]}],"$L2a","$L2b"]}]]}]}]]}]
+18:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Motion"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Buttons use spring physics for press feedback — not a linear scale. This preserves energy and feels alive."}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Interaction",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Interaction"}],["$","th","Property",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Property"}],["$","th","Value",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Value"}],["$","th","Easing",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Easing"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Press"}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"scale"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"0.97"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"spring(500, 40)"}]}]]}],["$","tr","1",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Release"}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"scale"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"1.0"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"spring(500, 40)"}]}]]}],["$","tr","2",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Hover"}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"opacity / shadow"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"0.9 / reduced"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"150ms ease"}]}]]}],["$","tr","3",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Focus"}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"ring"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"2px accent"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"$L2c"}]]}]]}]]}]}]]}]
+19:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Mobile"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Buttons on touch screens need larger hit areas and thoughtful sizing. Use the viewport toggle above any preview to see how buttons reflow at 390px."}],["$","$L13",null,{"className":"mb-6","children":["$","$L2d",null,{}]}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Scenario",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Scenario"}],["$","th","Guidance",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Guidance"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Touch target"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Minimum 44×44 pt. The md size (h-10 / 40px) is borderline — prefer lg for primary CTAs on mobile."}]]}],["$","tr","1",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Primary CTA"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Use w-full on the primary action at the bottom of a form or screen. Full-width buttons are easier to tap and establish visual hierarchy."}]]}],["$","tr","2",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Icon-only buttons"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Use size=\"icon\" (44px) not a smaller size. Add a tooltip or visible label nearby since hover tooltips don't work on touch."}]]}],["$","tr","3",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Haptic feedback"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"On iOS/Android, trigger UIImpactFeedbackGenerator or Vibration.vibrate() on press for tactile confirmation on destructive or primary actions."}]]}],["$","tr","4",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Button groups"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Avoid more than 2 side-by-side buttons on narrow screens. Stack vertically or use a split-button to consolidate."}]]}]]}]]}]}]]}]
+1a:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Uses a native <button> element — keyboard navigable and screen-reader accessible by default.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Uses a native <button> element — keyboard navigable and screen-reader accessible by default."]}],["$","li","Focus ring is visible only with keyboard navigation (focus-visible).",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Focus ring is visible only with keyboard navigation (focus-visible)."]}],["$","li","Loading state disables the button and announces via aria-busy=\"true\".",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Loading state disables the button and announces via aria-busy=\"true\"."]}],["$","li","Danger variant maintains WCAG AA contrast (4.8:1 on white).",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Danger variant maintains WCAG AA contrast (4.8:1 on white)."]}],["$","li","Icon-only buttons should include aria-label for assistive technology.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Icon-only buttons should include aria-label for assistive technology."]}]]}]]}]
+1b:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/12839jujohvfm.js","async":true,"nonce":"$undefined"}]
+1c:["$","script","script-1",{"src":"/Sitka/_next/static/chunks/0fi~f9476zu~_.js","async":true,"nonce":"$undefined"}]
+1d:["$","$L2e",null,{"children":["$","$22",null,{"name":"Next.MetadataOutlet","children":"$@2f"}]}]
+28:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}]
+29:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Icon rendered to the left of the label."}]
+2a:["$","tr","rightIcon",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["rightIcon","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"ReactNode"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Icon rendered to the right of the label."}]]}]
+2b:["$","tr","disabled",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["disabled","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"false"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Prevents all interaction and dims the button."}]]}]
+2c:["$","code",null,{"className":"font-mono text-[11px]","children":"instant"}]
+20:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+30:I[88599,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"IconMark"]
+23:[["$","title","0",{"children":"Button — Sitka Design System"}],["$","meta","1",{"name":"description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","2",{"name":"keywords","content":"design system,components,tokens,React,SwiftUI"}],["$","meta","3",{"property":"og:title","content":"Sitka Design System"}],["$","meta","4",{"property":"og:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","5",{"property":"og:url","content":"https://jsrothwell.github.io/Sitka/"}],["$","meta","6",{"property":"og:site_name","content":"Sitka Design System"}],["$","meta","7",{"property":"og:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Sitka Design System"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Sitka Design System"}],["$","meta","14",{"name":"twitter:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","15",{"name":"twitter:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","link","16",{"rel":"icon","href":"/Sitka/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L30","17",{}]]
+2f:null

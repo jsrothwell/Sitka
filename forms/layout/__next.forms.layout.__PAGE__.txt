@@ -1,0 +1,169 @@
+1:"$Sreact.fragment"
+2:I[60701,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0s2gqxh21lzhr.js"],"ComponentPreview"]
+3:I[60382,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0s2gqxh21lzhr.js"],"StackedLayoutDemo"]
+4:I[60382,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0s2gqxh21lzhr.js"],"TwoColumnLayoutDemo"]
+5:I[60382,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0s2gqxh21lzhr.js"],"InlineLayoutDemo"]
+c:I[78241,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0s2gqxh21lzhr.js"],"PlatformTabs"]
+10:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+11:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Form Layout"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"Three layout patterns for arranging form fields: stacked (labels above inputs), two-column (grid), and inline (labels beside inputs). Choose based on the density of the form and the available width."}]]}],["$","section",null,{"className":"mb-14","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1","children":"Stacked"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Labels sit directly above their inputs. The default layout for most forms — scannable, accessible, and works at any viewport width. Use for sign-up flows, settings pages, and anywhere the form is narrow or on mobile."}],["$","$L2",null,{"children":["$","$L3",null,{}]}]]}],["$","section",null,{"className":"mb-14","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1","children":"Two-column"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["A CSS grid with two equal columns. Related fields (first name / last name, city / country) sit on the same row. Wider fields span both columns with"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"col-span-2"}],". Only use at widths ≥ 560 px — switch to stacked on mobile."]}],["$","$L2",null,{"children":["$","$L4",null,{}]}]]}],["$","section",null,{"className":"mb-14","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1","children":"Inline"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Labels align right in a fixed-width column; inputs fill the remaining space. Most compact option — good for settings panels and admin interfaces where vertical space is at a premium. Avoid on narrow screens or forms longer than ~6 fields."}],["$","$L2",null,{"children":["$","$L5",null,{}]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Pattern comparison"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Layout",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Layout"}],["$","th","Min width",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Min width"}],["$","th","Best for",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Best for"}],["$","th","Avoid when",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Avoid when"}]]}]}],["$","tbody",null,{"children":[["$","tr","Stacked",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Stacked"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"Any"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Sign-up, checkout, mobile-first flows"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Very wide viewports with only 2–3 short fields"}]]}],"$L6","$L7"]}]]}]}]]}],"$L8","$L9"]}],["$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"RUQIyAf0qAkfAB-SIdmO1"}
+6:["$","tr","Two-column",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Two-column"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"560 px"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Profile edit, address forms, related field pairs"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Mobile, or when field labels have very different lengths"}]]}]
+7:["$","tr","Inline",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Inline"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"480 px"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Settings panels, admin forms, compact data entry"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Long labels (>20 chars), mobile, more than 8 fields"}]]}]
+8:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Responsive guidance"}],["$","ul",null,{"className":"space-y-4 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Always fall back to stacked below 560 px",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Always fall back to stacked below 560 px","."]}]," ","Two-column and inline layouts compress too much on narrow screens. Use a media query or Tailwind's sm: prefix to switch to a single-column stacked layout on mobile."]}]]}],["$","li","Label width in inline layouts",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Label width in inline layouts","."]}]," ","A fixed label column (112–128 px) works for most English labels. For localized UIs, switch to a percentage width or fluid label that can wrap — German and Finnish labels routinely double in length."]}]]}],["$","li","Grid gaps over margins",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Grid gaps over margins","."]}]," ","Use gap-x/gap-y on the grid container rather than adding margin to individual fields. It's easier to adjust spacing globally and avoids margin-collapse edge cases."]}]]}],["$","li","Full-width submit buttons on mobile",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Full-width submit buttons on mobile","."]}]," ","A full-width button (w-full) on narrow screens gives a larger touch target and feels more native. On desktop, right-aligned buttons at natural width are more appropriate."]}]]}]]}]]}]
+d:T8c6,// Stacked — labels above inputs, full width
+function StackedForm() {
+  return (
+    <form className="space-y-4 max-w-md">
+      <div className="space-y-1">
+        <label className="block text-[12px] font-medium text-text-secondary">First name</label>
+        <Input placeholder="Jordan" />
+      </div>
+      <div className="space-y-1">
+        <label className="block text-[12px] font-medium text-text-secondary">Email</label>
+        <Input type="email" placeholder="jordan@example.com" />
+      </div>
+      <Button type="submit" className="w-full">Save</Button>
+    </form>
+  );
+}
+
+// Two-column — grid with full-width exceptions
+function TwoColumnForm() {
+  return (
+    <form className="grid grid-cols-2 gap-4 max-w-2xl">
+      <div className="space-y-1">
+        <label className="block text-[12px] font-medium text-text-secondary">First name</label>
+        <Input placeholder="Jordan" />
+      </div>
+      <div className="space-y-1">
+        <label className="block text-[12px] font-medium text-text-secondary">Last name</label>
+        <Input placeholder="Smith" />
+      </div>
+      <div className="col-span-2 space-y-1">
+        <label className="block text-[12px] font-medium text-text-secondary">Email</label>
+        <Input type="email" placeholder="jordan@example.com" />
+      </div>
+      <div className="col-span-2 flex justify-end">
+        <Button type="submit">Save</Button>
+      </div>
+    </form>
+  );
+}
+
+// Inline — label on left, input on right
+function InlineForm() {
+  return (
+    <form className="space-y-3 max-w-lg">
+      {[
+        { label: "Display name", placeholder: "Jordan Smith" },
+        { label: "Email",        placeholder: "jordan@example.com" },
+      ].map(({ label, placeholder }) => (
+        <div key={label} className="flex items-center gap-4">
+          <label className="w-28 flex-shrink-0 text-[12px] font-medium text-text-secondary text-right">
+            {label}
+          </label>
+          <div className="flex-1">
+            <Input placeholder={placeholder} />
+          </div>
+        </div>
+      ))}
+      <div className="flex items-center gap-4">
+        <div className="w-28 flex-shrink-0" />
+        <Button type="submit">Update</Button>
+      </div>
+    </form>
+  );
+}e:T767,<!-- Stacked -->
+<form class="form-stacked">
+  <div class="field">
+    <label class="field-label" for="name">First name</label>
+    <input class="input" id="name" type="text" placeholder="Jordan" />
+  </div>
+  <div class="field">
+    <label class="field-label" for="email">Email</label>
+    <input class="input" id="email" type="email" placeholder="jordan@example.com" />
+  </div>
+  <button class="btn btn-primary btn-full" type="submit">Save</button>
+</form>
+
+<!-- Two-column -->
+<form class="form-grid">
+  <div class="field">
+    <label class="field-label" for="first">First name</label>
+    <input class="input" id="first" type="text" />
+  </div>
+  <div class="field">
+    <label class="field-label" for="last">Last name</label>
+    <input class="input" id="last" type="text" />
+  </div>
+  <div class="field col-span-2">
+    <label class="field-label" for="email2">Email</label>
+    <input class="input" id="email2" type="email" />
+  </div>
+</form>
+
+<!-- Inline -->
+<form class="form-inline">
+  <div class="inline-row">
+    <label class="inline-label" for="display">Display name</label>
+    <input class="input" id="display" type="text" placeholder="Jordan Smith" />
+  </div>
+</form>
+
+<style>
+  .field { display: flex; flex-direction: column; gap: 4px; }
+  .field-label { font-size: 12px; font-weight: 500; color: rgb(var(--text-secondary)); }
+  .form-stacked { display: flex; flex-direction: column; gap: 16px; max-width: 400px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 640px; }
+  .col-span-2 { grid-column: span 2; }
+  .form-inline { display: flex; flex-direction: column; gap: 12px; max-width: 480px; }
+  .inline-row { display: flex; align-items: center; gap: 16px; }
+  .inline-label { width: 112px; flex-shrink: 0; font-size: 12px; font-weight: 500; color: rgb(var(--text-secondary)); text-align: right; }
+  .btn-full { width: 100%; }
+</style>f:T4c7,import SwiftUI
+
+// Stacked (VStack) — default SwiftUI Form style
+struct StackedFormView: View {
+    @State private var name  = ""
+    @State private var email = ""
+
+    var body: some View {
+        Form {
+            Section {
+                TextField("First name", text: $name)
+                TextField("Email", text: $email)
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
+            }
+            Section {
+                Button("Save") { /* submit */ }
+            }
+        }
+        .formStyle(.grouped) // iOS 16+
+    }
+}
+
+// Inline (LabeledContent) — label + control side by side
+struct InlineFormView: View {
+    @State private var name  = ""
+    @State private var tz    = "pt"
+
+    var body: some View {
+        Form {
+            LabeledContent("Display name") {
+                TextField("Jordan Smith", text: $name)
+                    .multilineTextAlignment(.trailing)
+            }
+            LabeledContent("Timezone") {
+                Picker("Timezone", selection: $tz) {
+                    Text("Pacific").tag("pt")
+                    Text("Eastern").tag("et")
+                }
+                .labelsHidden()
+            }
+        }
+    }
+}9:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","$Lc",null,{"code":{"react":{"filename":"FormLayouts.tsx","code":"$d"},"html":{"filename":"form-layouts.html","code":"$e"},"swift":{"filename":"FormLayouts.swift","code":"$f"}}}]]}]
+a:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0s2gqxh21lzhr.js","async":true}]
+b:["$","$L10",null,{"children":["$","$11",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]
+12:null

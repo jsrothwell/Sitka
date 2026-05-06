@@ -1,0 +1,69 @@
+1:"$Sreact.fragment"
+2:I[51334,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0xj7il9kgcswu.js"],"CodeBlock"]
+a:I[20646,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0xj7il9kgcswu.js"],""]
+b:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+c:"$Sreact.suspense"
+3:T5a5,@import "tailwindcss";
+@import "@fontsource/inter/variable.css";
+
+:root {
+  --background:      9   9  12;
+  --surface:        13  13  17;
+  --surface-raised: 22  22  28;
+  --surface-hover:  32  32  40;
+
+  --accent:         0 192 232;
+  --accent-hover:   0 160 200;
+  --accent-subtle:  0  38  46;
+  --accent-muted:   0  72  86;
+
+  --text-primary:   242 242 246;
+  --text-secondary: 155 155 170;
+  --text-tertiary:  100 100 115;
+
+  --border:          38  38  48;
+  --border-subtle:   26  26  33;
+
+  --radius-sm: 4px;
+  --radius:    6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+[data-theme="light"] {
+  --background:      250 250 250;
+  --surface:         255 255 255;
+  --surface-raised:  246 246 248;
+  --surface-hover:   240 240 244;
+  --accent:          0 192 232;
+  --accent-subtle:   224 247 252;
+  --accent-muted:    179 237 249;
+  --text-primary:    40  40  40;
+  --text-secondary:  116 116 116;
+  --text-tertiary:   167 167 172;
+  --border:          224 224 231;
+  --border-subtle:   240 240 244;
+}
+
+html, body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--text-primary));
+  font-family: "Inter Variable", Inter, system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass {
+  background-color: rgb(var(--surface) / 0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgb(var(--border));
+}0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":[["$","div",null,{"className":"inline-flex items-center gap-1.5 mb-4 px-2.5 py-1 rounded-full border border-[rgb(var(--accent-muted))] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[10px] font-semibold uppercase tracking-wider","children":[["$","span",null,{"className":"w-1.5 h-1.5 rounded-full bg-current"}],"Library"]}],["$","h1",null,{"className":"mb-2.5","children":"React · Vite"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"Integrate Sitka into a Vite + React SPA. No framework dependencies — just CSS variables, Tailwind 4, and React components."}]]}],["$","div",null,{"className":"space-y-12","children":[["$","section",null,{"children":[["$","div",null,{"className":"flex items-center gap-2.5 mb-3","children":[["$","span",null,{"className":"flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold","children":"1"}],["$","h2",null,{"className":"text-[18px] font-semibold text-[rgb(var(--text-primary))]","children":"Create a Vite project"}]]}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-4","children":"Skip this step if you already have a project."}],["$","$L2",null,{"language":"bash","code":"npm create vite@latest my-app -- --template react-ts\ncd my-app"}]]}],["$","section",null,{"children":[["$","div",null,{"className":"flex items-center gap-2.5 mb-3","children":[["$","span",null,{"className":"flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold","children":"2"}],["$","h2",null,{"className":"text-[18px] font-semibold text-[rgb(var(--text-primary))]","children":"Install dependencies"}]]}],["$","$L2",null,{"language":"bash","code":"# Runtime\nnpm install clsx tailwind-merge framer-motion lucide-react @fontsource/inter\n\n# Dev\nnpm install -D tailwindcss @tailwindcss/vite"}]]}],["$","section",null,{"children":[["$","div",null,{"className":"flex items-center gap-2.5 mb-3","children":[["$","span",null,{"className":"flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold","children":"3"}],["$","h2",null,{"className":"text-[18px] font-semibold text-[rgb(var(--text-primary))]","children":"Configure Vite + Tailwind 4"}]]}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-4","children":["Tailwind 4 ships its own Vite plugin — no ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"postcss.config"}]," needed:"]}],["$","$L2",null,{"language":"ts","filename":"vite.config.ts","code":"import { defineConfig } from \"vite\";\nimport react from \"@vitejs/plugin-react\";\nimport tailwindcss from \"@tailwindcss/vite\";\nimport path from \"path\";\n\nexport default defineConfig({\n  plugins: [react(), tailwindcss()],\n  resolve: {\n    alias: { \"@\": path.resolve(__dirname, \"src\") },\n  },\n});"}]]}],["$","section",null,{"children":[["$","div",null,{"className":"flex items-center gap-2.5 mb-3","children":[["$","span",null,{"className":"flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold","children":"4"}],["$","h2",null,{"className":"text-[18px] font-semibold text-[rgb(var(--text-primary))]","children":"Add CSS variables"}]]}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-4","children":["Replace the contents of ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"src/index.css"}]," with the Sitka token layer:"]}],["$","$L2",null,{"language":"css","filename":"src/index.css","code":"$3"}]]}],"$L4","$L5","$L6","$L7"]}]]}],["$L8"],"$L9"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"RUQIyAf0qAkfAB-SIdmO1"}
+4:["$","section",null,{"children":[["$","div",null,{"className":"flex items-center gap-2.5 mb-3","children":[["$","span",null,{"className":"flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold","children":"5"}],["$","h2",null,{"className":"text-[18px] font-semibold text-[rgb(var(--text-primary))]","children":["Add the ",["$","code",null,{"className":"font-mono text-[16px]","children":"cn"}]," helper"]}]]}],["$","$L2",null,{"language":"ts","filename":"src/lib/cn.ts","code":"import { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}"}]]}]
+5:["$","section",null,{"children":[["$","div",null,{"className":"flex items-center gap-2.5 mb-3","children":[["$","span",null,{"className":"flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold","children":"6"}],["$","h2",null,{"className":"text-[18px] font-semibold text-[rgb(var(--text-primary))]","children":"Copy & use components"}]]}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-4","children":["Copy any component files from ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"src/components/ui/"}]," into your project, then import normally:"]}],["$","$L2",null,{"language":"tsx","filename":"src/App.tsx","code":"import { Button } from \"@/components/ui/Button\";\nimport { Card }   from \"@/components/ui/Card\";\nimport { Badge }  from \"@/components/ui/Badge\";\n\nfunction App() {\n  return (\n    <div className=\"min-h-screen p-8\">\n      <Card className=\"max-w-sm mx-auto p-6 flex flex-col gap-4\">\n        <Badge variant=\"info\">Beta</Badge>\n        <h1>Hello Sitka</h1>\n        <Button variant=\"primary\">Continue</Button>\n      </Card>\n    </div>\n  );\n}\n\nexport default App;"}]]}]
+6:["$","section",null,{"className":"rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))] p-5","children":[["$","h2",null,{"className":"text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-3","children":"Differences vs. Next.js"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li",null,{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] shrink-0","children":"→"}],"All components work as-is — the ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"\"use client\""}]," directive at the top of each file is ignored by Vite and has no effect."]}],["$","li",null,{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] shrink-0","children":"→"}],"Replace any ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"next/link"}]," imports with ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"react-router-dom"}]," or your SPA router."]}],["$","li",null,{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] shrink-0","children":"→"}],"Replace ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"next/image"}]," with a plain ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"<img>"}]," tag."]}],["$","li",null,{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] shrink-0","children":"→"}],"The ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"next/font"}]," Inter loader is replaced by the ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"@fontsource/inter"}]," CSS import above."]}]]}]]}]
+7:["$","p",null,{"className":"text-[13px] text-[rgb(var(--text-tertiary))]","children":["Back to"," ",["$","$La",null,{"href":"/libraries","className":"text-[rgb(var(--accent))] underline underline-offset-2","children":"all libraries"}],"."]}]
+8:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0xj7il9kgcswu.js","async":true}]
+9:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
+d:null

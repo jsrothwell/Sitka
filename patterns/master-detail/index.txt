@@ -1,0 +1,368 @@
+1:"$Sreact.fragment"
+3:I[82541,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ThemeProvider"]
+4:I[88452,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"DocsShell"]
+5:I[2790,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+6:I[45379,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+10:I[41146,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default",1]
+:HL["/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","style"]
+:HL["/Sitka/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Sitka/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:T7d1,
+  try {
+    var t = localStorage.getItem('sitka-theme');
+    var dark = t === 'dark' || ((!t || t === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var r = document.documentElement;
+    if (dark) {
+      r.classList.add('dark');
+      r.style.colorScheme = 'dark';
+      r.style.setProperty('--background',      '9 9 12');
+      r.style.setProperty('--surface',         '13 13 17');
+      r.style.setProperty('--surface-raised',  '22 22 28');
+      r.style.setProperty('--surface-hover',   '32 32 40');
+      r.style.setProperty('--border',          '38 38 48');
+      r.style.setProperty('--border-subtle',   '26 26 33');
+      r.style.setProperty('--text-primary',    '242 242 246');
+      r.style.setProperty('--text-secondary',  '155 155 170');
+      r.style.setProperty('--text-tertiary',   '100 100 115');
+      r.style.setProperty('--accent-subtle',   '10 38 21');
+      r.style.setProperty('--accent-muted',    '20 72 39');
+      r.style.setProperty('--nav-active-color','rgb(52, 168, 101)');
+      r.style.setProperty('--card-tint-bg',    'rgb(12, 28, 18)');
+    } else {
+      r.style.colorScheme = 'light';
+      r.style.setProperty('--background',      '252 252 253');
+      r.style.setProperty('--surface',         '255 255 255');
+      r.style.setProperty('--surface-raised',  '246 246 248');
+      r.style.setProperty('--surface-hover',   '240 240 244');
+      r.style.setProperty('--border',          '224 224 231');
+      r.style.setProperty('--border-subtle',   '240 240 244');
+      r.style.setProperty('--text-primary',    '15 15 18');
+      r.style.setProperty('--text-secondary',  '85 85 99');
+      r.style.setProperty('--text-tertiary',   '130 130 147');
+      r.style.setProperty('--accent-subtle',   '232 248 239');
+      r.style.setProperty('--accent-muted',    '166 220 190');
+      r.style.setProperty('--nav-active-color','rgb(33, 150, 83)');
+      r.style.setProperty('--card-tint-bg',    'rgba(11, 55, 30, 0.06)');
+    }
+  } catch(e) {}
+0:{"P":null,"c":["","patterns","master-detail",""],"q":"","i":false,"f":[[["",{"children":["patterns",{"children":["master-detail",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Sitka/_next/static/chunks/04.natf_9zy-6.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Sitka/_next/static/chunks/05jbn25z0-c7i.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/Sitka/_next/static/chunks/077bcbxhcexta.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/Sitka/_next/static/chunks/090isu0jqq8wu.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"inter_7b064e0d-module__MOT0tq__variable jetbrains_mono_9a2f2d6c-module__wsyXyG__variable","suppressHydrationWarning":true,"children":["$","body",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{"children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L7","$L8"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],"$L9","$La"]}]}]]}],{"children":["$Lb",{"children":["$Lc",{"children":["$Ld",{},null,false,null]},null,false,"$@e"]},null,false,"$@e"]},null,false,null],"$Lf",false]],"m":"$undefined","G":["$10",["$L11"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"RUQIyAf0qAkfAB-SIdmO1"}
+12:I[35412,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],""]
+13:I[60701,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0.7sdx6jye8or.js"],"ComponentPreview"]
+14:I[25788,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0.7sdx6jye8or.js"],"MasterDetailDemo"]
+1e:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ViewportBoundary"]
+20:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"MetadataBoundary"]
+21:"$Sreact.suspense"
+7:["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}]
+8:["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]
+9:["$","$L12",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-SC89RP965Q","strategy":"afterInteractive"}]
+a:["$","$L12",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n          gtag('config', 'G-SC89RP965Q');\n        "}]
+b:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+c:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Master Detail"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"A two-panel layout where a list of items (master) drives a contextual detail view on the right. Collapses to a single-panel push navigation on narrow screens."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","$L13",null,{"children":["$","$L14",null,{}]}],["$","p",null,{"className":"text-[12px] text-[rgb(var(--text-tertiary))] mt-3","children":"On narrow screens, tap any row to push to the detail view. Hit Back to return to the list."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"When to use"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Master–detail works best when you have a collection of similar items and rich per-item content that would waste space if shown for every row."}],["$","div",null,{"className":"grid md:grid-cols-2 gap-4","children":[["$","div","Good fits",{"className":"rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-5","children":[["$","h3",null,{"className":"text-[13px] font-semibold mb-3 text-emerald-500","children":"Good fits"}],["$","ul",null,{"className":"space-y-2","children":[["$","li","Email / messaging inboxes",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-emerald-500 mt-0.5","children":"→"}],"Email / messaging inboxes"]}],["$","li","CRM contact or lead views",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-emerald-500 mt-0.5","children":"→"}],"CRM contact or lead views"]}],["$","li","Settings pages with categories",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-emerald-500 mt-0.5","children":"→"}],"Settings pages with categories"]}],["$","li","File browsers and asset managers",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-emerald-500 mt-0.5","children":"→"}],"File browsers and asset managers"]}],["$","li","Issue trackers and task lists",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-emerald-500 mt-0.5","children":"→"}],"Issue trackers and task lists"]}]]}]]}],["$","div","Poor fits",{"className":"rounded-xl border border-red-400/20 bg-red-400/5 p-5","children":[["$","h3",null,{"className":"text-[13px] font-semibold mb-3 text-red-400","children":"Poor fits"}],["$","ul",null,{"className":"space-y-2","children":[["$","li","Simple lists where all data fits in one view",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-red-400 mt-0.5","children":"→"}],"Simple lists where all data fits in one view"]}],["$","li","Workflows requiring both panels simultaneously",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-red-400 mt-0.5","children":"→"}],"Workflows requiring both panels simultaneously"]}],["$","li","Content where comparison across items matters",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":[["$","span",null,{"className":"text-red-400 mt-0.5","children":"→"}],"Content where comparison across items matters"]}],["$","li","Very shallow item counts (< 5 items)",{"className":"flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]","children":["$L15","Very shallow item counts (< 5 items)"]}]]}]]}]]}]]}],"$L16","$L17","$L18","$L19","$L1a"]}],["$L1b"],"$L1c"]}]
+1d:[]
+e:"$W1d"
+f:["$","$1","h",{"children":[null,["$","$L1e",null,{"children":"$L1f"}],["$","div",null,{"hidden":true,"children":["$","$L20",null,{"children":["$","$21",null,{"name":"Next.Metadata","children":"$L22"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+11:["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+23:I[78241,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0.7sdx6jye8or.js"],"PlatformTabs"]
+27:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+15:["$","span",null,{"className":"text-red-400 mt-0.5","children":"→"}]
+16:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Layout anatomy"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"The pattern composes three zones. Each has a clear responsibility."}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Zone",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Zone"}],["$","th","Width",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Width"}],["$","th","Responsibility",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Responsibility"}]]}]}],["$","tbody",null,{"children":[["$","tr","Master (list)",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"Master (list)"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"240–320px fixed"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Scannable rows. One item is always selected. Owns the selection state."}]]}],["$","tr","Divider",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"Divider"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"1px"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Visual boundary. Can be a drag handle for resizable layouts."}]]}],["$","tr","Detail",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"Detail"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"flex: 1 (remaining)"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Rich content for the selected item. Scrolls independently of the list."}]]}]]}]]}]}]]}]
+17:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Responsive behavior"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"On narrow screens the two panels cannot coexist. The correct pattern is a push navigation — selecting an item slides the detail in from the right, replacing the list. A back button returns to the list."}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Breakpoint",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Breakpoint"}],["$","th","Layout",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Layout"}],["$","th","Behavior",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Behavior"}]]}]}],["$","tbody",null,{"children":[["$","tr","≥ 768px (md)",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"≥ 768px (md)"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Side by side"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Both panels visible. Selecting a row updates the detail in place."}]]}],["$","tr","< 768px",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"< 768px"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Single panel"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Only one panel visible at a time. Row tap pushes detail. Back button returns to list."}]]}]]}]]}]}]]}]
+24:T75e,"use client";
+
+import { useState } from "react";
+
+interface Item { id: number; title: string; /* … */ }
+
+export function MasterDetail({ items }: { items: Item[] }) {
+  const [selected, setSelected] = useState<Item>(items[0]);
+  const [showDetail, setShowDetail] = useState(false);
+
+  return (
+    <div className="flex h-full border rounded-xl overflow-hidden">
+
+      {/* Master list — hidden on mobile when detail is open */}
+      <div className={cn(
+        "w-[260px] flex-shrink-0 border-r flex flex-col",
+        showDetail && "hidden md:flex"
+      )}>
+        <div className="px-4 py-3 border-b">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-muted">
+            {items.length} items
+          </p>
+        </div>
+        <div className="flex-1 overflow-y-auto">
+          {items.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => { setSelected(item); setShowDetail(true); }}
+              className={cn(
+                "w-full px-4 py-3 text-left border-b last:border-0 transition-colors",
+                selected.id === item.id
+                  ? "bg-accent-subtle text-accent"
+                  : "hover:bg-surface"
+              )}
+            >
+              {item.title}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Detail — hidden on mobile when list is shown */}
+      <div className={cn("flex-1 flex flex-col", !showDetail && "hidden md:flex")}>
+        {/* Back button — mobile only */}
+        <button
+          onClick={() => setShowDetail(false)}
+          className="md:hidden px-4 py-3 border-b text-left text-accent"
+        >
+          ← Back
+        </button>
+        <div className="flex-1 overflow-y-auto p-6">
+          {/* Render selected item detail */}
+          <h1>{selected.title}</h1>
+        </div>
+      </div>
+
+    </div>
+  );
+}25:Td8d,<div class="master-detail">
+
+  <!-- Master panel -->
+  <nav class="master-panel" id="masterPanel">
+    <div class="master-header">
+      <span class="master-count">5 items</span>
+    </div>
+    <ul class="master-list" role="listbox" aria-label="Items">
+      <li class="master-item master-item--selected"
+          role="option" aria-selected="true"
+          onclick="selectItem(this, 'item-1')">
+        Jamieson Rothwell
+      </li>
+      <li class="master-item" role="option" aria-selected="false"
+          onclick="selectItem(this, 'item-2')">
+        Sam Park
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Detail panel -->
+  <main class="detail-panel" id="detailPanel">
+    <button class="back-btn" onclick="showMaster()" aria-label="Back to list">
+      ← Back
+    </button>
+    <div id="item-1" class="detail-content">
+      <h1>Jamieson Rothwell</h1>
+      <!-- Detail content -->
+    </div>
+    <div id="item-2" class="detail-content" hidden>
+      <h1>Sam Park</h1>
+    </div>
+  </main>
+
+</div>
+
+<style>
+  .master-detail {
+    display: flex;
+    height: 100%;
+    border: 1px solid rgb(var(--border));
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .master-panel {
+    width: 260px;
+    flex-shrink: 0;
+    border-right: 1px solid rgb(var(--border));
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .master-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgb(var(--border));
+  }
+
+  .master-list {
+    flex: 1;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0; margin: 0;
+  }
+
+  .master-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(var(--border-subtle));
+    font-size: 13px;
+    color: rgb(var(--text-primary));
+    transition: background 100ms;
+  }
+  .master-item:hover { background: rgb(var(--surface)); }
+  .master-item--selected {
+    background: rgb(var(--accent-subtle));
+    color: rgb(var(--accent));
+  }
+
+  .detail-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 0;
+  }
+
+  .detail-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+  }
+
+  .back-btn {
+    display: none; /* shown on mobile */
+    padding: 12px 16px;
+    border-bottom: 1px solid rgb(var(--border));
+    background: none; border-top: none;
+    color: rgb(var(--accent));
+    font-size: 13px; cursor: pointer;
+    text-align: left;
+  }
+
+  /* Mobile breakpoint */
+  @media (max-width: 768px) {
+    .master-detail { position: relative; }
+
+    .master-panel { width: 100%; border-right: none; }
+    .detail-panel {
+      position: absolute; inset: 0;
+      background: rgb(var(--background));
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .detail-panel.is-open { transform: translateX(0); }
+    .back-btn { display: block; }
+  }
+</style>
+
+<script>
+  function selectItem(el, id) {
+    document.querySelectorAll(".master-item")
+      .forEach(i => { i.classList.remove("master-item--selected"); i.ariaSelected = "false"; });
+    el.classList.add("master-item--selected");
+    el.ariaSelected = "true";
+
+    document.querySelectorAll(".detail-content")
+      .forEach(d => d.hidden = true);
+    document.getElementById(id).hidden = false;
+
+    // Mobile: slide in detail panel
+    document.getElementById("detailPanel").classList.add("is-open");
+  }
+
+  function showMaster() {
+    document.getElementById("detailPanel").classList.remove("is-open");
+  }
+</script>26:Tba0,import SwiftUI
+
+struct Contact: Identifiable, Hashable {
+    let id: Int
+    let name: String
+    let role: String
+    // … more fields
+}
+
+struct MasterDetailView: View {
+    let contacts: [Contact]
+    @State private var selectedContact: Contact?
+
+    var body: some View {
+        NavigationSplitView {
+            // Master — list column
+            List(contacts, selection: $selectedContact) { contact in
+                NavigationLink(value: contact) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(contact.name)
+                            .font(.system(size: 13, weight: .medium))
+                        Text(contact.role)
+                            .font(.system(size: 11))
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(.vertical, 4)
+                }
+            }
+            .navigationTitle("Team")
+            .listStyle(.sidebar)
+        } detail: {
+            // Detail — right column
+            if let contact = selectedContact {
+                ContactDetailView(contact: contact)
+            } else {
+                ContentUnavailableView(
+                    "Select a contact",
+                    systemImage: "person.circle",
+                    description: Text("Choose a team member from the list")
+                )
+            }
+        }
+    }
+}
+
+struct ContactDetailView: View {
+    let contact: Contact
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                // Hero header
+                HStack(spacing: 16) {
+                    Circle()
+                        .fill(Color.accentColor.opacity(0.2))
+                        .frame(width: 64, height: 64)
+                        .overlay(
+                            Text(contact.name.prefix(2).uppercased())
+                                .font(.system(size: 20, weight: .semibold))
+                                .foregroundColor(.accentColor)
+                        )
+
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(contact.name)
+                            .font(.title2.weight(.semibold))
+                        Text(contact.role)
+                            .foregroundColor(.secondary)
+                    }
+                }
+
+                Divider()
+
+                // Details
+                // Add more rows here…
+            }
+            .padding(24)
+        }
+        .navigationTitle(contact.name)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button("Edit") { }
+            }
+        }
+    }
+}
+
+#Preview {
+    MasterDetailView(contacts: [
+        Contact(id: 1, name: "Jamieson Rothwell", role: "Founder"),
+        Contact(id: 2, name: "Sam Park",          role: "Engineer"),
+        Contact(id: 3, name: "Lena Müller",       role: "Designer"),
+    ])
+}18:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["The React implementation uses a single"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"showDetail"}]," ","boolean to toggle panel visibility on mobile. On desktop, both panels are always rendered and visible — no JS is needed to switch between them, just"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"md:flex"}]," and"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"hidden"}]," ","utility classes. The SwiftUI implementation uses"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"NavigationSplitView"}]," ","which handles the column/stack transition automatically."]}],["$","$L23",null,{"code":{"react":{"filename":"MasterDetail.tsx","code":"$24"},"html":{"filename":"master-detail.html","code":"$25"},"swift":{"filename":"MasterDetailView.swift","code":"$26"}}}]]}]
+19:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Design decisions"}],["$","ul",null,{"className":"space-y-4 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Always have a selection",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Always have a selection","."]}]," ","On load, default-select the first item so the detail panel is never empty. An empty detail state creates a jarring visual hole."]}]]}],["$","li","Keep the master list narrow",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Keep the master list narrow","."]}]," ","240–320px is the sweet spot. Wider and the detail panel loses valuable real estate. Narrower and row content gets truncated too aggressively."]}]]}],["$","li","Selected row highlight",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Selected row highlight","."]}]," ","Use a subtle accent background (not a strong color) for the selected row. The detail panel already makes the selection obvious — the list highlight is just a secondary cue."]}]]}],["$","li","Independent scroll areas",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Independent scroll areas","."]}]," ","The master list and the detail both scroll independently. The outer container has overflow: hidden; each panel has overflow-y: auto with flex: 1."]}]]}],["$","li","Back button on mobile",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Back button on mobile","."]}]," ","Use native browser history (router.push / NavigationLink) when possible so the hardware back button and gesture work without extra code."]}]]}]]}]]}]
+1a:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","The master list should have role=\"listbox\" and each item role=\"option\" with aria-selected.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The master list should have role=\"listbox\" and each item role=\"option\" with aria-selected."]}],["$","li","When a new item is selected, move focus to the detail heading so keyboard and screen reader users know the panel has updated.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"When a new item is selected, move focus to the detail heading so keyboard and screen reader users know the panel has updated."]}],["$","li","The back button on mobile must be visible and focusable — don't hide it with opacity or pointer-events-none.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The back button on mobile must be visible and focusable — don't hide it with opacity or pointer-events-none."]}],["$","li","Both panels should be keyboard reachable via Tab. On desktop, Tab should cycle: list → detail → list.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Both panels should be keyboard reachable via Tab. On desktop, Tab should cycle: list → detail → list."]}],["$","li","On mobile, when the detail slides in, trap focus within it until the user presses Back.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"On mobile, when the detail slides in, trap focus within it until the user presses Back."]}]]}]]}]
+1b:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0.7sdx6jye8or.js","async":true,"nonce":"$undefined"}]
+1c:["$","$L27",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@28"}]}]
+1f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+29:I[88599,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"IconMark"]
+22:[["$","title","0",{"children":"Sitka Design System"}],["$","meta","1",{"name":"description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","2",{"name":"keywords","content":"design system,components,tokens,React,SwiftUI"}],["$","meta","3",{"property":"og:title","content":"Sitka Design System"}],["$","meta","4",{"property":"og:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","5",{"property":"og:url","content":"https://jsrothwell.github.io/Sitka/"}],["$","meta","6",{"property":"og:site_name","content":"Sitka Design System"}],["$","meta","7",{"property":"og:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Sitka Design System"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Sitka Design System"}],["$","meta","14",{"name":"twitter:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","15",{"name":"twitter:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","link","16",{"rel":"icon","href":"/Sitka/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L29","17",{}]]
+28:null

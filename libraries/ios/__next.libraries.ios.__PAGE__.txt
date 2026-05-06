@@ -1,0 +1,85 @@
+1:"$Sreact.fragment"
+2:I[20646,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0xj7il9kgcswu.js"],""]
+3:I[51334,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0xj7il9kgcswu.js"],"CodeBlock"]
+b:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+c:"$Sreact.suspense"
+4:T9a9,import SwiftUI
+
+public enum SitkaTokens {
+
+  // MARK: — Color
+  public enum Color {
+    // Brand
+    public static let brandCyan    = SwiftUI.Color(hex: "#00C0E8")
+    public static let brand500     = SwiftUI.Color(hex: "#34a865")
+    public static let brand600     = SwiftUI.Color(hex: "#289452")
+
+    // Semantic
+    public static let success      = SwiftUI.Color(hex: "#22c55e")
+    public static let warning      = SwiftUI.Color(hex: "#f59e0b")
+    public static let error        = SwiftUI.Color(hex: "#ef4444")
+    public static let info         = SwiftUI.Color(hex: "#3b82f6")
+
+    // Dark-mode surface
+    public static let background   = SwiftUI.Color(hex: "#09090c")
+    public static let surface      = SwiftUI.Color(hex: "#0d0d11")
+    public static let surfaceRaised = SwiftUI.Color(hex: "#16161c")
+    public static let accent       = brandCyan
+    public static let textPrimary  = SwiftUI.Color(hex: "#f2f2f6")
+    public static let textSecondary = SwiftUI.Color(hex: "#9b9baa")
+  }
+
+  // MARK: — Spacing
+  public enum Spacing {
+    public static let s1: CGFloat = 4
+    public static let s2: CGFloat = 8
+    public static let s3: CGFloat = 12
+    public static let s4: CGFloat = 16
+    public static let s5: CGFloat = 20
+    public static let s6: CGFloat = 24
+    public static let s8: CGFloat = 32
+    public static let s10: CGFloat = 40
+    public static let s12: CGFloat = 48
+    public static let s16: CGFloat = 64
+  }
+
+  // MARK: — Border Radius
+  public enum Radius {
+    public static let sm: CGFloat = 6
+    public static let md: CGFloat = 10
+    public static let lg: CGFloat = 14
+    public static let xl: CGFloat = 20
+    public static let full: CGFloat = 9999
+  }
+
+  // MARK: — Typography
+  public enum Typography {
+    public static let fontSans = "Inter"
+    public static let sizeXS: CGFloat = 11
+    public static let sizeSM: CGFloat = 13
+    public static let sizeBase: CGFloat = 15
+    public static let sizeLG: CGFloat = 17
+    public static let sizeXL: CGFloat = 20
+    public static let size2XL: CGFloat = 24
+  }
+}
+
+// MARK: — Color hex helper
+private extension SwiftUI.Color {
+  init(hex: String) {
+    let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+    var int: UInt64 = 0
+    Scanner(string: hex).scanHexInt64(&int)
+    let r = Double((int >> 16) & 0xff) / 255
+    let g = Double((int >>  8) & 0xff) / 255
+    let b = Double( int        & 0xff) / 255
+    self.init(red: r, green: g, blue: b)
+  }
+}0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":[["$","div",null,{"className":"inline-flex items-center gap-1.5 mb-4 px-2.5 py-1 rounded-full border border-[rgb(var(--accent-muted))] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[10px] font-semibold uppercase tracking-wider","children":[["$","span",null,{"className":"w-1.5 h-1.5 rounded-full bg-current"}],"Library"]}],["$","h1",null,{"className":"mb-2.5","children":"iOS · SwiftUI"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"Bring Sitka's color, spacing, radius, shadow, and typography tokens into a SwiftUI project as typed Swift constants — generated from the same source JSON that powers the web."}]]}],["$","div",null,{"className":"space-y-12","children":[["$","section",null,{"children":[["$","div",null,{"className":"flex items-center gap-2.5 mb-3","children":[["$","span",null,{"className":"flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold","children":"1"}],["$","h2",null,{"className":"text-[18px] font-semibold text-[rgb(var(--text-primary))]","children":"Download the Swift token file"}]]}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-4","children":["Go to the"," ",["$","$L2",null,{"href":"/tokens/export","className":"text-[rgb(var(--accent))] underline underline-offset-2","children":"Token Export"}]," ","page and download ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"SitkaTokens.swift"}],". It is auto-generated from ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"tokens.json"}]," — regenerate whenever tokens change."]}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-4","children":"Or generate it yourself using Style Dictionary:"}],["$","$L3",null,{"language":"bash","code":"npx style-dictionary build --config style-dictionary.config.js\n# outputs dist/SitkaTokens.swift"}]]}],["$","section",null,{"children":[["$","div",null,{"className":"flex items-center gap-2.5 mb-3","children":[["$","span",null,{"className":"flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold","children":"2"}],["$","h2",null,{"className":"text-[18px] font-semibold text-[rgb(var(--text-primary))]","children":"Add to your Xcode project"}]]}],["$","ol",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))] ml-4 list-decimal","children":[["$","li",null,{"children":["Drag ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"SitkaTokens.swift"}]," into your Xcode project navigator."]}],["$","li",null,{"children":["In the ",["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":"Add Files"}]," dialog, ensure ",["$","em",null,{"children":"Copy items if needed"}]," is checked."]}],["$","li",null,{"children":"Make sure the file is added to your app target."}]]}]]}],["$","section",null,{"children":[["$","div",null,{"className":"flex items-center gap-2.5 mb-3","children":[["$","span",null,{"className":"flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold","children":"3"}],["$","h2",null,{"className":"text-[18px] font-semibold text-[rgb(var(--text-primary))]","children":"What's in SitkaTokens.swift"}]]}],["$","$L3",null,{"language":"swift","filename":"SitkaTokens.swift","code":"$4"}]]}],"$L5","$L6","$L7","$L8"]}]]}],["$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"RUQIyAf0qAkfAB-SIdmO1"}
+5:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3","children":"Usage examples"}],["$","h3",null,{"className":"text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2 mt-5","children":"Colors"}],["$","$L3",null,{"language":"swift","code":"Text(\"Hello Sitka\")\n    .foregroundStyle(SitkaTokens.Color.textPrimary)\n\nRectangle()\n    .fill(SitkaTokens.Color.accent)\n    .frame(height: 2)"}],["$","h3",null,{"className":"text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2 mt-6","children":"Spacing & radius"}],["$","$L3",null,{"language":"swift","code":"VStack(spacing: SitkaTokens.Spacing.s4) {\n    Text(\"Card title\")\n    Text(\"Subtitle\")\n        .foregroundStyle(SitkaTokens.Color.textSecondary)\n}\n.padding(SitkaTokens.Spacing.s6)\n.background(SitkaTokens.Color.surface)\n.clipShape(RoundedRectangle(cornerRadius: SitkaTokens.Radius.lg))"}],["$","h3",null,{"className":"text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2 mt-6","children":"Primary button"}],["$","$L3",null,{"language":"swift","code":"struct SitkaButton: View {\n    let title: String\n    var action: () -> Void\n\n    var body: some View {\n        Button(action: action) {\n            Text(title)\n                .font(.system(size: SitkaTokens.Typography.sizeSM, weight: .medium))\n                .foregroundStyle(.white)\n                .padding(.horizontal, SitkaTokens.Spacing.s5)\n                .frame(height: 40)\n                .background(SitkaTokens.Color.accent)\n                .clipShape(RoundedRectangle(cornerRadius: SitkaTokens.Radius.md))\n        }\n        .buttonStyle(.plain)\n    }\n}\n\n// Usage\nSitkaButton(title: \"Get Started\") {\n    print(\"tapped\")\n}"}]]}]
+6:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3","children":"Dark / Light mode"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-4","children":["Sitka is dark-first. To support both modes, define adaptive colors using"," ",["$","code",null,{"className":"font-mono text-[rgb(var(--accent))] text-[12px]","children":"UIColor"}]," or Color Assets in Xcode and reference the same semantic names:"]}],["$","$L3",null,{"language":"swift","code":"// In Assets.xcassets / SitkaColors.xcassets\n// Create a Color Set named \"background\" with:\n//   Light: #FAFAFA\n//   Dark:  #09090C\n// Then use it as:\nColor(\"background\")"}]]}]
+7:["$","section",null,{"className":"rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))] p-5","children":[["$","h2",null,{"className":"text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-3","children":"Requirements"}],["$","div",null,{"className":"grid grid-cols-3 gap-3 text-[13px]","children":[["$","div","Swift",{"children":[["$","p",null,{"className":"text-[rgb(var(--text-tertiary))] text-[11px] uppercase font-semibold tracking-wide","children":"Swift"}],["$","p",null,{"className":"text-[rgb(var(--text-primary))] font-mono","children":"5.9+"}]]}],["$","div","iOS",{"children":[["$","p",null,{"className":"text-[rgb(var(--text-tertiary))] text-[11px] uppercase font-semibold tracking-wide","children":"iOS"}],["$","p",null,{"className":"text-[rgb(var(--text-primary))] font-mono","children":"16+"}]]}],["$","div","Xcode",{"children":[["$","p",null,{"className":"text-[rgb(var(--text-tertiary))] text-[11px] uppercase font-semibold tracking-wide","children":"Xcode"}],["$","p",null,{"className":"text-[rgb(var(--text-primary))] font-mono","children":"15+"}]]}]]}]]}]
+8:["$","p",null,{"className":"text-[13px] text-[rgb(var(--text-tertiary))]","children":["Back to"," ",["$","$L2",null,{"href":"/libraries","className":"text-[rgb(var(--accent))] underline underline-offset-2","children":"all libraries"}],"."]}]
+9:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0xj7il9kgcswu.js","async":true}]
+a:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
+d:null

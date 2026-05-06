@@ -1,0 +1,321 @@
+1:"$Sreact.fragment"
+3:I[82541,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ThemeProvider"]
+4:I[88452,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"DocsShell"]
+5:I[2790,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+6:I[45379,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+10:I[41146,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default",1]
+:HL["/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","style"]
+:HL["/Sitka/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Sitka/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:T7d1,
+  try {
+    var t = localStorage.getItem('sitka-theme');
+    var dark = t === 'dark' || ((!t || t === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var r = document.documentElement;
+    if (dark) {
+      r.classList.add('dark');
+      r.style.colorScheme = 'dark';
+      r.style.setProperty('--background',      '9 9 12');
+      r.style.setProperty('--surface',         '13 13 17');
+      r.style.setProperty('--surface-raised',  '22 22 28');
+      r.style.setProperty('--surface-hover',   '32 32 40');
+      r.style.setProperty('--border',          '38 38 48');
+      r.style.setProperty('--border-subtle',   '26 26 33');
+      r.style.setProperty('--text-primary',    '242 242 246');
+      r.style.setProperty('--text-secondary',  '155 155 170');
+      r.style.setProperty('--text-tertiary',   '100 100 115');
+      r.style.setProperty('--accent-subtle',   '10 38 21');
+      r.style.setProperty('--accent-muted',    '20 72 39');
+      r.style.setProperty('--nav-active-color','rgb(52, 168, 101)');
+      r.style.setProperty('--card-tint-bg',    'rgb(12, 28, 18)');
+    } else {
+      r.style.colorScheme = 'light';
+      r.style.setProperty('--background',      '252 252 253');
+      r.style.setProperty('--surface',         '255 255 255');
+      r.style.setProperty('--surface-raised',  '246 246 248');
+      r.style.setProperty('--surface-hover',   '240 240 244');
+      r.style.setProperty('--border',          '224 224 231');
+      r.style.setProperty('--border-subtle',   '240 240 244');
+      r.style.setProperty('--text-primary',    '15 15 18');
+      r.style.setProperty('--text-secondary',  '85 85 99');
+      r.style.setProperty('--text-tertiary',   '130 130 147');
+      r.style.setProperty('--accent-subtle',   '232 248 239');
+      r.style.setProperty('--accent-muted',    '166 220 190');
+      r.style.setProperty('--nav-active-color','rgb(33, 150, 83)');
+      r.style.setProperty('--card-tint-bg',    'rgba(11, 55, 30, 0.06)');
+    }
+  } catch(e) {}
+0:{"P":null,"c":["","components","combobox",""],"q":"","i":false,"f":[[["",{"children":["components",{"children":["combobox",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Sitka/_next/static/chunks/04.natf_9zy-6.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Sitka/_next/static/chunks/05jbn25z0-c7i.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/Sitka/_next/static/chunks/077bcbxhcexta.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/Sitka/_next/static/chunks/090isu0jqq8wu.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"inter_7b064e0d-module__MOT0tq__variable jetbrains_mono_9a2f2d6c-module__wsyXyG__variable","suppressHydrationWarning":true,"children":["$","body",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{"children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L7","$L8"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],"$L9","$La"]}]}]]}],{"children":["$Lb",{"children":["$Lc",{"children":["$Ld",{},null,false,null]},null,false,"$@e"]},null,false,"$@e"]},null,false,null],"$Lf",false]],"m":"$undefined","G":["$10",["$L11"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"RUQIyAf0qAkfAB-SIdmO1"}
+12:I[35412,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],""]
+13:I[60701,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0qf9c~i9wfktu.js"],"ComponentPreview"]
+21:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ViewportBoundary"]
+23:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"MetadataBoundary"]
+24:"$Sreact.suspense"
+7:["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}]
+8:["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]
+9:["$","$L12",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-SC89RP965Q","strategy":"afterInteractive"}]
+a:["$","$L12",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n          gtag('config', 'G-SC89RP965Q');\n        "}]
+b:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+c:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Combobox"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"Searchable select with keyboard navigation, multi-select, grouped options, and async server-side filtering. Drop-in replacement for <select> wherever search is needed."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","$L13",null,{"children":["$","div",null,{"className":"p-6","style":{"backgroundColor":"#0d0d11","borderRadius":12,"width":"100%"},"children":["$","svg",null,{"viewBox":"0 0 560 200","className":"w-full","style":{"maxHeight":200},"children":[["$","rect",null,{"width":560,"height":200,"fill":"#0d0d11","rx":12}],["$","rect",null,{"x":40,"y":30,"width":220,"height":36,"rx":8,"fill":"#14141a","stroke":"#60a5fa","strokeWidth":1.5}],["$","circle",null,{"cx":54,"cy":48,"r":5,"fill":"none","stroke":"#9b9baa","strokeWidth":1.5}],["$","line",null,{"x1":58,"y1":52,"x2":61,"y2":55,"stroke":"#9b9baa","strokeWidth":1.5,"strokeLinecap":"round"}],["$","text",null,{"x":68,"y":53,"fontSize":13,"fill":"#f2f2f6","fontWeight":500,"children":"Sea"}],["$","rect",null,{"x":92,"y":40,"width":1.5,"height":16,"fill":"#60a5fa","opacity":0.9}],["$","text",null,{"x":246,"y":53,"fontSize":14,"fill":"#646473","textAnchor":"middle","children":"×"}],["$","rect",null,{"x":40,"y":70,"width":220,"height":104,"rx":8,"fill":"#14141a","stroke":"#262630","strokeWidth":1}],[["$","g","Seattle",{"children":[["$","rect",null,{"x":44,"y":74,"width":212,"height":28,"rx":6,"fill":"#60a5fa","opacity":0.15}],["$","text",null,{"x":52,"y":92,"fontSize":13,"fill":"#f2f2f6","fontWeight":600,"children":""}],["$","text",null,{"x":52,"y":92,"fontSize":13,"fill":"#60a5fa","fontWeight":700,"children":"Sea"}],["$","text",null,{"x":75.4,"y":92,"fontSize":13,"fill":"#f2f2f6","fontWeight":600,"children":"ttle"}]]}],["$","g","Search Engines",{"children":[false,["$","text",null,{"x":52,"y":124,"fontSize":13,"fill":"#9b9baa","fontWeight":400,"children":""}],["$","text",null,{"x":52,"y":124,"fontSize":13,"fill":"#60a5fa","fontWeight":700,"children":"Sea"}],["$","text",null,{"x":75.4,"y":124,"fontSize":13,"fill":"#9b9baa","fontWeight":400,"children":"rch Engines"}]]}],["$","g","Seafood Recipes",{"children":[false,["$","text",null,{"x":52,"y":156,"fontSize":13,"fill":"#9b9baa","fontWeight":400,"children":""}],["$","text",null,{"x":52,"y":156,"fontSize":13,"fill":"#60a5fa","fontWeight":700,"children":"Sea"}],["$","text",null,{"x":75.4,"y":156,"fontSize":13,"fill":"#9b9baa","fontWeight":400,"children":"food Recipes"}]]}]],["$","text",null,{"x":320,"y":28,"fontSize":9,"fill":"#646473","fontWeight":600,"letterSpacing":0.5,"children":"MULTI-SELECT VARIANT"}],["$","rect",null,{"x":300,"y":36,"width":220,"height":44,"rx":8,"fill":"#14141a","stroke":"#262630","strokeWidth":1}],[["$","g","React",{"children":[["$","rect",null,{"x":308,"y":44,"width":72,"height":28,"rx":6,"fill":"#60a5fa","opacity":0.18}],["$","text",null,{"x":316,"y":62,"fontSize":11,"fill":"#60a5fa","fontWeight":600,"children":"React"}],["$","text",null,{"x":368,"y":62,"fontSize":13,"fill":"#60a5fa","opacity":0.6,"children":"×"}]]}],["$","g","TypeScript",{"children":[["$","rect",null,{"x":388,"y":44,"width":72,"height":28,"rx":6,"fill":"#60a5fa","opacity":0.18}],["$","text",null,{"x":396,"y":62,"fontSize":11,"fill":"#60a5fa","fontWeight":600,"children":"TypeScript"}],["$","text",null,{"x":448,"y":62,"fontSize":13,"fill":"#60a5fa","opacity":0.6,"children":"×"}]]}]],["$","text",null,{"x":150,"y":190,"fontSize":9,"fill":"#646473","textAnchor":"middle","fontWeight":600,"letterSpacing":0.5,"children":"SINGLE-SELECT WITH SEARCH"}]]}]}]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Modes"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Mode",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Mode"}],["$","th","value type",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"value type"}],["$","th","When to use",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"When to use"}]]}]}],["$","tbody",null,{"children":[["$","tr","Single select",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":["$L14","$L15","$L16"]}],"$L17","$L18","$L19"]}]]}]}]]}],"$L1a","$L1b","$L1c","$L1d"]}],["$L1e"],"$L1f"]}]
+20:[]
+e:"$W20"
+f:["$","$1","h",{"children":[null,["$","$L21",null,{"children":"$L22"}],["$","div",null,{"hidden":true,"children":["$","$L23",null,{"children":["$","$24",null,{"name":"Next.Metadata","children":"$L25"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+11:["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+26:I[78241,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0qf9c~i9wfktu.js"],"PlatformTabs"]
+32:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+14:["$","td",null,{"className":"px-4 py-3 font-semibold text-[rgb(var(--text-primary))]","children":"Single select"}]
+15:["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"string"}]}]
+16:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"One value chosen from a long list (> 7 options). Prefer a native <select> for short lists."}]
+17:["$","tr","Multi-select",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 font-semibold text-[rgb(var(--text-primary))]","children":"Multi-select"}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"string[]"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Multiple values from the same list — tags, permissions, categories."}]]}]
+18:["$","tr","Async search",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-semibold text-[rgb(var(--text-primary))]","children":"Async search"}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Options fetched from the server on each keystroke — users, locations, large datasets."}]]}]
+19:["$","tr","Free text + select",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 font-semibold text-[rgb(var(--text-primary))]","children":"Free text + select"}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[11px] text-[rgb(var(--accent))]","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"User can type a value that doesn't exist in the list (email CC field, custom tags)."}]]}]
+1a:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Keyboard Navigation"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Key",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Key"}],["$","th","Action",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Action"}]]}]}],["$","tbody",null,{"children":[["$","tr","↓ / ↑",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[12px] text-[rgb(var(--accent))]","children":"↓ / ↑"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Move focus through options"}]]}],["$","tr","↵",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[12px] text-[rgb(var(--accent))]","children":"↵"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Select focused option; confirm free-text entry"}]]}],["$","tr","Esc",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[12px] text-[rgb(var(--accent))]","children":"Esc"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Close dropdown without selecting; clear query if already closed"}]]}],["$","tr","Tab",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[12px] text-[rgb(var(--accent))]","children":"Tab"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Close dropdown and move to next field"}]]}],["$","tr","Backspace",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[12px] text-[rgb(var(--accent))]","children":"Backspace"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"In multi-select: remove the last chip when the input is empty"}]]}],["$","tr","⌘A",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"font-mono text-[12px] text-[rgb(var(--accent))]","children":"⌘A"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"In multi-select: select all visible options"}]]}]]}]]}]}]]}]
+27:T418,import { Combobox } from "@/components/ui/Combobox";
+
+const LANGUAGES = [
+  { value: "ts",   label: "TypeScript" },
+  { value: "rs",   label: "Rust" },
+  { value: "go",   label: "Go" },
+  { value: "py",   label: "Python" },
+  { value: "swift", label: "Swift" },
+];
+
+// Single select
+const [lang, setLang] = useState("");
+
+<Combobox
+  options={LANGUAGES}
+  value={lang}
+  onChange={setLang}
+  placeholder="Select a language…"
+/>
+
+// Multi-select
+const [langs, setLangs] = useState<string[]>([]);
+
+<Combobox
+  options={LANGUAGES}
+  value={langs}
+  onChange={setLangs}
+  placeholder="Pick languages…"
+  maxSelected={3}
+/>
+
+// Server-side search
+const [results, setResults] = useState(LANGUAGES);
+const [loading, setLoading] = useState(false);
+
+async function handleSearch(query: string) {
+  setLoading(true);
+  const data = await fetchLanguages(query);
+  setResults(data);
+  setLoading(false);
+}
+
+<Combobox
+  options={results}
+  value={lang}
+  onChange={setLang}
+  onSearch={handleSearch}
+  loading={loading}
+  placeholder="Search languages…"
+/>28:Tca5,import SwiftUI
+
+struct ComboboxOption: Identifiable, Hashable {
+    let id = UUID()
+    let value: String
+    let label: String
+}
+
+struct SitkaCombobox: View {
+    let options: [ComboboxOption]
+    @Binding var selected: ComboboxOption?
+    var placeholder: String = "Select…"
+
+    @State private var query = ""
+    @State private var isExpanded = false
+
+    private var filtered: [ComboboxOption] {
+        query.isEmpty ? options : options.filter {
+            $0.label.localizedCaseInsensitiveContains(query)
+        }
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.secondary)
+                    .font(.system(size: 13))
+
+                TextField(placeholder, text: $query)
+                    .font(.system(size: 13))
+                    .onTapGesture { isExpanded = true }
+
+                if !query.isEmpty {
+                    Button { query = ""; selected = nil } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.secondary)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .padding(.horizontal, 10)
+            .padding(.vertical, 8)
+            .background(Color(UIColor.secondarySystemBackground))
+            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 8, style: .continuous)
+                    .stroke(isExpanded ? Color.accentColor : Color(UIColor.separator), lineWidth: 1)
+            )
+
+            if isExpanded && !filtered.isEmpty {
+                ScrollView {
+                    LazyVStack(alignment: .leading, spacing: 2) {
+                        ForEach(filtered) { opt in
+                            Button {
+                                selected = opt
+                                query = opt.label
+                                isExpanded = false
+                            } label: {
+                                Text(opt.label)
+                                    .font(.system(size: 13, weight: selected == opt ? .semibold : .regular))
+                                    .foregroundColor(selected == opt ? .accentColor : .primary)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 6)
+                                    .background(selected == opt ? Color.accentColor.opacity(0.12) : .clear)
+                                    .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
+                    .padding(4)
+                }
+                .frame(maxHeight: 200)
+                .background(Color(UIColor.secondarySystemBackground))
+                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                .shadow(color: .black.opacity(0.15), radius: 8, x: 0, y: 4)
+            }
+        }
+    }
+}29:Teed,import SwiftUI
+
+// On macOS, use a Menu-based picker for simple single-select,
+// or a SearchField + popover for full combobox behavior.
+
+struct ComboboxOption: Identifiable, Hashable {
+    let id = UUID()
+    let value: String
+    let label: String
+}
+
+// Full combobox with search field + popover dropdown
+struct SitkaCombobox: View {
+    let options: [ComboboxOption]
+    @Binding var selected: ComboboxOption?
+    var placeholder: String = "Select…"
+
+    @State private var query = ""
+    @State private var isExpanded = false
+
+    private var filtered: [ComboboxOption] {
+        query.isEmpty ? options : options.filter {
+            $0.label.localizedCaseInsensitiveContains(query)
+        }
+    }
+
+    var body: some View {
+        HStack {
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(Color(.secondaryLabelColor))
+                .font(.system(size: 12))
+
+            TextField(placeholder, text: $query)
+                .textFieldStyle(.plain)
+                .font(.system(size: 13))
+                .onSubmit {
+                    if let first = filtered.first {
+                        selected = first
+                        query = first.label
+                        isExpanded = false
+                    }
+                }
+                .onChange(of: query) { isExpanded = !query.isEmpty }
+
+            if !query.isEmpty {
+                Button { query = ""; selected = nil } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundColor(Color(.secondaryLabelColor))
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(.horizontal, 8)
+        .padding(.vertical, 6)
+        .background(Color(NSColor.controlBackgroundColor))
+        .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 6, style: .continuous)
+                .stroke(isExpanded ? Color.accentColor : Color(NSColor.separatorColor), lineWidth: 1)
+        )
+        .popover(isPresented: $isExpanded, arrowEdge: .bottom) {
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: 1) {
+                    ForEach(filtered) { opt in
+                        Button {
+                            selected = opt
+                            query = opt.label
+                            isExpanded = false
+                        } label: {
+                            Text(opt.label)
+                                .font(.system(size: 13, weight: selected == opt ? .semibold : .regular))
+                                .foregroundColor(selected == opt ? .accentColor : Color(.labelColor))
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 5)
+                                .background(selected == opt ? Color.accentColor.opacity(0.1) : Color.clear)
+                                .clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous))
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding(6)
+            }
+            .frame(minWidth: 200, maxHeight: 220)
+        }
+    }
+}
+
+let languages = [
+    ComboboxOption(value: "ts",    label: "TypeScript"),
+    ComboboxOption(value: "rs",    label: "Rust"),
+    ComboboxOption(value: "go",    label: "Go"),
+    ComboboxOption(value: "py",    label: "Python"),
+    ComboboxOption(value: "swift", label: "Swift"),
+]
+
+#Preview {
+    @Previewable @State var selected: ComboboxOption? = nil
+
+    SitkaCombobox(options: languages, selected: $selected, placeholder: "Select a language…")
+        .frame(width: 240)
+        .padding()
+}1b:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","$L26",null,{"code":{"react":{"filename":"Combobox.tsx","code":"$27"},"html":{"filename":"combobox.html","code":"<!-- Native <datalist> — basic, no multi-select -->\n<label for=\"lang-input\">Language</label>\n<input\n  id=\"lang-input\"\n  list=\"lang-options\"\n  placeholder=\"Select a language…\"\n  autocomplete=\"off\"\n  class=\"input\"\n/>\n<datalist id=\"lang-options\">\n  <option value=\"TypeScript\" />\n  <option value=\"Rust\" />\n  <option value=\"Go\" />\n  <option value=\"Python\" />\n  <option value=\"Swift\" />\n</datalist>\n\n<!--\n  For full combobox behaviour (grouped options, multi-select,\n  async search, keyboard nav) use the Combobox web component\n  or a library such as Floating UI + your own listbox logic.\n  The ARIA pattern is:\n\n  <div role=\"combobox\" aria-expanded=\"true\" aria-haspopup=\"listbox\"\n       aria-controls=\"lb\" aria-autocomplete=\"list\">\n    <input type=\"text\" id=\"cb-input\" aria-activedescendant=\"opt-0\" />\n  </div>\n  <ul id=\"lb\" role=\"listbox\">\n    <li id=\"opt-0\" role=\"option\" aria-selected=\"true\">TypeScript</li>\n    <li id=\"opt-1\" role=\"option\" aria-selected=\"false\">Rust</li>\n  </ul>\n-->"},"swift":{"filename":"SitkaCombobox.swift","code":"$28"},"macos":{"filename":"SitkaCombobox+macOS.swift","code":"$29"}}}]]}]
+1c:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5","children":"Props"}],["$","div",null,{"className":"overflow-hidden rounded-xl border border-[rgb(var(--border))]","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]","children":[["$","th","Prop",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Prop"}],["$","th","Type",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Type"}],["$","th","Default",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Default"}],["$","th","Description",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Description"}]]}]}],["$","tbody",null,{"children":[["$","tr","options",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["options","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"Array<{ value: string; label: string; group?: string }>"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"The full list of selectable options. Filtered client-side by default; pass onSearch to filter server-side."}]]}],["$","tr","value",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["value","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string | string[]"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Controlled selected value. Pass an array to enable multi-select mode."}]]}],["$","tr","onChange",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["onChange","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"(value: string | string[]) => void"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Called when the selection changes."}]]}],["$","tr","placeholder",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["placeholder","$undefined"]}]}],"$L2a","$L2b","$L2c"]}],"$L2d","$L2e","$L2f","$L30","$L31"]}]]}]}]]}]
+1d:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","The input has role=\"combobox\", aria-expanded, aria-haspopup=\"listbox\", aria-autocomplete=\"list\", and aria-controls pointing to the listbox.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The input has role=\"combobox\", aria-expanded, aria-haspopup=\"listbox\", aria-autocomplete=\"list\", and aria-controls pointing to the listbox."]}],["$","li","Each option has role=\"option\". The focused option is tracked via aria-activedescendant on the input, not a moved focus.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Each option has role=\"option\". The focused option is tracked via aria-activedescendant on the input, not a moved focus."]}],["$","li","Selected options in multi-select have aria-selected=\"true\". Chips include a visually-hidden \"Remove\" label for screen readers.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Selected options in multi-select have aria-selected=\"true\". Chips include a visually-hidden \"Remove\" label for screen readers."]}],["$","li","When async results load, announce the count to screen readers via a live region: '5 options available'.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"When async results load, announce the count to screen readers via a live region: '5 options available'."]}],["$","li","The dropdown is portaled to document.body so it's never clipped by overflow:hidden ancestors.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The dropdown is portaled to document.body so it's never clipped by overflow:hidden ancestors."]}]]}]]}]
+1e:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0qf9c~i9wfktu.js","async":true,"nonce":"$undefined"}]
+1f:["$","$L32",null,{"children":["$","$24",null,{"name":"Next.MetadataOutlet","children":"$@33"}]}]
+2a:["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}]
+2b:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"Select…\""}]}]
+2c:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Placeholder shown in the trigger when no value is selected."}]
+2d:["$","tr","onSearch",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["onSearch","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"(query: string) => void"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"undefined"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"When provided, disables client-side filtering and calls this function on every keystroke so you can fetch server-side results."}]]}]
+2e:["$","tr","loading",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["loading","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"false"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Shows a spinner inside the dropdown while onSearch results are loading."}]]}]
+2f:["$","tr","maxSelected",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["maxSelected","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"number"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"In multi-select mode, caps the number of selected items. Disables remaining options when the cap is reached."}]]}]
+30:["$","tr","clearable",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["clearable","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"true"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Shows an × button to clear the selection."}]]}]
+31:["$","tr","disabled",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["disabled","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"false"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Prevents interaction and dims the control."}]]}]
+22:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+34:I[88599,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"IconMark"]
+25:[["$","title","0",{"children":"Combobox — Sitka Design System"}],["$","meta","1",{"name":"description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","2",{"name":"keywords","content":"design system,components,tokens,React,SwiftUI"}],["$","meta","3",{"property":"og:title","content":"Sitka Design System"}],["$","meta","4",{"property":"og:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","5",{"property":"og:url","content":"https://jsrothwell.github.io/Sitka/"}],["$","meta","6",{"property":"og:site_name","content":"Sitka Design System"}],["$","meta","7",{"property":"og:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Sitka Design System"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Sitka Design System"}],["$","meta","14",{"name":"twitter:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","15",{"name":"twitter:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","link","16",{"rel":"icon","href":"/Sitka/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L34","17",{}]]
+33:null

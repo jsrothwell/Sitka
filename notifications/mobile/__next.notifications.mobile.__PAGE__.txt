@@ -1,0 +1,200 @@
+1:"$Sreact.fragment"
+2:I[60701,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0hs-6-rce0q8t.js"],"ComponentPreview"]
+3:I[92153,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0hs-6-rce0q8t.js"],"MobileNotificationDemo"]
+d:I[78241,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0hs-6-rce0q8t.js"],"PlatformTabs"]
+11:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Mobile Notifications"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"iOS-style banner notifications that slide in from the top of the screen. Used for real-time alerts, messages, and system events. Banners auto-dismiss after a few seconds; they never block interaction with the app behind them."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","$L2",null,{"children":["$","$L3",null,{}]}],["$","p",null,{"className":"text-[12px] text-[rgb(var(--text-tertiary))] mt-3","children":"Tap a type to trigger the banner. It auto-dismisses after 3.5 s."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Anatomy"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Part",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Part"}],["$","th","Required",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Required"}],["$","th","Notes",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Notes"}]]}]}],["$","tbody",null,{"children":[["$","tr","App icon / colored icon",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"App icon / colored icon"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"Yes"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Identifies the source at a glance. Use the app icon for system notifications; a category icon (filled) for in-app banners."}]]}],["$","tr","App name",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"App name"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"Yes"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Small uppercase label. Gives context before the user reads the title."}]]}],["$","tr","Timestamp",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Timestamp"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"Recommended"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"\"now\", \"2m ago\", or an absolute time. Omit only if the banner is ephemeral and timing is always 'now'."}]]}],["$","tr","Title",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Title"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"Yes"}],"$L4"]}],"$L5","$L6"]}]]}]}]]}],"$L7","$L8","$L9","$La"]}],["$Lb"],"$Lc"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"RUQIyAf0qAkfAB-SIdmO1"}
+4:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"One line, ≤50 chars. The most important information — often the sender name or event."}]
+5:["$","tr","Body / subtitle",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Body / subtitle"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"Recommended"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Preview of the content. 1–2 lines max. Truncate with ellipsis if longer."}]]}]
+6:["$","tr","Action buttons",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Action buttons"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"No"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Long-press affordance on iOS (UNNotificationAction). In-app banners can show up to 2 inline buttons for quick actions."}]]}]
+7:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Notification types"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Type",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Type"}],["$","th","Use case",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Use case"}],["$","th","Urgency",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Urgency"}],["$","th","Auto-dismiss",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Auto-dismiss"}]]}]}],["$","tbody",null,{"children":[["$","tr","Message",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Message"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"New chat, reply, mention"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Medium"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"3–5 s"}]]}],["$","tr","Social",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Social"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Like, follow, comment"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Low"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"3–5 s"}]]}],["$","tr","Alert",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Alert"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Low battery, storage, connectivity"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"High"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"Never (sticky)"}]]}],["$","tr","Reminder",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Reminder"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Calendar event, task due"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Medium"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"5 s"}]]}],["$","tr","Promo",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))]","children":"Promo"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Sale, new content, feature"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"None"}],["$","td",null,{"className":"px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]","children":"3–4 s"}]]}]]}]]}]}]]}]
+e:T8db,// iOS-style banner notification inside a phone frame
+// For real apps, use the OS notification API (Expo Notifications / FCM)
+
+import { useState, useEffect } from "react";
+import { MessageCircle } from "lucide-react";
+import { cn } from "@/lib/cn";
+
+interface BannerProps {
+  visible: boolean;
+  icon: React.ReactNode;
+  app: string;
+  title: string;
+  body: string;
+  onDismiss: () => void;
+  duration?: number; // ms, default 3500
+}
+
+export function NotificationBanner({
+  visible, icon, app, title, body, onDismiss, duration = 3500,
+}: BannerProps) {
+  useEffect(() => {
+    if (!visible) return;
+    const t = setTimeout(onDismiss, duration);
+    return () => clearTimeout(t);
+  }, [visible, duration, onDismiss]);
+
+  return (
+    <div
+      className={cn(
+        "fixed top-safe-top left-0 right-0 z-50 px-3 pt-2 transition-transform duration-300",
+        visible ? "translate-y-0" : "-translate-y-full"
+      )}
+    >
+      <div className="flex items-start gap-2.5 px-3 py-2.5 rounded-2xl
+        bg-surface-raised/90 backdrop-blur-sm border border-border
+        shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
+        <div className="w-8 h-8 rounded-xl bg-surface flex items-center justify-center flex-shrink-0">
+          {icon}
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-baseline justify-between gap-1">
+            <span className="text-[10px] font-semibold text-text-tertiary uppercase tracking-wide truncate">{app}</span>
+            <span className="text-[10px] text-text-tertiary flex-shrink-0">now</span>
+          </div>
+          <p className="text-[12px] font-semibold text-text-primary truncate">{title}</p>
+          <p className="text-[11px] text-text-secondary truncate">{body}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Usage
+export function Example() {
+  const [visible, setVisible] = useState(false);
+  return (
+    <>
+      <button onClick={() => setVisible(true)}>Trigger notification</button>
+      <NotificationBanner
+        visible={visible}
+        icon={<MessageCircle className="w-4 h-4 text-blue-400" />}
+        app="Messages"
+        title="Jamie replied to you"
+        body="Sounds good, see you at 3pm!"
+        onDismiss={() => setVisible(false)}
+      />
+    </>
+  );
+}f:T924,<div class="notification" id="notification" aria-live="assertive" aria-atomic="true" role="alert" hidden>
+  <div class="notification-icon">
+    <!-- icon here -->
+  </div>
+  <div class="notification-body">
+    <div class="notification-meta">
+      <span class="notification-app">Messages</span>
+      <span class="notification-time">now</span>
+    </div>
+    <p class="notification-title">Jamie replied to you</p>
+    <p class="notification-subtitle">Sounds good, see you at 3pm!</p>
+  </div>
+</div>
+
+<style>
+  .notification {
+    position: fixed;
+    top: env(safe-area-inset-top, 0);
+    left: 0; right: 0;
+    z-index: 9999;
+    padding: 8px 12px;
+    transform: translateY(-110%);
+    transition: transform 300ms ease-out;
+  }
+  .notification.visible { transform: translateY(0); }
+  .notification > div {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 10px 12px; border-radius: 16px;
+    background: rgba(var(--surface-raised), 0.92);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgb(var(--border));
+    box-shadow: 0 4px 20px rgba(0,0,0,.25);
+  }
+  .notification-icon {
+    width: 32px; height: 32px; border-radius: 10px;
+    background: rgb(var(--surface));
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .notification-body { flex: 1; min-width: 0; }
+  .notification-meta { display: flex; justify-content: space-between; }
+  .notification-app  { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: rgb(var(--text-tertiary)); }
+  .notification-time { font-size: 10px; color: rgb(var(--text-tertiary)); }
+  .notification-title    { font-size: 12px; font-weight: 600; color: rgb(var(--text-primary)); margin-top: 2px; }
+  .notification-subtitle { font-size: 11px; color: rgb(var(--text-secondary)); }
+</style>
+
+<script>
+  let timer;
+  function showNotification(duration = 3500) {
+    const el = document.getElementById("notification");
+    el.hidden = false;
+    requestAnimationFrame(() => el.classList.add("visible"));
+    clearTimeout(timer);
+    timer = setTimeout(hideNotification, duration);
+  }
+  function hideNotification() {
+    const el = document.getElementById("notification");
+    el.classList.remove("visible");
+    el.addEventListener("transitionend", () => { el.hidden = true; }, { once: true });
+  }
+</script>10:T7a2,import SwiftUI
+import UserNotifications
+
+// Request permission
+func requestPermission() {
+    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+        print(granted ? "Granted" : "Denied")
+    }
+}
+
+// Schedule a local notification
+func scheduleNotification(title: String, body: String, delay: TimeInterval = 1) {
+    let content = UNMutableNotificationContent()
+    content.title = title
+    content.body = body
+    content.sound = .default
+
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
+    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+
+    UNUserNotificationCenter.current().add(request)
+}
+
+// In-app banner using SwiftUI overlay
+struct InAppBanner: View {
+    let title: String
+    let body: String
+    @Binding var visible: Bool
+
+    var body: some View {
+        VStack {
+            if visible {
+                HStack(spacing: 12) {
+                    Image(systemName: "message.fill")
+                        .foregroundStyle(.blue)
+                        .padding(8)
+                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10))
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(title).font(.subheadline.weight(.semibold))
+                        Text(body).font(.caption).foregroundStyle(.secondary)
+                    }
+                    Spacer()
+                }
+                .padding()
+                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 16))
+                .padding()
+                .transition(.move(edge: .top).combined(with: .opacity))
+            }
+            Spacer()
+        }
+        .animation(.spring(duration: 0.3), value: visible)
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) { visible = false }
+        }
+    }
+}8:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","$Ld",null,{"code":{"react":{"filename":"MobileNotification.tsx","code":"$e"},"html":{"filename":"notification.html","code":"$f"},"swift":{"filename":"NotificationDemo.swift","code":"$10"}}}]]}]
+9:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Design decisions"}],["$","ul",null,{"className":"space-y-4 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Banners never block interaction",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Banners never block interaction","."]}]," ","The banner sits above content without a blocking overlay. Users can interact with the app while the banner is visible. Never use a full-screen overlay for a notification."]}]]}],["$","li","Frosted glass surface",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Frosted glass surface","."]}]," ","backdrop-filter: blur(12px) with a semi-transparent surface lets users see context behind the banner — they don't lose their place in the app. Ensure enough opacity for contrast in both light and dark modes."]}]]}],["$","li","Safe area clearance",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Safe area clearance","."]}]," ","Position banners at env(safe-area-inset-top) on iOS to avoid the Dynamic Island and status bar. Use a top-padding of ~8px after the safe area."]}]]}],["$","li","Duration tuned to content length",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Duration tuned to content length","."]}]," ","Short titles (under 40 chars) can dismiss in 3 s. Longer content or alerts should stay 5 s or be sticky. Users reading slowly should not have content yanked away."]}]]}],["$","li","Sound + haptics",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Sound + haptics","."]}]," ","System notifications pair with a sound. In-app banners should not auto-play sound — use haptics (UIFeedbackGenerator / Haptics API) for subtle acknowledgement instead."]}]]}]]}]]}]
+a:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Use role=\"alert\" with aria-live=\"assertive\" for urgent notifications. For lower-priority banners use aria-live=\"polite\" so the announcement waits for a natural pause.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],"Use role=\"alert\" with aria-live=\"assertive\" for urgent notifications. For lower-priority banners use aria-live=\"polite\" so the announcement waits for a natural pause."]}],["$","li","aria-atomic=\"true\" ensures the entire banner content is read as one unit when it appears, rather than piece by piece.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],"aria-atomic=\"true\" ensures the entire banner content is read as one unit when it appears, rather than piece by piece."]}],["$","li","Do not auto-dismiss notifications that require user action (errors, critical alerts). A user who steps away from the screen should not miss an actionable state.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],"Do not auto-dismiss notifications that require user action (errors, critical alerts). A user who steps away from the screen should not miss an actionable state."]}],["$","li","Reduce Motion: Respect prefers-reduced-motion by removing slide animation. The banner can still appear/disappear instantly — just without the translate transition.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],"Reduce Motion: Respect prefers-reduced-motion by removing slide animation. The banner can still appear/disappear instantly — just without the translate transition."]}],["$","li","VoiceOver / TalkBack: The notification should be announced immediately on appearance. Test that the app name, title, and body are all read in order.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],"VoiceOver / TalkBack: The notification should be announced immediately on appearance. Test that the app name, title, and body are all read in order."]}]]}]]}]
+b:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0hs-6-rce0q8t.js","async":true}]
+c:["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]
+13:null

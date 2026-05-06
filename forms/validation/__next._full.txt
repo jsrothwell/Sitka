@@ -1,0 +1,341 @@
+1:"$Sreact.fragment"
+3:I[82541,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ThemeProvider"]
+4:I[88452,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"DocsShell"]
+5:I[2790,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+6:I[45379,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default"]
+10:I[41146,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"default",1]
+:HL["/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","style"]
+:HL["/Sitka/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Sitka/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:T7d1,
+  try {
+    var t = localStorage.getItem('sitka-theme');
+    var dark = t === 'dark' || ((!t || t === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var r = document.documentElement;
+    if (dark) {
+      r.classList.add('dark');
+      r.style.colorScheme = 'dark';
+      r.style.setProperty('--background',      '9 9 12');
+      r.style.setProperty('--surface',         '13 13 17');
+      r.style.setProperty('--surface-raised',  '22 22 28');
+      r.style.setProperty('--surface-hover',   '32 32 40');
+      r.style.setProperty('--border',          '38 38 48');
+      r.style.setProperty('--border-subtle',   '26 26 33');
+      r.style.setProperty('--text-primary',    '242 242 246');
+      r.style.setProperty('--text-secondary',  '155 155 170');
+      r.style.setProperty('--text-tertiary',   '100 100 115');
+      r.style.setProperty('--accent-subtle',   '10 38 21');
+      r.style.setProperty('--accent-muted',    '20 72 39');
+      r.style.setProperty('--nav-active-color','rgb(52, 168, 101)');
+      r.style.setProperty('--card-tint-bg',    'rgb(12, 28, 18)');
+    } else {
+      r.style.colorScheme = 'light';
+      r.style.setProperty('--background',      '252 252 253');
+      r.style.setProperty('--surface',         '255 255 255');
+      r.style.setProperty('--surface-raised',  '246 246 248');
+      r.style.setProperty('--surface-hover',   '240 240 244');
+      r.style.setProperty('--border',          '224 224 231');
+      r.style.setProperty('--border-subtle',   '240 240 244');
+      r.style.setProperty('--text-primary',    '15 15 18');
+      r.style.setProperty('--text-secondary',  '85 85 99');
+      r.style.setProperty('--text-tertiary',   '130 130 147');
+      r.style.setProperty('--accent-subtle',   '232 248 239');
+      r.style.setProperty('--accent-muted',    '166 220 190');
+      r.style.setProperty('--nav-active-color','rgb(33, 150, 83)');
+      r.style.setProperty('--card-tint-bg',    'rgba(11, 55, 30, 0.06)');
+    }
+  } catch(e) {}
+0:{"P":null,"c":["","forms","validation",""],"q":"","i":false,"f":[[["",{"children":["forms",{"children":["validation",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Sitka/_next/static/chunks/04.natf_9zy-6.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Sitka/_next/static/chunks/05jbn25z0-c7i.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/Sitka/_next/static/chunks/077bcbxhcexta.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/Sitka/_next/static/chunks/090isu0jqq8wu.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"inter_7b064e0d-module__MOT0tq__variable jetbrains_mono_9a2f2d6c-module__wsyXyG__variable","suppressHydrationWarning":true,"children":["$","body",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{"children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L7","$L8"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],"$L9","$La"]}]}]]}],{"children":["$Lb",{"children":["$Lc",{"children":["$Ld",{},null,false,null]},null,false,"$@e"]},null,false,"$@e"]},null,false,null],"$Lf",false]],"m":"$undefined","G":["$10",["$L11"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"RUQIyAf0qAkfAB-SIdmO1"}
+12:I[35412,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],""]
+13:I[60701,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/12ot5m.~fkzcr.js"],"ComponentPreview"]
+14:I[41154,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/12ot5m.~fkzcr.js"],"ValidationDemo"]
+1e:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"ViewportBoundary"]
+20:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"MetadataBoundary"]
+21:"$Sreact.suspense"
+7:["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}]
+8:["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]
+9:["$","$L12",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-SC89RP965Q","strategy":"afterInteractive"}]
+a:["$","$L12",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n          gtag('config', 'G-SC89RP965Q');\n        "}]
+b:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+c:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Form Validation"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"Patterns for surfacing errors and confirmations in forms. Validate on blur, not on every keystroke — give users room to type before judging. Show errors inline, close to the field, using plain language."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","$L13",null,{"children":["$","$L14",null,{}]}],["$","p",null,{"className":"text-[12px] text-[rgb(var(--text-tertiary))] mt-3","children":"Tab away from the email field to trigger on-blur validation. Type in the password field to see the strength meter. Submit with an invalid state to see submit-time errors."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"When to validate"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Trigger",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Trigger"}],["$","th","Use for",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Use for"}],["$","th","Avoid",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Avoid"}]]}]}],["$","tbody",null,{"children":[["$","tr","On blur (focus leave)",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"On blur (focus leave)"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Email, URL, date, any field where the full value matters"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Password strength — show that eagerly after the first character"}]]}],["$","tr","On input (keystroke)",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"On input (keystroke)"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Password strength meter, character counter, live search"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Error messages — premature errors on partial input are frustrating"}]]}],["$","tr","On submit",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"On submit"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Final gate; catches any field the user skipped"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"As the only validation trigger — users have already committed before they see errors"}]]}],["$","tr","Server-side async",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":["$L15","$L16","$L17"]}]]}]]}]}]]}],"$L18","$L19","$L1a"]}],["$L1b"],"$L1c"]}]
+1d:[]
+e:"$W1d"
+f:["$","$1","h",{"children":[null,["$","$L1e",null,{"children":"$L1f"}],["$","div",null,{"hidden":true,"children":["$","$L20",null,{"children":["$","$21",null,{"name":"Next.Metadata","children":"$L22"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+11:["$","link","0",{"rel":"stylesheet","href":"/Sitka/_next/static/chunks/0fzmlcx5ls53w.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+23:I[78241,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/12ot5m.~fkzcr.js"],"PlatformTabs"]
+27:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+15:["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Server-side async"}]
+16:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Unique username/email check, promo code validation"}]
+17:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":"Firing too eagerly; debounce by ≥ 400 ms and only trigger after on-blur"}]
+18:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Error message guidance"}],["$","ul",null,{"className":"space-y-4 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Be specific",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Be specific","."]}]," ","\"Enter a valid email address\" is better than \"Invalid input\". Tell the user exactly what's wrong and how to fix it."]}]]}],["$","li","Plain language, no jargon",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Plain language, no jargon","."]}]," ","Avoid \"regex mismatch\", \"null value\", or HTTP status codes. Write as if speaking to the user directly: \"Email can't be blank.\""]}]]}],["$","li","Inline, not modal",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Inline, not modal","."]}]," ","Show errors close to the field they describe, not in a dialog or at the top of the page. Users shouldn't have to hunt for which field failed."]}]]}],["$","li","Don't clear errors on focus",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Don't clear errors on focus","."]}]," ","Clear the error when the user starts correcting the value (on input), not when they simply focus the field. Premature clearing makes users wonder if they've already fixed it."]}]]}],["$","li","Pair errors with positive states",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],["$","span",null,{"children":[["$","strong",null,{"className":"text-[rgb(var(--text-primary))]","children":["Pair errors with positive states","."]}]," ","When a field is valid, show a green check (or similar). This confirms to the user that this field is done — they don't need to guess."]}]]}]]}]]}]
+24:Td44,import { useState } from "react";
+import { Input } from "@/components/ui/Input";
+import { Button } from "@/components/ui/Button";
+import { AlertCircle, Check } from "lucide-react";
+import { cn } from "@/lib/cn";
+
+function isValidEmail(v: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+}
+
+function getPasswordStrength(pw: string) {
+  let score = 0;
+  if (pw.length >= 8)      score++;
+  if (/[A-Z]/.test(pw))    score++;
+  if (/[0-9]/.test(pw))    score++;
+  if (/[^A-Za-z0-9]/.test(pw)) score++;
+  if (score <= 1) return { score, label: "Weak",   color: "bg-red-500" };
+  if (score <= 2) return { score, label: "Fair",   color: "bg-amber-500" };
+  return            { score, label: "Strong", color: "bg-green-500" };
+}
+
+export function SignUpForm() {
+  const [email, setEmail]           = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [emailValid, setEmailValid] = useState(false);
+  const [password, setPassword]     = useState("");
+
+  const strength = getPasswordStrength(password);
+
+  // Validate on blur — not on every keystroke
+  function handleEmailBlur() {
+    if (!email)               return setEmailError("Email is required.");
+    if (!isValidEmail(email)) return setEmailError("Enter a valid email address.");
+    setEmailError("");
+    setEmailValid(true);
+  }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    // Final validation on submit
+    if (!isValidEmail(email)) return setEmailError("Enter a valid email address.");
+    if (strength.score < 2) return; // show inline strength meter
+    // proceed...
+  }
+
+  return (
+    <form onSubmit={handleSubmit} noValidate className="space-y-4 max-w-sm">
+      {/* Email with on-blur validation */}
+      <div className="space-y-1">
+        <label className="block text-[12px] font-medium text-text-secondary">Email</label>
+        <Input
+          type="email"
+          value={email}
+          onChange={(e) => { setEmail(e.target.value); setEmailError(""); }}
+          onBlur={handleEmailBlur}
+          placeholder="you@example.com"
+          error={emailError || undefined}
+          rightIcon={emailValid ? <Check className="w-4 h-4 text-green-400" /> : undefined}
+        />
+        {emailError && (
+          <p className="flex items-center gap-1 text-[11px] text-red-400">
+            <AlertCircle className="w-3 h-3" /> {emailError}
+          </p>
+        )}
+      </div>
+
+      {/* Password with strength meter */}
+      <div className="space-y-1">
+        <label className="block text-[12px] font-medium text-text-secondary">Password</label>
+        <Input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Create a password"
+        />
+        {password && (
+          <div className="space-y-1">
+            <div className="flex gap-1">
+              {[1, 2, 3, 4].map((i) => (
+                <div
+                  key={i}
+                  className={cn(
+                    "h-1 flex-1 rounded-full transition-colors",
+                    i <= strength.score ? strength.color : "bg-border"
+                  )}
+                />
+              ))}
+            </div>
+            <p className="text-[11px] font-medium">{strength.label}</p>
+          </div>
+        )}
+      </div>
+
+      <Button type="submit" className="w-full">Create account</Button>
+    </form>
+  );
+}25:Tda0,<form id="signUpForm" novalidate>
+  <div class="field">
+    <label class="field-label" for="email">Email</label>
+    <div class="input-wrap">
+      <input class="input" id="email" type="email" placeholder="you@example.com" />
+      <span class="input-icon valid-icon" id="emailValidIcon" hidden>✓</span>
+    </div>
+    <p class="field-error" id="emailError" hidden></p>
+  </div>
+
+  <div class="field">
+    <label class="field-label" for="password">Password</label>
+    <input class="input" id="password" type="password" placeholder="Create a password" />
+    <div class="strength-meter" id="strengthMeter" hidden>
+      <div class="strength-bars">
+        <div class="bar" id="bar1"></div>
+        <div class="bar" id="bar2"></div>
+        <div class="bar" id="bar3"></div>
+        <div class="bar" id="bar4"></div>
+      </div>
+      <p class="strength-label" id="strengthLabel"></p>
+    </div>
+  </div>
+
+  <button class="btn btn-primary btn-full" type="submit">Create account</button>
+</form>
+
+<style>
+  .field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 16px; }
+  .field-label { font-size: 12px; font-weight: 500; color: rgb(var(--text-secondary)); }
+  .field-error  { font-size: 11px; color: #f87171; }
+  .input-wrap   { position: relative; }
+  .input-error  { border-color: #f87171 !important; }
+  .valid-icon   { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #4ade80; }
+  .strength-bars { display: flex; gap: 4px; margin-top: 4px; }
+  .bar { flex: 1; height: 4px; border-radius: 9999px; background: rgb(var(--border)); transition: background 200ms; }
+  .bar.weak   { background: #f87171; }
+  .bar.fair   { background: #fbbf24; }
+  .bar.strong { background: #4ade80; }
+  .strength-label { font-size: 11px; font-weight: 500; margin-top: 2px; }
+</style>
+
+<script>
+  function isValidEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+  function getStrength(pw) {
+    let s = 0;
+    if (pw.length >= 8)       s++;
+    if (/[A-Z]/.test(pw))     s++;
+    if (/[0-9]/.test(pw))     s++;
+    if (/[^A-Za-z0-9]/.test(pw)) s++;
+    return s;
+  }
+
+  const emailEl    = document.getElementById("email");
+  const emailError = document.getElementById("emailError");
+  const validIcon  = document.getElementById("emailValidIcon");
+  const pwEl       = document.getElementById("password");
+  const meter      = document.getElementById("strengthMeter");
+  const bars       = [1,2,3,4].map(i => document.getElementById("bar"+i));
+  const strengthLbl = document.getElementById("strengthLabel");
+
+  emailEl.addEventListener("blur", () => {
+    if (!emailEl.value) {
+      showError("Email is required.");
+    } else if (!isValidEmail(emailEl.value)) {
+      showError("Enter a valid email address.");
+    } else {
+      clearError(); validIcon.hidden = false;
+    }
+  });
+
+  function showError(msg) { emailError.textContent = msg; emailError.hidden = false; emailEl.classList.add("input-error"); validIcon.hidden = true; }
+  function clearError()   { emailError.hidden = true; emailEl.classList.remove("input-error"); }
+
+  pwEl.addEventListener("input", () => {
+    if (!pwEl.value) { meter.hidden = true; return; }
+    meter.hidden = false;
+    const s = getStrength(pwEl.value);
+    const cls  = s <= 1 ? "weak" : s <= 2 ? "fair" : "strong";
+    const lbl  = s <= 1 ? "Weak" : s <= 2 ? "Fair" : "Strong";
+    bars.forEach((b, i) => { b.className = "bar" + (i < s ? " " + cls : ""); });
+    strengthLbl.textContent = lbl;
+  });
+</script>26:Tb33,import SwiftUI
+
+struct SignUpView: View {
+    @State private var email     = ""
+    @State private var password  = ""
+    @State private var emailError: String?
+    @FocusState private var emailFocused: Bool
+
+    var passwordStrength: (score: Int, label: String) {
+        var s = 0
+        if password.count >= 8          { s += 1 }
+        if password.range(of: "[A-Z]", options: .regularExpression) != nil { s += 1 }
+        if password.range(of: "[0-9]",  options: .regularExpression) != nil { s += 1 }
+        if password.range(of: "[^A-Za-z0-9]", options: .regularExpression) != nil { s += 1 }
+        let label = s <= 1 ? "Weak" : s <= 2 ? "Fair" : "Strong"
+        return (s, label)
+    }
+
+    func validateEmail() {
+        let pattern = #"^[^\s@]+@[^\s@]+\.[^\s@]+$"#
+        if email.isEmpty {
+            emailError = "Email is required."
+        } else if email.range(of: pattern, options: .regularExpression) == nil {
+            emailError = "Enter a valid email address."
+        } else {
+            emailError = nil
+        }
+    }
+
+    var body: some View {
+        Form {
+            // Email with on-blur validation
+            Section {
+                VStack(alignment: .leading, spacing: 4) {
+                    TextField("Email", text: $email)
+                        .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
+                        .focused($emailFocused)
+                        .onChange(of: emailFocused) { _, focused in
+                            if !focused { validateEmail() }
+                        }
+                    if let error = emailError {
+                        Label(error, systemImage: "exclamationmark.circle.fill")
+                            .font(.caption)
+                            .foregroundStyle(.red)
+                    }
+                }
+            }
+
+            // Password with strength meter
+            Section {
+                SecureField("Password", text: $password)
+                if !password.isEmpty {
+                    PasswordStrengthView(score: passwordStrength.score, label: passwordStrength.label)
+                }
+            }
+
+            Section {
+                Button("Create account") { /* submit */ }
+            }
+        }
+    }
+}
+
+struct PasswordStrengthView: View {
+    let score: Int
+    let label: String
+
+    var color: Color { score <= 1 ? .red : score <= 2 ? .orange : .green }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(spacing: 4) {
+                ForEach(1...4, id: \.self) { i in
+                    RoundedRectangle(cornerRadius: 2)
+                        .fill(i <= score ? color : Color.secondary.opacity(0.2))
+                        .frame(height: 4)
+                }
+            }
+            Text(label).font(.caption).foregroundStyle(color)
+        }
+    }
+}19:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","$L23",null,{"code":{"react":{"filename":"ValidationDemo.tsx","code":"$24"},"html":{"filename":"validation.html","code":"$25"},"swift":{"filename":"FormValidation.swift","code":"$26"}}}]]}]
+1a:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Link error messages to their inputs with aria-describedby so screen readers announce the error when the field receives focus.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],"Link error messages to their inputs with aria-describedby so screen readers announce the error when the field receives focus."]}],["$","li","Mark invalid fields with aria-invalid=\"true\" when they have an error. Remove the attribute (or set to false) once the error is cleared.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],"Mark invalid fields with aria-invalid=\"true\" when they have an error. Remove the attribute (or set to false) once the error is cleared."]}],["$","li","On submit failure, move focus to the first invalid field. Don't leave focus on the submit button — users with screen readers may not discover which field failed.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],"On submit failure, move focus to the first invalid field. Don't leave focus on the submit button — users with screen readers may not discover which field failed."]}],["$","li","Never rely on color alone to communicate an error. Pair the red color with an icon (AlertCircle) and text so colorblind users can identify the error state.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],"Never rely on color alone to communicate an error. Pair the red color with an icon (AlertCircle) and text so colorblind users can identify the error state."]}],["$","li","The password strength meter should have an aria-live=\"polite\" region so the label (Weak/Fair/Strong) is announced as the user types.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],"The password strength meter should have an aria-live=\"polite\" region so the label (Weak/Fair/Strong) is announced as the user types."]}],["$","li","noValidate on the <form> element disables browser-native validation bubbles in favor of your custom inline errors. Do this whenever you implement custom validation.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5 flex-shrink-0","children":"→"}],"noValidate on the <form> element disables browser-native validation bubbles in favor of your custom inline errors. Do this whenever you implement custom validation."]}]]}]]}]
+1b:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/12ot5m.~fkzcr.js","async":true,"nonce":"$undefined"}]
+1c:["$","$L27",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@28"}]}]
+1f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+29:I[88599,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"IconMark"]
+22:[["$","title","0",{"children":"Form Validation — Sitka Design System"}],["$","meta","1",{"name":"description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","2",{"name":"keywords","content":"design system,components,tokens,React,SwiftUI"}],["$","meta","3",{"property":"og:title","content":"Sitka Design System"}],["$","meta","4",{"property":"og:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","5",{"property":"og:url","content":"https://jsrothwell.github.io/Sitka/"}],["$","meta","6",{"property":"og:site_name","content":"Sitka Design System"}],["$","meta","7",{"property":"og:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Sitka Design System"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Sitka Design System"}],["$","meta","14",{"name":"twitter:description","content":"A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS."}],["$","meta","15",{"name":"twitter:image","content":"https://jsrothwell.github.io/Sitka/og-preview.png"}],["$","link","16",{"rel":"icon","href":"/Sitka/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L29","17",{}]]
+28:null

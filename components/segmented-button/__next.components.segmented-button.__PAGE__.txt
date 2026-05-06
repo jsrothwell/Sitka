@@ -1,0 +1,323 @@
+1:"$Sreact.fragment"
+2:I[60701,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0gwoiz9gvj9tz.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"ComponentPreview"]
+3:I[86632,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0gwoiz9gvj9tz.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"ViewToggleDemo"]
+4:I[86632,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0gwoiz9gvj9tz.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"IconOnlyDemo"]
+5:I[86632,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0gwoiz9gvj9tz.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"MultiSelectDemo"]
+6:I[86632,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0gwoiz9gvj9tz.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"SizesDemo"]
+7:I[78241,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0gwoiz9gvj9tz.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"PlatformTabs"]
+19:I[38352,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js","/Sitka/_next/static/chunks/0gwoiz9gvj9tz.js","/Sitka/_next/static/chunks/0fi~f9476zu~_.js"],"SegmentedButtonMobileDemo"]
+1a:I[6820,["/Sitka/_next/static/chunks/04.natf_9zy-6.js","/Sitka/_next/static/chunks/05jbn25z0-c7i.js","/Sitka/_next/static/chunks/077bcbxhcexta.js","/Sitka/_next/static/chunks/090isu0jqq8wu.js"],"OutletBoundary"]
+1b:"$Sreact.suspense"
+8:T46e,import { SegmentedButton } from "@/components/ui/SegmentedButton";
+import { LayoutGrid, List, Map } from "lucide-react";
+
+// Single selection (default)
+const [view, setView] = useState("grid");
+
+<SegmentedButton
+  value={view}
+  onChange={(v) => setView(v)}
+  options={[
+    { value: "grid", label: "Grid", icon: <LayoutGrid className="w-4 h-4" /> },
+    { value: "list", label: "List", icon: <List className="w-4 h-4" /> },
+    { value: "map",  label: "Map",  icon: <Map className="w-4 h-4" /> },
+  ]}
+/>
+
+// Multiple selection
+const [formats, setFormats] = useState(["bold"]);
+
+<SegmentedButton
+  multiple
+  value={formats}
+  onChange={(v) => setFormats(v)}
+  options={[
+    { value: "bold",      icon: <Bold className="w-4 h-4" /> },
+    { value: "italic",    icon: <Italic className="w-4 h-4" /> },
+    { value: "underline", icon: <Underline className="w-4 h-4" /> },
+  ]}
+/>
+
+// Full width
+<SegmentedButton fullWidth value={period} onChange={setPeriod}
+  options={[
+    { value: "day",   label: "Day" },
+    { value: "week",  label: "Week" },
+    { value: "month", label: "Month" },
+    { value: "year",  label: "Year" },
+  ]}
+/>9:T647,<div class="segmented" role="radiogroup" aria-label="View mode">
+  <button class="seg-item" role="radio" aria-checked="true">
+    <svg class="seg-icon" viewBox="0 0 24 24"><!-- grid icon --></svg>
+    Grid
+  </button>
+  <button class="seg-item" role="radio" aria-checked="false">
+    <svg class="seg-icon" viewBox="0 0 24 24"><!-- list icon --></svg>
+    List
+  </button>
+  <button class="seg-item" role="radio" aria-checked="false">
+    <svg class="seg-icon" viewBox="0 0 24 24"><!-- map icon --></svg>
+    Map
+  </button>
+</div>
+
+<style>
+  .segmented {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 4px;
+    border-radius: 12px;
+    border: 1px solid rgb(var(--border));
+    background: rgb(var(--surface));
+  }
+
+  .seg-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    color: rgb(var(--text-secondary));
+    cursor: pointer;
+    transition: all 150ms;
+  }
+
+  .seg-item:hover {
+    color: rgb(var(--text-primary));
+    background: rgba(var(--surface-raised), 0.5);
+  }
+
+  .seg-item[aria-checked="true"] {
+    background: rgb(var(--surface-raised));
+    color: rgb(var(--text-primary));
+    border: 1px solid rgb(var(--border));
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  }
+
+  .seg-item:focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: -2px;
+  }
+
+  .seg-icon {
+    width: 16px; height: 16px;
+    stroke: currentColor; fill: none; stroke-width: 2;
+  }
+</style>a:Tbe4,import SwiftUI
+
+struct SegmentedOption<T: Hashable>: Identifiable {
+    let id = UUID()
+    let value: T
+    let label: String?
+    let systemImage: String?
+}
+
+struct SitkaSegmentedButton<T: Hashable>: View {
+    let options: [SegmentedOption<T>]
+    @Binding var selection: T
+
+    var body: some View {
+        HStack(spacing: 2) {
+            ForEach(options) { opt in
+                Button {
+                    withAnimation(.spring(response: 0.2, dampingFraction: 0.8)) {
+                        selection = opt.value
+                    }
+                } label: {
+                    HStack(spacing: 6) {
+                        if let img = opt.systemImage {
+                            Image(systemName: img)
+                                .font(.system(size: 13, weight: .medium))
+                        }
+                        if let label = opt.label {
+                            Text(label)
+                                .font(.system(size: 13, weight: .medium))
+                        }
+                    }
+                    .foregroundColor(
+                        selection == opt.value
+                            ? Color(UIColor.label)
+                            : Color(UIColor.secondaryLabel)
+                    )
+                    .frame(height: 36)
+                    .padding(.horizontal, 14)
+                    .background(
+                        selection == opt.value
+                            ? Color(UIColor.secondarySystemBackground)
+                            : Color.clear
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8, style: .continuous)
+                            .stroke(
+                                selection == opt.value
+                                    ? Color(UIColor.separator)
+                                    : Color.clear,
+                                lineWidth: 1
+                            )
+                    )
+                    .shadow(
+                        color: selection == opt.value ? .black.opacity(0.12) : .clear,
+                        radius: 4, x: 0, y: 1
+                    )
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(4)
+        .background(Color(UIColor.systemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .stroke(Color(UIColor.separator), lineWidth: 1)
+        )
+    }
+}
+
+#Preview {
+    @Previewable @State var view = "grid"
+
+    SitkaSegmentedButton(
+        options: [
+            SegmentedOption(value: "grid",  label: "Grid", systemImage: "square.grid.2x2"),
+            SegmentedOption(value: "list",  label: "List", systemImage: "list.bullet"),
+            SegmentedOption(value: "map",   label: "Map",  systemImage: "map"),
+        ],
+        selection: $view
+    )
+    .padding()
+}b:Tfa2,import SwiftUI
+
+// On macOS 14+, use the native Picker with .segmented style —
+// it renders as a proper NSSegmentedControl and handles keyboard navigation automatically.
+
+struct SitkaSegmentedButton<Value: Hashable>: View {
+    struct Option {
+        let value: Value
+        var label: String? = nil
+        var systemImage: String? = nil
+    }
+
+    let options: [Option]
+    @Binding var selection: Value
+
+    var body: some View {
+        Picker("", selection: $selection) {
+            ForEach(options.indices, id: \.self) { i in
+                let opt = options[i]
+                Group {
+                    if let img = opt.systemImage, let lbl = opt.label {
+                        Label(lbl, systemImage: img)
+                    } else if let img = opt.systemImage {
+                        Image(systemName: img)
+                    } else if let lbl = opt.label {
+                        Text(lbl)
+                    }
+                }
+                .tag(opt.value)
+            }
+        }
+        .pickerStyle(.segmented)
+        .fixedSize()
+    }
+}
+
+// For a fully custom segmented control (e.g. when you need per-segment badges):
+struct SitkaCustomSegmented<Value: Hashable>: View {
+    struct Option {
+        let value: Value
+        var label: String? = nil
+        var systemImage: String? = nil
+    }
+
+    let options: [Option]
+    @Binding var selection: Value
+
+    var body: some View {
+        HStack(spacing: 2) {
+            ForEach(options.indices, id: \.self) { i in
+                let opt = options[i]
+                let isSelected = selection == opt.value
+
+                Button {
+                    selection = opt.value
+                } label: {
+                    HStack(spacing: 5) {
+                        if let img = opt.systemImage {
+                            Image(systemName: img).font(.system(size: 12, weight: .medium))
+                        }
+                        if let lbl = opt.label {
+                            Text(lbl).font(.system(size: 12, weight: .medium))
+                        }
+                    }
+                    .foregroundColor(
+                        isSelected ? Color(.labelColor) : Color(.secondaryLabelColor)
+                    )
+                    .frame(height: 26)
+                    .padding(.horizontal, 10)
+                    .background(isSelected ? Color(NSColor.controlBackgroundColor) : Color.clear)
+                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5, style: .continuous)
+                            .stroke(isSelected ? Color(NSColor.separatorColor) : Color.clear, lineWidth: 1)
+                    )
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(3)
+        .background(Color(NSColor.windowBackgroundColor))
+        .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 8, style: .continuous)
+                .stroke(Color(NSColor.separatorColor), lineWidth: 1)
+        )
+    }
+}
+
+#Preview {
+    @Previewable @State var view = "grid"
+
+    VStack(spacing: 16) {
+        // Native NSSegmentedControl
+        SitkaSegmentedButton(
+            options: [
+                .init(value: "grid",  label: "Grid", systemImage: "square.grid.2x2"),
+                .init(value: "list",  label: "List", systemImage: "list.bullet"),
+                .init(value: "map",   label: "Map",  systemImage: "map"),
+            ],
+            selection: $view
+        )
+
+        // Custom variant
+        SitkaCustomSegmented(
+            options: [
+                .init(value: "grid",  label: "Grid", systemImage: "square.grid.2x2"),
+                .init(value: "list",  label: "List", systemImage: "list.bullet"),
+                .init(value: "map",   label: "Map",  systemImage: "map"),
+            ],
+            selection: $view
+        )
+    }
+    .padding()
+}0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Segmented Button"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"A connected group of toggle buttons for mutually exclusive (or multi-select) choices. Used for view modes, filter states, alignment, and time-range selectors."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","$L2",null,{"children":["$","$L3",null,{}]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Icon only"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["Omit ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"label"}]," and provide only ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"icon"}]," ","for compact toolbars. Always add a parent"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"aria-label"}]," ","or ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"title"}]," ","on each segment when labels are hidden."]}],["$","$L2",null,{"children":["$","$L4",null,{}]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Multi-select"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":["Set ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"multiple"}]," ","to allow any combination of segments to be active simultaneously."," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"value"}]," becomes a"," ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"string[]"}]," and each segment uses ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"role=\"checkbox\""}]," ","instead of ",["$","code",null,{"className":"font-mono text-[13px] text-[rgb(var(--accent))]","children":"radio"}],"."]}],["$","$L2",null,{"children":["$","$L5",null,{}]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Sizes"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Three sizes share the same scale as Button and Input."}],["$","$L2",null,{"children":["$","$L6",null,{}]}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"The selected segment is styled via a direct class comparison — no hidden input, no CSS peer trick. The active pill uses a slightly elevated surface with an inset border and a shallow box-shadow to appear \"pressed in\" to the track."}],["$","$L7",null,{"code":{"react":{"filename":"SegmentedButton.tsx","code":"$8"},"html":{"filename":"segmented-button.html","code":"$9"},"swift":{"filename":"SitkaSegmentedButton.swift","code":"$a"},"macos":{"filename":"SitkaSegmentedButton+macOS.swift","code":"$b"}}}]]}],"$Lc","$Ld","$Le","$Lf"]}],["$L10","$L11"],"$L12"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"RUQIyAf0qAkfAB-SIdmO1"}
+c:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5","children":"SegmentedButton props"}],["$","div",null,{"className":"overflow-hidden rounded-xl border border-[rgb(var(--border))]","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]","children":[["$","th","Prop",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Prop"}],["$","th","Type",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Type"}],["$","th","Default",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Default"}],["$","th","Description",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Description"}]]}]}],["$","tbody",null,{"children":[["$","tr","options",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["options","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"SegmentedButtonOption[]"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"The segments to render. Each has value, optional label, optional icon."}]]}],["$","tr","value",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["value","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"T | T[]"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Controlled selected value. Array when multiple=true."}]]}],["$","tr","onChange",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["onChange","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"(value: T | T[]) => void"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Called with the new value when a segment is clicked."}]]}],["$","tr","multiple",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["multiple","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],"$L13","$L14"]}],"$L15","$L16"]}]]}]}]]}]
+d:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5","children":"SegmentedButtonOption"}],["$","div",null,{"className":"overflow-hidden rounded-xl border border-[rgb(var(--border))]","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]","children":[["$","th","Prop",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Prop"}],["$","th","Type",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Type"}],["$","th","Default",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Default"}],["$","th","Description",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Description"}]]}]}],["$","tbody",null,{"children":[["$","tr","value",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["value","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Unique identifier for this segment."}]]}],["$","tr","label",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["label","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Text label. Can be omitted for icon-only segments."}]]}],["$","tr","icon",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["icon","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"ReactNode"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Icon rendered before the label."}]]}],["$","tr","disabled",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["disabled","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],"$L17","$L18"]}]]}]]}]}]]}]
+e:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Mobile"}],["$","p",null,{"className":"text-[14px] text-[rgb(var(--text-secondary))] mb-5","children":"Segmented buttons with many segments overflow on narrow screens. Cap segments at 4 on mobile, or switch to a Select or bottom sheet for larger option sets."}],["$","$L2",null,{"className":"mb-6","children":["$","$L19",null,{}]}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Scenario",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Scenario"}],["$","th","Guidance",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Guidance"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Segment count"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Limit to 3–4 segments on mobile. Five or more segments will either overflow or produce segments too narrow to tap reliably (below 44px each)."}]]}],["$","tr","1",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Scrollable variant"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"If more options are needed, make the segmented button horizontally scrollable with overflow-x: auto. The selected segment should always be visible on initial render — scroll it into view."}]]}],["$","tr","2",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Touch target height"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Use h-10 (40px) or taller on mobile. The default h-8 (32px) is below the 44px target — add extra padding or switch sizes when space allows."}]]}],["$","tr","3",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Icon-only segments"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Icon-only segments save space but require a visible label elsewhere on screen to explain what mode is selected. On mobile, prefer icon + short label."}]]}],["$","tr","4",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Alternative on mobile"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"For 5+ options, replace the segmented button with a native select or a custom bottom sheet picker. These are more thumb-friendly and scale to any option count."}]]}]]}]]}]}]]}]
+f:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","The group has role=\"radiogroup\" (single) or role=\"group\" (multiple). Each segment has role=\"radio\" or role=\"checkbox\" with aria-checked.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"The group has role=\"radiogroup\" (single) or role=\"group\" (multiple). Each segment has role=\"radio\" or role=\"checkbox\" with aria-checked."]}],["$","li","Add an aria-label to the SegmentedButton when the options' meaning isn't clear from context.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Add an aria-label to the SegmentedButton when the options' meaning isn't clear from context."]}],["$","li","Keyboard: Tab focuses the group; Arrow keys move between segments in single-select mode.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Keyboard: Tab focuses the group; Arrow keys move between segments in single-select mode."]}],["$","li","Icon-only segments must have a title attribute or aria-label for screen readers.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Icon-only segments must have a title attribute or aria-label for screen readers."]}],["$","li","Never rely solely on selected state to communicate the current view — pair with a visible heading or title.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Never rely solely on selected state to communicate the current view — pair with a visible heading or title."]}]]}]]}]
+10:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0gwoiz9gvj9tz.js","async":true}]
+11:["$","script","script-1",{"src":"/Sitka/_next/static/chunks/0fi~f9476zu~_.js","async":true}]
+12:["$","$L1a",null,{"children":["$","$1b",null,{"name":"Next.MetadataOutlet","children":"$@1c"}]}]
+13:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"false"}]}]
+14:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Allows multiple segments to be active simultaneously."}]
+15:["$","tr","size",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["size","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"sm\" | \"md\" | \"lg\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"md\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Segment height and font size."}]]}]
+16:["$","tr","fullWidth",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["fullWidth","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"false"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Stretches the group to fill its container; each segment gets equal width."}]]}]
+17:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}]
+18:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Prevents selection of this segment."}]
+1c:null
