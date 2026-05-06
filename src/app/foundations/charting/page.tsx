@@ -361,12 +361,12 @@ function AlluvialDiagram() {
 
 // ── Pipeline flow alluvial ────────────────────────────────────────────────────
 //
-// Multi-source pipeline: 5 sources flowing through 6 stages.
-// Stages: Wishlist(12) → Applied(81) → Screening(1) → Interview(1) → Offer → Accepted
-// Sources: Other (50%) · LinkedIn (22%) · Greenhouse (13%) · Ashby (9%) · Lever (6%)
+// Multi-source pipeline: 5 channels flowing through 6 lifecycle stages.
+// Stages: Aware(840) → Engaged(312) → Qualified(94) → Proposed(41) → Converted → Retained
+// Sources: Organic (50%) · Referral (22%) · Paid (13%) · Direct (9%) · Partner (6%)
 //
 // Each source drawn as a bezier-smooth closed band.
-// Crosshair sits at the Applied stage (x=150) — the peak volume column.
+// Crosshair sits at the Engaged stage (x=150) — the peak volume column.
 
 type StreamPt = { x: number; bot: number; top: number };
 
@@ -390,19 +390,19 @@ function PipelineFlowDiagram() {
   const CROSSHAIR_X = 150;
 
   const stages = [
-    { x: 58,  label: "Wishlist",  count: "12", color: "#9b9baa" },
-    { x: 150, label: "Applied",   count: "81", color: "#00c0e8" },
-    { x: 242, label: "Screening", count: "1",  color: "#f59e0b" },
-    { x: 334, label: "Interview", count: "1",  color: "#c084fc" },
-    { x: 415, label: "Offer",     count: "",   color: "#34a865" },
-    { x: 480, label: "Accepted",  count: "",   color: "#34a865" },
+    { x: 58,  label: "Aware",      count: "840", color: "#9b9baa" },
+    { x: 150, label: "Engaged",    count: "312", color: "#00c0e8" },
+    { x: 242, label: "Qualified",  count: "94",  color: "#f59e0b" },
+    { x: 334, label: "Proposed",   count: "41",  color: "#c084fc" },
+    { x: 415, label: "Converted",  count: "",    color: "#34a865" },
+    { x: 480, label: "Retained",   count: "",    color: "#34a865" },
   ];
 
   // Each source: points[i] = {x, bot, top} for each stage column.
   // Heights are proportional to (source fraction × stage total), stacked from BOTTOM upward.
   const sources: Array<{ name: string; color: string; points: StreamPt[] }> = [
     {
-      name: "Other", color: "#5d7da8",
+      name: "Organic", color: "#5d7da8",
       points: [
         { x: 58,  bot: 206,    top: 182   },
         { x: 150, bot: 142.5,  top: 55    },
@@ -413,7 +413,7 @@ function PipelineFlowDiagram() {
       ],
     },
     {
-      name: "LinkedIn", color: "#2d7dd2",
+      name: "Referral", color: "#2d7dd2",
       points: [
         { x: 58,  bot: 216.5,  top: 206   },
         { x: 150, bot: 181,    top: 142.5 },
@@ -424,7 +424,7 @@ function PipelineFlowDiagram() {
       ],
     },
     {
-      name: "Greenhouse", color: "#2d9a6c",
+      name: "Paid", color: "#2d9a6c",
       points: [
         { x: 58,  bot: 222.8,  top: 216.5  },
         { x: 150, bot: 203.75, top: 181    },
@@ -435,7 +435,7 @@ function PipelineFlowDiagram() {
       ],
     },
     {
-      name: "Ashby", color: "#7c5cbf",
+      name: "Direct", color: "#7c5cbf",
       points: [
         { x: 58,  bot: 227.1,  top: 222.8  },
         { x: 150, bot: 219.5,  top: 203.75 },
@@ -446,7 +446,7 @@ function PipelineFlowDiagram() {
       ],
     },
     {
-      name: "Lever", color: "#c44d30",
+      name: "Partner", color: "#c44d30",
       points: [
         { x: 58,  bot: BOTTOM, top: 227.1  },
         { x: 150, bot: BOTTOM, top: 219.5  },
@@ -499,10 +499,10 @@ function PipelineFlowDiagram() {
         );
       })}
 
-      {/* Rejection badge */}
-      <rect x={W - 98} y={11} width={86} height={18} rx={9} fill="rgba(239,68,68,0.12)" stroke="rgba(239,68,68,0.35)" strokeWidth={1} />
-      <circle cx={W - 87} cy={20} r={4} fill="#ef4444" />
-      <text x={W - 80} y={24} fontSize={9} fill="#f87171" fontWeight={600}>27 rejected</text>
+      {/* Terminal badge */}
+      <rect x={W - 94} y={11} width={82} height={18} rx={9} fill="rgba(239,68,68,0.12)" stroke="rgba(239,68,68,0.35)" strokeWidth={1} />
+      <circle cx={W - 83} cy={20} r={4} fill="#ef4444" />
+      <text x={W - 76} y={24} fontSize={9} fill="#f87171" fontWeight={600}>18% churned</text>
 
       {/* Legend */}
       <g transform={`translate(14 ${H - 12})`}>
@@ -909,11 +909,11 @@ export function AlluvialChart({ bands, lx, rx }: {
       <section className="mb-14">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Pipeline flow alluvial</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
-          A source alluvial extends the standard alluvial by splitting each stage column into coloured source strands — one per acquisition channel or origin. Instead of showing how a single population shifts over time, it answers: <em>which sources contribute most at each stage, and where do they fall off?</em> The chart reads left-to-right; strand thickness at each column is proportional to the number of candidates from that source currently in that stage.
+          A source alluvial extends the standard alluvial by splitting each stage column into coloured source strands — one per acquisition channel or origin. Instead of showing how a single population shifts over time, it answers: <em>which sources contribute most at each stage, and where do they fall off?</em> The chart reads left-to-right; strand thickness at each column is proportional to the volume from that channel at that stage.
         </p>
 
         <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--background))] p-6 mb-6">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4">JobFlo pipeline — applications by source across stages</p>
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4">Conversion funnel — volume by acquisition channel across lifecycle stages</p>
           <PipelineFlowDiagram />
         </div>
 
@@ -922,7 +922,7 @@ export function AlluvialChart({ bands, lx, rx }: {
           {[
             {
               label: "Stage column",
-              detail: "Each vertical column represents one pipeline stage. The label and a colour-coded candidate count sit above the stream area. Stage colour matches the product's pipeline colour system.",
+              detail: "Each vertical column represents one stage in the lifecycle. The label and a colour-coded volume count sit above the stream area. Stage colour matches the product's pipeline colour system.",
             },
             {
               label: "Source strand",
@@ -952,7 +952,7 @@ export function AlluvialChart({ bands, lx, rx }: {
             "Use opacity 0.75–0.85 for strand fills. Full opacity occludes overlapping strands and removes the sense of depth. Too-low opacity makes thin strands disappear.",
             "Keep the crosshair subtle (1px white, 80% opacity). It should be readable against the dark background but not compete with the strands for visual weight.",
             "Show 5–7 sources maximum. Beyond that, thin strands at late stages become indistinguishable. Group small sources into an 'Other' strand.",
-            "Always pair the chart with a text summary of the key finding — e.g. 'LinkedIn produces 22% of applicants but only 8% of offers.' The chart alone is not accessible.",
+            "Always pair the chart with a text summary of the key finding — e.g. 'Referral drives 22% of inbound but converts at 3× the rate of Paid.' The chart alone is not accessible.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
               <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
