@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { DocsShell } from "@/components/layout/DocsShell";
@@ -111,6 +112,13 @@ export default function RootLayout({
         <ThemeProvider>
           <DocsShell>{children}</DocsShell>
         </ThemeProvider>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-SC89RP965Q" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SC89RP965Q');
+        `}</Script>
       </body>
     </html>
   );
