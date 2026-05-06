@@ -52,7 +52,7 @@ export function Sidebar({
           className="flex items-center gap-2.5 min-w-0 hover:opacity-80 transition-standard"
         >
           <span className="w-6 h-6 rounded-full bg-white shrink-0 flex items-center justify-center overflow-hidden">
-            <img src="/sitka-logo.png" width={22} height={22} alt="Sitka logo" className="w-full h-full object-contain" />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/sitka-logo.png`} width={22} height={22} alt="Sitka logo" className="w-full h-full object-contain" />
           </span>
           <span className="font-semibold text-[14px] tracking-tight text-[rgb(var(--text-primary))] leading-none">
             Sitka

@@ -42,7 +42,7 @@ export default function HomePage() {
       <section className="pt-4 pb-14 border-b border-[rgb(var(--border))]">
         <div className="flex items-center gap-5 mb-6">
           <span className="w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden shrink-0">
-            <img src="/sitka-logo.png" width={76} height={76} alt="Sitka logo" className="w-full h-full object-contain" />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/sitka-logo.png`} width={76} height={76} alt="Sitka logo" className="w-full h-full object-contain" />
           </span>
           <h1
             className="max-w-[560px]"
