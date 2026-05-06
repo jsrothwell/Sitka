@@ -359,6 +359,164 @@ function AlluvialDiagram() {
   );
 }
 
+// ── Pipeline flow alluvial ────────────────────────────────────────────────────
+//
+// Multi-source pipeline: 5 sources flowing through 6 stages.
+// Stages: Wishlist(12) → Applied(81) → Screening(1) → Interview(1) → Offer → Accepted
+// Sources: Other (50%) · LinkedIn (22%) · Greenhouse (13%) · Ashby (9%) · Lever (6%)
+//
+// Each source drawn as a bezier-smooth closed band.
+// Crosshair sits at the Applied stage (x=150) — the peak volume column.
+
+type StreamPt = { x: number; bot: number; top: number };
+
+function streamPath(pts: StreamPt[]): string {
+  let d = `M ${pts[0].x} ${pts[0].top}`;
+  for (let i = 1; i < pts.length; i++) {
+    const cx = (pts[i - 1].x + pts[i].x) / 2;
+    d += ` C ${cx} ${pts[i - 1].top} ${cx} ${pts[i].top} ${pts[i].x} ${pts[i].top}`;
+  }
+  d += ` L ${pts[pts.length - 1].x} ${pts[pts.length - 1].bot}`;
+  for (let i = pts.length - 2; i >= 0; i--) {
+    const cx = (pts[i].x + pts[i + 1].x) / 2;
+    d += ` C ${cx} ${pts[i + 1].bot} ${cx} ${pts[i].bot} ${pts[i].x} ${pts[i].bot}`;
+  }
+  return d + " Z";
+}
+
+function PipelineFlowDiagram() {
+  const W = 520, H = 268;
+  const BOTTOM = 232;
+  const CROSSHAIR_X = 150;
+
+  const stages = [
+    { x: 58,  label: "Wishlist",  count: "12", color: "#9b9baa" },
+    { x: 150, label: "Applied",   count: "81", color: "#00c0e8" },
+    { x: 242, label: "Screening", count: "1",  color: "#f59e0b" },
+    { x: 334, label: "Interview", count: "1",  color: "#c084fc" },
+    { x: 415, label: "Offer",     count: "",   color: "#34a865" },
+    { x: 480, label: "Accepted",  count: "",   color: "#34a865" },
+  ];
+
+  // Each source: points[i] = {x, bot, top} for each stage column.
+  // Heights are proportional to (source fraction × stage total), stacked from BOTTOM upward.
+  const sources: Array<{ name: string; color: string; points: StreamPt[] }> = [
+    {
+      name: "Other", color: "#5d7da8",
+      points: [
+        { x: 58,  bot: 206,    top: 182   },
+        { x: 150, bot: 142.5,  top: 55    },
+        { x: 242, bot: 215,    top: 200   },
+        { x: 334, bot: 220,    top: 210   },
+        { x: 415, bot: 225,    top: 220   },
+        { x: 480, bot: 227.5,  top: 225   },
+      ],
+    },
+    {
+      name: "LinkedIn", color: "#2d7dd2",
+      points: [
+        { x: 58,  bot: 216.5,  top: 206   },
+        { x: 150, bot: 181,    top: 142.5 },
+        { x: 242, bot: 221.6,  top: 215   },
+        { x: 334, bot: 224.4,  top: 220   },
+        { x: 415, bot: 227.2,  top: 225   },
+        { x: 480, bot: 228.6,  top: 227.5 },
+      ],
+    },
+    {
+      name: "Greenhouse", color: "#2d9a6c",
+      points: [
+        { x: 58,  bot: 222.8,  top: 216.5  },
+        { x: 150, bot: 203.75, top: 181    },
+        { x: 242, bot: 225.5,  top: 221.6  },
+        { x: 334, bot: 227,    top: 224.4  },
+        { x: 415, bot: 228.5,  top: 227.2  },
+        { x: 480, bot: 229.25, top: 228.6  },
+      ],
+    },
+    {
+      name: "Ashby", color: "#7c5cbf",
+      points: [
+        { x: 58,  bot: 227.1,  top: 222.8  },
+        { x: 150, bot: 219.5,  top: 203.75 },
+        { x: 242, bot: 228.2,  top: 225.5  },
+        { x: 334, bot: 228.8,  top: 227    },
+        { x: 415, bot: 229.4,  top: 228.5  },
+        { x: 480, bot: 229.7,  top: 229.25 },
+      ],
+    },
+    {
+      name: "Lever", color: "#c44d30",
+      points: [
+        { x: 58,  bot: BOTTOM, top: 227.1  },
+        { x: 150, bot: BOTTOM, top: 219.5  },
+        { x: 242, bot: BOTTOM, top: 228.2  },
+        { x: 334, bot: BOTTOM, top: 228.8  },
+        { x: 415, bot: BOTTOM, top: 229.4  },
+        { x: 480, bot: BOTTOM, top: 229.7  },
+      ],
+    },
+  ];
+
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} className="w-full" style={{ maxHeight: H }}>
+      <rect width={W} height={H} fill="#09090c" rx={12} />
+      <rect x={10} y={6} width={W - 20} height={H - 14} fill="#0d0d11" rx={8} />
+
+      {/* Stage column labels */}
+      {stages.map((s) => (
+        <g key={s.label}>
+          <text x={s.x} y={24} fontSize={9} fill="#646473" textAnchor="middle" fontWeight={600} letterSpacing={0.4}>
+            {s.label}
+          </text>
+          {s.count && (
+            <text x={s.x} y={38} fontSize={12} fill={s.color} textAnchor="middle" fontWeight={700}>
+              {s.count}
+            </text>
+          )}
+        </g>
+      ))}
+
+      {/* Stage guide lines */}
+      {stages.map((s) => (
+        <line key={`g-${s.label}`} x1={s.x} y1={44} x2={s.x} y2={BOTTOM} stroke="rgba(255,255,255,0.04)" strokeWidth={1} />
+      ))}
+
+      {/* Source streams */}
+      {sources.map((src) => (
+        <path key={src.name} d={streamPath(src.points)} fill={src.color} fillOpacity={0.78} />
+      ))}
+
+      {/* Crosshair */}
+      <line x1={CROSSHAIR_X} y1={44} x2={CROSSHAIR_X} y2={BOTTOM} stroke="white" strokeWidth={1} strokeOpacity={0.8} />
+
+      {/* Intersection dots at crosshair */}
+      {sources.map((src) => {
+        const pt = src.points[1];
+        if (pt.bot - pt.top < 3) return null;
+        return (
+          <circle key={`d-${src.name}`} cx={CROSSHAIR_X} cy={(pt.top + pt.bot) / 2} r={2.5} fill="white" fillOpacity={0.9} />
+        );
+      })}
+
+      {/* Rejection badge */}
+      <rect x={W - 98} y={11} width={86} height={18} rx={9} fill="rgba(239,68,68,0.12)" stroke="rgba(239,68,68,0.35)" strokeWidth={1} />
+      <circle cx={W - 87} cy={20} r={4} fill="#ef4444" />
+      <text x={W - 80} y={24} fontSize={9} fill="#f87171" fontWeight={600}>27 rejected</text>
+
+      {/* Legend */}
+      <g transform={`translate(14 ${H - 12})`}>
+        {sources.map((src, i) => (
+          <g key={`l-${src.name}`} transform={`translate(${i * 98} 0)`}>
+            <rect x={0} y={-7} width={8} height={8} fill={src.color} rx={1.5} />
+            <text x={12} y={1} fontSize={9} fill="#646473">{src.name}</text>
+          </g>
+        ))}
+      </g>
+    </svg>
+  );
+}
+
 // ── Tooltip anatomy diagram ───────────────────────────────────────────────────
 
 function TooltipDiagram() {
@@ -419,6 +577,7 @@ const CHART_TYPES = [
   { type: "Heatmap",        when: "Two-dimensional density",                    avoid: "Precise value comparison"                   },
   { type: "Sankey",         when: "Quantified flow through a network of stages", avoid: "Categorical change over time (use Alluvial)" },
   { type: "Alluvial",       when: "How a population shifts across categories over time", avoid: "Non-temporal flows between named nodes" },
+  { type: "Source Alluvial", when: "Multi-source conversion tracking through sequential pipeline stages", avoid: "Time-series without a defined conversion endpoint" },
   { type: "Treemap",        when: "Hierarchical part-to-whole at two levels",   avoid: "Comparing values without hierarchy"         },
   { type: "Funnel",         when: "Sequential drop-off through a defined process", avoid: "Non-linear processes or parallel paths"  },
 ];
@@ -458,7 +617,7 @@ export default function ChartingPage() {
             <tbody>
               {CHART_TYPES.map((row, i) => (
                 <tr key={row.type} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className={`px-4 py-3 font-semibold whitespace-nowrap ${row.type === "Sankey" || row.type === "Alluvial" ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-primary))]"}`}>{row.type}</td>
+                  <td className={`px-4 py-3 font-semibold whitespace-nowrap ${row.type === "Sankey" || row.type === "Alluvial" || row.type === "Source Alluvial" ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-primary))]"}`}>{row.type}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.when}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{row.avoid}</td>
                 </tr>
@@ -743,6 +902,133 @@ export function AlluvialChart({ bands, lx, rx }: {
     </>
   );
 }`}</code></pre>
+        </div>
+      </section>
+
+      {/* ── Pipeline flow alluvial ──────────────────── */}
+      <section className="mb-14">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Pipeline flow alluvial</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
+          A source alluvial extends the standard alluvial by splitting each stage column into coloured source strands — one per acquisition channel or origin. Instead of showing how a single population shifts over time, it answers: <em>which sources contribute most at each stage, and where do they fall off?</em> The chart reads left-to-right; strand thickness at each column is proportional to the number of candidates from that source currently in that stage.
+        </p>
+
+        <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--background))] p-6 mb-6">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4">JobFlo pipeline — applications by source across stages</p>
+          <PipelineFlowDiagram />
+        </div>
+
+        <h3 className="text-[16px] font-semibold text-[rgb(var(--text-primary))] mb-3">Anatomy</h3>
+        <div className="grid grid-cols-2 gap-3 mb-8">
+          {[
+            {
+              label: "Stage column",
+              detail: "Each vertical column represents one pipeline stage. The label and a colour-coded candidate count sit above the stream area. Stage colour matches the product's pipeline colour system.",
+            },
+            {
+              label: "Source strand",
+              detail: "Each strand is a single acquisition source (e.g. LinkedIn, Greenhouse). Strands are stacked vertically and connected with bezier curves across columns. Thickness is proportional to candidate count at that stage.",
+            },
+            {
+              label: "Active-stage crosshair",
+              detail: "A white vertical line marks the currently selected or highlighted stage. White dots at each strand's midpoint confirm the intersection point and provide hover targets.",
+            },
+            {
+              label: "Terminal badge",
+              detail: "A red pill badge in the top-right corner shows the total rejection count for the visible period. Use a neutral grey badge for non-terminal outcomes like withdrawals.",
+            },
+          ].map(({ label, detail }) => (
+            <div key={label} className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
+              <span className="text-[12px] font-semibold text-[rgb(var(--text-primary))] block mb-1">{label}</span>
+              <p className="text-[11px] text-[rgb(var(--text-secondary))] leading-relaxed">{detail}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-[16px] font-semibold text-[rgb(var(--text-primary))] mb-3">Design rules</h3>
+        <ul className="space-y-3 text-[14px] text-[rgb(var(--text-secondary))] mb-8">
+          {[
+            "Assign each source a distinct hue from the product's extended palette. Do not reuse stage colours for sources — stage colour encodes position in the pipeline; source colour encodes origin.",
+            "Stack sources consistently by volume at the first stage (largest to smallest, top to bottom). Never reorder strands between columns — users track strands by position across the diagram.",
+            "Use opacity 0.75–0.85 for strand fills. Full opacity occludes overlapping strands and removes the sense of depth. Too-low opacity makes thin strands disappear.",
+            "Keep the crosshair subtle (1px white, 80% opacity). It should be readable against the dark background but not compete with the strands for visual weight.",
+            "Show 5–7 sources maximum. Beyond that, thin strands at late stages become indistinguishable. Group small sources into an 'Other' strand.",
+            "Always pair the chart with a text summary of the key finding — e.g. 'LinkedIn produces 22% of applicants but only 8% of offers.' The chart alone is not accessible.",
+          ].map((item) => (
+            <li key={item} className="flex gap-2">
+              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <div className="grid grid-cols-2 gap-4 mb-8">
+          <div className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
+            <p className="text-[12px] font-semibold text-[rgb(var(--text-primary))] mb-2">Use when</p>
+            <ul className="space-y-1.5 text-[12px] text-[rgb(var(--text-secondary))]">
+              {[
+                "You have 3–7 distinct sources feeding a multi-stage pipeline",
+                "The question is about source quality, not just volume",
+                "Stakeholders need to see both drop-off and source mix in one view",
+              ].map((t) => <li key={t} className="flex gap-1.5"><span className="text-[rgb(var(--accent))]">→</span>{t}</li>)}
+            </ul>
+          </div>
+          <div className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
+            <p className="text-[12px] font-semibold text-[rgb(var(--text-primary))] mb-2">Avoid when</p>
+            <ul className="space-y-1.5 text-[12px] text-[rgb(var(--text-secondary))]">
+              {[
+                "You have only one source — use a plain funnel instead",
+                "Stage counts are equal (no conversion) — nothing to show",
+                "You need precise numeric comparison — use a grouped bar chart",
+              ].map((t) => <li key={t} className="flex gap-1.5"><span className="text-red-400">✕</span>{t}</li>)}
+            </ul>
+          </div>
+        </div>
+
+        <h3 className="text-[16px] font-semibold text-[rgb(var(--text-primary))] mb-3">Implementation</h3>
+        <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] overflow-hidden">
+          <div className="flex items-center px-4 py-2.5 border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]">
+            <span className="text-[11px] font-mono text-[rgb(var(--text-tertiary))]">PipelineFlowChart.tsx — pure SVG, no external dependencies</span>
+          </div>
+          <pre className="p-5 text-[12px] font-mono text-[rgb(var(--text-secondary))] overflow-x-auto leading-relaxed"><code>{`// Each source defines one StreamPt per stage column.
+// top/bot are SVG y-coordinates; the strand fills between them.
+type StreamPt = { x: number; bot: number; top: number };
+
+// Generates a closed bezier path for a single source strand.
+// Uses midpoint control points for smooth organic curves.
+function streamPath(pts: StreamPt[]): string {
+  let d = \`M \${pts[0].x} \${pts[0].top}\`;
+  for (let i = 1; i < pts.length; i++) {
+    const cx = (pts[i - 1].x + pts[i].x) / 2;
+    d += \` C \${cx} \${pts[i-1].top} \${cx} \${pts[i].top} \${pts[i].x} \${pts[i].top}\`;
+  }
+  d += \` L \${pts[pts.length-1].x} \${pts[pts.length-1].bot}\`;
+  for (let i = pts.length - 2; i >= 0; i--) {
+    const cx = (pts[i].x + pts[i+1].x) / 2;
+    d += \` C \${cx} \${pts[i+1].bot} \${cx} \${pts[i].bot} \${pts[i].x} \${pts[i].bot}\`;
+  }
+  return d + " Z";
+}
+
+// Render the chart
+{sources.map((src) => (
+  <path
+    key={src.name}
+    d={streamPath(src.points)}
+    fill={src.color}
+    fillOpacity={0.78}
+  />
+))}
+
+// Crosshair + intersection dots
+<line x1={crosshairX} y1={TOP} x2={crosshairX} y2={BOTTOM}
+  stroke="white" strokeWidth={1} strokeOpacity={0.8} />
+{sources.map((src) => {
+  const pt = src.points[activeStageIndex];
+  return pt.bot - pt.top >= 3 ? (
+    <circle cx={crosshairX} cy={(pt.top + pt.bot) / 2}
+      r={2.5} fill="white" fillOpacity={0.9} />
+  ) : null;
+})}`}</code></pre>
         </div>
       </section>
 
