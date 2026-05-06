@@ -1127,6 +1127,102 @@ function streamPath(pts: StreamPt[]): string {
         </div>
       </section>
 
+      {/* ── Burn Trajectory ─────────────────────────── */}
+      <section className="mb-14">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Burn Trajectory</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
+          A Burn Trajectory chart overlays four time series on a single axes: historical actuals,
+          a forward forecast, a planned baseline, and a budget ceiling. It is the primary chart
+          type for budget-vs-actual tracking in Warren&apos;s project finance views.
+        </p>
+
+        {/* Line style reference */}
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <div className="px-4 py-2.5 border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Line styles</span>
+          </div>
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                {["Series", "Stroke", "Dash", "Opacity", "Area fill"].map((h) => (
+                  <th key={h} className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                {
+                  series: "Historical (actual)",
+                  stroke: "2px solid #F59E0B",
+                  dash: "none",
+                  opacity: "100%",
+                  area: "8% amber",
+                },
+                {
+                  series: "Forecast",
+                  stroke: "1.5px dashed #F59E0B",
+                  dash: "5, 3",
+                  opacity: "55%",
+                  area: "3% amber",
+                },
+                {
+                  series: "Planned baseline",
+                  stroke: "1px dotted gray",
+                  dash: "2, 3",
+                  opacity: "35%",
+                  area: "none",
+                },
+                {
+                  series: "Budget ceiling",
+                  stroke: "1px dashed red",
+                  dash: "3, 3",
+                  opacity: "50%",
+                  area: "none",
+                },
+              ].map((row, i) => (
+                <tr key={row.series} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
+                  <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{row.series}</td>
+                  <td className="px-4 py-3">
+                    <code className="font-mono text-[10px] text-[rgb(var(--text-secondary))]">{row.stroke}</code>
+                  </td>
+                  <td className="px-4 py-3 font-mono text-[10px] text-[rgb(var(--text-secondary))]">{row.dash}</td>
+                  <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.opacity}</td>
+                  <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.area}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Layout spec */}
+        <div className="grid grid-cols-3 gap-3 mb-5">
+          {[
+            { label: "Zoom: Year",    spec: "2.5 px / day" },
+            { label: "Zoom: Quarter", spec: "5 px / day" },
+            { label: "Zoom: Month",   spec: "12 px / day" },
+            { label: "Y-axis pad",    spec: "left 56 px" },
+            { label: "X-axis pad",    spec: "bottom 36 px" },
+            { label: "Today line",    spec: "1px dashed gray 35%" },
+          ].map(({ label, spec }) => (
+            <div key={label} className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-3 flex items-center justify-between">
+              <span className="text-[12px] text-[rgb(var(--text-secondary))]">{label}</span>
+              <code className="font-mono text-[11px] text-[rgb(var(--accent))]">{spec}</code>
+            </div>
+          ))}
+        </div>
+
+        <div className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4 flex items-start gap-3">
+          <span className="text-[rgb(var(--accent))] text-[14px] shrink-0">→</span>
+          <p className="text-[13px] text-[rgb(var(--text-secondary))] leading-relaxed">
+            Full interactive demo, scenario cards (Optimistic / Current Pace / Pessimistic), and implementation
+            code are on the{" "}
+            <a href="/patterns/burn-trajectory" className="text-[rgb(var(--accent))] underline underline-offset-2 hover:no-underline">
+              Burn Trajectory pattern page
+            </a>.
+          </p>
+        </div>
+      </section>
+
       {/* ── Accessibility ─────────────────────────────── */}
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>

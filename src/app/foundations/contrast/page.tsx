@@ -245,6 +245,128 @@ export default function ContrastPage() {
         </div>
       </section>
 
+      {/* accessibleForeground utility */}
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">accessibleForeground() utility</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-6 leading-relaxed">
+          When rendering text on a dynamic background — colour picker swatches, user-assigned tags, status badges — you
+          cannot hardcode a foreground colour. Use <code className="font-mono text-[11px] text-[rgb(var(--accent))]">accessibleForeground()</code> to compute
+          whether black or white text produces the higher contrast ratio against any background hex.
+          This is the TypeScript port of Warren&apos;s Swift <code className="font-mono text-[11px] text-[rgb(var(--accent))]">sfAccessibleForeground()</code> function.
+        </p>
+
+        <div className="grid grid-cols-2 gap-4 mb-5">
+          {/* Code */}
+          <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] overflow-hidden">
+            <div className="px-4 py-2.5 border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface-raised))]">
+              <span className="text-[11px] font-mono text-[rgb(var(--text-tertiary))]">accessibleForeground.ts</span>
+            </div>
+            <pre className="p-4 text-[11px] font-mono text-[rgb(var(--text-secondary))] overflow-x-auto leading-relaxed"><code>{`function relativeLuminance(hex: string): number {
+  const r = parseInt(hex.slice(1, 3), 16) / 255;
+  const g = parseInt(hex.slice(3, 5), 16) / 255;
+  const b = parseInt(hex.slice(5, 7), 16) / 255;
+
+  const toLinear = (c: number) =>
+    c <= 0.04045
+      ? c / 12.92
+      : Math.pow((c + 0.055) / 1.055, 2.4);
+
+  return (
+    0.2126 * toLinear(r) +
+    0.7152 * toLinear(g) +
+    0.0722 * toLinear(b)
+  );
+}
+
+export function accessibleForeground(
+  background: string
+): "#000000" | "#ffffff" {
+  return relativeLuminance(background) > 0.179
+    ? "#000000"
+    : "#ffffff";
+}`}</code></pre>
+          </div>
+
+          {/* Swift equivalent */}
+          <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] overflow-hidden">
+            <div className="px-4 py-2.5 border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface-raised))]">
+              <span className="text-[11px] font-mono text-[rgb(var(--text-tertiary))]">Color+Accessible.swift (Warren)</span>
+            </div>
+            <pre className="p-4 text-[11px] font-mono text-[rgb(var(--text-secondary))] overflow-x-auto leading-relaxed"><code>{`extension Color {
+  /// Returns .black or .white for legible
+  /// text on any background colour.
+  func accessibleForeground() -> Color {
+    var r: CGFloat = 0
+    var g: CGFloat = 0
+    var b: CGFloat = 0
+    UIColor(self).getRed(&r, green: &g,
+                         blue: &b, alpha: nil)
+
+    func linearise(_ c: CGFloat) -> CGFloat {
+      c <= 0.04045
+        ? c / 12.92
+        : pow((c + 0.055) / 1.055, 2.4)
+    }
+
+    let lum = 0.2126 * linearise(r)
+            + 0.7152 * linearise(g)
+            + 0.0722 * linearise(b)
+    return lum > 0.179 ? .black : .white
+  }
+}`}</code></pre>
+          </div>
+        </div>
+
+        {/* Live demo swatches */}
+        <h3 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-3">Example outputs</h3>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {[
+            { bg: "#3B82F6", label: "Blue 500" },
+            { bg: "#10B981", label: "Emerald 500" },
+            { bg: "#F59E0B", label: "Amber 500" },
+            { bg: "#EF4444", label: "Red 500" },
+            { bg: "#F3F4F6", label: "Gray 100" },
+            { bg: "#1F2937", label: "Gray 800" },
+            { bg: "#FBBF24", label: "Amber 400" },
+            { bg: "#7C3AED", label: "Violet 600" },
+            { bg: "#FFFFFF", label: "White" },
+            { bg: "#000000", label: "Black" },
+          ].map(({ bg, label }) => {
+            const hex = bg.slice(1);
+            const r = parseInt(hex.slice(0, 2), 16) / 255;
+            const g = parseInt(hex.slice(2, 4), 16) / 255;
+            const b = parseInt(hex.slice(4, 6), 16) / 255;
+            const lin = (c: number) => c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+            const lum = 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b);
+            const fg = lum > 0.179 ? "#000000" : "#ffffff";
+            return (
+              <div
+                key={bg}
+                className="flex flex-col items-center gap-1 px-3 py-2 rounded-lg"
+                style={{ background: bg, minWidth: 80 }}
+              >
+                <span className="text-[11px] font-mono font-semibold" style={{ color: fg }}>{bg}</span>
+                <span className="text-[9px] font-medium uppercase tracking-wider" style={{ color: fg, opacity: 0.7 }}>{label}</span>
+                <span className="text-[9px] font-mono" style={{ color: fg, opacity: 0.6 }}>{fg === "#000000" ? "→ black" : "→ white"}</span>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="grid grid-cols-3 gap-3">
+          {[
+            { title: "Threshold", body: "The luminance threshold of 0.179 corresponds to a ~4.5:1 contrast ratio with both black and white at the crossover point. It is not exactly 0.5 because the luminance scale is perceptually non-linear." },
+            { title: "Input format", body: "The function expects a 6-character hex string with a leading # (e.g. #3B82F6). Extend it to accept rgb() or hsl() strings if your palette uses those formats." },
+            { title: "Usage contexts", body: "Use for tag chips, colour picker overlays, user-assigned badge colours, status indicators, and any surface where the background is not known at design time." },
+          ].map(({ title, body }) => (
+            <div key={title} className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
+              <span className="text-[12px] font-semibold text-[rgb(var(--text-primary))] block mb-1">{title}</span>
+              <p className="text-[11px] text-[rgb(var(--text-secondary))] leading-relaxed">{body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Testing */}
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Testing Tools</h2>

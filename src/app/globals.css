@@ -28,6 +28,34 @@
   --border:          38  38  48;
   --border-subtle:   26  26  33;
 
+  /* Status colours (RGB triplets for composability) */
+  --status-success:  16 185 129;
+  --status-warning:  245 158  11;
+  --status-danger:   248 113 113;
+  --status-caution:  249 115  22;
+
+  /* Progress */
+  --progress-track:          38  38  48;
+  --progress-fill-success:   16 185 129;
+  --progress-fill-warning:  245 158  11;
+  --progress-fill-danger:   248 113 113;
+
+  /* Shadows (full values — use with var() directly) */
+  --shadow-card:        0 2px 12px rgba(0,0,0,0.10);
+  --shadow-card-lifted: 0 4px 18px rgba(0,0,0,0.14);
+  --shadow-sheet:       0 8px 28px rgba(0,0,0,0.20);
+
+  /* Dynamic brand token — overridable by user theme selection */
+  --brand-user: rgb(var(--accent));
+
+  /* Surface glass (RGB triplet for opacity composition) */
+  --surface-glass: 255 255 255 / 0.06;
+
+  /* Motion — Panel Rise (sheet entry animation) */
+  --motion-sheet-entry-duration: 0.25s;
+  --motion-sheet-entry-easing:   cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-sheet-entry-from:     0.97;
+
   /* Full-value tokens (used with var() directly, not rgb(var())) */
   --nav-active-color: rgb(99, 102, 241);
   --card-tint-bg:    rgb(22, 22, 28);
@@ -63,6 +91,29 @@
 
   --nav-active-color: rgb(0, 192, 232);
   --card-tint-bg:    rgba(0, 192, 232, 0.04);
+
+  /* Status colours */
+  --status-success:  16 185 129;
+  --status-warning:  245 158  11;
+  --status-danger:   239  68  68;
+  --status-caution:  234  88  12;
+
+  /* Progress */
+  --progress-track:         224 224 231;
+  --progress-fill-success:   16 185 129;
+  --progress-fill-warning:  245 158  11;
+  --progress-fill-danger:   239  68  68;
+
+  /* Shadows */
+  --shadow-card:        0 2px 12px rgba(0,0,0,0.06);
+  --shadow-card-lifted: 0 4px 18px rgba(0,0,0,0.10);
+  --shadow-sheet:       0 8px 28px rgba(0,0,0,0.14);
+
+  /* Dynamic brand token */
+  --brand-user: rgb(var(--accent));
+
+  /* Surface glass */
+  --surface-glass: 255 255 255 / 0.7;
 }
 
 /* ── Reset ───────────────────────────────────────────── */
