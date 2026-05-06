@@ -31,22 +31,22 @@ export function TableOfContents() {
 
       const elements = Array.from(main.querySelectorAll("h2, h3"));
       const entries: TocEntry[] = [];
+      const seen = new Map<string, number>();
 
       elements.forEach((el) => {
         const text = el.textContent?.trim() ?? "";
         if (!text) return;
 
-        if (!el.id) {
-          el.id = slugify(text);
-        }
+        const base = slugify(text);
+        if (!base) return;
 
-        if (el.id) {
-          entries.push({
-            id: el.id,
-            text,
-            level: parseInt(el.tagName[1], 10),
-          });
-        }
+        // Deduplicate: "implementation", "implementation-2", "implementation-3"…
+        const count = seen.get(base) ?? 0;
+        seen.set(base, count + 1);
+        const id = count === 0 ? base : `${base}-${count + 1}`;
+
+        el.id = id;
+        entries.push({ id, text, level: parseInt(el.tagName[1], 10) });
       });
 
       setHeadings(entries);
