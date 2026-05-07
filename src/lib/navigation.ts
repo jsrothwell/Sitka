@@ -137,17 +137,20 @@ export const navigation: NavSection[] = [
       { title: "Integration Settings", href: "/patterns/integration-settings", badge: "New" },
     ],
   },
-  {
-    title: "How-tos",
-    items: [
-      { title: "All how-tos", href: "/how-tos" },
-      { title: "Design for dark mode", href: "/how-tos/dark-mode" },
-      { title: "Ensure colour is accessible", href: "/how-tos/colour-contrast" },
-      { title: "Write clear interface copy", href: "/how-tos/write-for-interfaces" },
-      { title: "Visualise data accessibly", href: "/how-tos/data-visualisation" },
-      { title: "Design an onboarding flow", href: "/how-tos/onboarding-flow" },
-    ],
-  },
+{
+  title: "How-tos",
+  items: [
+    { title: "All how-tos", href: "/how-tos" },
+    { title: "Design for dark mode", href: "/how-tos/dark-mode" },
+    { title: "Ensure colour is accessible", href: "/how-tos/colour-contrast" },
+    { title: "Write clear interface copy", href: "/how-tos/write-for-interfaces" },
+    { title: "Visualise data accessibly", href: "/how-tos/data-visualisation" },
+    { title: "Design an onboarding flow", href: "/how-tos/onboarding-flow" },
+    { title: "Changelog", href: "/changelog" },
+    { title: "License", href: "/license" },
+    { title: "Status", href: "/status" },
+  ],
+},
   {
     title: "Libraries",
     items: [
