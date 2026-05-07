@@ -79,6 +79,8 @@ export const navigation: NavSection[] = [
         items: [
           { title: "Modal", href: "/components/modal" },
           { title: "Tooltip", href: "/components/tooltip" },
+          { title: "Popover", href: "/components/popover", badge: "New" },
+          { title: "Dropdown Menu", href: "/components/dropdown-menu", badge: "New" },
           { title: "Snackbar", href: "/components/snackbar" },
           { title: "Bottom Sheet", href: "/components/bottom-sheet" },
           { title: "Context Menu", href: "/components/context-menu", badge: "New" },
@@ -105,6 +107,7 @@ export const navigation: NavSection[] = [
           { title: "KPI Tile", href: "/components/kpi-tile", badge: "New" },
           { title: "Gauge", href: "/components/gauge", badge: "New" },
           { title: "Color Picker", href: "/components/color-picker", badge: "New" },
+          { title: "Skeleton", href: "/components/skeleton", badge: "New" },
         ],
       },
     ],
@@ -146,6 +149,11 @@ export const navigation: NavSection[] = [
     { title: "Write clear interface copy", href: "/how-tos/write-for-interfaces" },
     { title: "Visualise data accessibly", href: "/how-tos/data-visualisation" },
     { title: "Design an onboarding flow", href: "/how-tos/onboarding-flow" },
+  ],
+},
+{
+  title: "Meta",
+  items: [
     { title: "Changelog", href: "/changelog" },
     { title: "License", href: "/license" },
     { title: "Status", href: "/status" },
