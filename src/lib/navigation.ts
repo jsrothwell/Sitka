@@ -56,7 +56,7 @@ export const navigation: NavSection[] = [
       {
         title: "Content",
         items: [
-          { title: "Writing", href: "https://medium.com/@jamierothwell", external: true },
+          { title: "Writing", href: "/foundations/writing" },
           { title: "Data Visualisation", href: "/foundations/data-viz" },
           { title: "Charting", href: "/foundations/charting" },
         ],
