@@ -112,13 +112,13 @@ export default function HomePage() {
             { label: "License",   href: "/license" },
             { label: "Status",    href: "/status" },
           ].map(({ label, href }) => (
-            <a
+            <Link
               key={label}
               href={href}
               className="label-mono hover:text-[rgb(var(--text-primary))] transition-standard"
             >
               {label}
-            </a>
+            </Link>
           ))}
         </div>
       </section>
