@@ -171,6 +171,7 @@ function NavLinkItem({ item, isActive }: { item: NavItem; isActive: boolean }) {
     <li>
       <Link
         href={item.href}
+        {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         className={cn(
           "flex items-center gap-2 px-2 py-1.5 rounded-[var(--radius)] text-[13px] font-medium transition-standard",
           isActive
