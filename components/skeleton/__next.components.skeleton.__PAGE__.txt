@@ -1,0 +1,328 @@
+1:"$Sreact.fragment"
+c:I[64147,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/08~xcf14gsghv.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js","/Sitka/_next/static/chunks/0gq949d2-7.01.js"],"PlatformTabs"]
+15:I[97367,["/Sitka/_next/static/chunks/0ejb.xtq61i1v.js","/Sitka/_next/static/chunks/08~xcf14gsghv.js","/Sitka/_next/static/chunks/0k5z7kppmca1z.js","/Sitka/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+16:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","div",null,{"className":"mb-10 pb-8 border-b border-[rgb(var(--border))]","children":["$undefined",["$","h1",null,{"className":"mb-2.5","children":"Skeleton"}],["$","p",null,{"className":"text-[15px] text-[rgb(var(--text-secondary))] leading-relaxed max-w-lg","children":"Placeholder blocks that mimic the shape of loading content. Skeletons reduce perceived wait time by giving the user a preview of layout before data arrives."}]]}],["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-4","children":"Preview"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-6 space-y-6","children":[["$","div",null,{"className":"space-y-2","children":[["$","p",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-3","children":"Inline blocks"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"200px","height":"20px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"75%","height":"14px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"60%","height":"14px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"50%","height":"14px"},"aria-hidden":"true"}]]}],["$","div",null,{"children":[["$","p",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-3","children":"Cards"}],["$","div",null,{"className":"grid grid-cols-1 sm:grid-cols-2 gap-3","children":[["$","div",null,{"className":"p-4 rounded-xl border border-[rgb(var(--border))] space-y-3 bg-[rgb(var(--surface))]","children":[["$","div",null,{"className":"flex items-center gap-3","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"36px","height":"36px"},"aria-hidden":"true"}],["$","div",null,{"className":"space-y-1.5 flex-1","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"60%","height":"14px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"40%","height":"12px"},"aria-hidden":"true"}]]}]]}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg w-full","style":{"height":"12px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"80%","height":"12px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"65%","height":"12px"},"aria-hidden":"true"}]]}],["$","div",null,{"className":"p-4 rounded-xl border border-[rgb(var(--border))] space-y-3 bg-[rgb(var(--surface))]","children":[["$","div",null,{"className":"flex items-center gap-3","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"36px","height":"36px"},"aria-hidden":"true"}],["$","div",null,{"className":"space-y-1.5 flex-1","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"60%","height":"14px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"40%","height":"12px"},"aria-hidden":"true"}]]}]]}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg w-full","style":{"height":"12px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"80%","height":"12px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"65%","height":"12px"},"aria-hidden":"true"}]]}]]}]]}],"$L2","$L3","$L4"]}]]}],"$L5","$L6","$L7","$L8","$L9"]}],["$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"ZGCkAqkL0KcNGQar-x1Bn"}
+2:["$","div",null,{"children":[["$","p",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-3","children":"List"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden bg-[rgb(var(--surface))]","children":[["$","div","0",{"className":"flex items-center gap-3 px-4 py-2.5 border-b border-[rgb(var(--border-subtle))]","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"32px","height":"32px"},"aria-hidden":"true"}],["$","div",null,{"className":"space-y-1.5 flex-1","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"55%","height":"13px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"35%","height":"11px"},"aria-hidden":"true"}]]}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"60px","height":"22px"},"aria-hidden":"true"}]]}],["$","div","1",{"className":"flex items-center gap-3 px-4 py-2.5 border-b border-[rgb(var(--border-subtle))]","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"32px","height":"32px"},"aria-hidden":"true"}],["$","div",null,{"className":"space-y-1.5 flex-1","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"55%","height":"13px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"35%","height":"11px"},"aria-hidden":"true"}]]}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"60px","height":"22px"},"aria-hidden":"true"}]]}],["$","div","2",{"className":"flex items-center gap-3 px-4 py-2.5 border-b border-[rgb(var(--border-subtle))]","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"32px","height":"32px"},"aria-hidden":"true"}],["$","div",null,{"className":"space-y-1.5 flex-1","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"55%","height":"13px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"35%","height":"11px"},"aria-hidden":"true"}]]}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"60px","height":"22px"},"aria-hidden":"true"}]]}],["$","div","3",{"className":"flex items-center gap-3 px-4 py-2.5 ","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"32px","height":"32px"},"aria-hidden":"true"}],["$","div",null,{"className":"space-y-1.5 flex-1","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"55%","height":"13px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"35%","height":"11px"},"aria-hidden":"true"}]]}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"60px","height":"22px"},"aria-hidden":"true"}]]}]]}]]}]
+3:["$","div",null,{"children":[["$","p",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-3","children":"Table rows"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden bg-[rgb(var(--surface))]","children":[["$","div",null,{"className":"flex items-center gap-4 px-4 py-2.5 bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","span","Name",{"className":"flex-1 text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Name"}],["$","span","Status",{"className":"flex-1 text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Status"}],["$","span","Date",{"className":"flex-1 text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Date"}],["$","span","Owner",{"className":"flex-1 text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Owner"}]]}],[["$","div","0",{"className":"flex items-center gap-4 px-4 py-3 border-b border-[rgb(var(--border-subtle))]","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"40%","height":"13px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"72px","height":"22px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"90px","height":"13px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"80px","height":"13px"},"aria-hidden":"true"}]]}],["$","div","1",{"className":"flex items-center gap-4 px-4 py-3 border-b border-[rgb(var(--border-subtle))]","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"40%","height":"13px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"72px","height":"22px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"90px","height":"13px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"80px","height":"13px"},"aria-hidden":"true"}]]}],["$","div","2",{"className":"flex items-center gap-4 px-4 py-3 border-b border-[rgb(var(--border-subtle))]","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"40%","height":"13px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"72px","height":"22px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"90px","height":"13px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"80px","height":"13px"},"aria-hidden":"true"}]]}],["$","div","3",{"className":"flex items-center gap-4 px-4 py-3 ","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"40%","height":"13px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-full ","style":{"width":"72px","height":"22px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"90px","height":"13px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"80px","height":"13px"},"aria-hidden":"true"}]]}]]]}]]}]
+4:["$","div",null,{"children":[["$","p",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-3","children":"KPI tiles"}],["$","div",null,{"className":"grid grid-cols-2 sm:grid-cols-4 gap-3","children":[["$","div","0",{"className":"p-4 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] space-y-3","children":[["$","div",null,{"className":"flex items-center justify-between","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"80px","height":"12px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"24px","height":"24px"},"aria-hidden":"true"}]]}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"120px","height":"28px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"100px","height":"11px"},"aria-hidden":"true"}]]}],["$","div","1",{"className":"p-4 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] space-y-3","children":[["$","div",null,{"className":"flex items-center justify-between","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"80px","height":"12px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"24px","height":"24px"},"aria-hidden":"true"}]]}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"120px","height":"28px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"100px","height":"11px"},"aria-hidden":"true"}]]}],["$","div","2",{"className":"p-4 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] space-y-3","children":[["$","div",null,{"className":"flex items-center justify-between","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"80px","height":"12px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"24px","height":"24px"},"aria-hidden":"true"}]]}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"120px","height":"28px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"100px","height":"11px"},"aria-hidden":"true"}]]}],["$","div","3",{"className":"p-4 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] space-y-3","children":[["$","div",null,{"className":"flex items-center justify-between","children":[["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"80px","height":"12px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"24px","height":"24px"},"aria-hidden":"true"}]]}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"120px","height":"28px"},"aria-hidden":"true"}],["$","div",null,{"className":"bg-[rgb(var(--surface-raised))] animate-pulse rounded-lg ","style":{"width":"100px","height":"11px"},"aria-hidden":"true"}]]}]]}]]}]
+5:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Guidelines"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Principle",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Principle"}],["$","th","Guidance",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Guidance"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap align-top","children":"Match the layout"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Skeleton shapes should closely match the final content — same height, width proportion, and border radius. A mismatch causes layout shift on load."}]]}],["$","tr","1",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap align-top","children":"Show count intent"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"If a list typically shows 5 items, show 5 skeleton rows — not 1 or 20. This sets accurate user expectations."}]]}],["$","tr","2",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap align-top","children":"Avoid over-animation"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Use the shimmer only on the blocks themselves. Do not animate the surrounding container or add spin loaders alongside skeletons."}]]}],["$","tr","3",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap align-top","children":"Respect reduced motion"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Set animation: none when prefers-reduced-motion: reduce is active. The static placeholder still communicates loading state."}]]}],["$","tr","4",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap align-top","children":"Duration threshold"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Only show skeletons for loads expected to take >300ms. For instant data, skeletons cause more flicker than they prevent."}]]}],["$","tr","5",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap align-top","children":"Skeleton vs spinner"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Use a skeleton when content has a predictable shape (text, cards, rows). Use a spinner for indeterminate progress (upload, export, AI generation)."}]]}]]}]]}]}]]}]
+6:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Anatomy"}],["$","div",null,{"className":"rounded-xl border border-[rgb(var(--border))] overflow-hidden","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]","children":[["$","th","Element",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Element"}],["$","th","Spec",{"className":"px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]","children":"Spec"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Fill"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"--surface-raised (same token used for hover states — blends naturally in both light and dark modes)"}]]}],["$","tr","1",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Animation"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"animate-pulse (Tailwind) — opacity cycle, 1.5s ease-in-out infinite. Alternatively: shimmer gradient sweep at 200% background-size"}]]}],["$","tr","2",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Reduced motion"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"animation: none — static placeholder remains visible"}]]}],["$","tr","3",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"aria-hidden"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"true — skeleton blocks are decorative and must be hidden from screen readers"}]]}],["$","tr","4",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap","children":"Border radius"}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))]","children":"Match the final element. Text lines: rounded-lg. Avatars: rounded-full. Cards: rounded-xl."}]]}]]}]]}]}]]}]
+d:T8aa,import { cn } from "@/lib/cn";
+
+interface SkeletonProps {
+  width?: string | number;
+  height?: string | number;
+  rounded?: "none" | "sm" | "md" | "lg" | "full";
+  animate?: boolean;
+  className?: string;
+}
+
+const RADIUS = {
+  none: "rounded-none",
+  sm:   "rounded",
+  md:   "rounded-lg",
+  lg:   "rounded-xl",
+  full: "rounded-full",
+} as const;
+
+export function Skeleton({
+  width,
+  height,
+  rounded = "md",
+  animate = true,
+  className,
+}: SkeletonProps) {
+  return (
+    <div
+      className={cn(
+        "bg-[rgb(var(--surface-raised))]",
+        RADIUS[rounded],
+        animate && "animate-pulse",
+        className
+      )}
+      style={{
+        width:  typeof width  === "number" ? `${width}px`  : width,
+        height: typeof height === "number" ? `${height}px` : height,
+      }}
+      aria-hidden="true"
+    />
+  );
+}
+
+// --- Composed patterns ---
+
+// Card skeleton
+export function CardSkeleton() {
+  return (
+    <div className="p-4 rounded-xl border border-[rgb(var(--border))] space-y-3">
+      <div className="flex items-center gap-3">
+        <Skeleton width={36} height={36} rounded="full" />
+        <div className="space-y-1.5 flex-1">
+          <Skeleton width="60%" height={14} />
+          <Skeleton width="40%" height={12} />
+        </div>
+      </div>
+      <Skeleton height={12} />
+      <Skeleton height={12} width="80%" />
+      <Skeleton height={12} width="65%" />
+    </div>
+  );
+}
+
+// Table row skeleton
+export function TableRowSkeleton({ cols = 4 }: { cols?: number }) {
+  return (
+    <div className="flex items-center gap-4 px-4 py-3 border-b border-[rgb(var(--border-subtle))]">
+      {Array.from({ length: cols }).map((_, i) => (
+        <Skeleton key={i} height={14} className="flex-1" style={{ maxWidth: i === 0 ? "40%" : undefined }} />
+      ))}
+    </div>
+  );
+}
+
+// List item skeleton
+export function ListItemSkeleton() {
+  return (
+    <div className="flex items-center gap-3 px-4 py-2.5">
+      <Skeleton width={32} height={32} rounded="full" />
+      <div className="space-y-1.5 flex-1">
+        <Skeleton height={13} width="55%" />
+        <Skeleton height={11} width="35%" />
+      </div>
+      <Skeleton width={60} height={24} rounded="full" />
+    </div>
+  );
+}e:T8dc,<!-- Skeleton — pure CSS shimmer, no JS required -->
+
+<!-- Single block -->
+<div class="skeleton" style="width: 200px; height: 16px;"></div>
+
+<!-- Card skeleton -->
+<div class="card-skeleton">
+  <div class="skel-row">
+    <div class="skeleton skel-avatar"></div>
+    <div class="skel-meta">
+      <div class="skeleton" style="width: 60%; height: 14px;"></div>
+      <div class="skeleton" style="width: 40%; height: 12px; margin-top: 6px;"></div>
+    </div>
+  </div>
+  <div class="skeleton" style="height: 12px; margin-top: 12px;"></div>
+  <div class="skeleton" style="width: 80%; height: 12px; margin-top: 6px;"></div>
+  <div class="skeleton" style="width: 65%; height: 12px; margin-top: 6px;"></div>
+</div>
+
+<!-- List item skeleton -->
+<div class="list-skel">
+  <div class="skeleton skel-avatar"></div>
+  <div class="skel-meta" style="flex: 1;">
+    <div class="skeleton" style="width: 55%; height: 13px;"></div>
+    <div class="skeleton" style="width: 35%; height: 11px; margin-top: 6px;"></div>
+  </div>
+  <div class="skeleton skel-pill"></div>
+</div>
+
+<style>
+  /* Base skeleton block */
+  .skeleton {
+    display: block;
+    background: rgb(var(--surface-raised));
+    border-radius: 8px;
+    animation: shimmer 1.5s ease-in-out infinite;
+    background-image: linear-gradient(
+      90deg,
+      rgb(var(--surface-raised)) 0%,
+      rgb(var(--border)) 50%,
+      rgb(var(--surface-raised)) 100%
+    );
+    background-size: 200% 100%;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position:  200% 0; }
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .skeleton { animation: none; }
+  }
+
+  /* Composed layouts */
+  .card-skeleton {
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgb(var(--border));
+  }
+  .skel-row    { display: flex; align-items: center; gap: 12px; }
+  .skel-meta   { display: flex; flex-direction: column; }
+  .skel-avatar { width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; }
+  .skel-pill   { width: 60px; height: 24px; border-radius: 9999px; flex-shrink: 0; }
+
+  .list-skel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-bottom: 1px solid rgb(var(--border-subtle));
+  }
+</style>f:T977,import SwiftUI
+
+// Skeleton shimmer for SwiftUI using a redacted modifier (iOS 15+)
+// or a custom shimmer effect for granular control.
+
+// -- Option 1: Native .redacted (recommended for simple lists) --
+struct UserListView: View {
+    @State private var users: [User]? = nil
+
+    var body: some View {
+        List(placeholder ?? users ?? []) { user in
+            UserRow(user: user)
+        }
+        .redacted(reason: users == nil ? .placeholder : [])
+        .task { users = await fetchUsers() }
+    }
+
+    private var placeholder: [User]? {
+        users == nil ? (1...5).map { User(id: $0, name: "Placeholder Name", role: "Role") } : nil
+    }
+}
+
+// -- Option 2: Custom shimmer view --
+struct ShimmerView: View {
+    @State private var phase: CGFloat = -1
+
+    var body: some View {
+        GeometryReader { geo in
+            Rectangle()
+                .fill(Color(.secondarySystemBackground))
+                .overlay(
+                    LinearGradient(
+                        colors: [.clear, Color(.tertiarySystemBackground).opacity(0.8), .clear],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                    .offset(x: phase * geo.size.width)
+                    .animation(.linear(duration: 1.3).repeatForever(autoreverses: false), value: phase)
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                .onAppear { phase = 1 }
+        }
+    }
+}
+
+// -- Composed card skeleton --
+struct CardSkeletonView: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 10) {
+                ShimmerView()
+                    .frame(width: 36, height: 36)
+                    .clipShape(Circle())
+
+                VStack(alignment: .leading, spacing: 6) {
+                    ShimmerView().frame(height: 14)
+                    ShimmerView().frame(width: 120, height: 12)
+                }
+            }
+
+            ShimmerView().frame(height: 12)
+            ShimmerView().frame(height: 12)
+            ShimmerView().frame(width: 180, height: 12)
+        }
+        .padding(16)
+        .background(Color(.secondarySystemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+    }
+}
+
+#Preview {
+    VStack(spacing: 12) {
+        CardSkeletonView()
+        CardSkeletonView()
+    }
+    .padding()
+}10:Ta1c,import SwiftUI
+
+// macOS — same approach as iOS. Prefer .redacted for lists.
+// Use ShimmerView for custom layouts.
+
+struct TableSkeletonView: View {
+    let rows: Int
+
+    var body: some View {
+        VStack(spacing: 0) {
+            // Header
+            HStack(spacing: 0) {
+                ForEach(["Name", "Status", "Date", "Owner"], id: \.self) { col in
+                    Text(col)
+                        .font(.system(size: 11, weight: .semibold))
+                        .foregroundStyle(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 8)
+                }
+            }
+            .background(Color(.controlBackgroundColor))
+
+            Divider()
+
+            // Skeleton rows
+            ForEach(0..<rows, id: \.self) { _ in
+                HStack(spacing: 12) {
+                    ShimmerView().frame(height: 13).frame(maxWidth: .infinity)
+                    ShimmerView().frame(width: 72, height: 22).clipShape(Capsule())
+                    ShimmerView().frame(width: 90, height: 13)
+                    ShimmerView().frame(width: 80, height: 13)
+                }
+                .padding(.horizontal, 12)
+                .padding(.vertical, 10)
+
+                Divider()
+            }
+        }
+        .background(Color(.controlBackgroundColor))
+        .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 8, style: .continuous)
+                .stroke(Color(.separatorColor), lineWidth: 1)
+        )
+    }
+}
+
+struct ShimmerView: View {
+    @State private var phase: CGFloat = -1
+
+    var body: some View {
+        GeometryReader { geo in
+            RoundedRectangle(cornerRadius: 4, style: .continuous)
+                .fill(Color(.unemphasizedSelectedContentBackgroundColor))
+                .overlay(
+                    LinearGradient(
+                        colors: [.clear, Color(.controlBackgroundColor).opacity(0.6), .clear],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                    .offset(x: phase * geo.size.width)
+                    .animation(.linear(duration: 1.3).repeatForever(autoreverses: false), value: phase)
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous))
+                .onAppear { phase = 1 }
+        }
+    }
+}
+
+#Preview {
+    TableSkeletonView(rows: 5)
+        .frame(width: 640)
+        .padding()
+}7:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Implementation"}],["$","$Lc",null,{"code":{"react":{"filename":"Skeleton.tsx","code":"$d"},"html":{"filename":"skeleton.html","code":"$e"},"swift":{"filename":"SitkaSkeleton.swift","code":"$f"},"macos":{"filename":"SitkaSkeleton+macOS.swift","code":"$10"}}}]]}]
+8:["$","section",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-5","children":"Props"}],["$","div",null,{"className":"overflow-hidden rounded-xl border border-[rgb(var(--border))]","children":["$","table",null,{"className":"w-full text-[13px]","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]","children":[["$","th","Prop",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Prop"}],["$","th","Type",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Type"}],["$","th","Default",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Default"}],["$","th","Description",{"className":"px-4 py-3 text-left font-semibold text-[rgb(var(--text-tertiary))] text-[11px] uppercase tracking-wider","children":"Description"}]]}]}],["$","tbody",null,{"children":[["$","tr","width",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["width","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string | number"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"CSS width of the skeleton block. Pass a number for pixel value, or any CSS string."}]]}],["$","tr","height",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["height","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string | number"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"CSS height of the skeleton block."}]]}],["$","tr","rounded",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["rounded","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"\"none\" | \"sm\" | \"md\" | \"lg\" | \"full\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"\"md\""}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Border radius of the block. Use 'full' for circular avatars and badge pills."}]]}],["$","tr","animate",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["animate","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":"$L11"}],"$L12","$L13"]}],"$L14"]}]]}]}]]}]
+9:["$","section",null,{"children":[["$","h2",null,{"className":"text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2","children":"Accessibility"}],["$","ul",null,{"className":"space-y-2 text-[14px] text-[rgb(var(--text-secondary))]","children":[["$","li","Set aria-hidden='true' on all skeleton blocks — they are purely decorative and must not be announced by screen readers.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Set aria-hidden='true' on all skeleton blocks — they are purely decorative and must not be announced by screen readers."]}],["$","li","Wrap the loading region in a live region: <div aria-live='polite' aria-busy='true'>. When content loads, update aria-busy='false' and replace skeletons with real content.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Wrap the loading region in a live region: <div aria-live='polite' aria-busy='true'>. When content loads, update aria-busy='false' and replace skeletons with real content."]}],["$","li","Screen readers will announce the live region update, giving non-visual users an equivalent loading cue.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Screen readers will announce the live region update, giving non-visual users an equivalent loading cue."]}],["$","li","Never use skeleton text as a substitute for real content — remove it completely once data is available.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Never use skeleton text as a substitute for real content — remove it completely once data is available."]}],["$","li","Respect prefers-reduced-motion: disable the shimmer animation for users who have requested reduced motion in their OS settings.",{"className":"flex gap-2","children":[["$","span",null,{"className":"text-[rgb(var(--accent))] mt-0.5","children":"→"}],"Respect prefers-reduced-motion: disable the shimmer animation for users who have requested reduced motion in their OS settings."]}]]}]]}]
+a:["$","script","script-0",{"src":"/Sitka/_next/static/chunks/0gq949d2-7.01.js","async":true}]
+b:["$","$L15",null,{"children":["$","$16",null,{"name":"Next.MetadataOutlet","children":"$@17"}]}]
+11:["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"boolean"}]
+12:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","code",null,{"className":"font-mono text-[11px]","children":"true"}]}]
+13:["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Enable the shimmer animation. Set false to show a static placeholder (e.g. when printing)."}]
+14:["$","tr","className",{"className":"border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]","children":[["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--accent))] font-mono text-[12px]","children":["className","$undefined"]}]}],["$","td",null,{"className":"px-4 py-3","children":["$","code",null,{"className":"text-[rgb(var(--text-secondary))] font-mono text-[11px] bg-[rgb(var(--surface-raised))] px-1.5 py-0.5 rounded","children":"string"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-tertiary))]","children":["$","span",null,{"className":"opacity-40","children":"—"}]}],["$","td",null,{"className":"px-4 py-3 text-[rgb(var(--text-secondary))] leading-relaxed","children":"Additional Tailwind classes to override width, height, or margin inline."}]]}]
+17:null
