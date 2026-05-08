@@ -5,9 +5,33 @@ export const metadata: Metadata = { title: "Changelog" };
 
 const RELEASES = [
   {
-    version: "1.0.0",
-    date: "2025-05-06",
+    version: "1.1.0",
+    date: "2026-05-08",
     tag: "Latest",
+    summary: "New components, patterns, and GitHub Pages deployment support.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "New Components: Slider (single/range), Date-Time Pickers (calendar/time), Carousel (auto-advancing), and Snackbar (notifications)",
+          "New Patterns: Collaboration (presence/sharing), Drag and Drop (kanban/reordering), and Data Entry (validation/wizards)",
+          "GitHub Pages deployment pipeline via GitHub Actions",
+          "Static HTML export support with next.config.ts optimizations",
+          "New documentation: DEPLOYMENT.md and DEPLOYMENT-VERIFICATION.md",
+        ],
+      },
+      {
+        label: "Improved",
+        items: [
+          "Replaced next/image with standard <img> tags for better static export compatibility",
+          "Enhanced sidebar and header logo rendering for static sites",
+        ],
+      },
+    ],
+  },
+  {
+    version: "1.0.0",
+    date: "2026-05-05",
     summary: "Initial public release of Sitka Design System.",
     sections: [
       {

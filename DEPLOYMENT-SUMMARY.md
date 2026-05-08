@@ -337,6 +337,7 @@ npm run serve
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.1.0 | 2026-05-08 | New components, patterns, and GH Pages deployment |
 | 1.0.0 | 2026-05-05 | Initial deployment configuration |
 
 ## License
