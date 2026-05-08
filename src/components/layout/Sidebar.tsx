@@ -53,7 +53,7 @@ export function Sidebar({
             className="flex items-center gap-2.5 min-w-0 hover:opacity-80 transition-standard"
           >
             <span className="w-6 h-6 rounded-full bg-white shrink-0 flex items-center justify-center overflow-hidden">
-              <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/sitka-logo.png`} width={22} height={22} alt="Sitka logo" className="w-full h-full object-contain" />
+              <Image src="/sitka-logo.png" width={22} height={22} alt="Sitka logo" className="w-full h-full object-contain" />
             </span>
             <span className="font-semibold text-[14px] tracking-tight text-[rgb(var(--text-primary))] leading-none">
               Sitka
@@ -184,6 +184,13 @@ function NavLinkItem({ item, isActive }: { item: NavItem; isActive: boolean }) {
         {item.badge && (
           <span className="ml-auto text-[9px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-[var(--radius-sm)] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]">
             {item.badge}
+          </span>
+        )}
+      </Link>
+    </li>
+  );
+}
+ {item.badge}
           </span>
         )}
       </Link>

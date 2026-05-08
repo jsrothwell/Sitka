@@ -7,7 +7,6 @@ type ServiceStatus = "operational" | "degraded" | "outage" | "maintenance";
 
 const SERVICES: { name: string; description: string; status: ServiceStatus }[] = [
   { name: "Documentation site",     description: "sitka.design — this site",          status: "operational" },
-  { name: "GitHub Pages deployment", description: "Static build via GitHub Actions",   status: "operational" },
   { name: "Token export pipeline",  description: "Style Dictionary build + download",  status: "operational" },
   { name: "Figma library sync",     description: "Figma Variables API integration",    status: "operational" },
   { name: "npm package",            description: "@sitka/tokens — token distribution", status: "operational" },

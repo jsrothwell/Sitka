@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Box, Layers, Sparkles, Zap } from "lucide-react";
 
 export const metadata: Metadata = { title: "Introduction" };

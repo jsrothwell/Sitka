@@ -8,7 +8,7 @@ const RELEASES = [
     version: "1.1.0",
     date: "2026-05-08",
     tag: "Latest",
-    summary: "New components, patterns, and GitHub Pages deployment support.",
+    summary: "New components, patterns, and accessibility foundation.",
     sections: [
       {
         label: "Added",
@@ -16,9 +16,6 @@ const RELEASES = [
           "New Components: Slider (single/range), Date-Time Pickers (calendar/time), Carousel (auto-advancing), and Snackbar (notifications)",
           "New Patterns: Collaboration (presence/sharing), Drag and Drop (kanban/reordering), and Data Entry (validation/wizards)",
           "New Accessibility foundation page documenting WCAG 2.1 Level AA compliance",
-          "GitHub Pages deployment pipeline via GitHub Actions",
-          "Static HTML export support with next.config.ts optimizations",
-          "New documentation: DEPLOYMENT.md and DEPLOYMENT-VERIFICATION.md",
         ],
       },
       {
@@ -26,8 +23,6 @@ const RELEASES = [
         items: [
           "Enhanced text contrast ratios for secondary and tertiary text tokens across both light and dark modes",
           "Replaced hardcoded grey hex values with semantic tokens for consistent accessibility",
-          "Replaced next/image with standard <img> tags for better static export compatibility",
-          "Enhanced sidebar and header logo rendering for static sites",
         ],
       },
     ],

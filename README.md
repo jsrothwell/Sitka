@@ -33,54 +33,11 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on GitHub Pages
-
-This project is configured for deployment to GitHub Pages.
-
-### Configuration
-
-The project uses `output: "export"` to generate static HTML files. Configuration can be found in `next.config.ts`:
-
-- `basePath: "/Sitka"` - Set to your repository name for project sites
-- `assetPrefix: "/Sitka"` - Ensures assets load from correct path
-- `trailingSlash: true` - Required for static file resolution
-- `images.unoptimized: true` - Standard `<img>` tags used instead of Next.js Image
-
-### Deployment
-
-The project includes an automated GitHub Actions workflow (`.github/workflows/deploy.yml`) that:
-
-1. Builds the Next.js application
-2. Generates static HTML in the `out/` directory
-3. Deploys to the root of the `gh-pages` branch
-4. Includes `.nojekyll` file to prevent Jekyll processing
-
-### Manual Deployment
-
-To deploy manually:
-
-```bash
-# Build the project
-npm run build
-
-# Deploy to gh-pages branch
-npx gh-pages -d out -b gh-pages
-```
-
-### Access URLs
-
-After deployment, the site will be available at:
-
-- **Project site**: `https://<username>.github.io/Sitka/`
-- **User site**: `https://<username>.github.io/` (requires `basePath: ""`)
-
 ## Development Scripts
 
 - `npm run dev` - Start development server
-- `npm run build` - Build for production (static export)
-- `npm run export` - Generate static export (same as build)
+- `npm run build` - Build for production
 - `npm run start` - Start production server
-- `npm run serve` - Serve static files locally (for testing)
 - `npm run lint` - Run ESLint
 
 ## Learn More

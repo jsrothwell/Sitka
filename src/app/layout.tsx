@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const BASE_URL = "https://jsrothwell.github.io/Sitka";
+const BASE_URL = "http://localhost:3000";
 const OG_DESCRIPTION =
   "A premium design system for building consistent, accessible digital products — design tokens, component documentation, and platform-specific guidance for Web, iOS, and macOS.";
 
