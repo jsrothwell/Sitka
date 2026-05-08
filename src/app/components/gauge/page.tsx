@@ -193,7 +193,7 @@ function renderGauge({ value, max = 100, size = 80, strokeWidth = 8, variant = "
       </svg>
       <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
         <span style="font-size:\${fontSize}px;font-weight:700">\${label ?? Math.round(pct) + "%"}</span>
-        \${sublabel ? \`<span style="font-size:\${size * 0.11}px;color:#646473">\${sublabel}</span>\` : ""}
+        \${sublabel ? \`<span style="font-size:\${size * 0.11}px;color:rgb(var(--text-tertiary))">\${sublabel}</span>\` : ""}
       </div>
     </div>
   \`;

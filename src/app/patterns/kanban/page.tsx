@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Plus, MoreHorizontal, Circle } from "lucide-react";
 
 const COLUMNS = [
-  { id: "todo",       label: "To Do",       color: "#78716C", count: 3 },
+  { id: "todo",       label: "To Do",       color: "#A0A0AF", count: 3 },
   { id: "inprogress", label: "In Progress",  color: "#3B82F6", count: 2 },
   { id: "review",    label: "In Review",    color: "#F59E0B", count: 1 },
   { id: "done",      label: "Done",         color: "#10B981", count: 4 },
@@ -475,7 +475,7 @@ function KanbanDemo() {
                           <span key={tag} style={{
                             fontSize: 10, padding: "2px 6px", borderRadius: 99,
                             background: (TAG_COLORS[tag] || "#888") + "22",
-                            color: TAG_COLORS[tag] || "#888", fontWeight: 600,
+                            color: TAG_COLORS[tag] || "#A0A0AF", fontWeight: 600,
                           }}>{tag}</span>
                         ))}
                       </div>

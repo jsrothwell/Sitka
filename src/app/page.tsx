@@ -31,7 +31,7 @@ const features = [
     title: "Accessibility",
     description:
       "WCAG 2.1 compliance built-in. Contrast ratios, interaction models, and screen-reader semantics by default.",
-    href: "/principles",
+    href: "/foundations/accessibility",
   },
 ];
 

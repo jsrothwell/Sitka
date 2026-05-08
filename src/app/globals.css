@@ -22,8 +22,8 @@
   --accent-muted:   0  72  86;
 
   --text-primary:   242 242 246;
-  --text-secondary: 155 155 170;
-  --text-tertiary:  100 100 115;
+  --text-secondary: 170 170 185;
+  --text-tertiary:  135 135 155;
 
   --border:          38  38  48;
   --border-subtle:   26  26  33;
@@ -82,9 +82,9 @@
   --accent-subtle:   224 247 252;
   --accent-muted:    179 237 249;
 
-  --text-primary:    40  40  40;
-  --text-secondary:  116 116 116;
-  --text-tertiary:   167 167 172;
+  --text-primary:    30  30  30;
+  --text-secondary:  85  85  90;
+  --text-tertiary:   115 115 120;
 
   --border:          224 224 231;
   --border-subtle:   240 240 244;

@@ -104,9 +104,9 @@ export default function HowToDarkModePage() {
                 <span className="w-8 h-8 rounded-lg shrink-0" style={{ background: hex, border: "1px solid rgba(255,255,255,0.1)" }} />
                 <div className="flex-1">
                   <code className="text-[11px] font-mono" style={{ color: "#34a865" }}>{token}</code>
-                  <p className="text-[10px]" style={{ color: "#646473" }}>{note}</p>
+                  <p className="text-[10px]" style={{ color: "rgb(var(--text-tertiary))" }}>{note}</p>
                 </div>
-                <code className="text-[10px] font-mono shrink-0" style={{ color: "#646473" }}>{hex}</code>
+                <code className="text-[10px] font-mono shrink-0" style={{ color: "rgb(var(--text-tertiary))" }}>{hex}</code>
               </div>
             ))}
           </div>

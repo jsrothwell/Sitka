@@ -48,15 +48,15 @@ function MetricWidget() {
           <div style={{ width: 28, height: 28, borderRadius: 8, background: "#34a865", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="white" strokeWidth="1.75" strokeLinecap="round"/></svg>
           </div>
-          <span style={{ fontSize: 11, fontWeight: 600, color: "#8e8e93", letterSpacing: "0.02em" }}>ACTIVITY</span>
+          <span style={{ fontSize: 11, fontWeight: 600, color: "rgb(var(--text-tertiary))", letterSpacing: "0.02em" }}>ACTIVITY</span>
         </div>
         <div>
           <div style={{ fontSize: 36, fontWeight: 700, color: "#ffffff", letterSpacing: "-0.02em", lineHeight: 1 }}>8,432</div>
-          <div style={{ fontSize: 13, color: "#8e8e93", marginTop: 4 }}>steps today</div>
+          <div style={{ fontSize: 13, color: "rgb(var(--text-tertiary))", marginTop: 4 }}>steps today</div>
           <div style={{ marginTop: 10, height: 3, borderRadius: 2, background: "#3a3a3c" }}>
             <div style={{ width: "68%", height: "100%", borderRadius: 2, background: "#34a865" }} />
           </div>
-          <div style={{ fontSize: 11, color: "#8e8e93", marginTop: 4 }}>68% of goal</div>
+          <div style={{ fontSize: 11, color: "rgb(var(--text-tertiary))", marginTop: 4 }}>68% of goal</div>
         </div>
       </div>
     </WidgetShell>
@@ -69,7 +69,7 @@ function StatusWidget() {
       <div style={{ padding: 16, height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <span style={{ fontSize: 15, fontWeight: 600, color: "#ffffff" }}>Project Status</span>
-          <span style={{ fontSize: 11, color: "#8e8e93" }}>Updated now</span>
+          <span style={{ fontSize: 11, color: "rgb(var(--text-tertiary))" }}>Updated now</span>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
           {[
@@ -79,7 +79,7 @@ function StatusWidget() {
           ].map(({ label, value, color }) => (
             <div key={label} style={{ background: "#2c2c2e", borderRadius: 12, padding: "10px 12px" }}>
               <div style={{ fontSize: 22, fontWeight: 700, color, letterSpacing: "-0.02em" }}>{value}</div>
-              <div style={{ fontSize: 11, color: "#8e8e93", marginTop: 2 }}>{label}</div>
+              <div style={{ fontSize: 11, color: "rgb(var(--text-tertiary))", marginTop: 2 }}>{label}</div>
             </div>
           ))}
         </div>
@@ -107,7 +107,7 @@ function CalendarWidget() {
       <div style={{ padding: 16, height: "100%", display: "flex", flexDirection: "column", gap: 12 }}>
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
           <span style={{ fontSize: 15, fontWeight: 600, color: "#ffffff" }}>Today</span>
-          <span style={{ fontSize: 11, color: "#8e8e93" }}>Tuesday, 1 Apr</span>
+          <span style={{ fontSize: 11, color: "rgb(var(--text-tertiary))" }}>Tuesday, 1 Apr</span>
         </div>
 
         {/* Mini calendar strip */}
@@ -138,14 +138,14 @@ function CalendarWidget() {
               <div style={{ width: 3, height: 36, borderRadius: 2, background: color, flexShrink: 0 }} />
               <div>
                 <div style={{ fontSize: 13, fontWeight: 500, color: "#ffffff" }}>{title}</div>
-                <div style={{ fontSize: 11, color: "#8e8e93", marginTop: 1 }}>{time}</div>
+                <div style={{ fontSize: 11, color: "rgb(var(--text-tertiary))", marginTop: 1 }}>{time}</div>
               </div>
             </div>
           ))}
         </div>
 
         <div style={{ padding: "8px 10px", background: "#2c2c2e", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <span style={{ fontSize: 12, color: "#8e8e93" }}>Next: Stand-up</span>
+          <span style={{ fontSize: 12, color: "rgb(var(--text-tertiary))" }}>Next: Stand-up</span>
           <span style={{ fontSize: 12, fontWeight: 600, color: "#34a865" }}>in 47m</span>
         </div>
       </div>
@@ -157,7 +157,7 @@ function ProgressWidget() {
   return (
     <WidgetShell size="small" label="Circular progress">
       <div style={{ padding: 14, height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-        <span style={{ fontSize: 11, fontWeight: 600, color: "#8e8e93", letterSpacing: "0.02em" }}>FOCUS</span>
+        <span style={{ fontSize: 11, fontWeight: 600, color: "rgb(var(--text-tertiary))", letterSpacing: "0.02em" }}>FOCUS</span>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
           <svg width="72" height="72" viewBox="0 0 72 72">
             <circle cx="36" cy="36" r="30" fill="none" stroke="#3a3a3c" strokeWidth="6" />
@@ -172,7 +172,7 @@ function ProgressWidget() {
             <text x="36" y="40" textAnchor="middle" fill="#ffffff" fontSize="18" fontWeight="700">72%</text>
           </svg>
         </div>
-        <div style={{ fontSize: 11, color: "#8e8e93" }}>22m remaining</div>
+        <div style={{ fontSize: 11, color: "rgb(var(--text-tertiary))" }}>22m remaining</div>
       </div>
     </WidgetShell>
   );

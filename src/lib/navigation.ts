@@ -36,6 +36,7 @@ export const navigation: NavSection[] = [
       {
         title: "Visual",
         items: [
+          { title: "Accessibility", href: "/foundations/accessibility", badge: "New" },
           { title: "Color", href: "/foundations/color" },
           { title: "Contrast", href: "/foundations/contrast" },
           { title: "Typography", href: "/foundations/typography" },
