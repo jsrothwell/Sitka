@@ -10,10 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **New Components**: Slider (single/range), Date-Time Pickers (calendar/time), Carousel (auto-advancing), and Snackbar (notifications).
 - **New Patterns**: Collaboration (presence/sharing), Drag and Drop (kanban/reordering), and Data Entry (validation/wizards).
+- **Accessibility**: New Accessibility foundation page documenting WCAG 2.1 Level AA compliance.
 - **Deployment**: GitHub Pages deployment pipeline via GitHub Actions.
 - **Documentation**: Static HTML export support with optimizations and new guides (`DEPLOYMENT.md`, `DEPLOYMENT-VERIFICATION.md`).
 
 ### Improved
+- **Contrast**: Enhanced text contrast ratios for secondary and tertiary text tokens across both light and dark modes.
+- **Accessibility**: Replaced hardcoded grey hex values with semantic tokens for consistent accessibility.
 - **Static Export**: Replaced `next/image` with standard `<img>` tags for better compatibility.
 - **UI**: Enhanced sidebar and header logo rendering for static sites.
 
