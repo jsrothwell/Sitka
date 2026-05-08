@@ -39,6 +39,7 @@ export const navigation: NavSection[] = [
           { title: "Color", href: "/foundations/color" },
           { title: "Contrast", href: "/foundations/contrast" },
           { title: "Typography", href: "/foundations/typography" },
+          { title: "Icons", href: "/foundations/icons" },
           { title: "Spacing", href: "/foundations/spacing" },
           { title: "Border Radius", href: "/foundations/border-radius" },
           { title: "Shadows", href: "/foundations/shadows" },
