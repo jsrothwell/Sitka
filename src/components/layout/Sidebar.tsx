@@ -60,7 +60,7 @@ export function Sidebar({
             </span>
           </Link>
           <span className="font-mono text-[10px] font-medium px-1.5 py-0.5 rounded-[var(--radius-sm)] bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-tertiary))] border border-[rgb(var(--border))]">
-            v1.0
+            v1.1
           </span>
           {/* Close button — mobile only */}
           <button
