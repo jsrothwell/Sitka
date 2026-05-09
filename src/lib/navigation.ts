@@ -264,6 +264,7 @@ export const navigation: NavSection[] = [
           { title: "React Native", href: "/libraries/react-native", isNew: true },
           { title: "Android · Compose", href: "/libraries/android", isNew: true },
           ...(FEATURES.figmaLibrary ? [{ title: "Figma", href: "/libraries/figma" }] : []),
+          { title: "Storybook", href: "/storybook", badge: "New" },
         ],
       },
       {

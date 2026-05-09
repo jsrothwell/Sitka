@@ -5,9 +5,43 @@ export const metadata: Metadata = { title: "Changelog" };
 
 const RELEASES = [
   {
-    version: "1.1.0",
+    version: "1.3.0",
     date: "2026-05-08",
     tag: "Latest",
+    summary: "New components, Storybook stories, expanded CLI registry, and the sitka-ui npm package.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "New UI Components: Box, Stack (layout primitives), Navigation Menu, Menubar, Data Grid",
+          "New Foundation Pages: Density System, Responsive Grid, RTL & i18n, Forced Colors, Component Lifecycle",
+          "New Patterns: Activity Feed, Multi-select & Bulk Actions",
+          "Storybook stories for all 35 components, including BottomSheet, Toast, PromptInput, ChatMessage, OTPInput, FileUpload, StreamingText, BottomTabBar, PricingTable, CodeBlock, Menubar, NavigationMenu",
+          "sitka-ui npm package — dual CJS/ESM build with full TypeScript types and a separate tokens entry point",
+          "CLI registry expanded from 21 to 35 components with aliases",
+        ],
+      },
+    ],
+  },
+  {
+    version: "1.2.0",
+    date: "2026-05-08",
+    summary: "Eight new components and full documentation for eight previously undocumented components.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "New Components: Collapsible, Pagination, Spinner, Divider, Label, Toggle / Toggle Group, File Upload / Drop Zone, Drawer — each with full doc pages",
+          "New Component Pages: Checkbox, Radio, Select, Switch, Tabs, Textarea, Command Palette, Sidebar",
+          "New Pattern: Multi-step Wizard with step indicator and validation gating",
+          "ARIA roles tables and keyboard interaction tables across all 13 interactive component pages",
+        ],
+      },
+    ],
+  },
+  {
+    version: "1.1.0",
+    date: "2026-05-08",
     summary: "New components, patterns, and accessibility foundation.",
     sections: [
       {

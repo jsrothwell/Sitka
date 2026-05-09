@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Multi-select & Bulk Actions** — checkbox grid with indeterminate header, tinted selection rows, and contextual bulk toolbar.
 
 #### Infrastructure
-- **GitHub Actions CI/CD** — `.github/workflows/deploy.yml` builds the static export and deploys to GitHub Pages on every push to `main`.
+- **CI/CD** — `.github/workflows/deploy.yml` builds the static export and deploys on every push to `main`.
 - **Static export** — `next.config.ts` configured with `output: 'export'`, conditional `basePath`, `trailingSlash`, and `images: { unoptimized: true }`.
 - **Storybook** — `.storybook/main.ts` + `preview.tsx` configured for Next.js; initial stories for Button, Input, Badge, Switch, Avatar.
 - **CLI scaffold** — `packages/cli` with `npx sitka@latest add <component>` command and a 20-component registry.
