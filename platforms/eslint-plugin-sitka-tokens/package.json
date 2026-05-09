@@ -1,0 +1,51 @@
+{
+  "name": "eslint-plugin-sitka-tokens",
+  "version": "1.2.0",
+  "description": "ESLint plugin for Sitka Design System — enforces token usage over hardcoded values (colors, spacing, shadows)",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib", "rules"],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src/",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "eslintplugin",
+    "design-tokens",
+    "sitka",
+    "design-system",
+    "linter"
+  ],
+  "author": "Sitka Design System Team",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": "^9.0.0 || ^10.0.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^9",
+    "@types/jest": "^29",
+    "@types/node": "^20",
+    "@typescript-eslint/eslint-plugin": "^7",
+    "@typescript-eslint/parser": "^7",
+    "eslint": "^9",
+    "jest": "^29",
+    "ts-jest": "^29",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/Sitka.git",
+    "directory": "platforms/eslint-plugin-sitka-tokens"
+  },
+  "bugs": {
+    "url": "https://github.com/username/Sitka/issues"
+  }
+}

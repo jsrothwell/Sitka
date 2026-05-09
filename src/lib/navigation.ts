@@ -45,6 +45,7 @@ export const navigation: NavSection[] = [
           { title: "Border Radius", href: "/foundations/border-radius" },
           { title: "Shadows", href: "/foundations/shadows" },
           { title: "Glass", href: "/foundations/glass" },
+          { title: "Spatial Computing", href: "/foundations/spatial-computing", isNew: true },
         ],
       },
       {
@@ -52,6 +53,8 @@ export const navigation: NavSection[] = [
         items: [
           { title: "Motion", href: "/foundations/motion" },
           { title: "Interaction", href: "/foundations/interaction" },
+          { title: "Gestures", href: "/foundations/gestures", isNew: true },
+          { title: "Haptics", href: "/foundations/haptics", isNew: true },
           { title: "Keyboard Shortcuts", href: "/foundations/keyboard-shortcuts" },
         ],
       },
@@ -92,6 +95,8 @@ export const navigation: NavSection[] = [
         items: [
           { title: "Input", href: "/components/input" },
           { title: "Textarea", href: "/components/textarea", badge: "New" },
+          { title: "Prompt Input", href: "/components/prompt-input", isNew: true },
+          { title: "OTP / PIN", href: "/components/otp", isNew: true },
           { title: "Select", href: "/components/select" },
           { title: "Checkbox", href: "/components/checkbox" },
           { title: "Radio", href: "/components/radio" },
@@ -187,6 +192,7 @@ export const navigation: NavSection[] = [
           { title: "Burn Trajectory", href: "/patterns/burn-trajectory", badge: "New" },
           { title: "Goal & Streak", href: "/patterns/goal-streak", badge: "New" },
           { title: "Team Capacity Grid", href: "/patterns/team-capacity", badge: "New" },
+          { title: "Pricing Table", href: "/components/pricing", isNew: true },
         ],
       },
       {
@@ -203,6 +209,7 @@ export const navigation: NavSection[] = [
         items: [
           { title: "Notifications · Mobile", href: "/notifications/mobile" },
           { title: "Notifications · Desktop", href: "/notifications/desktop" },
+          { title: "Chat & Conversation", href: "/patterns/chat", isNew: true },
           { title: "Collaboration & Sharing", href: "/patterns/collaboration" },
           { title: "Media Player", href: "/patterns/media-player" },
         ],
@@ -232,6 +239,8 @@ export const navigation: NavSection[] = [
           { title: "Tokens Only", href: "/libraries/tokens" },
           { title: "iOS · SwiftUI", href: "/libraries/ios" },
           { title: "macOS · SwiftUI", href: "/libraries/macos" },
+          { title: "React Native", href: "/libraries/react-native", isNew: true },
+          { title: "Android · Compose", href: "/libraries/android", isNew: true },
           ...(FEATURES.figmaLibrary ? [{ title: "Figma", href: "/libraries/figma" }] : []),
         ],
       },
@@ -241,6 +250,7 @@ export const navigation: NavSection[] = [
           { title: "Design Tokens", href: "/tokens" },
           { title: "Token Export", href: "/tokens/export" },
           { title: "Theme Customizer", href: "/tools/theme-customizer" },
+          { title: "ESLint Plugin", href: "/tools/eslint-plugin", isNew: true },
         ],
       },
     ],

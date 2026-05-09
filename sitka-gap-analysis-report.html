@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sitka Design System — Gap Analysis & Implementation Strategy</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --brand: #34a865;
+    --brand-dark: #1f7341;
+    --brand-light: #dcf5e7;
+    --accent: #8b6dff;
+    --accent-light: #f0edff;
+    --neutral-50: #fafafa;
+    --neutral-100: #f5f5f5;
+    --neutral-200: #e5e5e5;
+    --neutral-300: #d4d4d4;
+    --neutral-500: #747474;
+    --neutral-600: #525252;
+    --neutral-700: #404040;
+    --neutral-900: #171717;
+    --warning: #f59e0b;
+    --warning-light: #fffbeb;
+    --error: #ef4444;
+    --error-light: #fef2f2;
+    --success: #22c55e;
+    --success-light: #f0fdf4;
+    --info: #3b82f6;
+    --info-light: #eff6ff;
+  }
+
+  @page {
+    margin: 16mm 14mm;
+    size: A4;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: var(--neutral-700);
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 48pt;
+    page-break-after: always;
+    position: relative;
+    background: #fff;
+  }
+  .cover-stripe {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6pt;
+    background: linear-gradient(90deg, var(--brand) 0%, var(--accent) 100%);
+  }
+  .cover-logo {
+    font-size: 13pt;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--brand-dark);
+    margin-bottom: 40pt;
+  }
+  .cover-eyebrow {
+    font-size: 8.5pt;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin-bottom: 10pt;
+  }
+  .cover h1 {
+    font-size: 28pt;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--neutral-900);
+    line-height: 1.1;
+    margin-bottom: 16pt;
+    max-width: 480pt;
+  }
+  .cover-sub {
+    font-size: 12pt;
+    color: var(--neutral-500);
+    max-width: 400pt;
+    line-height: 1.5;
+    margin-bottom: 40pt;
+  }
+  .cover-meta {
+    display: flex;
+    gap: 32pt;
+  }
+  .cover-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2pt;
+  }
+  .cover-meta-label {
+    font-size: 7.5pt;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--neutral-500);
+  }
+  .cover-meta-value {
+    font-size: 9.5pt;
+    font-weight: 500;
+    color: var(--neutral-700);
+  }
+
+  /* ── LAYOUT ── */
+  .section {
+    margin-bottom: 28pt;
+    page-break-inside: avoid;
+  }
+  .section-break {
+    page-break-before: always;
+    padding-top: 4pt;
+  }
+
+  /* ── HEADINGS ── */
+  h2 {
+    font-size: 16pt;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--neutral-900);
+    margin-bottom: 4pt;
+    margin-top: 28pt;
+    padding-bottom: 6pt;
+    border-bottom: 1.5px solid var(--neutral-200);
+  }
+  h2:first-child { margin-top: 0; }
+
+  h3 {
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin-top: 18pt;
+    margin-bottom: 6pt;
+    letter-spacing: -0.01em;
+  }
+
+  h4 {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: var(--neutral-600);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 14pt;
+    margin-bottom: 4pt;
+  }
+
+  p {
+    margin-bottom: 8pt;
+    color: var(--neutral-700);
+  }
+
+  /* ── TABLES ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10pt 0 14pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+  }
+  thead tr {
+    background: var(--neutral-100);
+  }
+  th {
+    text-align: left;
+    padding: 6pt 9pt;
+    font-weight: 600;
+    color: var(--neutral-600);
+    font-size: 8.5pt;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-bottom: 1.5px solid var(--neutral-200);
+  }
+  td {
+    padding: 5.5pt 9pt;
+    border-bottom: 1px solid var(--neutral-100);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: transparent; }
+  td.check { text-align: center; color: var(--brand); font-weight: 700; }
+  td.dash  { text-align: center; color: var(--neutral-300); }
+
+  /* ── CALLOUT BOXES ── */
+  .callout {
+    border-radius: 6pt;
+    padding: 11pt 14pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+  }
+  .callout-info    { background: var(--info-light);    border-left: 3pt solid var(--info); }
+  .callout-success { background: var(--success-light); border-left: 3pt solid var(--success); }
+  .callout-warning { background: var(--warning-light); border-left: 3pt solid var(--warning); }
+  .callout-error   { background: var(--error-light);   border-left: 3pt solid var(--error); }
+  .callout-accent  { background: var(--accent-light);  border-left: 3pt solid var(--accent); }
+  .callout-brand   { background: var(--brand-light);   border-left: 3pt solid var(--brand); }
+  .callout strong  { font-weight: 700; display: block; margin-bottom: 2pt; font-size: 9.5pt; }
+
+  /* ── PRIORITY CARDS ── */
+  .priority-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10pt;
+    margin: 10pt 0;
+  }
+  .priority-card {
+    border: 1.5px solid var(--neutral-200);
+    border-radius: 8pt;
+    padding: 12pt 14pt;
+    page-break-inside: avoid;
+  }
+  .priority-card .badge {
+    display: inline-block;
+    padding: 2pt 7pt;
+    border-radius: 99pt;
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 7pt;
+  }
+  .badge-p0 { background: #fef2f2; color: #b91c1c; }
+  .badge-p1 { background: #fff7ed; color: #c2410c; }
+  .badge-p2 { background: #fffbeb; color: #b45309; }
+  .badge-p3 { background: var(--accent-light); color: #6d28d9; }
+  .priority-card h3 { margin-top: 0; font-size: 10pt; }
+  .priority-card ul { padding-left: 12pt; margin: 0; }
+  .priority-card li { font-size: 9pt; line-height: 1.55; margin-bottom: 2pt; }
+
+  /* ── LISTS ── */
+  ul, ol {
+    padding-left: 14pt;
+    margin-bottom: 8pt;
+  }
+  li {
+    margin-bottom: 3pt;
+    line-height: 1.55;
+  }
+
+  /* ── PHASE TIMELINE ── */
+  .timeline {
+    margin: 14pt 0;
+  }
+  .phase {
+    display: flex;
+    gap: 14pt;
+    margin-bottom: 18pt;
+    page-break-inside: avoid;
+  }
+  .phase-marker {
+    flex-shrink: 0;
+    width: 36pt;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .phase-dot {
+    width: 28pt;
+    height: 28pt;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 10pt;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .phase-dot-p0 { background: var(--error); }
+  .phase-dot-p1 { background: var(--warning); }
+  .phase-dot-p2 { background: var(--brand); }
+  .phase-dot-p3 { background: var(--accent); }
+  .phase-line {
+    width: 1.5px;
+    background: var(--neutral-200);
+    flex: 1;
+    min-height: 12pt;
+    margin-top: 3pt;
+  }
+  .phase-content { flex: 1; padding-top: 4pt; }
+  .phase-title {
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin-bottom: 2pt;
+  }
+  .phase-duration {
+    font-size: 8.5pt;
+    color: var(--neutral-500);
+    font-weight: 500;
+    margin-bottom: 8pt;
+  }
+
+  /* ── CATEGORY LABELS ── */
+  .cat {
+    display: inline-block;
+    padding: 1.5pt 6pt;
+    border-radius: 4pt;
+    font-size: 7.5pt;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-right: 4pt;
+    vertical-align: middle;
+  }
+  .cat-component { background: #eff6ff; color: #1e40af; }
+  .cat-token     { background: var(--accent-light); color: #5b21b6; }
+  .cat-foundation{ background: var(--brand-light);  color: var(--brand-dark); }
+  .cat-platform  { background: #fff7ed; color: #9a3412; }
+  .cat-tooling   { background: var(--neutral-100);  color: var(--neutral-600); }
+
+  /* ── EFFORT MATRIX ── */
+  .matrix-high   { color: var(--error);   font-weight: 600; }
+  .matrix-medium { color: var(--warning); font-weight: 600; }
+  .matrix-low    { color: var(--success); font-weight: 600; }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 40pt;
+    padding-top: 12pt;
+    border-top: 1px solid var(--neutral-200);
+    font-size: 8pt;
+    color: var(--neutral-300);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ── CODE ── */
+  code {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 8.5pt;
+    background: var(--neutral-100);
+    padding: 1pt 4pt;
+    border-radius: 3pt;
+    color: var(--neutral-700);
+  }
+
+  /* ── STRONG HIGHLIGHT ── */
+  strong { color: var(--neutral-900); }
+
+  .toc { margin: 14pt 0 20pt 0; }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    gap: 4pt;
+    margin-bottom: 5pt;
+  }
+  .toc-num  { font-size: 8.5pt; font-weight: 700; color: var(--brand); min-width: 18pt; }
+  .toc-title { font-size: 9.5pt; color: var(--neutral-700); }
+  .toc-dots {
+    flex: 1;
+    border-bottom: 1px dotted var(--neutral-300);
+    margin-bottom: 2pt;
+  }
+  .toc-page { font-size: 8.5pt; color: var(--neutral-500); }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16pt;
+  }
+
+  .strength-box {
+    background: var(--brand-light);
+    border: 1.5px solid #b9eace;
+    border-radius: 8pt;
+    padding: 12pt 14pt;
+    margin-bottom: 10pt;
+  }
+  .strength-box h4 { color: var(--brand-dark); margin-top: 0; }
+  .strength-box ul { margin: 0; }
+  .strength-box li { font-size: 9pt; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     COVER
+══════════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-stripe"></div>
+  <div class="cover-logo">◈ Sitka</div>
+  <div class="cover-eyebrow">Design System Report</div>
+  <h1>Gap Analysis &amp; Implementation Strategy</h1>
+  <p class="cover-sub">A benchmark of Sitka against Shopify Polaris, Salesforce Lightning, Apple HIG, and shadcn/ui — with a phased roadmap to modern multi-platform parity.</p>
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <span class="cover-meta-label">Version</span>
+      <span class="cover-meta-value">Sitka 1.1.0</span>
+    </div>
+    <div class="cover-meta-item">
+      <span class="cover-meta-label">Date</span>
+      <span class="cover-meta-value">May 2026</span>
+    </div>
+    <div class="cover-meta-item">
+      <span class="cover-meta-label">Benchmarked Against</span>
+      <span class="cover-meta-value">Polaris · Lightning · Apple HIG · shadcn</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     TABLE OF CONTENTS
+══════════════════════════════════════════════════════ -->
+<div class="section">
+  <h2>Contents</h2>
+  <div class="toc">
+    <div class="toc-item"><span class="toc-num">1</span><span class="toc-title">Executive Summary</span><span class="toc-dots"></span></div>
+    <div class="toc-item"><span class="toc-num">2</span><span class="toc-title">Where Sitka Already Leads</span><span class="toc-dots"></span></div>
+    <div class="toc-item"><span class="toc-num">3</span><span class="toc-title">Component Gaps</span><span class="toc-dots"></span></div>
+    <div class="toc-item"><span class="toc-num">4</span><span class="toc-title">Token System Gaps</span><span class="toc-dots"></span></div>
+    <div class="toc-item"><span class="toc-num">5</span><span class="toc-title">Foundation Gaps</span><span class="toc-dots"></span></div>
+    <div class="toc-item"><span class="toc-num">6</span><span class="toc-title">Platform Gaps</span><span class="toc-dots"></span></div>
+    <div class="toc-item"><span class="toc-num">7</span><span class="toc-title">Pattern Gaps</span><span class="toc-dots"></span></div>
+    <div class="toc-item"><span class="toc-num">8</span><span class="toc-title">Tooling &amp; Governance Gaps</span><span class="toc-dots"></span></div>
+    <div class="toc-item"><span class="toc-num">9</span><span class="toc-title">Implementation Strategy</span><span class="toc-dots"></span></div>
+    <div class="toc-item"><span class="toc-num">10</span><span class="toc-title">Master Backlog</span><span class="toc-dots"></span></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     1. EXECUTIVE SUMMARY
+══════════════════════════════════════════════════════ -->
+<div class="section section-break">
+  <h2>1. Executive Summary</h2>
+
+  <p>Sitka 1.1.0 is a well-structured, aesthetically distinctive design system with strong multi-platform ambitions. It documents 33 components, 20+ patterns, and is deployed as a Next.js 15 documentation site with React and SwiftUI code samples.</p>
+
+  <p>Benchmarked against the four most influential design systems of 2026 — <strong>Shopify Polaris</strong>, <strong>Salesforce Lightning DS 2</strong>, <strong>Apple Human Interface Guidelines</strong>, and <strong>shadcn/ui</strong> — Sitka has meaningful strengths and material gaps across six dimensions:</p>
+
+  <table>
+    <thead><tr><th>Dimension</th><th>Current State</th><th>Gap Severity</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Component breadth</strong></td><td>33 components documented; ~8 exist in code but are undocumented</td><td class="matrix-medium">Medium</td></tr>
+      <tr><td><strong>Token system</strong></td><td>W3C DTCG format used but only primitives are in <code>tokens.json</code>; semantic tokens live only in CSS comments</td><td class="matrix-high">High</td></tr>
+      <tr><td><strong>Foundations</strong></td><td>Strong visual coverage; missing layout grid, RTL, density, deep accessibility specs</td><td class="matrix-high">High</td></tr>
+      <tr><td><strong>Platform coverage</strong></td><td>Web + iOS/macOS — no Android, no watchOS/visionOS</td><td class="matrix-medium">Medium</td></tr>
+      <tr><td><strong>Patterns</strong></td><td>Rich data patterns; missing wizard, activity feed, chat/AI conversation</td><td class="matrix-low">Low–Medium</td></tr>
+      <tr><td><strong>Tooling &amp; governance</strong></td><td>No Storybook, no npm package, no lifecycle taxonomy, Figma library disabled</td><td class="matrix-high">High</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-brand">
+    <strong>Key Finding</strong>
+    The single highest-leverage action is fixing the P0 items: documenting 8 components that already exist in code, and moving all semantic tokens into <code>tokens.json</code>. These require no new design work — only documentation — yet they close the most visible gaps against every reference system.
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     2. WHERE SITKA LEADS
+══════════════════════════════════════════════════════ -->
+<div class="section">
+  <h2>2. Where Sitka Already Leads</h2>
+  <p>Before enumerating gaps, it is worth noting the areas where Sitka is ahead of all four reference systems:</p>
+
+  <div class="two-col">
+    <div class="strength-box">
+      <h4>Liquid Glass Aesthetic</h4>
+      <ul>
+        <li>Formalized glass surface tokens with blur, specular, and dimensional shadow layers</li>
+        <li>Spring-first motion system aligned to Apple's 2025 Liquid Glass language</li>
+        <li>Specular highlights, sheet entry animations documented as tokens</li>
+      </ul>
+    </div>
+    <div class="strength-box">
+      <h4>AI Agent Standards</h4>
+      <ul>
+        <li>Dedicated foundations page for AI UI patterns — no other reference DS has this</li>
+        <li>Early-mover position on a category that will define the next decade of UI</li>
+      </ul>
+    </div>
+    <div class="strength-box">
+      <h4>Multi-Platform Code Samples</h4>
+      <ul>
+        <li>Every component ships React, HTML, and SwiftUI samples</li>
+        <li>iOS and macOS SwiftUI libraries documented</li>
+        <li>W3C DTCG token format with Swift export</li>
+      </ul>
+    </div>
+    <div class="strength-box">
+      <h4>Rich Patterns Library</h4>
+      <ul>
+        <li>Kanban, Gantt, Analytics Dashboard, Burn Trajectory, Team Capacity — production-grade patterns rare in any DS</li>
+        <li>Collaboration, Media Player, Goal/Streak patterns go beyond table-stakes coverage</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     3. COMPONENT GAPS
+══════════════════════════════════════════════════════ -->
+<div class="section section-break">
+  <h2>3. Component Gaps</h2>
+
+  <h3>3.1 Undocumented Components (Quick Wins)</h3>
+  <p>These components already exist as <code>.tsx</code> files in <code>/src/components/ui/</code> but have no documentation page and are absent from navigation. Zero design work required — documentation only.</p>
+
+  <table>
+    <thead><tr><th>Component</th><th>File</th><th>Effort</th><th>In shadcn</th><th>In Polaris</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Tabs</strong></td><td><code>Tabs.tsx</code></td><td class="matrix-low">Low</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Select</strong></td><td><code>Select.tsx</code></td><td class="matrix-low">Low</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Checkbox</strong></td><td><code>Checkbox.tsx</code></td><td class="matrix-low">Low</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Radio</strong></td><td><code>Radio.tsx</code></td><td class="matrix-low">Low</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Switch</strong></td><td><code>Switch.tsx</code></td><td class="matrix-low">Low</td><td class="check">✓</td><td class="dash">—</td></tr>
+      <tr><td><strong>Command Palette</strong></td><td><code>CommandPalette.tsx</code></td><td class="matrix-low">Low</td><td class="check">✓</td><td class="dash">—</td></tr>
+      <tr><td><strong>Toast</strong></td><td><code>Toast.tsx</code></td><td class="matrix-low">Low</td><td class="check">✓</td><td class="dash">deprecated</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-warning">
+    <strong>Note on Form Controls</strong>
+    Checkbox, Radio, and Switch are currently buried inside the Form Controls page. All three reference systems document them as independent components with full props tables, ARIA specs, and code samples. They warrant standalone pages.
+  </div>
+
+  <h3>3.2 Missing Components — Universal (all 4 reference systems have these)</h3>
+  <table>
+    <thead><tr><th>Component</th><th>Why It Matters</th><th>Polaris</th><th>shadcn</th><th>Lightning</th><th>Apple</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Accordion / Collapsible</strong></td><td>Universal disclosure pattern for FAQs, settings, nested content</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Alert / Banner (persistent)</strong></td><td>Page-level feedback — distinct from transient Snackbar/Toast</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Pagination</strong></td><td>Required by every table-driven screen</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Textarea</strong></td><td>Multi-line text input; missing from component docs entirely</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Spinner</strong></td><td>Inline/button-level loading indicator separate from Skeleton</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+    </tbody>
+  </table>
+
+  <h3>3.3 Missing Components — High Priority (2–3 reference systems)</h3>
+  <table>
+    <thead><tr><th>Component</th><th>Category</th><th>Polaris</th><th>shadcn</th><th>Lightning</th><th>Apple</th></tr></thead>
+    <tbody>
+      <tr><td><strong>File Upload / Drop Zone</strong></td><td>Input</td><td class="check">✓</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Drawer (horizontal slide-in)</strong></td><td>Overlay</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Navigation Menu (mega/tree)</strong></td><td>Navigation</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Sidebar (documented component)</strong></td><td>Navigation</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Toggle / Toggle Group</strong></td><td>Input</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Menubar (desktop)</strong></td><td>Navigation</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Divider / Separator</strong></td><td>Layout</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="dash">—</td></tr>
+      <tr><td><strong>Label (standalone)</strong></td><td>Input</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="dash">—</td></tr>
+      <tr><td><strong>Tag (multi-value chip)</strong></td><td>Display</td><td class="check">✓</td><td class="dash">—</td><td class="check">✓</td><td class="dash">—</td></tr>
+      <tr><td><strong>Hover Card</strong></td><td>Overlay</td><td class="dash">—</td><td class="check">✓</td><td class="dash">—</td><td class="check">✓</td></tr>
+      <tr><td><strong>Input OTP / PIN</strong></td><td>Input</td><td class="dash">—</td><td class="check">✓</td><td class="dash">—</td><td class="check">✓</td></tr>
+      <tr><td><strong>Resizable Panels</strong></td><td>Layout</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td><strong>Kbd (keyboard key display)</strong></td><td>Display</td><td class="check">✓</td><td class="check">✓</td><td class="dash">—</td><td class="dash">—</td></tr>
+      <tr><td><strong>Data Grid (advanced table)</strong></td><td>Display</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="dash">—</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     4. TOKEN SYSTEM GAPS
+══════════════════════════════════════════════════════ -->
+<div class="section section-break">
+  <h2>4. Token System Gaps</h2>
+
+  <p>Sitka's <code>tokens.json</code> uses the W3C DTCG format but currently only contains <strong>color primitives</strong>, <strong>spacing</strong>, and <strong>typography</strong>. All semantic tokens — the values actually consumed in components — exist only as CSS custom property conventions in <code>SITKA_CONTEXT.md</code> and are not formally published in the token file.</p>
+
+  <div class="callout callout-error">
+    <strong>Critical Impact</strong>
+    The Token Export feature (<code>/tokens/export</code>) and the Swift token generation can only export what is in <code>tokens.json</code>. Until semantic tokens are added, the export pipeline is incomplete and Figma/Android sync cannot be fully automated.
+  </div>
+
+  <h3>4.1 Missing Token Categories</h3>
+  <table>
+    <thead><tr><th>Category</th><th>Examples</th><th>Present in tokens.json</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Semantic colors</strong></td><td><code>--background</code>, <code>--surface</code>, <code>--surface-raised</code>, <code>--border</code>, <code>--text-primary</code>, <code>--accent</code></td><td class="matrix-high">No</td></tr>
+      <tr><td><strong>Motion / Duration</strong></td><td><code>--duration-fast: 150ms</code>, <code>--duration-base: 250ms</code>, <code>--duration-slow: 400ms</code></td><td class="matrix-high">No</td></tr>
+      <tr><td><strong>Motion / Easing</strong></td><td><code>--ease-spring</code>, <code>--ease-out</code>, <code>--ease-in-out</code></td><td class="matrix-high">No</td></tr>
+      <tr><td><strong>Shadow</strong></td><td><code>--shadow-card</code>, <code>--shadow-card-lifted</code>, <code>--shadow-sheet</code></td><td class="matrix-high">No</td></tr>
+      <tr><td><strong>Border radius</strong></td><td><code>--radius-sm</code>, <code>--radius-md</code>, <code>--radius-lg</code>, <code>--radius-pill</code></td><td class="matrix-high">No</td></tr>
+      <tr><td><strong>Z-index / Layer</strong></td><td><code>--z-dropdown: 100</code>, <code>--z-modal: 300</code>, <code>--z-toast: 400</code></td><td class="matrix-high">No</td></tr>
+      <tr><td><strong>Opacity</strong></td><td><code>--opacity-disabled: 0.38</code>, <code>--opacity-overlay: 0.5</code></td><td class="matrix-high">No</td></tr>
+      <tr><td><strong>Glass / Blur</strong></td><td><code>--glass-blur: 20px</code>, <code>--glass-saturation: 180%</code>, <code>--glass-bg</code></td><td class="matrix-high">No</td></tr>
+      <tr><td><strong>Typography (display)</strong></td><td><code>--text-display: 24px bold</code>, <code>--text-micro: 10px</code>, <code>--text-nano: 9px</code></td><td class="matrix-medium">Partial</td></tr>
+    </tbody>
+  </table>
+
+  <h3>4.2 Recommended Token File Structure</h3>
+  <p>The W3C DTCG format supports composite types and aliases. The full token hierarchy should be:</p>
+
+  <table>
+    <thead><tr><th>Layer</th><th>Purpose</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Primitive</strong></td><td>Raw values — color, size, time</td><td><code>color.brand.500 = #34a865</code></td></tr>
+      <tr><td><strong>Semantic</strong></td><td>Intent aliases referencing primitives</td><td><code>color.surface = {color.neutral.50}</code></td></tr>
+      <tr><td><strong>Component</strong></td><td>Component-scoped overrides</td><td><code>button.primary.bg = {color.accent}</code></td></tr>
+    </tbody>
+  </table>
+  <p>Currently only the Primitive layer is populated. All three layers should be present for complete Figma sync and multi-platform export.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     5. FOUNDATION GAPS
+══════════════════════════════════════════════════════ -->
+<div class="section section-break">
+  <h2>5. Foundation Gaps</h2>
+
+  <h3>5.1 Layout System</h3>
+  <p>This is the most significant structural gap. Every reference system has a documented layout/grid system; Sitka has a Desktop Layout page but no formal column grid, no responsive breakpoints as tokens, and no layout primitive components.</p>
+
+  <table>
+    <thead><tr><th>What's Missing</th><th>Polaris Equivalent</th><th>shadcn Equivalent</th></tr></thead>
+    <tbody>
+      <tr><td>12-column responsive grid</td><td>Grid, Inline Grid</td><td>Tailwind grid utilities</td></tr>
+      <tr><td>Stack layout components</td><td>Block Stack, Inline Stack</td><td>—</td></tr>
+      <tr><td>Box (layout container)</td><td>Box, Bleed</td><td>—</td></tr>
+      <tr><td>Breakpoint tokens (sm/md/lg/xl)</td><td>Documented as px values</td><td>Tailwind default scale</td></tr>
+      <tr><td>Page layout template</td><td>Page, Layout</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h3>5.2 Accessibility Depth</h3>
+  <p>Sitka has an Accessibility page and a Contrast page, but lacks the per-component accessibility specification that separates a documentation-level DS from a production-grade one.</p>
+  <ul>
+    <li><strong>ARIA roles per component</strong> — What role, aria-label, aria-expanded, aria-controls does each component expose?</li>
+    <li><strong>Keyboard navigation model</strong> — Tab order, arrow key navigation in complex widgets (combobox, data grid, tree), focus trapping in modals</li>
+    <li><strong>Focus management patterns</strong> — Focus restoration, skip links, programmatic focus</li>
+    <li><strong>Forced colors / Windows High Contrast</strong> — <code>@media (forced-colors: active)</code> guidance</li>
+    <li><strong>Reduced motion</strong> — Documented but not applied systematically to each animated component</li>
+    <li><strong>Screen reader test checklists</strong> — VoiceOver (macOS/iOS), NVDA/JAWS (Windows)</li>
+  </ul>
+
+  <h3>5.3 Internationalisation</h3>
+  <div class="callout callout-warning">
+    <strong>RTL Support — Complete Absence</strong>
+    Sitka has no right-to-left documentation, no bidirectionality guidance, and no CSS logical properties guidance. This is a hard blocker for Arabic, Hebrew, Farsi, and Urdu markets. Polaris and Lightning both have explicit RTL support. This is a one-time investment with high market reach impact.
+  </div>
+  <ul>
+    <li>No locale-aware date/number/currency formatting guidance</li>
+    <li>No text expansion allowance guidance (German text is ~35% longer than English)</li>
+    <li>No pluralisation rules documentation</li>
+  </ul>
+
+  <h3>5.4 Density System</h3>
+  <p>No compact / comfortable / spacious mode. Lightning DS has density variants throughout. This is a hard blocker for enterprise data-dense products — tables, forms, and lists all need density control. Recommended tokens:</p>
+  <ul>
+    <li><code>--density-compact</code> — reduces padding by ~25%, line-height to 1.3</li>
+    <li><code>--density-default</code> — current Sitka baseline</li>
+    <li><code>--density-comfortable</code> — increases padding by ~30%, line-height to 1.8</li>
+  </ul>
+
+  <h3>5.5 Touch &amp; Gesture Guidelines</h3>
+  <p>Apple HIG is the gold standard here. Sitka's Interaction page covers hover and focus states but is missing:</p>
+  <ul>
+    <li>Gesture reference (tap, double-tap, long press, swipe, pinch, pan, rotate)</li>
+    <li>Touch target minimum sizes — Apple requires 44×44pt; not documented in Sitka</li>
+    <li>Haptic feedback taxonomy (impact, notification, selection feedback)</li>
+    <li>Pointer type differentiation (mouse vs. touch vs. stylus)</li>
+    <li>Scroll momentum and rubber-band behavior guidelines</li>
+  </ul>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     6. PLATFORM GAPS
+══════════════════════════════════════════════════════ -->
+<div class="section section-break">
+  <h2>6. Platform Gaps</h2>
+
+  <table>
+    <thead><tr><th>Platform</th><th>Current Status</th><th>Priority</th><th>Effort</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Web (React)</strong></td><td>Full coverage — Next.js + Vite libraries</td><td>—</td><td>—</td></tr>
+      <tr><td><strong>iOS (SwiftUI)</strong></td><td>Full code samples, dedicated library page</td><td>—</td><td>—</td></tr>
+      <tr><td><strong>macOS (SwiftUI)</strong></td><td>Full code samples, dedicated library page</td><td>—</td><td>—</td></tr>
+      <tr><td><strong>Android (Jetpack Compose)</strong></td><td>Not present</td><td class="matrix-medium">Medium</td><td class="matrix-high">High</td></tr>
+      <tr><td><strong>React Native</strong></td><td>Not present — would bridge web + mobile</td><td class="matrix-medium">Medium</td><td class="matrix-medium">Medium</td></tr>
+      <tr><td><strong>watchOS</strong></td><td>Not present</td><td class="matrix-low">Low</td><td class="matrix-medium">Medium</td></tr>
+      <tr><td><strong>visionOS</strong></td><td>Not present — yet Sitka's Liquid Glass aesthetic aligns perfectly</td><td class="matrix-medium">Medium</td><td class="matrix-medium">Medium</td></tr>
+      <tr><td><strong>tvOS</strong></td><td>Not present</td><td class="matrix-low">Low</td><td class="matrix-low">Low</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-accent">
+    <strong>visionOS Opportunity</strong>
+    Sitka's Liquid Glass language is already the closest any independent design system gets to Apple's visionOS aesthetic. Adding a visionOS foundations page — covering depth, materials, ornaments, and window chrome — would be a genuine first-mover differentiator requiring relatively little new design work given existing glass foundations.
+  </div>
+
+  <h3>Distribution Gap</h3>
+  <p>Sitka is currently a documentation site only. There is no <code>npm install @sitka/ui</code>. Engineers must manually copy component code. The reference systems all have a distribution story:</p>
+  <ul>
+    <li><strong>Polaris</strong> — <code>npm install @shopify/polaris</code></li>
+    <li><strong>Lightning</strong> — <code>npm install @salesforce-ux/design-system</code></li>
+    <li><strong>shadcn</strong> — CLI-based copy-paste (<code>npx shadcn@latest add button</code>)</li>
+  </ul>
+  <p>A shadcn-style CLI is the lowest-effort distribution path: <code>npx sitka@latest add button</code> copies a component file into the user's project. This preserves the documentation-first model while giving engineers a repeatable install story.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     7. PATTERN GAPS
+══════════════════════════════════════════════════════ -->
+<div class="section section-break">
+  <h2>7. Pattern Gaps</h2>
+
+  <h3>7.1 Missing High-Value Patterns</h3>
+  <table>
+    <thead><tr><th>Pattern</th><th>Reference</th><th>Priority</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Multi-step Wizard / Stepper</strong></td><td>Polaris, Lightning</td><td class="matrix-high">High</td></tr>
+      <tr><td><strong>Virtual / Infinite Scroll</strong></td><td>Polaris, shadcn</td><td class="matrix-high">High</td></tr>
+      <tr><td><strong>Multi-select + Bulk Actions</strong></td><td>Polaris, Lightning</td><td class="matrix-high">High</td></tr>
+      <tr><td><strong>Activity Feed / Timeline</strong></td><td>Lightning (Activity Timeline)</td><td class="matrix-medium">Medium</td></tr>
+      <tr><td><strong>Chat / Messaging UI</strong></td><td>Industry standard</td><td class="matrix-medium">Medium</td></tr>
+      <tr><td><strong>Search Results Page</strong></td><td>Polaris</td><td class="matrix-medium">Medium</td></tr>
+      <tr><td><strong>Inline Editing</strong></td><td>Lightning</td><td class="matrix-medium">Medium</td></tr>
+      <tr><td><strong>Pricing / Feature Comparison Table</strong></td><td>Common SaaS pattern</td><td class="matrix-medium">Medium</td></tr>
+      <tr><td><strong>Optimistic UI</strong></td><td>Modern web best practice</td><td class="matrix-medium">Medium</td></tr>
+      <tr><td><strong>Real-time / Live Data Indicators</strong></td><td>—</td><td class="matrix-low">Low</td></tr>
+      <tr><td><strong>Offline / Sync States</strong></td><td>—</td><td class="matrix-low">Low</td></tr>
+      <tr><td><strong>Onboarding Checklist</strong></td><td>Common SaaS pattern</td><td class="matrix-low">Low</td></tr>
+    </tbody>
+  </table>
+
+  <h3>7.2 AI Patterns — Extend the Head Start</h3>
+  <p>Sitka's AI Agent Standards foundation is ahead of all four reference systems. These additions would extend that lead:</p>
+  <ul>
+    <li><strong>Streaming / typewriter text</strong> — animation token (<code>--motion-stream-cursor</code>) + React component for progressive text reveal</li>
+    <li><strong>AI chat conversation layout</strong> — user message / assistant message / system message differentiation; threading; reaction affordances</li>
+    <li><strong>AI-generated content labeling</strong> — Badge variant (<code>variant="ai"</code>) for content provenance disclosure</li>
+    <li><strong>Confidence / uncertainty indicator</strong> — Visual treatment for probabilistic outputs</li>
+    <li><strong>Prompt input component</strong> — Multi-line input with submit-on-Enter, auto-height expansion, attachment affordance</li>
+  </ul>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     8. TOOLING & GOVERNANCE
+══════════════════════════════════════════════════════ -->
+<div class="section section-break">
+  <h2>8. Tooling &amp; Governance Gaps</h2>
+
+  <table>
+    <thead><tr><th>Gap</th><th>Impact</th><th>Reference</th></tr></thead>
+    <tbody>
+      <tr><td><strong>No Storybook</strong></td><td>Engineers cannot develop/test components in isolation</td><td>Polaris, Lightning, shadcn all use Storybook</td></tr>
+      <tr><td><strong>No component lifecycle taxonomy</strong></td><td><code>badge: "New"</code> is the only status; no Alpha/Beta/Stable/Deprecated with migration guides</td><td>Polaris, Lightning</td></tr>
+      <tr><td><strong>Figma library disabled</strong></td><td><code>FEATURES.figmaLibrary: false</code> — designers cannot use Sitka components in Figma</td><td>All four reference systems have Figma kits</td></tr>
+      <tr><td><strong>No npm / CLI distribution</strong></td><td>No repeatable install story for engineers</td><td>Polaris, Lightning, shadcn</td></tr>
+      <tr><td><strong>No contributing guidelines</strong></td><td>External contributions have no process</td><td>All open-source DSes</td></tr>
+      <tr><td><strong>No browser support matrix</strong></td><td>Engineers don't know what browsers are supported</td><td>Polaris, Lightning</td></tr>
+      <tr><td><strong>No visual regression testing</strong></td><td>No protection against unintended visual changes</td><td>Polaris (Chromatic), Lightning</td></tr>
+      <tr><td><strong>No custom ESLint rules</strong></td><td>Nothing prevents hardcoded hex colors or non-token values in consuming projects</td><td>Lightning has ESLint rules</td></tr>
+      <tr><td><strong>No versioning / migration guides</strong></td><td>No documented upgrade path between versions</td><td>Polaris, shadcn</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     9. IMPLEMENTATION STRATEGY
+══════════════════════════════════════════════════════ -->
+<div class="section section-break">
+  <h2>9. Implementation Strategy</h2>
+
+  <p>The gaps above are prioritised into four phases based on two criteria: <strong>blocking potential</strong> (do consumers hit this immediately?) and <strong>effort-to-impact ratio</strong>. P0 items should be resolved before any marketing push; P3 items are differentiators that can be built incrementally.</p>
+
+  <div class="timeline">
+
+    <!-- P0 -->
+    <div class="phase">
+      <div class="phase-marker">
+        <div class="phase-dot phase-dot-p0">P0</div>
+        <div class="phase-line"></div>
+      </div>
+      <div class="phase-content">
+        <div class="phase-title">Correctness Sprint</div>
+        <div class="phase-duration">Estimated 2–3 weeks · Zero new design work</div>
+
+        <div class="callout callout-error" style="margin-bottom:10pt">
+          <strong>Goal: Nothing is broken or missing that already exists in the codebase</strong>
+          These are documentation-only tasks for code that already ships. The design system should not claim components that have no docs page.
+        </div>
+
+        <table>
+          <thead><tr><th>#</th><th>Task</th><th>Type</th><th>Effort</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Document <strong>Tabs</strong> as standalone component page</td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>2</td><td>Document <strong>Select</strong> as standalone component page</td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>3</td><td>Promote <strong>Checkbox, Radio, Switch</strong> from Form Controls to standalone pages</td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>4</td><td>Document <strong>Command Palette</strong> as a reusable component</td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>5</td><td>Add <strong>Textarea</strong> component + docs</td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>6</td><td>Move all semantic tokens into <code>tokens.json</code> — surface, text, border, accent, glass, z-index</td><td><span class="cat cat-token">Token</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>7</td><td>Add motion tokens to <code>tokens.json</code> — duration scale + easing curves</td><td><span class="cat cat-token">Token</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>8</td><td>Add shadow tokens to <code>tokens.json</code> — card, lifted, sheet, overlay</td><td><span class="cat cat-token">Token</span></td><td class="matrix-low">Low</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- P1 -->
+    <div class="phase">
+      <div class="phase-marker">
+        <div class="phase-dot phase-dot-p1">P1</div>
+        <div class="phase-line"></div>
+      </div>
+      <div class="phase-content">
+        <div class="phase-title">Completeness Sprint</div>
+        <div class="phase-duration">Estimated 4–6 weeks · Required for production-grade claim</div>
+
+        <div class="callout callout-warning" style="margin-bottom:10pt">
+          <strong>Goal: No component that every DS has is missing from Sitka</strong>
+          After this phase, Sitka can claim full component parity with shadcn/ui and Polaris on common elements.
+        </div>
+
+        <table>
+          <thead><tr><th>#</th><th>Task</th><th>Type</th><th>Effort</th></tr></thead>
+          <tbody>
+            <tr><td>9</td><td><strong>Alert / Banner</strong> — persistent page-level feedback (info/success/warning/error)</td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>10</td><td><strong>Accordion / Collapsible</strong></td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>11</td><td><strong>Pagination</strong></td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>12</td><td><strong>Spinner</strong> (standalone inline loader)</td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>13</td><td><strong>Divider / Separator</strong></td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>14</td><td><strong>Label</strong> (standalone form label)</td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>15</td><td><strong>Toggle / Toggle Group</strong></td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>16</td><td><strong>File Upload / Drop Zone</strong></td><td><span class="cat cat-component">Component</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>17</td><td><strong>Drawer</strong> (horizontal slide-in panel, distinct from Bottom Sheet)</td><td><span class="cat cat-component">Component</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>18</td><td><strong>Sidebar</strong> — document the docs-shell sidebar as a standalone component</td><td><span class="cat cat-component">Component</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>19</td><td>Add per-component <strong>ARIA role specifications</strong> to each existing component page</td><td><span class="cat cat-foundation">Foundation</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>20</td><td>Add <strong>keyboard navigation model</strong> to each interactive component</td><td><span class="cat cat-foundation">Foundation</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>21</td><td><strong>Multi-step Wizard</strong> pattern</td><td><span class="cat cat-foundation">Pattern</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>22</td><td>Enable <strong>Figma library</strong> (<code>FEATURES.figmaLibrary: true</code>) + publish Code Connect mappings</td><td><span class="cat cat-tooling">Tooling</span></td><td class="matrix-medium">Medium</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- P2 -->
+    <div class="phase">
+      <div class="phase-marker">
+        <div class="phase-dot phase-dot-p2">P2</div>
+        <div class="phase-line"></div>
+      </div>
+      <div class="phase-content">
+        <div class="phase-title">Competitive Parity Sprint</div>
+        <div class="phase-duration">Estimated 6–10 weeks · Required for enterprise adoption</div>
+
+        <div class="callout callout-success" style="margin-bottom:10pt">
+          <strong>Goal: Remove the blockers that prevent enterprise and international teams from adopting Sitka</strong>
+        </div>
+
+        <table>
+          <thead><tr><th>#</th><th>Task</th><th>Type</th><th>Effort</th></tr></thead>
+          <tbody>
+            <tr><td>23</td><td><strong>Density system</strong> — compact / comfortable modes via CSS custom property overrides</td><td><span class="cat cat-token">Token</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>24</td><td><strong>RTL / Internationalisation</strong> foundations page + CSS logical properties audit</td><td><span class="cat cat-foundation">Foundation</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>25</td><td><strong>Layout primitives</strong> — Box, Stack, Inline Stack components</td><td><span class="cat cat-component">Component</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>26</td><td><strong>Responsive grid system</strong> — breakpoint tokens + 12-column grid documentation</td><td><span class="cat cat-foundation">Foundation</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>27</td><td><strong>Navigation Menu</strong> (mega-nav / multi-level)</td><td><span class="cat cat-component">Component</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>28</td><td><strong>Menubar</strong> (desktop File/Edit/View style)</td><td><span class="cat cat-component">Component</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>29</td><td><strong>Data Grid</strong> — advanced table with sorting, filtering, virtual scroll</td><td><span class="cat cat-component">Component</span></td><td class="matrix-high">High</td></tr>
+            <tr><td>30</td><td><strong>Forced-colors / High Contrast</strong> support for all components</td><td><span class="cat cat-foundation">Foundation</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>31</td><td><strong>Storybook</strong> integration — stories for all existing components</td><td><span class="cat cat-tooling">Tooling</span></td><td class="matrix-high">High</td></tr>
+            <tr><td>32</td><td><strong>Component lifecycle taxonomy</strong> — Alpha / Beta / Stable / Deprecated badges + migration guides</td><td><span class="cat cat-tooling">Tooling</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>33</td><td><strong>CLI distribution</strong> — <code>npx sitka@latest add &lt;component&gt;</code> install story</td><td><span class="cat cat-tooling">Tooling</span></td><td class="matrix-high">High</td></tr>
+            <tr><td>34</td><td><strong>Activity Feed / Timeline</strong> pattern</td><td><span class="cat cat-foundation">Pattern</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>35</td><td><strong>Multi-select + Bulk Actions</strong> pattern</td><td><span class="cat cat-foundation">Pattern</span></td><td class="matrix-medium">Medium</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- P3 -->
+    <div class="phase">
+      <div class="phase-marker">
+        <div class="phase-dot phase-dot-p3">P3</div>
+      </div>
+      <div class="phase-content">
+        <div class="phase-title">Differentiation Sprint</div>
+        <div class="phase-duration">Ongoing · Builds unique competitive moat</div>
+
+        <div class="callout callout-accent" style="margin-bottom:10pt">
+          <strong>Goal: Make Sitka the reference design system for AI-native, glass-aesthetic, multi-platform products</strong>
+        </div>
+
+        <table>
+          <thead><tr><th>#</th><th>Task</th><th>Type</th><th>Effort</th></tr></thead>
+          <tbody>
+            <tr><td>36</td><td><strong>visionOS / Spatial Computing</strong> foundations — depth, materials, ornaments, window chrome</td><td><span class="cat cat-platform">Platform</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>37</td><td><strong>AI Chat conversation layout</strong> pattern</td><td><span class="cat cat-foundation">Pattern</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>38</td><td><strong>Streaming / typewriter text</strong> animation token + component</td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>39</td><td><strong>Prompt input</strong> component (multi-line, auto-expand, attachment-aware)</td><td><span class="cat cat-component">Component</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>40</td><td><strong>React Native</strong> library — bridges web and mobile with shared tokens</td><td><span class="cat cat-platform">Platform</span></td><td class="matrix-high">High</td></tr>
+            <tr><td>41</td><td><strong>Android / Jetpack Compose</strong> library</td><td><span class="cat cat-platform">Platform</span></td><td class="matrix-high">High</td></tr>
+            <tr><td>42</td><td><strong>Gesture reference</strong> — comprehensive iOS/macOS/web gesture documentation</td><td><span class="cat cat-foundation">Foundation</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>43</td><td><strong>Haptic feedback taxonomy</strong> (impact, notification, selection)</td><td><span class="cat cat-foundation">Foundation</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>44</td><td><strong>Pricing / Feature comparison</strong> pattern</td><td><span class="cat cat-foundation">Pattern</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>45</td><td><strong>Custom ESLint plugin</strong> — lint against hardcoded hex colors and non-token values</td><td><span class="cat cat-tooling">Tooling</span></td><td class="matrix-medium">Medium</td></tr>
+            <tr><td>46</td><td><strong>Input OTP / PIN</strong> component</td><td><span class="cat cat-component">Component</span></td><td class="matrix-low">Low</td></tr>
+            <tr><td>47</td><td><strong>Resizable panels</strong> component</td><td><span class="cat cat-component">Component</span></td><td class="matrix-medium">Medium</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- /timeline -->
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     10. MASTER BACKLOG
+══════════════════════════════════════════════════════ -->
+<div class="section section-break">
+  <h2>10. Master Backlog Summary</h2>
+
+  <div class="priority-grid">
+    <div class="priority-card">
+      <span class="badge badge-p0">P0 — Correctness</span>
+      <h3>8 items · 2–3 weeks</h3>
+      <ul>
+        <li>Document Tabs, Select, Checkbox, Radio, Switch, Command Palette</li>
+        <li>Add Textarea component</li>
+        <li>Move all semantic tokens into <code>tokens.json</code></li>
+        <li>Add motion / shadow / z-index tokens</li>
+      </ul>
+    </div>
+    <div class="priority-card">
+      <span class="badge badge-p1">P1 — Completeness</span>
+      <h3>14 items · 4–6 weeks</h3>
+      <ul>
+        <li>Alert/Banner, Accordion, Pagination, Spinner</li>
+        <li>Divider, Label, Toggle, File Upload, Drawer, Sidebar</li>
+        <li>Per-component ARIA + keyboard navigation specs</li>
+        <li>Multi-step Wizard pattern</li>
+        <li>Enable Figma library</li>
+      </ul>
+    </div>
+    <div class="priority-card">
+      <span class="badge badge-p2">P2 — Parity</span>
+      <h3>13 items · 6–10 weeks</h3>
+      <ul>
+        <li>Density system, RTL/i18n, layout primitives, grid</li>
+        <li>Navigation Menu, Menubar, Data Grid</li>
+        <li>Forced-colors support</li>
+        <li>Storybook, CLI distribution, lifecycle taxonomy</li>
+        <li>Activity Feed, Multi-select patterns</li>
+      </ul>
+    </div>
+    <div class="priority-card">
+      <span class="badge badge-p3">P3 — Differentiation</span>
+      <h3>12 items · Ongoing</h3>
+      <ul>
+        <li>visionOS foundations</li>
+        <li>AI chat layout + streaming text + prompt input</li>
+        <li>React Native + Android libraries</li>
+        <li>Gesture reference + haptics</li>
+        <li>ESLint plugin, OTP input, Resizable panels</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Effort vs Impact Matrix</h3>
+  <table>
+    <thead><tr><th>Priority</th><th>Items</th><th>Design Work</th><th>Engineering Work</th><th>Market Impact</th></tr></thead>
+    <tbody>
+      <tr><td><strong>P0</strong></td><td>8</td><td class="matrix-low">None</td><td class="matrix-low">Low</td><td class="matrix-high">High</td></tr>
+      <tr><td><strong>P1</strong></td><td>14</td><td class="matrix-low">Low–Medium</td><td class="matrix-medium">Medium</td><td class="matrix-high">High</td></tr>
+      <tr><td><strong>P2</strong></td><td>13</td><td class="matrix-medium">Medium</td><td class="matrix-high">High</td><td class="matrix-medium">Medium–High</td></tr>
+      <tr><td><strong>P3</strong></td><td>12</td><td class="matrix-medium">Medium</td><td class="matrix-high">High</td><td class="matrix-medium">Differentiating</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-brand">
+    <strong>Recommended Starting Point</strong>
+    Start with P0. All eight items can be completed in a single sprint with no new design decisions — they are documentation tasks for code that already exists. Completing P0 closes the most embarrassing gaps (undocumented existing components, incomplete token file) before any external sharing or marketing activity. P1 follows immediately after.
+  </div>
+
+  <div class="footer">
+    <span>Sitka Design System · Gap Analysis &amp; Implementation Strategy · v1.0</span>
+    <span>May 2026 · Benchmarked against Polaris 13, Lightning DS 2, Apple HIG 2026, shadcn/ui</span>
+  </div>
+</div>
+
+</body>
+</html>

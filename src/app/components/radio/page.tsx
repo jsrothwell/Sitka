@@ -191,7 +191,7 @@ export default function RadioPage() {
           Preview
         </h2>
         <ComponentPreview>
-          <RadioGroup label="Billing plan" defaultValue="monthly" name="billing-preview">
+           <RadioGroup label="Billing plan" value="monthly" name="billing-preview">
             <Radio value="monthly" label="Monthly" helperText="$12/month" />
             <Radio value="annual"  label="Annual"  helperText="$8/month, billed annually" />
             <Radio value="team"    label="Team"    helperText="$25/month per user" />
@@ -208,7 +208,7 @@ export default function RadioPage() {
           <RadioGroup
             label="Notification frequency"
             orientation="horizontal"
-            defaultValue="daily"
+            value="daily"
             name="freq-preview"
           >
             <Radio value="realtime" label="Real-time" />
@@ -226,7 +226,7 @@ export default function RadioPage() {
         <ComponentPreview>
           <div className="flex flex-col gap-6">
             {(["sm", "md", "lg"] as const).map((size) => (
-              <RadioGroup key={size} label={`Size: ${size}`} defaultValue="a" name={`size-${size}`} size={size}>
+              <RadioGroup key={size} label={`Size: ${size}`} value="a" name={`size-${size}`} size={size}>
                 <Radio value="a" label="Option A" />
                 <Radio value="b" label="Option B" />
               </RadioGroup>

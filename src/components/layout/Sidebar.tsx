@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronRight, Search, X } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -188,12 +189,6 @@ function NavLinkItem({ item, isActive }: { item: NavItem; isActive: boolean }) {
         )}
       </Link>
     </li>
-  );
-}
- {item.badge}
-          </span>
-        )}
-      </Link>
-    </li>
-  );
-}
+   );
+ }
+
