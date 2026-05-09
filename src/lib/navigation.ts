@@ -73,6 +73,21 @@ export const navigation: NavSection[] = [
           { title: "Empty States", href: "/foundations/empty-states" },
           { title: "Loading States", href: "/foundations/loading-states" },
           { title: "AI Agent Standards", href: "/foundations/ai-agents" },
+          { title: "Density System", href: "/foundations/density", badge: "New" },
+          { title: "Responsive Grid", href: "/foundations/grid", badge: "New" },
+        ],
+      },
+      {
+        title: "Internationalisation",
+        items: [
+          { title: "RTL & i18n", href: "/foundations/rtl", badge: "New" },
+        ],
+      },
+      {
+        title: "Accessibility",
+        items: [
+          { title: "Forced Colors", href: "/foundations/forced-colors", badge: "New" },
+          { title: "Component Lifecycle", href: "/foundations/lifecycle", badge: "New" },
         ],
       },
     ],
@@ -128,6 +143,8 @@ export const navigation: NavSection[] = [
         title: "Navigation",
         items: [
           { title: "Navigation", href: "/components/navigation" },
+          { title: "Navigation Menu", href: "/components/navigation-menu", badge: "New" },
+          { title: "Menubar", href: "/components/menubar", badge: "New" },
           { title: "Tabs", href: "/components/tabs" },
           { title: "Bottom Tab Bar", href: "/components/bottom-tab-bar" },
           { title: "Breadcrumb", href: "/components/breadcrumb" },
@@ -141,6 +158,7 @@ export const navigation: NavSection[] = [
           { title: "Badge", href: "/components/badge" },
           { title: "Avatar", href: "/components/avatar" },
           { title: "Table", href: "/components/table" },
+          { title: "Data Grid", href: "/components/data-grid", badge: "New" },
           { title: "Progress Bar", href: "/components/progress-bar", badge: "New" },
           { title: "KPI Tile", href: "/components/kpi-tile", badge: "New" },
           { title: "Gauge", href: "/components/gauge", badge: "New" },
@@ -153,6 +171,7 @@ export const navigation: NavSection[] = [
       {
         title: "Layout",
         items: [
+          { title: "Layout Primitives", href: "/components/layout-primitives", badge: "New" },
           { title: "Collapsible", href: "/components/collapsible", badge: "New" },
           { title: "Pagination", href: "/components/pagination", badge: "New" },
           { title: "Sidebar", href: "/components/sidebar", badge: "New" },
@@ -198,6 +217,8 @@ export const navigation: NavSection[] = [
       {
         title: "Workflow",
         items: [
+          { title: "Activity Feed", href: "/patterns/activity-feed", badge: "New" },
+          { title: "Multi-select & Bulk Actions", href: "/patterns/multi-select", badge: "New" },
           { title: "Data Entry", href: "/patterns/data-entry" },
           { title: "Drag and Drop", href: "/patterns/drag-drop" },
           { title: "Import / Export", href: "/patterns/import-export", badge: "New" },

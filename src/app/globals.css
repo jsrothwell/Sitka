@@ -67,6 +67,16 @@
 
   --sidebar-width: 280px;
   --header-height: 52px;
+
+  /* Density tokens — normal (default) */
+  --density-space-xs:  4px;
+  --density-space-sm:  8px;
+  --density-space-md: 12px;
+  --density-space-lg: 16px;
+  --density-space-xl: 24px;
+  --density-h-sm:     28px;
+  --density-h-md:     36px;
+  --density-h-lg:     44px;
 }
 
 /* ── Light mode override ─────────────────────────────── */
@@ -114,6 +124,29 @@
 
   /* Surface glass */
   --surface-glass: 255 255 255 / 0.7;
+}
+
+/* ── Density overrides ───────────────────────────────── */
+[data-density="compact"] {
+  --density-space-xs:  2px;
+  --density-space-sm:  6px;
+  --density-space-md:  8px;
+  --density-space-lg: 12px;
+  --density-space-xl: 16px;
+  --density-h-sm:     24px;
+  --density-h-md:     30px;
+  --density-h-lg:     36px;
+}
+
+[data-density="comfortable"] {
+  --density-space-xs:  6px;
+  --density-space-sm: 12px;
+  --density-space-md: 16px;
+  --density-space-lg: 20px;
+  --density-space-xl: 32px;
+  --density-h-sm:     32px;
+  --density-h-md:     40px;
+  --density-h-lg:     48px;
 }
 
 /* ── Reset ───────────────────────────────────────────── */

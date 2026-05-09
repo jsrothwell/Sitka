@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-05-08
+
+### Added
+
+#### New UI Components
+- **Layout Primitives** (`Box`, `Stack`, `Inline`) — polymorphic, composable flexbox wrappers with a gap scale.
+- **Navigation Menu** — horizontal nav with multi-column hover dropdowns, keyboard navigation, and ARIA `menubar` semantics.
+- **Menubar** — desktop-style File/Edit/View menu strip with action items, checkbox toggles, submenus, and separator support.
+- **Data Grid** — sortable, filterable table with row selection (indeterminate header checkbox), custom cell renderers, and client-side pagination.
+
+#### New Foundation Pages
+- **Density System** — compact / default / comfortable modes via CSS custom property overrides on `[data-density]`.
+- **Responsive Grid** — 12-column grid spec across 6 breakpoints (xs–2xl) with column/gutter/margin tables.
+- **RTL & Internationalisation** — logical property mapping, physical→logical migration guide, Tailwind v4 cheatsheet.
+- **Forced Colors & High Contrast** — Windows High Contrast Mode support, system color keyword reference, per-component rules.
+- **Component Lifecycle** — Alpha/Beta/Stable/Deprecated taxonomy, promotion criteria, changelog convention, semver policy.
+
+#### New Pattern Pages
+- **Activity Feed** — chronological timeline with type filter chips, connector-line layout, and unread indicators.
+- **Multi-select & Bulk Actions** — checkbox grid with indeterminate header, tinted selection rows, and contextual bulk toolbar.
+
+#### Infrastructure
+- **GitHub Actions CI/CD** — `.github/workflows/deploy.yml` builds the static export and deploys to GitHub Pages on every push to `main`.
+- **Static export** — `next.config.ts` configured with `output: 'export'`, conditional `basePath`, `trailingSlash`, and `images: { unoptimized: true }`.
+- **Storybook** — `.storybook/main.ts` + `preview.tsx` configured for Next.js; initial stories for Button, Input, Badge, Switch, Avatar.
+- **CLI scaffold** — `packages/cli` with `npx sitka@latest add <component>` command and a 20-component registry.
+
+#### Navigation
+- All new foundation, component, and pattern pages added to the sidebar with "New" badges.
+
 ## [1.2.0] - 2026-05-08
 
 ### Added
