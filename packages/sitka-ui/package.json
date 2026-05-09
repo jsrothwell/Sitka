@@ -11,8 +11,7 @@
     "components",
     "react"
   ],
-  "homepage": "https://jsrothwell.github.io/Sitka",
-  "repository": {
+"repository": {
     "type": "git",
     "url": "https://github.com/jsrothwell/Sitka.git",
     "directory": "packages/sitka-ui"

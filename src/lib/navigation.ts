@@ -122,6 +122,7 @@ export const navigation: NavSection[] = [
           { title: "Date Range Picker", href: "/components/date-range-picker" },
           { title: "File Upload", href: "/components/file-upload", badge: "New" },
           { title: "Label", href: "/components/label", badge: "New" },
+          { title: "Form Controls", href: "/components/form-controls" },
         ],
       },
       {

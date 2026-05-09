@@ -1,6 +1,6 @@
 # sitka-ui
 
-React component library for the [Sitka Design System](https://jsrothwell.github.io/Sitka).
+React component library for the Sitka Design System.
 
 ## Install
 
@@ -42,7 +42,7 @@ npx @sitka/cli add modal
 
 ## Documentation
 
-Full component docs at [jsrothwell.github.io/Sitka](https://jsrothwell.github.io/Sitka).
+Full component docs and guidelines are in the design system.
 
 ## License
 
