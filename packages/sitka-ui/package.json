@@ -1,0 +1,68 @@
+{
+  "name": "sitka-ui",
+  "version": "1.3.0",
+  "description": "Sitka Design System — React component library",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "sitka",
+    "design-system",
+    "ui",
+    "components",
+    "react"
+  ],
+  "homepage": "https://jsrothwell.github.io/Sitka",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsrothwell/Sitka.git",
+    "directory": "packages/sitka-ui"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./tokens": {
+      "import": "./dist/tokens.js",
+      "require": "./dist/tokens.cjs",
+      "types": "./dist/tokens.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.0.0",
+    "lucide-react": "^1.0.0",
+    "tailwind-merge": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tsup": "^8.0.0",
+    "typescript": "^5"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
