@@ -1,5 +1,5 @@
 export const FEATURES = {
-  figmaLibrary: false,
+  figmaLibrary: true,
 };
 
 export interface NavItem {
@@ -83,6 +83,7 @@ export const navigation: NavSection[] = [
           { title: "Button", href: "/components/button", badge: "Gold Standard" },
           { title: "Split Button", href: "/components/split-button" },
           { title: "Segmented Button", href: "/components/segmented-button" },
+          { title: "Toggle", href: "/components/toggle", badge: "New" },
           { title: "Chip", href: "/components/chip" },
         ],
       },
@@ -90,11 +91,17 @@ export const navigation: NavSection[] = [
         title: "Inputs",
         items: [
           { title: "Input", href: "/components/input" },
-          { title: "Form Controls", href: "/components/form-controls" },
+          { title: "Textarea", href: "/components/textarea", badge: "New" },
+          { title: "Select", href: "/components/select" },
+          { title: "Checkbox", href: "/components/checkbox" },
+          { title: "Radio", href: "/components/radio" },
+          { title: "Switch", href: "/components/switch" },
           { title: "Slider", href: "/components/slider" },
           { title: "Combobox", href: "/components/combobox" },
           { title: "Date & Time Picker", href: "/components/date-time-pickers" },
           { title: "Date Range Picker", href: "/components/date-range-picker" },
+          { title: "File Upload", href: "/components/file-upload", badge: "New" },
+          { title: "Label", href: "/components/label", badge: "New" },
         ],
       },
       {
@@ -108,12 +115,15 @@ export const navigation: NavSection[] = [
           { title: "Bottom Sheet", href: "/components/bottom-sheet" },
           { title: "Context Menu", href: "/components/context-menu", badge: "New" },
           { title: "Feature Gate", href: "/components/feature-gate", badge: "New" },
+          { title: "Command Palette", href: "/components/command-palette", badge: "New" },
+          { title: "Drawer", href: "/components/drawer", badge: "New" },
         ],
       },
       {
         title: "Navigation",
         items: [
           { title: "Navigation", href: "/components/navigation" },
+          { title: "Tabs", href: "/components/tabs" },
           { title: "Bottom Tab Bar", href: "/components/bottom-tab-bar" },
           { title: "Breadcrumb", href: "/components/breadcrumb" },
           { title: "Carousel", href: "/components/carousel" },
@@ -131,6 +141,16 @@ export const navigation: NavSection[] = [
           { title: "Gauge", href: "/components/gauge", badge: "New" },
           { title: "Color Picker", href: "/components/color-picker", badge: "New" },
           { title: "Skeleton", href: "/components/skeleton", badge: "New" },
+          { title: "Spinner", href: "/components/spinner", badge: "New" },
+          { title: "Divider", href: "/components/divider", badge: "New" },
+        ],
+      },
+      {
+        title: "Layout",
+        items: [
+          { title: "Collapsible", href: "/components/collapsible", badge: "New" },
+          { title: "Pagination", href: "/components/pagination", badge: "New" },
+          { title: "Sidebar", href: "/components/sidebar", badge: "New" },
         ],
       },
     ],
@@ -147,6 +167,7 @@ export const navigation: NavSection[] = [
           { title: "Form Layout", href: "/forms/layout" },
           { title: "Form Validation", href: "/forms/validation" },
           { title: "Settings", href: "/patterns/settings" },
+          { title: "Wizard", href: "/patterns/wizard", badge: "New" },
         ],
       },
       {
