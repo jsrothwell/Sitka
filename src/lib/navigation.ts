@@ -246,6 +246,7 @@ export const navigation: NavSection[] = [
       { title: "Write clear interface copy", href: "/how-tos/write-for-interfaces" },
       { title: "Visualise data accessibly", href: "/how-tos/data-visualisation" },
       { title: "Design an onboarding flow", href: "/how-tos/onboarding-flow" },
+      { title: "Wire Sitka's ThemeManager in SwiftUI", href: "/how-tos/swift-theme-manager", isNew: true },
     ],
   },
   {

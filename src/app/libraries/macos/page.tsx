@@ -235,6 +235,32 @@ Button("Close") { closeWindow() }
           </div>
         </section>
 
+        {/* Environment propagation */}
+        <section>
+          <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3">Environment propagation for sheets</h2>
+          <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
+            On macOS, sheets presented from a <code className="font-mono text-[rgb(var(--accent))] text-[12px]">WindowGroup</code> do <strong className="text-[rgb(var(--text-primary))]">not</strong> inherit the parent view&apos;s environment. Every{" "}
+            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">.sheet()</code> modifier must explicitly re-inject all required environment objects — including{" "}
+            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">ThemeManager</code> — or theming will silently break inside sheets.
+          </p>
+          <CodeBlock
+            language="swift"
+            code={`// Correct — ThemeManager re-injected into the sheet
+.sheet(isPresented: $showSettings) {
+    SettingsView()
+        .environmentObject(themeManager)
+        .environmentObject(appSettings)
+}`}
+          />
+          <p className="text-[14px] text-[rgb(var(--text-secondary))] mt-4">
+            See the complete wiring guide for ThemeManager, adaptive tokens, and{" "}
+            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">effectiveAccent</code>:{" "}
+            <Link href="/how-tos/swift-theme-manager" className="text-[rgb(var(--accent))] underline underline-offset-2">
+              Wire Sitka&apos;s ThemeManager in SwiftUI →
+            </Link>
+          </p>
+        </section>
+
         {/* Requirements */}
         <section className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))] p-5">
           <h2 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-3">Requirements</h2>

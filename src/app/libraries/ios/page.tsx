@@ -211,6 +211,29 @@ Color("background")`}
           />
         </section>
 
+        {/* ThemeManager */}
+        <section>
+          <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3">ThemeManager</h2>
+          <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
+            For apps that let users switch between Sitka defaults and custom accent colors, Sitka provides a{" "}
+            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">ThemeManager</code> observable object. It drives the{" "}
+            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">effectiveAccent</code> pattern, root{" "}
+            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">.tint()</code> wiring, and view-tree rebuilds via{" "}
+            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">.id(themeManager.useSitkaDefaults)</code>.
+          </p>
+          <div className="rounded-xl border border-[rgb(var(--border-warning,var(--border)))] bg-[rgb(var(--surface-warning,var(--surface-raised)))] px-4 py-3 text-[13px] text-[rgb(var(--text-secondary))] mb-4">
+            <strong className="text-[rgb(var(--text-primary))]">Important:</strong>{" "}
+            Text and surface tokens must use adaptive system colors (<code className="font-mono text-[rgb(var(--accent))] text-[12px]">Color(.label)</code>,{" "}
+            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">Color(.systemBackground)</code>), not fixed hex values, to follow the system light/dark mode correctly.
+          </div>
+          <p className="text-[14px] text-[rgb(var(--text-secondary))]">
+            See the full implementation guide:{" "}
+            <Link href="/how-tos/swift-theme-manager" className="text-[rgb(var(--accent))] underline underline-offset-2">
+              Wire Sitka&apos;s ThemeManager in SwiftUI →
+            </Link>
+          </p>
+        </section>
+
         {/* Requirements */}
         <section className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))] p-5">
           <h2 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-3">Requirements</h2>
