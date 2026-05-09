@@ -34,11 +34,6 @@ jobs:
           GITHUB_ACTIONS: true
           NODE_OPTIONS: --max-old-space-size=4096
 
-      - name: Build Storybook
-        run: npm run build-storybook -- --output-dir out/storybook
-        env:
-          NODE_OPTIONS: --max-old-space-size=4096
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

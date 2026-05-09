@@ -6,19 +6,22 @@ export const metadata: Metadata = { title: "Changelog" };
 const RELEASES = [
   {
     version: "1.3.0",
-    date: "2026-05-08",
+    date: "2026-05-09",
     tag: "Latest",
-    summary: "New components, Storybook stories, expanded CLI registry, and the sitka-ui npm package.",
+    summary: "New components, expanded CLI registry, sitka-ui npm package, and Figma library documentation.",
     sections: [
       {
         label: "Added",
         items: [
-          "New UI Components: Box, Stack (layout primitives), Navigation Menu, Menubar, Data Grid",
-          "New Foundation Pages: Density System, Responsive Grid, RTL & i18n, Forced Colors, Component Lifecycle",
-          "New Patterns: Activity Feed, Multi-select & Bulk Actions",
-          "Storybook stories for all 35 components, including BottomSheet, Toast, PromptInput, ChatMessage, OTPInput, FileUpload, StreamingText, BottomTabBar, PricingTable, CodeBlock, Menubar, NavigationMenu",
+          "New Components: Box, Stack (layout primitives), Navigation Menu, Menubar, Data Grid",
+          "New Foundation Pages: Density System, Responsive Grid, RTL & i18n, Forced Colors, Component Lifecycle, Gestures, Haptics, Spatial Computing",
+          "New Patterns: Activity Feed, Multi-select & Bulk Actions, Kanban Board, Gantt / Timeline, Analytics Dashboard, Chat & Conversation",
+          "Figma library documentation — variables, Code Connect mappings, component reference, and workflow guide",
           "sitka-ui npm package — dual CJS/ESM build with full TypeScript types and a separate tokens entry point",
-          "CLI registry expanded from 21 to 35 components with aliases",
+          "CLI registry expanded to 35 components with aliases (npx @sitka/cli add <component>)",
+          "iOS SwiftUI ThemeManager how-to guide",
+          "macOS SwiftUI library guide",
+          "React Native and Android Compose library guides",
         ],
       },
     ],
@@ -31,10 +34,11 @@ const RELEASES = [
       {
         label: "Added",
         items: [
-          "New Components: Collapsible, Pagination, Spinner, Divider, Label, Toggle / Toggle Group, File Upload / Drop Zone, Drawer — each with full doc pages",
+          "New Components: Collapsible, Pagination, Spinner, Divider, Label, Toggle / Toggle Group, File Upload / Drop Zone, Drawer",
           "New Component Pages: Checkbox, Radio, Select, Switch, Tabs, Textarea, Command Palette, Sidebar",
           "New Pattern: Multi-step Wizard with step indicator and validation gating",
-          "ARIA roles tables and keyboard interaction tables across all 13 interactive component pages",
+          "ARIA roles tables and keyboard interaction model tables across all interactive component pages",
+          "New Foundation Pages: Accessibility (WCAG 2.1 AA), Contrast, Icons, Gestures, Haptics, Keyboard Shortcuts",
         ],
       },
     ],
@@ -42,21 +46,21 @@ const RELEASES = [
   {
     version: "1.1.0",
     date: "2026-05-08",
-    summary: "New components, patterns, and accessibility foundation.",
+    summary: "New components, patterns, and accessibility improvements.",
     sections: [
       {
         label: "Added",
         items: [
-          "New Components: Slider (single/range), Date-Time Pickers (calendar/time), Carousel (auto-advancing), and Snackbar (notifications)",
-          "New Patterns: Collaboration (presence/sharing), Drag and Drop (kanban/reordering), and Data Entry (validation/wizards)",
-          "New Accessibility foundation page documenting WCAG 2.1 Level AA compliance",
+          "New Components: Slider (single/range), Date-Time Pickers, Date Range Picker, Carousel, Snackbar",
+          "New Patterns: Collaboration & Sharing, Drag and Drop, Data Entry",
+          "New Foundation: Accessibility page documenting WCAG 2.1 Level AA compliance",
         ],
       },
       {
         label: "Improved",
         items: [
-          "Enhanced text contrast ratios for secondary and tertiary text tokens across both light and dark modes",
-          "Replaced hardcoded grey hex values with semantic tokens for consistent accessibility",
+          "Enhanced text contrast ratios for secondary and tertiary text tokens across light and dark modes",
+          "Replaced hardcoded colour values with semantic tokens for consistent accessibility",
         ],
       },
     ],
@@ -69,13 +73,13 @@ const RELEASES = [
       {
         label: "Added",
         items: [
-          "17 component pages: Button, Input, Modal, Navigation, Card, Badge, Avatar, Tooltip, Form Controls, Table, Split Button, Segmented Button, Breadcrumb, Combobox, Date Range Picker, Bottom Tab Bar, Bottom Sheet, Chip, Slider, Snackbar, Carousel",
-          "17 foundation pages: Color, Contrast, Typography, Spacing, Motion, Interaction, Writing, Data Visualisation, Charting, Glass, Shadows, Border Radius, Empty States, Loading States, AI Agent Standards, Desktop Layout, Keyboard Shortcuts",
-          "SwiftUI · macOS as a 4th platform tab across all component pages",
-          "Design token export pipeline (Style Dictionary) — generates CSS variables, Swift constants, and JSON",
-          "Library guides for React · Next.js, React · Vite, Tokens Only, iOS · SwiftUI, and macOS · SwiftUI",
+          "21 component pages: Button, Input, Modal, Navigation, Card, Badge, Avatar, Tooltip, Table, Split Button, Segmented Button, Breadcrumb, Combobox, Bottom Tab Bar, Bottom Sheet, Chip, OTP / PIN, Prompt Input, Code Block, Chat Message, Streaming Text",
+          "17 foundation pages: Color, Typography, Spacing, Motion, Interaction, Writing, Data Visualisation, Charting, Glass, Shadows, Border Radius, Empty States, Loading States, AI Agent Standards, Desktop Layout, Keyboard Shortcuts, Spatial Computing",
+          "Multi-platform: SwiftUI · iOS and SwiftUI · macOS code samples across all component pages",
+          "Design token pipeline — CSS variables, Swift constants, and JSON export (W3C DTCG format)",
+          "Library guides: React · Next.js, React · Vite, Tokens Only, iOS · SwiftUI, macOS · SwiftUI",
           "Figma token integration via the Figma Variables API",
-          "Dark-first color system with CSS custom properties and semantic token naming",
+          "Dark-first colour system with CSS custom properties and semantic token naming",
         ],
       },
     ],

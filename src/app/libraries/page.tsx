@@ -76,20 +76,6 @@ const libraries = [
     ),
     details: ["Components", "Variables", "Code Connect", "Auto Layout"],
   },
-  {
-    href: "/storybook",
-    name: "Storybook",
-    description:
-      "Browse every Sitka component in an interactive sandbox. View all variants, states, and props without touching any app code.",
-    badge: "Interactive",
-    badgeColor: "accent" as const,
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path d="M16.71.243l-.12 2.71a.18.18 0 0 0 .29.15l1.06-.8.9.7a.18.18 0 0 0 .28-.14l-.1-2.76 1.33-.1a1.2 1.2 0 0 1 1.28 1.2v21.5a1.2 1.2 0 0 1-1.28 1.2L4.13 23.86A1.2 1.2 0 0 1 2.86 22.9l-.86-18.96a1.2 1.2 0 0 1 1.14-1.26zm-3.32 9.5c0 .47 3.16.24 3.59-.08 0-3.2-1.72-4.89-4.86-4.89-3.15 0-4.95 1.72-4.95 4.29 0 4.45 5.99 4.53 5.99 6.96 0 .7-.32 1.1-1.05 1.1-.96 0-1.35-.49-1.3-2.16 0-.36-3.65-.48-3.77 0-.27 4.03 2.23 5.2 5.1 5.2 2.79 0 4.9-1.48 4.9-4.16 0-4.77-6.06-4.63-6.06-6.97 0-.78.43-1.1 1.06-1.1.96 0 1.31.49 1.31 1.8z" />
-      </svg>
-    ),
-    details: ["35 components", "All variants", "A11y checks", "Interactive"],
-  },
 ];
 
 const badgeStyles = {

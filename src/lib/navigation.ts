@@ -166,6 +166,9 @@ export const navigation: NavSection[] = [
           { title: "Skeleton", href: "/components/skeleton", badge: "New" },
           { title: "Spinner", href: "/components/spinner", badge: "New" },
           { title: "Divider", href: "/components/divider", badge: "New" },
+          { title: "Code Block", href: "/components/code-block", badge: "New" },
+          { title: "Streaming Text", href: "/components/streaming-text", badge: "New" },
+          { title: "Chat Message", href: "/components/chat-message", badge: "New" },
         ],
       },
       {
@@ -264,7 +267,6 @@ export const navigation: NavSection[] = [
           { title: "React Native", href: "/libraries/react-native", isNew: true },
           { title: "Android · Compose", href: "/libraries/android", isNew: true },
           ...(FEATURES.figmaLibrary ? [{ title: "Figma", href: "/libraries/figma" }] : []),
-          { title: "Storybook", href: "/storybook", badge: "New" },
         ],
       },
       {
