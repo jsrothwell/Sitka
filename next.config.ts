@@ -8,6 +8,9 @@ const nextConfig = {
   assetPrefix: basePath ? `${basePath}/` : '',
   images: { unoptimized: true },
   trailingSlash: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 };
 
 module.exports = nextConfig;

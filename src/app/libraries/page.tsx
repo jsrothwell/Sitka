@@ -66,8 +66,8 @@ const libraries = [
     href: "/libraries/figma",
     name: "Figma",
     description:
-      "Sitka's Figma library ships components, variables, and Code Connect mappings that link your design directly to this codebase.",
-    badge: "Design",
+      "Sitka's Figma library is coming soon — components, variables, and Code Connect mappings that link your design directly to this codebase.",
+    badge: "Coming Soon",
     badgeColor: "neutral" as const,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
