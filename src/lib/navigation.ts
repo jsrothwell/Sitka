@@ -227,6 +227,14 @@ export const navigation: NavSection[] = [
           { title: "Drag and Drop", href: "/patterns/drag-drop" },
           { title: "Import / Export", href: "/patterns/import-export", badge: "New" },
           { title: "Integration Settings", href: "/patterns/integration-settings", badge: "New" },
+          { title: "Paywall / Upsell", href: "/patterns/paywall", badge: "New" },
+        ],
+      },
+      {
+        title: "Finance & Analytics",
+        items: [
+          { title: "Compensation Breakdown", href: "/patterns/compensation", badge: "New" },
+          { title: "Strategic Insights", href: "/patterns/strategic-insights", badge: "New" },
         ],
       },
       {
