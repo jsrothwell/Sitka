@@ -204,6 +204,7 @@ export const navigation: NavSection[] = [
           { title: "Onboarding", href: "/patterns/onboarding" },
           { title: "Mobile Navigation", href: "/patterns/mobile-navigation" },
           { title: "Mobile Widgets", href: "/patterns/mobile-widgets" },
+          { title: "Mobile Time Logging", href: "/patterns/mobile-time-logging", badge: "New" },
         ],
       },
       {
