@@ -81,7 +81,8 @@ type SyncStatus = "synced" | "pending" | "failed";
 function SyncBadge({ status }: { status: SyncStatus }) {
   if (status === "synced") {
     return (
-      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" title="Synced">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+        <title>Synced</title>
         <circle cx="6.5" cy="6.5" r="5.7" stroke={C.moss} strokeWidth="1.3" />
         <path d="M4.2 6.6l1.7 1.7L9 5.2" stroke={C.moss} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
@@ -89,13 +90,15 @@ function SyncBadge({ status }: { status: SyncStatus }) {
   }
   if (status === "pending") {
     return (
-      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" title="Syncing">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+        <title>Syncing</title>
         <path d="M11 6.5a4.5 4.5 0 1 1-1.32-3.18M11 1.5V4h-2.5" stroke={C.ink3} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     );
   }
   return (
-    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" title="Sync failed">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+      <title>Sync failed</title>
       <circle cx="6.5" cy="6.5" r="5.7" stroke={C.rose} strokeWidth="1.3" />
       <path d="M6.5 3.4v3.7M6.5 9.1v.5" stroke={C.rose} strokeWidth="1.5" strokeLinecap="round" />
     </svg>
