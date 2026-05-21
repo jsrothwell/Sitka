@@ -47,7 +47,7 @@ function WeekRing({ logged, goal, size = 64 }: { logged: number; goal: number; s
         transform={`rotate(-90 ${size / 2} ${size / 2})`}
         style={{ transition: "stroke-dasharray 0.6s ease-out" }}
       />
-      <text x={size / 2} y={size / 2 - 3} textAnchor="middle" fill="white" fontSize="13" fontWeight="700" fontVariantNumeric="tabular-nums">{pctInt}</text>
+      <text x={size / 2} y={size / 2 - 3} textAnchor="middle" fill="white" fontSize="13" fontWeight="700" style={{ fontVariantNumeric: "tabular-nums" }}>{pctInt}</text>
       <text x={size / 2} y={size / 2 + 9} textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="8" fontWeight="700">%</text>
     </svg>
   );
