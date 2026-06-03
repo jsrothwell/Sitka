@@ -1506,6 +1506,121 @@ export default function MobileTimeLoggingPage() {
         <PlatformTabs code={CODE} />
       </section>
 
+      {/* QR / Local-network pairing */}
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Local-network pairing</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
+          Warren iOS pairs with Warren for Mac over the local network using a one-time token. The flow has two entry points — QR
+          scan and paste code — so it works without a camera. No internet connection is required; sync happens directly device-to-device
+          over Bonjour.
+        </p>
+
+        <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Component</th>
+                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">PairingView</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Full-screen onboarding view. Centred icon + instructions, primary QR button, divider, monospaced paste-code field, disabled-until-valid Pair button.</td>
+              </tr>
+              <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">QRScannerSheet</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">VisionKit <code className="font-mono text-[10px]">DataScannerViewController</code> wrapped in SwiftUI. Fires once, stops scanning, dismisses sheet, and passes the token back to <code className="font-mono text-[10px]">PairingView</code>.</td>
+              </tr>
+              <tr className="bg-[rgb(var(--surface))]">
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">MobilePairingStore</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[10px]">ObservableObject</code> that validates the token and initiates Bonjour handshake. Publishes <code className="font-mono text-[10px]">pairingError: String?</code> for inline error feedback.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2">Design rules</h3>
+        <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))] mb-5">
+          {[
+            "QR path is the primary action — it gets the filled tinted button. Paste-code path is secondary, surfaced below an or-divider.",
+            "Pair button stays disabled while the field is empty or only whitespace — no silent no-ops.",
+            "Errors appear inline below the text field, never in a disruptive alert sheet.",
+            "Scanning fires exactly once per presentation: hasScanned guard prevents a second callback if two frames arrive simultaneously.",
+            "Camera unavailability (simulator, restricted permission) shows ContentUnavailableView — no crash or empty screen.",
+          ].map((item) => (
+            <li key={item} className="flex gap-2">
+              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <h3 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2">Swift</h3>
+        <pre className="rounded-lg bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] p-4 text-[12px] font-mono text-[rgb(var(--text-secondary))] overflow-x-auto whitespace-pre">{`// PairingView — entry point shown when no Mac is paired
+struct PairingView: View {
+    @EnvironmentObject private var pairingStore: MobilePairingStore
+    @State private var tokenInput = ""
+    @State private var showingScanner = false
+
+    var body: some View {
+        VStack(spacing: MobileSpacing.xl) {
+            Spacer()
+            Image(systemName: "desktopcomputer.and.iphone")
+                .font(.system(size: 64, weight: .light))
+                .foregroundColor(.sfTeal)
+
+            // Primary: scan QR
+            Button { showingScanner = true } label: {
+                Label("Scan QR Code", systemImage: "qrcode.viewfinder")
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, MobileSpacing.md)
+                    .background(Color.sfTeal.opacity(0.12))
+                    .foregroundColor(.sfTeal)
+                    .clipShape(RoundedRectangle(cornerRadius: MobileRadius.md))
+            }
+
+            // Secondary: paste code
+            TextField("Paste code here", text: $tokenInput, axis: .vertical)
+                .font(.system(size: 13, design: .monospaced))
+                .lineLimit(4, reservesSpace: true)
+
+            if let error = pairingStore.pairingError {
+                Text(error).foregroundColor(.sfOrange).font(MobileFont.caption)
+            }
+
+            Button("Pair Device") { pairingStore.pair(token: tokenInput) }
+                .disabled(tokenInput.trimmingCharacters(in: .whitespaces).isEmpty)
+            Spacer()
+        }
+        .sheet(isPresented: $showingScanner) {
+            QRScannerSheet { scanned in
+                tokenInput = scanned
+                pairingStore.pair(token: scanned)
+            }
+        }
+    }
+}
+
+// QRScannerSheet — VisionKit DataScannerViewController wrapper
+struct QRScannerSheet: View {
+    var onScan: (String) -> Void
+    @Environment(\\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            QRScannerRepresentable(onScan: { code in onScan(code); dismiss() },
+                                   isVisible: true)
+            .ignoresSafeArea()
+            .navigationTitle("Scan Pairing Code")
+            .toolbar { ToolbarItem(placement: .cancellationAction) {
+                Button("Cancel") { dismiss() }
+            }}
+        }
+    }
+}`}</pre>
+      </section>
+
       {/* Accessibility */}
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>

@@ -208,6 +208,8 @@ export const navigation: NavSection[] = [
           { title: "Voice Memo & Dictation", href: "/patterns/voice-memo", badge: "New" },
           { title: "Interview Email Parser", href: "/patterns/interview-parser", badge: "New" },
           { title: "Document Assembler", href: "/patterns/document-assembler", badge: "New" },
+          { title: "Interview Prep Hub", href: "/patterns/interview-prep", badge: "New" },
+          { title: "Ghost Employer Tracking", href: "/patterns/ghost-employer", badge: "New" },
         ],
       },
       {

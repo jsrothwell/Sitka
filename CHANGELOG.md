@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2026-06-03
+
+### Added
+
+#### New Pattern Pages
+- **Interview Prep Hub** — `InterviewPrepView` with Foundation Models on-device AI streaming (`JobAIService.shared.streamResponse`). Five round types (Technical, Behavioural, System Design, Case, Culture Fit). Three UI states: Loading placeholder, streaming content card with blinking cursor and live ProgressView, and error fallback. Includes iOS 26 entitlement requirements and `isAvailable` availability gate.
+- **Ghost Employer Tracking** — Skaro ghost employer system (`SkaroGhostBadge`, `SkaroGhostBanner`, `SkaroContributionToggle`, `SkaroGhostWarningModifier`). Two classification levels: `suspected` (amber/warning) and `confirmedGhost` (red/danger). Privacy section covering App Store Guideline 5.1.1 compliance — only domain name transmitted, never PII.
+
+#### Pattern Enhancements
+- **Integration Settings** — added Multi-provider Timesheet Sync section documenting Warren's `TimesheetProvider` protocol, `TimesheetSyncEngine`, and three concrete providers: Clockify (API key), Toggl Track (HTTP Basic), Timely (OAuth Bearer). Covers delete-window sync algorithm, `TimesheetMappingStore` project/member mapping, and `TimesheetSettingsView` segmented-picker UI.
+- **Mobile Time Logging** — added Local-network Pairing section documenting Warren's `PairingView` + `QRScannerSheet` (VisionKit `DataScannerViewController`) + `MobilePairingStore`. Dual entry-path design (QR primary, paste-code secondary), camera unavailability fallback, and single-fire scan guard.
+
+#### Navigation
+- Added Interview Prep Hub and Ghost Employer Tracking to the "Mobile" patterns group with "New" badges.
+
 ## [1.4.0] - 2026-06-02
 
 ### Added
