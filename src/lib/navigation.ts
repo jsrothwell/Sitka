@@ -205,6 +205,9 @@ export const navigation: NavSection[] = [
           { title: "Mobile Navigation", href: "/patterns/mobile-navigation" },
           { title: "Mobile Widgets", href: "/patterns/mobile-widgets" },
           { title: "Mobile Time Logging", href: "/patterns/mobile-time-logging", badge: "New" },
+          { title: "Voice Memo & Dictation", href: "/patterns/voice-memo", badge: "New" },
+          { title: "Interview Email Parser", href: "/patterns/interview-parser", badge: "New" },
+          { title: "Document Assembler", href: "/patterns/document-assembler", badge: "New" },
         ],
       },
       {

@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2026-06-02
+
+### Added
+
+#### New Pattern Pages
+- **Voice Memo & Dictation** — `VoiceMicButton` dual-gesture component (tap for live dictation, hold for audio memo), `AudioMemoListView`, `VoiceDictationService` (on-device SFSpeechRecognizer), and `AudioRecorderService` (AVAudioRecorder → Documents/AudioMemos/). Full SwiftUI implementation with animated recording ring, waveform indicator, and swipe-to-delete playback list.
+- **Interview Email Parser** — `InterviewParser` regex + NSDataDetector engine, `InterviewConfirmationSheet` with EKEventStore calendar integration, job-picker with fuzzy match, Share Extension plaintext branch, and `ParseInterviewTextIntent` Siri shortcut. Zero network calls — all parsing on-device.
+- **Document Assembler & PDF Export** — `DocumentAssemblerView` block checklist (toggle, reorder, edit), `ResumeExporter` cross-platform PDFKit renderer using CTFramesetter, Sitka accent color headings, A4 layout. iOS uses `ShareLink`; macOS uses `NSSavePanel`.
+
+#### Pattern Enhancements
+- **Compensation Breakdown** — added Take-Home Calculator section documenting `TaxBreakdownView` + `TaxCalculatorService` (Crucible engine): on-device 2026 progressive tax brackets for CA (federal + all provinces), AU, GB, SG, and EU (10 countries); live exchange-rate conversion to CAD; breakdown rows for each deduction type.
+
+#### Navigation
+- Added Voice Memo, Interview Parser, and Document Assembler to the "Mobile" patterns group with "New" badges.
+
 ## [Unreleased]
 
 ### Changed

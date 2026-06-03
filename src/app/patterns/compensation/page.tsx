@@ -547,6 +547,78 @@ export default function CompensationPage() {
         <PlatformTabs code={CODE} />
       </section>
 
+      {/* Take-Home Calculator */}
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Take-home calculator</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
+          Pair the compensation waterfall with an on-device progressive tax engine so the user sees net take-home alongside gross compensation numbers. All computation runs locally — no network calls, no API keys.
+        </p>
+
+        <div className="space-y-4 mb-6">
+          {[
+            { heading: "On-device only", body: "All 2026 tax bracket data is embedded as static Swift constants. The engine runs synchronously in the calling thread — no async, no server, no cache expiry." },
+            { heading: "Multi-jurisdiction", body: "Supports Canada (federal + all 13 provinces/territories), Australia, United Kingdom, Singapore, and 10 EU countries. Each jurisdiction uses the correct marginal-rate calculation with standard deduction or basic personal amount applied first." },
+            { heading: "Currency conversion", body: "Gross salary is accepted in any of the supported currencies (USD, CAD, GBP, EUR, AUD, SGD). The engine converts to the jurisdiction's native currency for tax calculation, then converts net result back to the user's chosen display currency." },
+            { heading: "Pre-fill from package", body: "Pass initialGross and initialCurrency from the top CompensationPackage so the calculator opens with the relevant salary pre-filled. The user can then explore different regions without re-entering their base." },
+          ].map(({ heading, body }) => (
+            <div key={heading} className="flex gap-3 text-[14px]">
+              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <div>
+                <span className="font-medium text-[rgb(var(--text-primary))]">{heading} — </span>
+                <span className="text-[rgb(var(--text-secondary))]">{body}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))] overflow-hidden">
+          <div className="px-4 py-2 border-b border-[rgb(var(--border))] bg-[rgb(var(--surface))]">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">SwiftUI — TaxBreakdownView.swift</span>
+          </div>
+          <pre className="p-4 text-[12px] leading-relaxed overflow-x-auto text-[rgb(var(--text-secondary))]"><code>{`struct TaxBreakdownView: View {
+    var initialGross: Double? = nil
+    var initialCurrency: String? = nil
+
+    @State private var grossText: String = ""
+    @State private var country:   String = "CA"
+    @State private var region:    String = "ON"
+    @State private var currency:  String = "CAD"
+    @State private var result:    TaxResult? = nil
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text("Take-Home Calculator")
+                .font(.system(size: 14, weight: .semibold))
+
+            // Pickers: currency / country / region
+            inputSection
+
+            if let r = result { resultSection(r) }
+        }
+        .padding(16)
+        .glassCard()
+        .onAppear {
+            if let g = initialGross    { grossText = String(Int(g)) }
+            if let c = initialCurrency { currency = c }
+            recalculate()
+        }
+    }
+
+    private func recalculate() {
+        guard let gross = Double(grossText.replacingOccurrences(of: ",", with: "")),
+              gross > 0, !region.isEmpty else { result = nil; return }
+        result = TaxCalculatorService.calculate(
+            gross: gross, currency: currency,
+            country: country, region: region
+        )
+    }
+}
+
+// TaxResult carries: effectiveRatePct, netAnnualLocal,
+// netMonthlyLocal, netMonthlyCAD, nativeCurrency, detail: [TaxDetailItem]`}</code></pre>
+        </div>
+      </section>
+
       {/* Accessibility */}
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
