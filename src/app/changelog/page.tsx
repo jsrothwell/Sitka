@@ -5,9 +5,43 @@ export const metadata: Metadata = { title: "Changelog" };
 
 const RELEASES = [
   {
+    version: "1.5.0",
+    date: "2026-06-03",
+    tag: "Latest",
+    summary: "Interview Prep Hub, Ghost Employer Tracking, multi-provider Timesheet Sync, and QR local-network pairing — all sourced from JobFlo v1.5 and Warren's May sprint.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "New Pattern: Interview Prep Hub — on-device AI streaming via Foundation Models (iOS 26+), five round types, streaming content card with live cursor",
+          "New Pattern: Ghost Employer Tracking — Skaro suspected/confirmed ghost classifications with badge, expandable banner, 14-day follow-up CTA, and contribution toggle",
+          "Integration Settings: Multi-provider Timesheet Sync section — TimesheetProvider protocol, TimesheetSyncEngine, Clockify / Toggl Track / Timely providers with delete-window sync algorithm",
+          "Mobile Time Logging: Local-network Pairing section — PairingView, QRScannerSheet (VisionKit DataScannerViewController), MobilePairingStore with Bonjour handshake",
+          "Navigation: Interview Prep Hub and Ghost Employer Tracking added to the Mobile patterns group",
+        ],
+      },
+    ],
+  },
+  {
+    version: "1.4.0",
+    date: "2026-06-02",
+    summary: "Voice Memo & Dictation, Interview Email Parser, Document Assembler, and Compensation Take-Home Calculator.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "New Pattern: Voice Memo & Dictation — VoiceMicButton dual-gesture (tap for live dictation, hold for audio memo), AudioMemoListView, VoiceDictationService (SFSpeechRecognizer), AudioRecorderService (AVAudioRecorder)",
+          "New Pattern: Interview Email Parser — InterviewParser regex + NSDataDetector engine, InterviewConfirmationSheet with EKEventStore, Share Extension, and ParseInterviewTextIntent Siri shortcut",
+          "New Pattern: Document Assembler & PDF Export — block checklist, ResumeExporter cross-platform PDFKit renderer, A4 layout, ShareLink / NSSavePanel",
+          "Compensation Breakdown: Take-Home Calculator — TaxBreakdownView + TaxCalculatorService with 2026 progressive brackets for CA, AU, GB, SG, and 10 EU countries",
+        ],
+      },
+    ],
+  },
+  {
     version: "1.3.0",
     date: "2026-05-09",
-    tag: "Latest",
+    tag: "",
     summary: "New components, expanded CLI registry, sitka-ui npm package, and Figma library documentation.",
     sections: [
       {
