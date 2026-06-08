@@ -37,11 +37,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed
-- **Figma library** — marked as "Coming Soon" on the Libraries overview and detail page; the Figma file is not yet published.
+### Added
+#### New Components
+- **WatchOS Components** — GlowProgressBar, PhaseStripHeader, PhaseBadge for watchOS interfaces (workflo patterns)
+- **KPI Tile / StatTile** — SFStatTile component for dashboard metrics with icon, value, label, and trend indicator (JobFlo/Warren pattern)
+- **Arc Gauge** — SFArcGauge 270° arc ring for progress indicators with automatic color thresholds (JobFlo pattern)
+- **Avatar Group** — SFAvatarGroup for displaying multiple user avatars with overflow indicator
+- **Pill Tag** — SFPillTag for compact status/chip displays with optional icon
+- **Snackbar** — SitkaSnackbar notification component with icon and error state support (invoiceflo pattern)
+- **Segmented Button (Simple)** — SitkaSegmentedButtonSimple for horizontal segmented controls with accessibility traits (invoiceflo pattern)
+- **Payment Progress** — PaymentProgressView milestone-based progress indicator with status dots (invoiceflo pattern)
+- **Streak Ring** — StreakRingView circular progress with streak count for habit tracking (habitflo pattern)
 
-### Fixed
-- **Sitka logo** — icon was broken on GitHub Pages because the public asset path was not prefixed with the `basePath` (`/Sitka`). Now resolved via `NEXT_PUBLIC_BASE_PATH` env variable set in `next.config.ts`.
+#### New Patterns
+- **WatchOS Habit Tracking** — Complete watchOS patterns for habit tracking including WatchHabitRow, WatchHabitDetailView, WatchComplicationView with WCSession integration
+- **Quick Log Pattern** — Sentiment-based quick logging with haptic feedback (workflo pattern)
+- **Davros Connectivity Monitor** — Network health monitoring pill with diagnostic sheet (JobFlo pattern)
+- **Glass Card Improvements** — Enhanced glass card modifier for macOS with reduce-transparency guards (Warren pattern)
+
+#### Token Updates
+- Added watchOS platform to supported platforms list
+- Added macOS platform to supported platforms list
+- Added phase colors (phase30, phase60, phase90) for 30/60/90 day narrative system
+- Added subtle status color variants (successSubtle, warningSubtle, dangerSubtle, infoSubtle)
+- Added new motion presets: cardAppear, chipTap, arcRing
+- Added progress track color token
 
 ## [1.3.0] - 2026-05-08
 
