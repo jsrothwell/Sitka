@@ -5,9 +5,35 @@ export const metadata: Metadata = { title: "Changelog" };
 
 const RELEASES = [
   {
+    version: "1.6.0",
+    date: "2026-06-12",
+    tag: "Latest",
+    summary: "watchOS habit-tracking patterns, Quick Log, Barcode Scanner, GTD Task Inbox, new components (KPI Tile, Arc Gauge, Streak Ring, Payment Progress, Snackbar, Segmented Button Simple) — sourced from habitflo, workflo, scanflo, orgflo, invoiceflo, and JobFlo.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "New Component: WatchOS Components — GlowProgressBar, PhaseStripHeader, PhaseBadge for watchOS interfaces (workflo)",
+          "New Component: KPI Tile / StatTile — SFStatTile with icon, value, label, and trend indicator (JobFlo/Warren)",
+          "New Component: Arc Gauge — SFArcGauge 270° arc ring with automatic color thresholds (JobFlo)",
+          "New Component: Snackbar — SitkaSnackbar with icon and error state support (invoiceflo)",
+          "New Component: Segmented Button (Simple) — SitkaSegmentedButtonSimple for horizontal segmented controls (invoiceflo)",
+          "New Component: Payment Progress — PaymentProgressView milestone-based indicator with status dots (invoiceflo)",
+          "New Component: Streak Ring — StreakRingView circular progress with streak count (habitflo)",
+          "New Pattern: WatchOS Habit Tracking — WatchHabitRow, WatchComplicationView with WCSession integration (habitflo)",
+          "New Pattern: Quick Log — Sentiment-based quick logging with radial gradient accent and haptic feedback (workflo)",
+          "New Pattern: Davros Connectivity Monitor — Network health monitoring pill with diagnostic sheet (JobFlo)",
+          "New Pattern: Barcode Scanner — ScanReticleOverlay (animated sweep line, corner brackets, cutout backdrop) + CaptureCardView bottom-sheet with loading/resolved/failed states (scanflo)",
+          "New Pattern: GTD Task Inbox — InboxView / TodayView / UpcomingView with OFTask / OFProject / OFArea hierarchy and SyncService (orgflo)",
+          "Token: phase colors (phase30, phase60, phase90), subtle status variants, new motion presets, progress track token",
+        ],
+      },
+    ],
+  },
+  {
     version: "1.5.0",
     date: "2026-06-03",
-    tag: "Latest",
+    tag: "",
     summary: "Interview Prep Hub, Ghost Employer Tracking, multi-provider Timesheet Sync, and QR local-network pairing — all sourced from JobFlo v1.5 and Warren's May sprint.",
     sections: [
       {

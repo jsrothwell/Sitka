@@ -5,6 +5,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+## [1.6.0] - 2026-06-12
+
+### Added
+
+#### New Components
+- **WatchOS Components** — GlowProgressBar, PhaseStripHeader, PhaseBadge for watchOS interfaces (workflo patterns)
+- **KPI Tile / StatTile** — SFStatTile component for dashboard metrics with icon, value, label, and trend indicator (JobFlo/Warren pattern)
+- **Arc Gauge** — SFArcGauge 270° arc ring for progress indicators with automatic color thresholds (JobFlo pattern)
+- **Avatar Group** — SFAvatarGroup for displaying multiple user avatars with overflow indicator
+- **Pill Tag** — SFPillTag for compact status/chip displays with optional icon
+- **Snackbar** — SitkaSnackbar notification component with icon and error state support (invoiceflo pattern)
+- **Segmented Button (Simple)** — SitkaSegmentedButtonSimple for horizontal segmented controls with accessibility traits (invoiceflo pattern)
+- **Payment Progress** — PaymentProgressView milestone-based progress indicator with status dots (invoiceflo pattern)
+- **Streak Ring** — StreakRingView circular progress with streak count for habit tracking (habitflo pattern)
+
+#### New Patterns
+- **WatchOS Habit Tracking** — Complete watchOS patterns for habit tracking including WatchHabitRow, WatchHabitDetailView, WatchComplicationView with WCSession integration (habitflo)
+- **Quick Log Pattern** — Sentiment-based quick logging with radial gradient accent, haptic feedback, and markdown-enabled TextEditor (workflo)
+- **Davros Connectivity Monitor** — Network health monitoring pill with diagnostic sheet (JobFlo)
+- **Glass Card Improvements** — Enhanced glass card modifier for macOS with reduce-transparency guards (Warren)
+- **Barcode Scanner** — ScanReticleOverlay with animated sweep line, corner-bracket UI, and cutout backdrop; CaptureCardView bottom-sheet with loading/resolved/failed lookup states and inline metadata editing (scanflo)
+- **GTD Task Inbox** — InboxView / TodayView / UpcomingView trio with OFTask / OFProject / OFArea hierarchy, sidebar navigation, and SyncService optimistic-update model (orgflo)
+
+#### Token Updates
+- Added watchOS platform to supported platforms list
+- Added macOS platform to supported platforms list
+- Added phase colors (phase30, phase60, phase90) for 30/60/90 day narrative system
+- Added subtle status color variants (successSubtle, warningSubtle, dangerSubtle, infoSubtle)
+- Added new motion presets: cardAppear, chipTap, arcRing
+- Added progress track color token
+
+#### Navigation
+- Added Barcode Scanner and GTD Task Inbox to the "Mobile" patterns group with "New" badges
+
 ## [1.5.0] - 2026-06-03
 
 ### Added
@@ -34,34 +70,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Navigation
 - Added Voice Memo, Interview Parser, and Document Assembler to the "Mobile" patterns group with "New" badges.
-
-## [Unreleased]
-
-### Added
-#### New Components
-- **WatchOS Components** — GlowProgressBar, PhaseStripHeader, PhaseBadge for watchOS interfaces (workflo patterns)
-- **KPI Tile / StatTile** — SFStatTile component for dashboard metrics with icon, value, label, and trend indicator (JobFlo/Warren pattern)
-- **Arc Gauge** — SFArcGauge 270° arc ring for progress indicators with automatic color thresholds (JobFlo pattern)
-- **Avatar Group** — SFAvatarGroup for displaying multiple user avatars with overflow indicator
-- **Pill Tag** — SFPillTag for compact status/chip displays with optional icon
-- **Snackbar** — SitkaSnackbar notification component with icon and error state support (invoiceflo pattern)
-- **Segmented Button (Simple)** — SitkaSegmentedButtonSimple for horizontal segmented controls with accessibility traits (invoiceflo pattern)
-- **Payment Progress** — PaymentProgressView milestone-based progress indicator with status dots (invoiceflo pattern)
-- **Streak Ring** — StreakRingView circular progress with streak count for habit tracking (habitflo pattern)
-
-#### New Patterns
-- **WatchOS Habit Tracking** — Complete watchOS patterns for habit tracking including WatchHabitRow, WatchHabitDetailView, WatchComplicationView with WCSession integration
-- **Quick Log Pattern** — Sentiment-based quick logging with haptic feedback (workflo pattern)
-- **Davros Connectivity Monitor** — Network health monitoring pill with diagnostic sheet (JobFlo pattern)
-- **Glass Card Improvements** — Enhanced glass card modifier for macOS with reduce-transparency guards (Warren pattern)
-
-#### Token Updates
-- Added watchOS platform to supported platforms list
-- Added macOS platform to supported platforms list
-- Added phase colors (phase30, phase60, phase90) for 30/60/90 day narrative system
-- Added subtle status color variants (successSubtle, warningSubtle, dangerSubtle, infoSubtle)
-- Added new motion presets: cardAppear, chipTap, arcRing
-- Added progress track color token
 
 ## [1.3.0] - 2026-05-08
 

@@ -210,6 +210,8 @@ export const navigation: NavSection[] = [
           { title: "Document Assembler", href: "/patterns/document-assembler", badge: "New" },
           { title: "Interview Prep Hub", href: "/patterns/interview-prep", badge: "New" },
           { title: "Ghost Employer Tracking", href: "/patterns/ghost-employer", badge: "New" },
+          { title: "Barcode Scanner", href: "/patterns/barcode-scanner", badge: "New" },
+          { title: "GTD Task Inbox", href: "/patterns/task-inbox", badge: "New" },
         ],
       },
       {
