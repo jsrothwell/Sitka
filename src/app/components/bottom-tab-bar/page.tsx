@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
-import { BottomTabBarStandaloneDemo } from "@/components/docs/MobileNavDemo";
+import { BottomTabBarStandaloneDemo } from "@/site/docs/MobileNavDemo";
 
 export const metadata: Metadata = { title: "Bottom Tab Bar" };
 

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
-import { BottomSheetDemo } from "@/components/docs/MobileNavDemo";
+import { BottomSheetDemo } from "@/site/docs/MobileNavDemo";
 
 export const metadata: Metadata = { title: "Bottom Sheet" };
 

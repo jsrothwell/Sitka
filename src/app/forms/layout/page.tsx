@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import {
   StackedLayoutDemo,
   TwoColumnLayoutDemo,
   InlineLayoutDemo,
-} from "@/components/docs/FormLayoutDemo";
+} from "@/site/docs/FormLayoutDemo";
 
 export const metadata: Metadata = { title: "Form Layout" };
 

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
-import { TooltipDemo } from "@/components/docs/TooltipDemo";
-import { TooltipMobileDemo } from "@/components/docs/ComponentMobileDemos";
+import { TooltipDemo } from "@/site/docs/TooltipDemo";
+import { TooltipMobileDemo } from "@/site/docs/ComponentMobileDemos";
 
 export const metadata: Metadata = { title: "Tooltip" };
 

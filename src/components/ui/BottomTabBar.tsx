@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 import type { ReactNode } from "react";
 
 export interface BottomTabItem {

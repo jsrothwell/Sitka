@@ -3,7 +3,7 @@
 import { useState, useId } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 export interface CollapsibleProps {
   title: React.ReactNode;

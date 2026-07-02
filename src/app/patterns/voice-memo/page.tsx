@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 
 // ── Animated waveform bars ─────────────────────────────────────────────────────

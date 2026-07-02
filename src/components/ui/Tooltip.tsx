@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 export type TooltipSide = "top" | "bottom" | "left" | "right";
 

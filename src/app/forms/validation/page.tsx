@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
-import { ValidationDemo } from "@/components/docs/FormValidationDemo";
+import { ValidationDemo } from "@/site/docs/FormValidationDemo";
 
 export const metadata: Metadata = { title: "Form Validation" };
 
@@ -13,7 +13,7 @@ const CODE = {
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { AlertCircle, Check } from "lucide-react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 function isValidEmail(v: string) {
   return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(v);

@@ -1,7 +1,7 @@
 "use client";
 
-import { PageHeader } from "@/components/docs/PageHeader";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown, Copy, Edit2, Trash2, ExternalLink, MoreHorizontal } from "lucide-react";
@@ -42,7 +42,7 @@ const CODE = {
     code: `"use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 export interface DropdownAction {
   type?: "action";

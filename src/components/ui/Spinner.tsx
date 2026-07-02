@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 export type SpinnerSize = "xs" | "sm" | "md" | "lg";
 

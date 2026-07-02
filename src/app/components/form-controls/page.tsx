@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import {
   CheckboxDemo,
@@ -9,8 +9,8 @@ import {
   RadioDemo,
   SwitchDemo,
   SelectDemo,
-} from "@/components/docs/FormControlsDemo";
-import { FormControlsMobileDemo } from "@/components/docs/ComponentMobileDemos";
+} from "@/site/docs/FormControlsDemo";
+import { FormControlsMobileDemo } from "@/site/docs/ComponentMobileDemos";
 
 export const metadata: Metadata = { title: "Form Controls" };
 

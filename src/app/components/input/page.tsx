@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { Input } from "@/components/ui/Input";
 import { Search, Mail, Eye, Lock } from "lucide-react";
-import { InputMobileDemo } from "@/components/docs/ComponentMobileDemos";
+import { InputMobileDemo } from "@/site/docs/ComponentMobileDemos";
 
 export const metadata: Metadata = { title: "Input" };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
-import { ColorPalette } from "@/components/docs/ColorPalette";
-import { DarkModeShowcase } from "@/components/docs/DarkModeShowcase";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { ColorPalette } from "@/site/docs/ColorPalette";
+import { DarkModeShowcase } from "@/site/docs/DarkModeShowcase";
 
 export const metadata: Metadata = { title: "Color" };
 

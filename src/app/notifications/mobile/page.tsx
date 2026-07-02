@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
-import { MobileNotificationDemo } from "@/components/docs/NotificationDemo";
+import { MobileNotificationDemo } from "@/site/docs/NotificationDemo";
 
 export const metadata: Metadata = { title: "Mobile Notifications" };
 
@@ -14,7 +14,7 @@ const CODE = {
 
 import { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 interface BannerProps {
   visible: boolean;

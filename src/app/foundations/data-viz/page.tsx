@@ -1,7 +1,7 @@
 "use client";
 
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 
 // Metadata export removed — this is a client component
 

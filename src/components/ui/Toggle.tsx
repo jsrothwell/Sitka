@@ -1,7 +1,7 @@
 "use client";
 
 import { forwardRef, createContext, useContext, useId } from "react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 export type ToggleSize = "sm" | "md" | "lg";
 export type ToggleVariant = "default" | "outline";

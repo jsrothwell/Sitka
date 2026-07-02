@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
-import { MotionShowcase } from "@/components/docs/MotionShowcase";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { MotionShowcase } from "@/site/docs/MotionShowcase";
 
 export const metadata: Metadata = { title: "Motion" };
 

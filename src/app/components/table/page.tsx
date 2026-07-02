@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell, TableFooter } from "@/components/ui/Table";
 import { Badge } from "@/components/ui/Badge";
-import { SortableTableDemo } from "@/components/docs/TableDemo";
-import { TableMobileDemo } from "@/components/docs/ComponentMobileDemos";
+import { SortableTableDemo } from "@/site/docs/TableDemo";
+import { TableMobileDemo } from "@/site/docs/ComponentMobileDemos";
 
 export const metadata: Metadata = { title: "Table" };
 

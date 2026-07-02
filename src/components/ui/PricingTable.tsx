@@ -2,7 +2,7 @@
 
 import { useState, ReactNode } from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 import { Button } from "./Button";
 import { CheckIcon, XIcon } from "@phosphor-icons/react";
 

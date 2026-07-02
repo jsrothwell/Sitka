@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, KeyboardEvent, FormEvent, forwardRef } from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 export interface OTPInputProps {
   /** Number of digits/boxes */

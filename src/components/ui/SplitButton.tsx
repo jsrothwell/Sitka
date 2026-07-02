@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, forwardRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { createPortal } from "react-dom";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 import type { ButtonVariant, ButtonSize } from "@/components/ui/Button";
 
 export interface SplitButtonItem {

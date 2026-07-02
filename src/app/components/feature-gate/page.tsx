@@ -1,8 +1,8 @@
 "use client";
 
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { useState } from "react";
 import { Lock, Sparkles, Zap, BarChart3, Users, Shield } from "lucide-react";

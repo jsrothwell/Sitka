@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { X, CheckCircle2, AlertCircle, AlertTriangle, Info } from "lucide-react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 export type ToastVariant  = "info" | "success" | "warning" | "error";
 export type ToastPosition = "top-right" | "bottom-right" | "bottom-center" | "top-center";

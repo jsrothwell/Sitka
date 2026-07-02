@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import {
   TypingDotsDemo,
   SkeletonDemo,
   SpinnerDemo,
   ProgressiveTextDemo,
-} from "@/components/docs/LoadingStatesDemo";
+} from "@/site/docs/LoadingStatesDemo";
 
 export const metadata: Metadata = { title: "Loading States" };
 

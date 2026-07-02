@@ -1,7 +1,7 @@
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
-import { NavbarDemo, SidebarNavDemo } from "@/components/docs/NavbarDemo";
+import { NavbarDemo, SidebarNavDemo } from "@/site/docs/NavbarDemo";
 
 
 const CODE = {
@@ -11,7 +11,7 @@ const CODE = {
 
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 const NAV_LINKS = ["Dashboard", "Team", "Analytics", "Settings"];
 

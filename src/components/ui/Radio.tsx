@@ -1,7 +1,7 @@
 "use client";
 
 import { forwardRef, createContext, useContext } from "react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 export type RadioSize = "sm" | "md" | "lg";
 

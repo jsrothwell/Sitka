@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PromptInputDemo } from "./PromptInputDemo";
 
 export const metadata: Metadata = { title: "PromptInput" };

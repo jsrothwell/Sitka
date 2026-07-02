@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Copy, Download, RotateCcw, Check } from "lucide-react";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 
 // ── Helpers ───────────────────────────────────────────────────────────
 

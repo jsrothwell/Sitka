@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { TrendingUp, TrendingDown, Users, DollarSign, Clock, Target } from "lucide-react";
 
@@ -48,7 +48,7 @@ const PROPS = [
 const CODE = {
   react: {
     filename: "KPITile.tsx",
-    code: `import { cn } from "@/lib/cn";
+    code: `import { cn } from "@/lib";
 import { TrendingUp, TrendingDown, Minus } from "lucide-react";
 
 interface KPITileTrend {

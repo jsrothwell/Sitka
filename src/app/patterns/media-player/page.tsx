@@ -1,7 +1,7 @@
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
-import { AudioPlayerDemo, VideoPlayerDemo } from "@/components/docs/MediaPlayerDemo";
+import { AudioPlayerDemo, VideoPlayerDemo } from "@/site/docs/MediaPlayerDemo";
 
 
 const CODE = {
@@ -10,7 +10,7 @@ const CODE = {
     code: `"use client";
 
 import { useState, useRef, useEffect } from "react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 interface Track {
   title: string;

@@ -1,6 +1,6 @@
 "use client";
 
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { useState } from "react";
@@ -12,7 +12,7 @@ const CODE = {
     code: `"use client";
 
 import { useState, useRef, DragEvent } from "react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 // ── Reorderable List ───────────────────────────────────────
 

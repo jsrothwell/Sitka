@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
-import { TokensGrid } from "@/components/docs/TokensGrid";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { TokensGrid } from "@/site/docs/TokensGrid";
 
 export const metadata: Metadata = { title: "Design Tokens" };
 

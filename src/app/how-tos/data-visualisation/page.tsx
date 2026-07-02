@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ArrowLeft } from "lucide-react";
 
 function Step({ n, title, children, last }: { n: number; title: string; children: React.ReactNode; last?: boolean }) {

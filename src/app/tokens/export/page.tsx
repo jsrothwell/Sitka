@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
-import { TokenExport } from "@/components/docs/TokenExport";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { TokenExport } from "@/site/docs/TokenExport";
 
 export const metadata: Metadata = { title: "Token Export" };
 

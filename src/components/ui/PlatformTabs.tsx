@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { CodeBlock } from "./CodeBlock";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 export type Platform = "react" | "html" | "swift" | "macos";
 

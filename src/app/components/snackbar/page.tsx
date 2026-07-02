@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { CheckCircle, AlertCircle, AlertTriangle } from "lucide-react";
-import { cn } from "@/lib/cn";
-import { PageHeader } from "@/components/docs/PageHeader";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { cn } from "@/lib";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 
@@ -33,7 +33,7 @@ const CODE = {
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { CheckCircle, AlertCircle, AlertTriangle, X } from "lucide-react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 type SnackbarVariant = "default" | "success" | "error" | "warning";
 type SnackbarPosition = "bottom-left" | "bottom-center" | "bottom-right";

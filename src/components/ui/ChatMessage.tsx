@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 import { StreamingText } from "./StreamingText";
 
 export type MessageRole = "user" | "assistant" | "system";

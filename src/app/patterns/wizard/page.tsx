@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { Check, ChevronRight } from "lucide-react";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 const CODE = {
   react: {

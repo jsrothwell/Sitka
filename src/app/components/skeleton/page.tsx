@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 
 export const metadata: Metadata = { title: "Skeleton" };
@@ -38,7 +38,7 @@ const PROPS = [
 const CODE = {
   react: {
     filename: "Skeleton.tsx",
-    code: `import { cn } from "@/lib/cn";
+    code: `import { cn } from "@/lib";
 
 interface SkeletonProps {
   width?: string | number;

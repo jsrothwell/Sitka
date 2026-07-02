@@ -1,5 +1,5 @@
 import { ElementType, ComponentPropsWithoutRef } from "react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 const GAP: Record<string, string> = {
   "0": "gap-0",

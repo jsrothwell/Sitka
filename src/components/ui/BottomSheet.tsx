@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 import type { ReactNode } from "react";
 
 export type BottomSheetSnap = "auto" | "half" | "full";

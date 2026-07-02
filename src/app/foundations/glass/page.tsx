@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
-import { GlassShowcase } from "@/components/docs/GlassShowcase";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { GlassShowcase } from "@/site/docs/GlassShowcase";
 
 export const metadata: Metadata = { title: "Glass" };
 

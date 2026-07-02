@@ -2,7 +2,7 @@
 
 import { ReactNode, useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 import { ChatMessage, MessageRole } from "./ChatMessage";
 
 export interface ConversationContainerProps {

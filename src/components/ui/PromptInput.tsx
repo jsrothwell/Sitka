@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback, forwardRef, KeyboardEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 import { Button } from "./Button";
 import { Paperclip, Send, X, Image, FileText } from "lucide-react";
 

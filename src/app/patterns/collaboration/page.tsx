@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 
@@ -14,7 +14,7 @@ const CODE = {
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Copy, Check, Users, Link as LinkIcon, Mail, MessageCircle } from "lucide-react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 // ── Share component ────────────────────────────────────────
 

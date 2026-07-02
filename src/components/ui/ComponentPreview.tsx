@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Monitor, Smartphone } from "lucide-react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 interface ComponentPreviewProps {
   children: React.ReactNode;

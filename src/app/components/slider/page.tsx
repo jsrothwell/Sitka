@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { PageHeader } from "@/components/docs/PageHeader";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 
@@ -23,7 +23,7 @@ const CODE = {
     filename: "Slider.tsx",
     code: `"use client";
 
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 import { useState } from "react";
 
 export interface SliderProps {

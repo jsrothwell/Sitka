@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, KeyboardEvent } from "react";
 import { ChevronDown } from "lucide-react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 export interface NavMenuLink {
   label: string;

@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { Search } from "lucide-react";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { Button } from "@/components/ui/Button";
-import { CommandPalette } from "@/components/search/CommandPalette";
+import { CommandPalette } from "@/site/search/CommandPalette";
 
 const PROPS = [
   {
@@ -30,7 +30,7 @@ const CODE = {
     code: `"use client";
 
 import { useState, useEffect } from "react";
-import { CommandPalette } from "@/components/search/CommandPalette";
+import { CommandPalette } from "@/site/search/CommandPalette";
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);

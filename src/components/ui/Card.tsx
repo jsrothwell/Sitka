@@ -1,7 +1,8 @@
 "use client";
 
 import { forwardRef } from "react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
+import { spring } from "@/design-system/motion";
 
 export type CardVariant = "default" | "elevated" | "ghost" | "accent";
 
@@ -36,7 +37,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
           "rounded-[14px] border overflow-hidden",
           variantStyles[variant],
           interactive && [
-            "cursor-pointer transition-all duration-150",
+            "cursor-pointer",
             "hover:border-[rgb(var(--accent)/0.5)] hover:shadow-[0_4px_24px_rgba(0,0,0,0.12)]",
             "active:scale-[0.99]",
           ],

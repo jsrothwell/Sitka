@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
-import { IconsShowcase } from "@/components/docs/IconsShowcase";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { IconsShowcase } from "@/site/docs/IconsShowcase";
 
 export const metadata: Metadata = { title: "Icons" };
 

@@ -3,7 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
-import { DocsShell } from "@/components/layout/DocsShell";
+import { DocsShell } from "@/site/layout/DocsShell";
 
 const inter = Inter({
   variable: "--font-inter",

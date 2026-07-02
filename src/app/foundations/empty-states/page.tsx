@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
-import { EmptyStatesDemo } from "@/components/docs/EmptyStatesDemo";
+import { EmptyStatesDemo } from "@/site/docs/EmptyStatesDemo";
 
 export const metadata: Metadata = { title: "Empty States" };
 

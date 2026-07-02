@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PageHeader } from "@/site/docs/PageHeader";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 
 export const metadata: Metadata = { title: "Sidebar" };
@@ -34,7 +34,7 @@ const CODE = {
 // NavSection → NavGroup → NavItem hierarchy.
 //
 // Integrate it in your layout:
-import { Sidebar } from "@/components/layout/Sidebar";
+import { Sidebar } from "@/site/layout/Sidebar";
 
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -43,3 +43,17 @@ next-env.d.ts
 # tooling
 .claude/
 skills-lock.json
+
+# Testing
+coverage/
+
+# Storybook
+storybook-static/
+
+# TypeScript
+*.tsbuildinfo
+
+# Env
+.env
+!.env.example
+.env.local

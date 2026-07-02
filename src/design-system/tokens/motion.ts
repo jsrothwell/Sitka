@@ -1,0 +1,25 @@
+export const motion = {
+  duration: {
+    instant: '80ms',
+    fast: '150ms',
+    normal: '250ms',
+    slow: '400ms',
+    slower: '600ms',
+    typewriter: '30ms',
+  },
+  easing: {
+    linear: 'linear',
+    easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
+    easeOut: 'cubic-bezier(0, 0, 0.2, 1)',
+    easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
+    spring: 'cubic-bezier(0.16, 1, 0.3, 1)',
+    springBouncy: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+  },
+  presets: {
+    pressSpring: 'stiffness 500, damping 40',
+    panelSpring: 'stiffness 300, damping 30',
+    pageTransition: 'easeOut 300ms',
+    hoverTransition: 'easeOut 150ms',
+    stream: 'stiffness 200, damping 25',
+  },
+} as const;

@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback, useId } from "react";
 import { Upload, X, File, AlertCircle } from "lucide-react";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib";
 
 export interface FileUploadProps {
   accept?: string;

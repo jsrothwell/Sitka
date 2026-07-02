@@ -1,8 +1,9 @@
 "use client";
 
 import { forwardRef } from "react";
-import { motion } from "framer-motion";
-import { cn } from "@/lib/cn";
+import { motion, spring as springPreset } from "@/design-system/motion";
+import { cn } from "@/lib";
+import { glassSurface } from "@/design-system/glass";
 import { Loader2 } from "lucide-react";
 
 export type ButtonVariant = "primary" | "secondary" | "ghost" | "danger" | "glass";
@@ -26,8 +27,7 @@ const variantClasses: Record<ButtonVariant, string> = {
     "text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface))] hover:text-[rgb(var(--text-primary))] active:bg-[rgb(var(--border))]",
   danger:
     "bg-red-500 text-white hover:bg-red-600 shadow-[0_2px_8px_rgba(239,68,68,0.3)] active:shadow-none",
-  glass:
-    "glass text-[rgb(var(--text-primary))] hover:bg-[rgba(255,255,255,0.1)] dark:hover:bg-[rgba(255,255,255,0.05)]",
+  glass: `${glassSurface({ intensity: "medium" })} text-[rgb(var(--text-primary))] hover:brightness-110`,
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
@@ -58,7 +58,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <motion.button
         ref={ref}
         whileTap={{ scale: 0.97 }}
-        transition={{ type: "spring", stiffness: 500, damping: 40 }}
+        transition={springPreset("press")}
         className={cn(
           "inline-flex items-center justify-center font-medium transition-all select-none",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-[rgb(var(--background))]",

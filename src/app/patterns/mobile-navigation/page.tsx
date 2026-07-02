@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
 import {
   BottomTabBarDemo,
   NavigationDrawerDemo,
   BottomSheetNavDemo,
-} from "@/components/docs/MobileNavDemo";
+} from "@/site/docs/MobileNavDemo";
 
 export const metadata: Metadata = { title: "Mobile Navigation" };
 

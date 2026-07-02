@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { ComponentPreview } from "@/components/ui/ComponentPreview";
-import { PropsTable } from "@/components/docs/PropsTable";
+import { PropsTable } from "@/site/docs/PropsTable";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
-import { SplitButtonDemo, SplitButtonSizesDemo } from "@/components/docs/SplitButtonDemo";
-import { SplitButtonMobileDemo } from "@/components/docs/ComponentMobileDemos";
+import { SplitButtonDemo, SplitButtonSizesDemo } from "@/site/docs/SplitButtonDemo";
+import { SplitButtonMobileDemo } from "@/site/docs/ComponentMobileDemos";
 
 export const metadata: Metadata = { title: "Split Button" };
 

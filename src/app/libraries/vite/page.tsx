@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PageHeader } from "@/components/docs/PageHeader";
+import { PageHeader } from "@/site/docs/PageHeader";
 import { CodeBlock } from "@/components/ui/CodeBlock";
 
 
