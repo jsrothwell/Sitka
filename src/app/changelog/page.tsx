@@ -5,9 +5,37 @@ export const metadata: Metadata = { title: "Changelog" };
 
 const RELEASES = [
   {
+    version: "1.7.0",
+    date: "2026-07-02",
+    tag: "Latest",
+    summary: "Source alignment: typed TypeScript token layer, design-system umbrella, site/library separation, and a vitest test suite — bringing the web codebase into structural parity with the Swift SitkaTokens convention.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "Typed token layer — src/design-system/tokens/ with typed TS constants (colors, spacing, typography, motion, radius) mirroring the Swift SitkaTokens namespace",
+          "Glass abstraction — glassSurface() className factory centralising blur/opacity values; Button and Card now consume it instead of inline Tailwind strings",
+          "Motion presets — src/design-system/motion/ with spring(), fadeIn(), scaleIn() constants mirroring SFMotion.press / SFMotion.cardAppear",
+          "Platform hooks — useReducedMotion and usePlatform in src/design-system/hooks/",
+          "Design-system umbrella — src/design-system/index.ts barrel re-exporting tokens, glass, motion, and hooks",
+          "Component barrel — src/components/ui/index.ts named-export barrel for all 43 UI components",
+          "Vitest test suite — 11 tests covering token values, Button rendering, and Card variants; vitest.config.ts with @/ path alias",
+        ],
+      },
+      {
+        label: "Changed",
+        items: [
+          "Website chrome isolated to src/site/ (layout, docs, search, navigation) — no longer co-mingled with the component library under src/components/",
+          "37 *.figma.tsx Figma Code Connect sidecars relocated from src/components/ui/ to .figma/src/ — eliminating IDE noise and Git conflict risk on every Figma sync",
+          "src/lib/ scoped to library utilities only; navigation.ts moved to src/site/navigation.ts",
+        ],
+      },
+    ],
+  },
+  {
     version: "1.6.0",
     date: "2026-06-12",
-    tag: "Latest",
+    tag: "",
     summary: "watchOS habit-tracking patterns, Quick Log, Barcode Scanner, GTD Task Inbox, new components (KPI Tile, Arc Gauge, Streak Ring, Payment Progress, Snackbar, Segmented Button Simple) — sourced from habitflo, workflo, scanflo, orgflo, invoiceflo, and JobFlo.",
     sections: [
       {
