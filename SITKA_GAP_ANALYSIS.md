@@ -328,27 +328,27 @@ Requirements unique to one app that should still be generalised into Sitka where
 
 These are used on primary screens in both apps. Without them, migrating to Sitka requires maintaining parallel component trees.
 
-| # | Item | Complexity | Notes |
-|---|---|---|---|
-| 1 | **Progress Bar** | Low | Tokens only; extends existing Slider docs |
-| 2 | **Stat / KPI Tile** | Low | Composes Card + Avatar-well + Typography |
-| 3 | **Avatar Group + Presence** | Medium | Extends existing Avatar docs |
-| 4 | **Context Menu** | Medium | Needed for task management in Warren |
-| 5 | **Kanban Board pattern** | Medium | Both apps need this documented |
-| 6 | **Glass foundations — specular overlays** | Low | Documentation only; Warren already has the code |
+| # | Item | Complexity | Notes | Status |
+|---|---|---|---|---|
+| 1 | **Progress Bar** | Low | Tokens added (v1.8.0); React component created; extends existing Slider docs | ✅ Complete |
+| 2 | **Stat / KPI Tile** | Low | Composes Card + Avatar-well + Typography | ✅ Complete |
+| 3 | **Avatar Group + Presence** | Medium | Extends existing Avatar docs | ✅ Complete |
+| 4 | **Context Menu** | Medium | Needed for task management in Warren | ✅ Complete |
+| 5 | **Kanban Board pattern** | Medium | Both apps need this documented | ⏳ |
+| 6 | **Glass foundations — specular overlays** | Low | Documentation updated; Warren's sfSpecularTopEdge, sfBrandLitSurface, sfPillSpecular, sfColorStripSheen patterns added | ✅ Complete |
 
 ### P1 — High Value (complete within first sprint post-cutover)
 
 These unlock the most distinctive features of each app.
 
-| # | Item | Complexity | Notes |
-|---|---|---|---|
-| 7 | **Gantt / Timeline pattern** | High | Complex layout; Warren's implementation is reference-complete |
-| 8 | **Analytics Dashboard pattern** | Medium | Composition of already-defined components |
-| 9 | **Burn Trajectory Chart** | High | Canvas-based; Warren's `BurnTrajectoryChart` is reference |
-| 10 | **Gauge / Arc Ring** | Medium | Extends Progress Bar; needed for utilization cards |
-| 11 | **Feature Gate / Paywall** | Low | View modifier pattern; reuses surface tokens |
-| 12 | **`--dynamic-brand` token + Theme Customizer** | Medium | Warren's user-selectable accent |
+| # | Item | Complexity | Notes | Status |
+|---|---|---|---|---|
+| 7 | **Gantt / Timeline pattern** | High | Complex layout; Warren's implementation is reference-complete | ⏳ |
+| 8 | **Analytics Dashboard pattern** | Medium | Composition of already-defined components | ⏳ |
+| 9 | **Burn Trajectory Chart** | High | Canvas-based; Warren's `BurnTrajectoryChart` is reference | ⏳ |
+| 10 | **Gauge / Arc Ring** | Medium | Extends Progress Bar; needed for utilization cards | ✅ Complete |
+| 11 | **Feature Gate / Paywall** | Low | View modifier pattern; reuses surface tokens | ⏳ |
+| 12 | **`--dynamic-brand` token + Theme Customizer** | Medium | Warren's user-selectable accent | ✅ Complete |
 
 ### P2 — Differentiating (complete in second sprint)
 
@@ -372,23 +372,43 @@ These unlock the most distinctive features of each app.
 
 ---
 
-## 5. Token Delta
+## 5. Token Delta (v1.8.0)
 
 New or modified design tokens required to support the above work. All new tokens follow Sitka's existing naming convention.
 
-### New Semantic Tokens
+### Implemented Tokens (v1.8.0)
 
 ```
---progress-track          /* replaces ad-hoc sfProgressTrack usage */
---progress-fill-success   /* maps to --status-success */
---progress-fill-warning   /* maps to --status-warning */
---progress-fill-danger    /* maps to --status-danger */
---brand-user              /* dynamic user-chosen accent (Warren pattern) */
---surface-glass           /* glass/frosted surface (JobFlo .glassCard) */
---motion-sheet-entry      /* 0.97→1.0 scale + fade, 0.25s ease-out */
---shadow-card             /* Warren SFShadow.card: black/10%, r:12, y:2 */
---shadow-card-lifted      /* Warren SFShadow.cardLifted: black/14%, r:18, y:4 */
---shadow-sheet            /* Warren SFShadow.sheet: black/20%, r:28, y:8 */
+--progress-track          /* Added to themes.dark/light: rgb(40, 42, 48) / rgb(209, 213, 219) */
+--progress-success        /* Reference to --semantic-success (#22c55e) */
+--progress-warning        /* Reference to --semantic-warning (#f59e0b) */
+--progress-danger         /* Reference to --semantic-error (#ef4444) */
+--brand-user              /* Dynamic user-chosen accent (Warren pattern) */
+--text-micro            /* 10px - badge and chart labels */
+--text-nano             /* 9px - axis labels, Gantt annotations */
+--typography-display      /* 48px - large display text */
+--shadow-card           /* 0 2px 12px rgba(0,0,0,0.10) */
+--shadow-card-lifted    /* 0 4px 18px rgba(0,0,0,0.14) */
+--shadow-sheet          /* 0 8px 28px rgba(0,0,0,0.20) */
+```
+
+### Glass Specular Overlays (CSS)
+
+```
+--glass-specular-top-edge    /* 1px white hairline, 28% opacity — Warren sfSpecularTopEdge */
+--glass-brand-lit-surface    /* White gradient sheen, 15% opacity — Warren sfBrandLitSurface */
+--glass-pill-specular        /* Radial highlight on pill/badge surfaces */
+--glass-color-strip-sheen    /* Linear gradient sheen on colored strips */
+```
+
+Motion presets added:
+```
+sheetEntry: easeOut 250ms
+cardAppear: easeOut 300ms
+dropSpring: stiffness 300, damping 30
+progressFill: stiffness 400, damping 75
+alluvial: stiffness 650, damping 82
+arcRing: easeOut 400ms
 ```
 
 ### Modified Tokens

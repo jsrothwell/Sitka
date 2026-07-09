@@ -66,9 +66,9 @@ interface ProgressBarProps {
 
 const fillColors = {
   default: "rgb(var(--accent))",
-  success: "rgb(var(--progress-fill-success))",
-  warning: "rgb(var(--progress-fill-warning))",
-  danger:  "rgb(var(--progress-fill-danger))",
+  success: "rgb(var(--progress-success))",
+  warning: "rgb(var(--progress-warning))",
+  danger:  "rgb(var(--progress-danger))",
 };
 
 const heights = { sm: 4, md: 6, lg: 8 };
@@ -444,10 +444,10 @@ export default function ProgressBarPage() {
             </thead>
             <tbody>
               {[
-                { token: "--progress-track", dark: "#26261e", light: "#e0e0e7", use: "Track background" },
-                { token: "--progress-fill-success", dark: "#10b981", light: "#10b981", use: "Success fill" },
-                { token: "--progress-fill-warning", dark: "#f59e0b", light: "#f59e0b", use: "Warning fill" },
-                { token: "--progress-fill-danger", dark: "#f87171", light: "#ef4444", use: "Danger fill" },
+                { token: "--progress-track", dark: "rgb(40, 42, 48)", light: "rgb(209, 213, 219)", use: "Track background" },
+                { token: "--progress-success", dark: "#22c55e", light: "#22c55e", use: "Success fill" },
+                { token: "--progress-warning", dark: "#f59e0b", light: "#f59e0b", use: "Warning fill" },
+                { token: "--progress-danger", dark: "#ef4444", light: "#ef4444", use: "Danger fill" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{row.token}</code></td>

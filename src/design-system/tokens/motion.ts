@@ -21,5 +21,11 @@ export const motion = {
     pageTransition: 'easeOut 300ms',
     hoverTransition: 'easeOut 150ms',
     stream: 'stiffness 200, damping 25',
+    sheetEntry: 'easeOut 250ms',
+    cardAppear: 'easeOut 300ms',
+    dropSpring: 'stiffness 300, damping 30',
+    progressFill: 'stiffness 400, damping 75',
+    alluvial: 'stiffness 650, damping 82',
+    arcRing: 'easeOut 400ms',
   },
 } as const;

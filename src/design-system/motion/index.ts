@@ -1,6 +1,6 @@
 import { motion as raw, type Variants } from 'framer-motion';
 
-export type SpringPreset = 'default' | 'press' | 'cardAppear' | 'panel' | 'page' | 'stream';
+export type SpringPreset = 'default' | 'press' | 'cardAppear' | 'panel' | 'page' | 'stream' | 'progressFill' | 'sheetEntry' | 'dropSpring';
 
 export const presets: Record<SpringPreset, Variants> = {
   default: {
@@ -26,6 +26,18 @@ export const presets: Record<SpringPreset, Variants> = {
   stream: {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { type: 'spring', stiffness: 200, damping: 25 } },
+  },
+  progressFill: {
+    hidden: { opacity: 1, width: 0 },
+    visible: { opacity: 1, width: '100%', transition: { type: 'spring', stiffness: 400, damping: 75 } },
+  },
+  sheetEntry: {
+    hidden: { opacity: 0, scale: 0.97 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.25, ease: 'easeOut' } },
+  },
+  dropSpring: {
+    hidden: { opacity: 1, y: 0 },
+    visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 300, damping: 30 } },
   },
 };
 

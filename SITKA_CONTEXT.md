@@ -7,7 +7,7 @@
 
 **Sitka** is a premium, multi-platform design system for building high-quality digital products across Web (React/Next.js) and iOS (SwiftUI). It is documentation-first: the docs site IS the product.
 
-- **Version:** 1.1.0
+- **Version:** 1.8.0
 - **Framework:** Next.js 15 (App Router), TypeScript
 - **Styling:** Tailwind CSS v4 + CSS custom properties (design tokens)
 - **Animation:** Framer Motion

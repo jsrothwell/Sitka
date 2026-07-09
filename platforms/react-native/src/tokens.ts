@@ -68,10 +68,15 @@ export const Colors = {
     textTertiary: "rgb(135, 135, 155)" as SitkaColor,
     border: "rgb(38, 38, 48)" as SitkaColor,
     borderSubtle: "rgb(26, 26, 33)" as SitkaColor,
+    progressTrack: "rgb(40, 42, 48)" as SitkaColor,
+    progressSuccess: "#22c55e" as SitkaColor,
+    progressWarning: "#f59e0b" as SitkaColor,
+    progressDanger: "#ef4444" as SitkaColor,
     statusSuccess: "rgb(16, 185, 129)" as SitkaColor,
     statusWarning: "rgb(245, 158, 11)" as SitkaColor,
     statusDanger: "rgb(248, 113, 113)" as SitkaColor,
     statusCaution: "rgb(249, 115, 22)" as SitkaColor,
+    brandUser: "#00C0E8" as SitkaColor,
   },
 
   // Light theme
@@ -92,6 +97,11 @@ export const Colors = {
     statusWarning: "rgb(245, 158, 11)" as SitkaColor,
     statusDanger: "rgb(239, 68, 68)" as SitkaColor,
     statusCaution: "rgb(234, 88, 12)" as SitkaColor,
+    progressTrack: "rgb(209, 213, 219)" as SitkaColor,
+    progressSuccess: "#22c55e" as SitkaColor,
+    progressWarning: "#f59e0b" as SitkaColor,
+    progressDanger: "#ef4444" as SitkaColor,
+    brandUser: "#00C0E8" as SitkaColor,
   },
 } as const;
 
@@ -137,15 +147,17 @@ export const Typography = {
     }) as string,
   },
   fontSize: {
+    micro: 10,
+    nano: 9,
     xs: 11,
     sm: 13,
     base: 15,
     lg: 17,
     xl: 20,
     "2xl": 24,
-    "3xl": 30,
-    "4xl": 36,
-    "5xl": 48,
+    "3xl": 28,
+    "4xl": 34,
+    display: 48,
   } as const,
   fontWeight: {
     regular: "400" as const,
