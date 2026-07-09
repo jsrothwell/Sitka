@@ -7,6 +7,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.8.0] - 2026-07-09
+
+### Added
+
+#### New Components
+- **Progress Bar** — Non-interactive progress indicator with 4 variants (default/success/warning/danger), 3 sizes, indeterminate shimmer mode, and specular top-edge highlight
+- **KPI Tile** — Dashboard metric card with icon well, bold value, trend delta, and optional progress bar; 5 semantic variants (default/accent/success/warning/danger)
+- **Gauge** — 270° arc ring for utilization metrics with automatic color thresholds based on percentage
+- **Context Menu** — Glass-backed right-click/long-press menu with actions, separators, keyboard shortcuts, and destructive styling
+
+#### New Token P0-P1 Items
+- `--progress-track` — Track background color (rgb(40, 42, 48) dark / rgb(209, 213, 219) light)
+- `--progress-success` — Reference to semantic success colour
+- `--progress-warning` — Reference to semantic warning colour
+- `--progress-danger` — Reference to semantic error colour
+- `--brand-user` — Dynamic user-chosen accent override (Warren pattern)
+- `--text-micro` — 10px font size for badges and chart labels
+- `--text-nano` — 9px font size for axis labels and Gantt annotations
+- `--text-display` — 48px large display text (replaces 5xl)
+
+#### Motion Presets
+- `sheetEntry` — easeOut 250ms for sheet presentation
+- `cardAppear` — easeOut 300ms for card entry
+- `dropSpring` — stiffness 300, damping 30 for drop animations
+- `progressFill` — stiffness 400, damping 75 for progress animation
+- `alluvial` — stiffness 650, damping 82 for chart animations
+- `arcRing` — easeOut 400ms for gauge transitions
+
+### Changed
+- Typography scale: renamed `3xl` to 28px, `4xl` to 34px, removed `5xl` in favor of `display` at 48px
+- Progress tokens now defined in both dark and light theme sections
+
 ## [1.6.0] - 2026-06-12
 
 ### Added
