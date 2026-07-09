@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/site/docs/PageHeader";
+import { accessibleForeground } from "@/lib";
 
 export const metadata: Metadata = { title: "Contrast" };
 
@@ -252,7 +253,9 @@ export default function ContrastPage() {
           When rendering text on a dynamic background — colour picker swatches, user-assigned tags, status badges — you
           cannot hardcode a foreground colour. Use <code className="font-mono text-[11px] text-[rgb(var(--accent))]">accessibleForeground()</code> to compute
           whether black or white text produces the higher contrast ratio against any background hex.
-          This is the TypeScript port of Warren&apos;s Swift <code className="font-mono text-[11px] text-[rgb(var(--accent))]">sfAccessibleForeground()</code> function.
+          This is the TypeScript port of Warren&apos;s Swift <code className="font-mono text-[11px] text-[rgb(var(--accent))]">sfAccessibleForeground()</code> function,
+          shipped in the library as <code className="font-mono text-[11px] text-[rgb(var(--accent))]">import {"{"} accessibleForeground {"}"} from &quot;@sitka/react&quot;</code> alongside
+          <code className="font-mono text-[11px] text-[rgb(var(--accent))]"> relativeLuminance()</code> and <code className="font-mono text-[11px] text-[rgb(var(--accent))]">contrastRatio()</code>.
         </p>
 
         <div className="grid grid-cols-2 gap-4 mb-5">
@@ -332,13 +335,7 @@ export function accessibleForeground(
             { bg: "#FFFFFF", label: "White" },
             { bg: "#000000", label: "Black" },
           ].map(({ bg, label }) => {
-            const hex = bg.slice(1);
-            const r = parseInt(hex.slice(0, 2), 16) / 255;
-            const g = parseInt(hex.slice(2, 4), 16) / 255;
-            const b = parseInt(hex.slice(4, 6), 16) / 255;
-            const lin = (c: number) => c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-            const lum = 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b);
-            const fg = lum > 0.179 ? "#000000" : "#ffffff";
+            const fg = accessibleForeground(bg);
             return (
               <div
                 key={bg}

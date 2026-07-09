@@ -3,6 +3,7 @@ export * from "./Badge";
 export * from "./BottomSheet";
 export * from "./BottomTabBar";
 export * from "./Box";
+export * from "./BrandLogo";
 export * from "./Button";
 export * from "./Card";
 export * from "./ChatMessage";

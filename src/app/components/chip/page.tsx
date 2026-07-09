@@ -131,6 +131,45 @@ export default function ChipPage() {
         </div>
       </section>
 
+      {/* ── Vibe / mood indicator (recipe) ───────────── */}
+      <section className="mb-12">
+        <div className="flex items-center gap-2 mb-2">
+          <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))]">Vibe / mood indicator</h2>
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] px-2 py-0.5 rounded-full border border-[rgb(var(--border))]">Recipe</span>
+        </div>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
+          A non-interactive chip variant that pairs an emoji with a short label to convey mood, sentiment, or
+          informal status — e.g. how an applicant felt about an interview. Reuses the chip&apos;s capsule shape and
+          sizing; the only difference is a leading emoji glyph in place of an icon and a disabled interaction model.
+        </p>
+        <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--background))] p-8 flex flex-wrap gap-2">
+          {[
+            { emoji: "🔥", label: "Great vibe" },
+            { emoji: "🙂", label: "Positive" },
+            { emoji: "😐", label: "Neutral" },
+            { emoji: "😬", label: "Awkward" },
+            { emoji: "💀", label: "Rough" },
+          ].map(({ emoji, label }) => (
+            <div
+              key={label}
+              className="inline-flex items-center gap-1.5 h-8 px-3 rounded-full text-[12px] font-medium border select-none"
+              style={{
+                background: "rgb(var(--surface))",
+                borderColor: "rgb(var(--border))",
+                color: "rgb(var(--text-secondary))",
+              }}
+            >
+              <span className="text-[13px]" aria-hidden="true">{emoji}</span>
+              {label}
+            </div>
+          ))}
+        </div>
+        <p className="text-[12px] text-[rgb(var(--text-tertiary))] mt-3">
+          The emoji is decorative (<code className="font-mono">aria-hidden</code>) — the label text carries the meaning, so it must
+          never be omitted in favour of the emoji alone.
+        </p>
+      </section>
+
       {/* ── Anatomy ──────────────────────────────────── */}
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-6">Anatomy</h2>
