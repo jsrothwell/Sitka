@@ -106,7 +106,7 @@ export default function HomePage() {
 
       {/* ── Footer ────────────────────────────────────── */}
       <section className="pt-8 pb-2 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <p className="label-mono">Sitka Standards · v1.7.0</p>
+        <p className="label-mono">Sitka Standards · v1.8.0</p>
         <div className="flex items-center gap-5">
           {[
             { label: "Changelog", href: "/changelog" },

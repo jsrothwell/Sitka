@@ -5,6 +5,26 @@ export const metadata: Metadata = { title: "Changelog" };
 
 const RELEASES = [
   {
+    version: "1.8.0",
+    date: "2026-07-09",
+    tag: "Latest",
+    summary: "Progress Bar, KPI Tile, Gauge, and Context Menu components with new design tokens for progress tracking and typography.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "Progress Bar component — non-interactive progress indicator with 4 variants, 3 sizes, indeterminate shimmer mode, and specular top-edge highlight",
+          "KPI Tile component — dashboard metric card with icon well, bold value, trend delta, and optional progress bar; 5 semantic variants",
+          "Gauge component — 270° arc ring for utilization metrics with automatic color thresholds based on percentage",
+          "Context Menu component — glass-backed right-click/long-press menu with actions, separators, keyboard shortcuts, and destructive styling",
+          "New tokens: --progress-track, --progress-success, --progress-warning, --progress-danger, --brand-user",
+          "New typography tokens: --text-micro (10px), --text-nano (9px), --text-display (48px)",
+          "New motion presets: sheetEntry, cardAppear, dropSpring, progressFill, alluvial, arcRing",
+        ],
+      },
+    ],
+  },
+  {
     version: "1.7.0",
     date: "2026-07-02",
     tag: "Latest",
