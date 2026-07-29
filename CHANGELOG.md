@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.9.0] - 2026-07-29
+
+### Ecosystem audit
+
+Reviewed all eight consuming app repos (`workflo`, `Warren`, `orgflo`, `Muse`, `matchflo`, `JobFlo`, `invoiceflo`, `habitflo`) plus the central `Sitkaflo` Swift package for drift against this design system. Full findings, including items intentionally **not** auto-applied because they need a human decision, are in `ECOSYSTEM_AUDIT_2026-07-29.md`. Headlines:
+
+- Three non-interoperable motion-token vocabularies exist across `tokens.json`, the `SFMotion` dialect (orgflo/JobFlo/matchflo), and the `Sitkaflo` package's own `SitkaAnimationTokens` — needs consolidation.
+- `themes.light.statusSuccess` fails WCAG AA against white (≈2.5:1, verified with `src/lib/contrast.ts`); at least two downstream apps (workflo, matchflo) already carry independently-derived, passing light-mode values that Sitka doesn't. Needs a full contrast pass across both theme blocks.
+- Five apps pick five different brand accents (cyan, green, violet ×2, spruce) — likely an intentional per-product/personalization pattern rather than drift, but `tokens.json` has no formal override slot for it.
+- `matchflo`'s `gap` and Sitka's existing `statusCaution` token likely name the same color differently — needs reconciling before the color-blind-safe status system (matchflo/Sitkaflo) can be adopted.
+- `habitflo` and `invoiceflo` each independently built an `MLNudgeBannerView` with incompatible APIs.
+- 17 new component/pattern candidates catalogued (Command Palette, Calendar Heatmap, on-device Model Download Status, Flow Layout, Voice Dictation Button, and others) — not yet built, prioritized in the audit doc.
+
+### Added
+
+#### New Token Items
+- `--ghost` — muted/stale status color for "gone quiet" signals, distinct from warning/danger (JobFlo pattern). Dark value only; light value pending a contrast pass.
+- `color.personalization.{purple,pink,teal}` — light/dark accent pairs for per-item personalization pickers (workflo pattern), completing the set alongside existing brand/semantic colors.
+- `color.categorical.{1-4}` — muted, non-semantic qualitative palette for tag/chip differentiation (Warren pattern).
+
+### Fixed
+- `motion.presets.chipTap` — announced as added in 1.6.0 but absent from `tokens.json` since; restored as `stiffness 220, damping 65`.
+
 ## [1.8.0] - 2026-07-09
 
 ### Added
