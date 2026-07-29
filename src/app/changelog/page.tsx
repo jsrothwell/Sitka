@@ -5,9 +5,42 @@ export const metadata: Metadata = { title: "Changelog" };
 
 const RELEASES = [
   {
+    version: "1.9.0",
+    date: "2026-07-29",
+    tag: "Latest",
+    summary: "Ecosystem audit across all 8 consuming app repos (workflo, Warren, orgflo, Muse, matchflo, JobFlo, invoiceflo, habitflo) and the central SitkaFlo Swift package. New ghost/personalization/categorical color tokens and a restored chipTap motion preset; every finding requiring a design decision — three incompatible motion vocabularies, a light-mode contrast failure, five diverging brand accents, a gap/caution naming collision, and 17 candidate new components — is catalogued in ECOSYSTEM_AUDIT_2026-07-29.md rather than auto-applied.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "Token: --ghost — muted/stale status color for \"gone quiet\" signals, distinct from warning/danger (JobFlo pattern)",
+          "Token: color.personalization.{purple,pink,teal} — light/dark accent pairs for per-item personalization pickers (workflo pattern)",
+          "Token: color.categorical.{1-4} — muted, non-semantic qualitative palette for tag/chip differentiation (Warren pattern)",
+        ],
+      },
+      {
+        label: "Fixed",
+        items: [
+          "motion.presets.chipTap — announced as added in 1.6.0 but absent from tokens.json since; restored as stiffness 220, damping 65",
+        ],
+      },
+      {
+        label: "Documented (not yet applied)",
+        items: [
+          "Three non-interoperable motion-token vocabularies across tokens.json, the SFMotion dialect, and the SitkaFlo package's own SitkaAnimationTokens",
+          "themes.light.statusSuccess fails WCAG AA (~2.5:1 against white) — workflo and matchflo already carry independently-derived, passing values",
+          "Five apps use five different brand accents with no formal override token to codify the pattern",
+          "matchflo's \"gap\" color and Sitka's existing statusCaution token likely name the same color differently",
+          "habitflo and invoiceflo each independently built an MLNudgeBannerView with incompatible APIs",
+          "17 candidate components catalogued: Command Palette, Calendar Heatmap, on-device Model Download Status, Flow Layout, Voice Dictation Button, and more",
+        ],
+      },
+    ],
+  },
+  {
     version: "1.8.0",
     date: "2026-07-09",
-    tag: "Latest",
+    tag: "",
     summary: "Progress Bar, KPI Tile, Gauge, and Context Menu components with new design tokens for progress tracking and typography.",
     sections: [
       {
