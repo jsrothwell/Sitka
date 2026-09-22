@@ -5,9 +5,33 @@ export const metadata: Metadata = { title: "Changelog" };
 
 const RELEASES = [
   {
+    version: "1.10.0",
+    date: "2026-09-22",
+    tag: "Latest",
+    summary: "Kitchen-sink internal QA page, a blur-behind-lock paywall variant, and two new patterns (Journey Timeline, Live Activities) from a JobFlo delta audit — a follow-up pass on ~91 commits since the 1.9.0 ecosystem audit. No token changes this pass; two new ad-hoc accent colors were deliberately left out pending the still-open per-app-accent decision from 1.9.0.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "/kitchen-sink — internal-only live component preview page (Button, Input, Card, Badge, Typography, Layout, Glassmorphism); not linked from the sidebar",
+          "Paywall pattern: blur-behind-lock variant, generalized from JobFlo's LockedFeaturePreview, using the existing accent token",
+          "New pattern: Journey Timeline — vertical stepper for linear, ordered processes",
+          "New pattern: Live Activities — documents the ActivityKit surface as structurally distinct from mobile-widgets (solid-tint-only chrome, no glass/System Materials)",
+        ],
+      },
+      {
+        label: "Documented (not yet applied)",
+        items: [
+          "Six new reusable patterns found in JobFlo, catalogued in JOBFLO_DELTA_AUDIT_2026-09-22.md",
+          "Two new ad-hoc violet accents (paywall lock CTA, letter-grade risk badge) — same unresolved per-app accent question as 1.9.0's audit, not new problems",
+        ],
+      },
+    ],
+  },
+  {
     version: "1.9.0",
     date: "2026-07-29",
-    tag: "Latest",
+    tag: "",
     summary: "Ecosystem audit across all 8 consuming app repos (workflo, Warren, orgflo, Muse, matchflo, JobFlo, invoiceflo, habitflo) and the central SitkaFlo Swift package. New ghost/personalization/categorical color tokens and a restored chipTap motion preset; every finding requiring a design decision — three incompatible motion vocabularies, a light-mode contrast failure, five diverging brand accents, a gap/caution naming collision, and 17 candidate new components — is catalogued in ECOSYSTEM_AUDIT_2026-07-29.md rather than auto-applied.",
     sections: [
       {

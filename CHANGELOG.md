@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.10.0] - 2026-09-22
+
+### Added
+
+- `/kitchen-sink` — internal-only live component preview page (Button, Input, Card, Badge, Typography, Layout, Glassmorphism) for visual QA and token verification. Not linked from the sidebar.
+- Paywall pattern: "blur-behind-lock" variant — blurs real content behind an unlock CTA instead of a cold interstitial, generalized from JobFlo's `LockedFeaturePreview`. Uses the existing accent token, not a new color.
+- New pattern: Journey Timeline — a vertical stepper for linear, ordered processes (application journeys, onboarding steps, order tracking), generalized from JobFlo's `JourneyTimelineRow`.
+- New pattern: Live Activities — documents the ActivityKit surface as structurally distinct from WidgetKit's `mobile-widgets` pattern (solid-tint-only chrome, no glass/System Materials, white-on-tint text, the five Dynamic Island/lock-screen regions).
+
 ### JobFlo delta audit
 
 Reviewed JobFlo's ~91 commits since the 1.9.0 ecosystem audit for new design-system-relevant patterns. Full findings in `JOBFLO_DELTA_AUDIT_2026-09-22.md`. No token changes applied this pass (nothing safe/judgment-free to add). Headlines:
