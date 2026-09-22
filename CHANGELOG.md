@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### JobFlo delta audit
+
+Reviewed JobFlo's ~91 commits since the 1.9.0 ecosystem audit for new design-system-relevant patterns. Full findings in `JOBFLO_DELTA_AUDIT_2026-09-22.md`. No token changes applied this pass (nothing safe/judgment-free to add). Headlines:
+
+- Six new reusable patterns found, none yet in Sitka or Sitkaflo: an empty-state template, a paywall "blur behind lock" overlay variant, a letter-grade risk badge, a contrast-aware foreground-color picker utility (complementary to Sitkaflo's existing CVD color substitution), an "explain this score" breakdown drawer, and a timeline/stepper row.
+- `color.semantic.ghost` (added in 1.9.0) is now confirmed in production use in JobFlo.
+- Live Activities / Dynamic Island are genuinely new territory (unlike home-screen widgets, already documented in `patterns/mobile-widgets`) — recommend documenting them around the constraint that ActivityKit surfaces can't use Sitka's normal glass/card chrome, rather than trying to tokenize them.
+- Two new ad-hoc violet accents surfaced (paywall lock CTA, letter-grade badge) — both are the same unresolved per-app accent question from 1.9.0's audit (§2.2), not new problems.
+
 ## [1.9.0] - 2026-07-29
 
 ### Ecosystem audit
