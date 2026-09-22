@@ -205,6 +205,7 @@ export const navigation: NavSection[] = [
           { title: "Onboarding", href: "/patterns/onboarding" },
           { title: "Mobile Navigation", href: "/patterns/mobile-navigation" },
           { title: "Mobile Widgets", href: "/patterns/mobile-widgets" },
+          { title: "Live Activities", href: "/patterns/live-activities", badge: "New" },
           { title: "Mobile Time Logging", href: "/patterns/mobile-time-logging", badge: "New" },
           { title: "Voice Memo & Dictation", href: "/patterns/voice-memo", badge: "New" },
           { title: "Interview Email Parser", href: "/patterns/interview-parser", badge: "New" },
@@ -232,6 +233,7 @@ export const navigation: NavSection[] = [
         title: "Workflow",
         items: [
           { title: "Activity Feed", href: "/patterns/activity-feed", badge: "New" },
+          { title: "Journey Timeline", href: "/patterns/journey-timeline", badge: "New" },
           { title: "Multi-select & Bulk Actions", href: "/patterns/multi-select", badge: "New" },
           { title: "Data Entry", href: "/patterns/data-entry" },
           { title: "Drag and Drop", href: "/patterns/drag-drop" },

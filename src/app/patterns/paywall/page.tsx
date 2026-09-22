@@ -449,6 +449,166 @@ struct LeadingIconLabelStyle: LabelStyle {
     PaywallView()
 }`,
   },
+  lockOverlay: {
+    react: {
+      filename: "LockedContentPreview.tsx",
+      code: `interface LockedContentPreviewProps {
+  trigger: string;
+  headline: string;
+  subheadline: string;
+  onUnlock: () => void;
+  children: React.ReactNode;
+}
+
+// Shows a blurred, non-interactive preview of the real content behind a
+// lock card instead of a cold, full-screen paywall interstitial —
+// aspiration converts better than a wall.
+export function LockedContentPreview({
+  trigger,
+  headline,
+  subheadline,
+  onUnlock,
+  children,
+}: LockedContentPreviewProps) {
+  return (
+    <div className="relative">
+      {/* The blur is only visual — aria-hidden stops screen readers from
+          announcing the real content underneath (a job title, a balance,
+          personal notes) node by node. */}
+      <div aria-hidden="true" className="pointer-events-none select-none blur-md opacity-60">
+        {children}
+      </div>
+
+      <div className="absolute inset-0 bg-black/15" />
+
+      <div
+        role="region"
+        aria-label={\`\${headline}. \${subheadline}\`}
+        className="absolute inset-0 flex flex-col items-center justify-center gap-3.5 p-7"
+      >
+        <div className="flex h-13 w-13 items-center justify-center rounded-full bg-[rgb(var(--accent)/0.2)]">
+          <LockIcon className="h-5 w-5 text-[rgb(var(--accent))]" />
+        </div>
+        <p className="text-center text-[18px] font-bold text-[rgb(var(--text-primary))]">{headline}</p>
+        <p className="max-w-[280px] text-center text-[13px] text-[rgb(var(--text-secondary))]">{subheadline}</p>
+        <button
+          onClick={onUnlock}
+          className="rounded-full bg-[rgb(var(--accent))] px-5 py-2.5 text-[14px] font-bold text-white hover:opacity-90"
+        >
+          Unlock {trigger}
+        </button>
+      </div>
+    </div>
+  );
+}`,
+    },
+    html: {
+      filename: "locked-content-preview.html",
+      code: `<div class="locked-preview">
+  <!-- aria-hidden stops screen readers announcing the blurred content
+       underneath node by node — the blur alone is a visual-only cue. -->
+  <div class="locked-preview__content" aria-hidden="true">
+    <!-- real content goes here -->
+  </div>
+
+  <div class="locked-preview__scrim"></div>
+
+  <div class="locked-preview__card" role="region" aria-label="Unlock Pro. Upgrade to see full details.">
+    <div class="locked-preview__icon"><!-- lock icon --></div>
+    <p class="locked-preview__headline">Unlock Pro</p>
+    <p class="locked-preview__subheadline">Upgrade to see full details.</p>
+    <button class="locked-preview__cta">Unlock Pro</button>
+  </div>
+</div>
+
+<style>
+.locked-preview { position: relative; }
+.locked-preview__content {
+  filter: blur(14px);
+  opacity: 0.6;
+  pointer-events: none;
+  user-select: none;
+}
+.locked-preview__scrim {
+  position: absolute; inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+.locked-preview__card {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 14px; padding: 28px; text-align: center;
+}
+</style>`,
+    },
+    swift: {
+      filename: "LockedContentPreview.swift",
+      code: `import SwiftUI
+
+/// Wraps a gated screen so free-tier users see a blurred preview of the
+/// real content instead of a cold, full-screen paywall interstitial.
+/// Aspiration converts better than a wall.
+struct LockedContentPreview<Content: View>: View {
+    let trigger: String
+    let headline: String
+    let subheadline: String
+    let onUnlock: () -> Void
+    @ViewBuilder let content: () -> Content
+
+    var body: some View {
+        ZStack {
+            content()
+                .allowsHitTesting(false)
+                .blur(radius: 14)
+                .opacity(0.6)
+                // The blur is only visual — without this, VoiceOver still
+                // reads the underlying content's text (e.g. a job's title,
+                // company, personal notes) node by node.
+                .accessibilityHidden(true)
+
+            Color.black.opacity(0.18).ignoresSafeArea()
+
+            VStack(spacing: 14) {
+                ZStack {
+                    Circle()
+                        .fill(Color.accentColor.opacity(0.2))
+                        .frame(width: 52, height: 52)
+                    Image(systemName: "lock.fill")
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundStyle(Color.accentColor)
+                }
+
+                Text(headline)
+                    .font(.system(size: 18, weight: .bold))
+                    .foregroundStyle(.primary)
+                    .multilineTextAlignment(.center)
+
+                Text(subheadline)
+                    .font(.system(size: 13))
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                Button(action: onUnlock) {
+                    Text("Unlock \\(trigger)")
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 22)
+                        .padding(.vertical, 11)
+                        .background(Color.accentColor)
+                        .clipShape(Capsule())
+                }
+                .buttonStyle(.plain)
+            }
+            .padding(28)
+            .frame(maxWidth: 340)
+            .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+            // Group the card into one VoiceOver stop rather than four.
+            .accessibilityElement(children: .combine)
+        }
+    }
+}`,
+    },
+  },
   macos: {
     filename: "PaywallView+macOS.swift",
     code: `import SwiftUI
@@ -568,6 +728,7 @@ export default function PaywallPage() {
   const [billing, setBilling] = useState<"monthly" | "yearly">("monthly");
   const [dismissed, setDismissed] = useState(false);
   const [upgraded, setUpgraded] = useState<string | null>(null);
+  const [variantUnlocked, setVariantUnlocked] = useState(false);
 
   return (
     <div>
@@ -794,6 +955,78 @@ export default function PaywallPage() {
         <PlatformTabs code={CODE} />
       </section>
 
+      {/* Variant: blur-behind-lock */}
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Variant: blur-behind-lock</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
+          When a specific screen is gated rather than the whole product, a blurred preview of the real content — with an &quot;Unlock&quot; card floating over it — converts better than a cold interstitial: the user sees what they&apos;re paying for, not just a sales pitch. Use this for a single locked feature reached by navigating in; use the full paywall above for global upgrade prompts and plan comparison.
+        </p>
+
+        {/* Preview */}
+        <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))] p-6 mb-6">
+          <div className="relative mx-auto max-w-sm overflow-hidden rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))]">
+            {variantUnlocked ? (
+              <div className="flex flex-col items-center gap-3 py-14 text-center">
+                <span className="text-3xl">🔓</span>
+                <p className="text-[14px] font-semibold text-[rgb(var(--text-primary))]">Unlocked</p>
+                <button
+                  onClick={() => setVariantUnlocked(false)}
+                  className="text-[12px] text-[rgb(var(--accent))] underline underline-offset-2"
+                >
+                  Reset demo
+                </button>
+              </div>
+            ) : (
+              <>
+                {/* Fake gated content — aria-hidden, matching the real implementation */}
+                <div aria-hidden="true" className="pointer-events-none select-none space-y-3 p-6 opacity-60 blur-md">
+                  <div className="h-4 w-2/3 rounded bg-[rgb(var(--text-tertiary))]/30" />
+                  <div className="h-3 w-full rounded bg-[rgb(var(--text-tertiary))]/20" />
+                  <div className="h-3 w-5/6 rounded bg-[rgb(var(--text-tertiary))]/20" />
+                  <div className="h-24 w-full rounded-lg bg-[rgb(var(--text-tertiary))]/15" />
+                  <div className="h-3 w-1/2 rounded bg-[rgb(var(--text-tertiary))]/20" />
+                </div>
+                <div className="absolute inset-0 bg-black/15" />
+                <div
+                  role="region"
+                  aria-label="Unlock full history. Upgrade to see your complete application timeline."
+                  className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-7"
+                >
+                  <div className="flex h-13 w-13 items-center justify-center rounded-full bg-[rgb(var(--accent)/0.2)]">
+                    <span className="text-[20px]">🔒</span>
+                  </div>
+                  <p className="text-[16px] font-bold text-[rgb(var(--text-primary))]">Unlock full history</p>
+                  <p className="max-w-[260px] text-center text-[12px] text-[rgb(var(--text-secondary))]">
+                    Upgrade to see your complete application timeline.
+                  </p>
+                  <button
+                    onClick={() => setVariantUnlocked(true)}
+                    className="rounded-full bg-[rgb(var(--accent))] px-5 py-2 text-[13px] font-bold text-white hover:opacity-90"
+                  >
+                    Unlock
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+
+        <div className="rounded-[10px] p-4 mb-6" style={{ backgroundColor: "var(--card-tint-bg)" }}>
+          <span className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: "var(--nav-active-color)" }}>
+            Accessibility note
+          </span>
+          <p className="text-[13px] text-[rgb(var(--text-secondary))] mt-1 leading-relaxed">
+            The blur is a visual effect only — it does nothing to stop a screen reader from reading the real content underneath, node by node (a job title, a balance, personal notes). Mark the blurred content <code className="font-mono text-[12px] text-[rgb(var(--accent))]">aria-hidden</code> / <code className="font-mono text-[12px] text-[rgb(var(--accent))]">.accessibilityHidden(true)</code> and give the lock card its own <code className="font-mono text-[12px] text-[rgb(var(--accent))]">role=&quot;region&quot;</code> / combined accessibility element with a label that already states what&apos;s locked and why — this was a real bug found in production, not a hypothetical.
+          </p>
+        </div>
+
+        <p className="text-[13px] text-[rgb(var(--text-tertiary))] mb-4">
+          Use Sitka&apos;s existing accent token for the lock icon and CTA — don&apos;t introduce a one-off color for this variant.
+        </p>
+
+        <PlatformTabs code={CODE.lockOverlay} />
+      </section>
+
       {/* Accessibility */}
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
@@ -804,6 +1037,7 @@ export default function PaywallPage() {
             "Each plan card's CTA must include the plan name in its accessible label: 'Upgrade to Pro' not just 'Upgrade', since multiple upgrade buttons share a page.",
             "The 'Maybe later' link must remain reachable via Tab. Never trap users in the paywall without an accessible exit.",
             "Price amounts must use aria-label to convey currency: aria-label='$12 per month' not just '12'.",
+            "For the blur-behind-lock variant, hide the blurred content from assistive tech entirely (aria-hidden / .accessibilityHidden(true)) — blurring is a sighted-only cue and does not stop a screen reader from announcing what's underneath.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
               <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
