@@ -1027,6 +1027,8 @@ export default function PaywallPage() {
         <PlatformTabs code={CODE.lockOverlay} />
       </section>
 
+      <SoftLimitVariants />
+
       {/* Accessibility */}
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
@@ -1047,5 +1049,114 @@ export default function PaywallPage() {
         </ul>
       </section>
     </div>
+  );
+}
+
+/**
+ * Variants generalized from JobFlo's ConversionViews.swift: a free-usage meter
+ * that appears from halfway to the cap, and a dismissible "moment" card shown
+ * after the event that makes the paid feature most useful.
+ */
+function SoftLimitVariants() {
+  const [used, setUsed] = useState(14);
+  const [cardDismissed, setCardDismissed] = useState(false);
+  const cap = 20;
+  const showMeter = used >= cap / 2;
+  const atCap = used >= cap;
+
+  return (
+    <section className="mb-12">
+      <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Variant: soft-limit meter &amp; moment card</h2>
+      <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
+        Two ways to make sure a limit never arrives as a surprise and an upsell never interrupts. The <strong>usage meter</strong> appears
+        inline where the limited thing is created, but only from halfway to the cap. The <strong>moment card</strong> appears on the
+        dashboard after the event that makes the paid feature most valuable — and stays out of the way of whatever the user was doing.
+      </p>
+
+      <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))] p-6 mb-6">
+        <div className="mx-auto grid max-w-2xl gap-5 md:grid-cols-2">
+          {/* Usage meter */}
+          <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Add Job sheet</p>
+            {showMeter ? (
+              <div className="rounded-lg bg-[rgb(var(--surface-raised))] p-3">
+                <div className="mb-1.5 flex justify-between text-[13px]">
+                  <span className="text-[rgb(var(--text-primary))]">
+                    {atCap ? "Free limit reached" : `${used} of ${cap} free jobs used`}
+                  </span>
+                  <button className="font-semibold text-[rgb(var(--accent))]">Go unlimited</button>
+                </div>
+                <div
+                  role="meter"
+                  aria-label="Free jobs used"
+                  aria-valuemin={0}
+                  aria-valuemax={cap}
+                  aria-valuenow={used}
+                  className="h-1.5 overflow-hidden rounded-full bg-[rgb(var(--progress-track))]"
+                >
+                  <div
+                    className="h-full rounded-full"
+                    style={{
+                      width: `${Math.min(used / cap, 1) * 100}%`,
+                      background: used / cap >= 0.85 ? "rgb(var(--status-warning))" : "rgb(var(--accent))",
+                    }}
+                  />
+                </div>
+              </div>
+            ) : (
+              <p className="text-[12px] text-[rgb(var(--text-tertiary))]">Hidden below {cap / 2} of {cap} — no meter yet.</p>
+            )}
+            <label className="mt-4 flex items-center gap-2 text-[11px] text-[rgb(var(--text-tertiary))]">
+              Used
+              <input type="range" min={0} max={cap} value={used} onChange={(e) => setUsed(Number(e.target.value))} className="flex-1" />
+              <span className="w-6 tabular-nums">{used}</span>
+            </label>
+          </div>
+
+          {/* Moment card */}
+          <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">Dashboard</p>
+            {cardDismissed ? (
+              <button onClick={() => setCardDismissed(false)} className="text-[12px] text-[rgb(var(--text-tertiary))] underline underline-offset-2">
+                Dismissed for 30 days · Reset demo
+              </button>
+            ) : (
+              <div className="flex items-start gap-3 rounded-lg bg-[rgb(var(--surface-raised))] p-3">
+                <span className="text-[20px] text-[rgb(var(--status-warning))]" aria-hidden>?</span>
+                <div className="flex-1">
+                  <p className="text-[14px] font-semibold text-[rgb(var(--text-primary))]">Applications are going quiet</p>
+                  <p className="mt-1 text-[12px] text-[rgb(var(--text-secondary))]">
+                    Search Health shows which job sources and résumés get answers, so your next applications go where they&apos;re answered.
+                  </p>
+                  <button className="mt-1 min-h-11 text-[13px] font-semibold text-[rgb(var(--accent))]">Unlock Search Health</button>
+                </div>
+                <button
+                  onClick={() => setCardDismissed(true)}
+                  aria-label="Dismiss"
+                  className="-mr-2 -mt-2 flex h-11 w-11 items-center justify-center text-[rgb(var(--text-tertiary))]"
+                >
+                  ✕
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
+        {[
+          "Meter: show it only from 50% of the cap, at the point of creation (the Add sheet), never as a global banner. Copy states the count, not a threat: “14 of 20 free jobs used”.",
+          "Moment card: trigger on a meaningful event happening while the app is open (an application going quiet), compared against a stored baseline — so the first launch after an update doesn't count months-old history as a new moment.",
+          "Moment card timing: visible for 7 days after the moment, and a dismissal keeps it away for 30 days. Both are tunable constants, not magic numbers in the view.",
+          "Copy sells the outcome of the paid feature for this exact situation, not the plan. The CTA names the feature (“Unlock Search Health”), and only then opens the full paywall.",
+          "Never gate the habit loop: the free sweep that keeps data accurate (see Review Sweep) stays free; the insight built on that data is what's paid.",
+        ].map((item) => (
+          <li key={item} className="flex gap-2">
+            <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }

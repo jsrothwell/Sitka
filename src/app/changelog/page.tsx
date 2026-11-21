@@ -5,9 +5,40 @@ export const metadata: Metadata = { title: "Changelog" };
 
 const RELEASES = [
   {
+    version: "1.11.0",
+    date: "2026-11-21",
+    tag: "Latest",
+    summary: "Cross-app pattern pass over Get Parked, JobFlo, scanflo, Fractionflo and Blackbox 1981: one new component, eight new patterns and a new paywall variant, all built from existing tokens. Closes the open items from the 2026-09-22 JobFlo audit. No token changes; token findings are in CROSS_APP_PATTERN_AUDIT_2026-11-21.md.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "New component: Cover Art — natural-aspect artwork with a generated typographic cover when no image exists (scanflo)",
+          "New pattern: Decaying Status — time-decaying confidence for crowdsourced signals (Get Parked)",
+          "New pattern: Community Report & Confirm — one-tap report picker and 'still there?' card (Get Parked)",
+          "New pattern: Score Explainer — letter-grade pill with computed accessible foreground and itemized breakdown (JobFlo)",
+          "New pattern: Review Sweep — guided weekly triage, one tap per row (JobFlo)",
+          "New pattern: Sync Status — compact/labeled indicator with a stalled state and diagnostic report (scanflo, JobFlo)",
+          "New pattern: Batch Capture Review — one capture, many detections, confirmed before saving (scanflo, JobFlo)",
+          "New pattern: Capacity & Runway — bandwidth gauge with overflow ring and 30/60/90-day runway (Fractionflo)",
+          "New pattern: Game Overlays — rules for fully themed game UI (Blackbox 1981)",
+          "Paywall pattern: soft-limit meter & moment card variant (JobFlo)",
+        ],
+      },
+      {
+        label: "Documented (not yet applied)",
+        items: [
+          "Status text tones: Fractionflo and JobFlo both work around status-colored text failing contrast on white — candidate status-*-text tokens",
+          "color.categorical.* exists in tokens.json but isn't exposed as CSS variables; Fractionflo and scanflo each carry their own categorical palettes",
+          "Eight more pattern candidates (map overlays, privacy-safe share card, CarPlay templates and others)",
+        ],
+      },
+    ],
+  },
+  {
     version: "1.10.0",
     date: "2026-09-22",
-    tag: "Latest",
+    tag: "",
     summary: "Kitchen-sink internal QA page, a blur-behind-lock paywall variant, and two new patterns (Journey Timeline, Live Activities) from a JobFlo delta audit — a follow-up pass on ~91 commits since the 1.9.0 ecosystem audit. No token changes this pass; two new ad-hoc accent colors were deliberately left out pending the still-open per-app-accent decision from 1.9.0.",
     sections: [
       {
