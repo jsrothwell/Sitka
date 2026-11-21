@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.11.0] - 2026-11-21
+
+### Added
+
+Cross-app pattern pass over Get Parked, JobFlo (since 2026-09-22), scanflo, Fractionflo and Blackbox 1981. Full findings in `CROSS_APP_PATTERN_AUDIT_2026-11-21.md`.
+
+#### New Components
+- **Cover Art** (`/components/cover-art`) — natural-aspect artwork with a generated typographic cover when no image exists; tiles share a common baseline (scanflo).
+
+#### New Patterns
+- **Decaying Status** — time-decaying confidence for crowdsourced signals, four tiers mapped to status tokens (Get Parked).
+- **Community Report & Confirm** — one-tap report picker plus "still there?" confirmation card (Get Parked).
+- **Score Explainer** — letter-grade pill with computed black/white foreground and an itemized "why this score" breakdown (JobFlo). Closes the three open items from the 2026-09-22 JobFlo audit (letter-grade badge, accessible foreground, explain drawer).
+- **Review Sweep** — guided weekly triage where every row resolves in one tap (JobFlo).
+- **Sync Status** — compact/labeled sync indicator with an explicit "stalled" state and a previewable diagnostic report (scanflo + JobFlo).
+- **Batch Capture Review** — one capture, many detections, numbered checklist confirmed before saving (scanflo Shelf Scan + JobFlo email import).
+- **Capacity & Runway** — bandwidth gauge with an overflow ring, allocation bar with target marker, 30/60/90-day runway tiles (Fractionflo).
+- **Game Overlays** — rules for fully themed game UI: no system-alert imitation, photosensitivity-safe pulses, 44pt text actions, purchase clarity (Blackbox 1981).
+
+#### Updated
+- **Paywall** — new "soft-limit meter & moment card" variant: a usage meter shown from 50% of a free cap, and a dismissible upsell card triggered by a meaningful in-app event (JobFlo `ConversionViews`).
+
+#### Tooling
+- `src/site/docs/PatternDoc.tsx` — shared section primitives (preview, tables, usage grid, source credit) for pattern pages.
+
 ## [1.10.0] - 2026-09-22
 
 ### Added
