@@ -619,6 +619,8 @@ export default function CompensationPage() {
         </div>
       </section>
 
+      <NegotiationWorkspace />
+
       {/* Accessibility */}
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Accessibility</h2>
@@ -637,5 +639,113 @@ export default function CompensationPage() {
         </ul>
       </section>
     </div>
+  );
+}
+
+/**
+ * Counter-offer workspace, generalized from JobFlo's NegotiationCard.swift:
+ * pick how far to push base, see year-one and annual totals move, and get a
+ * script to adapt.
+ */
+function NegotiationWorkspace() {
+  const offer = { base: 160000, bonusPct: 15, signing: 20000, rsuPerYear: 80000, postingTop: 182000 };
+  const [pct, setPct] = useState(10);
+  const [copied, setCopied] = useState(false);
+  const base = Math.round(offer.base * (1 + pct / 100));
+  // Bonus scales with base when it's a percentage; equity and signing stay as offered.
+  const bonus = (b: number) => Math.round((b * offer.bonusPct) / 100);
+  const fmt = (n: number) => `$${n.toLocaleString("en-US")}`;
+  const rows = [
+    ["Base salary", offer.base, base],
+    ["Year 1 total", offer.base + bonus(offer.base) + offer.signing + offer.rsuPerYear, base + bonus(base) + offer.signing + offer.rsuPerYear],
+    ["Annual total", offer.base + bonus(offer.base) + offer.rsuPerYear, base + bonus(base) + offer.rsuPerYear],
+  ] as const;
+  const anchorPct = Math.round((offer.postingTop / offer.base - 1) * 100);
+  const script = `Thank you for the offer for Senior Product Designer. I'm excited about joining the team and the work ahead.\n\nBased on the scope of the role and what I'd bring to it, I'd like to ask for a base salary of ${fmt(base)}. If we can get there, I'm ready to accept.\n\nI'm glad to talk it through, and I'm flexible on how we get there.`;
+
+  return (
+    <section className="mb-12">
+      <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Negotiation workspace</h2>
+      <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
+        Under an offer, a counter-offer workspace turns “should I negotiate?” into a concrete number: one slider for the increase on base,
+        offered → countered totals side by side, the posting&apos;s advertised maximum as an anchor, and a script that updates with the number.
+        Generalized from JobFlo&apos;s <code>NegotiationCard.swift</code>.
+      </p>
+
+      <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))] p-6 mb-6">
+        <div className="mx-auto max-w-md rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
+          <p className="mb-3 text-[16px] font-bold text-[rgb(var(--text-primary))]">⇄ Negotiate</p>
+          <label className="block">
+            <span className="flex justify-between text-[13px] text-[rgb(var(--text-primary))]">
+              Counter on base <span className="font-semibold tabular-nums">+{pct}%</span>
+            </span>
+            <input
+              type="range"
+              min={0}
+              max={30}
+              step={1}
+              value={pct}
+              onChange={(e) => setPct(Number(e.target.value))}
+              aria-label="Counter-offer increase on base salary"
+              aria-valuetext={`${pct} percent`}
+              className="mt-1 w-full"
+            />
+          </label>
+          <table className="mt-3 w-full text-[13px]">
+            <caption className="sr-only">Offered versus countered compensation</caption>
+            <thead className="sr-only">
+              <tr>
+                <th scope="col">Component</th>
+                <th scope="col">Offered</th>
+                <th scope="col">Countered</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map(([label, a, b]) => (
+                <tr key={label}>
+                  <th scope="row" className="py-1 text-left font-normal text-[rgb(var(--text-secondary))]">{label}</th>
+                  <td className="py-1 text-right tabular-nums text-[rgb(var(--text-primary))]">{fmt(a)}</td>
+                  <td className="px-2 text-center text-[rgb(var(--text-tertiary))]" aria-hidden>→</td>
+                  <td className="py-1 text-right font-semibold tabular-nums text-[rgb(var(--text-primary))]">{fmt(b)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="mt-2 text-[12px] text-[rgb(var(--text-secondary))]">
+            The posting&apos;s range goes up to {fmt(offer.postingTop)}. That&apos;s {anchorPct}% above this offer, a reasonable anchor for your counter.
+          </p>
+          <div className="mt-3 border-t border-[rgb(var(--border-subtle))] pt-3">
+            <div className="mb-1.5 flex items-center justify-between">
+              <span className="text-[14px] font-semibold text-[rgb(var(--text-primary))]">Script</span>
+              <button
+                onClick={() => {
+                  navigator.clipboard?.writeText(script).catch(() => {});
+                  setCopied(true);
+                  setTimeout(() => setCopied(false), 2000);
+                }}
+                className="text-[13px] text-[rgb(var(--accent))]"
+              >
+                {copied ? "✓ Copied" : "Copy"}
+              </button>
+            </div>
+            <p className="whitespace-pre-line text-[13px] text-[rgb(var(--text-primary))]">{script}</p>
+          </div>
+        </div>
+      </div>
+
+      <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
+        {[
+          "Model the counter honestly: a percentage bonus scales with the new base; signing bonus and equity stay as offered. Show year-one (with signing) and ongoing annual totals separately.",
+          "Offer an anchor only when it's real — the posting's advertised maximum, and only when it's above the offer.",
+          "The script is a template that rewrites as the slider moves. An on-device model may redraft it, but only from facts provided — never invented competing offers.",
+          "Keep the range bounded (0–30%). The goal is a defensible ask, not a negotiation simulator.",
+        ].map((item) => (
+          <li key={item} className="flex gap-2">
+            <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }

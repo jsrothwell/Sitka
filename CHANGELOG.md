@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.12.0] - 2026-11-21
+
+Completes the candidate list from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §2. No token changes.
+
+### Added
+
+#### New Components
+- **Image Crop** (`/components/image-crop`) — fixed-ratio crop step: drag, pinch, one "Use Photo"; keyboard and VoiceOver alternatives for the gestures (scanflo).
+
+#### New Patterns
+- **Map Overlays** — two phase-driven chrome slots over a full-bleed map, one material for all floating surfaces, sheets that keep the map pannable (Get Parked).
+- **CarPlay Templates** — list → point-of-interest map → hand-off to a maps app, and the category constraints behind it (Get Parked).
+- **Share Card** — fixed 1080×1350 celebration image built only from aggregates, safe to post publicly (JobFlo).
+- **Inline Live Check** — advisory, non-blocking feedback beside a form once there's enough input to judge (JobFlo).
+- **Rating Prompt Moments** — ask for a rating only after an in-session success moment, once per version (JobFlo).
+
+#### Updated
+- **Compensation** — new Negotiation workspace section: counter-offer slider, offered → countered totals, posting-range anchor and an updating script (JobFlo).
+- **Command Palette** — "In production" notes from Fractionflo's scoped ⌘K client search.
+
+### Fixed
+- `/changelog` page: 1.7.0 was still tagged "Latest" alongside the current release.
+
 ## [1.11.0] - 2026-11-21
 
 ### Added

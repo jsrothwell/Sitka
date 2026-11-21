@@ -5,9 +5,30 @@ export const metadata: Metadata = { title: "Changelog" };
 
 const RELEASES = [
   {
-    version: "1.11.0",
+    version: "1.12.0",
     date: "2026-11-21",
     tag: "Latest",
+    summary: "Completes the cross-app candidate list from the 1.11.0 audit: one new component, five new patterns, and new sections on Compensation and Command Palette. No token changes.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "New component: Image Crop — fixed-ratio crop with keyboard and VoiceOver alternatives to drag and pinch (scanflo)",
+          "New pattern: Map Overlays — phase-driven top and bottom chrome slots over a full-bleed map (Get Parked)",
+          "New pattern: CarPlay Templates — list, point-of-interest map and maps-app hand-off (Get Parked)",
+          "New pattern: Share Card — privacy-safe celebration image built from aggregates only (JobFlo)",
+          "New pattern: Inline Live Check — advisory, non-blocking feedback while typing (JobFlo)",
+          "New pattern: Rating Prompt Moments — when, and when not, to ask for an App Store rating (JobFlo)",
+          "Compensation: Negotiation workspace section (JobFlo)",
+          "Command Palette: production notes from Fractionflo's scoped ⌘K search",
+        ],
+      },
+    ],
+  },
+  {
+    version: "1.11.0",
+    date: "2026-11-21",
+    tag: "",
     summary: "Cross-app pattern pass over Get Parked, JobFlo, scanflo, Fractionflo and Blackbox 1981: one new component, eight new patterns and a new paywall variant, all built from existing tokens. Closes the open items from the 2026-09-22 JobFlo audit. No token changes; token findings are in CROSS_APP_PATTERN_AUDIT_2026-11-21.md.",
     sections: [
       {
@@ -115,7 +136,7 @@ const RELEASES = [
   {
     version: "1.7.0",
     date: "2026-07-02",
-    tag: "Latest",
+    tag: "",
     summary: "Source alignment: typed TypeScript token layer, design-system umbrella, site/library separation, and a vitest test suite — bringing the web codebase into structural parity with the Swift SitkaTokens convention.",
     sections: [
       {

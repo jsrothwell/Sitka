@@ -325,6 +325,29 @@ export default function CommandPalettePage() {
         </div>
       </section>
 
+      {/* In production */}
+      <section className="mb-12">
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">In production</h2>
+        <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4 leading-relaxed">
+          Fractionflo&apos;s <code>QuickSearchView.swift</code> is a scoped variant: ⌘K jumps to a client by name, contact, industry or role.
+          Worth copying from it:
+        </p>
+        <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
+          {[
+            "Scope beats breadth for small apps — one entity type (clients) with rich matching is faster to learn than a palette of every command.",
+            "Results cap at 12, each with an avatar, a subtitle joining the contact name and up to two roles, and a trailing status pill.",
+            "The highlight resets to the first row whenever the query changes, so Enter always opens the top match.",
+            "↑/↓ are handled with .onKeyPress and Escape with .keyboardShortcut(.cancelAction); the field is focused on appear.",
+            "Distinct empty states: “No clients yet.” (nothing to search) versus “No matches.” (query too narrow).",
+          ].map((item) => (
+            <li key={item} className="flex gap-2">
+              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+
       {/* Accessibility */}
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">

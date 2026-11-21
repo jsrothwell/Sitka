@@ -21,16 +21,20 @@ Same rule as earlier audits: **no changes to `tokens.json`.** Every new page use
 | `/components/cover-art` | scanflo `CoverArt.swift`, `ThumbnailCropView.swift` | |
 | Paywall: soft-limit meter & moment card | JobFlo `ConversionViews.swift` (`FreeJobsMeter`, `GhostMomentCard`) | New variant section on the existing page. |
 
-## 2. Found but not built (candidates, by priority)
+## 2. Found in the first pass, built in 1.12.0
 
-1. **Map overlay chrome** (Get Parked `ContentView`, `TripViews`): a floating "Where to?" search bar, top and bottom overlay areas built with `safeAreaInset`, a trip card, a maneuver banner, a "better spot" heads-up banner, and a status legend. Worth a `patterns/map-overlays` page.
-2. **Privacy-safe share card** (JobFlo `SearchRecapCard.swift`): a fixed-size branded image rendered off-screen. It deliberately leaves out company names so it's safe to post publicly. Could live in Collaboration & Sharing.
-3. **Inline live check** (JobFlo `ListingCheckCard.swift`): plain-language warnings shown while someone types, staying silent below a minimum amount of text. Partly covered in Score Explainer; could become its own Form Validation variant.
-4. **CarPlay parking templates** (Get Parked `docs/carplay.md`, `CarPlayParkingCoordinator.swift`): `CPPointOfInterestTemplate` (up to 12 POIs) plus a hand-off to Maps for directions. Platform-integration doc, low priority.
-5. **Negotiation workspace** (JobFlo `NegotiationCard.swift`): a counter-offer slider showing year-one and annual totals, plus a script to adapt. Could extend `patterns/compensation`.
-6. **Review-prompt moments** (JobFlo `ReviewMomentObserver`): ask for an App Store rating only at happy moments that happen while the app is open, at most once per version. Belongs in a growth/lifecycle doc.
-7. **Fixed-aspect crop** (scanflo `ThumbnailCropView`): mentioned under Cover Art; not a standalone page yet.
-8. **Fractionflo `⌘K` QuickSearchView**: already covered by `components/command-palette`. Only worth adding as a real-world example.
+All eight candidates from the first pass are now documented:
+
+| Candidate | Source | Now at |
+|---|---|---|
+| Map overlay chrome | Get Parked `ContentView`, `TripViews` | `/patterns/map-overlays` |
+| Privacy-safe share card | JobFlo `SearchRecapCard.swift` | `/patterns/share-card` |
+| Inline live check | JobFlo `ListingCheckCard.swift` | `/patterns/live-check` |
+| CarPlay parking templates | Get Parked `CarPlayParkingCoordinator.swift`, `docs/carplay.md` | `/patterns/carplay` |
+| Negotiation workspace | JobFlo `NegotiationCard.swift` | Section on `/patterns/compensation` |
+| Review-prompt moments | JobFlo `ReviewMomentObserver`, `ReviewService` | `/patterns/rating-prompt` |
+| Fixed-aspect crop | scanflo `ThumbnailCropView.swift` | `/components/image-crop` |
+| Scoped ⌘K search | Fractionflo `QuickSearchView.swift` | "In production" section on `/components/command-palette` |
 
 ## 3. Token findings (not applied, need a decision)
 
