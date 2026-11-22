@@ -310,7 +310,7 @@ export default function MobileWidgetsPage() {
               {SIZES.map((s, i) => (
                 <tr key={s.name} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap">{s.name}</td>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{s.api}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{s.api}</code></td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))] whitespace-nowrap">{s.pts}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{s.use}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{s.avoid}</td>
@@ -375,7 +375,7 @@ export default function MobileWidgetsPage() {
             <div key={type} className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
               <div className="flex items-baseline justify-between mb-2">
                 <span className="text-[13px] font-semibold text-[rgb(var(--text-primary))]">{type}</span>
-                <span className="text-[10px] font-mono font-semibold text-[rgb(var(--accent))] bg-[rgb(var(--accent)/0.1)] px-2 py-0.5 rounded-full">{size}</span>
+                <span className="text-[10px] font-mono font-semibold text-[rgb(var(--accent-text))] bg-[rgb(var(--accent)/0.1)] px-2 py-0.5 rounded-full">{size}</span>
               </div>
               <p className="text-[12px] text-[rgb(var(--text-secondary))] leading-relaxed mb-2">{desc}</p>
               <p className="text-[11px] text-[rgb(var(--text-tertiary))] italic">{example}</p>
@@ -415,7 +415,7 @@ export default function MobileWidgetsPage() {
       <section className="mb-14">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Timeline and refresh</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
-          Widgets are not real-time views. They render a snapshot from a <code className="font-mono text-[13px] text-[rgb(var(--accent))]">TimelineEntry</code> the system provided, possibly minutes ago. Design for this model — never assume the widget reflects the current moment.
+          Widgets are not real-time views. They render a snapshot from a <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">TimelineEntry</code> the system provided, possibly minutes ago. Design for this model — never assume the widget reflects the current moment.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-6">
           <table className="w-full text-[13px]">
@@ -477,7 +477,7 @@ export default function MobileWidgetsPage() {
       <section className="mb-14">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">SwiftUI implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
-          A minimal WidgetKit widget requires three types: a <code className="font-mono text-[13px] text-[rgb(var(--accent))]">TimelineEntry</code>, a <code className="font-mono text-[13px] text-[rgb(var(--accent))]">TimelineProvider</code>, and a SwiftUI view. The widget struct wires them together.
+          A minimal WidgetKit widget requires three types: a <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">TimelineEntry</code>, a <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">TimelineProvider</code>, and a SwiftUI view. The widget struct wires them together.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] overflow-hidden">
           <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]">
@@ -580,7 +580,7 @@ struct ActivityWidget: Widget {
             },
           ].map(({ family, shape, use, note }) => (
             <div key={family} className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
-              <code className="text-[11px] font-mono text-[rgb(var(--accent))] block mb-1">{family}</code>
+              <code className="text-[11px] font-mono text-[rgb(var(--accent-text))] block mb-1">{family}</code>
               <span className="text-[11px] font-mono text-[rgb(var(--text-tertiary))] block mb-2">{shape}</span>
               <p className="text-[12px] text-[rgb(var(--text-secondary))] leading-relaxed mb-2">{use}</p>
               <p className="text-[11px] text-[rgb(var(--text-tertiary))] italic">{note}</p>
@@ -630,7 +630,7 @@ struct ActivityWidget: Widget {
             "Test with Reduce Transparency and Increase Contrast enabled. The .containerBackground modifier handles most cases automatically when using system materials.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               {item}
             </li>
           ))}

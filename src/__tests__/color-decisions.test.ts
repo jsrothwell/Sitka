@@ -53,6 +53,14 @@ describe.each(['light', 'dark'] as const)('text on solid fills — %s theme', (t
   const t = themes[theme];
   const ratio = (fg: string, bg: string) => contrastRatio(hex(parse(t[fg].$value)), hex(parse(t[bg].$value)));
 
+  it.each(['textPrimary', 'textSecondary', 'textTertiary', 'accentText'])('%s clears 4.5:1 on every surface', (fg) => {
+    for (const s of SURFACES) expect(ratio(fg, s)).toBeGreaterThanOrEqual(4.5);
+  });
+
+  it('accentText clears 4.5:1 on accentSubtle (badges, selected rows)', () => {
+    expect(ratio('accentText', 'accentSubtle')).toBeGreaterThanOrEqual(4.5);
+  });
+
   it('onAccent clears 4.5:1 on the accent (primary buttons)', () => {
     expect(ratio('onAccent', 'accent')).toBeGreaterThanOrEqual(4.5);
   });
@@ -63,6 +71,29 @@ describe.each(['light', 'dark'] as const)('text on solid fills — %s theme', (t
 
   it('dangerSolid clears 3:1 against every surface (WCAG 1.4.11 non-text)', () => {
     for (const s of SURFACES) expect(ratio('dangerSolid', s)).toBeGreaterThanOrEqual(3);
+  });
+});
+
+describe.each(['light', 'dark'] as const)('prefers-contrast: more — %s theme', (theme) => {
+  const more = (tokens.color as unknown as { contrastMore: Record<string, Record<string, { $value: string }>> }).contrastMore[theme];
+  const t = themes[theme];
+
+  it.each(['textSecondary', 'textTertiary'])('%s reaches 7:1 (AAA) on every surface', (key) => {
+    for (const s of SURFACES) expect(contrastRatio(hex(parse(more[key].$value)), hex(parse(t[s].$value)))).toBeGreaterThanOrEqual(7);
+  });
+
+  it('border reaches 3:1 on every surface', () => {
+    for (const s of SURFACES) expect(contrastRatio(hex(parse(more.border.$value)), hex(parse(t[s].$value)))).toBeGreaterThanOrEqual(3);
+  });
+
+  it('globals.css matches tokens.json', () => {
+    const css = readFileSync(resolve(__dirname, '../app/globals.css'), 'utf8');
+    const block = css.slice(css.indexOf('@media (prefers-contrast: more)'));
+    const part = theme === 'dark' ? block.split('[data-theme="light"]')[0] : block.split('[data-theme="light"]')[1];
+    for (const [key, name] of [['textSecondary', 'text-secondary'], ['textTertiary', 'text-tertiary'], ['border', 'border']]) {
+      const m = part.match(new RegExp(`--${name}:\\s*(\\d+)\\s+(\\d+)\\s+(\\d+)`));
+      expect(m && [Number(m[1]), Number(m[2]), Number(m[3])]).toEqual(parse(more[key].$value));
+    }
   });
 });
 

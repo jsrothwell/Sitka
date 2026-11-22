@@ -31,7 +31,7 @@ npm install`}
         <section>
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">3. Use components</h2>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Components live in <code className="font-mono text-[rgb(var(--accent))] text-[12px]">src/components/ui/</code>. Import directly:
+            Components live in <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">src/components/ui/</code>. Import directly:
           </p>
           <CodeBlock
             code={`import { Button } from "@/components/ui/Button";
@@ -68,7 +68,7 @@ export function MyPage() {
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">iOS / SwiftUI</h2>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
             Export the Swift token file from the{" "}
-            <a href="/tokens/export" className="text-[rgb(var(--accent))] underline underline-offset-2">
+            <a href="/tokens/export" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
               Token Export
             </a>{" "}
             page and add it to your Xcode project.

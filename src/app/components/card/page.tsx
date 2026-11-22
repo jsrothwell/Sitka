@@ -355,7 +355,7 @@ export default function CardPage() {
             <Card>
               <CardHeader>
                 <div className="flex items-center gap-2">
-                  <Star className="w-4 h-4 text-[rgb(var(--accent))]" />
+                  <Star className="w-4 h-4 text-[rgb(var(--accent-text))]" />
                   <span className="text-[13px] font-semibold text-[rgb(var(--text-primary))]">Default</span>
                 </div>
               </CardHeader>
@@ -374,7 +374,7 @@ export default function CardPage() {
             <Card variant="elevated">
               <CardHeader>
                 <div className="flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-[rgb(var(--accent))]" />
+                  <Zap className="w-4 h-4 text-[rgb(var(--accent-text))]" />
                   <span className="text-[13px] font-semibold text-[rgb(var(--text-primary))]">Elevated</span>
                 </div>
               </CardHeader>
@@ -422,10 +422,10 @@ export default function CardPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Interactive</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          Adding <code className="font-mono text-[13px] text-[rgb(var(--accent))]">interactive</code> enables hover
+          Adding <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">interactive</code> enables hover
           elevation, accent border on hover, and a subtle press scale. Pair with{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">as="button"</code> or{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">as="a"</code> for correct semantics.
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">as="button"</code> or{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">as="a"</code> for correct semantics.
         </p>
         <ComponentPreview>
           <div className="flex gap-4 flex-wrap justify-center">
@@ -506,7 +506,7 @@ export default function CardPage() {
             "Focus ring is inherited from the element — <button> cards receive it automatically.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

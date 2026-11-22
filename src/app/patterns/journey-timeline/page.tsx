@@ -68,7 +68,7 @@ export function TimelineRow({ icon, label, state, hint, trailing }: TimelineRowP
         {hint && (
           <span
             className={\`text-[12px] \${
-              state === "active" ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-tertiary))]"
+              state === "active" ? "text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-tertiary))]"
             }\`}
           >
             {hint}
@@ -243,7 +243,7 @@ export default function JourneyTimelinePage() {
                   {stage.hint && (
                     <span
                       className={`text-[12px] ${
-                        stage.state === "active" ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-tertiary))]"
+                        stage.state === "active" ? "text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-tertiary))]"
                       }`}
                     >
                       {stage.hint}
@@ -364,7 +364,7 @@ export default function JourneyTimelinePage() {
             "Wrap the whole sequence in role=\"list\" and each row in role=\"listitem\" on the web so assistive tech announces the row count and position ('item 3 of 4').",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}

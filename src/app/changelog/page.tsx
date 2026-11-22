@@ -18,7 +18,7 @@ function Inline({ text }: { text: string }) {
         ) : t.type === "bold" ? (
           <strong key={i} className="font-semibold text-[rgb(var(--text-primary))]">{t.value}</strong>
         ) : t.type === "link" ? (
-          <a key={i} href={t.href} className="text-[rgb(var(--accent))] underline underline-offset-2">{t.value}</a>
+          <a key={i} href={t.href} className="text-[rgb(var(--accent-text))] underline underline-offset-2">{t.value}</a>
         ) : (
           <span key={i}>{t.value}</span>
         )
@@ -70,7 +70,7 @@ export default function ChangelogPage() {
                           <ul className="space-y-2">
                             {group.items.map((item, ii) => (
                               <li key={ii} className="flex gap-2 text-[14px] text-[rgb(var(--text-secondary))] min-w-0">
-                                <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0" aria-hidden>→</span>
+                                <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0" aria-hidden>→</span>
                                 <span className="min-w-0 break-words"><Inline text={item} /></span>
                               </li>
                             ))}

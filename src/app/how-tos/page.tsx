@@ -14,7 +14,7 @@ const HOW_TOS = [
   {
     href: "/how-tos/colour-contrast",
     title: "How to ensure colour is accessible",
-    summary: "Check that every colour pairing in your designs meets WCAG 2.1 AA. Covers validated token pairings, testing tools, and what to do when the palette doesn't meet the threshold.",
+    summary: "Check that every colour pairing in your designs meets WCAG 2.2 AA. Covers validated token pairings, testing tools, and what to do when the palette doesn't meet the threshold.",
     tags: ["Accessibility", "Colour"],
   },
   {

@@ -514,7 +514,7 @@ export default function ColorPickerPage() {
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-4">
           <pre className="p-4 text-[13px] font-mono text-[rgb(var(--text-secondary))] overflow-x-auto bg-[rgb(var(--surface))]">
-            <code>{`// WCAG 2.1 relative luminance → choose black or white
+            <code>{`// WCAG 2.x relative luminance → choose black or white
 function accessibleForeground(bgHex: string): "#000000" | "#ffffff" {
   const { r, g, b } = hexToRgb(bgHex);
   const linearize = (c: number) => {
@@ -527,7 +527,7 @@ function accessibleForeground(bgHex: string): "#000000" | "#ffffff" {
           </pre>
         </div>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          This is the web equivalent of Warren&apos;s <code className="font-mono text-[11px] text-[rgb(var(--accent))]">accessibleForeground(on:)</code> Swift
+          This is the web equivalent of Warren&apos;s <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">accessibleForeground(on:)</code> Swift
           function. Use it whenever rendering text or icons on a user-chosen colour.
         </p>
       </section>
@@ -535,7 +535,7 @@ function accessibleForeground(bgHex: string): "#000000" | "#ffffff" {
       <section className="mb-10">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Dynamic brand token</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-          When the user selects a colour, write it to the <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--brand-user</code> CSS variable
+          When the user selects a colour, write it to the <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--brand-user</code> CSS variable
           on the document root. Other tokens resolve through it automatically:
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">

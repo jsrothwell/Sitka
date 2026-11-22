@@ -201,7 +201,7 @@ export const PromptInput = forwardRef<HTMLTextAreaElement, PromptInputProps>(
                 "p-2.5 rounded-xl transition-colors",
                 "text-[rgb(var(--text-tertiary))]",
                 isFocused && !disabled && !loading
-                  ? "bg-[rgb(var(--accent-subtle))] hover:bg-[rgb(var(--surface-hover))] text-[rgb(var(--accent))]"
+                  ? "bg-[rgb(var(--accent-subtle))] hover:bg-[rgb(var(--surface-hover))] text-[rgb(var(--accent-text))]"
                   : "hover:bg-[rgb(var(--surface-raised))] hover:text-[rgb(var(--text-secondary))]"
               )}
               aria-label="Add attachment"

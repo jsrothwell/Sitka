@@ -635,7 +635,7 @@ export default function DateRangePickerPage() {
             "The floating panel is trapped for keyboard navigation. Tab cycles through: prev-month, grid cells, next-month, presets, Apply, then back.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

@@ -357,7 +357,7 @@ export default function TooltipPage() {
                 ["blur",       "Hide immediately", "—"],
               ].map(([trigger, action, delay], i) => (
                 <tr key={trigger} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{trigger}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{trigger}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{action}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]"><code className="font-mono text-[11px]">{delay}</code></td>
                 </tr>
@@ -371,9 +371,9 @@ export default function TooltipPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          The tooltip panel is portaled to <code className="font-mono text-[13px] text-[rgb(var(--accent))]">document.body</code>{" "}
-          so it is never clipped by <code className="font-mono text-[13px] text-[rgb(var(--accent))]">overflow: hidden</code> ancestors.
-          Position is calculated after mount using <code className="font-mono text-[13px] text-[rgb(var(--accent))]">getBoundingClientRect</code>.
+          The tooltip panel is portaled to <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">document.body</code>{" "}
+          so it is never clipped by <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">overflow: hidden</code> ancestors.
+          Position is calculated after mount using <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">getBoundingClientRect</code>.
         </p>
         <PlatformTabs code={CODE} />
       </section>
@@ -432,7 +432,7 @@ export default function TooltipPage() {
             "For icon-only buttons, prefer aria-label over a tooltip as the primary accessible name. The tooltip then provides a secondary affordance.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

@@ -21,8 +21,8 @@ export interface KPITileProps {
 }
 
 const variantConfig: Record<KPIVariant, { well: string; icon: string }> = {
-  default: { well: "bg-[rgb(var(--accent-subtle))]", icon: "text-[rgb(var(--accent))]" },
-  accent: { well: "bg-[rgb(var(--accent-subtle))]", icon: "text-[rgb(var(--accent))]" },
+  default: { well: "bg-[rgb(var(--accent-subtle))]", icon: "text-[rgb(var(--accent-text))]" },
+  accent: { well: "bg-[rgb(var(--accent-subtle))]", icon: "text-[rgb(var(--accent-text))]" },
   success: { well: "bg-[rgb(var(--status-success)/0.12)]", icon: "text-[rgb(var(--status-success-text))]" },
   warning: { well: "bg-[rgb(var(--status-warning)/0.12)]", icon: "text-[rgb(var(--status-warning-text))]" },
   danger: { well: "bg-[rgb(var(--status-danger)/0.12)]", icon: "text-[rgb(var(--status-danger-text))]" },

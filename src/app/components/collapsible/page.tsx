@@ -206,7 +206,7 @@ export default function CollapsiblePage() {
                 { property: "chevron rotate", enter: "0° → 180°", exit: "180° → 0°" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.property}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.property}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.enter}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.exit}</td>
                 </tr>
@@ -253,7 +253,7 @@ export default function CollapsiblePage() {
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap">{row.el}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.role}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.role}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.attrs}</td>
                 </tr>
               ))}
@@ -283,7 +283,7 @@ export default function CollapsiblePage() {
                 { key: "Shift+Tab", action: "Return focus to the trigger from the content area" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{row.key}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{row.key}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.action}</td>
                 </tr>
               ))}
@@ -306,7 +306,7 @@ export default function CollapsiblePage() {
             "The animated height uses framer-motion with AnimatePresence — content is truly removed from the DOM when closed, not just hidden.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

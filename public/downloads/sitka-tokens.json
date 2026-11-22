@@ -208,6 +208,37 @@
       },
       "comment": "Muted qualitative palette for tag, chip and chart-segment differentiation. No status meaning; hues kept clear of the status colors. Fixed across themes. Every value clears 4.5:1 under white text or icons. On dark surfaces, separate adjacent fills with a gap or 1px border (1 sits close to the dark background)."
     },
+    "contrastMore": {
+      "comment": "Overrides applied under prefers-contrast: more. Text reaches 7:1 (AAA) and borders 3:1 on every surface.",
+      "dark": {
+        "textSecondary": {
+          "$value": "rgb(210, 210, 220)",
+          "$type": "color"
+        },
+        "textTertiary": {
+          "$value": "rgb(180, 180, 195)",
+          "$type": "color"
+        },
+        "border": {
+          "$value": "rgb(108, 108, 124)",
+          "$type": "color"
+        }
+      },
+      "light": {
+        "textSecondary": {
+          "$value": "rgb(45, 45, 50)",
+          "$type": "color"
+        },
+        "textTertiary": {
+          "$value": "rgb(70, 70, 76)",
+          "$type": "color"
+        },
+        "border": {
+          "$value": "rgb(128, 128, 138)",
+          "$type": "color"
+        }
+      }
+    },
     "themes": {
       "dark": {
         "background": {
@@ -236,6 +267,10 @@
         },
         "accentMuted": {
           "$value": "rgb(0, 72, 86)",
+          "$type": "color"
+        },
+        "accentText": {
+          "$value": "rgb(0, 192, 232)",
           "$type": "color"
         },
         "textPrimary": {
@@ -354,6 +389,10 @@
           "$value": "rgb(179, 237, 249)",
           "$type": "color"
         },
+        "accentText": {
+          "$value": "rgb(0, 114, 138)",
+          "$type": "color"
+        },
         "textPrimary": {
           "$value": "rgb(30, 30, 30)",
           "$type": "color"
@@ -363,7 +402,7 @@
           "$type": "color"
         },
         "textTertiary": {
-          "$value": "rgb(115, 115, 120)",
+          "$value": "rgb(108, 108, 113)",
           "$type": "color"
         },
         "border": {

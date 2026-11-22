@@ -31,7 +31,7 @@ export function DocSection({ title, intro, children }: { title: string; intro?: 
 
 export function DocTable({ headers, rows }: { headers: string[]; rows: ReactNode[][] }) {
   return (
-    <div className="rounded-xl border border-[rgb(var(--border))] overflow-x-auto">
+    <div className="rounded-xl border border-[rgb(var(--border))] overflow-x-auto" tabIndex={0} role="region" aria-label="Table (scrolls sideways)">
       <table className="w-full text-[13px]">
         <thead>
           <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
@@ -104,7 +104,7 @@ export function ArrowList({ items }: { items: ReactNode[] }) {
     <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
       {items.map((item, i) => (
         <li key={i} className="flex gap-2">
-          <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+          <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
           <span>{item}</span>
         </li>
       ))}

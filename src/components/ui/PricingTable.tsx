@@ -76,7 +76,7 @@ export function PricingTable({
           </button>
           <span className={cn("text-sm font-medium flex items-center gap-1", billing === "yearly" ? "text-[rgb(var(--text-primary))]" : "text-[rgb(var(--text-secondary))]")}>
             Yearly
-            <span className="px-1.5 py-0.5 text-[10px] rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]">
+            <span className="px-1.5 py-0.5 text-[10px] rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]">
               -20%
             </span>
           </span>
@@ -135,7 +135,7 @@ export function PricingTable({
                 <li key={i} className="flex items-start gap-2.5">
                   {feature.included ? (
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[rgb(var(--accent-subtle))] flex items-center justify-center mt-0.5">
-                      <CheckIcon className="w-3 h-3 text-[rgb(var(--accent))]" weight="bold" />
+                      <CheckIcon className="w-3 h-3 text-[rgb(var(--accent-text))]" weight="bold" />
                     </div>
                   ) : (
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[rgb(var(--surface-hover))] flex items-center justify-center mt-0.5">
@@ -185,7 +185,7 @@ export function FeatureComparison({ features, tiers, className }: FeatureCompari
                 key={tier.id}
                 className={cn(
                   "text-center py-3 px-4 text-sm font-semibold",
-                  tier.highlight ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-primary))]"
+                  tier.highlight ? "text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-primary))]"
                 )}
               >
                 {tier.name}
@@ -213,7 +213,7 @@ export function FeatureComparison({ features, tiers, className }: FeatureCompari
                   <td key={tier.id} className="py-3 px-4 text-center">
                     {typeof value === "boolean" ? (
                       value ? (
-                        <CheckIcon className="w-5 h-5 mx-auto text-[rgb(var(--accent))]" weight="bold" />
+                        <CheckIcon className="w-5 h-5 mx-auto text-[rgb(var(--accent-text))]" weight="bold" />
                       ) : (
                         <XIcon className="w-5 h-5 mx-auto text-[rgb(var(--text-tertiary))]" weight="bold" />
                       )

@@ -65,3 +65,8 @@ Package.resolved
 
 # Code Connect parse output
 /.figma/.parsed-*.json
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/

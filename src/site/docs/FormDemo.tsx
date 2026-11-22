@@ -40,7 +40,7 @@ export function CreateProjectForm() {
     return (
       <div className="flex flex-col items-center justify-center gap-4 py-10 text-center">
         <div className="w-12 h-12 rounded-full bg-[rgb(var(--accent-subtle))] flex items-center justify-center">
-          <Check className="w-6 h-6 text-[rgb(var(--accent))]" />
+          <Check className="w-6 h-6 text-[rgb(var(--accent-text))]" />
         </div>
         <div>
           <p className="text-[16px] font-semibold text-[rgb(var(--text-primary))]">Project created!</p>
@@ -50,7 +50,7 @@ export function CreateProjectForm() {
         </div>
         <button
           onClick={() => { setSuccess(false); setName(""); setDesc(""); }}
-          className="text-[12px] text-[rgb(var(--accent))] hover:underline mt-1"
+          className="text-[12px] text-[rgb(var(--accent-text))] hover:underline mt-1"
         >
           Create another
         </button>
@@ -206,14 +206,14 @@ export function MultiStepForm() {
     return (
       <div className="flex flex-col items-center justify-center gap-4 py-10 text-center">
         <div className="w-12 h-12 rounded-full bg-[rgb(var(--accent-subtle))] flex items-center justify-center">
-          <Check className="w-6 h-6 text-[rgb(var(--accent))]" />
+          <Check className="w-6 h-6 text-[rgb(var(--accent-text))]" />
         </div>
         <div>
           <p className="text-[16px] font-semibold text-[rgb(var(--text-primary))]">Account created!</p>
           <p className="text-[13px] text-[rgb(var(--text-secondary))] mt-1">Welcome, {data.name}.</p>
         </div>
         <button onClick={() => { setDone(false); setStep(0); setData({ email: "", password: "", name: "", role: "designer" }); }}
-          className="text-[12px] text-[rgb(var(--accent))] hover:underline mt-1">
+          className="text-[12px] text-[rgb(var(--accent-text))] hover:underline mt-1">
           Start over
         </button>
       </div>

@@ -47,6 +47,44 @@ jobs:
       - name: Code Connect mappings parse
         run: npm run figma:parse
 
+      - name: Stories type-check and Storybook builds
+        run: |
+          npm run typecheck:stories
+          npm run build-storybook -- --quiet -o /tmp/storybook
+
+  e2e:
+    name: Accessibility and visual regression
+    runs-on: ubuntu-latest
+    # Same image the visual baselines were rendered in, so fonts and antialiasing match.
+    container:
+      image: mcr.microsoft.com/playwright:v1.65.1-noble
+      options: --ipc=host
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+
+      # a11y: axe on every page in light and dark; fails on violations not in e2e/a11y-baseline.json.
+      # visual: component pages against e2e/__screenshots__.
+      - name: Playwright
+        run: npx playwright test
+        env:
+          PW_BUNDLED: "1"
+
+      - name: Upload report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
+          retention-days: 14
+
   swift:
     name: Swift package
     runs-on: macos-latest

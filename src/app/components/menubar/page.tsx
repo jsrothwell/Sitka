@@ -222,7 +222,7 @@ export default function MenubarPage() {
                 { type: "separator", role: "separator",         desc: "Horizontal rule for visual grouping — no interaction." },
               ].map((row) => (
                 <tr key={row.type} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.type}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.type}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.role}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.desc}</td>
                 </tr>
@@ -255,7 +255,7 @@ export default function MenubarPage() {
                 { key: "Home / End",  ctx: "Open menu", action: "Focus first / last item" },
               ].map((row) => (
                 <tr key={row.key + row.ctx} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.key}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.key}</td>
                   <td className="px-4 py-3 text-[11px] text-[rgb(var(--text-tertiary))]">{row.ctx}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.action}</td>
                 </tr>
@@ -281,7 +281,7 @@ export default function MenubarPage() {
             "On macOS web apps consider matching the native menu bar order: File, Edit, Format, View, Window, Help.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

@@ -217,7 +217,7 @@ export function IconsShowcase() {
                   key={w}
                   className={`px-4 py-2.5 flex items-center justify-between text-[13px] ${i < SF_WEIGHTS.length - 1 ? "border-b border-[rgb(var(--border-subtle))]" : ""} ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}
                 >
-                  <code className="font-mono text-[rgb(var(--accent))] text-[12px]">.{w}</code>
+                  <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">.{w}</code>
                   <span className="text-[rgb(var(--text-tertiary))] text-[11px]">Font.Weight</span>
                 </div>
               ))}
@@ -232,7 +232,7 @@ export function IconsShowcase() {
                   key={mode}
                   className={`px-4 py-3 ${i < SF_RENDERING_MODES.length - 1 ? "border-b border-[rgb(var(--border-subtle))]" : ""} ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}
                 >
-                  <code className="font-mono text-[rgb(var(--accent))] text-[12px]">{mode}</code>
+                  <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">{mode}</code>
                   <p className="text-[12px] text-[rgb(var(--text-tertiary))] mt-0.5">{desc}</p>
                 </div>
               ))}

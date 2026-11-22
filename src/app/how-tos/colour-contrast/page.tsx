@@ -54,20 +54,20 @@ export default function ColourContrastPage() {
 
       <PageHeader
         title="How to ensure colour is accessible"
-        description="Check that every colour pairing in your designs meets WCAG 2.1 AA. This guide covers the approved Sitka pairings, how to test custom colours, and what to do when a pairing fails."
+        description="Check that every colour pairing in your designs meets WCAG 2.2 AA. This guide covers the approved Sitka pairings, how to test custom colours, and what to do when a pairing fails."
       />
 
       <div className="mb-8 p-5 rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))]">
         <p className="text-[12px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))] mb-2">Objective</p>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed">
-          By the end of this guide you will know how to validate any colour pairing against WCAG 2.1 AA, use the pre-approved Sitka token pairings, and fix the most common contrast failures.
+          By the end of this guide you will know how to validate any colour pairing against WCAG 2.2 AA, use the pre-approved Sitka token pairings, and fix the most common contrast failures.
         </p>
       </div>
 
       <div>
         <Step n={1} title="Understand the two WCAG thresholds you need to meet">
           <p className="text-[13px] text-[rgb(var(--text-secondary))] leading-relaxed mb-4">
-            WCAG 2.1 defines two thresholds. Sitka requires AA for all text and interactive elements.
+            WCAG 2.2 (unchanged from 2.1 for contrast) defines two thresholds. Sitka requires AA for all text and interactive elements.
           </p>
           <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
             <table className="w-full text-[13px]">

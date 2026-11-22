@@ -371,7 +371,7 @@ export default function FormControlsPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Checkbox group with indeterminate</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           A parent checkbox can reflect partial selection using the{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">indeterminate</code> prop.
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">indeterminate</code> prop.
           Drive it from your own state — Checkbox does not manage children.
         </p>
         <ComponentPreview>
@@ -383,11 +383,11 @@ export default function FormControlsPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Radio</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          Wrap <code className="font-mono text-[13px] text-[rgb(var(--accent))]">Radio</code> elements inside{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">RadioGroup</code> to share name,
+          Wrap <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">Radio</code> elements inside{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">RadioGroup</code> to share name,
           controlled value, and size. Orientation can be{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">vertical</code> or{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">horizontal</code>.
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">vertical</code> or{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">horizontal</code>.
         </p>
         <ComponentPreview>
           <RadioDemo />
@@ -399,10 +399,10 @@ export default function FormControlsPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Switch</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           Binary on/off control. Uses{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">role="switch"</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">role="switch"</code>{" "}
           on the underlying input. Supports controlled and uncontrolled usage.
           The sliding animation is a CSS{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">transition</code> on
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">transition</code> on
           the thumb position — no JS animation library needed.
         </p>
         <ComponentPreview>
@@ -415,9 +415,9 @@ export default function FormControlsPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Select</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           Native{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">&lt;select&gt;</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">&lt;select&gt;</code>{" "}
           with a custom chevron overlay. Uses{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">appearance: none</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">appearance: none</code>{" "}
           to strip the OS chrome and applies the same size tokens as Input.
         </p>
         <ComponentPreview>
@@ -447,7 +447,7 @@ export default function FormControlsPage() {
                 ["lg", "48px (Select)", "15px", "Hero forms, onboarding"],
               ].map(([size, height, font, use], i) => (
                 <tr key={size} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{size}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{size}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{height}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{font}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{use}</td>
@@ -464,7 +464,7 @@ export default function FormControlsPage() {
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           All controls are client components that wrap native HTML inputs. Styling is achieved with
           CSS peer selectors — the native input is visually hidden via{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">sr-only</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">sr-only</code>{" "}
           but remains in the accessibility tree and receives focus normally.
         </p>
         <PlatformTabs code={CODE} />
@@ -546,7 +546,7 @@ export default function FormControlsPage() {
             "Focus rings use ring-offset so they are always visible regardless of background color.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

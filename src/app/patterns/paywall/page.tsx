@@ -487,7 +487,7 @@ export function LockedContentPreview({
         className="absolute inset-0 flex flex-col items-center justify-center gap-3.5 p-7"
       >
         <div className="flex h-13 w-13 items-center justify-center rounded-full bg-[rgb(var(--accent)/0.2)]">
-          <LockIcon className="h-5 w-5 text-[rgb(var(--accent))]" />
+          <LockIcon className="h-5 w-5 text-[rgb(var(--accent-text))]" />
         </div>
         <p className="text-center text-[18px] font-bold text-[rgb(var(--text-primary))]">{headline}</p>
         <p className="max-w-[280px] text-center text-[13px] text-[rgb(var(--text-secondary))]">{subheadline}</p>
@@ -751,7 +751,7 @@ export default function PaywallPage() {
               </p>
               <button
                 onClick={() => { setUpgraded(null); setDismissed(false); }}
-                className="text-[12px] text-[rgb(var(--accent))] underline underline-offset-2"
+                className="text-[12px] text-[rgb(var(--accent-text))] underline underline-offset-2"
               >
                 Reset demo
               </button>
@@ -761,7 +761,7 @@ export default function PaywallPage() {
               <p className="text-[14px] text-[rgb(var(--text-secondary))]">Paywall dismissed.</p>
               <button
                 onClick={() => setDismissed(false)}
-                className="text-[12px] text-[rgb(var(--accent))] underline underline-offset-2"
+                className="text-[12px] text-[rgb(var(--accent-text))] underline underline-offset-2"
               >
                 Show again
               </button>
@@ -971,7 +971,7 @@ export default function PaywallPage() {
                 <p className="text-[14px] font-semibold text-[rgb(var(--text-primary))]">Unlocked</p>
                 <button
                   onClick={() => setVariantUnlocked(false)}
-                  className="text-[12px] text-[rgb(var(--accent))] underline underline-offset-2"
+                  className="text-[12px] text-[rgb(var(--accent-text))] underline underline-offset-2"
                 >
                   Reset demo
                 </button>
@@ -1016,7 +1016,7 @@ export default function PaywallPage() {
             Accessibility note
           </span>
           <p className="text-[13px] text-[rgb(var(--text-secondary))] mt-1 leading-relaxed">
-            The blur is a visual effect only — it does nothing to stop a screen reader from reading the real content underneath, node by node (a job title, a balance, personal notes). Mark the blurred content <code className="font-mono text-[12px] text-[rgb(var(--accent))]">aria-hidden</code> / <code className="font-mono text-[12px] text-[rgb(var(--accent))]">.accessibilityHidden(true)</code> and give the lock card its own <code className="font-mono text-[12px] text-[rgb(var(--accent))]">role=&quot;region&quot;</code> / combined accessibility element with a label that already states what&apos;s locked and why — this was a real bug found in production, not a hypothetical.
+            The blur is a visual effect only — it does nothing to stop a screen reader from reading the real content underneath, node by node (a job title, a balance, personal notes). Mark the blurred content <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">aria-hidden</code> / <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">.accessibilityHidden(true)</code> and give the lock card its own <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">role=&quot;region&quot;</code> / combined accessibility element with a label that already states what&apos;s locked and why — this was a real bug found in production, not a hypothetical.
           </p>
         </div>
 
@@ -1042,7 +1042,7 @@ export default function PaywallPage() {
             "For the blur-behind-lock variant, hide the blurred content from assistive tech entirely (aria-hidden / .accessibilityHidden(true)) — blurring is a sighted-only cue and does not stop a screen reader from announcing what's underneath.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}
@@ -1084,7 +1084,7 @@ function SoftLimitVariants() {
                   <span className="text-[rgb(var(--text-primary))]">
                     {atCap ? "Free limit reached" : `${used} of ${cap} free jobs used`}
                   </span>
-                  <button className="font-semibold text-[rgb(var(--accent))]">Go unlimited</button>
+                  <button className="font-semibold text-[rgb(var(--accent-text))]">Go unlimited</button>
                 </div>
                 <div
                   role="meter"
@@ -1128,7 +1128,7 @@ function SoftLimitVariants() {
                   <p className="mt-1 text-[12px] text-[rgb(var(--text-secondary))]">
                     Search Health shows which job sources and résumés get answers, so your next applications go where they&apos;re answered.
                   </p>
-                  <button className="mt-1 min-h-11 text-[13px] font-semibold text-[rgb(var(--accent))]">Unlock Search Health</button>
+                  <button className="mt-1 min-h-11 text-[13px] font-semibold text-[rgb(var(--accent-text))]">Unlock Search Health</button>
                 </div>
                 <button
                   onClick={() => setCardDismissed(true)}
@@ -1152,7 +1152,7 @@ function SoftLimitVariants() {
           "Never gate the habit loop: the free sweep that keeps data accurate (see Review Sweep) stays free; the insight built on that data is what's paid.",
         ].map((item) => (
           <li key={item} className="flex gap-2">
-            <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+            <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
             {item}
           </li>
         ))}

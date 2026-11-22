@@ -287,7 +287,7 @@ export default function CodeBlockPage() {
                 { el: "Copy button", desc: 'Writes the full code string to the clipboard. Animates to a green "Copied!" state for 2 seconds using Framer Motion.' },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{row.el}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{row.el}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.desc}</td>
                 </tr>
               ))}
@@ -326,7 +326,7 @@ export default function CodeBlockPage() {
             "The copy action provides immediate visual feedback (Copied! state) but does not announce to screen readers by default. If announcing is required, add a live region with aria-live=\"polite\".",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

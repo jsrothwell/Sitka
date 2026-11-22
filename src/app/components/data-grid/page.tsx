@@ -194,7 +194,7 @@ export default function DataGridPage() {
                 { prop: "render",     type: "(value, row) => ReactNode",      desc: "Custom cell renderer (badges, links, etc.)" },
               ].map((row) => (
                 <tr key={row.prop} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.prop}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.prop}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.type}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.desc}</td>
                 </tr>
@@ -223,7 +223,7 @@ export default function DataGridPage() {
                 { key: "Space",        action: "Toggle row selection on focused checkbox" },
               ].map((row) => (
                 <tr key={row.key} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.key}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.key}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.action}</td>
                 </tr>
               ))}
@@ -248,7 +248,7 @@ export default function DataGridPage() {
             "Avoid more than 8 visible columns — let users customise column visibility for dense data.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

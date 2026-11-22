@@ -44,6 +44,15 @@ Resolves the two token decisions from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §
 - The homepage footer version reads `package.json`.
 - `platforms/react-native/package.json` was a JavaScript module, not JSON, so npm couldn't read it; it's now valid JSON.
 
+### 2027 readiness: Area 3, quality gates
+
+- **The site now uses its own tokens.** `ThemeProvider` and the inline script in `layout.tsx` wrote a second, hand-maintained set of colour values inline, which overrode `globals.css`. As a result, the light-theme block (including the 1.13.0 status-text tones) never applied, `prefers-contrast` couldn't work, and tertiary text failed AA in both themes. Theming now sets `data-theme`, and `tokens.json` drives every colour. The docs site's green accent stays as a labelled brand layer at the end of `globals.css`.
+- Token `accentText` (`--accent-text`) for accent-coloured text and links, at 4.5:1+ on every surface and on `accentSubtle`. All 753 `text-[rgb(var(--accent))]` uses moved to it. Light `textTertiary` darkened to `rgb(108, 108, 113)` (4.59:1 on the hover surface, was 4.15). Tests now require every text token to clear 4.5:1 on every surface.
+- `prefers-contrast: more` support (`color.contrastMore`): secondary and tertiary text rise to 7:1 and borders to 3:1, with tests.
+- WCAG 2.2 AA is the stated baseline across the docs. The Accessibility page gains a "New in WCAG 2.2" section mapping each new criterion to Sitka. `scroll-padding-top` keeps focused targets clear of the sticky header (2.4.11).
+- Playwright checks in CI, run in the `mcr.microsoft.com/playwright:v1.65.1-noble` image: axe on all 171 pages in light and dark, ratcheted against `e2e/a11y-baseline.json` so new violations fail, plus visual regression on all 60 component pages in both themes (120 baselines). Fixing the shared shell shrank the baseline from 308 to 134 page/scheme entries: preview toggles are now 24 px targets, and code blocks and scrollable tables are focusable regions.
+- Stories for Box, Stack, Context Menu, Gauge, KPI Tile and Progress. CI type-checks stories (`tsconfig.stories.json`) and builds Storybook. Fixed a type error in the Toggle group story.
+
 #### Fixed
 - `packages/sitka-ui` imported `../../src/…`, which resolves to a folder that doesn't exist; it now type-checks. `CardHeader`, `CardBody` and `CardFooter` are exported.
 - ESLint never loaded the Sitka token plugin (`require` in an ES module); `npm run lint` failed because eslint wasn't installed. Lint now runs with 0 errors.

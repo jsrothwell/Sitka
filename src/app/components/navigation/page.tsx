@@ -382,7 +382,7 @@ export default function NavigationPage() {
               ].map(([part, el, token], i) => (
                 <tr key={part} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{part}</td>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{el}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{el}</code></td>
                   <td className="px-4 py-3 text-[12px] text-[rgb(var(--text-secondary))]">{token}</td>
                 </tr>
               ))}
@@ -395,7 +395,7 @@ export default function NavigationPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          The <code className="font-mono text-[13px] text-[rgb(var(--accent))]">children</code> render prop
+          The <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">children</code> render prop
           receives the active tab id, making panel content fully flexible with no hidden DOM toggling.
         </p>
         <PlatformTabs code={CODE} />
@@ -455,7 +455,7 @@ export default function NavigationPage() {
             "Badges are decorative counts — add aria-label to the tab button to include the count in the accessible name when relevant.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

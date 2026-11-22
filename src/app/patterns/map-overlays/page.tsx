@@ -261,7 +261,7 @@ export default function MapOverlaysPage() {
                       <span aria-hidden>🔍</span>
                       <span className="text-[rgb(var(--text-primary))]">Ferry Bui|</span>
                     </div>
-                    <button onClick={() => setPhase("idle")} className="text-[14px] font-medium text-[rgb(var(--accent))]">
+                    <button onClick={() => setPhase("idle")} className="text-[14px] font-medium text-[rgb(var(--accent-text))]">
                       Cancel
                     </button>
                   </div>
@@ -269,7 +269,7 @@ export default function MapOverlaysPage() {
                     <p className="px-3.5 pb-1 pt-2 text-[11px] font-semibold text-[rgb(var(--text-secondary))]">Recent</p>
                     {["Ferry Building", "Ferry Plaza Farmers Market"].map((t) => (
                       <button key={t} onClick={() => setPhase("preview")} className="flex w-full items-center gap-3 px-3.5 py-2 text-left">
-                        <span className="text-[18px] text-[rgb(var(--accent))]" aria-hidden>📍</span>
+                        <span className="text-[18px] text-[rgb(var(--accent-text))]" aria-hidden>📍</span>
                         <span>
                           <span className="block text-[14px] text-[rgb(var(--text-primary))]">{t}</span>
                           <span className="block text-[11px] text-[rgb(var(--text-secondary))]">Embarcadero, San Francisco</span>

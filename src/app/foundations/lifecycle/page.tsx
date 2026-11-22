@@ -18,7 +18,7 @@ const STAGES = [
   },
   {
     badge: "Beta",
-    color: "text-[rgb(var(--accent))] bg-[rgb(var(--accent-subtle))]",
+    color: "text-[rgb(var(--accent-text))] bg-[rgb(var(--accent-subtle))]",
     summary: "Stable API, gathering real-world feedback",
     criteria: [
       "API is stable — no breaking changes without a major version bump",
@@ -34,7 +34,7 @@ const STAGES = [
     summary: "Production-ready, fully supported",
     criteria: [
       "Full test coverage across platforms (React, HTML, SwiftUI)",
-      "WCAG 2.1 AA accessibility audit passed",
+      "WCAG 2.2 AA accessibility audit passed",
       "Token pipeline verified",
       "Complete doc page: Preview, States, Motion, Implementation, Props, ARIA, Keyboard, Accessibility",
     ],
@@ -88,7 +88,7 @@ export default function LifecyclePage() {
                   <ul className="space-y-1.5 mb-3">
                     {stage.criteria.map((c) => (
                       <li key={c} className="flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]">
-                        <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+                        <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
                         {c}
                       </li>
                     ))}
@@ -121,7 +121,7 @@ export default function LifecyclePage() {
                 { from: "Deprecated → Removed",required: "All internal usages migrated, one full major version has passed since deprecation" },
               ].map((row) => (
                 <tr key={row.from} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.from}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.from}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.required}</td>
                 </tr>
               ))}
@@ -134,7 +134,7 @@ export default function LifecyclePage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Changelog convention</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-          Deprecations and removals must be recorded in <code className="font-mono text-[11px] text-[rgb(var(--accent))]">CHANGELOG.md</code> with the successor component and removal target version.
+          Deprecations and removals must be recorded in <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">CHANGELOG.md</code> with the successor component and removal target version.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] overflow-hidden">
           <pre className="p-4 text-[11px] font-mono text-[rgb(var(--text-secondary))] leading-relaxed overflow-x-auto"><code>{CHANGELOG_FORMAT}</code></pre>
@@ -153,7 +153,7 @@ export default function LifecyclePage() {
             "Beta components follow semver for breaking changes only from the point they're labelled Beta.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

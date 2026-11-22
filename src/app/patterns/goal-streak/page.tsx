@@ -445,11 +445,11 @@ export default function GoalStreakPage() {
             <tbody>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">In progress</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Bar fills with <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--accent</code>; streak shows 🔥 if &gt; 0, else 💤</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Bar fills with <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--accent</code>; streak shows 🔥 if &gt; 0, else 💤</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Goal met</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Bar transitions to <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success</code>; card surface gets <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--accent / 0.06</code> tint (<code className="font-mono text-[11px] text-[rgb(var(--accent))]">sfBrandLitSurface</code>); checkmark appears</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Bar transitions to <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-success</code>; card surface gets <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--accent / 0.06</code> tint (<code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">sfBrandLitSurface</code>); checkmark appears</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Zero progress</td>
@@ -464,7 +464,7 @@ export default function GoalStreakPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Animation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed">
           The progress bar animates on mount with a spring curve:{" "}
-          <code className="font-mono text-[11px] text-[rgb(var(--accent))]">spring(response: 0.5, dampingFraction: 0.75)</code>. This gives the bar a subtle
+          <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">spring(response: 0.5, dampingFraction: 0.75)</code>. This gives the bar a subtle
           overshoot that communicates momentum without being distracting.
         </p>
       </section>

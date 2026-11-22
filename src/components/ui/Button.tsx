@@ -22,7 +22,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   primary:
     "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] hover:opacity-90 shadow-[0_0_0_1px_rgba(0,192,232,0.3),0_2px_8px_rgba(0,192,232,0.25)] active:shadow-none",
   secondary:
-    "bg-[rgb(var(--surface))] text-[rgb(var(--text-primary))] border border-[rgb(var(--border))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent))] active:bg-[rgb(var(--accent-subtle))]",
+    "bg-[rgb(var(--surface))] text-[rgb(var(--text-primary))] border border-[rgb(var(--border))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent-text))] active:bg-[rgb(var(--accent-subtle))]",
   ghost:
     "text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface))] hover:text-[rgb(var(--text-primary))] active:bg-[rgb(var(--border))]",
   danger:

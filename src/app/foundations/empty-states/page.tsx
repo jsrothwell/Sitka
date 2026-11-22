@@ -142,7 +142,7 @@ export default function EmptyStatesPage() {
               <p className="text-[12px] text-[rgb(var(--text-secondary))] leading-relaxed mb-2">
                 {vp.rule}
               </p>
-              <code className="text-[10px] font-mono text-[rgb(var(--accent))] bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] px-2 py-0.5 rounded">
+              <code className="text-[10px] font-mono text-[rgb(var(--accent-text))] bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] px-2 py-0.5 rounded">
                 {vp.tokens}
               </code>
             </div>

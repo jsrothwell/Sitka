@@ -187,7 +187,7 @@ export default function DividerPage() {
             "Avoid relying on the label text alone to communicate section structure; use proper headings for landmark navigation.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

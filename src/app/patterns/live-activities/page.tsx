@@ -126,7 +126,7 @@ export default function LiveActivitiesPage() {
       <section className="mb-14">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Not the same surface as widgets</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
-          <Link href="/patterns/mobile-widgets" className="text-[rgb(var(--accent))] underline underline-offset-2">Mobile Widgets</Link> are static, timeline-refreshed snapshots built on WidgetKit, and can use <code className="font-mono text-[13px] text-[rgb(var(--accent))]">.containerBackground(for: .widget)</code> — the system material that handles light/dark and vibrancy automatically. Live Activities are built on ActivityKit for a single, currently-running event, are pushed or locally updated in near-real time, and end when the event does. Because the Dynamic Island and lock screen present outside the normal app chrome, they structurally cannot use System Materials at all — the constraint below isn&apos;t a stylistic choice, it&apos;s the only option ActivityKit gives you.
+          <Link href="/patterns/mobile-widgets" className="text-[rgb(var(--accent-text))] underline underline-offset-2">Mobile Widgets</Link> are static, timeline-refreshed snapshots built on WidgetKit, and can use <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">.containerBackground(for: .widget)</code> — the system material that handles light/dark and vibrancy automatically. Live Activities are built on ActivityKit for a single, currently-running event, are pushed or locally updated in near-real time, and end when the event does. Because the Dynamic Island and lock screen present outside the normal app chrome, they structurally cannot use System Materials at all — the constraint below isn&apos;t a stylistic choice, it&apos;s the only option ActivityKit gives you.
         </p>
         <div className="rounded-[10px] p-4" style={{ backgroundColor: "var(--card-tint-bg)" }}>
           <span className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: "var(--nav-active-color)" }}>Design note</span>
@@ -202,7 +202,7 @@ export default function LiveActivitiesPage() {
       <section className="mb-14">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">SwiftUI implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
-          ActivityKit is iOS/watchOS-only — there is no React or HTML equivalent, unlike most patterns in this library. A minimal Live Activity needs an <code className="font-mono text-[13px] text-[rgb(var(--accent))]">ActivityAttributes</code> type (the fixed data, set once) plus a <code className="font-mono text-[13px] text-[rgb(var(--accent))]">ContentState</code> (the part that updates), and a <code className="font-mono text-[13px] text-[rgb(var(--accent))]">Widget</code> conformance that lays out the lock screen view and every Dynamic Island region.
+          ActivityKit is iOS/watchOS-only — there is no React or HTML equivalent, unlike most patterns in this library. A minimal Live Activity needs an <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">ActivityAttributes</code> type (the fixed data, set once) plus a <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">ContentState</code> (the part that updates), and a <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">Widget</code> conformance that lays out the lock screen view and every Dynamic Island region.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] overflow-hidden">
           <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]">
@@ -286,7 +286,7 @@ struct DeliveryLiveActivity: Widget {
             "Always set a sensible staleness date and end the activity promptly when the event concludes — a Live Activity that outlives its event (a delivery marked 'arriving' long after it arrived) erodes trust in every future one your app shows.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}

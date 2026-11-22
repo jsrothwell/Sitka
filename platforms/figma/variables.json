@@ -314,6 +314,54 @@
           }
         },
         {
+          "name": "contrastMore/dark/textSecondary",
+          "type": "COLOR",
+          "values": {
+            "Light": "#d2d2dc",
+            "Dark": "#d2d2dc"
+          }
+        },
+        {
+          "name": "contrastMore/dark/textTertiary",
+          "type": "COLOR",
+          "values": {
+            "Light": "#b4b4c3",
+            "Dark": "#b4b4c3"
+          }
+        },
+        {
+          "name": "contrastMore/dark/border",
+          "type": "COLOR",
+          "values": {
+            "Light": "#6c6c7c",
+            "Dark": "#6c6c7c"
+          }
+        },
+        {
+          "name": "contrastMore/light/textSecondary",
+          "type": "COLOR",
+          "values": {
+            "Light": "#2d2d32",
+            "Dark": "#2d2d32"
+          }
+        },
+        {
+          "name": "contrastMore/light/textTertiary",
+          "type": "COLOR",
+          "values": {
+            "Light": "#46464c",
+            "Dark": "#46464c"
+          }
+        },
+        {
+          "name": "contrastMore/light/border",
+          "type": "COLOR",
+          "values": {
+            "Light": "#80808a",
+            "Dark": "#80808a"
+          }
+        },
+        {
           "name": "personalization/purple",
           "type": "COLOR",
           "values": {
@@ -394,6 +442,14 @@
           }
         },
         {
+          "name": "theme/accentText",
+          "type": "COLOR",
+          "values": {
+            "Light": "#00728a",
+            "Dark": "#00c0e8"
+          }
+        },
+        {
           "name": "theme/textPrimary",
           "type": "COLOR",
           "values": {
@@ -413,7 +469,7 @@
           "name": "theme/textTertiary",
           "type": "COLOR",
           "values": {
-            "Light": "#737378",
+            "Light": "#6c6c71",
             "Dark": "#87879b"
           }
         },

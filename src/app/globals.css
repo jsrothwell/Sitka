@@ -20,6 +20,7 @@
   --accent-hover:   0 160 200;
   --accent-subtle:  0  38  46;
   --accent-muted:   0  72  86;
+  --accent-text:    0 192 232;  /* accent as text/links: 4.5:1+ on every surface */
 
   --text-primary:   242 242 246;
   --text-secondary: 170 170 185;
@@ -112,10 +113,11 @@
   --accent:          0 192 232;
   --accent-subtle:   224 247 252;
   --accent-muted:    179 237 249;
+  --accent-text:     0 114 138;
 
   --text-primary:    30  30  30;
   --text-secondary:  85  85  90;
-  --text-tertiary:   115 115 120;
+  --text-tertiary:   108 108 113;
 
   --border:          224 224 231;
   --border-subtle:   240 240 244;
@@ -192,6 +194,11 @@
 }
 
 /* ── Base ────────────────────────────────────────────── */
+/* WCAG 2.4.11 Focus Not Obscured: keep anchored and focused targets clear of the sticky header */
+html {
+  scroll-padding-top: calc(var(--header-height) + 16px);
+}
+
 html, body {
   background-color: rgb(var(--background));
   color: rgb(var(--text-primary));
@@ -319,4 +326,44 @@ h3 {
 @keyframes shimmer {
   from { transform: translateX(-100%); }
   to   { transform: translateX(100%); }
+}
+
+/* prefers-contrast: more — tokens.json color.contrastMore. Text 7:1, borders 3:1 on every surface. */
+@media (prefers-contrast: more) {
+  :root {
+    --text-secondary: 210 210 220;
+    --text-tertiary: 180 180 195;
+    --border: 108 108 124;
+  }
+  [data-theme="light"] {
+    --text-secondary: 45 45 50;
+    --text-tertiary: 70 70 76;
+    --border: 128 128 138;
+  }
+}
+
+/*
+ * Docs-site brand layer. tokens.json sets the accent to brand.cyan; this site has always shown
+ * the spruce-green brand ramp (brand.500) as its accent instead. These overrides were previously
+ * written inline by ThemeProvider, which also overrode every other token; now only the accent
+ * family differs, and it's declared here where it's visible. Text on it uses --on-accent
+ * (near-black, 6.6:1 on this green).
+ */
+[data-theme] {
+  --accent: 52 168 101;
+  --accent-hover: 40 148 84;
+}
+[data-theme="dark"] {
+  --accent-subtle: 10 38 21;
+  --accent-muted: 20 72 39;
+  --accent-text: 52 168 101;
+  --nav-active-color: rgb(52, 168, 101);
+  --card-tint-bg: rgb(12, 28, 18);
+}
+[data-theme="light"] {
+  --accent-subtle: 232 248 239;
+  --accent-muted: 166 220 190;
+  --accent-text: 22 110 60;
+  --nav-active-color: rgb(22, 110, 60);
+  --card-tint-bg: rgba(11, 55, 30, 0.06);
 }

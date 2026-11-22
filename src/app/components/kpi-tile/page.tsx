@@ -69,8 +69,8 @@ interface KPITileProps {
 }
 
 const variantConfig = {
-  default:  { well: "bg-[rgb(var(--accent-subtle))]",        icon: "text-[rgb(var(--accent))]" },
-  accent:   { well: "bg-[rgb(var(--accent-subtle))]",        icon: "text-[rgb(var(--accent))]" },
+  default:  { well: "bg-[rgb(var(--accent-subtle))]",        icon: "text-[rgb(var(--accent-text))]" },
+  accent:   { well: "bg-[rgb(var(--accent-subtle))]",        icon: "text-[rgb(var(--accent-text))]" },
   success:  { well: "bg-[rgb(var(--status-success)/0.12)]",  icon: "text-[rgb(var(--status-success-text))]" },
   warning:  { well: "bg-[rgb(var(--status-warning)/0.12)]",  icon: "text-[rgb(var(--status-warning-text))]" },
   danger:   { well: "bg-[rgb(var(--status-danger)/0.12)]",   icon: "text-[rgb(var(--status-danger-text))]" },
@@ -534,7 +534,7 @@ export default function KPITilePage() {
             "Icon wells use aria-hidden='true' — the metric value and label carry the accessible meaning.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

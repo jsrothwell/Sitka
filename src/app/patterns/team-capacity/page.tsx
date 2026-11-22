@@ -391,22 +391,22 @@ export default function TeamCapacityPage() {
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">&lt; 70%</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Available</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-success</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">70–89%</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Moderate</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-warning</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-warning</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">90–100%</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Near Full</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-caution</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-caution</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">&gt; 100%</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Overloaded</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-danger</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-danger</code></td>
               </tr>
             </tbody>
           </table>
@@ -434,7 +434,7 @@ export default function TeamCapacityPage() {
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Hours</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">10 px, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-tertiary</code>, format: <code className="font-mono text-[11px] text-[rgb(var(--accent))]">Xh / Yh</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">10 px, <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--text-tertiary</code>, format: <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">Xh / Yh</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Status badge</td>
@@ -442,7 +442,7 @@ export default function TeamCapacityPage() {
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Overloaded tint</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Card background gets <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-danger / 0.08</code> fill</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Card background gets <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-danger / 0.08</code> fill</td>
               </tr>
             </tbody>
           </table>
@@ -452,7 +452,7 @@ export default function TeamCapacityPage() {
       <section className="mb-10">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Grid layout</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed">
-          Use <code className="font-mono text-[11px] text-[rgb(var(--accent))]">grid-template-columns: repeat(auto-fill, minmax(140px, 1fr))</code> for responsive
+          Use <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">grid-template-columns: repeat(auto-fill, minmax(140px, 1fr))</code> for responsive
           behaviour. On macOS with wide panels, this yields 5–6 columns. On iPhone it collapses to 2.
           Minimum column width is 140 px to keep gauges legible.
         </p>

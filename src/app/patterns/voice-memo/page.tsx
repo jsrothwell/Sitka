@@ -576,7 +576,7 @@ export default function VoiceMemoPage() {
             { heading: "Transcription is async", body: "Apply SFSpeechRecognizer to the finished .m4a after AVAudioRecorder stops, not during recording. This avoids contention between the audio engine input node and the speech recogniser. Store the transcript in the AudioMemo SwiftData model once available." },
           ].map(({ heading, body }) => (
             <div key={heading} className="flex gap-3 text-[14px]">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               <div>
                 <span className="font-medium text-[rgb(var(--text-primary))]">{heading} — </span>
                 <span className="text-[rgb(var(--text-secondary))]">{body}</span>
@@ -632,7 +632,7 @@ export default function VoiceMemoPage() {
             "Ensure AVAudioSession category .playAndRecord does not interrupt VoiceOver. Set .mixWithOthers option or pause session when VoiceOver is active.",
           ].map(item => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}

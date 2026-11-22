@@ -320,7 +320,7 @@ export default function AIAgentsPage() {
               <p className="text-[12px] text-[rgb(var(--text-secondary))] leading-relaxed mb-2">
                 {state.description}
               </p>
-              <code className="text-[10px] font-mono text-[rgb(var(--accent))] bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] px-2 py-0.5 rounded">
+              <code className="text-[10px] font-mono text-[rgb(var(--accent-text))] bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] px-2 py-0.5 rounded">
                 {state.visual}
               </code>
             </div>

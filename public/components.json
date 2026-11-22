@@ -46,6 +46,7 @@
       "tokens": [
         "accent",
         "accent-subtle",
+        "accent-text",
         "background",
         "border",
         "danger-solid",
@@ -111,6 +112,7 @@
       ],
       "tokens": [
         "accent",
+        "accent-text",
         "background",
         "border",
         "danger-solid",
@@ -216,6 +218,7 @@
         "accent",
         "accent-muted",
         "accent-subtle",
+        "accent-text",
         "background",
         "border",
         "surface-raised",
@@ -278,6 +281,7 @@
         "accent",
         "accent-muted",
         "accent-subtle",
+        "accent-text",
         "background",
         "border",
         "surface-raised",
@@ -443,6 +447,7 @@
       "tokens": [
         "accent",
         "accent-subtle",
+        "accent-text",
         "border",
         "border-subtle",
         "on-accent",
@@ -911,6 +916,7 @@
         "accent",
         "accent-muted",
         "accent-subtle",
+        "accent-text",
         "background",
         "border",
         "surface-hover",
@@ -1166,7 +1172,7 @@
         }
       ],
       "tokens": [
-        "accent",
+        "accent-text",
         "border",
         "surface-raised",
         "text-primary",
@@ -1206,6 +1212,7 @@
       "tokens": [
         "accent",
         "accent-subtle",
+        "accent-text",
         "border",
         "text-primary",
         "text-secondary",
@@ -1300,6 +1307,7 @@
       ],
       "tokens": [
         "accent",
+        "accent-text",
         "border",
         "on-accent",
         "surface",
@@ -1344,6 +1352,7 @@
       "tokens": [
         "accent",
         "accent-subtle",
+        "accent-text",
         "border",
         "radius-sm",
         "surface-raised",
@@ -1391,8 +1400,8 @@
         }
       ],
       "tokens": [
-        "accent",
         "accent-muted",
+        "accent-text",
         "surface",
         "text-tertiary"
       ]
@@ -1516,8 +1525,8 @@
         }
       ],
       "tokens": [
-        "accent",
         "accent-subtle",
+        "accent-text",
         "border",
         "border-subtle",
         "surface",
@@ -1532,8 +1541,8 @@
       "source": "src/components/ui/Table.tsx",
       "props": [],
       "tokens": [
-        "accent",
         "accent-subtle",
+        "accent-text",
         "border",
         "border-subtle",
         "surface",
@@ -1548,8 +1557,8 @@
       "source": "src/components/ui/Table.tsx",
       "props": [],
       "tokens": [
-        "accent",
         "accent-subtle",
+        "accent-text",
         "border",
         "border-subtle",
         "surface",
@@ -1570,8 +1579,8 @@
         }
       ],
       "tokens": [
-        "accent",
         "accent-subtle",
+        "accent-text",
         "border",
         "border-subtle",
         "surface",
@@ -1602,8 +1611,8 @@
         }
       ],
       "tokens": [
-        "accent",
         "accent-subtle",
+        "accent-text",
         "border",
         "border-subtle",
         "surface",
@@ -1618,8 +1627,8 @@
       "source": "src/components/ui/Table.tsx",
       "props": [],
       "tokens": [
-        "accent",
         "accent-subtle",
+        "accent-text",
         "border",
         "border-subtle",
         "surface",
@@ -1701,7 +1710,7 @@
         }
       ],
       "tokens": [
-        "accent"
+        "accent-text"
       ]
     },
     {
@@ -1763,6 +1772,7 @@
       ],
       "tokens": [
         "accent",
+        "accent-text",
         "border",
         "surface",
         "surface-raised",
@@ -1897,6 +1907,7 @@
         "accent",
         "accent-muted",
         "accent-subtle",
+        "accent-text",
         "border",
         "border-subtle",
         "on-accent",
@@ -1946,6 +1957,7 @@
         "accent",
         "accent-muted",
         "accent-subtle",
+        "accent-text",
         "border",
         "border-subtle",
         "on-accent",
@@ -1983,6 +1995,7 @@
         "accent",
         "accent-muted",
         "accent-subtle",
+        "accent-text",
         "border",
         "border-subtle",
         "on-accent",

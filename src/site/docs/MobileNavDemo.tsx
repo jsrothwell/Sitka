@@ -72,7 +72,7 @@ export function BottomTabBarDemo() {
       {/* Screen content */}
       <div className="flex-1 flex items-center justify-center">
         <div className="text-center px-4">
-          <div className="w-11 h-11 rounded-xl bg-[rgb(var(--accent-subtle))] flex items-center justify-center mx-auto mb-3 text-[rgb(var(--accent))]">
+          <div className="w-11 h-11 rounded-xl bg-[rgb(var(--accent-subtle))] flex items-center justify-center mx-auto mb-3 text-[rgb(var(--accent-text))]">
             <ScreenIcon className="w-5 h-5" />
           </div>
           <p className="text-[14px] font-semibold text-[rgb(var(--text-primary))] mb-1">{screen.heading}</p>
@@ -92,7 +92,7 @@ export function BottomTabBarStandaloneDemo() {
   return (
     <div className="w-full max-w-sm rounded-2xl overflow-hidden border border-[rgb(var(--border))]">
       <div className="h-24 flex items-center justify-center bg-[rgb(var(--background))]">
-        <p className="text-[12px] text-[rgb(var(--text-tertiary))]">Active: <span className="text-[rgb(var(--accent))]">{tab}</span></p>
+        <p className="text-[12px] text-[rgb(var(--text-tertiary))]">Active: <span className="text-[rgb(var(--accent-text))]">{tab}</span></p>
       </div>
       <BottomTabBar items={TABS} value={tab} onChange={setTab} />
     </div>
@@ -180,7 +180,7 @@ export function NavigationDrawerDemo() {
               className={cn(
                 "w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[12px] font-medium transition-colors text-left",
                 active === label
-                  ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]"
+                  ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]"
                   : "text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface-raised))] hover:text-[rgb(var(--text-primary))]"
               )}
             >
@@ -306,7 +306,7 @@ export function BottomSheetDemo() {
                 onClick={() => { setSnap(s); setOpen(true); }}
                 className="w-full h-8 rounded-xl bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] text-[11px] font-medium text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] hover:border-[rgb(var(--accent))] transition-colors"
               >
-                Open · <span className="font-mono text-[rgb(var(--accent))]">{s}</span>
+                Open · <span className="font-mono text-[rgb(var(--accent-text))]">{s}</span>
               </button>
             ))}
           </div>

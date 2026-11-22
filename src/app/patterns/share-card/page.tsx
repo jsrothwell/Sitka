@@ -176,7 +176,7 @@ export default function ShareCardPage() {
               <p className="mt-auto text-[22px] font-medium text-white/55">Tracked privately on my iPhone and Mac with JobFlo.</p>
             </div>
           </div>
-          <button className="w-[270px] rounded-xl border border-[rgb(var(--accent))] py-2.5 text-[14px] font-semibold text-[rgb(var(--accent))]">
+          <button className="w-[270px] rounded-xl border border-[rgb(var(--accent))] py-2.5 text-[14px] font-semibold text-[rgb(var(--accent-text))]">
             ⬆ Share your search
           </button>
           <label className="flex items-center gap-2 text-[12px] text-[rgb(var(--text-secondary))]">

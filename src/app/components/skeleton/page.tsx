@@ -593,7 +593,7 @@ export default function SkeletonPage() {
             "Respect prefers-reduced-motion: disable the shimmer animation for users who have requested reduced motion in their OS settings.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

@@ -33,9 +33,9 @@ const variants: Record<ButtonVariant, { main: string; divider: string; chevron: 
     chevron: "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] hover:opacity-90",
   },
   secondary: {
-    main:    "bg-[rgb(var(--surface))] text-[rgb(var(--text-primary))] border border-[rgb(var(--border))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent))]",
+    main:    "bg-[rgb(var(--surface))] text-[rgb(var(--text-primary))] border border-[rgb(var(--border))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent-text))]",
     divider: "bg-[rgb(var(--border))]",
-    chevron: "bg-[rgb(var(--surface))] text-[rgb(var(--text-secondary))] border border-[rgb(var(--border))] border-l-0 hover:text-[rgb(var(--accent))] hover:border-[rgb(var(--accent))]",
+    chevron: "bg-[rgb(var(--surface))] text-[rgb(var(--text-secondary))] border border-[rgb(var(--border))] border-l-0 hover:text-[rgb(var(--accent-text))] hover:border-[rgb(var(--accent))]",
   },
   ghost: {
     main:    "text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface))] hover:text-[rgb(var(--text-primary))]",

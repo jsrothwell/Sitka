@@ -174,7 +174,7 @@ export default function LabelPage() {
             "Prefer the built-in label prop on Input, Select, and Textarea when there is no need for extra composition.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}
@@ -196,7 +196,7 @@ export default function LabelPage() {
         </h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
           All native{" "}
-          <code className="font-mono text-[12px] text-[rgb(var(--accent))]">{"<label>"}</code>{" "}
+          <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">{"<label>"}</code>{" "}
           attributes are forwarded.
         </p>
         <PropsTable props={PROPS} />
@@ -215,7 +215,7 @@ export default function LabelPage() {
             "When a label is visually hidden, prefer sr-only class over omitting it entirely — the association still benefits keyboard and screen reader users.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

@@ -326,7 +326,7 @@ export default function DesktopLayoutPage() {
             <thead>
               <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
                 {["Dimension", "Rail", "Drawer"].map((h, i) => (
-                  <th key={h} className={`px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider ${i === 0 ? "text-[rgb(var(--text-tertiary))]" : "text-[rgb(var(--accent))]"}`}>{h}</th>
+                  <th key={h} className={`px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider ${i === 0 ? "text-[rgb(var(--text-tertiary))]" : "text-[rgb(var(--accent-text))]"}`}>{h}</th>
                 ))}
               </tr>
             </thead>
@@ -346,7 +346,7 @@ export default function DesktopLayoutPage() {
         <ul className="space-y-3 text-[14px] text-[rgb(var(--text-secondary))] mb-8">
           {RESPONSIVE_RULES.map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>{item}
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>{item}
             </li>
           ))}
         </ul>
@@ -369,7 +369,7 @@ export default function DesktopLayoutPage() {
             { zone: "User / Profile", rule: "Avatar + display name on wide screens. Avatar only on narrower desktops. Clicking opens an account popover with sign-out at the bottom." },
           ].map(({ zone, rule }) => (
             <div key={zone} className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
-              <code className="text-[11px] font-mono text-[rgb(var(--accent))] block mb-1">{zone}</code>
+              <code className="text-[11px] font-mono text-[rgb(var(--accent-text))] block mb-1">{zone}</code>
               <p className="text-[11px] text-[rgb(var(--text-secondary))] leading-relaxed">{rule}</p>
             </div>
           ))}
@@ -397,7 +397,7 @@ export default function DesktopLayoutPage() {
             <tbody>
               {GRID_BREAKPOINTS.map((row, i) => (
                 <tr key={row.bp} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{row.bp}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{row.bp}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-primary))] font-semibold">{row.cols}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.gutter}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.margin}</td>
@@ -471,7 +471,7 @@ export default function DesktopLayoutPage() {
             { name: "Full bleed",           grid: "12",     use: "Maps, canvases, video, or tables that need every pixel." },
           ].map(({ name, grid, use }) => (
             <div key={name} className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4 flex gap-4">
-              <code className="text-[11px] font-mono text-[rgb(var(--accent))] shrink-0 mt-0.5">{grid}</code>
+              <code className="text-[11px] font-mono text-[rgb(var(--accent-text))] shrink-0 mt-0.5">{grid}</code>
               <div>
                 <span className="text-[12px] font-semibold text-[rgb(var(--text-primary))] block mb-1">{name}</span>
                 <p className="text-[11px] text-[rgb(var(--text-secondary))] leading-relaxed">{use}</p>

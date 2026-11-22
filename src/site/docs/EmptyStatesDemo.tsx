@@ -65,7 +65,7 @@ export function EmptyStatesDemo() {
       <EmptyStateCard
         icon={<Search className="w-6 h-6" />}
         iconBg="bg-[rgb(var(--accent-subtle))]"
-        iconColor="text-[rgb(var(--accent))]"
+        iconColor="text-[rgb(var(--accent-text))]"
         title="No results found"
         description={'Nothing matches “dark mode tokens”. Try a different query or browse all foundations.'}
         primaryAction="Clear search"

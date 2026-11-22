@@ -40,7 +40,7 @@ export default function LibraryTokensPage() {
         <section>
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1">Option A — CSS custom properties</h2>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Paste the token block into your global stylesheet and reference tokens anywhere via <code className="font-mono text-[rgb(var(--accent))] text-[12px]">rgb(var(--token-name))</code>. Works in any framework.
+            Paste the token block into your global stylesheet and reference tokens anywhere via <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">rgb(var(--token-name))</code>. Works in any framework.
           </p>
           <CodeBlock
             language="css"
@@ -86,12 +86,12 @@ export default function LibraryTokensPage() {
         <section>
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1">Option B — JSON (DTCG)</h2>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            The canonical token file lives at <code className="font-mono text-[rgb(var(--accent))] text-[12px]">src/tokens/tokens.json</code> and follows the{" "}
-            <Link href="https://tr.designtokens.org/format/" className="text-[rgb(var(--accent))] underline underline-offset-2" target="_blank" rel="noopener noreferrer">
+            The canonical token file lives at <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">src/tokens/tokens.json</code> and follows the{" "}
+            <Link href="https://tr.designtokens.org/format/" className="text-[rgb(var(--accent-text))] underline underline-offset-2" target="_blank" rel="noopener noreferrer">
               Design Token Community Group
             </Link>{" "}
             (DTCG) spec. Download it from the{" "}
-            <Link href="/tokens/export" className="text-[rgb(var(--accent))] underline underline-offset-2">
+            <Link href="/tokens/export" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
               Token Export
             </Link>{" "}
             page or copy it into your pipeline directly.
@@ -216,8 +216,8 @@ export function Card({ children }: { children: React.ReactNode }) {
         <section>
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1">Automating with Style Dictionary</h2>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            The DTCG-formatted <code className="font-mono text-[rgb(var(--accent))] text-[12px]">tokens.json</code> can be fed directly into{" "}
-            <Link href="https://amzn.github.io/style-dictionary/" className="text-[rgb(var(--accent))] underline underline-offset-2" target="_blank" rel="noopener noreferrer">
+            The DTCG-formatted <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">tokens.json</code> can be fed directly into{" "}
+            <Link href="https://amzn.github.io/style-dictionary/" className="text-[rgb(var(--accent-text))] underline underline-offset-2" target="_blank" rel="noopener noreferrer">
               Style Dictionary
             </Link>{" "}
             to generate platform-specific outputs (Swift, Kotlin, CSS, SCSS, JSON, JS, and more):
@@ -251,11 +251,11 @@ export function Card({ children }: { children: React.ReactNode }) {
 
         <p className="text-[13px] text-[rgb(var(--text-tertiary))]">
           Back to{" "}
-          <Link href="/libraries" className="text-[rgb(var(--accent))] underline underline-offset-2">
+          <Link href="/libraries" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
             all libraries
           </Link>
           {" · "}
-          <Link href="/tokens/export" className="text-[rgb(var(--accent))] underline underline-offset-2">
+          <Link href="/tokens/export" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
             Download tokens.json
           </Link>
           .

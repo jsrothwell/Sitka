@@ -71,7 +71,7 @@ export function Avatar({
         ) : (
           <span
             className={cn(
-              "font-semibold leading-none text-[rgb(var(--accent))]",
+              "font-semibold leading-none text-[rgb(var(--accent-text))]",
               s.text
             )}
           >

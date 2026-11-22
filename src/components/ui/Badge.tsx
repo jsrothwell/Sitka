@@ -22,7 +22,7 @@ const variantStyles: Record<BadgeVariant, string> = {
   default:
     "bg-[rgb(var(--surface-raised))] border-[rgb(var(--border))] text-[rgb(var(--text-secondary))]",
   primary:
-    "bg-[rgb(var(--accent-subtle))] border-[rgb(var(--accent)/0.3)] text-[rgb(var(--accent))]",
+    "bg-[rgb(var(--accent-subtle))] border-[rgb(var(--accent)/0.3)] text-[rgb(var(--accent-text))]",
   success:
     "bg-emerald-500/10 border-emerald-500/30 text-emerald-500",
   warning:

@@ -33,7 +33,7 @@ const roleStyles: Record<MessageRole, { bubble: string; text: string; icon: stri
   assistant: {
     bubble: "bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] text-[rgb(var(--text-primary))] rounded-bl-sm",
     text: "text-[rgb(var(--text-primary))]",
-    icon: "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]",
+    icon: "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]",
   },
   system: {
     bubble: "bg-[rgb(var(--surface))] border border-[rgb(var(--border-subtle))] text-[rgb(var(--text-secondary))] italic",

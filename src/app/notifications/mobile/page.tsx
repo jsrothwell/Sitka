@@ -248,7 +248,7 @@ export default function MobileNotificationsPage() {
               ].map((row, i) => (
                 <tr key={row.part} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{row.part}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.req}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.req}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.notes}</td>
                 </tr>
               ))}
@@ -281,7 +281,7 @@ export default function MobileNotificationsPage() {
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{row.type}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.use}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.urgency}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.dismiss}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.dismiss}</td>
                 </tr>
               ))}
             </tbody>
@@ -307,7 +307,7 @@ export default function MobileNotificationsPage() {
             { title: "Sound + haptics", body: "System notifications pair with a sound. In-app banners should not auto-play sound — use haptics (UIFeedbackGenerator / Haptics API) for subtle acknowledgement instead." },
           ].map(({ title, body }) => (
             <li key={title} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               <span><strong className="text-[rgb(var(--text-primary))]">{title}.</strong> {body}</span>
             </li>
           ))}
@@ -326,7 +326,7 @@ export default function MobileNotificationsPage() {
             "VoiceOver / TalkBack: The notification should be announced immediately on appearance. Test that the app name, title, and body are all read in order.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               {item}
             </li>
           ))}

@@ -129,7 +129,7 @@ export function FileUpload({
         <Upload
           className={cn(
             "w-6 h-6 transition-colors",
-            isDragging ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-tertiary))]"
+            isDragging ? "text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-tertiary))]"
           )}
           strokeWidth={1.5}
         />
@@ -162,7 +162,7 @@ export function FileUpload({
               key={`${file.name}-${i}`}
               className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))]"
             >
-              <File className="w-4 h-4 shrink-0 text-[rgb(var(--accent))]" strokeWidth={1.5} />
+              <File className="w-4 h-4 shrink-0 text-[rgb(var(--accent-text))]" strokeWidth={1.5} />
               <span className="flex-1 min-w-0 text-[12px] text-[rgb(var(--text-primary))] truncate">
                 {file.name}
               </span>

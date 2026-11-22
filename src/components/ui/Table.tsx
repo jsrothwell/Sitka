@@ -106,10 +106,10 @@ export const TableHead = forwardRef<HTMLTableCellElement, TableHeadProps>(
         <span className="inline-flex items-center gap-1.5">
           {children}
           <span className="flex flex-col gap-[1px] opacity-40" aria-hidden="true">
-            <svg width="8" height="5" viewBox="0 0 8 5" fill="currentColor" className={cn(sortDirection === "asc" && "opacity-100 text-[rgb(var(--accent))]")}>
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="currentColor" className={cn(sortDirection === "asc" && "opacity-100 text-[rgb(var(--accent-text))]")}>
               <path d="M4 0L8 5H0L4 0Z" />
             </svg>
-            <svg width="8" height="5" viewBox="0 0 8 5" fill="currentColor" className={cn(sortDirection === "desc" && "opacity-100 text-[rgb(var(--accent))]")}>
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="currentColor" className={cn(sortDirection === "desc" && "opacity-100 text-[rgb(var(--accent-text))]")}>
               <path d="M4 5L0 0H8L4 5Z" />
             </svg>
           </span>

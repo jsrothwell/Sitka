@@ -535,7 +535,7 @@ export default function DocumentAssemblerPage() {
             { heading: "Export is a side effect", body: "The PDF generation is intentionally synchronous (CTFramesetter). For long documents (>20 sections) consider offloading to a background Task and showing a progress sheet." },
           ].map(({ heading, body }) => (
             <div key={heading} className="flex gap-3 text-[14px]">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               <div>
                 <span className="font-medium text-[rgb(var(--text-primary))]">{heading} — </span>
                 <span className="text-[rgb(var(--text-secondary))]">{body}</span>
@@ -590,7 +590,7 @@ export default function DocumentAssemblerPage() {
             "The PDF output must carry embedded metadata with document title, author, and creation date so screen readers can announce it when opened in Preview or Books.",
           ].map(item => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}

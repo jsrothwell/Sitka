@@ -656,7 +656,7 @@ export default function FeatureGatePage() {
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Glass surface</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">backdrop-filter blur(20px) saturate(160%)</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface-glass</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--surface-glass</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Specular edge</td>
@@ -666,12 +666,12 @@ export default function FeatureGatePage() {
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Icon well</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">44×44 rounded rect, accent-tinted background</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--accent / 0.15</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--accent / 0.15</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Upgrade button</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Solid accent fill, white label</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--accent</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--accent</code></td>
               </tr>
             </tbody>
           </table>
@@ -684,7 +684,7 @@ export default function FeatureGatePage() {
           <li>Always show enough of the locked content to communicate value — don&apos;t hide it entirely.</li>
           <li>Keep the feature name concise (2–4 words). Put extra context in the description line.</li>
           <li>The upgrade CTA must always be visible and tappable, even on small screens.</li>
-          <li>Apply <code className="font-mono text-[11px] text-[rgb(var(--accent))]">prefers-reduced-transparency</code> fallback: replace <code className="font-mono text-[11px] text-[rgb(var(--accent))]">backdrop-filter</code> with a solid <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface</code> background.</li>
+          <li>Apply <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">prefers-reduced-transparency</code> fallback: replace <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">backdrop-filter</code> with a solid <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--surface</code> background.</li>
           <li>Do not gate core navigation or destructive/dangerous actions — only feature upsells.</li>
         </ul>
       </section>

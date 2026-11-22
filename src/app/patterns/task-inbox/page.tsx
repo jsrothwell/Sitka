@@ -401,9 +401,9 @@ export default function TaskInboxPage() {
             </p>
             <h3 className="font-semibold text-[rgb(var(--text-primary))] pt-2">Triage flow</h3>
             <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
-              <li className="flex gap-2"><span className="text-[rgb(var(--accent))]">→</span> Tap a task to open the detail panel (NavigationSplitView on iPad/macOS)</li>
-              <li className="flex gap-2"><span className="text-[rgb(var(--accent))]">→</span> Assign an Area, Project, and due date to move it out of the inbox</li>
-              <li className="flex gap-2"><span className="text-[rgb(var(--accent))]">→</span> Inbox count decrements in real time — zero shows an "All clear" empty state</li>
+              <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))]">→</span> Tap a task to open the detail panel (NavigationSplitView on iPad/macOS)</li>
+              <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))]">→</span> Assign an Area, Project, and due date to move it out of the inbox</li>
+              <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))]">→</span> Inbox count decrements in real time — zero shows an "All clear" empty state</li>
             </ul>
           </div>
         </div>
@@ -445,9 +445,9 @@ export default function TaskInboxPage() {
       <section className="mb-12">
         <h2 className="text-[22px] font-bold text-[rgb(var(--text-primary))] mb-4">Accessibility</h2>
         <ul className="space-y-3 text-[14px] text-[rgb(var(--text-secondary))]">
-          <li className="flex gap-2"><span className="text-[rgb(var(--accent))] shrink-0">→</span><span>Completion toggle uses <code>.contentTransition(.symbolEffect(.replace))</code>; VoiceOver announces via <code>.accessibilityValue</code></span></li>
-          <li className="flex gap-2"><span className="text-[rgb(var(--accent))] shrink-0">→</span><span>Overdue dates render red and also carry <code>.accessibilityLabel("Overdue, date")</code> so colour is not the only signal</span></li>
-          <li className="flex gap-2"><span className="text-[rgb(var(--accent))] shrink-0">→</span><span>Capture field uses <code>.submitLabel(.done)</code> — keyboard stays up for rapid multi-item entry</span></li>
+          <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))] shrink-0">→</span><span>Completion toggle uses <code>.contentTransition(.symbolEffect(.replace))</code>; VoiceOver announces via <code>.accessibilityValue</code></span></li>
+          <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))] shrink-0">→</span><span>Overdue dates render red and also carry <code>.accessibilityLabel("Overdue, date")</code> so colour is not the only signal</span></li>
+          <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))] shrink-0">→</span><span>Capture field uses <code>.submitLabel(.done)</code> — keyboard stays up for rapid multi-item entry</span></li>
         </ul>
       </section>
     </div>

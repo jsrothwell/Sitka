@@ -161,7 +161,7 @@ export default function SpinnerPage() {
                 { size: "lg", diam: "32px", stroke: "2px",   use: "Full-section loading states" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.size}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.size}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.diam}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.stroke}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.use}</td>
@@ -221,7 +221,7 @@ export default function SpinnerPage() {
             "Do not use Spinner as the sole loading indicator inside a button that already handles its own loading state — prefer the Button component's built-in loading prop.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

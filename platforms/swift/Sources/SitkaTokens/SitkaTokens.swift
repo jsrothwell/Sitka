@@ -109,6 +109,18 @@ public enum SitkaTokens {
         public static let categorical7 = SitkaRGBA(red: 0.1843, green: 0.4196, blue: 0.4000, alpha: 1)
         /// `color.categorical.8` — #5e6472
         public static let categorical8 = SitkaRGBA(red: 0.3686, green: 0.3922, blue: 0.4471, alpha: 1)
+        /// `color.contrastMore.dark.textSecondary` — #d2d2dc
+        public static let contrastMoreDarkTextSecondary = SitkaRGBA(red: 0.8235, green: 0.8235, blue: 0.8627, alpha: 1)
+        /// `color.contrastMore.dark.textTertiary` — #b4b4c3
+        public static let contrastMoreDarkTextTertiary = SitkaRGBA(red: 0.7059, green: 0.7059, blue: 0.7647, alpha: 1)
+        /// `color.contrastMore.dark.border` — #6c6c7c
+        public static let contrastMoreDarkBorder = SitkaRGBA(red: 0.4235, green: 0.4235, blue: 0.4863, alpha: 1)
+        /// `color.contrastMore.light.textSecondary` — #2d2d32
+        public static let contrastMoreLightTextSecondary = SitkaRGBA(red: 0.1765, green: 0.1765, blue: 0.1961, alpha: 1)
+        /// `color.contrastMore.light.textTertiary` — #46464c
+        public static let contrastMoreLightTextTertiary = SitkaRGBA(red: 0.2745, green: 0.2745, blue: 0.2980, alpha: 1)
+        /// `color.contrastMore.light.border` — #80808a
+        public static let contrastMoreLightBorder = SitkaRGBA(red: 0.5020, green: 0.5020, blue: 0.5412, alpha: 1)
     }
 
     /// Themed colours. Use `Color.sitka(\.accent)` in SwiftUI to follow light/dark automatically.
@@ -120,6 +132,7 @@ public enum SitkaTokens {
         public let accent: SitkaRGBA
         public let accentSubtle: SitkaRGBA
         public let accentMuted: SitkaRGBA
+        public let accentText: SitkaRGBA
         public let textPrimary: SitkaRGBA
         public let textSecondary: SitkaRGBA
         public let textTertiary: SitkaRGBA
@@ -151,6 +164,7 @@ public enum SitkaTokens {
         accent: SitkaRGBA(red: 0.0000, green: 0.7529, blue: 0.9098, alpha: 1),
         accentSubtle: SitkaRGBA(red: 0.0000, green: 0.1490, blue: 0.1804, alpha: 1),
         accentMuted: SitkaRGBA(red: 0.0000, green: 0.2824, blue: 0.3373, alpha: 1),
+        accentText: SitkaRGBA(red: 0.0000, green: 0.7529, blue: 0.9098, alpha: 1),
         textPrimary: SitkaRGBA(red: 0.9490, green: 0.9490, blue: 0.9647, alpha: 1),
         textSecondary: SitkaRGBA(red: 0.6667, green: 0.6667, blue: 0.7255, alpha: 1),
         textTertiary: SitkaRGBA(red: 0.5294, green: 0.5294, blue: 0.6078, alpha: 1),
@@ -182,9 +196,10 @@ public enum SitkaTokens {
         accent: SitkaRGBA(red: 0.0000, green: 0.7529, blue: 0.9098, alpha: 1),
         accentSubtle: SitkaRGBA(red: 0.8784, green: 0.9686, blue: 0.9882, alpha: 1),
         accentMuted: SitkaRGBA(red: 0.7020, green: 0.9294, blue: 0.9765, alpha: 1),
+        accentText: SitkaRGBA(red: 0.0000, green: 0.4471, blue: 0.5412, alpha: 1),
         textPrimary: SitkaRGBA(red: 0.1176, green: 0.1176, blue: 0.1176, alpha: 1),
         textSecondary: SitkaRGBA(red: 0.3333, green: 0.3333, blue: 0.3529, alpha: 1),
-        textTertiary: SitkaRGBA(red: 0.4510, green: 0.4510, blue: 0.4706, alpha: 1),
+        textTertiary: SitkaRGBA(red: 0.4235, green: 0.4235, blue: 0.4431, alpha: 1),
         border: SitkaRGBA(red: 0.8784, green: 0.8784, blue: 0.9059, alpha: 1),
         borderSubtle: SitkaRGBA(red: 0.9412, green: 0.9412, blue: 0.9569, alpha: 1),
         statusSuccess: SitkaRGBA(red: 0.0627, green: 0.7255, blue: 0.5059, alpha: 1),

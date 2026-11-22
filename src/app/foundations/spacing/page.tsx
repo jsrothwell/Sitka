@@ -56,7 +56,7 @@ export default function SpacingPage() {
               }`}
             >
               {/* Token name */}
-              <code className="w-28 flex-shrink-0 text-[12px] font-mono text-[rgb(var(--accent))]">
+              <code className="w-28 flex-shrink-0 text-[12px] font-mono text-[rgb(var(--accent-text))]">
                 {step.token}
               </code>
 
@@ -206,7 +206,7 @@ export default function SpacingPage() {
                     }`}
                   >
                     <td className="px-4 py-3">
-                      <code className="font-mono text-[11px] text-[rgb(var(--accent))]">{step.token}</code>
+                      <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{step.token}</code>
                     </td>
                     <td className="px-4 py-3">
                       <code className="font-mono text-[12px] text-[rgb(var(--text-primary))]">{step.value}</code>

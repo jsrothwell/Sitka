@@ -202,7 +202,7 @@ export default function LiveCheckPage() {
             )}
           </div>
           <div className="mt-3 flex gap-3 text-[12px]">
-            <button onClick={() => setText(SAMPLE)} className="text-[rgb(var(--accent))] underline underline-offset-2">
+            <button onClick={() => setText(SAMPLE)} className="text-[rgb(var(--accent-text))] underline underline-offset-2">
               Vague listing
             </button>
             <button
@@ -211,7 +211,7 @@ export default function LiveCheckPage() {
                   "Senior Product Designer, Payments. You'll own the checkout and refunds flows for our merchant dashboard, working with two engineers and a PM. In the first 90 days you'll redesign dispute handling, which today takes merchants 11 steps. Salary $150k–$175k. Applications close 15 December; interviews are two rounds, both remote."
                 )
               }
-              className="text-[rgb(var(--accent))] underline underline-offset-2"
+              className="text-[rgb(var(--accent-text))] underline underline-offset-2"
             >
               Specific listing
             </button>

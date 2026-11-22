@@ -388,11 +388,11 @@ export default function ModalPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          React: rendered via <code className="font-mono text-[13px] text-[rgb(var(--accent))]">createPortal</code> into{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">document.body</code> — never trapped
+          React: rendered via <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">createPortal</code> into{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">document.body</code> — never trapped
           inside overflow-hidden ancestors. HTML: uses the native{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">&lt;dialog&gt;</code> element with{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">::backdrop</code>.
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">&lt;dialog&gt;</code> element with{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">::backdrop</code>.
         </p>
         <PlatformTabs code={CODE} />
       </section>
@@ -430,7 +430,7 @@ export default function ModalPage() {
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{row.phase}</td>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{row.property}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.property}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px]">{row.value}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]"><code className="font-mono text-[11px]">{row.easing}</code></td>
                 </tr>
@@ -488,7 +488,7 @@ export default function ModalPage() {
             "Backdrop click dismisses via pointer event on the overlay, not the panel, so accidental interior clicks are safe.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

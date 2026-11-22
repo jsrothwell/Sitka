@@ -44,11 +44,11 @@ export default function LibraryReactPage() {
         {/* Step 1 — CSS Variables */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">1</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">1</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Add CSS variables</h2>
           </div>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Copy the token variables block into your global stylesheet (or a new <code className="font-mono text-[rgb(var(--accent))] text-[12px]">sitka.css</code> that you import in <code className="font-mono text-[rgb(var(--accent))] text-[12px]">layout.tsx</code>).
+            Copy the token variables block into your global stylesheet (or a new <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">sitka.css</code> that you import in <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">layout.tsx</code>).
           </p>
           <CodeBlock
             language="css"
@@ -112,11 +112,11 @@ export default function LibraryReactPage() {
         {/* Step 2 — Tailwind config */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">2</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">2</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Extend Tailwind config</h2>
           </div>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Merge the Sitka theme extension into your existing <code className="font-mono text-[rgb(var(--accent))] text-[12px]">tailwind.config.ts</code>:
+            Merge the Sitka theme extension into your existing <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">tailwind.config.ts</code>:
           </p>
           <CodeBlock
             language="ts"
@@ -159,7 +159,7 @@ export default config;`}
         {/* Step 3 — cn helper */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">3</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">3</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Add the <code className="font-mono text-[16px]">cn</code> helper</h2>
           </div>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
@@ -180,11 +180,11 @@ export function cn(...inputs: ClassValue[]) {
         {/* Step 4 — Copy components */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">4</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">4</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Copy components</h2>
           </div>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Each component is a self-contained file in <code className="font-mono text-[rgb(var(--accent))] text-[12px]">src/components/ui/</code>. Copy whichever ones you need into your project's component directory and import them:
+            Each component is a self-contained file in <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">src/components/ui/</code>. Copy whichever ones you need into your project's component directory and import them:
           </p>
           <CodeBlock
             language="tsx"
@@ -210,11 +210,11 @@ export default function Page() {
         {/* Step 5 — Fonts */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">5</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">5</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Load Inter font</h2>
           </div>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Sitka uses Inter as its primary typeface. Load it via <code className="font-mono text-[rgb(var(--accent))] text-[12px]">next/font</code> in your root layout:
+            Sitka uses Inter as its primary typeface. Load it via <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">next/font</code> in your root layout:
           </p>
           <CodeBlock
             language="tsx"
@@ -242,7 +242,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <section>
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3">Dark / Light mode</h2>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Sitka is dark-first. Toggle light mode by setting <code className="font-mono text-[rgb(var(--accent))] text-[12px]">data-theme="light"</code> on <code className="font-mono text-[rgb(var(--accent))] text-[12px]">&lt;html&gt;</code>:
+            Sitka is dark-first. Toggle light mode by setting <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">data-theme="light"</code> on <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">&lt;html&gt;</code>:
           </p>
           <CodeBlock
             language="ts"
@@ -259,21 +259,21 @@ document.documentElement.removeAttribute("data-theme");`}
           <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
             <li>
               Browse the{" "}
-              <Link href="/components/button" className="text-[rgb(var(--accent))] underline underline-offset-2">
+              <Link href="/components/button" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
                 Component docs
               </Link>{" "}
               for props and copy-paste examples.
             </li>
             <li>
               Download the full{" "}
-              <Link href="/tokens/export" className="text-[rgb(var(--accent))] underline underline-offset-2">
+              <Link href="/tokens/export" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
                 token JSON
               </Link>{" "}
               for automated generation pipelines.
             </li>
             <li>
               Check the{" "}
-              <Link href="/foundations/motion" className="text-[rgb(var(--accent))] underline underline-offset-2">
+              <Link href="/foundations/motion" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
                 Motion guide
               </Link>{" "}
               for Framer Motion spring presets.

@@ -32,7 +32,7 @@ const features = [
     icon: Zap,
     title: "Accessibility",
     description:
-      "WCAG 2.1 compliance built-in. Contrast ratios, interaction models, and screen-reader semantics by default.",
+      "WCAG 2.2 compliance built-in. Contrast ratios, interaction models, and screen-reader semantics by default.",
     href: "/foundations/accessibility",
   },
 ];

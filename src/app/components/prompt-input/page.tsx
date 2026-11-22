@@ -84,7 +84,7 @@ export default function PromptInputPage() {
             "No text contrast issues: input text uses --text-primary; placeholder uses --text-tertiary.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

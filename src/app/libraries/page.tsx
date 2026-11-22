@@ -79,7 +79,7 @@ const libraries = [
 ];
 
 const badgeStyles = {
-  accent: "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] border-[rgb(var(--accent-muted))]",
+  accent: "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] border-[rgb(var(--accent-muted))]",
   neutral: "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-secondary))] border-[rgb(var(--border))]",
 };
 
@@ -101,7 +101,7 @@ export default function LibrariesPage() {
             {/* Header */}
             <div className="flex items-start justify-between gap-3">
               <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-secondary))] border border-[rgb(var(--border))] group-hover:text-[rgb(var(--accent))] transition-colors">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-secondary))] border border-[rgb(var(--border))] group-hover:text-[rgb(var(--accent-text))] transition-colors">
                   {lib.icon}
                 </div>
                 <h2 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] leading-tight">
@@ -145,7 +145,7 @@ export default function LibrariesPage() {
       {/* Footer note */}
       <p className="mt-10 text-[13px] text-[rgb(var(--text-tertiary))]">
         All libraries share the same{" "}
-        <Link href="/tokens" className="text-[rgb(var(--accent))] underline underline-offset-2 hover:opacity-80">
+        <Link href="/tokens" className="text-[rgb(var(--accent-text))] underline underline-offset-2 hover:opacity-80">
           design tokens
         </Link>{" "}
         — colour, spacing, motion, and typography stay consistent across every platform.

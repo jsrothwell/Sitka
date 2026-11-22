@@ -21,8 +21,8 @@ export default function LibraryStorybookPage() {
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3">Overview</h2>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed">
             Sitka ships with Storybook 8 pre-configured. All 31 components have stories in{" "}
-            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">src/stories/</code>.
-            The setup uses <code className="font-mono text-[rgb(var(--accent))] text-[12px]">@storybook/react-vite</code> so
+            <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">src/stories/</code>.
+            The setup uses <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">@storybook/react-vite</code> so
             Storybook builds independently of Next.js — no version coupling, instant HMR.
           </p>
           <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -44,7 +44,7 @@ export default function LibraryStorybookPage() {
         <section>
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3">Run locally</h2>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Start Storybook on <code className="font-mono text-[rgb(var(--accent))] text-[12px]">localhost:6006</code>:
+            Start Storybook on <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">localhost:6006</code>:
           </p>
           <CodeBlock
             language="bash"
@@ -94,7 +94,7 @@ export default function LibraryStorybookPage() {
         <section>
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3">Writing a story</h2>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Stories live in <code className="font-mono text-[rgb(var(--accent))] text-[12px]">src/stories/</code> and follow
+            Stories live in <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">src/stories/</code> and follow
             the Component Story Format (CSF 3). Here is the Button story as a reference:
           </p>
           <CodeBlock
@@ -131,7 +131,7 @@ export const Secondary: Story = {
         <section>
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3">Configuration</h2>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            The config lives in <code className="font-mono text-[rgb(var(--accent))] text-[12px]">.storybook/</code>.
+            The config lives in <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">.storybook/</code>.
           </p>
           <div className="space-y-4">
             <div>
@@ -212,19 +212,19 @@ export default {
           <h2 className="text-[16px] font-semibold text-[rgb(var(--text-primary))] mb-3">Related</h2>
           <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
             <li>
-              <Link href="/components/button" className="text-[rgb(var(--accent))] underline underline-offset-2">
+              <Link href="/components/button" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
                 Component docs
               </Link>{" "}
               — props, variants, and usage guidelines for every component.
             </li>
             <li>
-              <Link href="/foundations/accessibility" className="text-[rgb(var(--accent))] underline underline-offset-2">
+              <Link href="/foundations/accessibility" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
                 Accessibility
               </Link>{" "}
               — the a11y standards each component is tested against.
             </li>
             <li>
-              <Link href="/libraries/react" className="text-[rgb(var(--accent))] underline underline-offset-2">
+              <Link href="/libraries/react" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
                 React · Next.js
               </Link>{" "}
               — how to integrate Sitka into a Next.js project.

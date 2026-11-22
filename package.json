@@ -23,7 +23,11 @@
     "figma:drift": "node scripts/figma/drift.mjs",
     "agents:build": "node scripts/agents/build.mjs",
     "version:sync": "node scripts/release/sync-versions.mjs",
-    "version": "node scripts/release/sync-versions.mjs && npm run generate && git add -A packages/sitka-ui/package.json platforms/react-native/package.json src/tokens/tokens.json platforms/swift platforms/figma public/downloads public/llms.txt public/components.json src/site/home/figma-drift.json"
+    "version": "node scripts/release/sync-versions.mjs && npm run generate && git add -A packages/sitka-ui/package.json platforms/react-native/package.json src/tokens/tokens.json platforms/swift platforms/figma public/downloads public/llms.txt public/components.json src/site/home/figma-drift.json",
+    "typecheck:stories": "tsc --noEmit -p tsconfig.stories.json",
+    "test:e2e": "playwright test",
+    "test:a11y": "playwright test e2e/a11y.spec.ts",
+    "test:visual": "playwright test e2e/visual.spec.ts"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
@@ -43,7 +47,9 @@
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
     "@figma/code-connect": "^1.4.4",
+    "@playwright/test": "^1.65.1",
     "@storybook/addon-a11y": "^8.6.0",
     "@storybook/addon-essentials": "^8.6.0",
     "@storybook/react": "^8.6.0",

@@ -63,7 +63,7 @@ export function ColorPalette() {
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Brand</h2>
         <p className="text-[13px] text-[rgb(var(--text-secondary))] mb-4">
-          The core palette. <code className="font-mono text-[rgb(var(--accent))]">brand.cyan</code> is the primary alert and reminder color.
+          The core palette. <code className="font-mono text-[rgb(var(--accent-text))]">brand.cyan</code> is the primary alert and reminder color.
         </p>
         <div className="grid grid-cols-5 md:grid-cols-11 gap-2">
           {Object.entries(tokens.color.brand).map(([k, v]) => (
@@ -113,7 +113,7 @@ export function ColorPalette() {
           tones are deeper. In dark mode the fills already pass, so the two are identical. Ratios below are against{" "}
           <code>--surface</code>, computed from <code>tokens.json</code>.
         </p>
-        <div className="overflow-x-auto rounded-xl border border-[rgb(var(--border))]">
+        <div className="overflow-x-auto rounded-xl border border-[rgb(var(--border))]" tabIndex={0} role="region" aria-label="Status text contrast table">
           <table className="w-full text-[13px]">
             <thead>
               <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
@@ -215,7 +215,7 @@ export function ColorPalette() {
                 { token: "--accent", light: "brand.cyan (#00C0E8)", dark: "brand.cyan (#00C0E8)" },
               ].map((row, i) => (
                 <tr key={row.token} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{row.token}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.token}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))] text-[12px]">{row.light}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))] text-[12px]">{row.dark}</td>
                 </tr>

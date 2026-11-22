@@ -644,7 +644,7 @@ export default function PopoverPage() {
             "Never put content required to complete a task inside a popover — use a Modal for blocking, critical flows.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

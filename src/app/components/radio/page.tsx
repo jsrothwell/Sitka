@@ -249,7 +249,7 @@ export default function RadioPage() {
                 { size: "lg", outer: "20 × 20px", dot: "10 × 10px" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.size}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.size}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.outer}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.dot}</td>
                 </tr>
@@ -282,7 +282,7 @@ export default function RadioPage() {
         </h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
           All native{" "}
-          <code className="font-mono text-[12px] text-[rgb(var(--accent))]">{"<input type=\"radio\">"}</code>{" "}
+          <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">{"<input type=\"radio\">"}</code>{" "}
           attributes are forwarded. Size and name are inherited from RadioGroup context.
         </p>
         <PropsTable props={RADIO_PROPS} />
@@ -309,7 +309,7 @@ export default function RadioPage() {
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap">{row.el}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.role}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.role}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.attrs}</td>
                 </tr>
               ))}
@@ -340,7 +340,7 @@ export default function RadioPage() {
                 { key: "Shift+Tab", action: "Move focus backward past the group" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{row.key}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{row.key}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.action}</td>
                 </tr>
               ))}
@@ -363,7 +363,7 @@ export default function RadioPage() {
             "helperText on individual options should be linked via aria-describedby for screen reader context.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

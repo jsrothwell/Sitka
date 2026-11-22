@@ -203,7 +203,7 @@ export default function ReviewSweepPage() {
                 setKept(new Set());
                 setResolved({});
               }}
-              className="text-[13px] font-semibold text-[rgb(var(--accent))]"
+              className="text-[13px] font-semibold text-[rgb(var(--accent-text))]"
             >
               {waiting.length === 0 ? "Done" : "Reset"}
             </button>
@@ -263,7 +263,7 @@ export default function ReviewSweepPage() {
                     </button>
                     <button
                       onClick={() => setKept((s) => new Set(s).add(item.id))}
-                      className="px-2 py-1.5 text-[12px] font-semibold text-[rgb(var(--accent))]"
+                      className="px-2 py-1.5 text-[12px] font-semibold text-[rgb(var(--accent-text))]"
                     >
                       Keep waiting
                     </button>

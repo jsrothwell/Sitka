@@ -138,7 +138,7 @@ export default function ContrastPage() {
     <div>
       <PageHeader
         title="Contrast"
-        description="Every text and interactive element in Sitka is designed to meet WCAG 2.1 AA as a minimum. This page documents approved token pairings and the rules for maintaining accessible contrast."
+        description="Every text and interactive element in Sitka is designed to meet WCAG 2.2 AA as a minimum. This page documents approved token pairings and the rules for maintaining accessible contrast."
       />
 
       {/* WCAG levels */}
@@ -205,7 +205,7 @@ export default function ContrastPage() {
                 {/* Labels */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <code className="text-[11px] font-mono text-[rgb(var(--accent))]">{p.fgLabel}</code>
+                    <code className="text-[11px] font-mono text-[rgb(var(--accent-text))]">{p.fgLabel}</code>
                     <span className="text-[11px] text-[rgb(var(--text-tertiary))]">on</span>
                     <code className="text-[11px] font-mono text-[rgb(var(--text-secondary))]">{p.bgLabel}</code>
                   </div>
@@ -258,11 +258,11 @@ export default function ContrastPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">accessibleForeground() utility</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-6 leading-relaxed">
           When rendering text on a dynamic background — colour picker swatches, user-assigned tags, status badges — you
-          cannot hardcode a foreground colour. Use <code className="font-mono text-[11px] text-[rgb(var(--accent))]">accessibleForeground()</code> to compute
+          cannot hardcode a foreground colour. Use <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">accessibleForeground()</code> to compute
           whether black or white text produces the higher contrast ratio against any background hex.
-          This is the TypeScript port of Warren&apos;s Swift <code className="font-mono text-[11px] text-[rgb(var(--accent))]">sfAccessibleForeground()</code> function,
-          shipped in the library as <code className="font-mono text-[11px] text-[rgb(var(--accent))]">import {"{"} accessibleForeground {"}"} from &quot;@sitka/react&quot;</code> alongside
-          <code className="font-mono text-[11px] text-[rgb(var(--accent))]"> relativeLuminance()</code> and <code className="font-mono text-[11px] text-[rgb(var(--accent))]">contrastRatio()</code>.
+          This is the TypeScript port of Warren&apos;s Swift <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">sfAccessibleForeground()</code> function,
+          shipped in the library as <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">import {"{"} accessibleForeground {"}"} from &quot;@sitka/react&quot;</code> alongside
+          <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]"> relativeLuminance()</code> and <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">contrastRatio()</code>.
         </p>
 
         <div className="grid grid-cols-2 gap-4 mb-5">

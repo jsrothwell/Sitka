@@ -44,7 +44,7 @@ export default function RTLPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Why logical properties</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed mb-4">
-          Physical properties like <code className="font-mono text-[11px] text-[rgb(var(--accent))]">margin-left</code> are hardcoded to screen direction. Logical properties like <code className="font-mono text-[11px] text-[rgb(var(--accent))]">margin-inline-start</code> resolve relative to the writing direction set by <code className="font-mono text-[11px] text-[rgb(var(--accent))]">dir</code> or <code className="font-mono text-[11px] text-[rgb(var(--accent))]">writing-mode</code>. In LTR, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">inline-start</code> is left. In RTL, it becomes right — automatically.
+          Physical properties like <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">margin-left</code> are hardcoded to screen direction. Logical properties like <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">margin-inline-start</code> resolve relative to the writing direction set by <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">dir</code> or <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">writing-mode</code>. In LTR, <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">inline-start</code> is left. In RTL, it becomes right — automatically.
         </p>
         <div className="grid grid-cols-2 gap-4">
           <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
@@ -167,7 +167,7 @@ export default function RootLayout({
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3">Tailwind CSS v4</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed mb-3">
-          Tailwind v4 ships logical property utilities natively. Use <code className="font-mono text-[11px] text-[rgb(var(--accent))]">ps-4</code> (padding-inline-start) and <code className="font-mono text-[11px] text-[rgb(var(--accent))]">pe-4</code> (padding-inline-end) instead of <code className="font-mono text-[11px] text-[rgb(var(--accent))]">pl-4</code> / <code className="font-mono text-[11px] text-[rgb(var(--accent))]">pr-4</code> for components that must work in RTL.
+          Tailwind v4 ships logical property utilities natively. Use <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">ps-4</code> (padding-inline-start) and <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">pe-4</code> (padding-inline-end) instead of <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">pl-4</code> / <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">pr-4</code> for components that must work in RTL.
         </p>
         <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
           {[
@@ -178,7 +178,7 @@ export default function RootLayout({
             "rounded-s-{n} / rounded-e-{n} → leading / trailing corner radius",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               <code className="font-mono text-[11px] text-[rgb(var(--text-primary))]">{item}</code>
             </li>
           ))}

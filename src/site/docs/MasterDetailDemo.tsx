@@ -137,7 +137,7 @@ export function MasterDetailDemo() {
                 <div className="min-w-0 flex-1">
                   <p className={cn(
                     "text-[13px] font-medium truncate",
-                    selected.id === c.id ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-primary))]"
+                    selected.id === c.id ? "text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-primary))]"
                   )}>
                     {c.name}
                   </p>
@@ -157,7 +157,7 @@ export function MasterDetailDemo() {
           <div className="flex items-center gap-3 px-5 py-3 border-b border-[rgb(var(--border))]">
             <button
               onClick={() => setShowDetail(false)}
-              className="md:hidden flex items-center gap-1.5 text-[rgb(var(--accent))] text-[13px] font-medium"
+              className="md:hidden flex items-center gap-1.5 text-[rgb(var(--accent-text))] text-[13px] font-medium"
             >
               <ArrowLeft className="w-4 h-4" />
               Back

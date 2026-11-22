@@ -8,6 +8,13 @@
     "categorical/6",
     "categorical/7",
     "categorical/8",
+    "contrastMore/dark/textSecondary",
+    "contrastMore/dark/textTertiary",
+    "contrastMore/dark/border",
+    "contrastMore/light/textSecondary",
+    "contrastMore/light/textTertiary",
+    "contrastMore/light/border",
+    "theme/accentText",
     "theme/statusSuccessText",
     "theme/statusWarningText",
     "theme/statusDangerText",
@@ -16,6 +23,12 @@
     "theme/onDanger"
   ],
   "mismatched": [
+    {
+      "name": "theme/textTertiary",
+      "mode": "Light",
+      "file": "#737378",
+      "code": "#6c6c71"
+    },
     {
       "name": "theme/onAccent",
       "mode": "Light",

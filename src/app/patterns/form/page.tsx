@@ -514,7 +514,7 @@ export default function FormPage() {
                 ["Server error", "Uniqueness, permission, business rules",      "\"That email is already taken.\" Map API error to the relevant field."],
               ].map(([trigger, when, example], i) => (
                 <tr key={trigger} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{trigger}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{trigger}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{when}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{example}</td>
                 </tr>
@@ -557,7 +557,7 @@ export default function FormPage() {
             },
           ].map(({ title, body }) => (
             <li key={title} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               <span><strong className="text-[rgb(var(--text-primary))]">{title}.</strong> {body}</span>
             </li>
           ))}
@@ -577,7 +577,7 @@ export default function FormPage() {
             "The submit button should never be the only way to submit: Enter on the last text field should also trigger submission (the default browser behavior — don't suppress it with e.preventDefault unconditionally).",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

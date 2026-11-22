@@ -112,7 +112,7 @@ export default function GlassPage() {
               className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] overflow-hidden"
             >
               <div className="px-5 py-3 border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface-raised))] flex items-center justify-between">
-                <code className="text-[12px] font-mono font-semibold text-[rgb(var(--accent))]">{s.name}</code>
+                <code className="text-[12px] font-mono font-semibold text-[rgb(var(--accent-text))]">{s.name}</code>
                 <span className="text-[10px] text-[rgb(var(--text-tertiary))] font-mono">Swift: {s.swift}</span>
               </div>
               <div className="px-5 py-4 flex gap-8">

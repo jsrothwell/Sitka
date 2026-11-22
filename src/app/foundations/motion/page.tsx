@@ -50,7 +50,7 @@ export default function MotionPage() {
               {PANEL_RISE_TOKENS.map((row, i) => (
                 <tr key={row.token} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
                   <td className="px-4 py-3">
-                    <code className="font-mono text-[11px] text-[rgb(var(--accent))]">{row.token}</code>
+                    <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.token}</code>
                   </td>
                   <td className="px-4 py-3">
                     <code className="font-mono text-[11px] text-[rgb(var(--text-primary))] bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] px-1.5 py-0.5 rounded">

@@ -416,7 +416,7 @@ export default function AlluvialChartPage() {
       <section className="mb-10">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Data model</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4 leading-relaxed">
-          A <code className="font-mono text-[13px] text-[rgb(var(--accent))]">[source] × [stage]</code> matrix. Each source
+          A <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">[source] × [stage]</code> matrix. Each source
           carries one numeric value per stage, in the same order as the stage list.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
@@ -519,7 +519,7 @@ export default function AlluvialChartPage() {
             "Respect prefers-reduced-motion — skip the entry animation and render bands at full height immediately.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

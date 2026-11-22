@@ -205,13 +205,13 @@ export default function CommandPalettePage() {
           Data source
         </h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-3">
-          Results are drawn from <code className="font-mono text-[11px] text-[rgb(var(--accent))]">allSearchableItems</code> exported by{" "}
-          <code className="font-mono text-[11px] text-[rgb(var(--accent))]">@/lib/navigation</code>. This is a flat array derived from the full navigation tree with added{" "}
-          <code className="font-mono text-[11px] text-[rgb(var(--accent))]">section</code> and <code className="font-mono text-[11px] text-[rgb(var(--accent))]">group</code> metadata.
+          Results are drawn from <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">allSearchableItems</code> exported by{" "}
+          <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">@/lib/navigation</code>. This is a flat array derived from the full navigation tree with added{" "}
+          <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">section</code> and <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">group</code> metadata.
         </p>
         <p className="text-[14px] text-[rgb(var(--text-secondary))]">
           To surface additional content (pages, actions, recent items), extend{" "}
-          <code className="font-mono text-[11px] text-[rgb(var(--accent))]">allSearchableItems</code> or pass a custom items list to the component.
+          <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">allSearchableItems</code> or pass a custom items list to the component.
         </p>
       </section>
 
@@ -284,7 +284,7 @@ export default function CommandPalettePage() {
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap">{row.el}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.role}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.role}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.attrs}</td>
                 </tr>
               ))}
@@ -316,7 +316,7 @@ export default function CommandPalettePage() {
                 { key: "Tab", action: "Cycle forward through results (same as Arrow Down)" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{row.key}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{row.key}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.action}</td>
                 </tr>
               ))}
@@ -341,7 +341,7 @@ export default function CommandPalettePage() {
             "Distinct empty states: “No clients yet.” (nothing to search) versus “No matches.” (query too narrow).",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}
@@ -363,7 +363,7 @@ export default function CommandPalettePage() {
             "⌘K binding is implemented in the consumer, not in the component — giving teams flexibility to use a different shortcut.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

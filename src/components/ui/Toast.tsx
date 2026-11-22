@@ -91,7 +91,7 @@ export function Toast({
           {action && (
             <button
               onClick={action.onClick}
-              className="mt-2 text-[12px] font-medium text-[rgb(var(--accent))] hover:underline"
+              className="mt-2 text-[12px] font-medium text-[rgb(var(--accent-text))] hover:underline"
             >
               {action.label}
             </button>

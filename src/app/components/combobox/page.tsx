@@ -477,7 +477,7 @@ export default function ComboboxPage() {
               ].map((row, i) => (
                 <tr key={row.mode} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
                   <td className="px-4 py-3 font-semibold text-[rgb(var(--text-primary))]">{row.mode}</td>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{row.type}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.type}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.use}</td>
                 </tr>
               ))}
@@ -508,7 +508,7 @@ export default function ComboboxPage() {
                 ["⌘A",       "In multi-select: select all visible options"],
               ].map(([key, action], i) => (
                 <tr key={key} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3"><code className="font-mono text-[12px] text-[rgb(var(--accent))]">{key}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">{key}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{action}</td>
                 </tr>
               ))}
@@ -541,7 +541,7 @@ export default function ComboboxPage() {
             "The dropdown is portaled to document.body so it's never clipped by overflow:hidden ancestors.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

@@ -44,8 +44,10 @@ export function ComponentPreview({
               key={value}
               onClick={() => setViewport(value)}
               aria-label={ariaLabel}
+              aria-pressed={viewport === value}
               className={cn(
-                "p-1 rounded-[var(--radius-sm)] transition-standard",
+                // 24×24 minimum target (WCAG 2.5.8)
+                "inline-flex h-[24px] w-[24px] items-center justify-center rounded-[var(--radius-sm)] transition-standard",
                 viewport === value
                   ? "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-primary))] shadow-sm"
                   : "text-[rgb(var(--text-tertiary))] hover:text-[rgb(var(--text-secondary))]"

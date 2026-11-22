@@ -503,7 +503,7 @@ export default function InterviewParserPage() {
             { heading: "Paste fallback for in-app use", body: "Also expose a 'Parse Email' toolbar button inside JobDetailView. This opens a plain text-paste sheet, feeds it to the same InterviewParser, and presents InterviewConfirmationSheet directly — no Share Extension needed." },
           ].map(({ heading, body }) => (
             <div key={heading} className="flex gap-3 text-[14px]">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               <div>
                 <span className="font-medium text-[rgb(var(--text-primary))]">{heading} — </span>
                 <span className="text-[rgb(var(--text-secondary))]">{body}</span>
@@ -559,7 +559,7 @@ export default function InterviewParserPage() {
             "The 'Add to Calendar' button should briefly announce success via UIAccessibility.post(notification: .announcement, argument: 'Interview added to calendar') after the event is saved.",
           ].map(item => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}

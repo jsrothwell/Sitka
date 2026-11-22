@@ -55,7 +55,7 @@ export const AllSizes: Story = {
 
 export const Group: Story = {
   render: () => {
-    const [value, setValue] = useState<string[]>(["left"]);
+    const [value, setValue] = useState("left");
     return (
       <ToggleGroup value={value} onValueChange={setValue} type="single">
         <Toggle value="left"><AlignLeft size={14} /></Toggle>

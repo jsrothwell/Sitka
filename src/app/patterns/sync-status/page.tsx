@@ -214,7 +214,7 @@ export default function SyncStatusPage() {
             {(state === "stalled" || state === "error") && (
               <button
                 onClick={() => setShowReport(true)}
-                className="flex w-full items-center justify-between border-t border-[rgb(var(--border-subtle))] px-4 py-3 text-left text-[14px] text-[rgb(var(--accent))]"
+                className="flex w-full items-center justify-between border-t border-[rgb(var(--border-subtle))] px-4 py-3 text-left text-[14px] text-[rgb(var(--accent-text))]"
               >
                 Sync Troubleshooting <span aria-hidden>›</span>
               </button>

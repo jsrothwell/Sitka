@@ -407,11 +407,11 @@ export default function AnalyticsDashboardPage() {
             <tbody>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Sticky header</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">56 px, view title + time-range Segmented Button, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--background</code> backing, bottom divider</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">56 px, view title + time-range Segmented Button, <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--background</code> backing, bottom divider</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">KPI row</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Equal-width tiles in HStack, gap <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--spacing-lg</code>; collapses to 2-col on narrow</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Equal-width tiles in HStack, gap <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--spacing-lg</code>; collapses to 2-col on narrow</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Primary chart zone</td>
@@ -419,15 +419,15 @@ export default function AnalyticsDashboardPage() {
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Section headers</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">11 px semibold, letter-spacing 0.8, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-tertiary</code>, uppercase — matches <code className="font-mono text-[11px] text-[rgb(var(--accent))]">label-mono</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">11 px semibold, letter-spacing 0.8, <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--text-tertiary</code>, uppercase — matches <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">label-mono</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Empty states</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Inline <code className="font-mono text-[11px] text-[rgb(var(--accent))]">EmptyState</code> per chart tile; never full-page replacement</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Inline <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">EmptyState</code> per chart tile; never full-page replacement</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Dashboard background</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--background</code>, not <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--background</code>, not <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--surface</code></td>
               </tr>
             </tbody>
           </table>
@@ -437,7 +437,7 @@ export default function AnalyticsDashboardPage() {
       <section className="mb-10">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Time range picker</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed">
-          Use the <a href="/components/segmented-button" className="text-[rgb(var(--accent))] hover:underline">Segmented Button</a> locked to these options:
+          Use the <a href="/components/segmented-button" className="text-[rgb(var(--accent-text))] hover:underline">Segmented Button</a> locked to these options:
           <strong> 7 Days / 30 Days / 90 Days / All Time</strong>. Place it in the sticky header row,
           right-aligned. The picker drives all chart and KPI data on the same screen.
         </p>

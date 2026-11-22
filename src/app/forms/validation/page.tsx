@@ -346,7 +346,7 @@ export default function FormValidationPage() {
             { title: "Pair errors with positive states", body: "When a field is valid, show a green check (or similar). This confirms to the user that this field is done — they don't need to guess." },
           ].map(({ title, body }) => (
             <li key={title} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               <span><strong className="text-[rgb(var(--text-primary))]">{title}.</strong> {body}</span>
             </li>
           ))}
@@ -372,7 +372,7 @@ export default function FormValidationPage() {
             "noValidate on the <form> element disables browser-native validation bubbles in favor of your custom inline errors. Do this whenever you implement custom validation.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               {item}
             </li>
           ))}

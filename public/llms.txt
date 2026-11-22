@@ -20,9 +20,9 @@ Rules for generating code with Sitka:
 ## Foundations
 
 ### Visual
-- [Accessibility](https://jsrothwell.github.io/Sitka/foundations/accessibility/): Sitka is built with accessibility at its core. We adhere to WCAG 2.1 Level AA standards to ensure that our products are usable by everyone, regardless of ability.
+- [Accessibility](https://jsrothwell.github.io/Sitka/foundations/accessibility/): Sitka is built with accessibility at its core. We adhere to WCAG 2.2 Level AA standards to ensure that our products are usable by everyone, regardless of ability.
 - [Color](https://jsrothwell.github.io/Sitka/foundations/color/): The Sitka palette is built around a spruce green brand identity with a full neutral scale. All colors are tokenized and adapt to light and dark mode.
-- [Contrast](https://jsrothwell.github.io/Sitka/foundations/contrast/): Every text and interactive element in Sitka is designed to meet WCAG 2.1 AA as a minimum. This page documents approved token pairings and the rules for maintaining accessible contrast.
+- [Contrast](https://jsrothwell.github.io/Sitka/foundations/contrast/): Every text and interactive element in Sitka is designed to meet WCAG 2.2 AA as a minimum. This page documents approved token pairings and the rules for maintaining accessible contrast.
 - [Typography](https://jsrothwell.github.io/Sitka/foundations/typography/): Inter is the primary typeface — engineered for screen legibility at every size. JetBrains Mono handles all code contexts.
 - [Icons](https://jsrothwell.github.io/Sitka/foundations/icons/): Sitka supports three icon libraries across platforms — SF Symbols for native Apple apps, Phosphor Icons for web and React, and Font Awesome for broad compatibility.
 - [Spacing](https://jsrothwell.github.io/Sitka/foundations/spacing/): A 4px base unit scales into 13 steps. Every layout gap, padding, and margin maps to one of these tokens.
@@ -203,7 +203,7 @@ Rules for generating code with Sitka:
 ## How-tos
 - [All how-tos](https://jsrothwell.github.io/Sitka/how-tos/)
 - [Design for dark mode](https://jsrothwell.github.io/Sitka/how-tos/dark-mode/): Apply the Sitka colour token set correctly in dark contexts. This guide covers surface stepping, elevation, contrast validation, and the most common dark-mode mistakes.
-- [Ensure colour is accessible](https://jsrothwell.github.io/Sitka/how-tos/colour-contrast/): Check that every colour pairing in your designs meets WCAG 2.1 AA. This guide covers the approved Sitka pairings, how to test custom colours, and what to do when a pairing fails.
+- [Ensure colour is accessible](https://jsrothwell.github.io/Sitka/how-tos/colour-contrast/): Check that every colour pairing in your designs meets WCAG 2.2 AA. This guide covers the approved Sitka pairings, how to test custom colours, and what to do when a pairing fails.
 - [Write clear interface copy](https://jsrothwell.github.io/Sitka/how-tos/write-for-interfaces/): Apply the Sitka writing guidelines to the four highest-impact areas: button labels, error messages, empty states, and tooltips.
 - [Visualise data accessibly](https://jsrothwell.github.io/Sitka/how-tos/data-visualisation/): Choose the right chart type, apply the accessible series palette, and mark up your charts correctly so they work for keyboard and screen-reader users.
 - [Design an onboarding flow](https://jsrothwell.github.io/Sitka/how-tos/onboarding-flow/): Structure a wizard, decide what to ask upfront versus what to defer, write clear step copy, and give users a satisfying completion moment — all using the Sitka onboarding pattern.

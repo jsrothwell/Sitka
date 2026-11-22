@@ -42,7 +42,7 @@ export function BottomTabBar({ items, value, onChange, className }: BottomTabBar
             className={cn(
               "flex-1 flex flex-col items-center justify-center gap-1 py-2.5 relative transition-colors",
               isActive
-                ? "text-[rgb(var(--accent))]"
+                ? "text-[rgb(var(--accent-text))]"
                 : "text-[rgb(var(--text-tertiary))] hover:text-[rgb(var(--text-secondary))]"
             )}
           >

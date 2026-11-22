@@ -30,7 +30,7 @@ export default function LibraryFigmaPage() {
 
       <p className="mt-8 text-[13px] text-[rgb(var(--text-tertiary))]">
         Back to{" "}
-        <Link href="/libraries" className="text-[rgb(var(--accent))] underline underline-offset-2">
+        <Link href="/libraries" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
           all libraries
         </Link>
         .

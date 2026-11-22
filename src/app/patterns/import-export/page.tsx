@@ -601,7 +601,7 @@ export default function ImportExportPage() {
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Drag over</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Glass surface activates: <code className="font-mono text-[11px] text-[rgb(var(--accent))]">backdrop-filter</code>, accent border, specular top edge</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Glass surface activates: <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">backdrop-filter</code>, accent border, specular top edge</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Uploading</td>
@@ -623,13 +623,13 @@ export default function ImportExportPage() {
       <section className="mb-10">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Drop zone glass behaviour</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4 leading-relaxed">
-          The drop zone uses <code className="font-mono text-[11px] text-[rgb(var(--accent))]">backdrop-filter: blur(8px) saturate(160%)</code> and a specular
-          inset highlight (<code className="font-mono text-[11px] text-[rgb(var(--accent))]">inset 0 1px 0 rgba(255,255,255,0.08)</code>) when a file is dragged
+          The drop zone uses <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">backdrop-filter: blur(8px) saturate(160%)</code> and a specular
+          inset highlight (<code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">inset 0 1px 0 rgba(255,255,255,0.08)</code>) when a file is dragged
           over it. This is the same Liquid Glass treatment used on the Feature Gate overlay and the
-          Context Menu — the brightening mimics <code className="font-mono text-[11px] text-[rgb(var(--accent))]">sfBrandLitSurface</code>.
+          Context Menu — the brightening mimics <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">sfBrandLitSurface</code>.
         </p>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed">
-          Apply <code className="font-mono text-[11px] text-[rgb(var(--accent))]">@media (prefers-reduced-transparency)</code> fallback: replace the backdrop
+          Apply <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">@media (prefers-reduced-transparency)</code> fallback: replace the backdrop
           filter with a solid accent-tinted background.
         </p>
       </section>

@@ -145,7 +145,7 @@ export default function CarPlayPage() {
                     onClick={() => setScreen("poi")}
                     className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-left hover:bg-white/10 focus-visible:bg-white/15"
                   >
-                    <span className="w-6 text-center text-[16px] text-[rgb(var(--accent))]" aria-hidden>
+                    <span className="w-6 text-center text-[16px] text-[rgb(var(--accent-text))]" aria-hidden>
                       {row.icon}
                     </span>
                     <span>
@@ -159,7 +159,7 @@ export default function CarPlayPage() {
           ) : (
             <div className="relative flex flex-1">
               <div className="w-[230px] shrink-0 overflow-hidden bg-[#1c1c1e] p-3">
-                <button onClick={() => setScreen("list")} className="mb-2 text-[13px] text-[rgb(var(--accent))]">
+                <button onClick={() => setScreen("list")} className="mb-2 text-[13px] text-[rgb(var(--accent-text))]">
                   ‹ Near me
                 </button>
                 <p className="text-[15px] font-semibold">{spot.title}</p>

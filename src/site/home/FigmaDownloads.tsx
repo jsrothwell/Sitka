@@ -176,7 +176,7 @@ export function FigmaDownloads() {
                   className="flex flex-col gap-3 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4"
                 >
                   <div className="flex items-start gap-3">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgb(var(--accent)/0.12)] text-[rgb(var(--accent))]">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgb(var(--accent)/0.12)] text-[rgb(var(--accent-text))]">
                       <Icon
                         className="h-5 w-5"
                         strokeWidth={1.75}
@@ -237,12 +237,15 @@ function DriftNote() {
   return (
     <details className="text-[12px] leading-relaxed text-[rgb(var(--text-tertiary))]">
       <summary className="cursor-pointer hover:text-[rgb(var(--text-primary))]">
-        Exported {SNAPSHOT_LABEL}. Behind the code by {parts.join(" and ")}. Use the{" "}
+        Exported {SNAPSHOT_LABEL}. Behind the code by {parts.join(" and ")}.
+      </summary>
+      <p className="mt-2">
+        Use the{" "}
         <a href={`${BASE}/foundations/color/`} className="underline underline-offset-2 hover:text-[rgb(var(--text-primary))]">
           Color page
         </a>{" "}
-        values for these until the next export.
-      </summary>
+        values for these until the next export:
+      </p>
       <ul className="mt-2 grid gap-x-4 gap-y-0.5 font-mono text-[11px] sm:grid-cols-2">
         {drift.missing.map((name) => (
           <li key={name}>+ {name}</li>

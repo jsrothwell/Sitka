@@ -667,7 +667,7 @@ export default function CollaborationPatternPage() {
             "Cursor positions should be announced when they move to new regions.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

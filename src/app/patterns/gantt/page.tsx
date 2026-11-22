@@ -560,11 +560,11 @@ export default function GanttPage() {
             <tbody>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Label column</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">228 px fixed, sticky on horizontal scroll, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface</code> background</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">228 px fixed, sticky on horizontal scroll, <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--surface</code> background</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Month header</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">32 px, sticky top, 10–11 px semibold uppercase, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-tertiary</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">32 px, sticky top, 10–11 px semibold uppercase, <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--text-tertiary</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Zoom levels</td>
@@ -572,11 +572,11 @@ export default function GanttPage() {
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Grid fills</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Alternating <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface</code> / <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface-raised/0.4</code> month strips</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Alternating <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--surface</code> / <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--surface-raised/0.4</code> month strips</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Month dividers</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">0.5 px <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--border-subtle</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">0.5 px <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--border-subtle</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Project bar</td>
@@ -588,7 +588,7 @@ export default function GanttPage() {
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Today line</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">2 px solid <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--accent</code> capsule</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">2 px solid <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--accent</code> capsule</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Milestone</td>
@@ -596,7 +596,7 @@ export default function GanttPage() {
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Dependency arrow</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Orthogonal elbow path, dashed [5,3], red at <code className="font-mono text-[11px] text-[rgb(var(--accent))]">isAtRisk: true</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Orthogonal elbow path, dashed [5,3], red at <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">isAtRisk: true</code></td>
               </tr>
             </tbody>
           </table>

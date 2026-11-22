@@ -269,7 +269,7 @@ export function TimePicker({
                 className={cn(
                   "w-full text-left px-3 py-2 rounded-lg text-[13px]",
                   "hover:bg-[rgb(var(--surface))] transition-colors",
-                  value === t && "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] font-medium",
+                  value === t && "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] font-medium",
                 )}
               >
                 {label}
@@ -590,7 +590,7 @@ export default function DateTimePickersPage() {
             "The calendar popup must have role='dialog' and aria-modal='true' when open.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}
