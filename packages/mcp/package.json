@@ -1,0 +1,10 @@
+{
+  "name": "@sitka/mcp",
+  "version": "1.13.0",
+  "description": "MCP server that gives coding agents Sitka's components, tokens, docs index and contrast checks",
+  "type": "module",
+  "bin": { "sitka-mcp": "./server.mjs" },
+  "files": ["server.mjs", "README.md"],
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}

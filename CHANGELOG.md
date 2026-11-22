@@ -61,6 +61,12 @@ Resolves the two token decisions from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §
 - The Tokens page's export buttons generated a Swift file in the browser from stale values; they now download the generated files.
 - Not done: OKLCH colour values. Colours stay sRGB hex until the Figma and Swift pipelines read OKLCH.
 
+### 2027 readiness: Area 5, agent readiness
+
+- `packages/mcp`: a dependency-free MCP server with `list_components`, `get_component`, `get_tokens`, `search_docs` and `check_contrast`. It reads the local checkout or the published site. `.mcp.json` registers it for Claude Code in this repo, and `src/__tests__/mcp-server.test.ts` runs the handshake and every tool.
+- Raw-colour lint rules for native apps: SwiftLint (`platforms/swift/lint/sitka.swiftlint.yml`) and detekt (`platforms/android-compose/lint/sitka-detekt.yml`), the native counterparts of the ESLint token plugin. `src/__tests__/lint-rules.test.ts` checks the Swift patterns and that the Code Connect SwiftUI templates pass them.
+- `llms.txt` points agents at both.
+
 #### Fixed
 - `packages/sitka-ui` imported `../../src/…`, which resolves to a folder that doesn't exist; it now type-checks. `CardHeader`, `CardBody` and `CardFooter` are exported.
 - ESLint never loaded the Sitka token plugin (`require` in an ES module); `npm run lint` failed because eslint wasn't installed. Lint now runs with 0 errors.

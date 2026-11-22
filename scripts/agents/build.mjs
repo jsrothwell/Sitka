@@ -44,6 +44,8 @@ Rules for generating code with Sitka:
 - Use tokens, never raw colours: CSS \`rgb(var(--token))\`, Swift \`Color.sitka(\\.token)\`. Status colours as text use \`--status-*-text\`; text on the accent uses \`--on-accent\`.
 - Import React components from \`sitka-ui\`. Props, tokens and docs links for each are in ${SITE}/components.json.
 - Every pattern page lists accessibility requirements; follow them.
+- MCP: \`packages/mcp/server.mjs\` in the Sitka repo serves components, tokens, docs search and contrast checks as MCP tools.
+- Lint: SwiftLint (\`platforms/swift/lint/sitka.swiftlint.yml\`) and detekt (\`platforms/android-compose/lint/sitka-detekt.yml\`) rules reject raw colours.
 
 ## Machine-readable files
 - [components.json](${SITE}/components.json): React components with props, tokens used, docs and Figma links

@@ -1,0 +1,26 @@
+# Sitka SwiftLint rules: colours come from SitkaTokens, never literals.
+# Use from an app's .swiftlint.yml:
+#   parent_config: path/to/Sitka/platforms/swift/lint/sitka.swiftlint.yml
+# or copy the custom_rules block. src/__tests__/lint-rules.test.ts checks every regex.
+custom_rules:
+  sitka_raw_color:
+    name: "Raw colour"
+    regex: '\b(Color|UIColor|NSColor)\(\s*(\.sRGB\s*,\s*|\.displayP3\s*,\s*)?(red|white|hue|displayP3Red|srgbRed|calibratedRed|deviceRed)\s*:'
+    message: "Use Color.sitka(\\.token) from SitkaTokens instead of a literal colour."
+    severity: error
+    excluded: ".*SitkaTokens\\.swift$"
+  sitka_hex_color:
+    name: "Hex colour"
+    regex: '\b(Color|UIColor|NSColor)\(\s*hex\s*:'
+    message: "Use Color.sitka(\\.token) from SitkaTokens instead of a hex colour."
+    severity: error
+  sitka_color_literal:
+    name: "Colour literal"
+    regex: '#colorLiteral\('
+    message: "Use Color.sitka(\\.token) from SitkaTokens instead of a colour literal."
+    severity: error
+  sitka_system_color:
+    name: "System colour"
+    regex: '\bColor\.(red|orange|yellow|green|mint|teal|cyan|blue|indigo|purple|pink|brown|gray)\b'
+    message: "Named system colours don't follow Sitka's palette or contrast rules. Use Color.sitka(\\.statusDanger), \\.accent and so on."
+    severity: warning

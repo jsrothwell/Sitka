@@ -147,6 +147,20 @@ Rectangle()
           </p>
         </section>
 
+        {/* Lint */}
+        <section>
+          <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3">Lint for raw colours</h2>
+          <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
+            Sitka ships SwiftLint rules that reject <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">Color(red:…)</code>, hex initialisers and colour literals, and warn on named system colours like{" "}
+            <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">Color.red</code>. Inherit them from your app&apos;s config:
+          </p>
+          <CodeBlock
+            language="yaml"
+            filename=".swiftlint.yml"
+            code={`parent_config: Sitka/platforms/swift/lint/sitka.swiftlint.yml`}
+          />
+        </section>
+
         {/* Requirements */}
         <section className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))] p-5">
           <h2 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-3">Requirements</h2>
