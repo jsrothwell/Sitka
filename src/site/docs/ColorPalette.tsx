@@ -209,7 +209,7 @@ export function ColorPalette() {
                 { token: "--border", light: "neutral.200 (#e5e5e5)", dark: "neutral.800 (#282828)" },
                 { token: "--text-primary", light: "neutral.800 (#282828)", dark: "neutral.50 (#fafafa)" },
                 { token: "--text-secondary", light: "neutral.500 (#747474)", dark: "neutral.400 (#a7a7ac)" },
-                { token: "--accent", light: "brand.cyan (#00C0E8)", dark: "brand.cyan (#00C0E8)" },
+                { token: "--accent", light: "brand.500 (#34A865)", dark: "brand.500 (#34A865)" },
               ].map((row, i) => (
                 <tr key={row.token} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
                   <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.token}</code></td>

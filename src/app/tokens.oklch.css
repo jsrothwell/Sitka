@@ -5,10 +5,10 @@
   --color-surface: light-dark(oklch(100% 0 0), oklch(16.1% 0.0084 285.42));
   --color-surface-raised: light-dark(oklch(97.37% 0.0026 286.35), oklch(20.29% 0.0119 285.29));
   --color-surface-hover: light-dark(oklch(95.63% 0.0053 286.3), oklch(24.7% 0.0151 285.24));
-  --color-accent: light-dark(oklch(74.71% 0.136 219.96), oklch(74.71% 0.136 219.96));
-  --color-accent-subtle: light-dark(oklch(96.08% 0.025 212.24), oklch(24.73% 0.0437 215.21));
-  --color-accent-muted: light-dark(oklch(91.05% 0.0608 211.77), oklch(37.01% 0.0658 216.29));
-  --color-accent-text: light-dark(oklch(51.02% 0.0924 219.2), oklch(74.71% 0.136 219.96));
+  --color-accent: light-dark(oklch(65.07% 0.1434 153.72), oklch(65.07% 0.1434 153.72));
+  --color-accent-subtle: light-dark(oklch(96.48% 0.0206 161.48), oklch(24.15% 0.0471 154.04));
+  --color-accent-muted: light-dark(oklch(84.88% 0.0697 160.14), oklch(35.79% 0.0789 152.06));
+  --color-accent-text: light-dark(oklch(47.57% 0.1131 152.89), oklch(65.07% 0.1434 153.72));
   --color-text-primary: light-dark(oklch(23.5% 0 0), oklch(96.23% 0.0053 286.3));
   --color-text-secondary: light-dark(oklch(45.13% 0.0081 286.07), oklch(74.27% 0.0214 285.87));
   --color-text-tertiary: light-dark(oklch(53.3% 0.0077 286.13), oklch(63.02% 0.0298 285.51));
@@ -29,7 +29,7 @@
   --color-progress-success: light-dark(oklch(72.27% 0.192 149.58), oklch(72.27% 0.192 149.58));
   --color-progress-warning: light-dark(oklch(76.86% 0.1647 70.08), oklch(76.86% 0.1647 70.08));
   --color-progress-danger: light-dark(oklch(63.68% 0.2078 25.33), oklch(63.68% 0.2078 25.33));
-  --color-brand-user: light-dark(oklch(74.71% 0.136 219.96), oklch(74.71% 0.136 219.96));
+  --color-brand-user: light-dark(oklch(65.07% 0.1434 153.72), oklch(65.07% 0.1434 153.72));
 
   /* Computed tints: status pills, selected rows and badge borders. Mixed in OKLCH so every hue
      fades evenly. Tested at 12% on every surface in src/__tests__/color-decisions.test.ts. */

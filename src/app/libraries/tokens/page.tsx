@@ -51,10 +51,10 @@ export default function LibraryTokensPage() {
   --surface:        13  13  17;
   --surface-raised: 22  22  28;
 
-  /* Color — accent (Sitka cyan) */
-  --accent:         0 192 232;
-  --accent-subtle:  0  38  46;
-  --accent-muted:   0  72  86;
+  /* Color — accent (Sitka green, brand.500) */
+  --accent:         52 168 101;
+  --accent-subtle:  10  38  21;
+  --accent-muted:   20  72  39;
 
   /* Color — text */
   --text-primary:   242 242 246;

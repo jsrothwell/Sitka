@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- **The accent is green in `tokens.json`.** `accent` and dark `accentText` now reference `brand.500` (`#34a865`); `accentSubtle`, `accentMuted` and light `accentText` (`#166e3c`) use the green values the docs site already showed. `brandUser` defaults to `brand.500`. Generated Swift, Figma variables, the OKLCH CSS, React Native, Android Compose, the TS tokens and the ESLint plugin all follow. `brand.cyan` stays in the palette.
+- The docs site's separate green "brand layer" in `globals.css` is gone: `tokens.json` now produces the same colours, so the live site looks the same.
+- Contrast holds: near-black on the accent is 6.6:1, and accent text clears 4.5:1 on every surface and on `accentSubtle` in both themes (tests pass).
+- The downloadable Figma file still uses the cyan accent; the download card lists the 5 accent variables (Light and Dark) to update until the next export.
+
 ### Removed
 - The pair of Figma download buttons under the homepage introduction. They repeated the download card directly below it, which keeps both downloads.
 - The page, component-set, variable and colour-mode counts from the download card.

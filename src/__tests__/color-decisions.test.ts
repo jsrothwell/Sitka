@@ -15,6 +15,14 @@ type Rgb = [number, number, number];
 
 /** Any tokens.json colour (DTCG OKLCH object, hex or rgb()) or CSS triplet → sRGB channels. */
 function parse(value: unknown): Rgb {
+  // Follow {a.b.c} references (with or without a leading "color.").
+  for (let depth = 0; typeof value === 'string' && /^\{.+\}$/.test(value) && depth < 10; depth++) {
+    const path = value.slice(1, -1).split('.');
+    const at = (p: string[]) => p.reduce<unknown>((n, k) => (n as Record<string, unknown> | undefined)?.[k], tokens);
+    const node = (at(path) ?? at(['color', ...path])) as { $value?: unknown } | undefined;
+    if (!node?.$value) throw new Error(`Unresolved reference ${value}`);
+    value = node.$value;
+  }
   const { r, g, b } = toRgba(value);
   return [r, g, b];
 }

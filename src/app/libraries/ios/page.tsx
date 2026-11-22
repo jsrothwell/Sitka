@@ -117,7 +117,7 @@ Rectangle()
             code={`Button("Get Started") { start() }
     .buttonStyle(.borderedProminent)
     .tint(Color.sitka(\\.accent))
-    .foregroundStyle(Color.sitka(\\.onAccent))   // white on cyan is only ~2.2:1`}
+    .foregroundStyle(Color.sitka(\\.onAccent))   // near-black on the green accent, 6.6:1`}
           />
           <p className="text-[13px] text-[rgb(var(--text-tertiary))] mt-3">
             Once the Code Connect mappings are published, Figma Dev Mode shows SwiftUI like this for Button, Input, Badge and the other mapped components.
