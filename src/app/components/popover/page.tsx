@@ -502,7 +502,7 @@ export default function PopoverPage() {
               ))}
             </div>
             <div className="px-4 py-3 border-t border-[rgb(var(--border-subtle))] flex justify-end">
-              <button className="px-3 py-1.5 rounded-[var(--radius-sm)] bg-[rgb(var(--accent))] text-white text-[12px] font-medium hover:opacity-90 transition-opacity">
+              <button className="px-3 py-1.5 rounded-[var(--radius-sm)] bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[12px] font-medium hover:opacity-90 transition-opacity">
                 Save
               </button>
             </div>
@@ -548,7 +548,7 @@ export default function PopoverPage() {
             </div>
             <div className="px-4 py-3 border-t border-[rgb(var(--border-subtle))] flex justify-end gap-2">
               <button className="px-3 py-1.5 rounded-[var(--radius-sm)] border border-[rgb(var(--border))] text-[12px] text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface-raised))] transition-colors">Cancel</button>
-              <button className="px-3 py-1.5 rounded-[var(--radius-sm)] bg-[rgb(var(--accent))] text-white text-[12px] font-medium hover:opacity-90 transition-opacity">Save</button>
+              <button className="px-3 py-1.5 rounded-[var(--radius-sm)] bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[12px] font-medium hover:opacity-90 transition-opacity">Save</button>
             </div>
           </DemoPopover>
         </div>

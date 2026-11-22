@@ -187,7 +187,7 @@ export function DatePicker({
                     "transition-colors",
                     isOtherMonth && "text-[rgb(var(--text-tertiary))] opacity-40",
                     isDisabled && "text-[rgb(var(--text-tertiary))] opacity-30 cursor-not-allowed",
-                    isSelected && "bg-[rgb(var(--accent))] text-white",
+                    isSelected && "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]",
                     !isSelected && !isDisabled && !isOtherMonth && "hover:bg-[rgb(var(--surface))] text-[rgb(var(--text-primary))]",
                     isToday && !isSelected && "font-bold border border-[rgb(var(--accent))]",
                   )}

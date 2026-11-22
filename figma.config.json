@@ -1,0 +1,10 @@
+{
+  "codeConnect": {
+    "parser": "react",
+    "label": "React",
+    "include": [".figma/react/**/*.figma.tsx", "src/components/ui/**/*.tsx"],
+    "importPaths": {
+      "src/components/ui/*": "sitka-ui"
+    }
+  }
+}

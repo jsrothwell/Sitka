@@ -575,7 +575,7 @@ function SnackbarDemo() {
             className={cn(
               "px-3 py-1.5 rounded-lg text-[12px] font-medium border transition-colors",
               variant === v
-                ? "bg-[rgb(var(--accent))] text-white border-[rgb(var(--accent))]"
+                ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] border-[rgb(var(--accent))]"
                 : "bg-[rgb(var(--surface))] border-[rgb(var(--border))] text-[rgb(var(--text-secondary))] hover:border-[rgb(var(--accent))]"
             )}
           >

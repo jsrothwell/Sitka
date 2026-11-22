@@ -14,12 +14,12 @@ const MEMBERS = [
   { name: "Fran Moore",  hours: 40, capacity: 40, initials: "FM", color: "#EC4899" },
 ];
 
-function utilizationStatus(hours: number, capacity: number): { label: string; color: string } {
+function utilizationStatus(hours: number, capacity: number): { label: string; color: string; text: string } {
   const pct = hours / capacity;
-  if (pct > 1)   return { label: "Overloaded",   color: "rgb(var(--status-danger))" };
-  if (pct >= 0.9) return { label: "Near Full",    color: "rgb(var(--status-caution))" };
-  if (pct >= 0.7) return { label: "Moderate",     color: "rgb(var(--status-warning))" };
-  return            { label: "Available",          color: "rgb(var(--status-success))" };
+  if (pct > 1)   return{ label: "Overloaded",   color: "rgb(var(--status-danger))", text: "rgb(var(--status-danger-text))" };
+  if (pct >= 0.9) return{ label: "Near Full",    color: "rgb(var(--status-caution))", text: "rgb(var(--status-caution-text))" };
+  if (pct >= 0.7) return{ label: "Moderate",     color: "rgb(var(--status-warning))", text: "rgb(var(--status-warning-text))" };
+  return           { label: "Available",          color: "rgb(var(--status-success))", text: "rgb(var(--status-success-text))" };
 }
 
 function ArcGauge({ pct, color, size = 80 }: { pct: number; color: string; size?: number }) {
@@ -96,10 +96,10 @@ interface Member {
 
 function utilizationStatus(hours: number, capacity: number) {
   const pct = hours / capacity;
-  if (pct > 1)    return { label: "Overloaded", color: "rgb(var(--status-danger))" };
-  if (pct >= 0.9) return { label: "Near Full",  color: "rgb(var(--status-caution))" };
-  if (pct >= 0.7) return { label: "Moderate",   color: "rgb(var(--status-warning))" };
-  return            { label: "Available",        color: "rgb(var(--status-success))" };
+  if (pct > 1)    return{ label: "Overloaded", color: "rgb(var(--status-danger))", text: "rgb(var(--status-danger-text))" };
+  if (pct >= 0.9) return{ label: "Near Full",  color: "rgb(var(--status-caution))", text: "rgb(var(--status-caution-text))" };
+  if (pct >= 0.7) return{ label: "Moderate",   color: "rgb(var(--status-warning))", text: "rgb(var(--status-warning-text))" };
+  return           { label: "Available",        color: "rgb(var(--status-success))", text: "rgb(var(--status-success-text))" };
 }
 
 export function TeamCapacityGrid({ members }: { members: Member[] }) {
@@ -150,7 +150,7 @@ export function TeamCapacityGrid({ members }: { members: Member[] }) {
                 padding: "2px 8px",
                 borderRadius: 99,
                 background: status.color.replace(")", " / 0.15)").replace("rgb(", "rgba("),
-                color: status.color,
+                color: status.text,
               }}
             >
               {status.label}
@@ -363,7 +363,7 @@ export default function TeamCapacityPage() {
                     </div>
                     <span style={{
                       fontSize: 10, fontWeight: 600, padding: "2px 8px", borderRadius: 99,
-                      color: status.color,
+                      color: status.text,
                       background: `rgb(${badgeBg} / 0.15)`,
                     }}>
                       {status.label}

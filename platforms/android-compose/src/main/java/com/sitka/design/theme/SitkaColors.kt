@@ -59,6 +59,13 @@ object SitkaColors {
     val DarkStatusWarning = Color(0xFFF59E0B)
     val DarkStatusDanger = Color(0xFFF87171)
     val DarkStatusCaution = Color(0xFFF97316)
+    val DarkStatusSuccessText = Color(0xFF10B981)
+    val DarkStatusWarningText = Color(0xFFF59E0B)
+    val DarkStatusDangerText = Color(0xFFF87171)
+    val DarkStatusCautionText = Color(0xFFF97316)
+    val DarkOnAccent = Color(0xFF09090C)
+    val DarkDangerSolid = Color(0xFFDC2626)
+    val DarkOnDanger = Color(0xFFFFFFFF)
 
     // Light theme
     val LightBackground = Color(0xFFFAFAFA)
@@ -77,6 +84,23 @@ object SitkaColors {
     val LightStatusWarning = Color(0xFFF59E0B)
     val LightStatusDanger = Color(0xFFEF4444)
     val LightStatusCaution = Color(0xFFEA580C)
+    val LightStatusSuccessText = Color(0xFF047253)
+    val LightStatusWarningText = Color(0xFFA64C08)
+    val LightStatusDangerText = Color(0xFFBF1C1C)
+    val LightStatusCautionText = Color(0xFFB13B0A)
+    val LightOnAccent = Color(0xFF09090C)
+    val LightDangerSolid = Color(0xFFBF1C1C)
+    val LightOnDanger = Color(0xFFFFFFFF)
+
+    // Categorical (fixed across themes; no status meaning)
+    val Categorical1 = Color(0xFF16302A)
+    val Categorical2 = Color(0xFF8A5A3B)
+    val Categorical3 = Color(0xFF2D5F87)
+    val Categorical4 = Color(0xFF7A4B86)
+    val Categorical5 = Color(0xFF4F4FA3)
+    val Categorical6 = Color(0xFF8C3B5E)
+    val Categorical7 = Color(0xFF2F6B66)
+    val Categorical8 = Color(0xFF5E6472)
 
     // Glass / Materials
     val GlassOverlayDark = Color(0x33000000) // 20% opacity

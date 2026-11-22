@@ -26,7 +26,7 @@ export interface ChatMessageProps {
 
 const roleStyles: Record<MessageRole, { bubble: string; text: string; icon: string }> = {
   user: {
-    bubble: "bg-[rgb(var(--accent))] text-white rounded-br-sm",
+    bubble: "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] rounded-br-sm",
     text: "text-white",
     icon: "bg-[rgb(var(--accent-muted))] text-white",
   },

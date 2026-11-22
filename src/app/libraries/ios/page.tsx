@@ -11,128 +11,73 @@ export default function LibraryIosPage() {
       <PageHeader
         badge="Library"
         title="iOS · SwiftUI"
-        description="Bring Sitka's color, spacing, radius, shadow, and typography tokens into a SwiftUI project as typed Swift constants — generated from the same source JSON that powers the web."
+        description="Add Sitka's colour, spacing, radius, type and motion tokens to a SwiftUI app with the SitkaTokens Swift package, generated from the same tokens.json that powers the web."
       />
 
       <div className="space-y-12">
 
-        {/* Step 1 — Export */}
+        {/* Step 1 — Swift Package */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
             <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">1</span>
-            <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Download the Swift token file</h2>
+            <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Add the Swift package</h2>
           </div>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Go to the{" "}
-            <Link href="/tokens/export" className="text-[rgb(var(--accent))] underline underline-offset-2">
-              Token Export
-            </Link>{" "}
-            page and download <code className="font-mono text-[rgb(var(--accent))] text-[12px]">SitkaTokens.swift</code>. It is auto-generated from <code className="font-mono text-[rgb(var(--accent))] text-[12px]">tokens.json</code> — regenerate whenever tokens change.
-          </p>
-          <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Or generate it yourself using Style Dictionary:
+            In Xcode choose <strong className="text-[rgb(var(--text-primary))]">File › Add Package Dependencies</strong>, paste the repository
+            URL, and add the <code className="font-mono text-[rgb(var(--accent))] text-[12px]">SitkaTokens</code> product to your app target.
+            The package is generated from <code className="font-mono text-[rgb(var(--accent))] text-[12px]">tokens.json</code> on every release, so
+            updating the package is how token changes reach your app.
           </p>
           <CodeBlock
-            language="bash"
-            code={`npx style-dictionary build --config style-dictionary.config.js
-# outputs dist/SitkaTokens.swift`}
+            language="swift"
+            filename="Package.swift"
+            code={`dependencies: [
+    .package(url: "https://github.com/jsrothwell/Sitka.git", from: "1.13.0"),
+],
+targets: [
+    .target(name: "MyApp", dependencies: [
+        .product(name: "SitkaTokens", package: "Sitka"),
+    ]),
+]`}
           />
+          <p className="text-[13px] text-[rgb(var(--text-tertiary))] mt-3">
+            Can&apos;t add a package? Download the same file from{" "}
+            <Link href="/tokens/export" className="text-[rgb(var(--accent))] underline underline-offset-2">Token Export</Link>{" "}
+            and drop it into your target. You&apos;ll need to replace it by hand when tokens change.
+          </p>
         </section>
 
-        {/* Step 2 — Add to Xcode */}
+        {/* Step 2 — What's in it */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
             <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">2</span>
-            <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Add to your Xcode project</h2>
+            <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">What the package gives you</h2>
           </div>
-          <ol className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))] ml-4 list-decimal">
-            <li>Drag <code className="font-mono text-[rgb(var(--accent))] text-[12px]">SitkaTokens.swift</code> into your Xcode project navigator.</li>
-            <li>In the <strong className="text-[rgb(var(--text-primary))]">Add Files</strong> dialog, ensure <em>Copy items if needed</em> is checked.</li>
-            <li>Make sure the file is added to your app target.</li>
-          </ol>
-        </section>
-
-        {/* The Swift file contents */}
-        <section>
-          <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">3</span>
-            <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">What&apos;s in SitkaTokens.swift</h2>
-          </div>
+          <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))] ml-4 list-disc mb-4">
+            <li><code className="font-mono text-[12px]">{"Color.sitka(\\.token)"}</code>: every themed colour, following light and dark mode automatically.</li>
+            <li><code className="font-mono text-[12px]">SitkaTokens.Palette</code>: fixed colours (brand ramp, neutrals, categorical 1–8).</li>
+            <li><code className="font-mono text-[12px]">SitkaTokens.Spacing</code>, <code className="font-mono text-[12px]">Radius</code>, <code className="font-mono text-[12px]">FontSize</code>, <code className="font-mono text-[12px]">FontWeight</code>, <code className="font-mono text-[12px]">LineHeight</code>, <code className="font-mono text-[12px]">Duration</code>.</li>
+          </ul>
           <CodeBlock
             language="swift"
-            filename="SitkaTokens.swift"
-            code={`import SwiftUI
+            filename="SitkaTokens.swift (excerpt)"
+            code={`public enum SitkaTokens {
+    public struct Theme {
+        public let background: SitkaRGBA
+        public let accent: SitkaRGBA
+        public let onAccent: SitkaRGBA          // text on the accent (cyan needs dark text)
+        public let statusSuccessText: SitkaRGBA // status colour that passes 4.5:1 as text
+        // …every theme token in tokens.json
+    }
+    public static let dark: Theme
+    public static let light: Theme
 
-public enum SitkaTokens {
-
-  // MARK: — Color
-  public enum Color {
-    // Brand
-    public static let brandCyan    = SwiftUI.Color(hex: "#00C0E8")
-    public static let brand500     = SwiftUI.Color(hex: "#34a865")
-    public static let brand600     = SwiftUI.Color(hex: "#289452")
-
-    // Semantic
-    public static let success      = SwiftUI.Color(hex: "#22c55e")
-    public static let warning      = SwiftUI.Color(hex: "#f59e0b")
-    public static let error        = SwiftUI.Color(hex: "#ef4444")
-    public static let info         = SwiftUI.Color(hex: "#3b82f6")
-
-    // Dark-mode surface
-    public static let background   = SwiftUI.Color(hex: "#09090c")
-    public static let surface      = SwiftUI.Color(hex: "#0d0d11")
-    public static let surfaceRaised = SwiftUI.Color(hex: "#16161c")
-    public static let accent       = brandCyan
-    public static let textPrimary  = SwiftUI.Color(hex: "#f2f2f6")
-    public static let textSecondary = SwiftUI.Color(hex: "#9b9baa")
-  }
-
-  // MARK: — Spacing
-  public enum Spacing {
-    public static let s1: CGFloat = 4
-    public static let s2: CGFloat = 8
-    public static let s3: CGFloat = 12
-    public static let s4: CGFloat = 16
-    public static let s5: CGFloat = 20
-    public static let s6: CGFloat = 24
-    public static let s8: CGFloat = 32
-    public static let s10: CGFloat = 40
-    public static let s12: CGFloat = 48
-    public static let s16: CGFloat = 64
-  }
-
-  // MARK: — Border Radius
-  public enum Radius {
-    public static let sm: CGFloat = 6
-    public static let md: CGFloat = 10
-    public static let lg: CGFloat = 14
-    public static let xl: CGFloat = 20
-    public static let full: CGFloat = 9999
-  }
-
-  // MARK: — Typography
-  public enum Typography {
-    public static let fontSans = "Inter"
-    public static let sizeXS: CGFloat = 11
-    public static let sizeSM: CGFloat = 13
-    public static let sizeBase: CGFloat = 15
-    public static let sizeLG: CGFloat = 17
-    public static let sizeXL: CGFloat = 20
-    public static let size2XL: CGFloat = 24
-  }
+    public enum Spacing { public static let s4: Double = 16 /* … */ }
+    public enum Radius  { public static let md: Double = 10 /* … */ }
 }
 
-// MARK: — Color hex helper
-private extension SwiftUI.Color {
-  init(hex: String) {
-    let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-    var int: UInt64 = 0
-    Scanner(string: hex).scanHexInt64(&int)
-    let r = Double((int >> 16) & 0xff) / 255
-    let g = Double((int >>  8) & 0xff) / 255
-    let b = Double( int        & 0xff) / 255
-    self.init(red: r, green: g, blue: b)
-  }
+public extension Color {
+    static func sitka(_ token: KeyPath<SitkaTokens.Theme, SitkaRGBA>) -> Color
 }`}
           />
         </section>
@@ -144,71 +89,39 @@ private extension SwiftUI.Color {
           <h3 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2 mt-5">Colors</h3>
           <CodeBlock
             language="swift"
-            code={`Text("Hello Sitka")
-    .foregroundStyle(SitkaTokens.Color.textPrimary)
+            code={`import SitkaTokens
+
+Text("Synced")
+    .foregroundStyle(Color.sitka(\\.statusSuccessText))
 
 Rectangle()
-    .fill(SitkaTokens.Color.accent)
+    .fill(Color.sitka(\\.accent))
     .frame(height: 2)`}
           />
 
-          <h3 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2 mt-6">Spacing & radius</h3>
+          <h3 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2 mt-6">Spacing &amp; radius</h3>
           <CodeBlock
             language="swift"
-            code={`VStack(spacing: SitkaTokens.Spacing.s4) {
-    Text("Card title")
+            code={`VStack(alignment: .leading, spacing: SitkaTokens.Spacing.s4) {
+    Text("Card title").font(.headline)
     Text("Subtitle")
-        .foregroundStyle(SitkaTokens.Color.textSecondary)
+        .foregroundStyle(Color.sitka(\\.textSecondary))
 }
 .padding(SitkaTokens.Spacing.s6)
-.background(SitkaTokens.Color.surface)
-.clipShape(RoundedRectangle(cornerRadius: SitkaTokens.Radius.lg))`}
+.background(Color.sitka(\\.surface), in: RoundedRectangle(cornerRadius: SitkaTokens.Radius.lg))`}
           />
 
           <h3 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2 mt-6">Primary button</h3>
           <CodeBlock
             language="swift"
-            code={`struct SitkaButton: View {
-    let title: String
-    var action: () -> Void
-
-    var body: some View {
-        Button(action: action) {
-            Text(title)
-                .font(.system(size: SitkaTokens.Typography.sizeSM, weight: .medium))
-                .foregroundStyle(.white)
-                .padding(.horizontal, SitkaTokens.Spacing.s5)
-                .frame(height: 40)
-                .background(SitkaTokens.Color.accent)
-                .clipShape(RoundedRectangle(cornerRadius: SitkaTokens.Radius.md))
-        }
-        .buttonStyle(.plain)
-    }
-}
-
-// Usage
-SitkaButton(title: "Get Started") {
-    print("tapped")
-}`}
+            code={`Button("Get Started") { start() }
+    .buttonStyle(.borderedProminent)
+    .tint(Color.sitka(\\.accent))
+    .foregroundStyle(Color.sitka(\\.onAccent))   // white on cyan is only ~2.2:1`}
           />
-        </section>
-
-        {/* Dark mode */}
-        <section>
-          <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3">Dark / Light mode</h2>
-          <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Sitka is dark-first. To support both modes, define adaptive colors using{" "}
-            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">UIColor</code> or Color Assets in Xcode and reference the same semantic names:
+          <p className="text-[13px] text-[rgb(var(--text-tertiary))] mt-3">
+            Once the Code Connect mappings are published, Figma Dev Mode shows SwiftUI like this for Button, Input, Badge and the other mapped components.
           </p>
-          <CodeBlock
-            language="swift"
-            code={`// In Assets.xcassets / SitkaColors.xcassets
-// Create a Color Set named "background" with:
-//   Light: #FAFAFA
-//   Dark:  #09090C
-// Then use it as:
-Color("background")`}
-          />
         </section>
 
         {/* ThemeManager */}

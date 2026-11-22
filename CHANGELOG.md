@@ -7,6 +7,50 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.13.0] - 2026-11-21
+
+Resolves the two token decisions from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §3.
+
+### Added
+
+#### Tokens
+- `color.themes.{light,dark}.status{Success,Warning,Danger,Caution}Text` (`--status-*-text`) — status colors for text and icons. Light-mode fills fail as text on white (1.9–3.8:1); the light text tones (`#047253`, `#a64c08`, `#bf1c1c`, `#b13b0a`) clear 4.5:1 on every light surface and on their own 12% tint. Dark text tones equal the dark fills, which already pass.
+- `color.themes.dark.status{Success,Warning,Danger,Caution}` — the dark fills, previously only in CSS, Android and React Native.
+- `color.categorical.5–8` (`#4F4FA3`, `#8C3B5E`, `#2F6B66`, `#5E6472`), and `--categorical-1…8` CSS variables. All eight clear 4.5:1 under white text; hues stay clear of the status colors.
+- Mirrored in the typed TS tokens, React Native, Android Compose and the ESLint plugin.
+- `src/__tests__/color-decisions.test.ts` — enforces every ratio above and that `globals.css` matches `tokens.json`.
+
+#### Docs
+- Color: new Status text and Categorical sections, with ratios computed from `tokens.json`.
+- Contrast: status text tones and a categorical fill added to Approved Token Pairings.
+- Homepage hero: download cards for the Figma library (`.fig`) and Figcraft source (`.figcraft`) with format, size, which app opens each, and a note on which 1.13.0 tokens the file doesn't include yet. Files are served from `public/downloads/`.
+- Libraries → Figma: replaces the "coming soon" placeholder with the downloads and setup steps.
+
+### 2027 readiness: fix-first items
+
+#### Added
+- CI: `.github/workflows/ci.yml` runs on every PR and gates the Pages deploy: type-check, lint, unit tests, Code Connect parse, a stale-generated-files check, and `swift test` on macOS.
+- Tokens `onAccent`, `dangerSolid`, `onDanger` (`--on-accent`, `--danger-solid`, `--on-danger`) in both themes and all mirrors, with contrast tests. Primary buttons now use near-black text on the cyan accent (~9.6:1, was ~2.2:1); destructive buttons use `--danger-solid` (6.2:1 light, 4.8:1 dark under white, was 3.8:1).
+- `SitkaTokens` Swift package (`Package.swift`, `platforms/swift/`), generated from `tokens.json` by `npm run tokens:build`, with `Color.sitka(\.token)` that follows light/dark. Tested in CI and type-checked for iOS and macOS under Swift 6.
+- `platforms/figma/variables.json` (Figma variable collections generated from `tokens.json`) and `scripts/figma/drift.mjs`, which compares them with the downloadable `.figcraft`. The homepage card now lists exactly what the file is missing.
+- Code Connect: 11 most-imported components (Button, Input, Badge, Checkbox, Radio, Select, Avatar, CodeBlock, Card, Tabs, Switch) mapped for React (`sitka-ui` imports) and SwiftUI (native SwiftUI + SitkaTokens), checked against the live Figma file. The 26 older mappings had node IDs or property names that don't exist in the file and moved to `.figma/unverified/`.
+- `public/llms.txt` and `public/components.json` for coding agents, generated from navigation, page descriptions and component prop types.
+
+#### Fixed
+- `packages/sitka-ui` imported `../../src/…`, which resolves to a folder that doesn't exist; it now type-checks. `CardHeader`, `CardBody` and `CardFooter` are exported.
+- ESLint never loaded the Sitka token plugin (`require` in an ES module); `npm run lint` failed because eslint wasn't installed. Lint now runs with 0 errors.
+- Burn Trajectory used `Math.random()` during render (hydration mismatch).
+- Token Export's Swift download was a hard-coded snippet with colours that aren't Sitka's; it now serves the generated file. The iOS library page documented an API that didn't exist.
+
+### Changed
+- Status-colored text and icons across the site now use `--status-*-text` (KPI Tile, Context Menu and others); fills are unchanged.
+- Cover Art and Capacity & Runway use the categorical tokens instead of hard-coded palettes.
+- `tokens.json` `meta.version` corrected from 1.9.0 to 1.13.0.
+- Sidebar version badge reads `package.json` (via `NEXT_PUBLIC_SITKA_VERSION`) instead of a hard-coded "v1.8".
+
+### Fixed
+- Light-mode status text contrast (first flagged for `statusSuccess` in the 2026-07-29 audit).
+
 ## [1.12.0] - 2026-11-21
 
 Completes the candidate list from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §2. No token changes.

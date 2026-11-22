@@ -257,7 +257,7 @@ function Demo() {
           <button className="flex items-center gap-1.5 text-[12px] text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] px-3 py-1.5 rounded-lg hover:bg-[rgb(var(--surface-raised))] transition-colors">
             <Download size={13} /> Export
           </button>
-          <button className="flex items-center gap-1.5 text-[12px] text-[rgb(var(--status-danger))] hover:bg-[rgb(var(--status-danger)/0.1)] px-3 py-1.5 rounded-lg transition-colors">
+          <button className="flex items-center gap-1.5 text-[12px] text-[rgb(var(--status-danger-text))] hover:bg-[rgb(var(--status-danger)/0.1)] px-3 py-1.5 rounded-lg transition-colors">
             <Trash2 size={13} /> Delete
           </button>
         </div>

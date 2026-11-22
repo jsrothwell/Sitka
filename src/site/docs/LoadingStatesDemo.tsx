@@ -12,7 +12,7 @@ export function TypingDotsDemo() {
     <div className="flex flex-col items-center gap-6">
       <div className="w-full max-w-sm rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4 space-y-2">
         <div className="flex justify-end">
-          <div className="rounded-2xl rounded-tr-sm bg-[rgb(var(--accent))] text-white px-3 py-2 text-[13px] max-w-[200px]">
+          <div className="rounded-2xl rounded-tr-sm bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] px-3 py-2 text-[13px] max-w-[200px]">
             What are the key design principles?
           </div>
         </div>

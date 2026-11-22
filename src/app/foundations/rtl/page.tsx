@@ -48,7 +48,7 @@ export default function RTLPage() {
         </p>
         <div className="grid grid-cols-2 gap-4">
           <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--status-danger))] mb-3">Physical (avoid)</p>
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--status-danger-text))] mb-3">Physical (avoid)</p>
             <pre className="text-[11px] font-mono text-[rgb(var(--text-secondary))] leading-relaxed"><code>{`.sidebar {
   margin-left: 16px;
   padding-left: 12px;
@@ -57,7 +57,7 @@ export default function RTLPage() {
 }`}</code></pre>
           </div>
           <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--status-success))] mb-3">Logical (preferred)</p>
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--status-success-text))] mb-3">Logical (preferred)</p>
             <pre className="text-[11px] font-mono text-[rgb(var(--text-secondary))] leading-relaxed"><code>{`.sidebar {
   margin-inline-start: 16px;
   padding-inline-start: 12px;
@@ -83,8 +83,8 @@ export default function RTLPage() {
             <tbody>
               {LOGICAL_PROPS.map((row, i) => (
                 <tr key={row.physical} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--status-danger))]">{row.physical}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--status-success))]">{row.logical}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--status-danger-text))]">{row.physical}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--status-success-text))]">{row.logical}</td>
                   <td className="px-4 py-3 text-[12px] text-[rgb(var(--text-secondary))]">{row.notes}</td>
                 </tr>
               ))}

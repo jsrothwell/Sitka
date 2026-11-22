@@ -10,6 +10,7 @@ const nextConfig = {
   trailingSlash: true,
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
+    NEXT_PUBLIC_SITKA_VERSION: require('./package.json').version,
   },
 };
 

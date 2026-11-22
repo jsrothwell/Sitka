@@ -59,7 +59,7 @@ function MenuItem({ item, depth = 0 }: { item: MenubarItem; depth?: number }) {
         role="menuitem"
         aria-haspopup="menu"
         aria-expanded={subOpen}
-        className="relative flex items-center justify-between gap-8 px-3 py-1.5 rounded text-[13px] text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--accent))] hover:text-white cursor-default select-none transition-colors"
+        className="relative flex items-center justify-between gap-8 px-3 py-1.5 rounded text-[13px] text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--on-accent))] cursor-default select-none transition-colors"
         onMouseEnter={() => setSubOpen(true)}
         onMouseLeave={() => setSubOpen(false)}
       >
@@ -85,7 +85,7 @@ function MenuItem({ item, depth = 0 }: { item: MenubarItem; depth?: number }) {
         role="menuitemcheckbox"
         aria-checked={item.checked}
         onClick={item.onToggle}
-        className="w-full flex items-center gap-2 px-3 py-1.5 rounded text-[13px] text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--accent))] hover:text-white cursor-default select-none transition-colors"
+        className="w-full flex items-center gap-2 px-3 py-1.5 rounded text-[13px] text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--on-accent))] cursor-default select-none transition-colors"
       >
         <span className="w-4 flex justify-center">
           {item.checked && <Check className="h-3.5 w-3.5" aria-hidden="true" />}
@@ -107,7 +107,7 @@ function MenuItem({ item, depth = 0 }: { item: MenubarItem; depth?: number }) {
         "w-full flex items-center gap-2 px-3 py-1.5 rounded text-[13px] cursor-default select-none transition-colors",
         item.disabled
           ? "text-[rgb(var(--text-tertiary))] opacity-50 pointer-events-none"
-          : "text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--accent))] hover:text-white",
+          : "text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--on-accent))]",
       )}
     >
       <span className="w-4" aria-hidden="true" />
@@ -164,7 +164,7 @@ export function Menubar({ menus, className }: MenubarProps) {
             className={cn(
               "px-3 py-1 rounded text-[13px] font-medium transition-colors",
               open === i
-                ? "bg-[rgb(var(--accent))] text-white"
+                ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
                 : "text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--surface))]",
             )}
           >

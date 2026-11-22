@@ -90,7 +90,7 @@ function InterviewParserDemo() {
           <button
             onClick={() => result && setStep("confirm")}
             disabled={!result}
-            className="w-full py-2 rounded-xl bg-[rgb(var(--accent))] text-white text-[13px] font-semibold
+            className="w-full py-2 rounded-xl bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[13px] font-semibold
                        disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-90 transition-opacity"
           >
             Parse Interview Email
@@ -137,7 +137,7 @@ function InterviewParserDemo() {
                   <span className="w-2 h-2 rounded-full bg-[rgb(var(--accent))]" />
                   <span className="text-[12px] text-[rgb(var(--text-primary))]">Meridian AI — Backend Eng</span>
                 </div>
-                <button className="w-full mt-2 py-2 rounded-xl bg-[rgb(var(--accent))] text-white text-[12px] font-semibold hover:opacity-90 transition-opacity">
+                <button className="w-full mt-2 py-2 rounded-xl bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[12px] font-semibold hover:opacity-90 transition-opacity">
                   Add to Calendar & Set Interviewing
                 </button>
               </div>

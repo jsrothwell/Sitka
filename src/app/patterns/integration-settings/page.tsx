@@ -88,7 +88,7 @@ export function IntegrationCard({ integration }: { integration: Integration }) {
             {integration.syncError ? (
               <>
                 <AlertCircle size={12} color="rgb(var(--status-danger))" />
-                <span style={{ color: "rgb(var(--status-danger))" }}>{integration.syncError}</span>
+                <span style={{ color: "rgb(var(--status-danger-text))" }}>{integration.syncError}</span>
               </>
             ) : (
               <>
@@ -124,7 +124,7 @@ export function IntegrationCard({ integration }: { integration: Integration }) {
               }}
             />
             <div style={{ display: "flex", gap: 8, marginTop: 10 }}>
-              <button style={{ padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "#fff", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}>
+              <button style={{ padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "rgb(var(--on-accent))", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}>
                 Test & Connect
               </button>
               <button onClick={() => setShowAuth(false)} style={{ padding: "7px 14px", borderRadius: 7, background: "transparent", border: "1px solid rgb(var(--border))", cursor: "pointer", fontSize: 13 }}>
@@ -152,7 +152,7 @@ export function IntegrationCard({ integration }: { integration: Integration }) {
         ) : (
           <button
             onClick={() => setShowAuth(true)}
-            style={{ display: "flex", alignItems: "center", gap: 6, padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "#fff", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}
+            style={{ display: "flex", alignItems: "center", gap: 6, padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "rgb(var(--on-accent))", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}
           >
             <Plug size={13} />
             Connect
@@ -455,7 +455,7 @@ export default function IntegrationSettingsPage() {
                         {integration.syncError ? (
                           <>
                             <AlertCircle size={12} color="rgb(var(--status-danger))" />
-                            <span style={{ color: "rgb(var(--status-danger))" }}>{integration.syncError}</span>
+                            <span style={{ color: "rgb(var(--status-danger-text))" }}>{integration.syncError}</span>
                           </>
                         ) : (
                           <>
@@ -482,7 +482,7 @@ export default function IntegrationSettingsPage() {
                         </button>
                       </>
                     ) : (
-                      <button style={{ display: "flex", alignItems: "center", gap: 6, padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "#fff", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}>
+                      <button style={{ display: "flex", alignItems: "center", gap: 6, padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "rgb(var(--on-accent))", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}>
                         <Plug size={13} />
                         Connect
                       </button>

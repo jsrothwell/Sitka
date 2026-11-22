@@ -30,7 +30,7 @@ const SUMMARY: Record<Level, string> = {
   medium: "Some warning signs. It's worth applying, but keep your effort in proportion.",
   high: "Several warning signs. Check the role is really open before tailoring your résumé, for example by asking the recruiter or a contact.",
 };
-const TOKEN: Record<Level, string> = { low: "--status-success", medium: "--status-warning", high: "--status-danger" };
+const TOKEN: Record<Level, string> = { low: "--status-success-text", medium: "--status-warning-text", high: "--status-danger-text" };
 
 const CODE = {
   react: {

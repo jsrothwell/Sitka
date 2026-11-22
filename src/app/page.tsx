@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Box, Layers, Sparkles, Zap } from "lucide-react";
+import { FigmaDownloads } from "@/site/home/FigmaDownloads";
 
 export const metadata: Metadata = { title: "Introduction" };
 
@@ -66,6 +67,7 @@ export default function HomePage() {
           consistent, accessible, and built to scale across Web, iOS, macOS, Android, and visionOS.
         </p>
 
+        <FigmaDownloads />
       </section>
 
       {/* ── Feature grid ──────────────────────────────── */}
@@ -106,7 +108,7 @@ export default function HomePage() {
 
       {/* ── Footer ────────────────────────────────────── */}
       <section className="pt-8 pb-2 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <p className="label-mono">Sitka Standards · v1.12.0</p>
+        <p className="label-mono">Sitka Standards · v1.13.0</p>
         <div className="flex items-center gap-5">
           {[
             { label: "Changelog", href: "/changelog" },

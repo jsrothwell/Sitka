@@ -3,6 +3,18 @@
 import { useState } from "react";
 import { Check, Copy } from "lucide-react";
 import tokens from "@/tokens/tokens.json";
+import { contrastRatio } from "@/lib";
+
+/** "rgb(r, g, b)" or "#rrggbb" → "#rrggbb" for the contrast helpers. */
+function toHex(value: string) {
+  if (value.startsWith("#")) return value.toLowerCase();
+  const [r, g, b] = value.match(/\d+/g)!.map(Number);
+  return "#" + [r, g, b].map((c) => c.toString(16).padStart(2, "0")).join("");
+}
+
+const STATUS = ["Success", "Warning", "Danger", "Caution"] as const;
+type ThemeTokens = Record<string, { $value: string }>;
+const THEMES = tokens.color.themes as unknown as Record<"light" | "dark", ThemeTokens>;
 
 function Swatch({ step, hex }: { step: string; hex: string }) {
   const [copied, setCopied] = useState(false);
@@ -90,6 +102,88 @@ export function ColorPalette() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Status text</h2>
+        <p className="text-[13px] text-[rgb(var(--text-secondary))] mb-4 max-w-2xl">
+          Status colors come in two roles. Use <code>--status-*</code> for fills (dots, bars, pill backgrounds, gauges) and{" "}
+          <code>--status-*-text</code> for text and icons. In light mode the fills fail as text — as low as 1.9:1 on white — so the text
+          tones are deeper. In dark mode the fills already pass, so the two are identical. Ratios below are against{" "}
+          <code>--surface</code>, computed from <code>tokens.json</code>.
+        </p>
+        <div className="overflow-x-auto rounded-xl border border-[rgb(var(--border))]">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                {["Status", "Light fill as text", "Light text tone", "Dark text tone"].map((h) => (
+                  <th key={h} className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {STATUS.map((s) => {
+                const lightBg = toHex(THEMES.light.surface.$value);
+                const darkBg = toHex(THEMES.dark.surface.$value);
+                const cells = [
+                  { fg: toHex(THEMES.light[`status${s}`].$value), bg: lightBg },
+                  { fg: toHex(THEMES.light[`status${s}Text`].$value), bg: lightBg },
+                  { fg: toHex(THEMES.dark[`status${s}Text`].$value), bg: darkBg },
+                ];
+                return (
+                  <tr key={s} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
+                    <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">
+                      <code className="text-[11px]">--status-{s.toLowerCase()}</code>
+                    </td>
+                    {cells.map(({ fg, bg }, i) => {
+                      const ratio = contrastRatio(fg, bg);
+                      return (
+                        <td key={i} className="px-4 py-3">
+                          <span className="inline-flex items-center gap-2 rounded-md px-2 py-1" style={{ background: bg }}>
+                            <span className="text-[13px] font-semibold" style={{ color: fg }}>{s}</span>
+                          </span>
+                          <span className={`ml-2 text-[11px] tabular-nums ${ratio >= 4.5 ? "text-[rgb(var(--text-secondary))]" : "text-[rgb(var(--status-danger-text))]"}`}>
+                            {ratio.toFixed(1)}:1{ratio < 4.5 ? " ✗" : ""}
+                          </span>
+                        </td>
+                      );
+                    })}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Categorical</h2>
+        <p className="text-[13px] text-[rgb(var(--text-secondary))] mb-4 max-w-2xl">
+          Eight muted colors for telling things apart — tags, chips, chart segments, media-type tints — with no status meaning.
+          Hues stay clear of the status colors so a category never reads as a warning. Fixed across themes; each clears 4.5:1
+          under white text. Available as <code>--categorical-1</code> … <code>--categorical-8</code>. On dark surfaces, separate
+          adjacent fills with a gap or a 1px border.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {Object.entries(tokens.color.categorical)
+            .filter(([k]) => k !== "comment")
+            .map(([k, v]) => {
+              const hex = (v as { $value: string }).$value;
+              return (
+                <div key={k} className="overflow-hidden rounded-xl border border-[rgb(var(--border))]">
+                  <div className="flex h-14 items-end p-2.5 text-[13px] font-semibold text-white" style={{ background: hex }}>
+                    Aa
+                  </div>
+                  <div className="bg-[rgb(var(--surface))] px-2.5 py-2">
+                    <div className="text-[12px] font-medium text-[rgb(var(--text-primary))]">categorical.{k}</div>
+                    <code className="text-[11px] text-[rgb(var(--text-tertiary))]">
+                      {hex} · {contrastRatio(hex.toLowerCase(), "#ffffff").toFixed(1)}:1
+                    </code>
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </section>
 

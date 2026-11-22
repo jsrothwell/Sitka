@@ -71,9 +71,9 @@ interface KPITileProps {
 const variantConfig = {
   default:  { well: "bg-[rgb(var(--accent-subtle))]",        icon: "text-[rgb(var(--accent))]" },
   accent:   { well: "bg-[rgb(var(--accent-subtle))]",        icon: "text-[rgb(var(--accent))]" },
-  success:  { well: "bg-[rgb(var(--status-success)/0.12)]",  icon: "text-[rgb(var(--status-success))]" },
-  warning:  { well: "bg-[rgb(var(--status-warning)/0.12)]",  icon: "text-[rgb(var(--status-warning))]" },
-  danger:   { well: "bg-[rgb(var(--status-danger)/0.12)]",   icon: "text-[rgb(var(--status-danger))]" },
+  success:  { well: "bg-[rgb(var(--status-success)/0.12)]",  icon: "text-[rgb(var(--status-success-text))]" },
+  warning:  { well: "bg-[rgb(var(--status-warning)/0.12)]",  icon: "text-[rgb(var(--status-warning-text))]" },
+  danger:   { well: "bg-[rgb(var(--status-danger)/0.12)]",   icon: "text-[rgb(var(--status-danger-text))]" },
 };
 
 const progressColors = {
@@ -110,8 +110,8 @@ export function KPITile({
         {trend && (
           <div className={cn(
             "flex items-center gap-1 text-[11px] font-medium rounded-full px-2 py-0.5 ml-auto shrink-0",
-            trend.direction === "up"      && "bg-[rgb(var(--status-success)/0.12)] text-[rgb(var(--status-success))]",
-            trend.direction === "down"    && "bg-[rgb(var(--status-danger)/0.12)]  text-[rgb(var(--status-danger))]",
+            trend.direction === "up"      && "bg-[rgb(var(--status-success)/0.12)] text-[rgb(var(--status-success-text))]",
+            trend.direction === "down"    && "bg-[rgb(var(--status-danger)/0.12)]  text-[rgb(var(--status-danger-text))]",
             trend.direction === "neutral" && "bg-[rgb(var(--surface-raised))]      text-[rgb(var(--text-tertiary))]",
           )}>
             {trend.direction === "up"      && <TrendingUp className="w-3 h-3" />}
@@ -429,9 +429,9 @@ struct KPITile: View {
 export default function KPITilePage() {
   const tiles = [
     { title: "Active Users", value: "2,847", subtitle: "of 3,000 target", pct: 85, trendDir: "up" as const, trendVal: 12, color: "rgb(var(--accent))" },
-    { title: "Revenue", value: "$48.2K", subtitle: "this month", pct: 72, trendDir: "up" as const, trendVal: 8, color: "rgb(var(--status-success))" },
-    { title: "Open Issues", value: "23", subtitle: "4 critical", pct: 46, trendDir: "down" as const, trendVal: 5, color: "rgb(var(--status-warning))" },
-    { title: "Error Rate", value: "0.4%", subtitle: "last 24h", pct: 8, trendDir: "up" as const, trendVal: 2, color: "rgb(var(--status-danger))" },
+    { title: "Revenue", value: "$48.2K", subtitle: "this month", pct: 72, trendDir: "up" as const, trendVal: 8, color: "rgb(var(--status-success-text))" },
+    { title: "Open Issues", value: "23", subtitle: "4 critical", pct: 46, trendDir: "down" as const, trendVal: 5, color: "rgb(var(--status-warning-text))" },
+    { title: "Error Rate", value: "0.4%", subtitle: "last 24h", pct: 8, trendDir: "up" as const, trendVal: 2, color: "rgb(var(--status-danger-text))" },
   ];
 
   return (
@@ -460,7 +460,7 @@ export default function KPITilePage() {
                   className="flex items-center gap-1 text-[10px] font-semibold rounded-full px-2 py-0.5"
                   style={{
                     background: trendDir === "up" ? "rgba(16,185,129,0.12)" : "rgba(248,113,113,0.12)",
-                    color: trendDir === "up" ? "rgb(var(--status-success))" : "rgb(var(--status-danger))",
+                    color: trendDir === "up" ? "rgb(var(--status-success-text))" : "rgb(var(--status-danger-text))",
                   }}
                 >
                   {trendDir === "up" ? "↑" : "↓"} {trendVal}%

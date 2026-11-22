@@ -47,7 +47,7 @@ export function TimelineRow({ icon, label, state, hint, trailing }: TimelineRowP
     >
       <div
         className={\`flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-full \${
-          isFilled ? "bg-[rgb(var(--accent))] text-white" : "bg-[rgb(var(--text-primary)/0.08)] text-[rgb(var(--text-secondary))]"
+          isFilled ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]" : "bg-[rgb(var(--text-primary)/0.08)] text-[rgb(var(--text-secondary))]"
         }\`}
       >
         {icon}
@@ -222,7 +222,7 @@ export default function JourneyTimelinePage() {
                 <div
                   className={`flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-full text-[15px] ${
                     stage.state === "completed" || stage.state === "active"
-                      ? "bg-[rgb(var(--accent))] text-white"
+                      ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
                       : "bg-[rgb(var(--text-primary)/0.08)]"
                   }`}
                 >
@@ -260,7 +260,7 @@ export default function JourneyTimelinePage() {
             <button
               onClick={advance}
               disabled={stages.every((s) => s.state !== "active") || stages[stages.length - 1].state === "active"}
-              className="rounded-full bg-[rgb(var(--accent))] px-4 py-1.5 text-[12px] font-semibold text-white hover:opacity-90 disabled:opacity-40"
+              className="rounded-full bg-[rgb(var(--accent))] px-4 py-1.5 text-[12px] font-semibold text-[rgb(var(--on-accent))] hover:opacity-90 disabled:opacity-40"
             >
               Advance stage
             </button>

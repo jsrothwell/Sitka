@@ -128,7 +128,7 @@ export default function CarPlayPage() {
             <span>12:41</span>
             <span className="text-[20px]">🗺</span>
             <span className="text-[20px]">🎵</span>
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[rgb(var(--accent))] text-[16px] font-bold text-white">P</span>
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[rgb(var(--accent))] text-[16px] font-bold text-[rgb(var(--on-accent))]">P</span>
           </div>
 
           {screen === "list" ? (
@@ -166,7 +166,7 @@ export default function CarPlayPage() {
                 <p className="text-[12px] text-white/70">{spot.sub}</p>
                 <p className="mt-1.5 text-[12px] text-white/50">{spot.detail}</p>
                 <div className="mt-3 flex flex-col gap-1.5">
-                  <button className="rounded-lg bg-[rgb(var(--accent))] py-2 text-[14px] font-semibold text-white">Drive Here</button>
+                  <button className="rounded-lg bg-[rgb(var(--accent))] py-2 text-[14px] font-semibold text-[rgb(var(--on-accent))]">Drive Here</button>
                   <button className="rounded-lg bg-white/15 py-2 text-[14px] font-semibold">Google Maps</button>
                 </div>
               </div>

@@ -221,7 +221,7 @@ function Demo() {
             onClick={() => setFilter(f)}
             className={`px-3 py-1 rounded-full text-[12px] font-medium transition-colors ${
               filter === f
-                ? "bg-[rgb(var(--accent))] text-white"
+                ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
                 : "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))]"
             }`}
           >

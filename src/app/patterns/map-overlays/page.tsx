@@ -239,7 +239,7 @@ export default function MapOverlaysPage() {
               onClick={() => setPhase(p.id)}
               className={`rounded-full px-3 py-1 text-[12px] font-medium ${
                 phase === p.id
-                  ? "bg-[rgb(var(--accent))] text-white"
+                  ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
                   : "border border-[rgb(var(--border))] bg-[rgb(var(--surface))] text-[rgb(var(--text-secondary))]"
               }`}
             >
@@ -300,7 +300,7 @@ export default function MapOverlaysPage() {
               ) : (
                 <>
                   <button onClick={() => setPhase("searching")} className={`flex items-center gap-2.5 rounded-2xl px-3 py-2.5 text-left ${GLASS}`}>
-                    <span className="flex h-[26px] w-[26px] items-center justify-center rounded-[7px] bg-[rgb(var(--accent))] text-[13px] font-bold text-white" aria-hidden>
+                    <span className="flex h-[26px] w-[26px] items-center justify-center rounded-[7px] bg-[rgb(var(--accent))] text-[13px] font-bold text-[rgb(var(--on-accent))]" aria-hidden>
                       P
                     </span>
                     <span className="flex-1 text-[15px] font-medium text-[rgb(var(--text-secondary))]">Where to?</span>
@@ -349,11 +349,11 @@ export default function MapOverlaysPage() {
                   </div>
                   <div className="mt-3 rounded-[14px] bg-[rgb(var(--surface-raised))] p-3">
                     <p className="text-[13px] font-semibold text-[rgb(var(--text-primary))]">Park on Steuart St</p>
-                    <p className="text-[11px] font-semibold text-[rgb(var(--status-success))]">Likely free on arrival · 4 min walk</p>
+                    <p className="text-[11px] font-semibold text-[rgb(var(--status-success-text))]">Likely free on arrival · 4 min walk</p>
                     <p className="mt-1.5 text-[11px] text-[rgb(var(--text-secondary))]">🚗 14 min · 5.2 km &nbsp; 🚶 4 min walk</p>
                   </div>
                   <div className="mt-3 flex gap-2">
-                    <button onClick={() => setPhase("navigating")} className="flex-1 rounded-xl bg-[rgb(var(--accent))] py-2 text-[15px] font-semibold text-white">
+                    <button onClick={() => setPhase("navigating")} className="flex-1 rounded-xl bg-[rgb(var(--accent))] py-2 text-[15px] font-semibold text-[rgb(var(--on-accent))]">
                       Go
                     </button>
                     <button aria-label="Open in another navigation app" className="rounded-xl bg-[rgb(var(--surface-raised))] px-3.5 text-[15px]">
@@ -368,7 +368,7 @@ export default function MapOverlaysPage() {
                     <span className="block text-[19px] font-bold tabular-nums text-[rgb(var(--text-primary))]">6:42 PM</span>
                     <span className="block text-[11px] tabular-nums text-[rgb(var(--text-secondary))]">11 min · 4.1 km</span>
                   </span>
-                  <button onClick={() => setPhase("arrived")} className="rounded-xl bg-[rgb(var(--status-danger))] px-4 py-2 text-[14px] font-semibold text-white">
+                  <button onClick={() => setPhase("arrived")} className="rounded-xl bg-[rgb(var(--danger-solid))] px-4 py-2 text-[14px] font-semibold text-[rgb(var(--on-danger))]">
                     End
                   </button>
                 </div>
@@ -376,7 +376,7 @@ export default function MapOverlaysPage() {
               {phase === "arrived" && (
                 <div className={`rounded-[22px] p-4 ${GLASS}`}>
                   <div className="flex items-center gap-2.5">
-                    <span className="text-[28px] text-[rgb(var(--status-success))]" aria-hidden>🅿︎</span>
+                    <span className="text-[28px] text-[rgb(var(--status-success-text))]" aria-hidden>🅿︎</span>
                     <span>
                       <span className="block text-[15px] font-semibold text-[rgb(var(--text-primary))]">You&apos;re at Steuart St</span>
                       <span className="block text-[11px] text-[rgb(var(--text-secondary))]">4 min walk to Ferry Building</span>

@@ -1,0 +1,235 @@
+# Sitka Design System
+
+> Cross-platform design system (web, iOS, macOS, Android, visionOS), version 1.13.0. Tokens live in W3C DTCG JSON and are generated for CSS, TypeScript, React Native, Compose and Swift. React components ship as `sitka-ui`; Swift tokens ship as the `SitkaTokens` Swift package.
+
+Rules for generating code with Sitka:
+- Use tokens, never raw colours: CSS `rgb(var(--token))`, Swift `Color.sitka(\.token)`. Status colours as text use `--status-*-text`; text on the accent uses `--on-accent`.
+- Import React components from `sitka-ui`. Props, tokens and docs links for each are in https://jsrothwell.github.io/Sitka/components.json.
+- Every pattern page lists accessibility requirements; follow them.
+
+## Machine-readable files
+- [components.json](https://jsrothwell.github.io/Sitka/components.json): React components with props, tokens used, docs and Figma links
+- [tokens.json](https://jsrothwell.github.io/Sitka/downloads/sitka-tokens.json): all design tokens (W3C DTCG)
+- [SitkaTokens.swift](https://jsrothwell.github.io/Sitka/downloads/SitkaTokens.swift): generated Swift tokens
+
+## Getting Started
+- [Introduction](https://jsrothwell.github.io/Sitka/): Documented, accessible building blocks for React and SwiftUI — every variant, state, and interaction covered.
+- [Design Principles](https://jsrothwell.github.io/Sitka/principles/)
+- [Installation](https://jsrothwell.github.io/Sitka/installation/): Get Sitka running in your project in under five minutes.
+
+## Foundations
+
+### Visual
+- [Accessibility](https://jsrothwell.github.io/Sitka/foundations/accessibility/): Sitka is built with accessibility at its core. We adhere to WCAG 2.1 Level AA standards to ensure that our products are usable by everyone, regardless of ability.
+- [Color](https://jsrothwell.github.io/Sitka/foundations/color/): The Sitka palette is built around a spruce green brand identity with a full neutral scale. All colors are tokenized and adapt to light and dark mode.
+- [Contrast](https://jsrothwell.github.io/Sitka/foundations/contrast/): Every text and interactive element in Sitka is designed to meet WCAG 2.1 AA as a minimum. This page documents approved token pairings and the rules for maintaining accessible contrast.
+- [Typography](https://jsrothwell.github.io/Sitka/foundations/typography/): Inter is the primary typeface — engineered for screen legibility at every size. JetBrains Mono handles all code contexts.
+- [Icons](https://jsrothwell.github.io/Sitka/foundations/icons/): Sitka supports three icon libraries across platforms — SF Symbols for native Apple apps, Phosphor Icons for web and React, and Font Awesome for broad compatibility.
+- [Spacing](https://jsrothwell.github.io/Sitka/foundations/spacing/): A 4px base unit scales into 13 steps. Every layout gap, padding, and margin maps to one of these tokens.
+- [Border Radius](https://jsrothwell.github.io/Sitka/foundations/border-radius/): Six steps from subtle to full. Radius is a density signal — tighter corners feel more utilitarian, rounder corners feel more approachable.
+- [Shadows](https://jsrothwell.github.io/Sitka/foundations/shadows/): Six shadow tokens map to six elevation levels. Depth is not decoration — every shadow communicates that an element floats above the surface beneath it.
+- [Glass](https://jsrothwell.github.io/Sitka/foundations/glass/): Frosted glass surfaces communicate spatial depth — a panel floats above content, a modal floats above the page. Every glass level pairs blur, saturation, opacity, and a hairline border.
+- [Spatial Computing](https://jsrothwell.github.io/Sitka/foundations/spatial-computing/): Foundations for visionOS and spatial interfaces. Depth, volumetric materials, and ornaments.
+
+### Motion & Interaction
+- [Motion](https://jsrothwell.github.io/Sitka/foundations/motion/): Motion is not decoration — it communicates state changes, establishes hierarchy, and gives the interface a sense of physicality. Every transition in Sitka is intentional.
+- [Interaction](https://jsrothwell.github.io/Sitka/foundations/interaction/): Consistent interaction patterns build user confidence. This page defines hover, focus, and active states, touch target sizes, gesture conventions, and keyboard navigation rules.
+- [Gestures](https://jsrothwell.github.io/Sitka/foundations/gestures/): Reference for touch, pointer, and haptic interaction patterns across iOS, macOS, and web. Use these gestures as building blocks for consistent, platform-appropriate behavior.
+- [Haptics](https://jsrothwell.github.io/Sitka/foundations/haptics/): Tactile feedback patterns that complement visual and audio cues. All Sitka components respect the haptic taxonomy for consistent physical feeling across platforms.
+- [Keyboard Shortcuts](https://jsrothwell.github.io/Sitka/foundations/keyboard-shortcuts/): Consistent keyboard shortcuts and context-menu patterns across the Sitka product suite — mac-first, with Windows equivalents documented.
+
+### Content
+- [Writing](https://jsrothwell.github.io/Sitka/foundations/writing/): Clear, consistent writing is part of the design. These guidelines cover voice, capitalization, error messages, empty states, and the microcopy patterns used across Sitka products.
+- [Data Visualisation](https://jsrothwell.github.io/Sitka/foundations/data-viz/): Charts in Sitka are clear, accessible, and consistent. This page covers the colour palette for data series, chart-type selection, and the rules for making data readable in both light and dark mode.
+- [Charting](https://jsrothwell.github.io/Sitka/foundations/charting/): Guidelines for building readable, accessible, and themeable charts in Sitka — covering chart anatomy, type selection, and in-depth documentation for Sankey and Alluvial flow diagrams.
+
+### Layout & States
+- [Desktop Layout](https://jsrothwell.github.io/Sitka/foundations/desktop-layout/): Layout patterns for desktop environments — side navigation, global header anatomy, the 12-column grid system, and density modes that scale from touch to mouse-first interfaces.
+- [Empty States](https://jsrothwell.github.io/Sitka/foundations/empty-states/): Patterns for when interfaces have no content to display. Each state should guide users toward productive next steps.
+- [Loading States](https://jsrothwell.github.io/Sitka/foundations/loading-states/): Progress indicators for asynchronous operations. Choose the appropriate pattern based on context and expected duration.
+- [AI Agent Standards](https://jsrothwell.github.io/Sitka/foundations/ai-agents/): Standards for AI agent interactions in Sitka-powered products. Covers verbal response patterns, visual presentation, interaction models, and component behaviors.
+- [Density System](https://jsrothwell.github.io/Sitka/foundations/density/): Three density modes — compact, normal, and comfortable — let product teams tune information density to their context. A single data attribute on the root element rewires all spacing and height tokens simultaneously.
+- [Responsive Grid](https://jsrothwell.github.io/Sitka/foundations/grid/): A 12-column grid with six breakpoints. Columns, gutters, and margins scale by viewport width. The grid is Tailwind-native — no additional configuration is needed.
+
+### Internationalisation
+- [RTL & i18n](https://jsrothwell.github.io/Sitka/foundations/rtl/): Sitka is built on CSS logical properties so layouts mirror correctly in right-to-left scripts (Arabic, Hebrew, Persian) without overrides. This page covers the property mapping, audit checklist, and language detection patterns.
+
+### Accessibility
+- [Forced Colors](https://jsrothwell.github.io/Sitka/foundations/forced-colors/): Windows High Contrast Mode and the CSS forced-colors media query replace custom colours with a small set of system keywords. Sitka components are authored to degrade gracefully and retain usability when colour is stripped.
+- [Component Lifecycle](https://jsrothwell.github.io/Sitka/foundations/lifecycle/): Every Sitka component carries a lifecycle badge — Alpha, Beta, Stable, or Deprecated. The badge tells you how stable the API is, what testing has been done, and whether it's safe to ship.
+
+## Components
+
+### Actions
+- [Button](https://jsrothwell.github.io/Sitka/components/button/): The foundational interactive element. Every variant, size, and state is defined here and serves as the template for all future component entries.
+- [Split Button](https://jsrothwell.github.io/Sitka/components/split-button/): A compound control that combines a primary action with a dropdown of secondary actions. The left segment triggers the default action immediately; the right chevron reveals the full menu.
+- [Segmented Button](https://jsrothwell.github.io/Sitka/components/segmented-button/): A connected group of toggle buttons for mutually exclusive (or multi-select) choices. Used for view modes, filter states, alignment, and time-range selectors.
+- [Toggle](https://jsrothwell.github.io/Sitka/components/toggle/): A two-state button that can be pressed or unpressed. ToggleGroup wraps multiple toggles to manage single or multiple selection.
+- [Chip](https://jsrothwell.github.io/Sitka/components/chip/): Compact interactive tokens for filtering, tagging, and quick actions. Three distinct variants — filter, input, and suggestion — each with a specific job.
+
+### Inputs
+- [Input](https://jsrothwell.github.io/Sitka/components/input/): A labeled text field with built-in states for validation, icons, and helper text. Extends the native input element so all HTML attributes pass through.
+- [Textarea](https://jsrothwell.github.io/Sitka/components/textarea/): A multi-line text input following the same conventions as Input — labels, helper text, error states, and three sizes.
+- [Prompt Input](https://jsrothwell.github.io/Sitka/components/prompt-input/): Multi-line, auto-expanding text input for AI chat interfaces. Includes attachment support, keyboard shortcuts, and smooth height animation.
+- [OTP / PIN](https://jsrothwell.github.io/Sitka/components/otp/): Six-digit one-time passcode entry with auto-focus, auto-advance, backspace navigation, and paste support. For PINs, enable masking to show bullets.
+- [Select](https://jsrothwell.github.io/Sitka/components/select/): A native dropdown for choosing one option from a list. Extends the platform's built-in select with consistent sizing, labels, and error states.
+- [Checkbox](https://jsrothwell.github.io/Sitka/components/checkbox/): A binary selection control. Supports uncontrolled and controlled usage, three sizes, and an indeterminate state for hierarchical selection.
+- [Radio](https://jsrothwell.github.io/Sitka/components/radio/): Mutually exclusive selection within a group. Use RadioGroup as the container and Radio for each option — they share state via React context.
+- [Switch](https://jsrothwell.github.io/Sitka/components/switch/): A toggle control for boolean settings. Uses role='switch' for accessibility and supports both controlled and uncontrolled patterns.
+- [Slider](https://jsrothwell.github.io/Sitka/components/slider/): Select a value from a continuous range. Supports single thumb for simple selection or dual thumbs for range selection with keyboard accessibility.
+- [Combobox](https://jsrothwell.github.io/Sitka/components/combobox/): Searchable select with keyboard navigation, multi-select, grouped options, and async server-side filtering. Drop-in replacement for <select> wherever search is needed.
+- [Date & Time Picker](https://jsrothwell.github.io/Sitka/components/date-time-pickers/): Help users select dates and times accurately with calendar views and time lists. Supports date ranges, min/max boundaries, and keyboard navigation.
+- [Date Range Picker](https://jsrothwell.github.io/Sitka/components/date-range-picker/): Calendar-based picker for selecting a start and end date. Supports presets, min/max bounds, and single or dual-month display.
+- [File Upload](https://jsrothwell.github.io/Sitka/components/file-upload/): A drag-and-drop zone with a fallback file browser. Validates file count, type (via accept), and optional size limits. Selected files are listed below the zone with individual remove controls.
+- [Label](https://jsrothwell.github.io/Sitka/components/label/): A standalone form label with optional required indicator and disabled state. Most input components (Input, Select, Textarea) include a built-in label prop — use this component when you need the label separately.
+- [Form Controls](https://jsrothwell.github.io/Sitka/components/form-controls/): Checkbox, Radio, Switch, and Select — the core building blocks for capturing user preferences and input. All controls support keyboard navigation, focus rings, error states, and three sizes.
+
+### Overlays
+- [Modal](https://jsrothwell.github.io/Sitka/components/modal/): A portal-based dialog that floats above all content. Supports keyboard dismissal, click-outside, four sizes, and composable header, body, and footer regions.
+- [Tooltip](https://jsrothwell.github.io/Sitka/components/tooltip/): Contextual labels that appear on hover and focus. Portaled to document.body, auto-flips when near viewport edges, and dismisses instantly on mouse-out.
+- [Popover](https://jsrothwell.github.io/Sitka/components/popover/): A button-anchored floating panel for rich content — forms, settings, previews, and pickers. Unlike a Tooltip, a Popover is interactive and is triggered by click, not hover.
+- [Dropdown Menu](https://jsrothwell.github.io/Sitka/components/dropdown-menu/): A button-anchored floating menu for actions and commands. Glass-backed panel, click-to-toggle, auto-dismisses on outside click or Escape. Supports icons, keyboard shortcuts, separators, and destructive items.
+- [Snackbar](https://jsrothwell.github.io/Sitka/components/snackbar/): Brief, transient messages that appear at the bottom of the screen to provide feedback about an operation. Automatically dismisses after a short duration and supports optional actions.
+- [Bottom Sheet](https://jsrothwell.github.io/Sitka/components/bottom-sheet/): A panel that slides up from the bottom of the screen. Used for contextual actions, navigation overflow, and secondary content that doesn't warrant a full page or modal. Portaled to document.body; dismissed by backdrop tap, Escape, or drag.
+- [Context Menu](https://jsrothwell.github.io/Sitka/components/context-menu/): Right-click (desktop) or long-press (mobile) contextual action panel. Glass-backed floating surface with support for grouped actions, keyboard shortcuts, dividers, and destructive items.
+- [Feature Gate](https://jsrothwell.github.io/Sitka/components/feature-gate/): Locks premium content behind a glass overlay and provides a path to upgrade. Reuses surface and accent tokens; no new tokens required.
+- [Command Palette](https://jsrothwell.github.io/Sitka/components/command-palette/): A full-screen search overlay surfacing all navigation destinations. Triggered by ⌘K and dismissed by Escape or backdrop click.
+- [Drawer](https://jsrothwell.github.io/Sitka/components/drawer/): A panel that slides in from the left or right edge of the viewport. Distinct from BottomSheet (which slides up on mobile) — Drawer is a desktop-first side panel for settings, filters, or detail views.
+
+### Navigation
+- [Navigation](https://jsrothwell.github.io/Sitka/components/navigation/): Horizontal tabs for switching between views within the same context. Uses a render-prop pattern so panel content is always fully controlled by the caller.
+- [Navigation Menu](https://jsrothwell.github.io/Sitka/components/navigation-menu/): A horizontal navigation bar with multi-column dropdown menus. Supports grouped links with optional descriptions, plain links, and keyboard navigation.
+- [Menubar](https://jsrothwell.github.io/Sitka/components/menubar/): A desktop-style File / Edit / View menu strip. Supports action items, checkbox toggles, submenus, separators, and keyboard shortcuts. Follows the WAI-ARIA Menubar pattern.
+- [Tabs](https://jsrothwell.github.io/Sitka/components/tabs/): Organises related content into labelled panels, showing one at a time. Use tabs to reduce visual complexity when content is mutually exclusive but equally important.
+- [Bottom Tab Bar](https://jsrothwell.github.io/Sitka/components/bottom-tab-bar/): A fixed row of tab buttons anchored to the bottom of the screen. The primary mobile navigation pattern — 2 to 5 destinations, each with an icon and label. Supports badge counts for unread indicators.
+- [Breadcrumb](https://jsrothwell.github.io/Sitka/components/breadcrumb/): Hierarchical location indicator that shows the path from the root to the current page. Supports collapsing, home icons, and custom separators.
+- [Carousel](https://jsrothwell.github.io/Sitka/components/carousel/): Display content in a horizontally scrolling container with automatic or manual navigation. Supports autoplay, keyboard controls, and touch gestures for mobile.
+
+### Display
+- [Card](https://jsrothwell.github.io/Sitka/components/card/): A flexible container with four visual variants and an optional interactive mode. Composed from CardHeader, CardBody, and CardFooter for structured layouts.
+- [Badge](https://jsrothwell.github.io/Sitka/components/badge/): Compact labels for status, category, and metadata. Six semantic variants, three sizes, and an optional dot indicator for real-time status.
+- [Avatar](https://jsrothwell.github.io/Sitka/components/avatar/): User representation with image, initials fallback, five sizes, and four status indicators. AvatarGroup stacks multiple avatars with an overlap ring.
+- [Brand Logo](https://jsrothwell.github.io/Sitka/components/brand-logo/): A URL image → icon → initials fallback chain for external entities — job sources, integrations, and companies — where a reliable logo isn't guaranteed at render time.
+- [Table](https://jsrothwell.github.io/Sitka/components/table/): Structured data display with sortable column headers, striped rows, three density settings, and optional column borders. Composed from semantic sub-components.
+- [Data Grid](https://jsrothwell.github.io/Sitka/components/data-grid/): A feature-rich table with column sorting, per-column filtering, row selection with an indeterminate header checkbox, custom cell rendering, and client-side pagination.
+- [Progress Bar](https://jsrothwell.github.io/Sitka/components/progress-bar/): Non-interactive progress indicator. Communicates completion, health, or utilization through a filled track. Four semantic variants, three sizes, and an indeterminate shimmer mode.
+- [KPI Tile](https://jsrothwell.github.io/Sitka/components/kpi-tile/): Dashboard metric card. Surfaces a single number with context — icon well, trend delta, optional progress bar, and semantic variant colouring. Composes Card, Badge, and Progress Bar primitives.
+- [Gauge](https://jsrothwell.github.io/Sitka/components/gauge/): 270° arc ring for utilization, capacity, and completion metrics. Auto-colours by threshold — green below 70%, amber below 90%, orange to 100%, red when over. Pairs with the KPI Tile and Team Capacity grid.
+- [Color Picker](https://jsrothwell.github.io/Sitka/components/color-picker/): Allows users to select a brand or theme colour from a curated palette or a custom hex value. Includes the accessibleForeground algorithm to ensure legible text on any chosen colour.
+- [Skeleton](https://jsrothwell.github.io/Sitka/components/skeleton/): Placeholder blocks that mimic the shape of loading content. Skeletons reduce perceived wait time by giving the user a preview of layout before data arrives.
+- [Spinner](https://jsrothwell.github.io/Sitka/components/spinner/): An inline loading indicator for asynchronous operations. Uses a CSS animation so it works without JavaScript and never blocks the main thread.
+- [Divider](https://jsrothwell.github.io/Sitka/components/divider/): A visual separator for grouping related content. Supports horizontal and vertical orientations, with an optional centred label for contextual dividers.
+- [Code Block](https://jsrothwell.github.io/Sitka/components/code-block/): A preformatted code surface with a macOS-style header, language label, and one-click copy. Used throughout the docs site to display implementation examples.
+- [Streaming Text](https://jsrothwell.github.io/Sitka/components/streaming-text/): Typewriter animation component for AI streaming responses. Handles cursor, timing, and can be paused/resumed.
+- [Chat Message](https://jsrothwell.github.io/Sitka/components/chat-message/): Bubble component for conversational UIs. Supports user, assistant, and system roles with distinct styling. Integrates with StreamingText for AI response animation.
+
+### Layout
+- [Layout Primitives](https://jsrothwell.github.io/Sitka/components/layout-primitives/): Box, Stack, and Inline — composable layout components that wrap flexbox and remove the need for utility-class repetition on common layout patterns.
+- [Collapsible](https://jsrothwell.github.io/Sitka/components/collapsible/): A single expandable section with an animated height transition. Use it to progressively disclose content without navigating away.
+- [Pagination](https://jsrothwell.github.io/Sitka/components/pagination/): Page navigation with an ellipsis algorithm that keeps the control compact regardless of page count. Always controlled — the consumer manages the current page.
+- [Cover Art](https://jsrothwell.github.io/Sitka/components/cover-art/): Artwork for a catalog item at its natural shape — 2:3 for books and films, square for albums — with a designed typographic cover when there's no image, so a missing cover looks like part of the collection instead of a broken thumbnail.
+- [Image Crop](https://jsrothwell.github.io/Sitka/components/image-crop/): A single, fixed-ratio crop step after picking or capturing a photo: drag to reposition, pinch to zoom, one 'Use Photo'. Deliberately not a photo editor — the ratio is locked to the tile the image will appear in, so every result fits.
+- [Sidebar](https://jsrothwell.github.io/Sitka/components/sidebar/): The persistent navigation panel used in this docs shell. Renders a collapsible nav tree from the navigation.ts data source, with a search trigger and mobile drawer behaviour.
+
+## Patterns
+
+### Composition
+- [Master Detail](https://jsrothwell.github.io/Sitka/patterns/master-detail/): A two-panel layout where a list of items (master) drives a contextual detail view on the right. Collapses to a single-panel push navigation on narrow screens.
+- [Navbar](https://jsrothwell.github.io/Sitka/patterns/navbar/): A persistent top-of-page navigation bar with brand identity, primary links, search, notifications, and a user menu. Collapses to a hamburger drawer on narrow screens. Includes a collapsible sidebar variant.
+- [Form](https://jsrothwell.github.io/Sitka/patterns/form/): A collection of form patterns — single-section forms, multi-step wizards, inline validation, and success states. Forms are the primary input surface in product UIs; these patterns cover the common cases.
+- [Form Layout](https://jsrothwell.github.io/Sitka/forms/layout/): Three layout patterns for arranging form fields: stacked (labels above inputs), two-column (grid), and inline (labels beside inputs). Choose based on the density of the form and the available width.
+- [Form Validation](https://jsrothwell.github.io/Sitka/forms/validation/): Patterns for surfacing errors and confirmations in forms. Validate on blur, not on every keystroke — give users room to type before judging. Show errors inline, close to the field, using plain language.
+- [Settings](https://jsrothwell.github.io/Sitka/patterns/settings/): Settings pages let users control their experience. Group related controls, surface destructive actions clearly, and always confirm before irreversible changes.
+- [Wizard](https://jsrothwell.github.io/Sitka/patterns/wizard/): A linear flow that breaks a complex task into discrete, completable steps. Each step is validated before advancing. Users can navigate back to completed steps.
+
+### Mobile
+- [Onboarding](https://jsrothwell.github.io/Sitka/patterns/onboarding/): Onboarding patterns guide new users from sign-up to their first meaningful action. These patterns prioritise progressive disclosure — reveal complexity only when the user is ready for it.
+- [Mobile Navigation](https://jsrothwell.github.io/Sitka/patterns/mobile-navigation/): Three patterns for primary navigation on small screens: a bottom tab bar for 2–5 equal-weight destinations, a navigation drawer for deeper hierarchies, and a bottom sheet overflow menu for secondary actions. Use one pattern per app — mixing them creates confusion.
+- [Mobile Widgets](https://jsrothwell.github.io/Sitka/patterns/mobile-widgets/): Home screen and lock screen widgets surface a single, glanceable piece of information without opening the app. Four sizes, strict layout constraints, and a timeline-based data model distinguish them from every other UI surface.
+- [Live Activities](https://jsrothwell.github.io/Sitka/patterns/live-activities/): A Live Activity surfaces one in-progress event — a delivery, a timer, a live score — on the Lock Screen and in the Dynamic Island, updating in place without the user opening the app. Built on ActivityKit, not WidgetKit, and governed by a different set of visual constraints than home screen widgets.
+- [Map Overlays](https://jsrothwell.github.io/Sitka/patterns/map-overlays/): How to layer controls over a full-bleed map: two fixed slots (top and bottom) whose contents change with the task phase, one glass material for every floating surface, and sheets that leave the map usable behind them. For wayfinding, parking, delivery tracking, store finders — any screen where the map is the content.
+- [CarPlay Templates](https://jsrothwell.github.io/Sitka/patterns/carplay/): Designing for CarPlay means designing the information, not the pixels: apps fill a small set of system templates and the car draws them. This page covers the parking-app structure — a short root list, a point-of-interest map of up to 12 options, and a hand-off to a maps app for directions — and the constraints that shape it.
+- [Mobile Time Logging](https://jsrothwell.github.io/Sitka/patterns/mobile-time-logging/): Patterns for time-tracking mobile apps: a branded dark header with embedded week stats, a live active-timer card, grouped log lists with project color rails, and a sync-status system.
+- [Voice Memo & Dictation](https://jsrothwell.github.io/Sitka/patterns/voice-memo/): A dual-gesture microphone button that taps for live speech-to-text dictation and holds for audio memo recording. All processing is on-device — SFSpeechRecognizer with requiresOnDeviceRecognition, AVAudioRecorder saving to a local Documents folder.
+- [Interview Email Parser](https://jsrothwell.github.io/Sitka/patterns/interview-parser/): On-device regex + NSDataDetector engine that extracts date, time, time zone, meeting URL, and company name from interview invitation emails. Presents a confirmation sheet to match the parsed interview to a tracked job and add an EKEvent to the user's calendar.
+- [Document Assembler](https://jsrothwell.github.io/Sitka/patterns/document-assembler/): A block checklist pattern for assembling modular document sections — toggle visibility, reorder by drag or arrow buttons, and export to PDF using CTFramesetter. The assembler drives ResumeExporter which renders each section into an A4 page using Sitka accent colours for headings.
+- [Interview Prep Hub](https://jsrothwell.github.io/Sitka/patterns/interview-prep/): On-device AI streaming that generates a focused preparation guide for each interview round — topics to review, likely questions with answer guidance, and round-specific tips. Powered by the Foundation Models framework (iOS 26+). Pro feature.
+- [Ghost Employer Tracking](https://jsrothwell.github.io/Sitka/patterns/ghost-employer/): The Skaro system surfaces employers with a history of going silent after interviews. A compact badge overlays job cards; an expandable banner on the detail screen provides context and a follow-up CTA. An opt-in toggle in Settings lets users contribute anonymous domain signals to the shared registry.
+- [Barcode Scanner](https://jsrothwell.github.io/Sitka/patterns/barcode-scanner/): Camera-based barcode scanning with an animated reticle overlay and a bottom-sheet result card. Used in Scanflo for building physical media catalogs.
+- [Batch Capture Review](https://jsrothwell.github.io/Sitka/patterns/batch-capture-review/): One capture, many detections, one confirmation. When a photo, scan, or pasted document yields several items at once, show a numbered checklist tied back to the source, let lookups resolve row by row, and let the user fix or exclude anything before a single item is saved.
+- [Game Overlays](https://jsrothwell.github.io/Sitka/patterns/game-overlays/): Themed menus, debrief panels and purchase offers for games. Covers the rules that still apply when a game's art direction replaces the design system: overlays must not look like system alerts, light effects must be photosensitivity-safe, and stylized text actions still need 44pt targets.
+- [GTD Task Inbox](https://jsrothwell.github.io/Sitka/patterns/task-inbox/): A capture-first inbox, daily focus view, and upcoming timeline — the three-view core of a GTD workflow. Used in OrgFlo.
+
+### Data & Analytics
+- [Kanban Board](https://jsrothwell.github.io/Sitka/patterns/kanban/): A horizontal multi-column board for visualising and managing work items through stages. Composes Card, Badge, and drag-and-drop primitives.
+- [Gantt / Timeline](https://jsrothwell.github.io/Sitka/patterns/gantt/): A horizontal timeline chart for visualising project schedules, milestones, and resource assignments across time. Reference implementation from Warren.
+- [Analytics Dashboard](https://jsrothwell.github.io/Sitka/patterns/analytics-dashboard/): A pattern for composing KPI tiles, charts, and tables into a cohesive analytics screen with a sticky time-range header. Mirrors Warren's InsightsView and JobFlo's AnalyticsView.
+- [Burn Trajectory](https://jsrothwell.github.io/Sitka/patterns/burn-trajectory/): A financial forecasting chart showing historical spend, projected burn rate, and budget ceiling. Reference implementation from Warren's BurnTrajectoryChart.
+- [Goal & Streak](https://jsrothwell.github.io/Sitka/patterns/goal-streak/): A gamified progress tracker combining a weekly goal progress bar with streak counters. Composes Progress Bar, Avatar, and Badge. Reference: JobFlo's MacGoalStreakCard.
+- [Team Capacity Grid](https://jsrothwell.github.io/Sitka/patterns/team-capacity/): A responsive grid of member utilization cards, each showing an arc gauge, hours logged versus capacity, and a status badge. Composes the Gauge component. Reference: Warren's TeamUtilizationSection.
+- [Capacity & Runway](https://jsrothwell.github.io/Sitka/patterns/capacity-runway/): A personal bandwidth control centre: a gauge of hours booked against a weekly target (with an overflow ring past 100%), a stacked bar showing who the week belongs to, and 30/60/90-day runway tiles warning when contracts roll off. For freelancers, fractional executives, and anyone selling their own time.
+- [Alluvial / Sankey Flow](https://jsrothwell.github.io/Sitka/patterns/alluvial-chart/): A multi-source ribbon chart for visualising volume flowing through sequential stages — reference implementation from JobFlo's 'The JobFlo' analytics chart, which tracks applications by source through Applied → Interview → Offer.
+- [Pricing Table](https://jsrothwell.github.io/Sitka/components/pricing/): Flexible pricing card and feature comparison components. Supports monthly/yearly billing toggles, popular badge highlighting, and detailed feature lists.
+
+### Workflow
+- [Activity Feed](https://jsrothwell.github.io/Sitka/patterns/activity-feed/): A chronological timeline of events — commits, comments, deployments, alerts, and membership changes. Supports filtering, unread indicators, and infinite scroll.
+- [Journey Timeline](https://jsrothwell.github.io/Sitka/patterns/journey-timeline/): A vertical stepper that shows where someone is in a multi-stage process — completed stages, the current stage, and what's still ahead. Reusable for application journeys, onboarding checklists, order tracking, or any linear, ordered flow.
+- [Review Sweep](https://jsrothwell.github.io/Sitka/patterns/review-sweep/): A short, guided pass through everything that needs a decision — overdue follow-ups, stale items, upcoming deadlines — where every row resolves with one tap. Turns passive alerts into a recurring habit that keeps the underlying data honest.
+- [Community Report & Confirm](https://jsrothwell.github.io/Sitka/patterns/community-reports/): A two-part loop for crowdsourced data: a one-tap report picker sized for glanceable use, and a 'still there?' confirmation card that asks the next person to verify. Together they keep shared reports fresh without anyone typing.
+- [Decaying Status](https://jsrothwell.github.io/Sitka/patterns/decaying-status/): A status that loses confidence over time instead of flipping instantly. Built for crowdsourced or sensor signals that go stale — a reported-taken parking block, a 'still in stock' report, a last-seen presence dot — where showing old data at full strength would mislead.
+- [Score Explainer](https://jsrothwell.github.io/Sitka/patterns/score-explainer/): A letter-grade pill for computed scores, paired with an 'explain this score' breakdown that itemizes each contributing signal. Use it anywhere an algorithm judges something on someone's behalf — risk, fit, health, trust — so the verdict is never a black box.
+- [Sync Status](https://jsrothwell.github.io/Sitka/patterns/sync-status/): A single indicator for background sync in two densities — icon-only for toolbars, icon + label for settings — backed by an explicit 'stalled' state and a troubleshooting path that ends in a previewable diagnostic report. For any local-first app that syncs through iCloud, Wi-Fi peers, or a server.
+- [Inline Live Check](https://jsrothwell.github.io/Sitka/patterns/live-check/): Advisory feedback that appears beside a form while someone types, once there's enough input to judge — explaining each concern in a plain sentence rather than a score or an error. Unlike validation, it never blocks saving.
+- [Rating Prompt Moments](https://jsrothwell.github.io/Sitka/patterns/rating-prompt/): When to ask for an App Store rating: only right after a moment of genuine success that happened during this session, at most once per version, and never near friction. Small rules, measurable effect on rating quality.
+- [Multi-select & Bulk Actions](https://jsrothwell.github.io/Sitka/patterns/multi-select/): Select multiple rows with checkboxes (including shift-click range selection) then apply a bulk action via the contextual toolbar that appears above the list. The toolbar is only present when items are selected — keeping the default state clean.
+- [Data Entry](https://jsrothwell.github.io/Sitka/patterns/data-entry/): Patterns for efficient and accurate data input — from inline validation to multi-step wizards and bulk editing. Minimize errors and maximize completion rates.
+- [Drag and Drop](https://jsrothwell.github.io/Sitka/patterns/drag-drop/): Intuitive interaction patterns for reordering, organizing, and transferring content through direct manipulation. Essential for productivity tools, builders, and content management interfaces.
+- [Import / Export](https://jsrothwell.github.io/Sitka/patterns/import-export/): A data import flow with a glass-surfaced drop zone, progress states, and results summary — plus a structured export flow with format and field selection.
+- [Integration Settings](https://jsrothwell.github.io/Sitka/patterns/integration-settings/): A list of third-party service cards with connection status, sync health, and an inline auth flow. Composes Card, Badge, and Form components. Reference: Warren's Slack, Teams, and Harvest settings views.
+- [Paywall / Upsell](https://jsrothwell.github.io/Sitka/patterns/paywall/): Full-screen upgrade prompt that appears when a user hits a feature gate or usage limit. Combines a billing period toggle, tiered plan cards, and a soft dismiss path to minimize friction while maximising conversion.
+
+### Finance & Analytics
+- [Compensation Breakdown](https://jsrothwell.github.io/Sitka/patterns/compensation/): Horizontal waterfall chart for visualising the components of a compensation package — base, bonus, equity, and benefits stacked into a single total. Supports multi-offer comparison for side-by-side evaluation.
+- [Strategic Insights](https://jsrothwell.github.io/Sitka/patterns/strategic-insights/): Data-driven recommendations panel combining a score gauge, key metrics strip, and prioritised action cards. Used in dashboards where the product needs to surface 'what to do next' from aggregate data.
+
+### Communication
+- [Notifications · Mobile](https://jsrothwell.github.io/Sitka/notifications/mobile/): iOS-style banner notifications that slide in from the top of the screen. Used for real-time alerts, messages, and system events. Banners auto-dismiss after a few seconds; they never block interaction with the app behind them.
+- [Notifications · Desktop](https://jsrothwell.github.io/Sitka/notifications/desktop/): Toast notifications for desktop and web — brief, non-blocking messages that appear in a screen corner to confirm actions, surface warnings, or report errors. Portaled to document.body; never interrupt flow.
+- [Chat & Conversation](https://jsrothwell.github.io/Sitka/patterns/chat/): Pattern for AI assistant and human conversation interfaces.
+- [Collaboration & Sharing](https://jsrothwell.github.io/Sitka/patterns/collaboration/): Enable teamwork through real-time interaction patterns, presence indicators, and seamless content distribution across platforms and devices.
+- [Share Card](https://jsrothwell.github.io/Sitka/patterns/share-card/): A fixed-size, branded image summarizing an achievement, offered at the moment of celebration and built only from aggregate numbers — so it's safe to post publicly without editing. Turns a private milestone into organic word of mouth without exposing anyone's data.
+- [Media Player](https://jsrothwell.github.io/Sitka/patterns/media-player/): Audio and video player UI patterns — play/pause, scrubber, volume, track list, and full-screen controls. These patterns cover the visual layer; wire them to a real audio/video element or AVPlayer in production.
+
+## How-tos
+- [All how-tos](https://jsrothwell.github.io/Sitka/how-tos/)
+- [Design for dark mode](https://jsrothwell.github.io/Sitka/how-tos/dark-mode/): Apply the Sitka colour token set correctly in dark contexts. This guide covers surface stepping, elevation, contrast validation, and the most common dark-mode mistakes.
+- [Ensure colour is accessible](https://jsrothwell.github.io/Sitka/how-tos/colour-contrast/): Check that every colour pairing in your designs meets WCAG 2.1 AA. This guide covers the approved Sitka pairings, how to test custom colours, and what to do when a pairing fails.
+- [Write clear interface copy](https://jsrothwell.github.io/Sitka/how-tos/write-for-interfaces/): Apply the Sitka writing guidelines to the four highest-impact areas: button labels, error messages, empty states, and tooltips.
+- [Visualise data accessibly](https://jsrothwell.github.io/Sitka/how-tos/data-visualisation/): Choose the right chart type, apply the accessible series palette, and mark up your charts correctly so they work for keyboard and screen-reader users.
+- [Design an onboarding flow](https://jsrothwell.github.io/Sitka/how-tos/onboarding-flow/): Structure a wizard, decide what to ask upfront versus what to defer, write clear step copy, and give users a satisfying completion moment — all using the Sitka onboarding pattern.
+- [Wire Sitka's ThemeManager in SwiftUI](https://jsrothwell.github.io/Sitka/how-tos/swift-theme-manager/): Set up the Sitka theme toggle, apply the effectiveAccent pattern, keep tokens adaptive for light and dark mode, and forward ThemeManager correctly through macOS sheets.
+
+## Resources
+
+### Libraries
+- [Overview](https://jsrothwell.github.io/Sitka/libraries/): Sitka ships adapters for every platform in your stack. Pick the one that matches your project and follow the guide to get up and running in minutes.
+- [React · Next.js](https://jsrothwell.github.io/Sitka/libraries/react/): Add Sitka to an existing Next.js project. Components are copied directly into your codebase — no npm package, no version lock-in.
+- [React · Vite](https://jsrothwell.github.io/Sitka/libraries/vite/): Integrate Sitka into a Vite + React SPA. No framework dependencies — just CSS variables, Tailwind 4, and React components.
+- [Storybook](https://jsrothwell.github.io/Sitka/libraries/storybook/): Interactive component workshop for Sitka. Browse every component in isolation, switch themes, test viewports, and check accessibility — all without running the full app.
+- [Tokens Only](https://jsrothwell.github.io/Sitka/libraries/tokens/): Use Sitka's design tokens in any framework — or no framework at all. Available as CSS custom properties, raw JSON (DTCG format), and a typed JS/TS module.
+- [iOS · SwiftUI](https://jsrothwell.github.io/Sitka/libraries/ios/): Add Sitka's colour, spacing, radius, type and motion tokens to a SwiftUI app with the SitkaTokens Swift package, generated from the same tokens.json that powers the web.
+- [macOS · SwiftUI](https://jsrothwell.github.io/Sitka/libraries/macos/): Use Sitka's design tokens in a macOS SwiftUI app. The same typed Swift constants that power iOS — with macOS-native color APIs, window-chrome conventions, and HIG-correct component patterns.
+- [React Native](https://jsrothwell.github.io/Sitka/libraries/react-native/): Bridge Sitka design tokens and glass aesthetics to mobile apps using React Native.
+- [Android · Compose](https://jsrothwell.github.io/Sitka/libraries/android/): Native Android library for Sitka. Built with Jetpack Compose and Material 3 interoperability.
+- [Figma](https://jsrothwell.github.io/Sitka/libraries/figma/): Sitka's Figma library: components, text and effect styles, and variables for colour (Light and Dark), type, spacing, radii and layout. Code Connect mappings for 11 components (React and SwiftUI) are in the repo, ready to publish to Dev Mode.
+
+### Tokens & Tools
+- [Design Tokens](https://jsrothwell.github.io/Sitka/tokens/): All design decisions are expressed as tokens — named values that map intent to implementation across Web, iOS, and macOS. Changes to tokens propagate everywhere.
+- [Token Export](https://jsrothwell.github.io/Sitka/tokens/export/): Download the Sitka tokens as W3C DTCG JSON or as Swift. Both files are generated from tokens.json on every build.
+- [Theme Customizer](https://jsrothwell.github.io/Sitka/tools/theme-customizer/): Adjust design tokens live and export a CSS child theme for your own project.
+- [ESLint Plugin](https://jsrothwell.github.io/Sitka/tools/eslint-plugin/): sitka-tokens ESLint plugin enforces token usage over hardcoded hex colors, spacing values, border radii, and shadows. Keeps your codebase strictly on-brand.
+
+## About
+- [Changelog](https://jsrothwell.github.io/Sitka/changelog/): Every release, summarised. Breaking changes are marked explicitly.
+- [License](https://jsrothwell.github.io/Sitka/license/): Sitka Design System is released under the MIT License.
+- [Status](https://jsrothwell.github.io/Sitka/status/): Real-time status for all Sitka services and infrastructure.

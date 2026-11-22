@@ -1,0 +1,110 @@
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { describe, it, expect } from 'vitest';
+import { contrastRatio } from '@/lib';
+import tokens from '@/tokens/tokens.json';
+
+/**
+ * Locks in the two token decisions from CROSS_APP_PATTERN_AUDIT_2026-11-21.md §3:
+ * status text tones, and the categorical palette exposed as CSS variables.
+ * Also locks text-on-fill tokens (onAccent, onDanger) added after the 2027 readiness review.
+ */
+
+type Rgb = [number, number, number];
+
+function parse(value: string): Rgb {
+  if (value.startsWith('#')) {
+    return [1, 3, 5].map((i) => parseInt(value.slice(i, i + 2), 16)) as Rgb;
+  }
+  const m = value.match(/(\d+)\D+(\d+)\D+(\d+)/);
+  if (!m) throw new Error(`Unparseable colour: ${value}`);
+  return [Number(m[1]), Number(m[2]), Number(m[3])];
+}
+
+const hex = ([r, g, b]: Rgb) => `#${[r, g, b].map((c) => c.toString(16).padStart(2, '0')).join('')}`;
+const mix = (fg: Rgb, bg: Rgb, alpha: number): Rgb =>
+  fg.map((c, i) => Math.round(c * alpha + bg[i] * (1 - alpha))) as Rgb;
+
+const themes = tokens.color.themes as Record<'dark' | 'light', Record<string, { $value: string }>>;
+const STATUSES = ['Success', 'Warning', 'Danger', 'Caution'] as const;
+const SURFACES = ['surface', 'surfaceRaised', 'background', 'surfaceHover'] as const;
+
+describe.each(['light', 'dark'] as const)('status text tokens — %s theme', (theme) => {
+  const t = themes[theme];
+
+  it.each(STATUSES)('status%sText clears 4.5:1 on every surface', (status) => {
+    const text = parse(t[`status${status}Text`].$value);
+    for (const s of SURFACES) {
+      expect(contrastRatio(hex(text), hex(parse(t[s].$value)))).toBeGreaterThanOrEqual(4.5);
+    }
+  });
+
+  it.each(STATUSES)('status%sText clears 4.5:1 on its own 12%% tint (status pills)', (status) => {
+    const text = parse(t[`status${status}Text`].$value);
+    const fill = parse(t[`status${status}`].$value);
+    for (const s of SURFACES) {
+      const pill = mix(fill, parse(t[s].$value), 0.12);
+      expect(contrastRatio(hex(text), hex(pill))).toBeGreaterThanOrEqual(4.5);
+    }
+  });
+});
+
+describe.each(['light', 'dark'] as const)('text on solid fills — %s theme', (theme) => {
+  const t = themes[theme];
+  const ratio = (fg: string, bg: string) => contrastRatio(hex(parse(t[fg].$value)), hex(parse(t[bg].$value)));
+
+  it('onAccent clears 4.5:1 on the accent (primary buttons)', () => {
+    expect(ratio('onAccent', 'accent')).toBeGreaterThanOrEqual(4.5);
+  });
+
+  it('onDanger clears 4.5:1 on dangerSolid (destructive buttons)', () => {
+    expect(ratio('onDanger', 'dangerSolid')).toBeGreaterThanOrEqual(4.5);
+  });
+
+  it('dangerSolid clears 3:1 against every surface (WCAG 1.4.11 non-text)', () => {
+    for (const s of SURFACES) expect(ratio('dangerSolid', s)).toBeGreaterThanOrEqual(3);
+  });
+});
+
+describe('categorical palette', () => {
+  const entries = Object.entries(tokens.color.categorical).filter(([k]) => k !== 'comment') as [string, { $value: string }][];
+
+  it('has eight colours', () => {
+    expect(entries.map(([k]) => k)).toEqual(['1', '2', '3', '4', '5', '6', '7', '8']);
+  });
+
+  it.each(entries)('categorical.%s clears 4.5:1 under white text', (_, { $value }) => {
+    expect(contrastRatio($value.toLowerCase(), '#ffffff')).toBeGreaterThanOrEqual(4.5);
+  });
+});
+
+describe('globals.css mirrors tokens.json', () => {
+  const css = readFileSync(resolve(__dirname, '../app/globals.css'), 'utf8');
+  const [darkBlock, lightBlock] = css.split('\n[data-theme="light"] {');
+  const cssVar = (block: string, name: string) => {
+    const m = block.match(new RegExp(`--${name}:\\s*(\\d+)\\s+(\\d+)\\s+(\\d+)`));
+    return m ? ([Number(m[1]), Number(m[2]), Number(m[3])] as Rgb) : null;
+  };
+
+  it.each(Object.entries(tokens.color.categorical).filter(([k]) => k !== 'comment') as [string, { $value: string }][])(
+    '--categorical-%s matches',
+    (k, { $value }) => {
+      expect(cssVar(darkBlock, `categorical-${k}`)).toEqual(parse($value));
+    },
+  );
+
+  it.each([
+    ['on-accent', 'onAccent'],
+    ['danger-solid', 'dangerSolid'],
+    ['on-danger', 'onDanger'],
+  ] as const)('--%s matches in both themes', (css, token) => {
+    expect(cssVar(darkBlock, css)).toEqual(parse(themes.dark[token].$value));
+    expect(cssVar(lightBlock, css)).toEqual(parse(themes.light[token].$value));
+  });
+
+  it.each(STATUSES)('--status-%s-text matches in both themes', (status) => {
+    const name = `status-${status.toLowerCase()}-text`;
+    expect(cssVar(darkBlock, name)).toEqual(parse(themes.dark[`status${status}Text`].$value));
+    expect(cssVar(lightBlock, name)).toEqual(parse(themes.light[`status${status}Text`].$value));
+  });
+});

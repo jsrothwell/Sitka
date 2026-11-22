@@ -251,7 +251,7 @@ export default function CommunityReportsPage() {
 
           {stage === "thanks" && (
             <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
-              <p className="text-[14px] font-medium text-[rgb(var(--status-success))]">✓ Thanks for confirming</p>
+              <p className="text-[14px] font-medium text-[rgb(var(--status-success-text))]">✓ Thanks for confirming</p>
               <p className="mt-1 text-[12px] text-[rgb(var(--text-secondary))]">Reported 6 min ago · confirmed 3×</p>
             </div>
           )}

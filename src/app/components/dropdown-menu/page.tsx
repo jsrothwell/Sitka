@@ -141,7 +141,7 @@ export function DropdownMenu({
                 className={cn(
                   "w-full flex items-center gap-2.5 px-3 py-1.5 text-[13px] text-left transition-colors duration-75",
                   action.destructive
-                    ? "text-[rgb(var(--status-danger))] hover:bg-[rgb(var(--status-danger)/0.1)]"
+                    ? "text-[rgb(var(--status-danger-text))] hover:bg-[rgb(var(--status-danger)/0.1)]"
                     : "text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--surface-raised))]",
                   action.disabled && "opacity-40 cursor-not-allowed pointer-events-none"
                 )}
@@ -436,7 +436,7 @@ function DemoDropdown({
                 }}
                 className={`w-full flex items-center gap-2.5 px-3 py-1.5 text-[13px] text-left transition-colors duration-75 ${
                   item.destructive
-                    ? "text-[rgb(var(--status-danger))] hover:bg-[rgb(var(--status-danger)/0.1)]"
+                    ? "text-[rgb(var(--status-danger-text))] hover:bg-[rgb(var(--status-danger)/0.1)]"
                     : "text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--surface-raised))]"
                 }`}
               >

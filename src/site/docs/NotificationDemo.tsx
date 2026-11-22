@@ -160,7 +160,7 @@ export function MobileNotificationDemo() {
                   "flex items-center gap-1.5 px-2.5 py-2 rounded-xl text-[10px] font-medium",
                   "border transition-colors",
                   active === n.key
-                    ? "bg-[rgb(var(--accent))] border-[rgb(var(--accent))] text-white"
+                    ? "bg-[rgb(var(--accent))] border-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
                     : "bg-[rgb(var(--surface))] border-[rgb(var(--border))] text-[rgb(var(--text-secondary))]"
                 )}
               >

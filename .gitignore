@@ -57,3 +57,11 @@ storybook-static/
 .env
 !.env.example
 .env.local
+
+# Swift Package Manager
+/.build/
+/.swiftpm/
+Package.resolved
+
+# Code Connect parse output
+/.figma/.parsed-*.json

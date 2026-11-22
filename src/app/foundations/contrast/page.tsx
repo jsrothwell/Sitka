@@ -61,6 +61,13 @@ const PAIRS = [
     ratio: "5.5:1",
     level: "AA",
   },
+  // Status text tones (1.13.0): the light-theme status fills fail as text, so text and icons use these.
+  { fg: "#047253", bg: "#ffffff", fgLabel: "--status-success-text (light)", bgLabel: "--surface (light)", ratio: "5.9:1", level: "AA" },
+  { fg: "#a64c08", bg: "#ffffff", fgLabel: "--status-warning-text (light)", bgLabel: "--surface (light)", ratio: "5.7:1", level: "AA" },
+  { fg: "#bf1c1c", bg: "#ffffff", fgLabel: "--status-danger-text (light)", bgLabel: "--surface (light)", ratio: "6.2:1", level: "AA" },
+  { fg: "#b13b0a", bg: "#ffffff", fgLabel: "--status-caution-text (light)", bgLabel: "--surface (light)", ratio: "6.0:1", level: "AA" },
+  // Categorical fills carry white text; categorical.5 shown, all eight clear 4.5:1.
+  { fg: "#ffffff", bg: "#4f4fa3", fgLabel: "#ffffff", bgLabel: "--categorical-5", ratio: "7.1:1", level: "AAA" },
 ];
 
 function levelColor(level: string) {

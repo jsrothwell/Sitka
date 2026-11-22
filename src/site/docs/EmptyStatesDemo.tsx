@@ -44,7 +44,7 @@ function EmptyStateCard({
       {(primaryAction || secondaryAction) && (
         <div className="flex items-center gap-2 mt-1">
           {primaryAction && (
-            <button className="px-3.5 py-1.5 rounded-lg bg-[rgb(var(--accent))] text-white text-[12px] font-medium hover:opacity-90 transition-opacity">
+            <button className="px-3.5 py-1.5 rounded-lg bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[12px] font-medium hover:opacity-90 transition-opacity">
               {primaryAction}
             </button>
           )}

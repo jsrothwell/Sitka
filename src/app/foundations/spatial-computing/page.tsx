@@ -103,7 +103,7 @@ export default function SpatialComputingPage() {
           </div>
           {/* Ornament */}
           <div className="absolute bottom-12 px-4 py-2 rounded-full backdrop-blur-3xl bg-[rgb(var(--accent)/0.15)] border border-[rgb(var(--accent)/0.4)] shadow-2xl flex items-center gap-4">
-             <div className="w-8 h-8 rounded-full bg-[rgb(var(--accent))] flex items-center justify-center text-white">
+             <div className="w-8 h-8 rounded-full bg-[rgb(var(--accent))] flex items-center justify-center text-[rgb(var(--on-accent))]">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
              </div>
              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-[rgb(var(--text-primary))]">

@@ -510,7 +510,7 @@ function CollaborationDemo() {
           >
             {copied ? "Copied!" : "Copy link"}
           </button>
-          <button className="px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[rgb(var(--accent))] text-white hover:opacity-90 transition-opacity">
+          <button className="px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] hover:opacity-90 transition-opacity">
             Share
           </button>
         </div>

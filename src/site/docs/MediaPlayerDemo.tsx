@@ -170,7 +170,7 @@ export function AudioPlayerDemo() {
 
           <button
             onClick={() => setPlaying(!playing)}
-            className="w-12 h-12 rounded-full bg-[rgb(var(--accent))] text-white flex items-center justify-center hover:opacity-90 active:scale-95 transition-all shadow-[0_4px_16px_rgba(52,168,101,0.4)]"
+            className="w-12 h-12 rounded-full bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] flex items-center justify-center hover:opacity-90 active:scale-95 transition-all shadow-[0_4px_16px_rgba(52,168,101,0.4)]"
           >
             {playing ? <IconPause className="w-5 h-5" /> : <IconPlay className="w-5 h-5 ml-0.5" />}
           </button>

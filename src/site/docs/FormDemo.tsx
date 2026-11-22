@@ -229,8 +229,8 @@ export function MultiStepForm() {
             <div className="flex items-center gap-2">
               <div className={cn(
                 "w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-semibold transition-colors",
-                i < step  ? "bg-[rgb(var(--accent))] text-white" :
-                i === step ? "bg-[rgb(var(--accent))] text-white ring-4 ring-[rgb(var(--accent))]/20" :
+                i < step  ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]" :
+                i === step ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] ring-4 ring-[rgb(var(--accent))]/20" :
                              "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-tertiary))] border border-[rgb(var(--border))]"
               )}>
                 {i < step ? <Check className="w-3 h-3" /> : i + 1}

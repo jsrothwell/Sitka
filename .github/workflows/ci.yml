@@ -1,0 +1,56 @@
+name: CI
+
+# Runs on every pull request, and gates the GitHub Pages deploy (deploy.yml calls it).
+on:
+  pull_request:
+  workflow_call:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  web:
+    name: Types, lint, tests, generated files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Swift tokens, Figma variables, llms.txt, components.json and the Figma drift report are
+      # generated from source. If a PR changes tokens or components without regenerating, fail.
+      - name: Generated files are up to date
+        run: |
+          npm run generate
+          git diff --exit-code -- platforms/swift platforms/figma public/downloads/SitkaTokens.swift \
+            public/downloads/sitka-tokens.json public/llms.txt public/components.json src/site/home/figma-drift.json \
+            || (echo "::error::Generated files are stale. Run 'npm run generate' and commit the result." && exit 1)
+
+      - name: Type-check
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests (includes contrast locks)
+        run: npm test
+
+      - name: Code Connect mappings parse
+        run: npm run figma:parse
+
+  swift:
+    name: Swift package
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test SitkaTokens
+        run: swift test

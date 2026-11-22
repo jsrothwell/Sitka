@@ -120,9 +120,9 @@ export function ImportFlow({ onComplete }: { onComplete?: (result: ImportResult)
         {/* Summary */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
           {[
-            { label: "Imported", value: result.imported, color: "rgb(var(--status-success))" },
-            { label: "Skipped", value: result.skipped, color: "rgb(var(--status-warning))" },
-            { label: "Errors", value: result.errors.length, color: "rgb(var(--status-danger))" },
+            { label: "Imported", value: result.imported, color: "rgb(var(--status-success-text))" },
+            { label: "Skipped", value: result.skipped, color: "rgb(var(--status-warning-text))" },
+            { label: "Errors", value: result.errors.length, color: "rgb(var(--status-danger-text))" },
           ].map((s) => (
             <div key={s.label} style={{ padding: "12px", borderRadius: 8, background: "rgb(var(--surface))", border: "1px solid rgb(var(--border))", textAlign: "center" }}>
               <div style={{ fontSize: 22, fontWeight: 700, color: s.color, fontVariantNumeric: "tabular-nums" }}>{s.value}</div>
@@ -140,7 +140,7 @@ export function ImportFlow({ onComplete }: { onComplete?: (result: ImportResult)
             {result.errors.map((err) => (
               <div key={err.row} style={{ display: "flex", gap: 12, alignItems: "center", padding: "8px 12px", borderBottom: "1px solid rgb(var(--border-subtle))", fontSize: 12 }}>
                 <span style={{ color: "rgb(var(--text-tertiary))", fontVariantNumeric: "tabular-nums", flexShrink: 0 }}>Row {err.row}</span>
-                <span style={{ color: "rgb(var(--status-danger))" }}>{err.reason}</span>
+                <span style={{ color: "rgb(var(--status-danger-text))" }}>{err.reason}</span>
               </div>
             ))}
           </div>
@@ -209,7 +209,7 @@ export function ExportFlow() {
 
       <button style={{
         display: "flex", alignItems: "center", gap: 8, padding: "9px 18px",
-        borderRadius: 8, background: "rgb(var(--accent))", color: "#fff",
+        borderRadius: 8, background: "rgb(var(--accent))", color: "rgb(var(--on-accent))",
         border: "none", cursor: "pointer", fontSize: 14, fontWeight: 600, alignSelf: "flex-start",
       }}>
         <Download size={15} />
@@ -530,7 +530,7 @@ export default function ImportExportPage() {
                       {ERRORS.map((err) => (
                         <div key={err.row} style={{ display: "flex", gap: 12, alignItems: "center", padding: "8px 12px", borderBottom: "1px solid rgb(var(--border-subtle))", fontSize: 12 }}>
                           <span style={{ color: "rgb(var(--text-tertiary))", fontVariantNumeric: "tabular-nums", flexShrink: 0, width: 48 }}>Row {err.row}</span>
-                          <span style={{ color: "rgb(var(--status-danger))" }}>{err.reason}</span>
+                          <span style={{ color: "rgb(var(--status-danger-text))" }}>{err.reason}</span>
                         </div>
                       ))}
                     </div>
@@ -572,7 +572,7 @@ export default function ImportExportPage() {
                 </div>
                 <button style={{
                   display: "flex", alignItems: "center", gap: 8, padding: "9px 18px",
-                  borderRadius: 8, background: "rgb(var(--accent))", color: "#fff",
+                  borderRadius: 8, background: "rgb(var(--accent))", color: "rgb(var(--on-accent))",
                   border: "none", cursor: "pointer", fontSize: 14, fontWeight: 600, alignSelf: "flex-start",
                 }}>
                   <Download size={15} />

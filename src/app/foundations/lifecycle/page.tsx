@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Component Lifecycle" };
 const STAGES = [
   {
     badge: "Alpha",
-    color: "text-[rgb(var(--status-warning))] bg-[rgb(var(--status-warning)/0.12)]",
+    color: "text-[rgb(var(--status-warning-text))] bg-[rgb(var(--status-warning)/0.12)]",
     summary: "Experimental — API will change",
     criteria: [
       "Component exists in code but API is not final",
@@ -30,7 +30,7 @@ const STAGES = [
   },
   {
     badge: "Stable",
-    color: "text-[rgb(var(--status-success))] bg-[rgb(var(--status-success)/0.12)]",
+    color: "text-[rgb(var(--status-success-text))] bg-[rgb(var(--status-success)/0.12)]",
     summary: "Production-ready, fully supported",
     criteria: [
       "Full test coverage across platforms (React, HTML, SwiftUI)",

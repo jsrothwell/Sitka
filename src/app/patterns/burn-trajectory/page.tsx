@@ -377,7 +377,7 @@ function MiniChart() {
     const d = new Date(year, month - 5 + i, 1);
     const isPast = d <= today;
     const planned = (budget / 12) * (i + 1);
-    const actual = isPast ? planned * (0.9 + Math.sin(i * 0.8) * 0.12 + Math.random() * 0.05) : undefined;
+    const actual = isPast ? planned * (0.9 + Math.sin(i * 0.8) * 0.12 + ((i * 37) % 7) / 140) : undefined;
     const forecast = !isPast ? planned * 1.08 : undefined;
     return { date: d, actual, forecast, planned };
   });

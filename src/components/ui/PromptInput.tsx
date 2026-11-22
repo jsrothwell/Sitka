@@ -242,7 +242,7 @@ export const PromptInput = forwardRef<HTMLTextAreaElement, PromptInputProps>(
             className={cn(
               "flex-shrink-0 p-2.5 rounded-xl transition-all",
               actualValue.trim() && !disabled && !loading
-                ? "bg-[rgb(var(--accent))] text-white hover:opacity-90 shadow-[0_0_0_1px_rgba(0,192,232,0.3)]"
+                ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] hover:opacity-90 shadow-[0_0_0_1px_rgba(0,192,232,0.3)]"
                 : "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-tertiary))] cursor-not-allowed"
             )}
             aria-label="Send message"

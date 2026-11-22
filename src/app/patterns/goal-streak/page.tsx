@@ -80,7 +80,7 @@ export function GoalStreakCard({
         </div>
 
         {isGoalMet && (
-          <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 10, color: "rgb(var(--status-success))", fontSize: 12, fontWeight: 600 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 10, color: "rgb(var(--status-success-text))", fontSize: 12, fontWeight: 600 }}>
             <span style={{ width: 18, height: 18, borderRadius: "50%", background: "rgb(var(--status-success))", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
@@ -366,7 +366,7 @@ function GoalStreakDemo() {
           <div style={{ height: 8, borderRadius: 99, background: "rgb(var(--progress-track))", overflow: "hidden" }}>
             <div style={{ height: "100%", width: "100%", borderRadius: 99, background: "rgb(var(--status-success))" }} />
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 10, color: "rgb(var(--status-success))", fontSize: 12, fontWeight: 600 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 10, color: "rgb(var(--status-success-text))", fontSize: 12, fontWeight: 600 }}>
             <div style={{ width: 18, height: 18, borderRadius: "50%", background: "rgb(var(--status-success))", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <Check size={10} color="#fff" strokeWidth={3} />
             </div>

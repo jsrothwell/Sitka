@@ -99,7 +99,7 @@ export function PricingTable({
             )}
           >
             {tier.popular && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-xs font-semibold rounded-full bg-[rgb(var(--accent))] text-white">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-xs font-semibold rounded-full bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]">
                 Most Popular
               </div>
             )}

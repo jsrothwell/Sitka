@@ -208,8 +208,8 @@ export function SteppedDataEntry({
           <div key={step.title} className="flex items-center flex-1">
             <div className={cn(
               "w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold transition-all",
-              i < currentStep ? "bg-[rgb(var(--accent))] text-white" :
-              i === currentStep ? "bg-[rgb(var(--accent))] text-white ring-4 ring-[rgb(var(--accent))]/20" :
+              i < currentStep ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]" :
+              i === currentStep ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] ring-4 ring-[rgb(var(--accent))]/20" :
                                 "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-tertiary))] border border-[rgb(var(--border))]"
             )}>
               {i < currentStep ? "✓" : i + 1}
@@ -257,7 +257,7 @@ export function SteppedDataEntry({
           </button>
           <button
             onClick={next}
-            className="px-4 py-2 rounded-lg bg-[rgb(var(--accent))] text-white text-[12px] font-medium hover:bg-[rgb(var(--accent))]/90 transition-colors"
+            className="px-4 py-2 rounded-lg bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[12px] font-medium hover:bg-[rgb(var(--accent))]/90 transition-colors"
           >
             {currentStep === steps.length - 1 ? "Complete" : "Continue"}
           </button>
@@ -733,7 +733,7 @@ export default function DataEntryPage() {
               {[1, 2, 3].map((step) => (
                 <div key={step} className="flex items-center gap-2">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-bold ${
-                    step === 1 ? "bg-[rgb(var(--accent))] text-white" : "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-tertiary))] border border-[rgb(var(--border))]"
+                    step === 1 ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]" : "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-tertiary))] border border-[rgb(var(--border))]"
                   }`}>
                     {step < 3 ? step : "✓"}
                   </div>

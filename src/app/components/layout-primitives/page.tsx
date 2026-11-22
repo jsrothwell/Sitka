@@ -40,7 +40,7 @@ function Demo() {
           <Box className="text-[13px] font-medium text-[rgb(var(--text-primary))]">Title</Box>
           <Inline gap="2">
             <Box className="px-3 py-1.5 rounded-lg border border-[rgb(var(--border))] text-[13px] text-[rgb(var(--text-secondary))]">Cancel</Box>
-            <Box className="px-3 py-1.5 rounded-lg bg-[rgb(var(--accent))] text-[13px] text-white">Save</Box>
+            <Box className="px-3 py-1.5 rounded-lg bg-[rgb(var(--accent))] text-[13px] text-[rgb(var(--on-accent))]">Save</Box>
           </Inline>
         </Stack>
       </div>

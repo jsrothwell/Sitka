@@ -220,7 +220,7 @@ function InterviewPrepDemo() {
 
           {!isGenerating && (
             <div style={{ display: "flex", gap: 8, marginTop: 16, paddingTop: 14, borderTop: "1px solid rgb(var(--border))" }}>
-              <button style={{ padding: "7px 14px", borderRadius: 8, background: "rgb(var(--accent))", color: "#fff", border: "none", fontSize: 12, fontWeight: 600, cursor: "pointer" }}>
+              <button style={{ padding: "7px 14px", borderRadius: 8, background: "rgb(var(--accent))", color: "rgb(var(--on-accent))", border: "none", fontSize: 12, fontWeight: 600, cursor: "pointer" }}>
                 Start Mock Interview
               </button>
               <button style={{ padding: "7px 14px", borderRadius: 8, background: "transparent", border: "1px solid rgb(var(--border))", fontSize: 12, fontWeight: 600, cursor: "pointer", color: "rgb(var(--text-secondary))" }}>
@@ -442,7 +442,7 @@ export function InterviewPrepPanel({
 
       {/* CTA */}
       <button onClick={generate} disabled={isStreaming}
-        className="w-full py-2.5 rounded-xl bg-[rgb(var(--accent))] text-white text-sm font-semibold disabled:opacity-60"
+        className="w-full py-2.5 rounded-xl bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-sm font-semibold disabled:opacity-60"
       >
         {isStreaming ? "Generating…" : \`Generate \${ROUND_LABELS[roundType]} Prep\`}
       </button>

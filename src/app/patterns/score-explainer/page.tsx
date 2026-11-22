@@ -260,9 +260,10 @@ export default function ScoreExplainerPage() {
           ])}
         />
         <p className="mt-4 text-[13px] text-[rgb(var(--text-secondary))]">
-          Fractionflo reaches the same goal differently: each status has a <code>color</code> for fills and a deeper{" "}
-          <code>textColor</code> for text on plain backgrounds, because yellow and light blue fail on white. Use the computed
-          foreground for text <em>on</em> a status fill, and a deeper text tone for status text <em>beside</em> one.
+          For status text <em>beside</em> a fill rather than on it, use the <code>--status-*-text</code> tokens (added in 1.13.0,
+          after Fractionflo's separate <code>color</code>/<code>textColor</code> per status): the light-mode fills fail as text on
+          white, so the text tones are deeper. Rule of thumb: computed foreground <em>on</em> a status fill,{" "}
+          <code>--status-*-text</code> <em>beside</em> one.
         </p>
       </DocSection>
 

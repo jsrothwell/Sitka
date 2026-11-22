@@ -87,7 +87,7 @@ export function UsageGrid({ items }: { items: UsageItem[] }) {
           }`}
         >
           <div className="flex items-center gap-2 mb-2">
-            <span className={good ? "text-[rgb(var(--status-success))]" : "text-[rgb(var(--status-danger))]"}>
+            <span className={good ? "text-[rgb(var(--status-success-text))]" : "text-[rgb(var(--status-danger-text))]"}>
               {good ? "✓" : "✗"}
             </span>
             <p className="text-[13px] font-semibold text-[rgb(var(--text-primary))]">{heading}</p>

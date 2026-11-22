@@ -9,10 +9,10 @@ import { ArrowList, DocSection, PreviewSection, SourceNote, UsageGrid } from "@/
 type Kind = "book" | "music" | "film" | "game";
 
 const KINDS: Record<Kind, { aspect: string; glyph: string; tint: string; label: string }> = {
-  book: { aspect: "2 / 3", glyph: "📖", tint: "var(--categorical-1, 79 70 229)", label: "Book" },
-  music: { aspect: "1 / 1", glyph: "♪", tint: "var(--categorical-2, 13 148 136)", label: "Album" },
-  film: { aspect: "2 / 3", glyph: "🎞", tint: "var(--categorical-3, 190 18 60)", label: "Film" },
-  game: { aspect: "2 / 3", glyph: "🎮", tint: "var(--categorical-4, 161 98 7)", label: "Game" },
+  book: { aspect: "2 / 3", glyph: "📖", tint: "var(--categorical-3)", label: "Book" },
+  music: { aspect: "1 / 1", glyph: "♪", tint: "var(--categorical-7)", label: "Album" },
+  film: { aspect: "2 / 3", glyph: "🎞", tint: "var(--categorical-6)", label: "Film" },
+  game: { aspect: "2 / 3", glyph: "🎮", tint: "var(--categorical-5)", label: "Game" },
 };
 
 const ITEMS: { title: string; creator: string; kind: Kind; image?: string }[] = [
@@ -94,7 +94,7 @@ function TypographicCover({ title, creator, kind }: { title: string; creator: st
 <ul class="shelf">
   <li class="tile">
     <div class="tile__slot">
-      <div class="cover cover--typographic" style="aspect-ratio: 2/3; --tint: var(--categorical-1)" aria-hidden="true">
+      <div class="cover cover--typographic" style="aspect-ratio: 2/3; --tint: var(--categorical-3)" aria-hidden="true">
         <span class="cover__glyph">📖</span>
         <div><p class="cover__title">The Left Hand of Darkness</p><p class="cover__creator">Ursula K. Le Guin</p></div>
       </div>

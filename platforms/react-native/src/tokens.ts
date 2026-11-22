@@ -54,6 +54,16 @@ export const Colors = {
   error: "#ef4444",
   info: "#3b82f6",
 
+  // Categorical (fixed across themes; no status meaning)
+  categorical1: "#16302A",
+  categorical2: "#8A5A3B",
+  categorical3: "#2D5F87",
+  categorical4: "#7A4B86",
+  categorical5: "#4F4FA3",
+  categorical6: "#8C3B5E",
+  categorical7: "#2F6B66",
+  categorical8: "#5E6472",
+
   // Dark theme
   dark: {
     background: "rgb(9, 9, 12)" as SitkaColor,
@@ -76,6 +86,13 @@ export const Colors = {
     statusWarning: "rgb(245, 158, 11)" as SitkaColor,
     statusDanger: "rgb(248, 113, 113)" as SitkaColor,
     statusCaution: "rgb(249, 115, 22)" as SitkaColor,
+    statusSuccessText: "rgb(16, 185, 129)" as SitkaColor,
+    statusWarningText: "rgb(245, 158, 11)" as SitkaColor,
+    statusDangerText: "rgb(248, 113, 113)" as SitkaColor,
+    statusCautionText: "rgb(249, 115, 22)" as SitkaColor,
+    onAccent: "rgb(9, 9, 12)" as SitkaColor,
+    dangerSolid: "rgb(220, 38, 38)" as SitkaColor,
+    onDanger: "rgb(255, 255, 255)" as SitkaColor,
     brandUser: "#00C0E8" as SitkaColor,
   },
 
@@ -97,6 +114,13 @@ export const Colors = {
     statusWarning: "rgb(245, 158, 11)" as SitkaColor,
     statusDanger: "rgb(239, 68, 68)" as SitkaColor,
     statusCaution: "rgb(234, 88, 12)" as SitkaColor,
+    statusSuccessText: "rgb(4, 114, 83)" as SitkaColor,
+    statusWarningText: "rgb(166, 76, 8)" as SitkaColor,
+    statusDangerText: "rgb(191, 28, 28)" as SitkaColor,
+    statusCautionText: "rgb(177, 59, 10)" as SitkaColor,
+    onAccent: "rgb(9, 9, 12)" as SitkaColor,
+    dangerSolid: "rgb(191, 28, 28)" as SitkaColor,
+    onDanger: "rgb(255, 255, 255)" as SitkaColor,
     progressTrack: "rgb(209, 213, 219)" as SitkaColor,
     progressSuccess: "#22c55e" as SitkaColor,
     progressWarning: "#f59e0b" as SitkaColor,

@@ -77,7 +77,7 @@ export function Wizard({ steps, onComplete }: WizardProps) {
                 <span className={cn(
                   "w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-semibold border transition-colors",
                   i === currentStep
-                    ? "bg-[rgb(var(--accent))] border-[rgb(var(--accent))] text-white"
+                    ? "bg-[rgb(var(--accent))] border-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
                     : completed.has(i)
                     ? "bg-[rgb(var(--accent-subtle))] border-[rgb(var(--accent))] text-[rgb(var(--accent))]"
                     : "border-[rgb(var(--border))] text-[rgb(var(--text-tertiary))]"
@@ -325,7 +325,7 @@ function WizardDemo() {
                 <span className={cn(
                   "w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-semibold border shrink-0 transition-all",
                   i === currentStep
-                    ? "bg-[rgb(var(--accent))] border-[rgb(var(--accent))] text-white"
+                    ? "bg-[rgb(var(--accent))] border-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
                     : completed.has(i)
                     ? "bg-[rgb(var(--accent-subtle))] border-[rgb(var(--accent))] text-[rgb(var(--accent))]"
                     : "border-[rgb(var(--border))] text-[rgb(var(--text-tertiary))]"

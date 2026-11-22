@@ -95,8 +95,8 @@ export function ButtonMobileDemo() {
             className={cn(
               "w-full h-11 rounded-xl text-[13px] font-semibold transition-all",
               pressed === "primary"
-                ? "bg-[rgb(var(--accent))] opacity-60 scale-[0.98] text-white"
-                : "bg-[rgb(var(--accent))] text-white"
+                ? "bg-[rgb(var(--accent))] opacity-60 scale-[0.98] text-[rgb(var(--on-accent))]"
+                : "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
             )}
           >
             {pressed === "primary" ? "Processing…" : "Confirm & Pay"}
@@ -205,7 +205,7 @@ export function InputMobileDemo() {
         <div className="px-4 pb-4">
           <button
             onClick={() => setActive(null)}
-            className="w-full h-11 rounded-xl bg-[rgb(var(--accent))] text-white text-[13px] font-semibold"
+            className="w-full h-11 rounded-xl bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[13px] font-semibold"
           >
             Continue
           </button>
@@ -296,7 +296,7 @@ export function BadgeMobileDemo() {
       <div className="h-full bg-[rgb(var(--background))] flex flex-col">
         <div className="px-4 pt-4 pb-3 border-b border-[rgb(var(--border))] flex items-center justify-between">
           <p className="text-[14px] font-semibold text-[rgb(var(--text-primary))]">Notifications</p>
-          <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[rgb(var(--accent))] text-white">
+          <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]">
             {visible.filter((n) => n.unread).length} new
           </span>
         </div>
@@ -678,7 +678,7 @@ export function SplitButtonMobileDemo() {
             <button
               onClick={tap}
               className={cn(
-                "flex-1 h-11 text-[12px] font-semibold bg-[rgb(var(--accent))] text-white transition-opacity",
+                "flex-1 h-11 text-[12px] font-semibold bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] transition-opacity",
                 pressed && "opacity-60"
               )}
             >
@@ -687,7 +687,7 @@ export function SplitButtonMobileDemo() {
             <div className="w-px bg-[rgb(var(--accent-hover))]" />
             <button
               onClick={() => setDropOpen((v) => !v)}
-              className="px-3 h-11 bg-[rgb(var(--accent))] text-white flex items-center"
+              className="px-3 h-11 bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] flex items-center"
             >
               <ChevronRight className={cn("w-4 h-4 transition-transform", dropOpen && "rotate-90")} />
             </button>
@@ -901,7 +901,7 @@ export function ModalMobileDemo() {
                 This action is permanent. All your data will be removed within 30 days.
               </p>
               <div className="space-y-2">
-                <button className="w-full h-11 rounded-xl bg-red-500 text-white text-[13px] font-semibold">
+                <button className="w-full h-11 rounded-xl bg-[rgb(var(--danger-solid))] text-[rgb(var(--on-danger))] text-[13px] font-semibold">
                   Delete permanently
                 </button>
                 <button

@@ -34,6 +34,27 @@
   --status-danger:   248 113 113;
   --status-caution:  249 115  22;
 
+  /* Status text: dark fills already pass 4.5:1 as text, so these match the fills */
+  --status-success-text: 16 185 129;
+  --status-warning-text: 245 158 11;
+  --status-danger-text: 248 113 113;
+  --status-caution-text: 249 115 22;
+
+  /* Text on solid fills — white on the cyan accent is ~2.2:1, so it takes near-black */
+  --on-accent: 9 9 12;
+  --danger-solid: 220 38 38;
+  --on-danger: 255 255 255;
+
+  /* Categorical (fixed across themes, not status) */
+  --categorical-1: 22 48 42;
+  --categorical-2: 138 90 59;
+  --categorical-3: 45 95 135;
+  --categorical-4: 122 75 134;
+  --categorical-5: 79 79 163;
+  --categorical-6: 140 59 94;
+  --categorical-7: 47 107 102;
+  --categorical-8: 94 100 114;
+
   /* Progress */
   --progress-track:          38  38  48;
   --progress-fill-success:   16 185 129;
@@ -107,6 +128,17 @@
   --status-warning:  245 158  11;
   --status-danger:   239  68  68;
   --status-caution:  234  88  12;
+
+  /* Status text: deeper tones — the fills above fail as text on white */
+  --status-success-text: 4 114 83;
+  --status-warning-text: 166 76 8;
+  --status-danger-text: 191 28 28;
+  --status-caution-text: 177 59 10;
+
+  /* Text on solid fills — white on the cyan accent is ~2.2:1, so it takes near-black */
+  --on-accent: 9 9 12;
+  --danger-solid: 191 28 28;
+  --on-danger: 255 255 255;
 
   /* Progress */
   --progress-track:         224 224 231;

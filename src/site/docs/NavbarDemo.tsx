@@ -86,7 +86,7 @@ export function NavbarDemo() {
           </div>
 
           {/* New button */}
-          <button className="hidden sm:flex items-center gap-1.5 h-8 px-3 rounded-lg bg-[rgb(var(--accent))] text-white text-[12px] font-medium hover:opacity-90 transition-opacity">
+          <button className="hidden sm:flex items-center gap-1.5 h-8 px-3 rounded-lg bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[12px] font-medium hover:opacity-90 transition-opacity">
             <Plus className="w-3.5 h-3.5" />
             New
           </button>

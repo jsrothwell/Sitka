@@ -36,10 +36,15 @@ All eight candidates from the first pass are now documented:
 | Fixed-aspect crop | scanflo `ThumbnailCropView.swift` | `/components/image-crop` |
 | Scoped ⌘K search | Fractionflo `QuickSearchView.swift` | "In production" section on `/components/command-palette` |
 
-## 3. Token findings (not applied, need a decision)
+## 3. Token findings
 
-- **Status text tone vs. fill tone.** Fractionflo keeps a separate `textColor` per status because yellow and light-blue *text* fail WCAG on white. JobFlo solved the same problem the other way: it computes black or white text for whatever sits on a status fill. Sitka has no `status-*-text` tokens. Recommend adding light-theme text variants of each status color, in the same contrast pass the 2026-07-29 audit already requested for `statusSuccess`.
-- **Categorical palette.** The new Cover Art page reads `--categorical-1…4`, with fallbacks. `color.categorical.*` exists in `tokens.json` (added in 1.9.0), but `globals.css` doesn't expose it as CSS variables. Fractionflo's `segmentColors` and scanflo's per-media-type badge tints are both further ad-hoc categorical palettes. Exposing the tokens in CSS would let all three converge.
+### Resolved in 1.13.0
+
+- **Status text tone vs. fill tone.** ✅ Added `status{Success,Warning,Danger,Caution}Text` to both themes (`--status-*-text` in CSS). Light-mode fills measured 1.9–3.8:1 as text on white; the new light text tones are the fills darkened in linear light just until they clear 4.5:1 on every light surface (surface, surfaceRaised, background, surfaceHover) *and* on their own 12% tint (status pills): `#047253`, `#a64c08`, `#bf1c1c`, `#b13b0a`. Dark-mode fills already clear 5.8:1 or better everywhere, so the dark text tones equal the fills. Also added the dark-theme status fills to `tokens.json`, which until now existed only in CSS, Android and React Native. Site text that used status fills now uses the text tones; fills are unchanged. This also closes the light-mode `statusSuccess`-as-text failure from the 2026-07-29 audit. JobFlo's computed black/white foreground stays the rule for text *on* a fill.
+- **Categorical palette.** ✅ Exposed as `--categorical-1…8` and extended from 4 to 8 so Fractionflo's 8 client segments fit. New values `#4F4FA3`, `#8C3B5E`, `#2F6B66`, `#5E6472` follow scanflo's rule (≥ 4.5:1 under white; all eight are 5.8–14.1:1) and Fractionflo's (hues clear of the status colors). Cover Art and Capacity & Runway now use the tokens instead of hard-coded palettes. Added to Android (`Categorical1…8`), React Native (`categorical1…8`) and the ESLint plugin.
+- Both decisions are enforced by `src/__tests__/color-decisions.test.ts`, which checks every ratio above and that `globals.css` matches `tokens.json`.
+
+### Still open
 - **Hard-coded hex values** in Get Parked (occupancy tiers, the `#1E63D6` lot blue, route blue `#2F7BF6`, brand navy `#13294B`) and in Fractionflo's `Theme.unallocated`. These are the same per-app accent question as July audit §2.2.
 - **Game palettes stay local.** Blackbox 1981's neon `Palette` should *not* be tokenized (see the Game Overlays page).
 

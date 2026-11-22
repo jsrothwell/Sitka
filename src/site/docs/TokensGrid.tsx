@@ -143,7 +143,7 @@ export function TokensGrid() {
         </button>
         <button
           onClick={() => handleExport("swift")}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[rgb(var(--accent))] text-white hover:opacity-90 transition-opacity"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] hover:opacity-90 transition-opacity"
         >
           <Download className="w-3.5 h-3.5" />
           Swift

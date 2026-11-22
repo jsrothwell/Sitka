@@ -124,7 +124,7 @@ export function ContextMenu({ items, children, onOpenChange }: ContextMenuProps)
                 className={cn(
                   "w-full flex items-center gap-2.5 px-3 py-1.5 text-[13px] text-left transition-colors duration-100",
                   action.destructive
-                    ? "text-[rgb(var(--status-danger))] hover:bg-[rgb(var(--status-danger)/0.1)]"
+                    ? "text-[rgb(var(--status-danger-text))] hover:bg-[rgb(var(--status-danger)/0.1)]"
                     : "text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--surface-raised))]",
                   action.disabled && "opacity-40 cursor-not-allowed pointer-events-none"
                 )}
@@ -422,7 +422,7 @@ export default function ContextMenuPage() {
                   role="menuitem"
                   className={`w-full flex items-center gap-2.5 px-3 py-1.5 text-[13px] text-left transition-colors duration-75 ${
                     item.destructive
-                      ? "text-[rgb(var(--status-danger))] hover:bg-[rgb(var(--status-danger)/0.1)]"
+                      ? "text-[rgb(var(--status-danger-text))] hover:bg-[rgb(var(--status-danger)/0.1)]"
                       : "text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--surface-raised))]"
                   }`}
                   onClick={() => { item.onSelect?.(); setMenuPos(null); }}

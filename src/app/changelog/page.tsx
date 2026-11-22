@@ -5,9 +5,36 @@ export const metadata: Metadata = { title: "Changelog" };
 
 const RELEASES = [
   {
-    version: "1.12.0",
+    version: "1.13.0",
     date: "2026-11-21",
     tag: "Latest",
+    summary: "Resolves the two token decisions from the cross-app audit: status text tones that pass contrast in light mode, and the categorical palette extended to eight colors and exposed as CSS variables. Both are enforced by tests.",
+    sections: [
+      {
+        label: "Added",
+        items: [
+          "Tokens: status{Success,Warning,Danger,Caution}Text in both themes (--status-*-text). Light text tones clear 4.5:1 on every light surface and on their own 12% tint; the old fills measured as low as 1.9:1 as text",
+          "Tokens: categorical.5–8 and --categorical-1…8 CSS variables; all eight clear 4.5:1 under white text",
+          "Tokens mirrored in typed TS, React Native, Android Compose and the ESLint plugin",
+          "Color page: Status text and Categorical sections; Contrast page: new approved pairings",
+          "Tests that enforce every ratio and keep globals.css in sync with tokens.json",
+          "Homepage hero and Libraries → Figma: download the Figma library (.fig) and Figcraft source (.figcraft)",
+        ],
+      },
+      {
+        label: "Changed",
+        items: [
+          "Status-colored text and icons across the site now use the text tones; fills are unchanged",
+          "Cover Art and Capacity & Runway use the categorical tokens",
+          "Sidebar version badge now reads package.json instead of a hard-coded v1.8",
+        ],
+      },
+    ],
+  },
+  {
+    version: "1.12.0",
+    date: "2026-11-21",
+    tag: "",
     summary: "Completes the cross-app candidate list from the 1.11.0 audit: one new component, five new patterns, and new sections on Compensation and Command Palette. No token changes.",
     sections: [
       {
