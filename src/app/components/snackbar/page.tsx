@@ -138,7 +138,7 @@ export function Snackbar({
               action.onClick();
               onClose();
             }}
-            className="text-[12px] font-medium text-[rgb(var(--accent))] hover:underline whitespace-nowrap ml-2"
+            className="text-[12px] font-medium text-[rgb(var(--accent-text))] hover:underline whitespace-nowrap ml-2"
           >
             {action.label}
           </button>
@@ -543,7 +543,7 @@ export default function SnackbarPage() {
             "Avoid snackbars for critical errors or required confirmations.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}
@@ -575,7 +575,7 @@ function SnackbarDemo() {
             className={cn(
               "px-3 py-1.5 rounded-lg text-[12px] font-medium border transition-colors",
               variant === v
-                ? "bg-[rgb(var(--accent))] text-white border-[rgb(var(--accent))]"
+                ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] border-[rgb(var(--accent))]"
                 : "bg-[rgb(var(--surface))] border-[rgb(var(--border))] text-[rgb(var(--text-secondary))] hover:border-[rgb(var(--accent))]"
             )}
           >
@@ -605,7 +605,7 @@ function SnackbarDemo() {
               <p className="text-[12px] text-[rgb(var(--text-secondary))]">{messages[variant].desc}</p>
             </div>
             {variant === 'success' && (
-              <button className="text-[12px] font-medium text-[rgb(var(--accent))] hover:underline ml-2">
+              <button className="text-[12px] font-medium text-[rgb(var(--accent-text))] hover:underline ml-2">
                 Undo
               </button>
             )}

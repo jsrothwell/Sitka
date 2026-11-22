@@ -715,7 +715,7 @@ export default function DragAndDropPage() {
             "Provide visual focus indicators for keyboard navigation.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

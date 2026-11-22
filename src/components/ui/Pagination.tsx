@@ -111,7 +111,7 @@ function PaginationButton({
         "w-9 h-9 flex items-center justify-center rounded-lg text-[13px] font-medium transition-all duration-150",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-[rgb(var(--background))]",
         isActive
-          ? "bg-[rgb(var(--accent))] text-white shadow-[0_0_0_1px_rgba(0,192,232,0.3)]"
+          ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] shadow-[0_0_0_1px_rgba(0,192,232,0.3)]"
           : "text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface-raised))] hover:text-[rgb(var(--text-primary))]",
         props.disabled && "opacity-40 cursor-not-allowed pointer-events-none",
         className

@@ -209,7 +209,7 @@ export default function SelectPage() {
                 { size: "lg", height: "48px", font: "15px", padding: "12px 16px" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.size}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.size}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.height}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.font}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.padding}</td>
@@ -258,7 +258,7 @@ export default function SelectPage() {
           Props
         </h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-          All native <code className="font-mono text-[12px] text-[rgb(var(--accent))]">{"<select>"}</code> attributes are forwarded. Custom props are listed below.
+          All native <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">{"<select>"}</code> attributes are forwarded. Custom props are listed below.
         </p>
         <PropsTable props={PROPS} />
       </section>
@@ -285,7 +285,7 @@ export default function SelectPage() {
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap">{row.el}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.role}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.role}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.attrs}</td>
                 </tr>
               ))}
@@ -318,7 +318,7 @@ export default function SelectPage() {
                 { key: "Tab", action: "Close and move focus to the next element" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{row.key}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{row.key}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.action}</td>
                 </tr>
               ))}
@@ -341,7 +341,7 @@ export default function SelectPage() {
             "ChevronDown overlay uses pointer-events:none so it does not interfere with the native control.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

@@ -44,7 +44,7 @@ const CODE = {
       <header className="flex justify-between p-4">
         <button onClick={onCancel}>Cancel</button>
         <h2 className="font-semibold">Adjust Cover</h2>
-        <button onClick={confirm} className="font-semibold text-[rgb(var(--accent))]">Use Photo</button>
+        <button onClick={confirm} className="font-semibold text-[rgb(var(--accent-text))]">Use Photo</button>
       </header>
       {/* mask + image … */}
       <p className="text-center text-[12px] text-white/85">Drag to reposition, pinch to zoom</p>
@@ -172,7 +172,7 @@ export default function ImageCropPage() {
           <div className="flex w-full items-center justify-between px-4 py-3 text-[14px]">
             <button>Cancel</button>
             <span className="font-semibold">Adjust Cover</span>
-            <button className="font-semibold text-[rgb(var(--accent))]">Use Photo</button>
+            <button className="font-semibold text-[rgb(var(--accent-text))]">Use Photo</button>
           </div>
           <div
             tabIndex={0}

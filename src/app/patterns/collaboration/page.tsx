@@ -510,7 +510,7 @@ function CollaborationDemo() {
           >
             {copied ? "Copied!" : "Copy link"}
           </button>
-          <button className="px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[rgb(var(--accent))] text-white hover:opacity-90 transition-opacity">
+          <button className="px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] hover:opacity-90 transition-opacity">
             Share
           </button>
         </div>
@@ -667,7 +667,7 @@ export default function CollaborationPatternPage() {
             "Cursor positions should be announced when they move to new regions.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

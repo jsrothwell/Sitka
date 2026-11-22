@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Box, Layers, Sparkles, Zap } from "lucide-react";
+import { FigmaDownloads, FigmaHeroCtas } from "@/site/home/FigmaDownloads";
 
 export const metadata: Metadata = { title: "Introduction" };
 
@@ -31,7 +32,7 @@ const features = [
     icon: Zap,
     title: "Accessibility",
     description:
-      "WCAG 2.1 compliance built-in. Contrast ratios, interaction models, and screen-reader semantics by default.",
+      "WCAG 2.2 compliance built-in. Contrast ratios, interaction models, and screen-reader semantics by default.",
     href: "/foundations/accessibility",
   },
 ];
@@ -59,13 +60,16 @@ export default function HomePage() {
         </div>
 
         <p
-          className="text-[rgb(var(--text-secondary))] max-w-[480px] mb-9"
+          className="text-[rgb(var(--text-secondary))] max-w-[480px] mb-6"
           style={{ fontSize: "clamp(1rem, 2vw, 1.1875rem)", lineHeight: 1.65, fontWeight: 500 }}
         >
           Sitka bridges engineering and design with a single source of truth —
           consistent, accessible, and built to scale across Web, iOS, macOS, Android, and visionOS.
         </p>
 
+        <FigmaHeroCtas />
+
+        <FigmaDownloads />
       </section>
 
       {/* ── Feature grid ──────────────────────────────── */}
@@ -106,7 +110,7 @@ export default function HomePage() {
 
       {/* ── Footer ────────────────────────────────────── */}
       <section className="pt-8 pb-2 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <p className="label-mono">Sitka Standards · v1.12.0</p>
+        <p className="label-mono">Sitka Standards · v{process.env.NEXT_PUBLIC_SITKA_VERSION}</p>
         <div className="flex items-center gap-5">
           {[
             { label: "Changelog", href: "/changelog" },

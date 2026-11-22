@@ -297,7 +297,7 @@ export default function BadgePage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Status dot</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          The <code className="font-mono text-[13px] text-[rgb(var(--accent))]">dot</code> prop prepends a
+          The <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">dot</code> prop prepends a
           filled circle in the variant color. Use it for live system or user status labels.
         </p>
         <ComponentPreview>
@@ -312,8 +312,8 @@ export default function BadgePage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Sizes</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          Three sizes for different information densities. <code className="font-mono text-[13px] text-[rgb(var(--accent))]">sm</code> fits
-          inside table cells; <code className="font-mono text-[13px] text-[rgb(var(--accent))]">lg</code> stands
+          Three sizes for different information densities. <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">sm</code> fits
+          inside table cells; <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">lg</code> stands
           alone as a category tag.
         </p>
         <ComponentPreview>
@@ -407,7 +407,7 @@ export default function BadgePage() {
             "For dynamic status (e.g. live system health), use aria-live on the parent container to announce changes to screen readers.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

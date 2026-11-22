@@ -17,7 +17,7 @@ export default function LibraryVitePage() {
         {/* Step 1 — Scaffold */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">1</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">1</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Create a Vite project</h2>
           </div>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
@@ -33,7 +33,7 @@ cd my-app`}
         {/* Step 2 — Install deps */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">2</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">2</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Install dependencies</h2>
           </div>
           <CodeBlock
@@ -49,11 +49,11 @@ npm install -D tailwindcss @tailwindcss/vite`}
         {/* Step 3 — Vite config */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">3</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">3</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Configure Vite + Tailwind 4</h2>
           </div>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Tailwind 4 ships its own Vite plugin — no <code className="font-mono text-[rgb(var(--accent))] text-[12px]">postcss.config</code> needed:
+            Tailwind 4 ships its own Vite plugin — no <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">postcss.config</code> needed:
           </p>
           <CodeBlock
             language="ts"
@@ -75,11 +75,11 @@ export default defineConfig({
         {/* Step 4 — CSS */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">4</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">4</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Add CSS variables</h2>
           </div>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Replace the contents of <code className="font-mono text-[rgb(var(--accent))] text-[12px]">src/index.css</code> with the Sitka token layer:
+            Replace the contents of <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">src/index.css</code> with the Sitka token layer:
           </p>
           <CodeBlock
             language="css"
@@ -147,7 +147,7 @@ html, body {
         {/* Step 5 — cn helper */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">5</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">5</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Add the <code className="font-mono text-[16px]">cn</code> helper</h2>
           </div>
           <CodeBlock
@@ -165,11 +165,11 @@ export function cn(...inputs: ClassValue[]) {
         {/* Step 6 — Use components */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">6</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">6</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Copy &amp; use components</h2>
           </div>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            Copy any component files from <code className="font-mono text-[rgb(var(--accent))] text-[12px]">src/components/ui/</code> into your project, then import normally:
+            Copy any component files from <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">src/components/ui/</code> into your project, then import normally:
           </p>
           <CodeBlock
             language="tsx"
@@ -199,27 +199,27 @@ export default App;`}
           <h2 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-3">Differences vs. Next.js</h2>
           <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
             <li className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] shrink-0">→</span>
-              All components work as-is — the <code className="font-mono text-[rgb(var(--accent))] text-[12px]">"use client"</code> directive at the top of each file is ignored by Vite and has no effect.
+              <span className="text-[rgb(var(--accent-text))] shrink-0">→</span>
+              All components work as-is — the <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">"use client"</code> directive at the top of each file is ignored by Vite and has no effect.
             </li>
             <li className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] shrink-0">→</span>
-              Replace any <code className="font-mono text-[rgb(var(--accent))] text-[12px]">next/link</code> imports with <code className="font-mono text-[rgb(var(--accent))] text-[12px]">react-router-dom</code> or your SPA router.
+              <span className="text-[rgb(var(--accent-text))] shrink-0">→</span>
+              Replace any <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">next/link</code> imports with <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">react-router-dom</code> or your SPA router.
             </li>
             <li className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] shrink-0">→</span>
-              Replace <code className="font-mono text-[rgb(var(--accent))] text-[12px]">next/image</code> with a plain <code className="font-mono text-[rgb(var(--accent))] text-[12px]">&lt;img&gt;</code> tag.
+              <span className="text-[rgb(var(--accent-text))] shrink-0">→</span>
+              Replace <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">next/image</code> with a plain <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">&lt;img&gt;</code> tag.
             </li>
             <li className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] shrink-0">→</span>
-              The <code className="font-mono text-[rgb(var(--accent))] text-[12px]">next/font</code> Inter loader is replaced by the <code className="font-mono text-[rgb(var(--accent))] text-[12px]">@fontsource/inter</code> CSS import above.
+              <span className="text-[rgb(var(--accent-text))] shrink-0">→</span>
+              The <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">next/font</code> Inter loader is replaced by the <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">@fontsource/inter</code> CSS import above.
             </li>
           </ul>
         </section>
 
         <p className="text-[13px] text-[rgb(var(--text-tertiary))]">
           Back to{" "}
-          <Link href="/libraries" className="text-[rgb(var(--accent))] underline underline-offset-2">
+          <Link href="/libraries" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
             all libraries
           </Link>
           .

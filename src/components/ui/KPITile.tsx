@@ -21,11 +21,11 @@ export interface KPITileProps {
 }
 
 const variantConfig: Record<KPIVariant, { well: string; icon: string }> = {
-  default: { well: "bg-[rgb(var(--accent-subtle))]", icon: "text-[rgb(var(--accent))]" },
-  accent: { well: "bg-[rgb(var(--accent-subtle))]", icon: "text-[rgb(var(--accent))]" },
-  success: { well: "bg-[rgb(var(--status-success)/0.12)]", icon: "text-[rgb(var(--status-success))]" },
-  warning: { well: "bg-[rgb(var(--status-warning)/0.12)]", icon: "text-[rgb(var(--status-warning))]" },
-  danger: { well: "bg-[rgb(var(--status-danger)/0.12)]", icon: "text-[rgb(var(--status-danger))]" },
+  default: { well: "bg-[rgb(var(--accent-subtle))]", icon: "text-[rgb(var(--accent-text))]" },
+  accent: { well: "bg-[rgb(var(--accent-subtle))]", icon: "text-[rgb(var(--accent-text))]" },
+  success: { well: "bg-[rgb(var(--status-success)/0.12)]", icon: "text-[rgb(var(--status-success-text))]" },
+  warning: { well: "bg-[rgb(var(--status-warning)/0.12)]", icon: "text-[rgb(var(--status-warning-text))]" },
+  danger: { well: "bg-[rgb(var(--status-danger)/0.12)]", icon: "text-[rgb(var(--status-danger-text))]" },
 };
 
 const progressColors: Record<KPIVariant, string> = {
@@ -75,9 +75,9 @@ export function KPITile({
             className={cn(
               "flex items-center gap-1 text-[11px] font-medium rounded-full px-2 py-0.5 ml-auto shrink-0",
               trend.direction === "up"
-                ? "bg-[rgb(var(--status-success)/0.12)] text-[rgb(var(--status-success))]"
+                ? "bg-[rgb(var(--status-success)/0.12)] text-[rgb(var(--status-success-text))]"
                 : trend.direction === "down"
-                  ? "bg-[rgb(var(--status-danger)/0.12)] text-[rgb(var(--status-danger))]"
+                  ? "bg-[rgb(var(--status-danger)/0.12)] text-[rgb(var(--status-danger-text))]"
                   : "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-tertiary))]"
             )}
           >

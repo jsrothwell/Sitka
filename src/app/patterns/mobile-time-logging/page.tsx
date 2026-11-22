@@ -1266,7 +1266,7 @@ export default function MobileTimeLoggingPage() {
                 ["Card overlap", "margin-top: −14px on the timer card", "Visually binds the header and first card into one unit"],
               ].map(([layer, value, purpose], i) => (
                 <tr key={layer} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{layer}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{layer}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{value}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{purpose}</td>
                 </tr>
@@ -1282,7 +1282,7 @@ export default function MobileTimeLoggingPage() {
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           Embedded within the header, the week summary card combines three data-density layers: a circular ring
           showing percentage completion, a numeric readout with a pro-rata delta, and a 7-bar mini chart. The ring
-          animates from 0 on first mount using an <code className="font-mono text-[13px] text-[rgb(var(--accent))]">easeOut(0.6s)</code> stroke-dasharray transition.
+          animates from 0 on first mount using an <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">easeOut(0.6s)</code> stroke-dasharray transition.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
           <table className="w-full text-[13px]">
@@ -1302,7 +1302,7 @@ export default function MobileTimeLoggingPage() {
                 ["Eyebrow", "10.5px / 600 / 0.14em tracking, UPPERCASE, 55% white opacity"],
               ].map(([el, spec], i) => (
                 <tr key={el} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{el}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{el}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{spec}</td>
                 </tr>
               ))}
@@ -1335,7 +1335,7 @@ export default function MobileTimeLoggingPage() {
                 ["Timer row", "Pulsing dot + monospaced HH:MM:SS + Pause/Resume button", "Button toggles running state; dot and gradient respond immediately"],
               ].map(([row, contents, interaction], i) => (
                 <tr key={row} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{row}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{row}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{contents}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{interaction}</td>
                 </tr>
@@ -1351,9 +1351,9 @@ export default function MobileTimeLoggingPage() {
           <div className="bg-[rgb(var(--surface))] px-4 py-3 text-[13px] text-[rgb(var(--text-secondary))] space-y-2">
             <p>The 8px dot has two layers: a static filled circle (accent when running, tertiary-text when paused) and an expanding ring that fades to transparent over 1.6s, repeating forever. This is a <strong>keyframe animation</strong>, not a spring — the cadence is slow and calm, not reactive.</p>
             <ul className="space-y-1 pl-4 list-disc">
-              <li>Ring starts at <code className="font-mono text-[rgb(var(--accent))]">scale(1)</code>, <code className="font-mono text-[rgb(var(--accent))]">opacity 0.55</code></li>
-              <li>Ring expands to <code className="font-mono text-[rgb(var(--accent))]">scale(2.4)</code>, <code className="font-mono text-[rgb(var(--accent))]">opacity 0</code> over 1.6s easeOut</li>
-              <li>Only animate when <code className="font-mono text-[rgb(var(--accent))]">running === true</code> — stop immediately on pause</li>
+              <li>Ring starts at <code className="font-mono text-[rgb(var(--accent-text))]">scale(1)</code>, <code className="font-mono text-[rgb(var(--accent-text))]">opacity 0.55</code></li>
+              <li>Ring expands to <code className="font-mono text-[rgb(var(--accent-text))]">scale(2.4)</code>, <code className="font-mono text-[rgb(var(--accent-text))]">opacity 0</code> over 1.6s easeOut</li>
+              <li>Only animate when <code className="font-mono text-[rgb(var(--accent-text))]">running === true</code> — stop immediately on pause</li>
             </ul>
           </div>
         </div>
@@ -1383,7 +1383,7 @@ export default function MobileTimeLoggingPage() {
                 ["Resume…", "1px solid, --border-strong", "Checkmark icon + label, fixed width", "flex: 0 — sized to content"],
               ].map(([btn, border, label, flex], i) => (
                 <tr key={btn} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{btn}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{btn}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{border}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{label}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{flex}</td>
@@ -1423,7 +1423,7 @@ export default function MobileTimeLoggingPage() {
                 ["Sync badge",       "13px icon: checkmark.circle (moss green) · sync arrow (tertiary) · exclamation circle (rose)"],
               ].map(([part, desc], i) => (
                 <tr key={part} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{part}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{part}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{desc}</td>
                 </tr>
               ))}
@@ -1455,7 +1455,7 @@ export default function MobileTimeLoggingPage() {
                 ["failed",  "Circle with exclamation point",    "#C9533F (rose)",  "Sync failed — user action may be required"],
               ].map(([state, icon, color, meaning], i) => (
                 <tr key={state} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{state}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{state}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{icon}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{color}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{meaning}</td>
@@ -1495,12 +1495,12 @@ export default function MobileTimeLoggingPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          All four components — <code className="font-mono text-[13px] text-[rgb(var(--accent))]">ActiveTimerCard</code>,{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">ManualLogStrip</code>,{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">LogSection</code>, and{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">LogRow</code> — are self-contained. They use
+          All four components — <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">ActiveTimerCard</code>,{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">ManualLogStrip</code>,{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">LogSection</code>, and{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">LogRow</code> — are self-contained. They use
           Sitka design tokens for all colors, typography, and radii. The Swift implementations require{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">MobileDesignSystem.swift</code> from the
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">MobileDesignSystem.swift</code> from the
           Warren iOS library.
         </p>
         <PlatformTabs code={CODE} />
@@ -1525,15 +1525,15 @@ export default function MobileTimeLoggingPage() {
             </thead>
             <tbody>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
-                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">PairingView</code></td>
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">PairingView</code></td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Full-screen onboarding view. Centred icon + instructions, primary QR button, divider, monospaced paste-code field, disabled-until-valid Pair button.</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
-                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">QRScannerSheet</code></td>
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">QRScannerSheet</code></td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">VisionKit <code className="font-mono text-[10px]">DataScannerViewController</code> wrapped in SwiftUI. Fires once, stops scanning, dismisses sheet, and passes the token back to <code className="font-mono text-[10px]">PairingView</code>.</td>
               </tr>
               <tr className="bg-[rgb(var(--surface))]">
-                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">MobilePairingStore</code></td>
+                <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">MobilePairingStore</code></td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[10px]">ObservableObject</code> that validates the token and initiates Bonjour handshake. Publishes <code className="font-mono text-[10px]">pairingError: String?</code> for inline error feedback.</td>
               </tr>
             </tbody>
@@ -1550,7 +1550,7 @@ export default function MobileTimeLoggingPage() {
             "Camera unavailability (simulator, restricted permission) shows ContentUnavailableView — no crash or empty screen.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}
@@ -1634,7 +1634,7 @@ struct QRScannerSheet: View {
             "Minimum tap target for all row items: 44×44pt. The full log row should be tappable with a 44pt minimum height.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

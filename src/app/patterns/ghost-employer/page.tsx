@@ -663,7 +663,7 @@ export default function GhostEmployerPage() {
                 { comp: ".skaroGhostWarning(domain:)", where: "ViewModifier — attach to any job card", size: "No visual footprint when domain is clean" },
               ].map(row => (
                 <tr key={row.comp} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.comp}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.comp}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.where}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.size}</td>
                 </tr>
@@ -677,7 +677,7 @@ export default function GhostEmployerPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Classification system</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-          The local <code className="font-mono text-[12px] text-[rgb(var(--accent))]">SkaroStore</code> holds a keyed dictionary of domain → classification. The registry is populated by periodic background fetches from the Skaro API and stored in a SwiftData entity. No personal data is ever part of the domain record.
+          The local <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">SkaroStore</code> holds a keyed dictionary of domain → classification. The registry is populated by periodic background fetches from the Skaro API and stored in a SwiftData entity. No personal data is ever part of the domain record.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
           <table className="w-full text-[13px]">
@@ -717,7 +717,7 @@ export default function GhostEmployerPage() {
             { h: "Animate the badge in, not out", b: "Use .transition(.opacity.combined(with: .scale)) when a classification is first applied to draw attention. Do not animate the removal — a badge disappearing silently is confusing." },
           ].map(({ h, b }) => (
             <div key={h} className="flex gap-3 text-[14px]">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               <div>
                 <span className="font-medium text-[rgb(var(--text-primary))]">{h} — </span>
                 <span className="text-[rgb(var(--text-secondary))]">{b}</span>
@@ -777,7 +777,7 @@ export default function GhostEmployerPage() {
             "Do not remove the badge on scroll — it must remain visible whenever the job card is on screen so users who navigate by VoiceOver swipe can encounter it in document order.",
           ].map(item => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}

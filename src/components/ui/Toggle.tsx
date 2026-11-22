@@ -25,9 +25,9 @@ const sizeClasses: Record<ToggleSize, string> = {
 
 const variantClasses: Record<ToggleVariant, string> = {
   default:
-    "bg-transparent text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface-raised))] hover:text-[rgb(var(--text-primary))] data-[pressed=true]:bg-[rgb(var(--accent-subtle))] data-[pressed=true]:text-[rgb(var(--accent))]",
+    "bg-transparent text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface-raised))] hover:text-[rgb(var(--text-primary))] data-[pressed=true]:bg-[rgb(var(--accent-subtle))] data-[pressed=true]:text-[rgb(var(--accent-text))]",
   outline:
-    "border border-[rgb(var(--border))] text-[rgb(var(--text-secondary))] hover:border-[rgb(var(--accent-muted))] hover:text-[rgb(var(--text-primary))] data-[pressed=true]:border-[rgb(var(--accent))] data-[pressed=true]:bg-[rgb(var(--accent-subtle))] data-[pressed=true]:text-[rgb(var(--accent))]",
+    "border border-[rgb(var(--border))] text-[rgb(var(--text-secondary))] hover:border-[rgb(var(--accent-muted))] hover:text-[rgb(var(--text-primary))] data-[pressed=true]:border-[rgb(var(--accent))] data-[pressed=true]:bg-[rgb(var(--accent-subtle))] data-[pressed=true]:text-[rgb(var(--accent-text))]",
 };
 
 export const Toggle = forwardRef<HTMLButtonElement, ToggleProps>(

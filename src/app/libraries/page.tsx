@@ -66,9 +66,9 @@ const libraries = [
     href: "/libraries/figma",
     name: "Figma",
     description:
-      "Sitka's Figma library is coming soon — components, variables, and Code Connect mappings that link your design directly to this codebase.",
-    badge: "Coming Soon",
-    badgeColor: "neutral" as const,
+      "Download the Figma library: components, styles, and Light/Dark colour variables named after the tokens in this codebase.",
+    badge: "Official",
+    badgeColor: "accent" as const,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
         <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.354-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.587v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.587v8.98zM8.148 10.52c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019h3.117v-6.038H8.148zm4.587 0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49-4.49-2.014-4.49-4.49V10.52zm4.588 7.509c1.665 0 3.019-1.355 3.019-3.019s-1.354-3.019-3.019-3.019h-3.117v3.019c0 1.665 1.354 3.019 3.117 3.019z" />
@@ -79,7 +79,7 @@ const libraries = [
 ];
 
 const badgeStyles = {
-  accent: "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] border-[rgb(var(--accent-muted))]",
+  accent: "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] border-[rgb(var(--accent-muted))]",
   neutral: "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-secondary))] border-[rgb(var(--border))]",
 };
 
@@ -101,7 +101,7 @@ export default function LibrariesPage() {
             {/* Header */}
             <div className="flex items-start justify-between gap-3">
               <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-secondary))] border border-[rgb(var(--border))] group-hover:text-[rgb(var(--accent))] transition-colors">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-secondary))] border border-[rgb(var(--border))] group-hover:text-[rgb(var(--accent-text))] transition-colors">
                   {lib.icon}
                 </div>
                 <h2 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] leading-tight">
@@ -145,7 +145,7 @@ export default function LibrariesPage() {
       {/* Footer note */}
       <p className="mt-10 text-[13px] text-[rgb(var(--text-tertiary))]">
         All libraries share the same{" "}
-        <Link href="/tokens" className="text-[rgb(var(--accent))] underline underline-offset-2 hover:opacity-80">
+        <Link href="/tokens" className="text-[rgb(var(--accent-text))] underline underline-offset-2 hover:opacity-80">
           design tokens
         </Link>{" "}
         — colour, spacing, motion, and typography stay consistent across every platform.

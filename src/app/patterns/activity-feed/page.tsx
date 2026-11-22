@@ -221,7 +221,7 @@ function Demo() {
             onClick={() => setFilter(f)}
             className={`px-3 py-1 rounded-full text-[12px] font-medium transition-colors ${
               filter === f
-                ? "bg-[rgb(var(--accent))] text-white"
+                ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
                 : "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))]"
             }`}
           >
@@ -295,7 +295,7 @@ export default function ActivityFeedPage() {
               ].map((row) => (
                 <tr key={row.part} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{row.part}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.el}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.el}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.desc}</td>
                 </tr>
               ))}
@@ -328,7 +328,7 @@ export default function ActivityFeedPage() {
             "Mark events as read on visibility (Intersection Observer) or on explicit 'Mark all read' action — not on hover.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

@@ -88,7 +88,7 @@ export function IntegrationCard({ integration }: { integration: Integration }) {
             {integration.syncError ? (
               <>
                 <AlertCircle size={12} color="rgb(var(--status-danger))" />
-                <span style={{ color: "rgb(var(--status-danger))" }}>{integration.syncError}</span>
+                <span style={{ color: "rgb(var(--status-danger-text))" }}>{integration.syncError}</span>
               </>
             ) : (
               <>
@@ -124,7 +124,7 @@ export function IntegrationCard({ integration }: { integration: Integration }) {
               }}
             />
             <div style={{ display: "flex", gap: 8, marginTop: 10 }}>
-              <button style={{ padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "#fff", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}>
+              <button style={{ padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "rgb(var(--on-accent))", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}>
                 Test & Connect
               </button>
               <button onClick={() => setShowAuth(false)} style={{ padding: "7px 14px", borderRadius: 7, background: "transparent", border: "1px solid rgb(var(--border))", cursor: "pointer", fontSize: 13 }}>
@@ -152,7 +152,7 @@ export function IntegrationCard({ integration }: { integration: Integration }) {
         ) : (
           <button
             onClick={() => setShowAuth(true)}
-            style={{ display: "flex", alignItems: "center", gap: 6, padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "#fff", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}
+            style={{ display: "flex", alignItems: "center", gap: 6, padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "rgb(var(--on-accent))", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}
           >
             <Plug size={13} />
             Connect
@@ -455,7 +455,7 @@ export default function IntegrationSettingsPage() {
                         {integration.syncError ? (
                           <>
                             <AlertCircle size={12} color="rgb(var(--status-danger))" />
-                            <span style={{ color: "rgb(var(--status-danger))" }}>{integration.syncError}</span>
+                            <span style={{ color: "rgb(var(--status-danger-text))" }}>{integration.syncError}</span>
                           </>
                         ) : (
                           <>
@@ -482,7 +482,7 @@ export default function IntegrationSettingsPage() {
                         </button>
                       </>
                     ) : (
-                      <button style={{ display: "flex", alignItems: "center", gap: 6, padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "#fff", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}>
+                      <button style={{ display: "flex", alignItems: "center", gap: 6, padding: "7px 14px", borderRadius: 7, background: "rgb(var(--accent))", color: "rgb(var(--on-accent))", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 600 }}>
                         <Plug size={13} />
                         Connect
                       </button>
@@ -510,7 +510,7 @@ export default function IntegrationSettingsPage() {
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Service logo</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">40×40 rounded rect, brand logo image or initial fallback</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface-raised</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--surface-raised</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Name</td>
@@ -520,22 +520,22 @@ export default function IntegrationSettingsPage() {
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Status badge</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Connected = success green; Disconnected = neutral gray</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success</code>, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--border</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-success</code>, <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--border</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Description</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">12 px, secondary colour</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-secondary</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--text-secondary</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Sync row</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Timestamp or error message with icon, 11 px</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-tertiary</code> / <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-danger</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--text-tertiary</code> / <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-danger</code></td>
               </tr>
               <tr className="bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Connected tint</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Card background gets <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success / 0.04</code> fill</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Card background gets <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-success / 0.04</code> fill</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-success</code></td>
               </tr>
             </tbody>
           </table>
@@ -573,17 +573,17 @@ export default function IntegrationSettingsPage() {
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Sync OK</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">checkmark.circle.fill</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-success</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Sync error</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">exclamationmark.triangle.fill</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-danger</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-danger</code></td>
               </tr>
               <tr className="bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Syncing now</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Spinner</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-tertiary</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--text-tertiary</code></td>
               </tr>
             </tbody>
           </table>
@@ -594,8 +594,8 @@ export default function IntegrationSettingsPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">Multi-provider timesheet sync</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
           Warren extends the basic integration-card pattern with a multi-provider timesheet sync engine. Each provider—
-          Clockify, Toggl Track, and Timely—conforms to the same <code className="font-mono text-[11px] text-[rgb(var(--accent))]">TimesheetProvider</code> protocol
-          and is orchestrated by a shared <code className="font-mono text-[11px] text-[rgb(var(--accent))]">TimesheetSyncEngine</code> singleton.
+          Clockify, Toggl Track, and Timely—conforms to the same <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">TimesheetProvider</code> protocol
+          and is orchestrated by a shared <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">TimesheetSyncEngine</code> singleton.
         </p>
 
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-5">
@@ -611,17 +611,17 @@ export default function IntegrationSettingsPage() {
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Clockify</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">API key (Header <code className="font-mono text-[10px]">X-Api-Key</code>)</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">api.clockify.me/v1</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">api.clockify.me/v1</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Toggl Track</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">API token (HTTP Basic)</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">api.track.toggl.com/api/v9</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">api.track.toggl.com/api/v9</code></td>
               </tr>
               <tr className="bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Timely</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">OAuth 2.0 Bearer token + Account ID</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">api.timelyapp.com/1.1</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">api.timelyapp.com/1.1</code></td>
               </tr>
             </tbody>
           </table>
@@ -639,16 +639,16 @@ export default function IntegrationSettingsPage() {
         <h3 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2">Sync flow</h3>
         <ol className="list-decimal list-inside space-y-2 text-[14px] text-[rgb(var(--text-secondary))] mb-4">
           <li><strong className="text-[rgb(var(--text-primary))]">Delete window</strong> — existing provider-prefixed logs inside the lookback window are removed, clearing stale data before reinsertion.</li>
-          <li><strong className="text-[rgb(var(--text-primary))]">Fetch</strong> — <code className="font-mono text-[11px] text-[rgb(var(--accent))]">fetchTimeEntries(since:)</code> returns entries modified in the last 30 days.</li>
-          <li><strong className="text-[rgb(var(--text-primary))]">Map</strong> — <code className="font-mono text-[11px] text-[rgb(var(--accent))]">TimesheetMappingStore</code> translates external project/user IDs to Warren IDs. Unmapped entries are skipped and surfaced to the user.</li>
-          <li><strong className="text-[rgb(var(--text-primary))]">Insert</strong> — matched entries are written as <code className="font-mono text-[11px] text-[rgb(var(--accent))]">TimeLog</code> objects with a provider prefix in the description (e.g. <code className="font-mono text-[11px]">[clockify] </code>).</li>
+          <li><strong className="text-[rgb(var(--text-primary))]">Fetch</strong> — <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">fetchTimeEntries(since:)</code> returns entries modified in the last 30 days.</li>
+          <li><strong className="text-[rgb(var(--text-primary))]">Map</strong> — <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">TimesheetMappingStore</code> translates external project/user IDs to Warren IDs. Unmapped entries are skipped and surfaced to the user.</li>
+          <li><strong className="text-[rgb(var(--text-primary))]">Insert</strong> — matched entries are written as <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">TimeLog</code> objects with a provider prefix in the description (e.g. <code className="font-mono text-[11px]">[clockify] </code>).</li>
         </ol>
 
         <h3 className="text-[15px] font-semibold text-[rgb(var(--text-primary))] mb-2">Settings UI</h3>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-          <code className="font-mono text-[11px] text-[rgb(var(--accent))]">TimesheetSettingsView</code> wraps all four providers (Harvest + the three new ones) under
+          <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">TimesheetSettingsView</code> wraps all four providers (Harvest + the three new ones) under
           a segmented picker. Each pane shares the same three-section layout: Credentials → Member Mapping → Project Mapping → Sync.
-          Credentials are stored in Keychain; project and member mappings are persisted in <code className="font-mono text-[11px] text-[rgb(var(--accent))]">TimesheetMappingStore</code>.
+          Credentials are stored in Keychain; project and member mappings are persisted in <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">TimesheetMappingStore</code>.
         </p>
         <pre className="rounded-lg bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] p-4 text-[12px] font-mono text-[rgb(var(--text-secondary))] overflow-x-auto mb-1 whitespace-pre">{`// Call from the background to sync all configured providers
 await TimesheetSyncEngine.shared.syncAll(dataStore: dataStore, lookbackDays: 30)`}</pre>

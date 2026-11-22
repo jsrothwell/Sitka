@@ -215,7 +215,7 @@ export default function DesktopNotificationsPage() {
                 { variant: "error",   color: "Red",   use: "Failed operations. Set duration=0 so it persists until the user dismisses." },
               ].map((row, i) => (
                 <tr key={row.variant} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.variant}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.variant}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.color}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.use}</td>
                 </tr>
@@ -245,7 +245,7 @@ export default function DesktopNotificationsPage() {
                 { value: "top-center",    use: "Critical alerts that need to be seen immediately." },
               ].map((row, i) => (
                 <tr key={row.value} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.value}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.value}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.use}</td>
                 </tr>
               ))}
@@ -259,11 +259,11 @@ export default function DesktopNotificationsPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           The Toast renders via{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">createPortal</code> to{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">document.body</code> — it is never
-          clipped by <code className="font-mono text-[13px] text-[rgb(var(--accent))]">overflow: hidden</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">createPortal</code> to{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">document.body</code> — it is never
+          clipped by <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">overflow: hidden</code>{" "}
           ancestors. Auto-dismiss runs a{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">setTimeout</code> that is cleared if the user dismisses early or the component unmounts.
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">setTimeout</code> that is cleared if the user dismisses early or the component unmounts.
         </p>
         <PlatformTabs code={CODE} />
       </section>
@@ -287,7 +287,7 @@ export default function DesktopNotificationsPage() {
             "Respect prefers-reduced-motion: remove slide-in animation while keeping the visual appearance. The toast should still appear; just without motion.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               {item}
             </li>
           ))}

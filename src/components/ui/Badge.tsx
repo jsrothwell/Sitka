@@ -22,13 +22,13 @@ const variantStyles: Record<BadgeVariant, string> = {
   default:
     "bg-[rgb(var(--surface-raised))] border-[rgb(var(--border))] text-[rgb(var(--text-secondary))]",
   primary:
-    "bg-[rgb(var(--accent-subtle))] border-[rgb(var(--accent)/0.3)] text-[rgb(var(--accent))]",
+    "bg-[rgb(var(--accent-subtle))] border-[rgb(var(--accent)/0.3)] text-[rgb(var(--accent-text))]",
   success:
-    "bg-emerald-500/10 border-emerald-500/30 text-emerald-500",
+    "bg-[var(--status-success-tint)] border-[var(--status-success-edge)] text-[rgb(var(--status-success-text))]",
   warning:
-    "bg-amber-400/10 border-amber-400/30 text-amber-500",
+    "bg-[var(--status-warning-tint)] border-[var(--status-warning-edge)] text-[rgb(var(--status-warning-text))]",
   danger:
-    "bg-red-400/10 border-red-400/30 text-red-400",
+    "bg-[var(--status-danger-tint)] border-[var(--status-danger-edge)] text-[rgb(var(--status-danger-text))]",
   ghost:
     "bg-transparent border-[rgb(var(--border))] text-[rgb(var(--text-tertiary))]",
 };
@@ -36,9 +36,9 @@ const variantStyles: Record<BadgeVariant, string> = {
 const dotColors: Record<BadgeVariant, string> = {
   default: "bg-[rgb(var(--text-tertiary))]",
   primary: "bg-[rgb(var(--accent))]",
-  success: "bg-emerald-500",
-  warning: "bg-amber-400",
-  danger:  "bg-red-400",
+  success: "bg-[rgb(var(--status-success))]",
+  warning: "bg-[rgb(var(--status-warning))]",
+  danger:  "bg-[rgb(var(--status-danger))]",
   ghost:   "bg-[rgb(var(--text-tertiary))]",
 };
 

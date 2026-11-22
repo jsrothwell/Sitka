@@ -229,7 +229,7 @@ export default function TextareaPage() {
                 { size: "lg", font: "15px", padding: "10px 16px" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.size}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.size}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.font}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.padding}</td>
                 </tr>
@@ -254,7 +254,7 @@ export default function TextareaPage() {
         </h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
           All native{" "}
-          <code className="font-mono text-[12px] text-[rgb(var(--accent))]">{"<textarea>"}</code>{" "}
+          <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">{"<textarea>"}</code>{" "}
           attributes are forwarded. Custom props are listed below.
         </p>
         <PropsTable props={PROPS} />
@@ -280,7 +280,7 @@ export default function TextareaPage() {
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap">{row.el}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.role}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.role}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.attrs}</td>
                 </tr>
               ))}
@@ -310,7 +310,7 @@ export default function TextareaPage() {
                 { key: "Shift+Tab", action: "Move focus to the previous focusable element" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{row.key}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{row.key}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.action}</td>
                 </tr>
               ))}
@@ -333,7 +333,7 @@ export default function TextareaPage() {
             "Character count limits should be communicated with a visible counter and aria-live for screen reader updates.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

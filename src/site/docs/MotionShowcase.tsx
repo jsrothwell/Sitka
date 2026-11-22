@@ -95,11 +95,11 @@ function CurveDemo({ curve }: { curve: (typeof CURVES)[number] }) {
       <div className="flex items-start justify-between mb-3">
         <div>
           <h3 className="text-[14px] font-semibold text-[rgb(var(--text-primary))]">{curve.name}</h3>
-          <code className="text-[11px] font-mono text-[rgb(var(--accent))]">{curve.token}</code>
+          <code className="text-[11px] font-mono text-[rgb(var(--accent-text))]">{curve.token}</code>
         </div>
         <button
           onClick={() => setKey((k) => k + 1)}
-          className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-medium bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] text-[rgb(var(--text-secondary))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent))] transition-colors"
+          className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-medium bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] text-[rgb(var(--text-secondary))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent-text))] transition-colors"
         >
           <Play className="w-3 h-3" />
           Replay
@@ -173,7 +173,7 @@ export function MotionShowcase() {
                 <tr key={d.name} className={cn("border-b border-[rgb(var(--border-subtle))] last:border-0", i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]")}>
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{d.name}</td>
                   <td className="px-4 py-3">
-                    <code className="font-mono text-[11px] text-[rgb(var(--accent))] bg-[rgb(var(--accent-subtle))] px-1.5 py-0.5 rounded">
+                    <code className="font-mono text-[11px] text-[rgb(var(--accent-text))] bg-[rgb(var(--accent-subtle))] px-1.5 py-0.5 rounded">
                       {d.value}
                     </code>
                   </td>

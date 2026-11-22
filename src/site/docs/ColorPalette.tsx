@@ -3,6 +3,15 @@
 import { useState } from "react";
 import { Check, Copy } from "lucide-react";
 import tokens from "@/tokens/tokens.json";
+import { contrastRatio } from "@/lib";
+import { toHex6 } from "@/tokens/oklch.mjs";
+
+/** Any tokens.json colour (OKLCH object, hex or rgb()) → "#rrggbb" for swatches and the contrast helpers. */
+const toHex = (value: unknown): string => toHex6(value);
+
+const STATUS = ["Success", "Warning", "Danger", "Caution"] as const;
+type ThemeTokens = Record<string, { $value: unknown }>;
+const THEMES = tokens.color.themes as unknown as Record<"light" | "dark", ThemeTokens>;
 
 function Swatch({ step, hex }: { step: string; hex: string }) {
   const [copied, setCopied] = useState(false);
@@ -51,11 +60,11 @@ export function ColorPalette() {
       <section>
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Brand</h2>
         <p className="text-[13px] text-[rgb(var(--text-secondary))] mb-4">
-          The core palette. <code className="font-mono text-[rgb(var(--accent))]">brand.cyan</code> is the primary alert and reminder color.
+          The core palette. <code className="font-mono text-[rgb(var(--accent-text))]">brand.cyan</code> is the primary alert and reminder color.
         </p>
         <div className="grid grid-cols-5 md:grid-cols-11 gap-2">
           {Object.entries(tokens.color.brand).map(([k, v]) => (
-            <Swatch key={k} step={k} hex={(v as { $value: string }).$value} />
+            <Swatch key={k} step={k} hex={toHex((v as { $value: unknown }).$value)} />
           ))}
         </div>
       </section>
@@ -67,7 +76,7 @@ export function ColorPalette() {
         </p>
         <div className="grid grid-cols-5 md:grid-cols-13 gap-2">
           {Object.entries(tokens.color.neutral).map(([k, v]) => (
-            <Swatch key={k} step={k} hex={(v as { $value: string }).$value} />
+            <Swatch key={k} step={k} hex={toHex((v as { $value: unknown }).$value)} />
           ))}
         </div>
       </section>
@@ -79,7 +88,7 @@ export function ColorPalette() {
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {Object.entries(tokens.color.semantic).map(([k, v]) => {
-            const hex = (v as { $value: string }).$value;
+            const hex = toHex((v as { $value: unknown }).$value);
             return (
               <div key={k} className="flex items-center gap-3 p-3 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))]">
                 <div className="w-10 h-10 rounded-lg flex-shrink-0 border border-black/10 dark:border-white/10" style={{ backgroundColor: hex }} />
@@ -90,6 +99,88 @@ export function ColorPalette() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Status text</h2>
+        <p className="text-[13px] text-[rgb(var(--text-secondary))] mb-4 max-w-2xl">
+          Status colors come in two roles. Use <code>--status-*</code> for fills (dots, bars, pill backgrounds, gauges) and{" "}
+          <code>--status-*-text</code> for text and icons. In light mode the fills fail as text — as low as 1.9:1 on white — so the text
+          tones are deeper. In dark mode the fills already pass, so the two are identical. Ratios below are against{" "}
+          <code>--surface</code>, computed from <code>tokens.json</code>.
+        </p>
+        <div className="overflow-x-auto rounded-xl border border-[rgb(var(--border))]" tabIndex={0} role="region" aria-label="Status text contrast table">
+          <table className="w-full text-[13px]">
+            <thead>
+              <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
+                {["Status", "Light fill as text", "Light text tone", "Dark text tone"].map((h) => (
+                  <th key={h} className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {STATUS.map((s) => {
+                const lightBg = toHex(THEMES.light.surface.$value);
+                const darkBg = toHex(THEMES.dark.surface.$value);
+                const cells = [
+                  { fg: toHex(THEMES.light[`status${s}`].$value), bg: lightBg },
+                  { fg: toHex(THEMES.light[`status${s}Text`].$value), bg: lightBg },
+                  { fg: toHex(THEMES.dark[`status${s}Text`].$value), bg: darkBg },
+                ];
+                return (
+                  <tr key={s} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
+                    <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">
+                      <code className="text-[11px]">--status-{s.toLowerCase()}</code>
+                    </td>
+                    {cells.map(({ fg, bg }, i) => {
+                      const ratio = contrastRatio(fg, bg);
+                      return (
+                        <td key={i} className="px-4 py-3">
+                          <span className="inline-flex items-center gap-2 rounded-md px-2 py-1" style={{ background: bg }}>
+                            <span className="text-[13px] font-semibold" style={{ color: fg }}>{s}</span>
+                          </span>
+                          <span className={`ml-2 text-[11px] tabular-nums ${ratio >= 4.5 ? "text-[rgb(var(--text-secondary))]" : "text-[rgb(var(--status-danger-text))]"}`}>
+                            {ratio.toFixed(1)}:1{ratio < 4.5 ? " ✗" : ""}
+                          </span>
+                        </td>
+                      );
+                    })}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Categorical</h2>
+        <p className="text-[13px] text-[rgb(var(--text-secondary))] mb-4 max-w-2xl">
+          Eight muted colors for telling things apart — tags, chips, chart segments, media-type tints — with no status meaning.
+          Hues stay clear of the status colors so a category never reads as a warning. Fixed across themes; each clears 4.5:1
+          under white text. Available as <code>--categorical-1</code> … <code>--categorical-8</code>. On dark surfaces, separate
+          adjacent fills with a gap or a 1px border.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {Object.entries(tokens.color.categorical)
+            .filter(([k]) => k !== "comment")
+            .map(([k, v]) => {
+              const hex = toHex((v as { $value: unknown }).$value);
+              return (
+                <div key={k} className="overflow-hidden rounded-xl border border-[rgb(var(--border))]">
+                  <div className="flex h-14 items-end p-2.5 text-[13px] font-semibold text-white" style={{ background: hex }}>
+                    Aa
+                  </div>
+                  <div className="bg-[rgb(var(--surface))] px-2.5 py-2">
+                    <div className="text-[12px] font-medium text-[rgb(var(--text-primary))]">categorical.{k}</div>
+                    <code className="text-[11px] text-[rgb(var(--text-tertiary))]">
+                      {hex} · {contrastRatio(hex.toLowerCase(), "#ffffff").toFixed(1)}:1
+                    </code>
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </section>
 
@@ -121,7 +212,7 @@ export function ColorPalette() {
                 { token: "--accent", light: "brand.cyan (#00C0E8)", dark: "brand.cyan (#00C0E8)" },
               ].map((row, i) => (
                 <tr key={row.token} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{row.token}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.token}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))] text-[12px]">{row.light}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))] text-[12px]">{row.dark}</td>
                 </tr>

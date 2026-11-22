@@ -63,7 +63,7 @@ function MultiSelectTable({ rows }: { rows: Row[] }) {
           className="flex items-center gap-3 p-3 mb-3 rounded-xl
             bg-[rgb(var(--accent-subtle))] border border-[rgb(var(--accent-muted))]"
         >
-          <span className="text-[13px] font-medium text-[rgb(var(--accent))]">
+          <span className="text-[13px] font-medium text-[rgb(var(--accent-text))]">
             {selected.size} selected
           </span>
           <Button size="sm" variant="ghost" onClick={handleDelete}>
@@ -245,7 +245,7 @@ function Demo() {
           aria-label="Bulk actions"
           className="flex items-center gap-3 px-4 py-2.5 mb-3 rounded-xl bg-[rgb(var(--accent-subtle))] border border-[rgb(var(--accent-muted))]"
         >
-          <span className="text-[13px] font-medium text-[rgb(var(--accent))] flex-1">
+          <span className="text-[13px] font-medium text-[rgb(var(--accent-text))] flex-1">
             {selected.size} selected
           </span>
           <button className="flex items-center gap-1.5 text-[12px] text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] px-3 py-1.5 rounded-lg hover:bg-[rgb(var(--surface-raised))] transition-colors">
@@ -257,7 +257,7 @@ function Demo() {
           <button className="flex items-center gap-1.5 text-[12px] text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] px-3 py-1.5 rounded-lg hover:bg-[rgb(var(--surface-raised))] transition-colors">
             <Download size={13} /> Export
           </button>
-          <button className="flex items-center gap-1.5 text-[12px] text-[rgb(var(--status-danger))] hover:bg-[rgb(var(--status-danger)/0.1)] px-3 py-1.5 rounded-lg transition-colors">
+          <button className="flex items-center gap-1.5 text-[12px] text-[rgb(var(--status-danger-text))] hover:bg-[rgb(var(--status-danger)/0.1)] px-3 py-1.5 rounded-lg transition-colors">
             <Trash2 size={13} /> Delete
           </button>
         </div>
@@ -384,7 +384,7 @@ export default function MultiSelectPage() {
                 { input: "Delete / Backspace",     action: "Delete selected (when bulk bar is focused)" },
               ].map((row) => (
                 <tr key={row.input} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.input}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.input}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.action}</td>
                 </tr>
               ))}
@@ -410,7 +410,7 @@ export default function MultiSelectPage() {
             "For destructive actions (Delete), show a confirmation dialog when more than 5 items are selected.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

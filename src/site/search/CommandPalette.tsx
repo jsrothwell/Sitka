@@ -118,7 +118,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
                           className={cn(
                             "w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors",
                             i === selected
-                              ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]"
+                              ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]"
                               : "text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface))]"
                           )}
                         >

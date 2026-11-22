@@ -91,7 +91,7 @@ export default function HapticsPage() {
                     key={token.id}
                     className="p-4 rounded-xl bg-[rgb(var(--surface))] border border-[rgb(var(--border))] hover:border-[rgb(var(--accent-muted))] transition-colors"
                   >
-                    <code className="text-sm font-mono text-[rgb(var(--accent))] bg-[rgb(var(--accent-subtle))] px-1.5 py-0.5 rounded">
+                    <code className="text-sm font-mono text-[rgb(var(--accent-text))] bg-[rgb(var(--accent-subtle))] px-1.5 py-0.5 rounded">
                       haptic.{category.name.toLowerCase()}.{token.id}
                     </code>
                     <p className="mt-2 text-sm text-[rgb(var(--text-primary))]">{token.description}</p>

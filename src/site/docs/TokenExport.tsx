@@ -1,156 +1,89 @@
 "use client";
 
 import { useState } from "react";
-import { Download, Check, FileJson, FileCode } from "lucide-react";
-import tokens from "@/tokens/tokens.json";
+import { Download, FileJson, FileCode } from "lucide-react";
 import { CodeBlock } from "@/components/ui/CodeBlock";
 import { cn } from "@/lib";
 
-const jsonPreview = JSON.stringify(tokens, null, 2).slice(0, 800) + "\n  // ...";
-
-const swiftPreview = `// Sitka Design Tokens — Auto-generated v${tokens.meta.version}
-// Do not edit manually. Re-generate with: sitka export --swift
-
-import SwiftUI
-
-extension Color {
-    struct Sitka {
-        // Brand palette
-        static let brand50  = Color(hex: "#f8f7ff")
-        static let brand100 = Color(hex: "#f0eeff")
-        static let brand500 = Color(hex: "#8b6dff") // Primary accent
-        static let brand900 = Color(hex: "#4223a3")
-
-        // Semantic
-        static let success = Color(hex: "#22c55e")
-        static let warning = Color(hex: "#f59e0b")
-        static let error   = Color(hex: "#ef4444")
-        static let info    = Color(hex: "#3b82f6")
-    }
-}
-
-extension CGFloat {
-    struct SitkaSpacing {
-        static let s1: CGFloat  = 4
-        static let s2: CGFloat  = 8
-        static let s3: CGFloat  = 12
-        static let s4: CGFloat  = 16
-        static let s6: CGFloat  = 24
-        static let s8: CGFloat  = 32
-        static let s12: CGFloat = 48
-    }
-}`;
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 type Format = "json" | "swift";
 
-export function TokenExport() {
-  const [activePreview, setActivePreview] = useState<Format>("json");
-  const [downloaded, setDownloaded] = useState<Format | null>(null);
+export interface TokenExportProps {
+  /** First lines of each generated file, read at build time by the page. */
+  previews: Record<Format, string>;
+  sizes: Record<Format, string>;
+}
 
-  const handleDownload = (format: Format) => {
-    let content = "";
-    let filename = "";
-    let mime = "";
+const FORMATS = [
+  {
+    format: "json" as const,
+    icon: FileJson,
+    title: "JSON (W3C DTCG)",
+    description: "The source of truth. Works with Style Dictionary, Tokens Studio and other DTCG tooling.",
+    filename: "sitka-tokens.json",
+  },
+  {
+    format: "swift" as const,
+    icon: FileCode,
+    title: "Swift",
+    description:
+      "Every colour (both themes), spacing, radius, type and duration token, plus Color.sitka(\\.token) for SwiftUI. Prefer the Swift package so updates arrive through Xcode.",
+    filename: "SitkaTokens.swift",
+  },
+];
 
-    if (format === "json") {
-      content = JSON.stringify(tokens, null, 2);
-      filename = "sitka-tokens.json";
-      mime = "application/json";
-    } else {
-      content = swiftPreview.replace("// ...", "");
-      filename = "SitkaTokens.swift";
-      mime = "text/plain";
-    }
-
-    const blob = new Blob([content], { type: mime });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = filename;
-    a.click();
-    URL.revokeObjectURL(url);
-
-    setDownloaded(format);
-    setTimeout(() => setDownloaded(null), 2000);
-  };
+export function TokenExport({ previews, sizes }: TokenExportProps) {
+  const [active, setActive] = useState<Format>("json");
+  const current = FORMATS.find((f) => f.format === active)!;
 
   return (
     <div>
-      {/* Format cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-        {(
-          [
-            {
-              format: "json" as const,
-              icon: FileJson,
-              title: "JSON (W3C DTCG)",
-              description:
-                "Standard Design Token Community Group format. Compatible with Style Dictionary, Theo, and most token tooling.",
-              filename: "sitka-tokens.json",
-            },
-            {
-              format: "swift" as const,
-              icon: FileCode,
-              title: "Swift Extension",
-              description:
-                "Color and spacing extensions for SwiftUI. Drop into your iOS project and import immediately.",
-              filename: "SitkaTokens.swift",
-            },
-          ] as const
-        ).map(({ format, icon: Icon, title, description, filename }) => (
+        {FORMATS.map(({ format, icon: Icon, title, description, filename }) => (
           <div
             key={format}
             className={cn(
-              "p-5 rounded-xl border transition-all cursor-pointer",
-              activePreview === format
-                ? "border-[rgb(var(--accent))] bg-[rgb(var(--accent-subtle))] shadow-[0_0_0_1px_rgba(139,109,255,0.15)]"
-                : "border-[rgb(var(--border))] bg-[rgb(var(--surface))] hover:border-[rgb(var(--accent))]"
+              "flex flex-col gap-3 p-5 rounded-xl border transition-all",
+              active === format
+                ? "border-[rgb(var(--accent))] bg-[rgb(var(--accent-subtle))]"
+                : "border-[rgb(var(--border))] bg-[rgb(var(--surface))]"
             )}
-            onClick={() => setActivePreview(format)}
           >
-            <div className="flex items-start justify-between mb-3">
-              <Icon className={cn("w-5 h-5", activePreview === format ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-secondary))]")} />
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleDownload(format);
-                }}
-                className={cn(
-                  "flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-medium transition-all",
-                  downloaded === format
-                    ? "bg-green-500/10 text-green-500 border border-green-500/20"
-                    : "bg-[rgb(var(--accent))] text-white hover:opacity-90"
-                )}
+            <div className="flex items-start gap-3">
+              <Icon className="mt-0.5 w-5 h-5 shrink-0 text-[rgb(var(--text-secondary))]" aria-hidden />
+              <div className="min-w-0">
+                <h3 className="text-[14px] font-semibold text-[rgb(var(--text-primary))]">{title}</h3>
+                <p id={`export-${format}-meta`} className="text-[12px] text-[rgb(var(--text-secondary))] leading-relaxed">
+                  <span className="font-mono">{filename}</span> · {sizes[format]} · {description}
+                </p>
+              </div>
+            </div>
+            <div className="mt-auto flex flex-wrap gap-2">
+              <a
+                href={`${BASE}/downloads/${filename}`}
+                download={filename}
+                aria-describedby={`export-${format}-meta`}
+                className="inline-flex items-center gap-1.5 rounded-lg bg-[rgb(var(--accent))] px-3 py-1.5 text-[12px] font-semibold text-[rgb(var(--on-accent))] hover:opacity-90"
               >
-                {downloaded === format ? (
-                  <>
-                    <Check className="w-3 h-3" />
-                    Saved
-                  </>
-                ) : (
-                  <>
-                    <Download className="w-3 h-3" />
-                    Download
-                  </>
-                )}
+                <Download className="w-3.5 h-3.5" aria-hidden />
+                Download {filename}
+              </a>
+              <button
+                type="button"
+                onClick={() => setActive(format)}
+                aria-pressed={active === format}
+                className="rounded-lg border border-[rgb(var(--border))] px-3 py-1.5 text-[12px] font-medium text-[rgb(var(--text-primary))] hover:border-[rgb(var(--accent))]"
+              >
+                Preview
               </button>
             </div>
-            <h3 className="text-[14px] font-semibold text-[rgb(var(--text-primary))] mb-1">{title}</h3>
-            <p className="text-[12px] text-[rgb(var(--text-secondary))] leading-relaxed mb-2">{description}</p>
-            <code className="text-[10px] font-mono text-[rgb(var(--text-tertiary))]">{filename}</code>
           </div>
         ))}
       </div>
 
-      {/* Preview */}
-      <h2 className="text-[16px] font-semibold text-[rgb(var(--text-primary))] mb-3">
-        Preview: {activePreview === "json" ? "sitka-tokens.json" : "SitkaTokens.swift"}
-      </h2>
-      <CodeBlock
-        code={activePreview === "json" ? jsonPreview : swiftPreview}
-        language={activePreview === "json" ? "json" : "swift"}
-        filename={activePreview === "json" ? "sitka-tokens.json" : "SitkaTokens.swift"}
-      />
+      <h2 className="text-[16px] font-semibold text-[rgb(var(--text-primary))] mb-3">Preview: {current.filename}</h2>
+      <CodeBlock code={previews[active]} language={active} filename={current.filename} />
     </div>
   );
 }

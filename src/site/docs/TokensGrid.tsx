@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Check, Copy, Download } from "lucide-react";
 import tokens from "@/tokens/tokens.json";
 import { cn } from "@/lib";
+import { toCssOklch, toHex6 } from "@/tokens/oklch.mjs";
 
 function CopyButton({ value }: { value: string }) {
   const [copied, setCopied] = useState(false);
@@ -25,16 +26,19 @@ function CopyButton({ value }: { value: string }) {
   );
 }
 
-function ColorSwatch({ name, value }: { name: string; value: string }) {
+function ColorSwatch({ name, token }: { name: string; token: unknown }) {
+  const hex = toHex6(token);
+  const value = toCssOklch(token);
   return (
     <div className="group flex items-center gap-3 p-2 rounded-lg hover:bg-[rgb(var(--surface))] transition-colors">
       <div
         className="w-8 h-8 rounded-lg flex-shrink-0 border border-black/10 dark:border-white/10"
-        style={{ backgroundColor: value }}
+        style={{ backgroundColor: hex }}
       />
       <div className="flex-1 min-w-0">
         <div className="text-[12px] font-medium text-[rgb(var(--text-primary))]">{name}</div>
         <div className="text-[11px] text-[rgb(var(--text-tertiary))] font-mono">{value}</div>
+        <div className="text-[10px] text-[rgb(var(--text-tertiary))] font-mono">{hex}</div>
       </div>
       <CopyButton value={value} />
     </div>
@@ -76,52 +80,7 @@ function TokenCard({
   );
 }
 
-function handleExport(format: "json" | "swift") {
-  if (format === "json") {
-    const blob = new Blob([JSON.stringify(tokens, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "sitka-tokens.json";
-    a.click();
-    URL.revokeObjectURL(url);
-  } else {
-    const colors = tokens.color;
-    const lines: string[] = [
-      "// Sitka Design Tokens — Auto-generated",
-      "// Do not edit manually.",
-      "",
-      "import SwiftUI",
-      "",
-      "extension Color {",
-      "    struct Sitka {",
-    ];
-
-    Object.entries(colors.brand).forEach(([k, v]) => {
-      lines.push(`        static let brand${k} = Color(hex: "${(v as { $value: string }).$value}")`);
-    });
-
-    lines.push("");
-
-    Object.entries(colors.semantic).forEach(([k, v]) => {
-      const cap = k.charAt(0).toUpperCase() + k.slice(1);
-      lines.push(`        static let ${k} = Color(hex: "${(v as { $value: string }).$value}")`);
-    });
-
-    lines.push("    }");
-    lines.push("}");
-
-    const blob = new Blob([lines.join("\n")], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "SitkaTokens.swift";
-    a.click();
-    URL.revokeObjectURL(url);
-  }
-}
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export function TokensGrid() {
   return (
@@ -131,23 +90,25 @@ export function TokensGrid() {
         <div className="flex-1">
           <p className="text-[13px] font-medium text-[rgb(var(--text-primary))]">Export Tokens</p>
           <p className="text-[12px] text-[rgb(var(--text-secondary))]">
-            Download the full token set as JSON or a Swift extension.
+            Download tokens.json (DTCG) or the generated SitkaTokens.swift.
           </p>
         </div>
-        <button
-          onClick={() => handleExport("json")}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] text-[rgb(var(--text-secondary))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent))] transition-colors"
+        <a
+          href={`${BASE}/downloads/sitka-tokens.json`}
+          download
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] text-[rgb(var(--text-secondary))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent-text))] transition-colors"
         >
           <Download className="w-3.5 h-3.5" />
           JSON
-        </button>
-        <button
-          onClick={() => handleExport("swift")}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[rgb(var(--accent))] text-white hover:opacity-90 transition-opacity"
+        </a>
+        <a
+          href={`${BASE}/downloads/SitkaTokens.swift`}
+          download
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] hover:opacity-90 transition-opacity"
         >
           <Download className="w-3.5 h-3.5" />
           Swift
-        </button>
+        </a>
       </div>
 
       {/* Color tokens */}
@@ -155,17 +116,17 @@ export function TokensGrid() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <TokenCard title="Brand">
             {Object.entries(tokens.color.brand).map(([k, v]) => (
-              <ColorSwatch key={k} name={`brand.${k}`} value={(v as { $value: string }).$value} />
+              <ColorSwatch key={k} name={`brand.${k}`} token={(v as { $value: unknown }).$value} />
             ))}
           </TokenCard>
           <TokenCard title="Neutral">
             {Object.entries(tokens.color.neutral).map(([k, v]) => (
-              <ColorSwatch key={k} name={`neutral.${k}`} value={(v as { $value: string }).$value} />
+              <ColorSwatch key={k} name={`neutral.${k}`} token={(v as { $value: unknown }).$value} />
             ))}
           </TokenCard>
           <TokenCard title="Semantic">
             {Object.entries(tokens.color.semantic).map(([k, v]) => (
-              <ColorSwatch key={k} name={k} value={(v as { $value: string }).$value} />
+              <ColorSwatch key={k} name={k} token={(v as { $value: unknown }).$value} />
             ))}
           </TokenCard>
         </div>
@@ -217,13 +178,13 @@ export function TokensGrid() {
           <TokenCard title="Font Weight">
             {Object.entries(tokens.typography.fontWeight).map(([k, v]) => (
               <div key={k} className="group flex items-center gap-3 p-2 rounded-lg hover:bg-[rgb(var(--background))]">
-                <div className="flex-1 text-[15px] text-[rgb(var(--text-primary))]" style={{ fontWeight: (v as { $value: string }).$value }}>
+                <div className="flex-1 text-[15px] text-[rgb(var(--text-primary))]" style={{ fontWeight: v.$value }}>
                   {k.charAt(0).toUpperCase() + k.slice(1)}
                 </div>
                 <div className="text-[11px] font-mono text-[rgb(var(--text-secondary))]">
-                  {(v as { $value: string }).$value}
+                  {v.$value}
                 </div>
-                <CopyButton value={(v as { $value: string }).$value} />
+                <CopyButton value={String(v.$value)} />
               </div>
             ))}
           </TokenCard>
@@ -247,7 +208,7 @@ export function TokensGrid() {
               <div key={k} className="group flex items-start gap-3 p-2 rounded-lg hover:bg-[rgb(var(--background))]">
                 <div className="flex-1 text-[13px] font-medium text-[rgb(var(--text-primary))] capitalize">{k}</div>
                 <code className="text-[10px] font-mono text-[rgb(var(--text-secondary))] text-right max-w-[160px] break-all">
-                  {(v as { $value: string }).$value}
+                  {`cubic-bezier(${(v as { $value: number[] }).$value.join(", ")})`}
                 </code>
               </div>
             ))}

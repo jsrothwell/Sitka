@@ -71,7 +71,7 @@ export default function ForcedColorsPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-4">What forced colors mode is</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed mb-4">
-          When a user enables Windows High Contrast Mode (or any OS-level forced-colors setting), the browser applies <code className="font-mono text-[11px] text-[rgb(var(--accent))]">@media (forced-colors: active)</code>. Custom CSS colours are replaced by system colour keywords. Gradients, box-shadows, and background-images that convey meaning are stripped.
+          When a user enables Windows High Contrast Mode (or any OS-level forced-colors setting), the browser applies <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">@media (forced-colors: active)</code>. Custom CSS colours are replaced by system colour keywords. Gradients, box-shadows, and background-images that convey meaning are stripped.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
           <pre className="text-[11px] font-mono text-[rgb(var(--text-secondary))] leading-relaxed"><code>{`/* Detect forced-colors */
@@ -106,7 +106,7 @@ export default function ForcedColorsPage() {
             <tbody>
               {SYSTEM_COLORS.map((row) => (
                 <tr key={row.keyword} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.keyword}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.keyword}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-primary))]">{row.maps}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.example}</td>
                 </tr>
@@ -126,7 +126,7 @@ export default function ForcedColorsPage() {
               <ul className="space-y-1.5">
                 {comp.rules.map((rule) => (
                   <li key={rule} className="flex gap-2 text-[13px] text-[rgb(var(--text-secondary))]">
-                    <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+                    <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
                     {rule}
                   </li>
                 ))}
@@ -171,7 +171,7 @@ export default function ForcedColorsPage() {
             "Focus indicators must remain visible — ensure outline uses a system colour keyword in your forced-colors override.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

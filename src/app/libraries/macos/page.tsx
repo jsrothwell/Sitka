@@ -19,15 +19,15 @@ export default function LibraryMacosPage() {
         {/* Step 1 — Export */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">1</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">1</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Download the Swift token file</h2>
           </div>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
             Go to the{" "}
-            <Link href="/tokens/export" className="text-[rgb(var(--accent))] underline underline-offset-2">
+            <Link href="/tokens/export" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
               Token Export
             </Link>{" "}
-            page and download <code className="font-mono text-[rgb(var(--accent))] text-[12px]">SitkaTokens.swift</code>. It contains the same brand colors and spacing scale used across web and iOS.
+            page and download <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">SitkaTokens.swift</code>. It contains the same brand colors and spacing scale used across web and iOS.
           </p>
           <CodeBlock
             language="bash"
@@ -39,11 +39,11 @@ export default function LibraryMacosPage() {
         {/* Step 2 — Add to Xcode */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">2</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">2</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">Add to your Xcode project</h2>
           </div>
           <ol className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))] ml-4 list-decimal">
-            <li>Drag <code className="font-mono text-[rgb(var(--accent))] text-[12px]">SitkaTokens.swift</code> into your Xcode project navigator.</li>
+            <li>Drag <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">SitkaTokens.swift</code> into your Xcode project navigator.</li>
             <li>In the <strong className="text-[rgb(var(--text-primary))]">Add Files</strong> dialog, ensure <em>Copy items if needed</em> is checked and your macOS target is selected.</li>
             <li>For shared iOS+macOS targets, the same token file works on both platforms — only the semantic color bridges differ.</li>
           </ol>
@@ -52,11 +52,11 @@ export default function LibraryMacosPage() {
         {/* macOS Color Bridges */}
         <section>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] text-[11px] font-bold">3</span>
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] text-[11px] font-bold">3</span>
             <h2 className="text-[18px] font-semibold text-[rgb(var(--text-primary))]">macOS semantic color bridges</h2>
           </div>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            macOS uses <code className="font-mono text-[rgb(var(--accent))] text-[12px]">NSColor</code> instead of <code className="font-mono text-[rgb(var(--accent))] text-[12px]">UIColor</code> for system colors. The mapping is consistent across all Sitka component pages.
+            macOS uses <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">NSColor</code> instead of <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">UIColor</code> for system colors. The mapping is consistent across all Sitka component pages.
           </p>
           <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden mb-4">
             <table className="w-full text-[13px]">
@@ -78,7 +78,7 @@ export default function LibraryMacosPage() {
                   ["UIColor.separator",                "NSColor.separatorColor",           "Borders & dividers"],
                 ].map(([ios, macos, role], i) => (
                   <tr key={ios} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                    <td className="px-4 py-3 font-mono text-[12px] text-[rgb(var(--accent))]">{ios}</td>
+                    <td className="px-4 py-3 font-mono text-[12px] text-[rgb(var(--accent-text))]">{ios}</td>
                     <td className="px-4 py-3 font-mono text-[12px] text-[rgb(var(--text-secondary))]">{macos}</td>
                     <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{role}</td>
                   </tr>
@@ -239,9 +239,9 @@ Button("Close") { closeWindow() }
         <section>
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-3">Environment propagation for sheets</h2>
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-            On macOS, sheets presented from a <code className="font-mono text-[rgb(var(--accent))] text-[12px]">WindowGroup</code> do <strong className="text-[rgb(var(--text-primary))]">not</strong> inherit the parent view&apos;s environment. Every{" "}
-            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">.sheet()</code> modifier must explicitly re-inject all required environment objects — including{" "}
-            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">ThemeManager</code> — or theming will silently break inside sheets.
+            On macOS, sheets presented from a <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">WindowGroup</code> do <strong className="text-[rgb(var(--text-primary))]">not</strong> inherit the parent view&apos;s environment. Every{" "}
+            <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">.sheet()</code> modifier must explicitly re-inject all required environment objects — including{" "}
+            <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">ThemeManager</code> — or theming will silently break inside sheets.
           </p>
           <CodeBlock
             language="swift"
@@ -254,8 +254,8 @@ Button("Close") { closeWindow() }
           />
           <p className="text-[14px] text-[rgb(var(--text-secondary))] mt-4">
             See the complete wiring guide for ThemeManager, adaptive tokens, and{" "}
-            <code className="font-mono text-[rgb(var(--accent))] text-[12px]">effectiveAccent</code>:{" "}
-            <Link href="/how-tos/swift-theme-manager" className="text-[rgb(var(--accent))] underline underline-offset-2">
+            <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">effectiveAccent</code>:{" "}
+            <Link href="/how-tos/swift-theme-manager" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
               Wire Sitka&apos;s ThemeManager in SwiftUI →
             </Link>
           </p>
@@ -280,7 +280,7 @@ Button("Close") { closeWindow() }
 
         <p className="text-[13px] text-[rgb(var(--text-tertiary))]">
           Back to{" "}
-          <Link href="/libraries" className="text-[rgb(var(--accent))] underline underline-offset-2">
+          <Link href="/libraries" className="text-[rgb(var(--accent-text))] underline underline-offset-2">
             all libraries
           </Link>
           .

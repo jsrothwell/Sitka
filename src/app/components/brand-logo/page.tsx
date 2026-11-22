@@ -201,9 +201,9 @@ export default function BrandLogoPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Fallback chain</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5 leading-relaxed">
-          Three tiers, evaluated in order: a remote <code className="font-mono text-[13px] text-[rgb(var(--accent))]">src</code> image
-          (favicon or CDN logo), then a passed-in <code className="font-mono text-[13px] text-[rgb(var(--accent))]">icon</code>,
-          then initials derived from <code className="font-mono text-[13px] text-[rgb(var(--accent))]">name</code>. An <code className="font-mono text-[13px] text-[rgb(var(--accent))]">onError</code> handler
+          Three tiers, evaluated in order: a remote <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">src</code> image
+          (favicon or CDN logo), then a passed-in <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">icon</code>,
+          then initials derived from <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">name</code>. An <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">onError</code> handler
           on the image demotes to the next tier automatically — no network status tracking required.
         </p>
         <ComponentPreview>
@@ -243,8 +243,8 @@ export default function BrandLogoPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Shape</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          Use <code className="font-mono text-[13px] text-[rgb(var(--accent))]">rounded</code> (default) for
-          companies and integrations; use <code className="font-mono text-[13px] text-[rgb(var(--accent))]">circle</code> for
+          Use <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">rounded</code> (default) for
+          companies and integrations; use <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">circle</code> for
           people or informal brand marks.
         </p>
         <ComponentPreview>
@@ -282,7 +282,7 @@ export default function BrandLogoPage() {
             "Don't rely on logo colour alone to distinguish entities in a list — pair it with the name in adjacent text.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

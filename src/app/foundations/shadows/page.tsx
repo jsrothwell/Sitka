@@ -89,7 +89,7 @@ export default function ShadowsPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <div className="text-[13px] font-semibold text-[rgb(var(--text-primary))]">{s.name}</div>
-                  <code className="text-[11px] font-mono text-[rgb(var(--accent))]">{s.token}</code>
+                  <code className="text-[11px] font-mono text-[rgb(var(--accent-text))]">{s.token}</code>
                 </div>
                 <span className="text-[11px] text-[rgb(var(--text-tertiary))]">{s.use}</span>
               </div>
@@ -126,7 +126,7 @@ export default function ShadowsPage() {
                   }`}
                 >
                   <td className="px-4 py-3">
-                    <code className="font-mono text-[11px] text-[rgb(var(--accent))]">{s.token}</code>
+                    <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{s.token}</code>
                   </td>
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{s.name}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))] text-[12px]">{s.use}</td>

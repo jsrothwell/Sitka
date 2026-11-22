@@ -449,8 +449,8 @@ export default function BarcodeScannerPage() {
           Two cooperating views form the scanning experience:
         </p>
         <ul className="space-y-2 text-[15px] text-[rgb(var(--text-secondary))]">
-          <li className="flex gap-2"><span className="text-[rgb(var(--accent))] shrink-0 mt-0.5">→</span><span><strong className="text-[rgb(var(--text-primary))]">ScanReticleOverlay</strong> — full-screen layer on top of the camera preview. Dims the surroundings with a rectangular cutout window, draws corner brackets, and animates a sweep line while scanning.</span></li>
-          <li className="flex gap-2"><span className="text-[rgb(var(--accent))] shrink-0 mt-0.5">→</span><span><strong className="text-[rgb(var(--text-primary))]">CaptureCardView</strong> — bottom-sheet shown on detect. Runs a background metadata lookup and cycles through <code>loading → resolved → saved</code> or <code>failed</code>, letting the user edit before saving to SwiftData.</span></li>
+          <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))] shrink-0 mt-0.5">→</span><span><strong className="text-[rgb(var(--text-primary))]">ScanReticleOverlay</strong> — full-screen layer on top of the camera preview. Dims the surroundings with a rectangular cutout window, draws corner brackets, and animates a sweep line while scanning.</span></li>
+          <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))] shrink-0 mt-0.5">→</span><span><strong className="text-[rgb(var(--text-primary))]">CaptureCardView</strong> — bottom-sheet shown on detect. Runs a background metadata lookup and cycles through <code>loading → resolved → saved</code> or <code>failed</code>, letting the user edit before saving to SwiftData.</span></li>
         </ul>
       </section>
 
@@ -468,9 +468,9 @@ export default function BarcodeScannerPage() {
             </div>
             <h3 className="font-semibold text-[rgb(var(--text-primary))] pt-2">Implementation notes</h3>
             <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))]">
-              <li className="flex gap-2"><span className="text-[rgb(var(--accent))]">→</span> <code>ScanCutoutShape</code> uses even-odd fill so SwiftUI never draws inside the window</li>
-              <li className="flex gap-2"><span className="text-[rgb(var(--accent))]">→</span> <code>Canvas</code> draws all four corner brackets in a single pass</li>
-              <li className="flex gap-2"><span className="text-[rgb(var(--accent))]">→</span> Sweep line uses <code>.repeatForever(autoreverses: true)</code> — set <code>isAnimating = false</code> on detect to stop it</li>
+              <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))]">→</span> <code>ScanCutoutShape</code> uses even-odd fill so SwiftUI never draws inside the window</li>
+              <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))]">→</span> <code>Canvas</code> draws all four corner brackets in a single pass</li>
+              <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))]">→</span> Sweep line uses <code>.repeatForever(autoreverses: true)</code> — set <code>isAnimating = false</code> on detect to stop it</li>
             </ul>
           </div>
         </div>
@@ -491,15 +491,15 @@ export default function BarcodeScannerPage() {
                 { label: ".failed", desc: "Error icon; manual title entry required; still saveable" },
               ].map(({ label, desc }) => (
                 <div key={label} className="flex gap-3 items-start">
-                  <code className="text-[rgb(var(--accent))] text-[12px] shrink-0 mt-0.5 font-mono">{label}</code>
+                  <code className="text-[rgb(var(--accent-text))] text-[12px] shrink-0 mt-0.5 font-mono">{label}</code>
                   <div>{desc}</div>
                 </div>
               ))}
             </div>
             <ul className="space-y-2 text-[14px] text-[rgb(var(--text-secondary))] pt-2">
-              <li className="flex gap-2"><span className="text-[rgb(var(--accent))]">→</span> Uses <code>.regularMaterial</code> to inherit camera feed colour</li>
-              <li className="flex gap-2"><span className="text-[rgb(var(--accent))]">→</span> Lookup runs in <code>.task</code> — auto-cancelled if the sheet is dismissed</li>
-              <li className="flex gap-2"><span className="text-[rgb(var(--accent))]">→</span> Save button disabled while <code>title.isEmpty</code> to avoid orphaned records</li>
+              <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))]">→</span> Uses <code>.regularMaterial</code> to inherit camera feed colour</li>
+              <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))]">→</span> Lookup runs in <code>.task</code> — auto-cancelled if the sheet is dismissed</li>
+              <li className="flex gap-2"><span className="text-[rgb(var(--accent-text))]">→</span> Save button disabled while <code>title.isEmpty</code> to avoid orphaned records</li>
             </ul>
           </div>
         </div>

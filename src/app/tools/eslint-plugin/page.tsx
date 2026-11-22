@@ -65,7 +65,7 @@ export default defineConfig([
             },
           ].map((r) => (
             <div key={r.rule} className="p-5 rounded-xl bg-[rgb(var(--surface))] border border-[rgb(var(--border))]">
-              <h3 className="font-mono text-[rgb(var(--accent))]">{r.rule}</h3>
+              <h3 className="font-mono text-[rgb(var(--accent-text))]">{r.rule}</h3>
               <p className="mt-2 text-sm text-[rgb(var(--text-primary))]">{r.description}</p>
               <pre className="mt-3 p-3 rounded-lg bg-[rgb(var(--surface-raised))] text-xs text-[rgb(var(--text-secondary))] overflow-x-auto">
                 {r.example}

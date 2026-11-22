@@ -378,16 +378,16 @@ export default function SplitButtonPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           The dropdown is portaled to{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">document.body</code> via{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">createPortal</code> — it
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">document.body</code> via{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">createPortal</code> — it
           is never clipped by{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">overflow: hidden</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">overflow: hidden</code>{" "}
           ancestors. Position is computed from{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">getBoundingClientRect</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">getBoundingClientRect</code>{" "}
           on open. Click-outside dismissal is wired via a{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">mousedown</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">mousedown</code>{" "}
           listener on{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">document</code>.
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">document</code>.
         </p>
         <PlatformTabs code={CODE} />
       </section>
@@ -450,7 +450,7 @@ export default function SplitButtonPage() {
             "Danger items should describe what they do in plain language, not just label them \"Delete\".",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

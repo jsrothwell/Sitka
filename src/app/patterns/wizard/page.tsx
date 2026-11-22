@@ -68,7 +68,7 @@ export function Wizard({ steps, onComplete }: WizardProps) {
                 className={cn(
                   "flex items-center gap-2 text-[13px] font-medium transition-colors",
                   i === currentStep
-                    ? "text-[rgb(var(--accent))]"
+                    ? "text-[rgb(var(--accent-text))]"
                     : completed.has(i)
                     ? "text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))]"
                     : "text-[rgb(var(--text-tertiary))] cursor-not-allowed"
@@ -77,9 +77,9 @@ export function Wizard({ steps, onComplete }: WizardProps) {
                 <span className={cn(
                   "w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-semibold border transition-colors",
                   i === currentStep
-                    ? "bg-[rgb(var(--accent))] border-[rgb(var(--accent))] text-white"
+                    ? "bg-[rgb(var(--accent))] border-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
                     : completed.has(i)
-                    ? "bg-[rgb(var(--accent-subtle))] border-[rgb(var(--accent))] text-[rgb(var(--accent))]"
+                    ? "bg-[rgb(var(--accent-subtle))] border-[rgb(var(--accent))] text-[rgb(var(--accent-text))]"
                     : "border-[rgb(var(--border))] text-[rgb(var(--text-tertiary))]"
                 )}>
                   {completed.has(i) && i !== currentStep ? (
@@ -289,11 +289,11 @@ function WizardDemo() {
     return (
       <div className="flex flex-col items-center gap-3 py-4">
         <div className="w-10 h-10 rounded-full bg-[rgb(var(--accent-subtle))] flex items-center justify-center">
-          <Check className="w-5 h-5 text-[rgb(var(--accent))]" strokeWidth={2.5} />
+          <Check className="w-5 h-5 text-[rgb(var(--accent-text))]" strokeWidth={2.5} />
         </div>
         <p className="text-[14px] font-medium text-[rgb(var(--text-primary))]">Setup complete!</p>
         <button
-          className="text-[12px] text-[rgb(var(--accent))] hover:underline"
+          className="text-[12px] text-[rgb(var(--accent-text))] hover:underline"
           onClick={() => { setCurrentStep(0); setCompleted(new Set()); setDone(false); setData({}); }}
         >
           Reset demo
@@ -316,7 +316,7 @@ function WizardDemo() {
                 className={cn(
                   "flex items-center gap-1.5 text-[12px] font-medium transition-colors",
                   i === currentStep
-                    ? "text-[rgb(var(--accent))]"
+                    ? "text-[rgb(var(--accent-text))]"
                     : completed.has(i)
                     ? "text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] cursor-pointer"
                     : "text-[rgb(var(--text-tertiary))] cursor-not-allowed"
@@ -325,9 +325,9 @@ function WizardDemo() {
                 <span className={cn(
                   "w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-semibold border shrink-0 transition-all",
                   i === currentStep
-                    ? "bg-[rgb(var(--accent))] border-[rgb(var(--accent))] text-white"
+                    ? "bg-[rgb(var(--accent))] border-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
                     : completed.has(i)
-                    ? "bg-[rgb(var(--accent-subtle))] border-[rgb(var(--accent))] text-[rgb(var(--accent))]"
+                    ? "bg-[rgb(var(--accent-subtle))] border-[rgb(var(--accent))] text-[rgb(var(--accent-text))]"
                     : "border-[rgb(var(--border))] text-[rgb(var(--text-tertiary))]"
                 )}>
                   {completed.has(i) && i !== currentStep
@@ -396,7 +396,7 @@ export default function WizardPage() {
             "Not for simple forms with 3 or fewer fields — use a single-page form instead.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}
@@ -458,7 +458,7 @@ export default function WizardPage() {
             "Validation errors must be announced via aria-live or by moving focus to the first invalid field.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

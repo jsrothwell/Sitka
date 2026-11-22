@@ -1,0 +1,94 @@
+name: CI
+
+# Runs on every pull request, and gates the GitHub Pages deploy (deploy.yml calls it).
+on:
+  pull_request:
+  workflow_call:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  web:
+    name: Types, lint, tests, generated files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Swift tokens, Figma variables, llms.txt, components.json and the Figma drift report are
+      # generated from source. If a PR changes tokens or components without regenerating, fail.
+      - name: Generated files are up to date
+        run: |
+          npm run generate
+          git diff --exit-code -- platforms/swift platforms/figma public/downloads/SitkaTokens.swift \
+            public/downloads/sitka-tokens.json public/llms.txt public/components.json src/site/home/figma-drift.json \
+            || (echo "::error::Generated files are stale. Run 'npm run generate' and commit the result." && exit 1)
+
+      - name: Type-check
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests (includes contrast locks)
+        run: npm test
+
+      - name: Code Connect mappings parse
+        run: npm run figma:parse
+
+      - name: Stories type-check and Storybook builds
+        run: |
+          npm run typecheck:stories
+          npm run build-storybook -- --quiet -o /tmp/storybook
+
+  e2e:
+    name: Accessibility and visual regression
+    runs-on: ubuntu-latest
+    # Same image the visual baselines were rendered in, so fonts and antialiasing match.
+    container:
+      image: mcr.microsoft.com/playwright:v1.65.1-noble
+      options: --ipc=host
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+
+      # a11y: axe on every page in light and dark; fails on violations not in e2e/a11y-baseline.json.
+      # visual: component pages against e2e/__screenshots__.
+      - name: Playwright
+        run: npx playwright test
+        env:
+          PW_BUNDLED: "1"
+
+      - name: Upload report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
+          retention-days: 14
+
+  swift:
+    name: Swift package
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test SitkaTokens
+        run: swift test

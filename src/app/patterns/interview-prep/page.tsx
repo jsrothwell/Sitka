@@ -220,7 +220,7 @@ function InterviewPrepDemo() {
 
           {!isGenerating && (
             <div style={{ display: "flex", gap: 8, marginTop: 16, paddingTop: 14, borderTop: "1px solid rgb(var(--border))" }}>
-              <button style={{ padding: "7px 14px", borderRadius: 8, background: "rgb(var(--accent))", color: "#fff", border: "none", fontSize: 12, fontWeight: 600, cursor: "pointer" }}>
+              <button style={{ padding: "7px 14px", borderRadius: 8, background: "rgb(var(--accent))", color: "rgb(var(--on-accent))", border: "none", fontSize: 12, fontWeight: 600, cursor: "pointer" }}>
                 Start Mock Interview
               </button>
               <button style={{ padding: "7px 14px", borderRadius: 8, background: "transparent", border: "1px solid rgb(var(--border))", fontSize: 12, fontWeight: 600, cursor: "pointer", color: "rgb(var(--text-secondary))" }}>
@@ -420,7 +420,7 @@ export function InterviewPrepPanel({
         <div className="text-xs font-semibold text-[rgb(var(--text-primary))]">
           {jobTitle} · {company}
         </div>
-        <span className="ml-auto text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[rgb(var(--accent)_/_0.1)] text-[rgb(var(--accent))]">
+        <span className="ml-auto text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[rgb(var(--accent)_/_0.1)] text-[rgb(var(--accent-text))]">
           Pro
         </span>
       </div>
@@ -431,7 +431,7 @@ export function InterviewPrepPanel({
           <button key={r} onClick={() => onRoundChange(r)}
             className={\`px-3 py-1 rounded-full text-xs font-semibold border transition-colors \${
               r === roundType
-                ? "border-[rgb(var(--accent))] bg-[rgb(var(--accent)_/_0.1)] text-[rgb(var(--accent))]"
+                ? "border-[rgb(var(--accent))] bg-[rgb(var(--accent)_/_0.1)] text-[rgb(var(--accent-text))]"
                 : "border-[rgb(var(--border))] text-[rgb(var(--text-secondary))] hover:border-[rgb(var(--accent)_/_0.5)]"
             }\`}
           >
@@ -442,7 +442,7 @@ export function InterviewPrepPanel({
 
       {/* CTA */}
       <button onClick={generate} disabled={isStreaming}
-        className="w-full py-2.5 rounded-xl bg-[rgb(var(--accent))] text-white text-sm font-semibold disabled:opacity-60"
+        className="w-full py-2.5 rounded-xl bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-sm font-semibold disabled:opacity-60"
       >
         {isStreaming ? "Generating…" : \`Generate \${ROUND_LABELS[roundType]} Prep\`}
       </button>
@@ -451,7 +451,7 @@ export function InterviewPrepPanel({
       {(content || isStreaming) && (
         <div className="p-4 rounded-2xl bg-[rgb(var(--surface))] border border-[rgb(var(--border))] text-sm text-[rgb(var(--text-secondary))] leading-relaxed whitespace-pre-line">
           {content}
-          {isStreaming && <span className="text-[rgb(var(--accent))] animate-pulse"> ▌</span>}
+          {isStreaming && <span className="text-[rgb(var(--accent-text))] animate-pulse"> ▌</span>}
         </div>
       )}
     </div>
@@ -537,8 +537,8 @@ export default function InterviewPrepPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Architecture</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          All generation runs on-device via <code className="font-mono text-[12px] text-[rgb(var(--accent))]">JobAIService</code>,
-          which wraps the Foundation Models <code className="font-mono text-[12px] text-[rgb(var(--accent))]">LanguageModelSession</code>.
+          All generation runs on-device via <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">JobAIService</code>,
+          which wraps the Foundation Models <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">LanguageModelSession</code>.
           No network call is ever made; the prep guide is transient — it is never stored.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
@@ -559,7 +559,7 @@ export default function InterviewPrepPage() {
               ].map(row => (
                 <tr key={row.layer} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{row.layer}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.comp}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.comp}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.resp}</td>
                 </tr>
               ))}
@@ -581,7 +581,7 @@ export default function InterviewPrepPage() {
             { src: "job.notes (first 500 chars)", usage: "Optional extra context — pasted job description or personal notes. Omitted if empty." },
           ].map(({ src, usage }) => (
             <div key={src} className="flex gap-3 text-[14px]">
-              <code className="font-mono text-[11px] text-[rgb(var(--accent))] mt-0.5 shrink-0 bg-[rgb(var(--surface-raised))] px-2 py-0.5 rounded">{src}</code>
+              <code className="font-mono text-[11px] text-[rgb(var(--accent-text))] mt-0.5 shrink-0 bg-[rgb(var(--surface-raised))] px-2 py-0.5 rounded">{src}</code>
               <span className="text-[rgb(var(--text-secondary))]">{usage}</span>
             </div>
           ))}
@@ -632,7 +632,7 @@ export default function InterviewPrepPage() {
             { h: "Round type drives prompt structure", b: "A Technical prompt asks for code-level topics and algorithm questions. A Behavioral prompt asks for STAR stories. Treat round.name as the primary control variable — do not mix structures." },
           ].map(({ h, b }) => (
             <div key={h} className="flex gap-3 text-[14px]">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               <div>
                 <span className="font-medium text-[rgb(var(--text-primary))]">{h} — </span>
                 <span className="text-[rgb(var(--text-secondary))]">{b}</span>
@@ -686,7 +686,7 @@ export default function InterviewPrepPage() {
             "Minimum tap target for round tabs: 44×44 pt. Use padding to meet this without visually enlarging the text.",
           ].map(item => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}

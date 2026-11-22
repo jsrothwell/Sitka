@@ -1,0 +1,8 @@
+{
+  "codeConnect": {
+    "parser": "react",
+    "label": "SwiftUI",
+    "language": "swift",
+    "include": ["*.figma.template.ts"]
+  }
+}

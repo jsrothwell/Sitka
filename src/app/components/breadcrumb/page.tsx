@@ -414,7 +414,7 @@ export default function BreadcrumbPage() {
             "Minimum tap target for each crumb link is 44×44px on touch — add padding rather than increasing font size.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

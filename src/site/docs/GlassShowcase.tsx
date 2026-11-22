@@ -218,7 +218,7 @@ export function GlassShowcase() {
               className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] overflow-hidden"
             >
               <div className="px-5 py-3 border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface-raised))]">
-                <code className="text-[12px] font-mono font-semibold text-[rgb(var(--accent))]">
+                <code className="text-[12px] font-mono font-semibold text-[rgb(var(--accent-text))]">
                   {p.property}
                 </code>
               </div>

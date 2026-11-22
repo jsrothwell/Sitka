@@ -55,7 +55,7 @@ export function ReviewSweep({ items, onFollowUp, onClose, goal }: {
                 <div className="flex justify-between">
                   <div><p className="font-medium">{item.title}</p>
                        <p className="text-[12px] text-[rgb(var(--text-secondary))]">{item.subtitle}</p></div>
-                  <span className="text-[12px] text-[rgb(var(--status-caution))]"
+                  <span className="text-[12px] text-[rgb(var(--status-caution-text))]"
                         aria-label={\`\${item.days} days since last contact\`}>{item.days}d</span>
                 </div>
                 <div className="mt-2 flex gap-2">
@@ -203,7 +203,7 @@ export default function ReviewSweepPage() {
                 setKept(new Set());
                 setResolved({});
               }}
-              className="text-[13px] font-semibold text-[rgb(var(--accent))]"
+              className="text-[13px] font-semibold text-[rgb(var(--accent-text))]"
             >
               {waiting.length === 0 ? "Done" : "Reset"}
             </button>
@@ -242,7 +242,7 @@ export default function ReviewSweepPage() {
                       <p className="text-[12px] text-[rgb(var(--text-secondary))]">{item.subtitle}</p>
                     </div>
                     <span
-                      className="text-[12px] tabular-nums text-[rgb(var(--status-caution))]"
+                      className="text-[12px] tabular-nums text-[rgb(var(--status-caution-text))]"
                       aria-label={`${item.days} days since last contact`}
                     >
                       ⏱ {item.days}d
@@ -251,7 +251,7 @@ export default function ReviewSweepPage() {
                   <div className="mt-2 flex gap-2">
                     <button
                       onClick={() => setResolved((r) => ({ ...r, [item.id]: "followed" }))}
-                      className="rounded-full bg-[rgb(var(--accent))] px-3 py-1.5 text-[12px] font-semibold text-white"
+                      className="rounded-full bg-[rgb(var(--accent))] px-3 py-1.5 text-[12px] font-semibold text-[rgb(var(--on-accent))]"
                     >
                       Followed up
                     </button>
@@ -263,7 +263,7 @@ export default function ReviewSweepPage() {
                     </button>
                     <button
                       onClick={() => setKept((s) => new Set(s).add(item.id))}
-                      className="px-2 py-1.5 text-[12px] font-semibold text-[rgb(var(--accent))]"
+                      className="px-2 py-1.5 text-[12px] font-semibold text-[rgb(var(--accent-text))]"
                     >
                       Keep waiting
                     </button>

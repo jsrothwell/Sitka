@@ -145,7 +145,7 @@ export default function ChatMessagePage() {
             "Action buttons (copy, edit) must have distinct labels and not rely on icon-only recognition.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}

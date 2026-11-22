@@ -456,7 +456,7 @@ export default function InputPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          Built with <code className="font-mono text-[13px] text-[rgb(var(--accent))]">forwardRef</code> so
+          Built with <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">forwardRef</code> so
           refs work transparently. All standard HTML input attributes are forwarded through.
         </p>
         <PlatformTabs code={CODE} />
@@ -517,7 +517,7 @@ export default function InputPage() {
             "Focus ring uses focus-visible so it only appears on keyboard navigation.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

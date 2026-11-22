@@ -4,7 +4,7 @@ import { useState, ReactNode } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib";
 import { Button } from "./Button";
-import { CheckIcon, XIcon } from "@phosphor-icons/react";
+import { Check as CheckIcon, X as XIcon } from "lucide-react";
 
 export interface PricingTier {
   id: string;
@@ -76,7 +76,7 @@ export function PricingTable({
           </button>
           <span className={cn("text-sm font-medium flex items-center gap-1", billing === "yearly" ? "text-[rgb(var(--text-primary))]" : "text-[rgb(var(--text-secondary))]")}>
             Yearly
-            <span className="px-1.5 py-0.5 text-[10px] rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]">
+            <span className="px-1.5 py-0.5 text-[10px] rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]">
               -20%
             </span>
           </span>
@@ -99,7 +99,7 @@ export function PricingTable({
             )}
           >
             {tier.popular && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-xs font-semibold rounded-full bg-[rgb(var(--accent))] text-white">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-xs font-semibold rounded-full bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]">
                 Most Popular
               </div>
             )}
@@ -135,11 +135,11 @@ export function PricingTable({
                 <li key={i} className="flex items-start gap-2.5">
                   {feature.included ? (
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[rgb(var(--accent-subtle))] flex items-center justify-center mt-0.5">
-                      <CheckIcon className="w-3 h-3 text-[rgb(var(--accent))]" weight="bold" />
+                      <CheckIcon className="w-3 h-3 text-[rgb(var(--accent-text))]" strokeWidth={3} aria-hidden="true" />
                     </div>
                   ) : (
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[rgb(var(--surface-hover))] flex items-center justify-center mt-0.5">
-                      <XIcon className="w-3 h-3 text-[rgb(var(--text-tertiary))]" weight="bold" />
+                      <XIcon className="w-3 h-3 text-[rgb(var(--text-tertiary))]" strokeWidth={3} aria-hidden="true" />
                     </div>
                   )}
                   <div className="flex-1">
@@ -185,7 +185,7 @@ export function FeatureComparison({ features, tiers, className }: FeatureCompari
                 key={tier.id}
                 className={cn(
                   "text-center py-3 px-4 text-sm font-semibold",
-                  tier.highlight ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-primary))]"
+                  tier.highlight ? "text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-primary))]"
                 )}
               >
                 {tier.name}
@@ -213,9 +213,9 @@ export function FeatureComparison({ features, tiers, className }: FeatureCompari
                   <td key={tier.id} className="py-3 px-4 text-center">
                     {typeof value === "boolean" ? (
                       value ? (
-                        <CheckIcon className="w-5 h-5 mx-auto text-[rgb(var(--accent))]" weight="bold" />
+                        <CheckIcon className="w-5 h-5 mx-auto text-[rgb(var(--accent-text))]" strokeWidth={3} aria-hidden="true" />
                       ) : (
-                        <XIcon className="w-5 h-5 mx-auto text-[rgb(var(--text-tertiary))]" weight="bold" />
+                        <XIcon className="w-5 h-5 mx-auto text-[rgb(var(--text-tertiary))]" strokeWidth={3} aria-hidden="true" />
                       )
                     ) : (
                       <span className="text-sm text-[rgb(var(--text-secondary))]">{value}</span>

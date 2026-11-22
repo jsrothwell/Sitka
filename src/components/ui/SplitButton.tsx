@@ -28,14 +28,14 @@ export interface SplitButtonProps {
 
 const variants: Record<ButtonVariant, { main: string; divider: string; chevron: string }> = {
   primary: {
-    main:    "bg-[rgb(var(--accent))] text-white hover:opacity-90 shadow-[0_0_0_1px_rgba(139,109,255,0.3),0_2px_8px_rgba(139,109,255,0.25)]",
+    main:    "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] hover:opacity-90 shadow-[0_0_0_1px_rgba(139,109,255,0.3),0_2px_8px_rgba(139,109,255,0.25)]",
     divider: "bg-white/20",
-    chevron: "bg-[rgb(var(--accent))] text-white hover:opacity-90",
+    chevron: "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] hover:opacity-90",
   },
   secondary: {
-    main:    "bg-[rgb(var(--surface))] text-[rgb(var(--text-primary))] border border-[rgb(var(--border))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent))]",
+    main:    "bg-[rgb(var(--surface))] text-[rgb(var(--text-primary))] border border-[rgb(var(--border))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent-text))]",
     divider: "bg-[rgb(var(--border))]",
-    chevron: "bg-[rgb(var(--surface))] text-[rgb(var(--text-secondary))] border border-[rgb(var(--border))] border-l-0 hover:text-[rgb(var(--accent))] hover:border-[rgb(var(--accent))]",
+    chevron: "bg-[rgb(var(--surface))] text-[rgb(var(--text-secondary))] border border-[rgb(var(--border))] border-l-0 hover:text-[rgb(var(--accent-text))] hover:border-[rgb(var(--accent))]",
   },
   ghost: {
     main:    "text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface))] hover:text-[rgb(var(--text-primary))]",
@@ -43,9 +43,9 @@ const variants: Record<ButtonVariant, { main: string; divider: string; chevron: 
     chevron: "text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface))] hover:text-[rgb(var(--text-primary))]",
   },
   danger: {
-    main:    "bg-red-500 text-white hover:bg-red-600 shadow-[0_2px_8px_rgba(239,68,68,0.3)]",
+    main:    "bg-[rgb(var(--danger-solid))] text-[rgb(var(--on-danger))] hover:opacity-90 shadow-[0_2px_8px_rgba(191,28,28,0.3)]",
     divider: "bg-white/20",
-    chevron: "bg-red-500 text-white hover:bg-red-600",
+    chevron: "bg-[rgb(var(--danger-solid))] text-[rgb(var(--on-danger))] hover:opacity-90",
   },
   glass: {
     main:    "glass text-[rgb(var(--text-primary))] hover:bg-[rgba(255,255,255,0.1)]",

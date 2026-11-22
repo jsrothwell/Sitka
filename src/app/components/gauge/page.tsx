@@ -382,7 +382,7 @@ export default function GaugePage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Status thresholds</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          The <code className="font-mono text-[13px] text-[rgb(var(--accent))]">auto</code> variant derives colour from utilization percentage. These thresholds match Warren&apos;s team-capacity model and are the Sitka convention for all capacity indicators.
+          The <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">auto</code> variant derives colour from utilization percentage. These thresholds match Warren&apos;s team-capacity model and are the Sitka convention for all capacity indicators.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
           <table className="w-full text-[13px]">
@@ -402,7 +402,7 @@ export default function GaugePage() {
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-mono text-[12px] text-[rgb(var(--text-secondary))]">{row.range}</td>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{row.variant}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.variant}</code></td>
                   <td className="px-4 py-3">
                     <span className="flex items-center gap-2">
                       <span className="w-3 h-3 rounded-full" style={{ background: row.color }} />
@@ -440,7 +440,7 @@ export default function GaugePage() {
             "At very small sizes (< 48px), the centre percentage may be illegible — use the sublabel to show absolute values (e.g. '34h') instead.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

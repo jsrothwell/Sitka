@@ -1,0 +1,464 @@
+{
+  "dark /components/avatar/": [
+    "aria-prohibited-attr",
+    "color-contrast"
+  ],
+  "dark /components/badge/": [
+    "button-name"
+  ],
+  "dark /components/card/": [
+    "button-name"
+  ],
+  "dark /components/chip/": [
+    "color-contrast"
+  ],
+  "dark /components/color-picker/": [
+    "scrollable-region-focusable"
+  ],
+  "dark /components/date-time-pickers/": [
+    "label"
+  ],
+  "dark /components/dropdown-menu/": [
+    "button-name"
+  ],
+  "dark /components/feature-gate/": [
+    "color-contrast"
+  ],
+  "dark /components/file-upload/": [
+    "aria-hidden-focus",
+    "nested-interactive"
+  ],
+  "dark /components/form-controls/": [
+    "button-name"
+  ],
+  "dark /components/pricing/": [
+    "button-name",
+    "scrollable-region-focusable"
+  ],
+  "dark /components/segmented-button/": [
+    "button-name"
+  ],
+  "dark /components/split-button/": [
+    "button-name"
+  ],
+  "dark /components/table/": [
+    "aria-prohibited-attr",
+    "button-name",
+    "color-contrast",
+    "scrollable-region-focusable"
+  ],
+  "dark /components/textarea/": [
+    "label"
+  ],
+  "dark /components/tooltip/": [
+    "button-name"
+  ],
+  "dark /forms/layout/": [
+    "select-name"
+  ],
+  "dark /foundations/border-radius/": [
+    "color-contrast"
+  ],
+  "dark /foundations/color/": [
+    "color-contrast"
+  ],
+  "dark /foundations/contrast/": [
+    "color-contrast",
+    "scrollable-region-focusable"
+  ],
+  "dark /foundations/data-viz/": [
+    "color-contrast"
+  ],
+  "dark /foundations/density/": [
+    "scrollable-region-focusable"
+  ],
+  "dark /foundations/glass/": [
+    "scrollable-region-focusable"
+  ],
+  "dark /foundations/haptics/": [
+    "scrollable-region-focusable"
+  ],
+  "dark /foundations/interaction/": [
+    "color-contrast"
+  ],
+  "dark /foundations/motion/": [
+    "scrollable-region-focusable"
+  ],
+  "dark /foundations/rtl/": [
+    "scrollable-region-focusable"
+  ],
+  "dark /foundations/writing/": [
+    "color-contrast"
+  ],
+  "dark /how-tos/dark-mode/": [
+    "color-contrast"
+  ],
+  "dark /how-tos/onboarding-flow/": [
+    "color-contrast"
+  ],
+  "dark /how-tos/swift-theme-manager/": [
+    "color-contrast"
+  ],
+  "dark /how-tos/write-for-interfaces/": [
+    "color-contrast"
+  ],
+  "dark /kitchen-sink/": [
+    "color-contrast",
+    "label"
+  ],
+  "dark /patterns/activity-feed/": [
+    "aria-prohibited-attr",
+    "color-contrast"
+  ],
+  "dark /patterns/analytics-dashboard/": [
+    "color-contrast",
+    "link-in-text-block"
+  ],
+  "dark /patterns/barcode-scanner/": [
+    "color-contrast"
+  ],
+  "dark /patterns/collaboration/": [
+    "color-contrast"
+  ],
+  "dark /patterns/compensation/": [
+    "color-contrast"
+  ],
+  "dark /patterns/data-entry/": [
+    "button-name",
+    "label",
+    "select-name"
+  ],
+  "dark /patterns/document-assembler/": [
+    "button-name",
+    "color-contrast",
+    "target-size"
+  ],
+  "dark /patterns/drag-drop/": [
+    "label",
+    "scrollable-region-focusable"
+  ],
+  "dark /patterns/import-export/": [
+    "color-contrast"
+  ],
+  "dark /patterns/interview-prep/": [
+    "color-contrast"
+  ],
+  "dark /patterns/kanban/": [
+    "button-name",
+    "color-contrast",
+    "link-in-text-block"
+  ],
+  "dark /patterns/master-detail/": [
+    "aria-prohibited-attr",
+    "button-name",
+    "color-contrast"
+  ],
+  "dark /patterns/media-player/": [
+    "button-name",
+    "label"
+  ],
+  "dark /patterns/mobile-time-logging/": [
+    "color-contrast",
+    "scrollable-region-focusable"
+  ],
+  "dark /patterns/mobile-widgets/": [
+    "color-contrast"
+  ],
+  "dark /patterns/multi-select/": [
+    "aria-allowed-attr"
+  ],
+  "dark /patterns/navbar/": [
+    "aria-prohibited-attr",
+    "button-name",
+    "color-contrast"
+  ],
+  "dark /patterns/onboarding/": [
+    "color-contrast"
+  ],
+  "dark /patterns/paywall/": [
+    "color-contrast"
+  ],
+  "dark /patterns/settings/": [
+    "color-contrast",
+    "select-name"
+  ],
+  "dark /tokens/": [
+    "button-name"
+  ],
+  "dark /tools/theme-customizer/": [
+    "color-contrast",
+    "label",
+    "select-name"
+  ],
+  "light /": [
+    "color-contrast"
+  ],
+  "light /components/avatar/": [
+    "aria-prohibited-attr",
+    "color-contrast"
+  ],
+  "light /components/badge/": [
+    "button-name",
+    "color-contrast"
+  ],
+  "light /components/card/": [
+    "button-name",
+    "color-contrast"
+  ],
+  "light /components/carousel/": [
+    "color-contrast"
+  ],
+  "light /components/checkbox/": [
+    "color-contrast"
+  ],
+  "light /components/chip/": [
+    "color-contrast"
+  ],
+  "light /components/color-picker/": [
+    "scrollable-region-focusable"
+  ],
+  "light /components/data-grid/": [
+    "color-contrast"
+  ],
+  "light /components/date-time-pickers/": [
+    "color-contrast",
+    "label"
+  ],
+  "light /components/dropdown-menu/": [
+    "button-name"
+  ],
+  "light /components/feature-gate/": [
+    "color-contrast"
+  ],
+  "light /components/file-upload/": [
+    "aria-hidden-focus",
+    "color-contrast",
+    "nested-interactive"
+  ],
+  "light /components/form-controls/": [
+    "button-name",
+    "color-contrast"
+  ],
+  "light /components/image-crop/": [
+    "color-contrast"
+  ],
+  "light /components/input/": [
+    "color-contrast"
+  ],
+  "light /components/modal/": [
+    "color-contrast"
+  ],
+  "light /components/otp/": [
+    "color-contrast"
+  ],
+  "light /components/pricing/": [
+    "button-name",
+    "scrollable-region-focusable"
+  ],
+  "light /components/segmented-button/": [
+    "button-name"
+  ],
+  "light /components/select/": [
+    "color-contrast"
+  ],
+  "light /components/slider/": [
+    "color-contrast"
+  ],
+  "light /components/snackbar/": [
+    "color-contrast"
+  ],
+  "light /components/split-button/": [
+    "button-name"
+  ],
+  "light /components/table/": [
+    "aria-prohibited-attr",
+    "button-name",
+    "color-contrast",
+    "scrollable-region-focusable"
+  ],
+  "light /components/textarea/": [
+    "color-contrast",
+    "label"
+  ],
+  "light /components/tooltip/": [
+    "button-name"
+  ],
+  "light /forms/layout/": [
+    "select-name"
+  ],
+  "light /foundations/border-radius/": [
+    "color-contrast"
+  ],
+  "light /foundations/charting/": [
+    "color-contrast"
+  ],
+  "light /foundations/color/": [
+    "color-contrast"
+  ],
+  "light /foundations/contrast/": [
+    "color-contrast",
+    "scrollable-region-focusable"
+  ],
+  "light /foundations/data-viz/": [
+    "color-contrast"
+  ],
+  "light /foundations/density/": [
+    "scrollable-region-focusable"
+  ],
+  "light /foundations/glass/": [
+    "scrollable-region-focusable"
+  ],
+  "light /foundations/haptics/": [
+    "scrollable-region-focusable"
+  ],
+  "light /foundations/interaction/": [
+    "color-contrast"
+  ],
+  "light /foundations/keyboard-shortcuts/": [
+    "color-contrast"
+  ],
+  "light /foundations/motion/": [
+    "scrollable-region-focusable"
+  ],
+  "light /foundations/rtl/": [
+    "scrollable-region-focusable"
+  ],
+  "light /foundations/writing/": [
+    "color-contrast"
+  ],
+  "light /how-tos/colour-contrast/": [
+    "color-contrast"
+  ],
+  "light /how-tos/dark-mode/": [
+    "color-contrast"
+  ],
+  "light /how-tos/data-visualisation/": [
+    "color-contrast"
+  ],
+  "light /how-tos/onboarding-flow/": [
+    "color-contrast"
+  ],
+  "light /how-tos/swift-theme-manager/": [
+    "color-contrast"
+  ],
+  "light /how-tos/write-for-interfaces/": [
+    "color-contrast"
+  ],
+  "light /kitchen-sink/": [
+    "color-contrast",
+    "label"
+  ],
+  "light /libraries/figma/": [
+    "color-contrast"
+  ],
+  "light /patterns/activity-feed/": [
+    "aria-prohibited-attr",
+    "color-contrast"
+  ],
+  "light /patterns/analytics-dashboard/": [
+    "color-contrast",
+    "link-in-text-block"
+  ],
+  "light /patterns/barcode-scanner/": [
+    "color-contrast"
+  ],
+  "light /patterns/collaboration/": [
+    "color-contrast"
+  ],
+  "light /patterns/compensation/": [
+    "color-contrast"
+  ],
+  "light /patterns/data-entry/": [
+    "button-name",
+    "color-contrast",
+    "label",
+    "select-name"
+  ],
+  "light /patterns/document-assembler/": [
+    "button-name",
+    "color-contrast",
+    "target-size"
+  ],
+  "light /patterns/drag-drop/": [
+    "color-contrast",
+    "label",
+    "scrollable-region-focusable"
+  ],
+  "light /patterns/ghost-employer/": [
+    "color-contrast"
+  ],
+  "light /patterns/import-export/": [
+    "color-contrast"
+  ],
+  "light /patterns/integration-settings/": [
+    "color-contrast"
+  ],
+  "light /patterns/interview-parser/": [
+    "color-contrast"
+  ],
+  "light /patterns/interview-prep/": [
+    "color-contrast"
+  ],
+  "light /patterns/kanban/": [
+    "button-name",
+    "color-contrast",
+    "link-in-text-block"
+  ],
+  "light /patterns/master-detail/": [
+    "aria-prohibited-attr",
+    "button-name",
+    "color-contrast"
+  ],
+  "light /patterns/media-player/": [
+    "button-name",
+    "label"
+  ],
+  "light /patterns/mobile-time-logging/": [
+    "color-contrast",
+    "scrollable-region-focusable"
+  ],
+  "light /patterns/mobile-widgets/": [
+    "color-contrast"
+  ],
+  "light /patterns/multi-select/": [
+    "aria-allowed-attr"
+  ],
+  "light /patterns/navbar/": [
+    "aria-prohibited-attr",
+    "button-name",
+    "color-contrast"
+  ],
+  "light /patterns/onboarding/": [
+    "color-contrast"
+  ],
+  "light /patterns/paywall/": [
+    "color-contrast"
+  ],
+  "light /patterns/settings/": [
+    "color-contrast",
+    "select-name"
+  ],
+  "light /patterns/strategic-insights/": [
+    "color-contrast"
+  ],
+  "light /patterns/sync-status/": [
+    "color-contrast"
+  ],
+  "light /patterns/task-inbox/": [
+    "color-contrast"
+  ],
+  "light /patterns/team-capacity/": [
+    "color-contrast"
+  ],
+  "light /status/": [
+    "color-contrast"
+  ],
+  "light /tokens/": [
+    "button-name"
+  ],
+  "light /tools/theme-customizer/": [
+    "color-contrast",
+    "label",
+    "select-name"
+  ]
+}

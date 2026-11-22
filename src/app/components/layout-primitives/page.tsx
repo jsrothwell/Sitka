@@ -40,7 +40,7 @@ function Demo() {
           <Box className="text-[13px] font-medium text-[rgb(var(--text-primary))]">Title</Box>
           <Inline gap="2">
             <Box className="px-3 py-1.5 rounded-lg border border-[rgb(var(--border))] text-[13px] text-[rgb(var(--text-secondary))]">Cancel</Box>
-            <Box className="px-3 py-1.5 rounded-lg bg-[rgb(var(--accent))] text-[13px] text-white">Save</Box>
+            <Box className="px-3 py-1.5 rounded-lg bg-[rgb(var(--accent))] text-[13px] text-[rgb(var(--on-accent))]">Save</Box>
           </Inline>
         </Stack>
       </div>
@@ -171,7 +171,7 @@ export default function LayoutPrimitivesPage() {
                 { name: "Inline", desc: "Shorthand for Stack direction=row wrap=true align=center.", props: "gap, align, justify" },
               ].map((row) => (
                 <tr key={row.name} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.name}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.name}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.desc}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-tertiary))]">{row.props}</td>
                 </tr>
@@ -203,7 +203,7 @@ export default function LayoutPrimitivesPage() {
                 { val: "8", css: "32px", use: "Major layout regions" },
               ].map((row) => (
                 <tr key={row.val} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">gap=&quot;{row.val}&quot;</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">gap=&quot;{row.val}&quot;</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.css}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.use}</td>
                 </tr>
@@ -228,7 +228,7 @@ export default function LayoutPrimitivesPage() {
             "These primitives have no visual opinion — all surface styling (borders, backgrounds) comes from Tailwind utilities on the child elements.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

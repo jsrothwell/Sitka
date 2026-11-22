@@ -1,4 +1,4 @@
-import tokens from "../../src/tokens/tokens.json";
+import tokens from "../../../src/tokens/tokens.json";
 
 export default tokens;
 export { tokens };

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sitka": {
+      "command": "node",
+      "args": ["packages/mcp/server.mjs"]
+    }
+  }
+}

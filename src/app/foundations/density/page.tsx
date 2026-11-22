@@ -41,7 +41,7 @@ export default function DensityPage() {
             { mode: "comfortable", label: "Comfortable", desc: "Consumer apps, onboarding flows, marketing pages. More breathing room for non-expert audiences or touch-primary interfaces." },
           ].map((m) => (
             <div key={m.mode} className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-5">
-              <code className="text-[11px] font-mono text-[rgb(var(--accent))] bg-[rgb(var(--accent-subtle))] px-2 py-0.5 rounded">
+              <code className="text-[11px] font-mono text-[rgb(var(--accent-text))] bg-[rgb(var(--accent-subtle))] px-2 py-0.5 rounded">
                 data-density=&quot;{m.mode}&quot;
               </code>
               <p className="mt-3 text-[13px] font-semibold text-[rgb(var(--text-primary))]">{m.label}</p>
@@ -55,7 +55,7 @@ export default function DensityPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Token scale</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-          All eight density tokens are CSS custom properties set on <code className="font-mono text-[11px] text-[rgb(var(--accent))]">:root</code> (normal defaults) and overridden by the <code className="font-mono text-[11px] text-[rgb(var(--accent))]">data-density</code> attribute.
+          All eight density tokens are CSS custom properties set on <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">:root</code> (normal defaults) and overridden by the <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">data-density</code> attribute.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
           <table className="w-full text-[13px]">
@@ -69,7 +69,7 @@ export default function DensityPage() {
             <tbody>
               {TOKENS.map((row, i) => (
                 <tr key={row.token} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.token}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.token}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.compact}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-primary))] font-semibold">{row.normal}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.comfortable}</td>
@@ -189,7 +189,7 @@ export const useDensity = () => useContext(DensityCtx);`}</code></pre>
             "When in doubt, ship normal and add a user preference toggle later. Density changes are additive and non-breaking.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

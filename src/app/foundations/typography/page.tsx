@@ -143,7 +143,7 @@ export default function TypographyPage() {
             <div key={f.name} className="p-5 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))]">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">{f.role}</span>
-                <code className="text-[11px] font-mono text-[rgb(var(--accent))]">{f.token}</code>
+                <code className="text-[11px] font-mono text-[rgb(var(--accent-text))]">{f.token}</code>
               </div>
               <div
                 className="text-[32px] font-medium text-[rgb(var(--text-primary))] mb-3"

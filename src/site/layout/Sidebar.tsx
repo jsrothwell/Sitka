@@ -61,7 +61,7 @@ export function Sidebar({
             </span>
           </Link>
           <span className="font-mono text-[10px] font-medium px-1.5 py-0.5 rounded-[var(--radius-sm)] bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-tertiary))] border border-[rgb(var(--border))]">
-            v1.8
+            v{process.env.NEXT_PUBLIC_SITKA_VERSION}
           </span>
           {/* Close button — mobile only */}
           <button
@@ -183,7 +183,7 @@ function NavLinkItem({ item, isActive }: { item: NavItem; isActive: boolean }) {
       >
         {item.title}
         {item.badge && (
-          <span className="ml-auto text-[9px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-[var(--radius-sm)] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]">
+          <span className="ml-auto text-[9px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-[var(--radius-sm)] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]">
             {item.badge}
           </span>
         )}

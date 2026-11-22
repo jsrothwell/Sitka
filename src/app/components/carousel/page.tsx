@@ -434,7 +434,7 @@ export default function CarouselPage() {
             "Provide a stop/play button for auto-advancing carousels when the timer is less than 5 seconds.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

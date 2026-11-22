@@ -39,7 +39,7 @@ export function PropsTable({ props, className }: PropsTableProps) {
               )}
             >
               <td className="px-4 py-3">
-                <code className="text-[rgb(var(--accent))] font-mono text-[12px]">
+                <code className="text-[rgb(var(--accent-text))] font-mono text-[12px]">
                   {row.name}
                   {row.required && (
                     <span className="text-red-400 ml-0.5">*</span>

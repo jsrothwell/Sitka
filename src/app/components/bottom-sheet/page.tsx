@@ -271,7 +271,7 @@ export default function BottomSheetPage() {
                 ['"full"', "h: 90vh — near full screen",    "Long forms, detail views, multi-step flows"],
               ].map(([val, height, use], i) => (
                 <tr key={val} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{val}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{val}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{height}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{use}</td>
                 </tr>
@@ -286,9 +286,9 @@ export default function BottomSheetPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           The sheet is portaled to{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">document.body</code> via{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">createPortal</code> — it is never
-          clipped by <code className="font-mono text-[13px] text-[rgb(var(--accent))]">overflow: hidden</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">document.body</code> via{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">createPortal</code> — it is never
+          clipped by <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">overflow: hidden</code>{" "}
           ancestors. Body scroll is locked while open. Dismiss handlers cover backdrop click and Escape key.
         </p>
         <PlatformTabs code={CODE} />
@@ -342,7 +342,7 @@ export default function BottomSheetPage() {
             "The drag handle is decorative — do not add role or aria to it. Provide a close button as the primary dismiss affordance for keyboard/AT users.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

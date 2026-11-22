@@ -71,7 +71,7 @@ export function ButtonMobileDemo() {
           ].map(({ name, price, icon: Icon }) => (
             <div key={name} className="flex items-center gap-3 p-3 rounded-xl bg-[rgb(var(--surface))] border border-[rgb(var(--border))]">
               <div className="w-8 h-8 rounded-lg bg-[rgb(var(--accent-subtle))] flex items-center justify-center">
-                <Icon className="w-4 h-4 text-[rgb(var(--accent))]" />
+                <Icon className="w-4 h-4 text-[rgb(var(--accent-text))]" />
               </div>
               <div className="flex-1">
                 <p className="text-[12px] font-medium text-[rgb(var(--text-primary))]">{name}</p>
@@ -95,8 +95,8 @@ export function ButtonMobileDemo() {
             className={cn(
               "w-full h-11 rounded-xl text-[13px] font-semibold transition-all",
               pressed === "primary"
-                ? "bg-[rgb(var(--accent))] opacity-60 scale-[0.98] text-white"
-                : "bg-[rgb(var(--accent))] text-white"
+                ? "bg-[rgb(var(--accent))] opacity-60 scale-[0.98] text-[rgb(var(--on-accent))]"
+                : "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
             )}
           >
             {pressed === "primary" ? "Processing…" : "Confirm & Pay"}
@@ -205,7 +205,7 @@ export function InputMobileDemo() {
         <div className="px-4 pb-4">
           <button
             onClick={() => setActive(null)}
-            className="w-full h-11 rounded-xl bg-[rgb(var(--accent))] text-white text-[13px] font-semibold"
+            className="w-full h-11 rounded-xl bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[13px] font-semibold"
           >
             Continue
           </button>
@@ -259,7 +259,7 @@ export function CardMobileDemo() {
                 </button>
               </div>
               <div className="flex items-center justify-between mt-2.5">
-                <button className="text-[11px] font-medium text-[rgb(var(--accent))]">Read more →</button>
+                <button className="text-[11px] font-medium text-[rgb(var(--accent-text))]">Read more →</button>
               </div>
             </div>
           ))}
@@ -296,7 +296,7 @@ export function BadgeMobileDemo() {
       <div className="h-full bg-[rgb(var(--background))] flex flex-col">
         <div className="px-4 pt-4 pb-3 border-b border-[rgb(var(--border))] flex items-center justify-between">
           <p className="text-[14px] font-semibold text-[rgb(var(--text-primary))]">Notifications</p>
-          <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[rgb(var(--accent))] text-white">
+          <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]">
             {visible.filter((n) => n.unread).length} new
           </span>
         </div>
@@ -365,7 +365,7 @@ export function AvatarMobileDemo() {
             {CONTACTS.slice(0, 4).map((c, i) => (
               <div
                 key={c.id}
-                className="w-8 h-8 rounded-full bg-[rgb(var(--accent-subtle))] border-2 border-[rgb(var(--background))] flex items-center justify-center text-[9px] font-bold text-[rgb(var(--accent))]"
+                className="w-8 h-8 rounded-full bg-[rgb(var(--accent-subtle))] border-2 border-[rgb(var(--background))] flex items-center justify-center text-[9px] font-bold text-[rgb(var(--accent-text))]"
                 style={{ zIndex: 4 - i }}
               >
                 {c.initials}
@@ -389,7 +389,7 @@ export function AvatarMobileDemo() {
               )}
             >
               <div className="relative">
-                <div className="w-9 h-9 rounded-full bg-[rgb(var(--accent-subtle))] flex items-center justify-center text-[11px] font-bold text-[rgb(var(--accent))]">
+                <div className="w-9 h-9 rounded-full bg-[rgb(var(--accent-subtle))] flex items-center justify-center text-[11px] font-bold text-[rgb(var(--accent-text))]">
                   {c.initials}
                 </div>
                 <div className={cn("absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full border-2 border-[rgb(var(--background))]", STATUS_DOT[c.status])} />
@@ -398,7 +398,7 @@ export function AvatarMobileDemo() {
                 <p className="text-[12px] font-medium text-[rgb(var(--text-primary))] truncate">{c.name}</p>
                 <p className="text-[10px] text-[rgb(var(--text-tertiary))]">{c.role}</p>
               </div>
-              {selected === c.id && <Check className="w-4 h-4 text-[rgb(var(--accent))]" />}
+              {selected === c.id && <Check className="w-4 h-4 text-[rgb(var(--accent-text))]" />}
             </button>
           ))}
         </div>
@@ -454,7 +454,7 @@ export function NavigationMobileDemo() {
               className={cn(
                 "flex-1 py-2.5 text-[11px] font-medium transition-colors border-b-2 -mb-px",
                 active === t.id
-                  ? "text-[rgb(var(--accent))] border-[rgb(var(--accent))]"
+                  ? "text-[rgb(var(--accent-text))] border-[rgb(var(--accent))]"
                   : "text-[rgb(var(--text-tertiary))] border-transparent"
               )}
             >
@@ -466,7 +466,7 @@ export function NavigationMobileDemo() {
         {/* Panel */}
         <div className="flex-1 px-4 py-5 flex flex-col items-center justify-center gap-4">
           <div className="w-14 h-14 rounded-2xl bg-[rgb(var(--accent-subtle))] flex items-center justify-center">
-            <Icon className="w-7 h-7 text-[rgb(var(--accent))]" />
+            <Icon className="w-7 h-7 text-[rgb(var(--accent-text))]" />
           </div>
           <div className="text-center">
             <p className="text-[13px] font-semibold text-[rgb(var(--text-primary))] mb-2">{title}</p>
@@ -536,7 +536,7 @@ export function TooltipMobileDemo() {
                     shown === id ? "bg-[rgb(var(--accent-subtle))]" : "hover:bg-[rgb(var(--surface-raised))]"
                   )}
                 >
-                  <Icon className={cn("w-4 h-4", shown === id ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-secondary))]")} />
+                  <Icon className={cn("w-4 h-4", shown === id ? "text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-secondary))]")} />
                 </button>
                 <span className="text-[8px] text-[rgb(var(--text-tertiary))] mt-0.5">{label}</span>
               </div>
@@ -678,7 +678,7 @@ export function SplitButtonMobileDemo() {
             <button
               onClick={tap}
               className={cn(
-                "flex-1 h-11 text-[12px] font-semibold bg-[rgb(var(--accent))] text-white transition-opacity",
+                "flex-1 h-11 text-[12px] font-semibold bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] transition-opacity",
                 pressed && "opacity-60"
               )}
             >
@@ -687,7 +687,7 @@ export function SplitButtonMobileDemo() {
             <div className="w-px bg-[rgb(var(--accent-hover))]" />
             <button
               onClick={() => setDropOpen((v) => !v)}
-              className="px-3 h-11 bg-[rgb(var(--accent))] text-white flex items-center"
+              className="px-3 h-11 bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] flex items-center"
             >
               <ChevronRight className={cn("w-4 h-4 transition-transform", dropOpen && "rotate-90")} />
             </button>
@@ -701,7 +701,7 @@ export function SplitButtonMobileDemo() {
                   onClick={() => { setPrimary(opt); setDropOpen(false); }}
                   className={cn(
                     "w-full flex items-center gap-2 px-4 py-3 text-[12px] text-left",
-                    opt === primary ? "text-[rgb(var(--accent))] bg-[rgb(var(--accent-subtle))]" : "text-[rgb(var(--text-primary))]"
+                    opt === primary ? "text-[rgb(var(--accent-text))] bg-[rgb(var(--accent-subtle))]" : "text-[rgb(var(--text-primary))]"
                   )}
                 >
                   {opt === primary && <Check className="w-3 h-3" />}
@@ -762,7 +762,7 @@ export function SegmentedButtonMobileDemo() {
               {items.map((item) => (
                 <div key={item} className="rounded-xl bg-[rgb(var(--surface))] border border-[rgb(var(--border))] p-3">
                   <div className="w-6 h-6 rounded-lg bg-[rgb(var(--accent-subtle))] flex items-center justify-center mb-2">
-                    <Globe className="w-3.5 h-3.5 text-[rgb(var(--accent))]" />
+                    <Globe className="w-3.5 h-3.5 text-[rgb(var(--accent-text))]" />
                   </div>
                   <p className="text-[10px] font-medium text-[rgb(var(--text-primary))] leading-tight">{item}</p>
                 </div>
@@ -815,13 +815,13 @@ export function TableMobileDemo() {
           <div className="flex gap-2">
             <button
               onClick={() => setSort(sort === "name" ? null : "name")}
-              className={cn("p-1.5 rounded-lg transition-colors", sort === "name" ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]" : "text-[rgb(var(--text-tertiary))]")}
+              className={cn("p-1.5 rounded-lg transition-colors", sort === "name" ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-tertiary))]")}
             >
               <AlignLeft className="w-3.5 h-3.5" />
             </button>
             <button
               onClick={() => setSort(sort === "status" ? null : "status")}
-              className={cn("p-1.5 rounded-lg transition-colors", sort === "status" ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]" : "text-[rgb(var(--text-tertiary))]")}
+              className={cn("p-1.5 rounded-lg transition-colors", sort === "status" ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-tertiary))]")}
             >
               <ArrowUpDown className="w-3.5 h-3.5" />
             </button>
@@ -901,7 +901,7 @@ export function ModalMobileDemo() {
                 This action is permanent. All your data will be removed within 30 days.
               </p>
               <div className="space-y-2">
-                <button className="w-full h-11 rounded-xl bg-red-500 text-white text-[13px] font-semibold">
+                <button className="w-full h-11 rounded-xl bg-[rgb(var(--danger-solid))] text-[rgb(var(--on-danger))] text-[13px] font-semibold">
                   Delete permanently
                 </button>
                 <button

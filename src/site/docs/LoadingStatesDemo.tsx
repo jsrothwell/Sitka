@@ -12,13 +12,13 @@ export function TypingDotsDemo() {
     <div className="flex flex-col items-center gap-6">
       <div className="w-full max-w-sm rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4 space-y-2">
         <div className="flex justify-end">
-          <div className="rounded-2xl rounded-tr-sm bg-[rgb(var(--accent))] text-white px-3 py-2 text-[13px] max-w-[200px]">
+          <div className="rounded-2xl rounded-tr-sm bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] px-3 py-2 text-[13px] max-w-[200px]">
             What are the key design principles?
           </div>
         </div>
         <div className="flex items-end gap-2">
           <div className="w-6 h-6 rounded-full bg-[rgb(var(--accent-subtle))] flex items-center justify-center flex-shrink-0">
-            <span className="text-[10px] font-bold text-[rgb(var(--accent))]">A</span>
+            <span className="text-[10px] font-bold text-[rgb(var(--accent-text))]">A</span>
           </div>
           {active ? (
             <div className="rounded-2xl rounded-tl-sm bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] px-3 py-2.5 flex items-center gap-1">
@@ -39,7 +39,7 @@ export function TypingDotsDemo() {
       </div>
       <button
         onClick={() => setActive((v) => !v)}
-        className="text-[12px] font-medium text-[rgb(var(--accent))] hover:underline"
+        className="text-[12px] font-medium text-[rgb(var(--accent-text))] hover:underline"
       >
         {active ? "Show response" : "Show typing"}
       </button>
@@ -83,7 +83,7 @@ export function SkeletonDemo() {
             ].map((item) => (
               <div key={item.name} className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-[rgb(var(--accent-subtle))] flex items-center justify-center flex-shrink-0">
-                  <span className="text-[11px] font-semibold text-[rgb(var(--accent))]">
+                  <span className="text-[11px] font-semibold text-[rgb(var(--accent-text))]">
                     {item.name[0]}
                   </span>
                 </div>
@@ -112,7 +112,7 @@ export function SkeletonDemo() {
       </div>
       <button
         onClick={() => setLoaded((v) => !v)}
-        className="text-[12px] font-medium text-[rgb(var(--accent))] hover:underline"
+        className="text-[12px] font-medium text-[rgb(var(--accent-text))] hover:underline"
       >
         {loaded ? "Show skeleton" : "Load content"}
       </button>
@@ -165,7 +165,7 @@ export function SpinnerDemo() {
       <div className="relative w-full max-w-sm h-36 rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] overflow-hidden flex items-center justify-center">
         {processing && (
           <div className="absolute inset-0 bg-[rgb(var(--background))]/80 backdrop-blur-sm flex flex-col items-center justify-center gap-3 z-10">
-            <Spinner size={28} className="text-[rgb(var(--accent))]" />
+            <Spinner size={28} className="text-[rgb(var(--accent-text))]" />
             <p className="text-[13px] font-medium text-[rgb(var(--text-primary))]">Saving changes…</p>
           </div>
         )}
@@ -188,7 +188,7 @@ export function SpinnerDemo() {
       <button
         onClick={handleClick}
         disabled={processing}
-        className="text-[12px] font-medium text-[rgb(var(--accent))] hover:underline disabled:opacity-40 disabled:no-underline"
+        className="text-[12px] font-medium text-[rgb(var(--accent-text))] hover:underline disabled:opacity-40 disabled:no-underline"
       >
         {processing ? "Processing…" : done ? "Done!" : "Save changes"}
       </button>
@@ -235,7 +235,7 @@ export function ProgressiveTextDemo() {
       <div className="w-full max-w-sm rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
         <div className="flex items-start gap-2.5">
           <div className="w-6 h-6 rounded-full bg-[rgb(var(--accent-subtle))] flex items-center justify-center flex-shrink-0 mt-0.5">
-            <span className="text-[10px] font-bold text-[rgb(var(--accent))]">A</span>
+            <span className="text-[10px] font-bold text-[rgb(var(--accent-text))]">A</span>
           </div>
           <p className="text-[13px] text-[rgb(var(--text-primary))] leading-relaxed min-h-[4.5rem]">
             {displayed || <span className="text-[rgb(var(--text-tertiary))]">Press stream to begin…</span>}
@@ -248,7 +248,7 @@ export function ProgressiveTextDemo() {
       <button
         onClick={start}
         disabled={running}
-        className="text-[12px] font-medium text-[rgb(var(--accent))] hover:underline disabled:opacity-40"
+        className="text-[12px] font-medium text-[rgb(var(--accent-text))] hover:underline disabled:opacity-40"
       >
         {running ? "Streaming…" : displayed ? "Replay" : "Stream response"}
       </button>

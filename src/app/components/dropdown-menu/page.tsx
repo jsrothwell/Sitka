@@ -141,7 +141,7 @@ export function DropdownMenu({
                 className={cn(
                   "w-full flex items-center gap-2.5 px-3 py-1.5 text-[13px] text-left transition-colors duration-75",
                   action.destructive
-                    ? "text-[rgb(var(--status-danger))] hover:bg-[rgb(var(--status-danger)/0.1)]"
+                    ? "text-[rgb(var(--status-danger-text))] hover:bg-[rgb(var(--status-danger)/0.1)]"
                     : "text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--surface-raised))]",
                   action.disabled && "opacity-40 cursor-not-allowed pointer-events-none"
                 )}
@@ -436,7 +436,7 @@ function DemoDropdown({
                 }}
                 className={`w-full flex items-center gap-2.5 px-3 py-1.5 text-[13px] text-left transition-colors duration-75 ${
                   item.destructive
-                    ? "text-[rgb(var(--status-danger))] hover:bg-[rgb(var(--status-danger)/0.1)]"
+                    ? "text-[rgb(var(--status-danger-text))] hover:bg-[rgb(var(--status-danger)/0.1)]"
                     : "text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--surface-raised))]"
                 }`}
               >
@@ -511,7 +511,7 @@ export default function DropdownMenuPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Variants</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           The trigger can be any button style — text label with chevron, icon-only, or a split button action
-          area. The panel aligns to the trigger edge via the <code className="font-mono text-[13px] text-[rgb(var(--accent))]">align</code> prop.
+          area. The panel aligns to the trigger edge via the <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">align</code> prop.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
           <table className="w-full text-[13px]">
@@ -628,7 +628,7 @@ export default function DropdownMenuPage() {
             "Disabled items use aria-disabled='true' and pointer-events-none — they remain in the tab order but do not execute.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

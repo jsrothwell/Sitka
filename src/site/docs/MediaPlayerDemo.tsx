@@ -158,7 +158,7 @@ export function AudioPlayerDemo() {
           <button
             onClick={() => setShuffle(!shuffle)}
             className={cn("w-8 h-8 flex items-center justify-center rounded-lg transition-colors",
-              shuffle ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-tertiary))] hover:text-[rgb(var(--text-primary))]"
+              shuffle ? "text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-tertiary))] hover:text-[rgb(var(--text-primary))]"
             )}
           >
             <IconShuffle className="w-4 h-4" />
@@ -170,7 +170,7 @@ export function AudioPlayerDemo() {
 
           <button
             onClick={() => setPlaying(!playing)}
-            className="w-12 h-12 rounded-full bg-[rgb(var(--accent))] text-white flex items-center justify-center hover:opacity-90 active:scale-95 transition-all shadow-[0_4px_16px_rgba(52,168,101,0.4)]"
+            className="w-12 h-12 rounded-full bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] flex items-center justify-center hover:opacity-90 active:scale-95 transition-all shadow-[0_4px_16px_rgba(52,168,101,0.4)]"
           >
             {playing ? <IconPause className="w-5 h-5" /> : <IconPlay className="w-5 h-5 ml-0.5" />}
           </button>
@@ -182,7 +182,7 @@ export function AudioPlayerDemo() {
           <button
             onClick={() => setRepeat(!repeat)}
             className={cn("w-8 h-8 flex items-center justify-center rounded-lg transition-colors",
-              repeat ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-tertiary))] hover:text-[rgb(var(--text-primary))]"
+              repeat ? "text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-tertiary))] hover:text-[rgb(var(--text-primary))]"
             )}
           >
             <IconRepeat className="w-4 h-4" />
@@ -221,7 +221,7 @@ export function AudioPlayerDemo() {
             >
               <div className={cn("w-7 h-7 rounded-md bg-gradient-to-br flex-shrink-0", t.color)} />
               <div className="flex-1 min-w-0">
-                <p className={cn("text-[12px] font-medium truncate", i === trackIdx ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-primary))]")}>{t.title}</p>
+                <p className={cn("text-[12px] font-medium truncate", i === trackIdx ? "text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-primary))]")}>{t.title}</p>
                 <p className="text-[11px] text-[rgb(var(--text-tertiary))] truncate">{t.artist}</p>
               </div>
               <span className="text-[11px] text-[rgb(var(--text-tertiary))] font-mono flex-shrink-0">{formatTime(t.duration)}</span>
@@ -293,7 +293,7 @@ export function VideoPlayerDemo() {
               style={{ backgroundImage: "linear-gradient(rgb(var(--border)) 1px, transparent 1px), linear-gradient(90deg, rgb(var(--border)) 1px, transparent 1px)", backgroundSize: "40px 40px" }}
             />
             <div className="absolute bottom-[30%] left-1/2 -translate-x-1/2 w-32 h-20 rounded-lg border border-[rgb(var(--accent))]/30 bg-[rgb(var(--accent))]/5 flex items-center justify-center">
-              <span className="text-[rgb(var(--accent))]/50 text-[10px] font-mono">PREVIEW</span>
+              <span className="text-[rgb(var(--accent-text))]/50 text-[10px] font-mono">PREVIEW</span>
             </div>
           </div>
         </div>

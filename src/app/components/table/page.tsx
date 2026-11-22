@@ -325,9 +325,9 @@ export default function TablePage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Density</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           Three density modes adjust vertical padding without changing font size.{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">compact</code> is
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">compact</code> is
           ideal for data-dense dashboards;{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">comfortable</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">comfortable</code>{" "}
           gives breathing room for editorial content.
         </p>
         <div className="space-y-4">
@@ -364,9 +364,9 @@ export default function TablePage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Striped</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          The <code className="font-mono text-[13px] text-[rgb(var(--accent))]">striped</code> prop
+          The <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">striped</code> prop
           alternates row backgrounds using a CSS child-selector applied via a{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">data-striped</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">data-striped</code>{" "}
           attribute on the table root.
         </p>
         <Table striped>
@@ -404,7 +404,7 @@ export default function TablePage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Bordered columns</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          Add <code className="font-mono text-[13px] text-[rgb(var(--accent))]">bordered</code> to
+          Add <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">bordered</code> to
           draw vertical dividers between columns — useful for comparison tables or spreadsheet-style layouts.
         </p>
         <Table bordered>
@@ -450,10 +450,10 @@ export default function TablePage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           Table is a pure server component. Variants are driven by{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">data-*</code> attributes on the
-          root <code className="font-mono text-[13px] text-[rgb(var(--accent))]">&lt;table&gt;</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">data-*</code> attributes on the
+          root <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">&lt;table&gt;</code>{" "}
           so that Tailwind CSS child selectors (
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">[table[data-striped]_&:nth-child(even)]</code>
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">[table[data-striped]_&:nth-child(even)]</code>
           ) apply without passing props through every sub-component.
         </p>
         <PlatformTabs code={CODE} />
@@ -494,7 +494,7 @@ export default function TablePage() {
                 ["TableCaption", "<caption>", "Optional accessible description of the table"],
               ].map(([comp, el, notes], i) => (
                 <tr key={comp} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{comp}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{comp}</code></td>
                   <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--text-secondary))]">{el}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{notes}</td>
                 </tr>
@@ -552,7 +552,7 @@ export default function TablePage() {
             "Horizontal overflow is handled by the wrapping div — avoid fixed-width columns that would clip content on small screens.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

@@ -162,8 +162,8 @@ export default function SidebarPage() {
         </h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-3">
           The nav tree is driven by the{" "}
-          <code className="font-mono text-[11px] text-[rgb(var(--accent))]">navigation</code> export from{" "}
-          <code className="font-mono text-[11px] text-[rgb(var(--accent))]">@/lib/navigation.ts</code>.
+          <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">navigation</code> export from{" "}
+          <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">@/lib/navigation.ts</code>.
           The hierarchy is:
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
@@ -182,7 +182,7 @@ export default function SidebarPage() {
                 { type: "NavItem", desc: "Individual nav link", required: "title, href" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.type}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.type}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.desc}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.required}</td>
                 </tr>
@@ -191,7 +191,7 @@ export default function SidebarPage() {
           </table>
         </div>
         <p className="mt-3 text-[14px] text-[rgb(var(--text-secondary))]">
-          NavItem also accepts an optional <code className="font-mono text-[11px] text-[rgb(var(--accent))]">badge</code> string (e.g. &ldquo;New&rdquo;, &ldquo;Gold Standard&rdquo;) and an <code className="font-mono text-[11px] text-[rgb(var(--accent))]">external</code> boolean.
+          NavItem also accepts an optional <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">badge</code> string (e.g. &ldquo;New&rdquo;, &ldquo;Gold Standard&rdquo;) and an <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">external</code> boolean.
         </p>
       </section>
 
@@ -215,7 +215,7 @@ export default function SidebarPage() {
                 { token: "--header-height", value: "52px", desc: "Height of the logo row, shared with the top header" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.token}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.token}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.value}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.desc}</td>
                 </tr>
@@ -238,7 +238,7 @@ export default function SidebarPage() {
             "On desktop (md+) the sidebar is always visible and the isOpen prop has no effect.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}
@@ -275,7 +275,7 @@ export default function SidebarPage() {
             "The mobile close button has aria-label=\"Close navigation\".",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

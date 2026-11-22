@@ -145,7 +145,7 @@ export default function RatingPromptPage() {
           </div>
           <ol className="space-y-1.5 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4 font-mono text-[12px]" aria-live="polite">
             {log.map((line, i) => (
-              <li key={i} className={line.includes("rating sheet") ? "text-[rgb(var(--status-success))]" : "text-[rgb(var(--text-secondary))]"}>
+              <li key={i} className={line.includes("rating sheet") ? "text-[rgb(var(--status-success-text))]" : "text-[rgb(var(--text-secondary))]"}>
                 {line}
               </li>
             ))}

@@ -258,7 +258,7 @@ export default function GesturesPage() {
               className="p-4 rounded-xl bg-[rgb(var(--surface))] border border-[rgb(var(--border))] hover:border-[rgb(var(--accent-muted))] transition-colors"
             >
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-[11px] px-1.5 py-0.5 rounded bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] font-mono font-medium">
+                <span className="text-[11px] px-1.5 py-0.5 rounded bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] font-mono font-medium">
                   {gesture.icon}
                 </span>
                 <h3 className="font-semibold text-[rgb(var(--text-primary))]">{gesture.name}</h3>
@@ -304,7 +304,7 @@ export default function GesturesPage() {
                     <ul className="space-y-2">
                       {gesture.guidance.map((item, i) => (
                         <li key={i} className="flex gap-2 text-sm text-[rgb(var(--text-secondary))]">
-                          <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+                          <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
                           {item}
                         </li>
                       ))}
@@ -350,7 +350,7 @@ export default function GesturesPage() {
                           .map(([key, value]) => (
                             <span
                               key={key}
-                              className="px-1.5 py-0.5 text-[10px] rounded bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] font-mono"
+                              className="px-1.5 py-0.5 text-[10px] rounded bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] font-mono"
                             >
                               {typeof value === "string" && value.length > 20
                                 ? value.slice(0, 20) + "..."
@@ -410,7 +410,7 @@ export default function GesturesPage() {
               <ul className="space-y-2">
                 {category.tokens.map((token) => (
                   <li key={token.name} className="flex items-start gap-2">
-                    <code className="px-1.5 py-0.5 rounded text-[11px] font-mono bg-[rgb(var(--surface-raised))] text-[rgb(var(--accent))] border border-[rgb(var(--border-subtle))]">
+                    <code className="px-1.5 py-0.5 rounded text-[11px] font-mono bg-[rgb(var(--surface-raised))] text-[rgb(var(--accent-text))] border border-[rgb(var(--border-subtle))]">
                       {token.name}
                     </code>
                     <span className="text-xs text-[rgb(var(--text-secondary))]">{token.use}</span>
@@ -460,7 +460,7 @@ function PlatformCard({
         <h4 className="text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">
           {platform}
         </h4>
-        <span className="text-xs px-1.5 py-0.5 rounded bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))] font-mono">
+        <span className="text-xs px-1.5 py-0.5 rounded bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))] font-mono">
           {data.name}
         </span>
       </div>

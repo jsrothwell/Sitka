@@ -49,9 +49,9 @@ export default function SwiftThemeManagerPage() {
         {/* ── Overview ───────────────────────────────────── */}
         <Section title="Overview">
           <Para>
-            Sitka ships with a <code className="font-mono text-[12px] text-[rgb(var(--accent))]">ThemeManager</code> class that lets a SwiftUI app switch
+            Sitka ships with a <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">ThemeManager</code> class that lets a SwiftUI app switch
             between a user-chosen accent colour and the locked Sitka brand palette at runtime.
-            It is not a saved preference — it is a live preview tool that defaults to <code className="font-mono text-[12px] text-[rgb(var(--accent))]">false</code> on
+            It is not a saved preference — it is a live preview tool that defaults to <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">false</code> on
             every launch. The toggle is typically exposed in a debug overlay or internal settings screen.
           </Para>
           <Para>
@@ -77,7 +77,7 @@ export default function SwiftThemeManagerPage() {
                   ["App entry point",           "Creates ThemeManager, injects it as an EnvironmentObject"],
                 ].map(([file, role]) => (
                   <tr key={file} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                    <td className="px-4 py-3 font-mono text-[12px] text-[rgb(var(--accent))]">{file}</td>
+                    <td className="px-4 py-3 font-mono text-[12px] text-[rgb(var(--accent-text))]">{file}</td>
                     <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{role}</td>
                   </tr>
                 ))}
@@ -89,9 +89,9 @@ export default function SwiftThemeManagerPage() {
         {/* ── ThemeManager setup ─────────────────────────── */}
         <Section title="1 · ThemeManager setup">
           <Para>
-            Create <code className="font-mono text-[12px] text-[rgb(var(--accent))]">ThemeManager.swift</code> in your <code className="font-mono text-[12px] text-[rgb(var(--accent))]">Shared/Theme/</code> folder.
-            The <code className="font-mono text-[12px] text-[rgb(var(--accent))]">@Published</code> property on an <code className="font-mono text-[12px] text-[rgb(var(--accent))]">ObservableObject</code> causes SwiftUI
-            to re-render any view that reads it via <code className="font-mono text-[12px] text-[rgb(var(--accent))]">@EnvironmentObject</code> whenever the value changes.
+            Create <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">ThemeManager.swift</code> in your <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">Shared/Theme/</code> folder.
+            The <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">@Published</code> property on an <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">ObservableObject</code> causes SwiftUI
+            to re-render any view that reads it via <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">@EnvironmentObject</code> whenever the value changes.
           </Para>
           <CodeBlock
             language="swift"
@@ -106,8 +106,8 @@ final class ThemeManager: ObservableObject {
 
           <SubHeading>Inject at the app root (iOS)</SubHeading>
           <Para>
-            Create a single <code className="font-mono text-[12px] text-[rgb(var(--accent))]">ThemeManager</code> instance at the app entry point and inject it into
-            the environment with <code className="font-mono text-[12px] text-[rgb(var(--accent))]">.environmentObject()</code>. Also wire <code className="font-mono text-[12px] text-[rgb(var(--accent))]">.tint()</code>
+            Create a single <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">ThemeManager</code> instance at the app entry point and inject it into
+            the environment with <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">.environmentObject()</code>. Also wire <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">.tint()</code>
             through the manager so system-rendered controls (native buttons, toggle switches, back-chevrons) also
             switch colour.
           </Para>
@@ -136,9 +136,9 @@ struct JobFlowApp: App {
 
           <SubHeading>Force a full tree rebuild when the toggle flips</SubHeading>
           <Para>
-            SwiftUI caches rendered views aggressively. Without <code className="font-mono text-[12px] text-[rgb(var(--accent))]">.id()</code> on the root,
-            views that were already on screen keep their old colours even after <code className="font-mono text-[12px] text-[rgb(var(--accent))]">useSitkaDefaults</code> changes.
-            Applying <code className="font-mono text-[12px] text-[rgb(var(--accent))]">.id(themeManager.useSitkaDefaults)</code> tells SwiftUI to treat the whole
+            SwiftUI caches rendered views aggressively. Without <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">.id()</code> on the root,
+            views that were already on screen keep their old colours even after <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">useSitkaDefaults</code> changes.
+            Applying <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">.id(themeManager.useSitkaDefaults)</code> tells SwiftUI to treat the whole
             content view as a new view whenever the boolean flips — guaranteeing a clean re-render.
           </Para>
           <CodeBlock
@@ -183,7 +183,7 @@ struct JobFlowApp: App {
             Sitka is dark-first. Fixed hex values for text tokens — like <code className="font-mono text-[11px]">Color.white</code> — look correct in dark mode but become invisible against a white background in light mode. All text and surface tokens must resolve to adaptive system colors.
           </Callout>
           <Para>
-            The <code className="font-mono text-[12px] text-[rgb(var(--accent))]">SitkaTokens.swift</code> Color enum uses static hex values, which are correct for
+            The <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">SitkaTokens.swift</code> Color enum uses static hex values, which are correct for
             brand colours (accent, success, warning, error) that are intentionally vivid regardless of mode. But
             text and surface tokens must use adaptive platform values so they automatically flip with the system
             appearance.
@@ -210,8 +210,8 @@ extension SitkaTokens.Color {
 }`}
           />
           <Para>
-            For macOS, use <code className="font-mono text-[12px] text-[rgb(var(--accent))]">NSColor</code> equivalents — see the{" "}
-            <Link href="/libraries/macos" className="text-[rgb(var(--accent))] underline underline-offset-2">macOS library page</Link>{" "}
+            For macOS, use <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">NSColor</code> equivalents — see the{" "}
+            <Link href="/libraries/macos" className="text-[rgb(var(--accent-text))] underline underline-offset-2">macOS library page</Link>{" "}
             for the full mapping table.
           </Para>
 
@@ -247,9 +247,9 @@ extension SitkaTokens.Color {
         {/* ── SitkaDebugModifier ─────────────────────────── */}
         <Section title="3 · SitkaDebugModifier and Color.sitka* aliases">
           <Para>
-            <code className="font-mono text-[12px] text-[rgb(var(--accent))]">SitkaDebugModifier.swift</code> provides short-form <code className="font-mono text-[12px] text-[rgb(var(--accent))]">Color.sitka*</code> aliases
-            so views don&apos;t reach into the <code className="font-mono text-[12px] text-[rgb(var(--accent))]">SFColor</code> or <code className="font-mono text-[12px] text-[rgb(var(--accent))]">SitkaTokens.Color</code> namespace directly.
-            It also houses the <code className="font-mono text-[12px] text-[rgb(var(--accent))]">ThemeManager</code> class in some project layouts.
+            <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">SitkaDebugModifier.swift</code> provides short-form <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">Color.sitka*</code> aliases
+            so views don&apos;t reach into the <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">SFColor</code> or <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">SitkaTokens.Color</code> namespace directly.
+            It also houses the <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">ThemeManager</code> class in some project layouts.
           </Para>
           <CodeBlock
             language="swift"
@@ -281,9 +281,9 @@ extension Color {
         {/* ── effectiveAccent pattern ────────────────────── */}
         <Section title="4 · The effectiveAccent pattern">
           <Para>
-            When <code className="font-mono text-[12px] text-[rgb(var(--accent))]">useSitkaDefaults</code> is <code className="font-mono text-[12px] text-[rgb(var(--accent))]">true</code>, views should use the locked Sitka brand accent.
-            When it is <code className="font-mono text-[12px] text-[rgb(var(--accent))]">false</code>, they should use the user&apos;s chosen colour from <code className="font-mono text-[12px] text-[rgb(var(--accent))]">AppSettings</code>.
-            The computed property <code className="font-mono text-[12px] text-[rgb(var(--accent))]">effectiveAccent</code> encodes this decision in one place.
+            When <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">useSitkaDefaults</code> is <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">true</code>, views should use the locked Sitka brand accent.
+            When it is <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">false</code>, they should use the user&apos;s chosen colour from <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">AppSettings</code>.
+            The computed property <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">effectiveAccent</code> encodes this decision in one place.
           </Para>
           <CodeBlock
             language="swift"
@@ -318,8 +318,8 @@ extension Color {
 
           <SubHeading>Where to add it</SubHeading>
           <Para>
-            Every view that directly reads <code className="font-mono text-[12px] text-[rgb(var(--accent))]">appSettings.currentAccent</code> needs the
-            <code className="font-mono text-[12px] text-[rgb(var(--accent))]"> effectiveAccent</code> property. Common culprits:
+            Every view that directly reads <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">appSettings.currentAccent</code> needs the
+            <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]"> effectiveAccent</code> property. Common culprits:
           </Para>
           <ul className="space-y-1.5 text-[14px] text-[rgb(var(--text-secondary))] mb-4">
             {[
@@ -332,7 +332,7 @@ extension Color {
               "ContentView — tab bar selected icon (iOS), sidebar selection (macOS)",
             ].map((item) => (
               <li key={item} className="flex gap-2">
-                <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+                <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
                 <code className="font-mono text-[12px]">{item.split(" — ")[0]}</code>
                 <span className="text-[rgb(var(--text-tertiary))]">— {item.split(" — ")[1]}</span>
               </li>
@@ -347,12 +347,12 @@ extension Color {
         {/* ── GlassTheme ─────────────────────────────────── */}
         <Section title="5 · Routing GlassTheme.accent through ThemeManager">
           <Para>
-            <code className="font-mono text-[12px] text-[rgb(var(--accent))]">GlassTheme</code> is a static struct — it reads <code className="font-mono text-[12px] text-[rgb(var(--accent))]">AppSettings.shared.currentAccent</code> directly
-            and has no connection to <code className="font-mono text-[12px] text-[rgb(var(--accent))]">ThemeManager</code>. Any view that uses <code className="font-mono text-[12px] text-[rgb(var(--accent))]">GlassTheme.accent</code> will
+            <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">GlassTheme</code> is a static struct — it reads <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">AppSettings.shared.currentAccent</code> directly
+            and has no connection to <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">ThemeManager</code>. Any view that uses <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">GlassTheme.accent</code> will
             always show the user&apos;s custom colour even when Sitka mode is on.
           </Para>
           <Para>
-            The fix is to make <code className="font-mono text-[12px] text-[rgb(var(--accent))]">GlassTheme.accent</code> a passthrough that takes the resolved
+            The fix is to make <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">GlassTheme.accent</code> a passthrough that takes the resolved
             colour at the call site, or to add a ThemeManager-aware variant:
           </Para>
           <CodeBlock
@@ -406,7 +406,7 @@ struct MacSectionHeader: View {
           </Callout>
           <Para>
             This is the most common cause of "works on iOS, crashes on macOS" bugs after adding ThemeManager.
-            macOS <code className="font-mono text-[12px] text-[rgb(var(--accent))]">ContentView</code> often presents sheets with explicit environment declarations. Every one of those chains must include all three managers.
+            macOS <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">ContentView</code> often presents sheets with explicit environment declarations. Every one of those chains must include all three managers.
           </Para>
           <CodeBlock
             language="swift"
@@ -440,8 +440,8 @@ struct MacSectionHeader: View {
 
           <SubHeading>Why the root injection isn&apos;t enough</SubHeading>
           <Para>
-            On iOS, <code className="font-mono text-[12px] text-[rgb(var(--accent))]">.sheet()</code> inherits the parent&apos;s environment automatically. On macOS, sheets presented
-            from a <code className="font-mono text-[12px] text-[rgb(var(--accent))]">WindowGroup</code> run in a separate context and do not inherit the parent environment unless
+            On iOS, <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">.sheet()</code> inherits the parent&apos;s environment automatically. On macOS, sheets presented
+            from a <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">WindowGroup</code> run in a separate context and do not inherit the parent environment unless
             you explicitly forward it. This is a macOS-only behaviour and not a SwiftUI bug.
           </Para>
         </Section>
@@ -471,7 +471,7 @@ struct MacSectionHeader: View {
                 ].map(([item, location]) => (
                   <tr key={item} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                     <td className="px-4 py-3 text-[rgb(var(--text-primary))]">{item}</td>
-                    <td className="px-4 py-3 font-mono text-[12px] text-[rgb(var(--accent))]">{location}</td>
+                    <td className="px-4 py-3 font-mono text-[12px] text-[rgb(var(--accent-text))]">{location}</td>
                   </tr>
                 ))}
               </tbody>

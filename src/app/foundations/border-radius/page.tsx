@@ -100,7 +100,7 @@ export default function BorderRadiusPage() {
                   <span className="text-[13px] font-semibold text-[rgb(var(--text-primary))]">{r.name}</span>
                   <code className="text-[12px] font-mono font-semibold text-[rgb(var(--text-primary))]">{r.value}</code>
                 </div>
-                <code className="text-[11px] font-mono text-[rgb(var(--accent))]">{r.token}</code>
+                <code className="text-[11px] font-mono text-[rgb(var(--accent-text))]">{r.token}</code>
                 <p className="text-[11px] text-[rgb(var(--text-tertiary))] mt-1">{r.use}</p>
               </div>
             </div>
@@ -140,7 +140,7 @@ export default function BorderRadiusPage() {
                     }`}
                   >
                     <td className="px-4 py-3">
-                      <code className="font-mono text-[11px] text-[rgb(var(--accent))]">{r.token}</code>
+                      <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{r.token}</code>
                     </td>
                     <td className="px-4 py-3">
                       <code className="font-mono text-[12px] text-[rgb(var(--text-primary))]">{r.value}</code>

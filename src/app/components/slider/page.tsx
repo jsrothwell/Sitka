@@ -474,7 +474,7 @@ export default function SliderPage() {
             "Value display must be screen-reader accessible via aria-valuetext if needed.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

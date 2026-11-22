@@ -8,11 +8,11 @@ import { ArrowList, DocSection, DocTable, PreviewSection, SourceNote, UsageGrid 
 type SyncState = "synced" | "syncing" | "stalled" | "error" | "signedOut" | "disabled";
 
 const STATES: Record<SyncState, { icon: string; short: string; spoken: string; token: string; pulse?: boolean }> = {
-  synced: { icon: "☁︎✓", short: "Synced", spoken: "iCloud synced just now", token: "--status-success" },
+  synced: { icon: "☁︎✓", short: "Synced", spoken: "iCloud synced just now", token: "--status-success-text" },
   syncing: { icon: "☁︎", short: "Syncing…", spoken: "iCloud syncing", token: "--accent", pulse: true },
-  stalled: { icon: "☁︎!", short: "Taking longer than usual", spoken: "iCloud sync taking longer than usual", token: "--status-caution" },
-  error: { icon: "☁︎!", short: "Sync error", spoken: "iCloud sync error: quota exceeded", token: "--status-caution" },
-  signedOut: { icon: "☁︎👤", short: "Sign in to iCloud", spoken: "Not signed in to iCloud", token: "--status-caution" },
+  stalled: { icon: "☁︎!", short: "Taking longer than usual", spoken: "iCloud sync taking longer than usual", token: "--status-caution-text" },
+  error: { icon: "☁︎!", short: "Sync error", spoken: "iCloud sync error: quota exceeded", token: "--status-caution-text" },
+  signedOut: { icon: "☁︎👤", short: "Sign in to iCloud", spoken: "Not signed in to iCloud", token: "--status-caution-text" },
   disabled: { icon: "☁︎⃠", short: "iCloud off", spoken: "iCloud disabled", token: "--text-secondary" },
 };
 
@@ -28,8 +28,8 @@ const CODE = {
   | { kind: "disabled" };
 
 const TOKEN: Record<SyncState["kind"], string> = {
-  synced: "--status-success", syncing: "--accent", stalled: "--status-caution",
-  error: "--status-caution", signedOut: "--status-caution", disabled: "--text-secondary",
+  synced: "--status-success-text", syncing: "--accent", stalled: "--status-caution-text",
+  error: "--status-caution-text", signedOut: "--status-caution-text", disabled: "--text-secondary",
 };
 
 function shortLabel(s: SyncState) {
@@ -69,12 +69,12 @@ export function SyncStatus({ state, style = "compact" }: { state: SyncState; sty
 </span>
 
 <style>
-.sync { --c: var(--status-success); display: inline-flex; align-items: center; gap: 4px;
+.sync { --c: var(--status-success-text); display: inline-flex; align-items: center; gap: 4px;
         font-size: 12px; font-weight: 500; color: rgb(var(--c)); }
 .sync[data-state="syncing"]  { --c: var(--accent); }
 .sync[data-state="stalled"],
 .sync[data-state="error"],
-.sync[data-state="signedOut"] { --c: var(--status-caution); }
+.sync[data-state="signedOut"] { --c: var(--status-caution-text); }
 .sync[data-state="disabled"] { --c: var(--text-secondary); }
 @media (prefers-reduced-motion: no-preference) {
   .sync[data-state="syncing"] .sync__icon { animation: pulse 1.6s ease-in-out infinite; }
@@ -183,7 +183,7 @@ export default function SyncStatusPage() {
                 onClick={() => setState(k)}
                 className={`rounded-full px-2.5 py-1 text-[11px] font-medium ${
                   k === state
-                    ? "bg-[rgb(var(--accent))] text-white"
+                    ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
                     : "bg-[rgb(var(--surface))] text-[rgb(var(--text-secondary))] border border-[rgb(var(--border))]"
                 }`}
               >
@@ -214,7 +214,7 @@ export default function SyncStatusPage() {
             {(state === "stalled" || state === "error") && (
               <button
                 onClick={() => setShowReport(true)}
-                className="flex w-full items-center justify-between border-t border-[rgb(var(--border-subtle))] px-4 py-3 text-left text-[14px] text-[rgb(var(--accent))]"
+                className="flex w-full items-center justify-between border-t border-[rgb(var(--border-subtle))] px-4 py-3 text-left text-[14px] text-[rgb(var(--accent-text))]"
               >
                 Sync Troubleshooting <span aria-hidden>›</span>
               </button>
@@ -243,7 +243,7 @@ Records: 1,204 · Partially failed: 3`}
                 <button onClick={() => setShowReport(false)} className="px-3 py-1.5 text-[13px] text-[rgb(var(--text-secondary))]">
                   Cancel
                 </button>
-                <button className="rounded-full bg-[rgb(var(--accent))] px-4 py-1.5 text-[13px] font-semibold text-white">Send</button>
+                <button className="rounded-full bg-[rgb(var(--accent))] px-4 py-1.5 text-[13px] font-semibold text-[rgb(var(--on-accent))]">Send</button>
               </div>
             </div>
           )}
@@ -254,11 +254,11 @@ Records: 1,204 · Partially failed: 3`}
         <DocTable
           headers={["State", "Label", "Token", "Notes"]}
           rows={[
-            ["Synced", "“Synced” → “5 min ago”", <code key="1">--status-success</code>, "Switches from “Synced” to a relative time after 60 s so it never claims a freshness it doesn't have."],
+            ["Synced", "“Synced” → “5 min ago”", <code key="1">--status-success-text</code>, "Switches from “Synced” to a relative time after 60 s so it never claims a freshness it doesn't have."],
             ["Syncing", "“Syncing…”", <code key="2">--accent</code>, "The only animated state: a slow pulse, disabled under reduced motion."],
-            ["Stalled", "“Taking longer than usual”", <code key="3">--status-caution</code>, "Entered after a timeout. Prevents the indicator sticking on “Syncing…” forever when uploads silently fail (a real JobFlo bug)."],
-            ["Error", "“Sync error”", <code key="4">--status-caution</code>, "Spoken label includes the reason. Offers Sync Troubleshooting."],
-            ["Signed out", "“Sign in to iCloud”", <code key="5">--status-caution</code>, "Phrased as the fix, not the problem."],
+            ["Stalled", "“Taking longer than usual”", <code key="3">--status-caution-text</code>, "Entered after a timeout. Prevents the indicator sticking on “Syncing…” forever when uploads silently fail (a real JobFlo bug)."],
+            ["Error", "“Sync error”", <code key="4">--status-caution-text</code>, "Spoken label includes the reason. Offers Sync Troubleshooting."],
+            ["Signed out", "“Sign in to iCloud”", <code key="5">--status-caution-text</code>, "Phrased as the fix, not the problem."],
             ["Disabled", "“iCloud off”", <code key="6">--text-secondary</code>, "Neutral — the user chose this. Never use warning colors for a deliberate setting."],
           ]}
         />

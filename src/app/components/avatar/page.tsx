@@ -379,9 +379,9 @@ export default function AvatarPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Initials fallback</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          When no <code className="font-mono text-[13px] text-[rgb(var(--accent))]">src</code> is provided,
-          initials are derived from the <code className="font-mono text-[13px] text-[rgb(var(--accent))]">alt</code> prop
-          (first + last word). Pass <code className="font-mono text-[13px] text-[rgb(var(--accent))]">initials</code> to
+          When no <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">src</code> is provided,
+          initials are derived from the <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">alt</code> prop
+          (first + last word). Pass <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">initials</code> to
           override.
         </p>
         <ComponentPreview>
@@ -396,7 +396,7 @@ export default function AvatarPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Avatar group</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">AvatarGroup</code> stacks
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">AvatarGroup</code> stacks
           avatars with a negative margin and a surface-colored ring to separate them visually.
         </p>
         <ComponentPreview>
@@ -473,7 +473,7 @@ export default function AvatarPage() {
             "AvatarGroup has no semantic role; describe the group with a nearby heading or aria-label on the parent.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

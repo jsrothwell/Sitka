@@ -205,7 +205,7 @@ export default function FormLayoutPage() {
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           A CSS grid with two equal columns. Related fields (first name / last name, city / country) sit on
           the same row. Wider fields span both columns with{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">col-span-2</code>. Only use at
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">col-span-2</code>. Only use at
           widths ≥ 560 px — switch to stacked on mobile.
         </p>
         <ComponentPreview>
@@ -246,7 +246,7 @@ export default function FormLayoutPage() {
               ].map((row, i) => (
                 <tr key={row.layout} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{row.layout}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.min}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.min}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.best}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{row.avoid}</td>
                 </tr>
@@ -267,7 +267,7 @@ export default function FormLayoutPage() {
             { title: "Full-width submit buttons on mobile", body: "A full-width button (w-full) on narrow screens gives a larger touch target and feels more native. On desktop, right-aligned buttons at natural width are more appropriate." },
           ].map(({ title, body }) => (
             <li key={title} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               <span><strong className="text-[rgb(var(--text-primary))]">{title}.</strong> {body}</span>
             </li>
           ))}

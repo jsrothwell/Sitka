@@ -45,7 +45,7 @@ export function NavbarDemo() {
                 className={cn(
                   "px-3 py-1.5 rounded-lg text-[13px] font-medium transition-colors",
                   active === label
-                    ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]"
+                    ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]"
                     : "text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--surface-raised))]"
                 )}
               >
@@ -86,7 +86,7 @@ export function NavbarDemo() {
           </div>
 
           {/* New button */}
-          <button className="hidden sm:flex items-center gap-1.5 h-8 px-3 rounded-lg bg-[rgb(var(--accent))] text-white text-[12px] font-medium hover:opacity-90 transition-opacity">
+          <button className="hidden sm:flex items-center gap-1.5 h-8 px-3 rounded-lg bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[12px] font-medium hover:opacity-90 transition-opacity">
             <Plus className="w-3.5 h-3.5" />
             New
           </button>
@@ -155,7 +155,7 @@ export function NavbarDemo() {
                 className={cn(
                   "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-[13px] font-medium transition-colors text-left",
                   active === label
-                    ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]"
+                    ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]"
                     : "text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface-raised))] hover:text-[rgb(var(--text-primary))]"
                 )}
               >
@@ -225,7 +225,7 @@ export function SidebarNavDemo() {
               className={cn(
                 "w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-[13px] font-medium transition-colors",
                 active === label
-                  ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]"
+                  ? "bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]"
                   : "text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface-raised))] hover:text-[rgb(var(--text-primary))]"
               )}
             >
@@ -256,7 +256,7 @@ export function SidebarNavDemo() {
         </div>
         <div className="flex-1 p-4 flex items-center justify-center">
           <p className="text-[12px] text-[rgb(var(--text-tertiary))]">
-            {collapsed ? "Expand sidebar →" : "← Collapse sidebar"} • Active: <span className="text-[rgb(var(--accent))]">{active}</span>
+            {collapsed ? "Expand sidebar →" : "← Collapse sidebar"} • Active: <span className="text-[rgb(var(--accent-text))]">{active}</span>
           </p>
         </div>
       </div>

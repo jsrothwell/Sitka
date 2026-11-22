@@ -492,7 +492,7 @@ export default function NavbarPage() {
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           A vertical sidebar suits apps with more than five top-level destinations or where a wide content area
           benefits from a narrow left rail. Supports collapse-to-icon mode — the brand logo remains visible
-          and each item gets a <code className="font-mono text-[13px] text-[rgb(var(--accent))]">title</code> tooltip when collapsed.
+          and each item gets a <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">title</code> tooltip when collapsed.
         </p>
         <ComponentPreview>
           <div className="w-full">
@@ -523,7 +523,7 @@ export default function NavbarPage() {
                 ["Hamburger",  "Far right (mobile only)", "Hides/shows the mobile drawer. Morphs to ✕ when open."],
               ].map(([zone, placement, contents], i) => (
                 <tr key={zone} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{zone}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{zone}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{placement}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{contents}</td>
                 </tr>
@@ -551,7 +551,7 @@ export default function NavbarPage() {
                 ["< 768px",      "Hidden — hamburger drawer", "Icon only",              "Avatar + hamburger only"],
               ].map(([bp, nav, search, actions], i) => (
                 <tr key={bp} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{bp}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{bp}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{nav}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{search}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{actions}</td>
@@ -595,7 +595,7 @@ export default function NavbarPage() {
             },
           ].map(({ title, body }) => (
             <li key={title} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               <span><strong className="text-[rgb(var(--text-primary))]">{title}.</strong> {body}</span>
             </li>
           ))}
@@ -615,7 +615,7 @@ export default function NavbarPage() {
             "Don't put the skip-to-content link inside the navbar — place it as the very first focusable element on the page, above the navbar.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

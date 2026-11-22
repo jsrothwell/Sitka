@@ -1,0 +1,24 @@
+# Sitka detekt rules: colours come from the Sitka theme, never literals.
+# Merge into an app's detekt config with `config.from(files("path/to/sitka-detekt.yml"))`
+# and buildUponDefaultConfig = true. ForbiddenMethodCall needs type resolution
+# (run `detektMain`, not `detekt`). Exclude the file that defines the Sitka palette.
+style:
+  ForbiddenMethodCall:
+    active: true
+    excludes: ['**/SitkaColors.kt', '**/SitkaTheme.kt']
+    methods:
+      - value: 'androidx.compose.ui.graphics.Color(kotlin.Long)'
+        reason: 'Use a SitkaTheme colour instead of a literal colour.'
+      - value: 'androidx.compose.ui.graphics.Color(kotlin.Int)'
+        reason: 'Use a SitkaTheme colour instead of a literal colour.'
+      - value: 'androidx.compose.ui.graphics.Color(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)'
+        reason: 'Use a SitkaTheme colour instead of a literal colour.'
+      - value: 'androidx.compose.ui.graphics.Color(kotlin.Float, kotlin.Float, kotlin.Float, kotlin.Float, androidx.compose.ui.graphics.colorspace.ColorSpace)'
+        reason: 'Use a SitkaTheme colour instead of a literal colour.'
+      - value: 'android.graphics.Color.parseColor(kotlin.String)'
+        reason: 'Use a SitkaTheme colour instead of parsing a hex string.'
+  ForbiddenImport:
+    active: true
+    imports:
+      - value: 'androidx.compose.ui.graphics.Color.Companion.*'
+        reason: 'Named Compose colours (Color.Red…) skip the Sitka palette. Use SitkaTheme colours.'

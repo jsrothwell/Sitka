@@ -1,6 +1,6 @@
 {
   "name": "sitka-ui",
-  "version": "1.3.0",
+  "version": "1.13.0",
   "description": "Sitka Design System — React component library",
   "type": "module",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "components",
     "react"
   ],
-"repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/jsrothwell/Sitka.git",
     "directory": "packages/sitka-ui"

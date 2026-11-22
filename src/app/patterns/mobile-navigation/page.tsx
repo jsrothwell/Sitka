@@ -23,7 +23,7 @@ export default function MobileNavigationPage() {
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           The default mobile navigation pattern. Fixed to the bottom of the viewport with an icon and
           label for each destination. Active tab uses the accent color; inactive tabs use{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">text-tertiary</code>.
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">text-tertiary</code>.
           Badge counts appear above the icon for unread indicators.
         </p>
         <ComponentPreview>
@@ -102,7 +102,7 @@ export default function MobileNavigationPage() {
               ].map((row, i) => (
                 <tr key={row.pattern} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap">{row.pattern}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.count}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.count}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.best}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{row.avoid}</td>
                 </tr>
@@ -185,7 +185,7 @@ export default function MobileNavigationPage() {
             },
           ].map(({ title, body }) => (
             <li key={title} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               <span><strong className="text-[rgb(var(--text-primary))]">{title}.</strong> {body}</span>
             </li>
           ))}
@@ -205,7 +205,7 @@ export default function MobileNavigationPage() {
             "On iOS, SwiftUI TabView and NavigationSplitView handle all accessibility automatically. Only build custom navigation when you need behavior the system doesn't provide, and replicate all ARIA semantics.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               {item}
             </li>
           ))}

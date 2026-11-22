@@ -617,7 +617,7 @@ export default function ChartingPage() {
             <tbody>
               {CHART_TYPES.map((row, i) => (
                 <tr key={row.type} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className={`px-4 py-3 font-semibold whitespace-nowrap ${row.type === "Sankey" || row.type === "Alluvial" || row.type === "Source Alluvial" ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-primary))]"}`}>{row.type}</td>
+                  <td className={`px-4 py-3 font-semibold whitespace-nowrap ${row.type === "Sankey" || row.type === "Alluvial" || row.type === "Source Alluvial" ? "text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-primary))]"}`}>{row.type}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.when}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{row.avoid}</td>
                 </tr>
@@ -686,7 +686,7 @@ export default function ChartingPage() {
             },
           ].map(({ term, def }) => (
             <div key={term} className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
-              <code className="text-[11px] font-mono text-[rgb(var(--accent))] block mb-1">{term}</code>
+              <code className="text-[11px] font-mono text-[rgb(var(--accent-text))] block mb-1">{term}</code>
               <p className="text-[12px] text-[rgb(var(--text-secondary))] leading-relaxed">{def}</p>
             </div>
           ))}
@@ -782,7 +782,7 @@ export function SankeyChart({ nodes, links, width, height }: {
             { lib: "Swift Charts", note: "No native Sankey support. Use a custom Shape implementation with Path and cubic bezier curves. Performance is excellent — keep to <50 links." },
           ].map(({ lib, note }) => (
             <div key={lib} className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
-              <code className="text-[11px] font-mono text-[rgb(var(--accent))] block mb-1">{lib}</code>
+              <code className="text-[11px] font-mono text-[rgb(var(--accent-text))] block mb-1">{lib}</code>
               <p className="text-[11px] text-[rgb(var(--text-secondary))] leading-relaxed">{note}</p>
             </div>
           ))}
@@ -848,7 +848,7 @@ export function SankeyChart({ nodes, links, width, height }: {
             "Band opacity at 25–35% allows the overlap zone to be read as a blend. Lower opacity loses the band; higher opacity obscures the space between columns.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}
@@ -955,7 +955,7 @@ export function AlluvialChart({ bands, lx, rx }: {
             "Always pair the chart with a text summary of the key finding — e.g. 'Referral drives 22% of inbound but converts at 3× the rate of Paid.' The chart alone is not accessible.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}
@@ -969,7 +969,7 @@ export function AlluvialChart({ bands, lx, rx }: {
                 "You have 3–7 distinct sources feeding a multi-stage pipeline",
                 "The question is about source quality, not just volume",
                 "Stakeholders need to see both drop-off and source mix in one view",
-              ].map((t) => <li key={t} className="flex gap-1.5"><span className="text-[rgb(var(--accent))]">→</span>{t}</li>)}
+              ].map((t) => <li key={t} className="flex gap-1.5"><span className="text-[rgb(var(--accent-text))]">→</span>{t}</li>)}
             </ul>
           </div>
           <div className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4">
@@ -1043,7 +1043,7 @@ function streamPath(pts: StreamPt[]): string {
             <thead>
               <tr className="bg-[rgb(var(--surface-raised))] border-b border-[rgb(var(--border))]">
                 {["Dimension", "Sankey", "Alluvial"].map((h, i) => (
-                  <th key={h} className={`px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider ${i === 0 ? "text-[rgb(var(--text-tertiary))]" : i === 1 ? "text-[rgb(var(--accent))]" : "text-[rgb(var(--text-tertiary))]"}`}>{h}</th>
+                  <th key={h} className={`px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider ${i === 0 ? "text-[rgb(var(--text-tertiary))]" : i === 1 ? "text-[rgb(var(--accent-text))]" : "text-[rgb(var(--text-tertiary))]"}`}>{h}</th>
                 ))}
               </tr>
             </thead>
@@ -1117,7 +1117,7 @@ function streamPath(pts: StreamPt[]): string {
                 },
               ].map((row, i) => (
                 <tr key={row.bp} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap align-top pt-3.5">{row.bp}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap align-top pt-3.5">{row.bp}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.standard}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.flow}</td>
                 </tr>
@@ -1206,17 +1206,17 @@ function streamPath(pts: StreamPt[]): string {
           ].map(({ label, spec }) => (
             <div key={label} className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-3 flex items-center justify-between">
               <span className="text-[12px] text-[rgb(var(--text-secondary))]">{label}</span>
-              <code className="font-mono text-[11px] text-[rgb(var(--accent))]">{spec}</code>
+              <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{spec}</code>
             </div>
           ))}
         </div>
 
         <div className="rounded-[10px] border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-4 flex items-start gap-3">
-          <span className="text-[rgb(var(--accent))] text-[14px] shrink-0">→</span>
+          <span className="text-[rgb(var(--accent-text))] text-[14px] shrink-0">→</span>
           <p className="text-[13px] text-[rgb(var(--text-secondary))] leading-relaxed">
             Full interactive demo, scenario cards (Optimistic / Current Pace / Pessimistic), and implementation
             code are on the{" "}
-            <a href="/patterns/burn-trajectory" className="text-[rgb(var(--accent))] underline underline-offset-2 hover:no-underline">
+            <a href="/patterns/burn-trajectory" className="text-[rgb(var(--accent-text))] underline underline-offset-2 hover:no-underline">
               Burn Trajectory pattern page
             </a>.
           </p>
@@ -1236,7 +1236,7 @@ function streamPath(pts: StreamPt[]): string {
             "Touch targets on mobile chart interactions (data point dots, node rectangles in Sankey) must be at least 44×44dp. Invisible hit areas are fine — expand the touchable area beyond the visual element.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}

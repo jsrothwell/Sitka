@@ -90,7 +90,7 @@ function InterviewParserDemo() {
           <button
             onClick={() => result && setStep("confirm")}
             disabled={!result}
-            className="w-full py-2 rounded-xl bg-[rgb(var(--accent))] text-white text-[13px] font-semibold
+            className="w-full py-2 rounded-xl bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[13px] font-semibold
                        disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-90 transition-opacity"
           >
             Parse Interview Email
@@ -137,7 +137,7 @@ function InterviewParserDemo() {
                   <span className="w-2 h-2 rounded-full bg-[rgb(var(--accent))]" />
                   <span className="text-[12px] text-[rgb(var(--text-primary))]">Meridian AI — Backend Eng</span>
                 </div>
-                <button className="w-full mt-2 py-2 rounded-xl bg-[rgb(var(--accent))] text-white text-[12px] font-semibold hover:opacity-90 transition-opacity">
+                <button className="w-full mt-2 py-2 rounded-xl bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[12px] font-semibold hover:opacity-90 transition-opacity">
                   Add to Calendar & Set Interviewing
                 </button>
               </div>
@@ -503,7 +503,7 @@ export default function InterviewParserPage() {
             { heading: "Paste fallback for in-app use", body: "Also expose a 'Parse Email' toolbar button inside JobDetailView. This opens a plain text-paste sheet, feeds it to the same InterviewParser, and presents InterviewConfirmationSheet directly — no Share Extension needed." },
           ].map(({ heading, body }) => (
             <div key={heading} className="flex gap-3 text-[14px]">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               <div>
                 <span className="font-medium text-[rgb(var(--text-primary))]">{heading} — </span>
                 <span className="text-[rgb(var(--text-secondary))]">{body}</span>
@@ -559,7 +559,7 @@ export default function InterviewParserPage() {
             "The 'Add to Calendar' button should briefly announce success via UIAccessibility.post(notification: .announcement, argument: 'Interview added to calendar') after the event is saved.",
           ].map(item => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}

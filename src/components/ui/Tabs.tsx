@@ -41,7 +41,7 @@ export function Tabs({ tabs, defaultTab, children, className }: TabsProps) {
           >
             {tab.label}
             {tab.badge && (
-              <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]">
+              <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]">
                 {tab.badge}
               </span>
             )}

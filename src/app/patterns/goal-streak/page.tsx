@@ -80,7 +80,7 @@ export function GoalStreakCard({
         </div>
 
         {isGoalMet && (
-          <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 10, color: "rgb(var(--status-success))", fontSize: 12, fontWeight: 600 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 10, color: "rgb(var(--status-success-text))", fontSize: 12, fontWeight: 600 }}>
             <span style={{ width: 18, height: 18, borderRadius: "50%", background: "rgb(var(--status-success))", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
@@ -366,7 +366,7 @@ function GoalStreakDemo() {
           <div style={{ height: 8, borderRadius: 99, background: "rgb(var(--progress-track))", overflow: "hidden" }}>
             <div style={{ height: "100%", width: "100%", borderRadius: 99, background: "rgb(var(--status-success))" }} />
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 10, color: "rgb(var(--status-success))", fontSize: 12, fontWeight: 600 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 10, color: "rgb(var(--status-success-text))", fontSize: 12, fontWeight: 600 }}>
             <div style={{ width: 18, height: 18, borderRadius: "50%", background: "rgb(var(--status-success))", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <Check size={10} color="#fff" strokeWidth={3} />
             </div>
@@ -445,11 +445,11 @@ export default function GoalStreakPage() {
             <tbody>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">In progress</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Bar fills with <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--accent</code>; streak shows 🔥 if &gt; 0, else 💤</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Bar fills with <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--accent</code>; streak shows 🔥 if &gt; 0, else 💤</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Goal met</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Bar transitions to <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-success</code>; card surface gets <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--accent / 0.06</code> tint (<code className="font-mono text-[11px] text-[rgb(var(--accent))]">sfBrandLitSurface</code>); checkmark appears</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Bar transitions to <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-success</code>; card surface gets <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--accent / 0.06</code> tint (<code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">sfBrandLitSurface</code>); checkmark appears</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Zero progress</td>
@@ -464,7 +464,7 @@ export default function GoalStreakPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Animation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] leading-relaxed">
           The progress bar animates on mount with a spring curve:{" "}
-          <code className="font-mono text-[11px] text-[rgb(var(--accent))]">spring(response: 0.5, dampingFraction: 0.75)</code>. This gives the bar a subtle
+          <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">spring(response: 0.5, dampingFraction: 0.75)</code>. This gives the bar a subtle
           overshoot that communicates momentum without being distracting.
         </p>
       </section>

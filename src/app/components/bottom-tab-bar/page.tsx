@@ -208,7 +208,7 @@ export default function BottomTabBarPage() {
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           Each tab is a full-height button with an icon, a short text label, and an optional badge. The
           active tab uses the accent color; all others use{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">text-tertiary</code>.
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">text-tertiary</code>.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
           <table className="w-full text-[13px]">
@@ -229,7 +229,7 @@ export default function BottomTabBarPage() {
                 ["Active state", "Accent color on icon + label. Optional scale-110 micro-animation on the icon."],
               ].map(([part, desc], i) => (
                 <tr key={part} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{part}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{part}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{desc}</td>
                 </tr>
               ))}
@@ -272,9 +272,9 @@ export default function BottomTabBarPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           Place the tab bar outside your scrollable content area at the bottom of a{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">flex flex-col h-dvh</code> container.
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">flex flex-col h-dvh</code> container.
           Use{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">padding-bottom: env(safe-area-inset-bottom)</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">padding-bottom: env(safe-area-inset-bottom)</code>{" "}
           to clear the iPhone home indicator.
         </p>
         <PlatformTabs code={CODE} />
@@ -333,7 +333,7 @@ export default function BottomTabBarPage() {
             "On iOS VoiceOver, SwiftUI TabView is fully managed — don't override the built-in tab bar with custom SwiftUI views unless you replicate all accessibility properties.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

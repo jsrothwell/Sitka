@@ -377,7 +377,7 @@ function MiniChart() {
     const d = new Date(year, month - 5 + i, 1);
     const isPast = d <= today;
     const planned = (budget / 12) * (i + 1);
-    const actual = isPast ? planned * (0.9 + Math.sin(i * 0.8) * 0.12 + Math.random() * 0.05) : undefined;
+    const actual = isPast ? planned * (0.9 + Math.sin(i * 0.8) * 0.12 + ((i * 37) % 7) / 140) : undefined;
     const forecast = !isPast ? planned * 1.08 : undefined;
     return { date: d, actual, forecast, planned };
   });
@@ -579,7 +579,7 @@ export default function BurnTrajectoryPage() {
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Budget ceiling</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">1 px</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">[3, 3]</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-danger</code> 35%</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-danger</code> 35%</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Today line</td>
@@ -609,7 +609,7 @@ export default function BurnTrajectoryPage() {
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Exhaustion dot</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">6 px filled circle, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--status-danger</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">6 px filled circle, <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--status-danger</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Historical area</td>

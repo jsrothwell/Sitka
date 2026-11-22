@@ -21,7 +21,7 @@ const CODE = {
   react: {
     filename: "PromptInput.tsx",
     code: `import { PromptInput } from "@/components/ui/PromptInput";
-import { PaperclipIcon, SendIcon } from "@phosphor-icons/react";
+import { Paperclip as PaperclipIcon, Send as SendIcon } from "lucide-react";
 import { useState } from "react";
 
 export default function ChatInputDemo() {
@@ -84,7 +84,7 @@ export default function PromptInputPage() {
             "No text contrast issues: input text uses --text-primary; placeholder uses --text-tertiary.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

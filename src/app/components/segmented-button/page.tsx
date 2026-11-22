@@ -363,11 +363,11 @@ export default function SegmentedButtonPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Icon only</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          Omit <code className="font-mono text-[13px] text-[rgb(var(--accent))]">label</code> and
-          provide only <code className="font-mono text-[13px] text-[rgb(var(--accent))]">icon</code>{" "}
+          Omit <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">label</code> and
+          provide only <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">icon</code>{" "}
           for compact toolbars. Always add a parent{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">aria-label</code>{" "}
-          or <code className="font-mono text-[13px] text-[rgb(var(--accent))]">title</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">aria-label</code>{" "}
+          or <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">title</code>{" "}
           on each segment when labels are hidden.
         </p>
         <ComponentPreview>
@@ -379,12 +379,12 @@ export default function SegmentedButtonPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Multi-select</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          Set <code className="font-mono text-[13px] text-[rgb(var(--accent))]">multiple</code>{" "}
+          Set <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">multiple</code>{" "}
           to allow any combination of segments to be active simultaneously.{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">value</code> becomes a{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">string[]</code> and each
-          segment uses <code className="font-mono text-[13px] text-[rgb(var(--accent))]">role="checkbox"</code>{" "}
-          instead of <code className="font-mono text-[13px] text-[rgb(var(--accent))]">radio</code>.
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">value</code> becomes a{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">string[]</code> and each
+          segment uses <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">role="checkbox"</code>{" "}
+          instead of <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">radio</code>.
         </p>
         <ComponentPreview>
           <MultiSelectDemo />
@@ -472,7 +472,7 @@ export default function SegmentedButtonPage() {
             "Never rely solely on selected state to communicate the current view — pair with a visible heading or title.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

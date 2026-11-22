@@ -5,13 +5,17 @@ import { PageHeader } from "@/site/docs/PageHeader";
 import { PlatformTabs } from "@/components/ui/PlatformTabs";
 import { ArrowList, DocSection, DocTable, PreviewSection, SourceNote, UsageGrid } from "@/site/docs/PatternDoc";
 
-const SEGMENTS = ["99 102 241", "20 184 166", "236 72 153", "168 85 247"]; // Distinct from status hues
+// Sitka categorical tokens — hues kept clear of the status colors, so a client never reads as a warning.
+const SEGMENTS = ["var(--categorical-5)", "var(--categorical-7)", "var(--categorical-6)", "var(--categorical-3)"];
 
 const BASE = [
   { client: "Northwind Robotics", role: "Fractional CPO", hours: 12, endsIn: 20 },
   { client: "Lumen Health", role: "Design Advisor", hours: 8, endsIn: 50 },
   { client: "Harbor & Pine", role: "Head of Design", hours: 4, endsIn: null as number | null },
 ];
+
+/** Status tokens are fills; text and icons use the matching -text tone (accent and neutrals have none). */
+const textTone = (token: string) => (token.startsWith("--status-") ? `${token}-text` : token);
 
 function status(u: number) {
   if (u > 1.0001) return { label: "Burnout Risk", token: "--status-danger", guidance: "Booked beyond your target. Renegotiate scope or pause new deals." };
@@ -192,7 +196,7 @@ export default function CapacityRunwayPage() {
             <span className="text-[15px] font-semibold text-[rgb(var(--text-primary))]">Weekly Bandwidth</span>
             <span
               className="rounded-full px-2.5 py-0.5 text-[12px] font-semibold"
-              style={{ color: `rgb(var(${s.token}))`, background: `rgb(var(${s.token}) / 0.12)` }}
+              style={{ color: `rgb(var(${textTone(s.token)}))`, background: `rgb(var(${s.token}) / 0.12)` }}
             >
               {s.label}
             </span>
@@ -228,7 +232,7 @@ export default function CapacityRunwayPage() {
                 <div className="absolute inset-0 grid place-content-center text-center">
                   <span className="text-[40px] font-bold leading-none tabular-nums text-[rgb(var(--text-primary))]">{allocated}</span>
                   <span className="text-[12px] text-[rgb(var(--text-secondary))]">of {target} hrs/wk</span>
-                  <span className="mt-0.5 text-[12px] font-semibold tabular-nums" style={{ color: `rgb(var(${s.token}))` }}>
+                  <span className="mt-0.5 text-[12px] font-semibold tabular-nums" style={{ color: `rgb(var(${textTone(s.token)}))` }}>
                     {Math.round(u * 100)}%
                   </span>
                 </div>
@@ -272,7 +276,7 @@ export default function CapacityRunwayPage() {
                   <span className="flex-1 font-medium text-[rgb(var(--text-primary))]">{allocated > target ? "Over target" : "Available"}</span>
                   <span
                     className="font-semibold tabular-nums"
-                    style={{ color: allocated > target ? "rgb(var(--status-danger))" : "rgb(var(--text-primary))" }}
+                    style={{ color: allocated > target ? "rgb(var(--status-danger-text))" : "rgb(var(--text-primary))" }}
                   >
                     {Math.abs(target - allocated)} hrs/wk
                   </span>
@@ -295,13 +299,13 @@ export default function CapacityRunwayPage() {
                   <div key={w.title} className="rounded-[10px] p-3" style={{ background: `rgb(var(${tok}) / ${clear ? 0.06 : 0.1})` }}>
                     <div className="mb-1.5 flex justify-between text-[12px] font-semibold text-[rgb(var(--text-secondary))]">
                       {w.title}
-                      <span style={{ color: `rgb(var(${tok}))` }} aria-hidden>{clear ? "✓" : "⚠"}</span>
+                      <span style={{ color: `rgb(var(${textTone(tok)}))` }} aria-hidden>{clear ? "✓" : "⚠"}</span>
                     </div>
                     {clear ? (
                       <p className="text-[13px] text-[rgb(var(--text-secondary))]">No contracts ending</p>
                     ) : (
                       <>
-                        <p className="text-[20px] font-semibold tabular-nums" style={{ color: `rgb(var(${tok}))` }}>−{off} hrs/wk</p>
+                        <p className="text-[20px] font-semibold tabular-nums" style={{ color: `rgb(var(${textTone(tok)}))` }}>−{off} hrs/wk</p>
                         {ending.map((a) => (
                           <p key={a.client} className="truncate text-[12px] text-[rgb(var(--text-primary))]">{a.client}</p>
                         ))}

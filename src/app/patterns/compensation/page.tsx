@@ -445,7 +445,7 @@ export default function CompensationPage() {
               className={[
                 "px-3 py-1.5 rounded-lg border text-[12px] font-medium transition-all",
                 activeOffer === i
-                  ? "border-[rgb(var(--accent-muted))] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]"
+                  ? "border-[rgb(var(--accent-muted))] bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]"
                   : "border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))]",
               ].join(" ")}
             >
@@ -531,7 +531,7 @@ export default function CompensationPage() {
             { heading: "Animate on entry", body: "Bars should grow from left to right on mount. A 400–600ms ease-out with slight stagger per row adds clarity to the waterfall metaphor and draws the eye to the final total." },
           ].map(({ heading, body }) => (
             <div key={heading} className="flex gap-3">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               <div>
                 <span className="font-medium text-[rgb(var(--text-primary))]">{heading} — </span>
                 {body}
@@ -562,7 +562,7 @@ export default function CompensationPage() {
             { heading: "Pre-fill from package", body: "Pass initialGross and initialCurrency from the top CompensationPackage so the calculator opens with the relevant salary pre-filled. The user can then explore different regions without re-entering their base." },
           ].map(({ heading, body }) => (
             <div key={heading} className="flex gap-3 text-[14px]">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               <div>
                 <span className="font-medium text-[rgb(var(--text-primary))]">{heading} — </span>
                 <span className="text-[rgb(var(--text-secondary))]">{body}</span>
@@ -632,7 +632,7 @@ export default function CompensationPage() {
             "For the comparison table, use a proper <table> with <caption> describing what is being compared, and <th scope='col'> for each offer column.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}
@@ -723,7 +723,7 @@ function NegotiationWorkspace() {
                   setCopied(true);
                   setTimeout(() => setCopied(false), 2000);
                 }}
-                className="text-[13px] text-[rgb(var(--accent))]"
+                className="text-[13px] text-[rgb(var(--accent-text))]"
               >
                 {copied ? "✓ Copied" : "Copy"}
               </button>
@@ -741,7 +741,7 @@ function NegotiationWorkspace() {
           "Keep the range bounded (0–30%). The goal is a defensible ask, not a negotiation simulator.",
         ].map((item) => (
           <li key={item} className="flex gap-2">
-            <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+            <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
             {item}
           </li>
         ))}

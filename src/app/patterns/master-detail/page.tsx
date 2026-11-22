@@ -401,7 +401,7 @@ export default function MasterDetailPage() {
                 ["Detail",          "flex: 1 (remaining)", "Rich content for the selected item. Scrolls independently of the list."],
               ].map(([zone, width, resp], i) => (
                 <tr key={zone} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{zone}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{zone}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{width}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{resp}</td>
                 </tr>
@@ -434,7 +434,7 @@ export default function MasterDetailPage() {
                 ["< 768px",       "Single panel",   "Only one panel visible at a time. Row tap pushes detail. Back button returns to list."],
               ].map(([bp, layout, behavior], i) => (
                 <tr key={bp} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{bp}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{bp}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{layout}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]">{behavior}</td>
                 </tr>
@@ -449,13 +449,13 @@ export default function MasterDetailPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           The React implementation uses a single{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">showDetail</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">showDetail</code>{" "}
           boolean to toggle panel visibility on mobile. On desktop, both panels are always rendered
           and visible — no JS is needed to switch between them, just{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">md:flex</code> and{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">hidden</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">md:flex</code> and{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">hidden</code>{" "}
           utility classes. The SwiftUI implementation uses{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">NavigationSplitView</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">NavigationSplitView</code>{" "}
           which handles the column/stack transition automatically.
         </p>
         <PlatformTabs code={CODE} />
@@ -488,7 +488,7 @@ export default function MasterDetailPage() {
             },
           ].map(({ title, body }) => (
             <li key={title} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               <span><strong className="text-[rgb(var(--text-primary))]">{title}.</strong> {body}</span>
             </li>
           ))}
@@ -507,7 +507,7 @@ export default function MasterDetailPage() {
             "On mobile, when the detail slides in, trap focus within it until the user presses Back.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

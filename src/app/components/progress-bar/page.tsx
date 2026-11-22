@@ -400,8 +400,8 @@ export default function ProgressBarPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Sizes</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          Three track heights for different information densities. Use <code className="font-mono text-[13px] text-[rgb(var(--accent))]">sm</code> inside
-          dense table rows and list items; <code className="font-mono text-[13px] text-[rgb(var(--accent))]">lg</code> for prominent hero metrics.
+          Three track heights for different information densities. Use <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">sm</code> inside
+          dense table rows and list items; <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">lg</code> for prominent hero metrics.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-6 flex flex-col gap-5">
           {([["sm", 4], ["md", 6], ["lg", 8]] as const).map(([size, h]) => (
@@ -421,7 +421,7 @@ export default function ProgressBarPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Indeterminate</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           When end value is unknown — file upload, background job, AI generation — show a shimmer sweep instead of a static fill.
-          Set <code className="font-mono text-[13px] text-[rgb(var(--accent))]">aria-busy="true"</code> and omit <code className="font-mono text-[13px] text-[rgb(var(--accent))]">aria-valuenow</code>.
+          Set <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">aria-busy="true"</code> and omit <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">aria-valuenow</code>.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-6">
           <div className="relative w-full rounded-full overflow-hidden" style={{ height: 6, background: "rgb(var(--progress-track))" }}>
@@ -450,7 +450,7 @@ export default function ProgressBarPage() {
                 { token: "--progress-danger", dark: "#ef4444", light: "#ef4444", use: "Danger fill" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{row.token}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.token}</code></td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.dark}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.light}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.use}</td>
@@ -485,7 +485,7 @@ export default function ProgressBarPage() {
             "Progress bars are non-interactive and never receive keyboard focus.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

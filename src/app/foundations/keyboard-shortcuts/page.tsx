@@ -225,7 +225,7 @@ const MODIFIER_KEYS = [
 
 export default function KeyboardShortcutsPage() {
   const scopeColor: Record<string, string> = {
-    Global:    "text-[rgb(var(--accent))]",
+    Global:    "text-[rgb(var(--accent-text))]",
     Editing:   "text-[#34a865]",
     Selection: "text-[#c084fc]",
     List:      "text-[#f59e0b]",
@@ -271,7 +271,7 @@ export default function KeyboardShortcutsPage() {
               {GLOBAL_SHORTCUTS.map((row, i) => (
                 <tr key={row.chord} className={`border-b border-[rgb(var(--border-subtle))] last:border-0 ${i % 2 === 0 ? "bg-[rgb(var(--surface))]" : "bg-[rgb(var(--background))]"}`}>
                   <td className="px-4 py-3">
-                    <code className="font-mono text-[12px] text-[rgb(var(--accent))]">{row.chord}</code>
+                    <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">{row.chord}</code>
                   </td>
                   <td className="px-4 py-3">
                     <span className={`text-[11px] font-semibold uppercase tracking-wider ${scopeColor[row.scope] ?? ""}`}>{row.scope}</span>
@@ -356,8 +356,8 @@ export default function KeyboardShortcutsPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Displaying Shortcuts in the UI</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          Use the <code className="font-mono text-[13px] text-[rgb(var(--accent))]">&lt;kbd&gt;</code> element for keyboard shortcut labels.
-          The design system provides a <code className="font-mono text-[13px] text-[rgb(var(--accent))]">.kbd</code> utility class
+          Use the <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">&lt;kbd&gt;</code> element for keyboard shortcut labels.
+          The design system provides a <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">.kbd</code> utility class
           that renders the correct font, size, border, and background for both light and dark themes.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
@@ -401,7 +401,7 @@ export default function KeyboardShortcutsPage() {
             'Context menus triggered by keyboard must set focus to the first item and trap focus within the menu. Esc returns focus to the trigger.',
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

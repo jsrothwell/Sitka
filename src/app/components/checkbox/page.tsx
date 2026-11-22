@@ -188,7 +188,7 @@ export default function CheckboxPage() {
                 { size: "lg", dims: "20 × 20px", radius: "6px" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.size}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.size}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.dims}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.radius}</td>
                 </tr>
@@ -204,7 +204,7 @@ export default function CheckboxPage() {
           Indeterminate
         </h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-          Use <code className="font-mono text-[11px] text-[rgb(var(--accent))]">indeterminate</code> on a parent checkbox to indicate a partial selection within a group.
+          Use <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">indeterminate</code> on a parent checkbox to indicate a partial selection within a group.
         </p>
         <ComponentPreview>
           <div className="flex flex-col gap-3">
@@ -233,8 +233,8 @@ export default function CheckboxPage() {
         </h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
           All native{" "}
-          <code className="font-mono text-[12px] text-[rgb(var(--accent))]">{"<input type=\"checkbox\">"}</code>{" "}
-          attributes are forwarded (except <code className="font-mono text-[11px] text-[rgb(var(--accent))]">size</code> and <code className="font-mono text-[11px] text-[rgb(var(--accent))]">type</code>).
+          <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">{"<input type=\"checkbox\">"}</code>{" "}
+          attributes are forwarded (except <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">size</code> and <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">type</code>).
         </p>
         <PropsTable props={PROPS} />
       </section>
@@ -260,7 +260,7 @@ export default function CheckboxPage() {
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap">{row.el}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.role}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.role}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.attrs}</td>
                 </tr>
               ))}
@@ -290,7 +290,7 @@ export default function CheckboxPage() {
                 { key: "Shift+Tab", action: "Move focus to the previous focusable element" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{row.key}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{row.key}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.action}</td>
                 </tr>
               ))}
@@ -314,7 +314,7 @@ export default function CheckboxPage() {
             "In a checkbox group, wrap items in a <fieldset> with a <legend> to provide group context.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

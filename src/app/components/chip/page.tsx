@@ -307,7 +307,7 @@ export default function ChipPage() {
             "Ensure 3:1 contrast between the chip border and the background in all states.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

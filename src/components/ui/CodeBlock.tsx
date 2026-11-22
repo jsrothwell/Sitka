@@ -54,7 +54,7 @@ export function CodeBlock({ code, language = "tsx", filename, className }: CodeB
               "flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium transition-all",
               copied
                 ? "bg-green-500/10 text-green-500 border border-green-500/20"
-                : "bg-[rgb(var(--surface))] border border-[rgb(var(--border))] text-[rgb(var(--text-secondary))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent))]"
+                : "bg-[rgb(var(--surface))] border border-[rgb(var(--border))] text-[rgb(var(--text-secondary))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent-text))]"
             )}
           >
             <AnimatePresence mode="wait" initial={false}>
@@ -87,7 +87,13 @@ export function CodeBlock({ code, language = "tsx", filename, className }: CodeB
       </div>
 
       {/* Code content */}
-      <div className="overflow-x-auto">
+      {/* Focusable so keyboard users can scroll long lines (WCAG 2.1.1) */}
+      <div
+        className="overflow-x-auto focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[rgb(var(--accent))]"
+        tabIndex={0}
+        role="region"
+        aria-label={filename ? `${filename} code` : `${language} code`}
+      >
         <pre className="p-4 text-[13px] leading-relaxed text-[rgb(var(--text-primary))] font-mono">
           <code>{code.trim()}</code>
         </pre>

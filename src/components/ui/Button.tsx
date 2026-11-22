@@ -20,13 +20,13 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-[rgb(var(--accent))] text-white hover:opacity-90 shadow-[0_0_0_1px_rgba(0,192,232,0.3),0_2px_8px_rgba(0,192,232,0.25)] active:shadow-none",
+    "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] hover:opacity-90 shadow-[0_0_0_1px_rgba(0,192,232,0.3),0_2px_8px_rgba(0,192,232,0.25)] active:shadow-none",
   secondary:
-    "bg-[rgb(var(--surface))] text-[rgb(var(--text-primary))] border border-[rgb(var(--border))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent))] active:bg-[rgb(var(--accent-subtle))]",
+    "bg-[rgb(var(--surface))] text-[rgb(var(--text-primary))] border border-[rgb(var(--border))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent-text))] active:bg-[rgb(var(--accent-subtle))]",
   ghost:
     "text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--surface))] hover:text-[rgb(var(--text-primary))] active:bg-[rgb(var(--border))]",
   danger:
-    "bg-red-500 text-white hover:bg-red-600 shadow-[0_2px_8px_rgba(239,68,68,0.3)] active:shadow-none",
+    "bg-[rgb(var(--danger-solid))] text-[rgb(var(--on-danger))] hover:opacity-90 shadow-[0_2px_8px_rgba(191,28,28,0.3)] active:shadow-none",
   glass: `${glassSurface({ intensity: "medium" })} text-[rgb(var(--text-primary))] hover:brightness-110`,
 };
 

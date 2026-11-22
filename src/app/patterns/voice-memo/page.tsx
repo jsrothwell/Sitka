@@ -133,7 +133,7 @@ function VoiceMemoDemo() {
               className={[
                 "px-3 py-1 rounded-full text-[12px] font-medium transition-all",
                 tab === t
-                  ? "bg-[rgb(var(--accent))] text-white"
+                  ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"
                   : "text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))]",
               ].join(" ")}
             >
@@ -172,12 +172,12 @@ function VoiceMemoDemo() {
         {/* Floating mic button */}
         <div className="absolute bottom-4 right-4 flex flex-col items-end gap-2">
           {mode === "recording" && (
-            <div className="bg-red-500/90 text-white text-[11px] font-mono px-2 py-1 rounded-full">
+            <div className="bg-[rgb(var(--danger-solid)/0.9)] text-[rgb(var(--on-danger))] text-[11px] font-mono px-2 py-1 rounded-full">
               {fmt(recDuration)} REC
             </div>
           )}
           {mode === "dictating" && (
-            <div className="bg-[rgb(var(--accent))] text-white text-[11px] px-2 py-1 rounded-full flex items-center gap-1.5">
+            <div className="bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[11px] px-2 py-1 rounded-full flex items-center gap-1.5">
               <WaveformBars active={true} />
             </div>
           )}
@@ -452,8 +452,8 @@ export function VoiceMemoList() {
         onClick={recording ? stop : start}
         className={\`px-4 py-2 rounded-full text-sm font-medium transition-all
           \${recording
-            ? "bg-red-500 text-white"
-            : "bg-[rgb(var(--accent))] text-white"}\`}
+            ? "bg-[rgb(var(--danger-solid))] text-[rgb(var(--on-danger))]"
+            : "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]"}\`}
       >
         {recording ? \`Stop · \${fmt(elapsed)}\` : "Record Memo"}
       </button>
@@ -576,7 +576,7 @@ export default function VoiceMemoPage() {
             { heading: "Transcription is async", body: "Apply SFSpeechRecognizer to the finished .m4a after AVAudioRecorder stops, not during recording. This avoids contention between the audio engine input node and the speech recogniser. Store the transcript in the AudioMemo SwiftData model once available." },
           ].map(({ heading, body }) => (
             <div key={heading} className="flex gap-3 text-[14px]">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               <div>
                 <span className="font-medium text-[rgb(var(--text-primary))]">{heading} — </span>
                 <span className="text-[rgb(var(--text-secondary))]">{body}</span>
@@ -632,7 +632,7 @@ export default function VoiceMemoPage() {
             "Ensure AVAudioSession category .playAndRecord does not interrupt VoiceOver. Set .mixWithOthers option or pause session when VoiceOver is active.",
           ].map(item => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}

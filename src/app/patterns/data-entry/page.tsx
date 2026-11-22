@@ -84,7 +84,7 @@ export function DataEntryForm({ fields, onSubmit, submitLabel = "Save" }: DataEn
         <div key={field.name}>
           <label className="block text-[12px] font-medium text-[rgb(var(--text-secondary))] mb-2">
             {field.label}
-            {field.required && <span className="text-[rgb(var(--accent))] ml-0.5">*</span>}
+            {field.required && <span className="text-[rgb(var(--accent-text))] ml-0.5">*</span>}
           </label>
 
           {field.type === "textarea" ? (
@@ -208,8 +208,8 @@ export function SteppedDataEntry({
           <div key={step.title} className="flex items-center flex-1">
             <div className={cn(
               "w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold transition-all",
-              i < currentStep ? "bg-[rgb(var(--accent))] text-white" :
-              i === currentStep ? "bg-[rgb(var(--accent))] text-white ring-4 ring-[rgb(var(--accent))]/20" :
+              i < currentStep ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]" :
+              i === currentStep ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] ring-4 ring-[rgb(var(--accent))]/20" :
                                 "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-tertiary))] border border-[rgb(var(--border))]"
             )}>
               {i < currentStep ? "✓" : i + 1}
@@ -230,7 +230,7 @@ export function SteppedDataEntry({
             <div key={field.name}>
               <label className="block text-[12px] font-medium text-[rgb(var(--text-secondary))] mb-2">
                 {field.label}
-                {field.required && <span className="text-[rgb(var(--accent))] ml-0.5">*</span>}
+                {field.required && <span className="text-[rgb(var(--accent-text))] ml-0.5">*</span>}
               </label>
               <Input
                 type={field.type === "number" ? "number" : "text"}
@@ -250,14 +250,14 @@ export function SteppedDataEntry({
               "text-[12px] font-medium transition-colors",
               currentStep === 0
                 ? "text-[rgb(var(--text-tertiary))] cursor-not-allowed"
-                : "text-[rgb(var(--accent))] hover:underline"
+                : "text-[rgb(var(--accent-text))] hover:underline"
             )}
           >
             Back
           </button>
           <button
             onClick={next}
-            className="px-4 py-2 rounded-lg bg-[rgb(var(--accent))] text-white text-[12px] font-medium hover:bg-[rgb(var(--accent))]/90 transition-colors"
+            className="px-4 py-2 rounded-lg bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[12px] font-medium hover:bg-[rgb(var(--accent))]/90 transition-colors"
           >
             {currentStep === steps.length - 1 ? "Complete" : "Continue"}
           </button>
@@ -349,7 +349,7 @@ export function BulkEntryTable<T extends Record<string, any>>({
       </table>
       <button
         onClick={addRow}
-        className="w-full py-2 text-[12px] text-[rgb(var(--accent))] font-medium hover:bg-[rgb(var(--surface))] transition-colors flex items-center justify-center gap-1"
+        className="w-full py-2 text-[12px] text-[rgb(var(--accent-text))] font-medium hover:bg-[rgb(var(--surface))] transition-colors flex items-center justify-center gap-1"
       >
         <Plus className="w-3 h-3" />
         {addRowLabel}
@@ -682,7 +682,7 @@ export default function DataEntryPage() {
             <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setFormSubmitted(true); setTimeout(() => setFormSubmitted(false), 2000); }}>
               <div className="space-y-1">
                 <label className="block text-[12px] font-medium text-[rgb(var(--text-secondary))]">
-                  Email <span className="text-[rgb(var(--accent))]">*</span>
+                  Email <span className="text-[rgb(var(--accent-text))]">*</span>
                 </label>
                 <Input
                   type="email"
@@ -696,7 +696,7 @@ export default function DataEntryPage() {
 
               <div className="space-y-1">
                 <label className="block text-[12px] font-medium text-[rgb(var(--text-secondary))]">
-                  Full name <span className="text-[rgb(var(--accent))]">*</span>
+                  Full name <span className="text-[rgb(var(--accent-text))]">*</span>
                 </label>
                 <Input placeholder="Jane Smith" />
               </div>
@@ -733,7 +733,7 @@ export default function DataEntryPage() {
               {[1, 2, 3].map((step) => (
                 <div key={step} className="flex items-center gap-2">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-bold ${
-                    step === 1 ? "bg-[rgb(var(--accent))] text-white" : "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-tertiary))] border border-[rgb(var(--border))]"
+                    step === 1 ? "bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))]" : "bg-[rgb(var(--surface-raised))] text-[rgb(var(--text-tertiary))] border border-[rgb(var(--border))]"
                   }`}>
                     {step < 3 ? step : "✓"}
                   </div>
@@ -819,7 +819,7 @@ export default function DataEntryPage() {
                 </tr>
               </tbody>
             </table>
-            <button className="w-full py-2 mt-2 text-[12px] text-[rgb(var(--accent))] font-medium hover:bg-[rgb(var(--surface))] flex items-center justify-center gap-1">
+            <button className="w-full py-2 mt-2 text-[12px] text-[rgb(var(--accent-text))] font-medium hover:bg-[rgb(var(--surface))] flex items-center justify-center gap-1">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                 <path d="M6 2V10M2 6H10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
               </svg>
@@ -860,7 +860,7 @@ export default function DataEntryPage() {
             "For multi-step forms, announce step changes with aria-live regions.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

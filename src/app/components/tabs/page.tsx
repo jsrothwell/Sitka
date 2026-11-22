@@ -98,7 +98,7 @@ export function Tabs({ tabs, defaultTab, children, className }: TabsProps) {
           >
             {tab.label}
             {tab.badge && (
-              <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent))]">
+              <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-[rgb(var(--accent-subtle))] text-[rgb(var(--accent-text))]">
                 {tab.badge}
               </span>
             )}
@@ -521,8 +521,8 @@ export default function TabsPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          The React version uses a render prop — <code className="font-mono text-[12px] text-[rgb(var(--accent))]">children</code> is a
-          function that receives the active tab id and returns the panel content. This keeps state ownership inside <code className="font-mono text-[12px] text-[rgb(var(--accent))]">Tabs</code> while
+          The React version uses a render prop — <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">children</code> is a
+          function that receives the active tab id and returns the panel content. This keeps state ownership inside <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">Tabs</code> while
           giving callers full control over what each panel renders.
         </p>
         <PlatformTabs code={CODE} />
@@ -546,7 +546,7 @@ export default function TabsPage() {
       <section className="mb-12">
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Motion</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
-          The active indicator slides between tabs using a <code className="font-mono text-[12px] text-[rgb(var(--accent))]">matchedGeometryEffect</code> on
+          The active indicator slides between tabs using a <code className="font-mono text-[12px] text-[rgb(var(--accent-text))]">matchedGeometryEffect</code> on
           iOS/macOS and a CSS transition on web. Panel content switches instantly — animate the
           panel content independently if entry motion is needed.
         </p>
@@ -569,7 +569,7 @@ export default function TabsPage() {
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{row.interaction}</td>
-                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">{row.property}</code></td>
+                  <td className="px-4 py-3"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.property}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px]">{row.value}</code></td>
                   <td className="px-4 py-3 text-[rgb(var(--text-tertiary))]"><code className="font-mono text-[11px]">{row.easing}</code></td>
                 </tr>
@@ -601,7 +601,7 @@ export default function TabsPage() {
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap">{row.el}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.role}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.role}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.attrs}</td>
                 </tr>
               ))}
@@ -633,7 +633,7 @@ export default function TabsPage() {
                 { key: "Shift+Tab", action: "Move focus back to the active tab from the panel" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{row.key}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{row.key}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.action}</td>
                 </tr>
               ))}
@@ -658,7 +658,7 @@ export default function TabsPage() {
             "Badge counts should be read aloud. Add an aria-label to the badge element: aria-label='12 files'.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

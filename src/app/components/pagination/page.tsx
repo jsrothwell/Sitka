@@ -154,7 +154,7 @@ export default function PaginationPage() {
           Ellipsis algorithm
         </h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
-          The pagination always shows the first and last pages. Middle pages are shown based on the <code className="font-mono text-[11px] text-[rgb(var(--accent))]">siblings</code> prop. Ellipses appear when there are more than two pages between the visible range and the edges.
+          The pagination always shows the first and last pages. Middle pages are shown based on the <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">siblings</code> prop. Ellipses appear when there are more than two pages between the visible range and the edges.
         </p>
         <div className="rounded-xl border border-[rgb(var(--border))] overflow-hidden">
           <table className="w-full text-[13px]">
@@ -173,7 +173,7 @@ export default function PaginationPage() {
                 { page: "5", total: "12", siblings: "2", result: "1 … 3 4 5 6 7 … 12" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.page}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.page}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.total}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.siblings}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.result}</td>
@@ -224,7 +224,7 @@ export default function PaginationPage() {
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))] whitespace-nowrap">{row.el}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.role}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.role}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.attrs}</td>
                 </tr>
               ))}
@@ -254,7 +254,7 @@ export default function PaginationPage() {
                 { key: "Enter / Space", action: "Navigate to the focused page or Prev/Next button's target" },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))] whitespace-nowrap">{row.key}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))] whitespace-nowrap">{row.key}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.action}</td>
                 </tr>
               ))}
@@ -277,7 +277,7 @@ export default function PaginationPage() {
             "Ellipsis spans are aria-hidden — they are decorative and screen readers skip them.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

@@ -548,15 +548,15 @@ export default function MediaPlayerPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Implementation</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           In this demo, progress advances via a{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">setInterval</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">setInterval</code>{" "}
           ticker so it works without a real media file. In production, drive state from the native{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">{"<audio>"}</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">{"<audio>"}</code>{" "}
           or{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">{"<video>"}</code>{" "}
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">{"<video>"}</code>{" "}
           element&apos;s{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">timeupdate</code> event.
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">timeupdate</code> event.
           Seek by setting{" "}
-          <code className="font-mono text-[13px] text-[rgb(var(--accent))]">element.currentTime</code> directly.
+          <code className="font-mono text-[13px] text-[rgb(var(--accent-text))]">element.currentTime</code> directly.
         </p>
         <PlatformTabs code={CODE} />
       </section>
@@ -588,7 +588,7 @@ export default function MediaPlayerPage() {
             },
           ].map(({ title, body }) => (
             <li key={title} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 flex-shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 flex-shrink-0">→</span>
               <span><strong className="text-[rgb(var(--text-primary))]">{title}.</strong> {body}</span>
             </li>
           ))}
@@ -608,7 +608,7 @@ export default function MediaPlayerPage() {
             "Provide captions/subtitles for video with spoken content. Use the <track> element with kind=\"captions\".",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

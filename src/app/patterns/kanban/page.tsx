@@ -534,12 +534,12 @@ export default function KanbanPage() {
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Drop target</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Column fill and border shift to status colour on drag-over</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--border-subtle</code> → status/0.4</td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--border-subtle</code> → status/0.4</td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Card surface</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Raised surface with card shadow; lifted on hover</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--surface-raised</code>, <code className="font-mono text-[11px] text-[rgb(var(--accent))]">--shadow-card</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--surface-raised</code>, <code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--shadow-card</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Card tags</td>
@@ -549,7 +549,7 @@ export default function KanbanPage() {
               <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Empty column</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Ghost label centred at 32 px vertical padding</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">--text-tertiary</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">--text-tertiary</code></td>
               </tr>
             </tbody>
           </table>
@@ -571,17 +571,17 @@ export default function KanbanPage() {
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Card drop</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Layout reflow</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">spring(response: 0.3, damping: 0.7)</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">spring(response: 0.3, damping: 0.7)</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] bg-[rgb(var(--background))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Column hover</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Background + border colour</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">easeInOut 0.15s</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">easeInOut 0.15s</code></td>
               </tr>
               <tr className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                 <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">Card hover</td>
                 <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">Shadow level + translateY(−1px)</td>
-                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent))]">easeOut 0.12s</code></td>
+                <td className="px-4 py-3 text-[rgb(var(--text-secondary))]"><code className="font-mono text-[11px] text-[rgb(var(--accent-text))]">easeOut 0.12s</code></td>
               </tr>
             </tbody>
           </table>
@@ -592,7 +592,7 @@ export default function KanbanPage() {
         <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-2">Context menu (desktop)</h2>
         <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4 leading-relaxed">
           On macOS and right-click desktop, each card exposes a context menu for keyboard-driven
-          column changes. See the <a href="/components/context-menu" className="text-[rgb(var(--accent))] hover:underline">Context Menu</a> component.
+          column changes. See the <a href="/components/context-menu" className="text-[rgb(var(--accent-text))] hover:underline">Context Menu</a> component.
         </p>
         <ul className="list-disc list-inside space-y-2 text-[14px] text-[rgb(var(--text-secondary))] mb-5">
           <li>Group 1: <strong>Move to …</strong> — one item per column (excluding current)</li>

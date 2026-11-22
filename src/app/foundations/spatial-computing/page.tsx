@@ -52,7 +52,7 @@ export default function SpatialComputingPage() {
               <div key={level.name} className="flex flex-col gap-1">
                 <div className="flex items-center justify-between">
                   <span className="text-[13px] font-semibold text-[rgb(var(--text-primary))]">{level.name}</span>
-                  <code className="text-[11px] font-mono text-[rgb(var(--accent))]">z: {level.z}</code>
+                  <code className="text-[11px] font-mono text-[rgb(var(--accent-text))]">z: {level.z}</code>
                 </div>
                 <p className="text-[12px] text-[rgb(var(--text-secondary))]">{level.desc}</p>
               </div>
@@ -103,7 +103,7 @@ export default function SpatialComputingPage() {
           </div>
           {/* Ornament */}
           <div className="absolute bottom-12 px-4 py-2 rounded-full backdrop-blur-3xl bg-[rgb(var(--accent)/0.15)] border border-[rgb(var(--accent)/0.4)] shadow-2xl flex items-center gap-4">
-             <div className="w-8 h-8 rounded-full bg-[rgb(var(--accent))] flex items-center justify-center text-white">
+             <div className="w-8 h-8 rounded-full bg-[rgb(var(--accent))] flex items-center justify-center text-[rgb(var(--on-accent))]">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
              </div>
              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-[rgb(var(--text-primary))]">
@@ -113,7 +113,7 @@ export default function SpatialComputingPage() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
              </div>
           </div>
-          <div className="absolute bottom-4 text-[10px] font-mono text-[rgb(var(--accent))]">Ornament (Floating bottom)</div>
+          <div className="absolute bottom-4 text-[10px] font-mono text-[rgb(var(--accent-text))]">Ornament (Floating bottom)</div>
         </div>
       </section>
 

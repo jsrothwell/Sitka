@@ -191,7 +191,7 @@ export default function BatchCaptureReviewPage() {
       <PreviewSection>
         <div className="mx-auto max-w-md overflow-hidden rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))]">
           <div className="flex items-center justify-between border-b border-[rgb(var(--border-subtle))] px-4 py-2.5">
-            <button onClick={() => { setRows(INITIAL); setAdded(null); }} className="text-[14px] text-[rgb(var(--accent))]">
+            <button onClick={() => { setRows(INITIAL); setAdded(null); }} className="text-[14px] text-[rgb(var(--accent-text))]">
               {added === null ? "Cancel" : "Done"}
             </button>
             <span className="text-[15px] font-semibold text-[rgb(var(--text-primary))]">Scan a Shelf</span>
@@ -199,7 +199,7 @@ export default function BatchCaptureReviewPage() {
               <button
                 disabled={included === 0 || busy}
                 onClick={() => setAdded(included)}
-                className="text-[14px] font-semibold text-[rgb(var(--accent))] disabled:opacity-40"
+                className="text-[14px] font-semibold text-[rgb(var(--accent-text))] disabled:opacity-40"
               >
                 Add {included}
               </button>
@@ -266,7 +266,7 @@ export default function BatchCaptureReviewPage() {
                             {r.status === "ambiguous"
                               ? "Several books match. Add the author to the title, then search. "
                               : "Not found. Fix the title, or add it as it is. "}
-                            <button className="font-semibold text-[rgb(var(--accent))]">Search</button>
+                            <button className="font-semibold text-[rgb(var(--accent-text))]">Search</button>
                           </p>
                         </>
                       )}

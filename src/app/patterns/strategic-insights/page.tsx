@@ -631,7 +631,7 @@ export default function StrategicInsightsPage() {
                 {layer}
               </div>
               <div>
-                <p className="text-[12px] font-semibold text-[rgb(var(--accent))] mb-1">{question}</p>
+                <p className="text-[12px] font-semibold text-[rgb(var(--accent-text))] mb-1">{question}</p>
                 <p className="text-[13px] text-[rgb(var(--text-secondary))]">{body}</p>
               </div>
             </div>
@@ -654,7 +654,7 @@ export default function StrategicInsightsPage() {
             "Never show a score of 0 to a new user. Seed a reasonable baseline or show an 'insufficient data' state instead.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}
@@ -679,7 +679,7 @@ export default function StrategicInsightsPage() {
             "If the score or metrics update live, wrap the insight panel in role='region' aria-live='polite' so screen reader users are informed of changes without being interrupted.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5 shrink-0">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5 shrink-0">→</span>
               {item}
             </li>
           ))}

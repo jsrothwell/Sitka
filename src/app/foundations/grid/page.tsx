@@ -53,7 +53,7 @@ export default function GridPage() {
             <tbody>
               {BREAKPOINTS.map((row) => (
                 <tr key={row.name} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.name}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.name}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-primary))]">{row.value}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.tailwind}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.desc}</td>
@@ -79,7 +79,7 @@ export default function GridPage() {
             <tbody>
               {GRID_USAGE.map((row) => (
                 <tr key={row.breakpoint} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.breakpoint}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.breakpoint}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-primary))] font-semibold">{row.cols}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.gutter}</td>
                   <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--text-secondary))]">{row.margin}</td>
@@ -107,7 +107,7 @@ export default function GridPage() {
               {SPAN_PATTERNS.map((row) => (
                 <tr key={row.pattern} className="border-b border-[rgb(var(--border-subtle))] last:border-0 bg-[rgb(var(--surface))]">
                   <td className="px-4 py-3 font-medium text-[rgb(var(--text-primary))]">{row.pattern}</td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent))]">{row.span}</td>
+                  <td className="px-4 py-3 font-mono text-[11px] text-[rgb(var(--accent-text))]">{row.span}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{row.desc}</td>
                 </tr>
               ))}
@@ -173,7 +173,7 @@ export default function GridPage() {
             "12 columns gives even splits for 2 (6), 3 (4), 4 (3), and 6 (2) items without remainder columns.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[rgb(var(--accent))] mt-0.5">→</span>
+              <span className="text-[rgb(var(--accent-text))] mt-0.5">→</span>
               {item}
             </li>
           ))}

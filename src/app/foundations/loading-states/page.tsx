@@ -144,12 +144,12 @@ export default function LoadingStatesPage() {
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{lp.context}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{lp.pattern}</td>
                   <td className="px-4 py-3">
-                    <code className="font-mono text-[11px] text-[rgb(var(--accent))] bg-[rgb(var(--accent-subtle))] px-1.5 py-0.5 rounded">
+                    <code className="font-mono text-[11px] text-[rgb(var(--accent-text))] bg-[rgb(var(--accent-subtle))] px-1.5 py-0.5 rounded">
                       {lp.duration}
                     </code>
                   </td>
                   <td className="px-4 py-3">
-                    <code className="font-mono text-[11px] text-[rgb(var(--accent))] bg-[rgb(var(--accent-subtle))] px-1.5 py-0.5 rounded">
+                    <code className="font-mono text-[11px] text-[rgb(var(--accent-text))] bg-[rgb(var(--accent-subtle))] px-1.5 py-0.5 rounded">
                       {lp.motion}
                     </code>
                   </td>
@@ -179,7 +179,7 @@ export default function LoadingStatesPage() {
               <p className="text-[12px] text-[rgb(var(--text-secondary))] leading-relaxed mb-2">
                 {rule.description}
               </p>
-              <code className="text-[10px] font-mono text-[rgb(var(--accent))] bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] px-2 py-0.5 rounded">
+              <code className="text-[10px] font-mono text-[rgb(var(--accent-text))] bg-[rgb(var(--surface-raised))] border border-[rgb(var(--border))] px-2 py-0.5 rounded">
                 {rule.token}
               </code>
             </div>

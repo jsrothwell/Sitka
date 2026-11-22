@@ -42,12 +42,12 @@ export function BottomTabBar({ items, value, onChange, className }: BottomTabBar
             className={cn(
               "flex-1 flex flex-col items-center justify-center gap-1 py-2.5 relative transition-colors",
               isActive
-                ? "text-[rgb(var(--accent))]"
+                ? "text-[rgb(var(--accent-text))]"
                 : "text-[rgb(var(--text-tertiary))] hover:text-[rgb(var(--text-secondary))]"
             )}
           >
             {item.badge !== undefined && (
-              <span className="absolute top-1.5 left-[calc(50%+6px)] min-w-[15px] h-[15px] flex items-center justify-center rounded-full bg-[rgb(var(--accent))] text-white text-[9px] font-bold px-1 leading-none">
+              <span className="absolute top-1.5 left-[calc(50%+6px)] min-w-[15px] h-[15px] flex items-center justify-center rounded-full bg-[rgb(var(--accent))] text-[rgb(var(--on-accent))] text-[9px] font-bold px-1 leading-none">
                 {typeof item.badge === "number" && item.badge > 99 ? "99+" : item.badge}
               </span>
             )}
