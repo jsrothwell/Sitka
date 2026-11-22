@@ -130,10 +130,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+- `npm test` - Unit tests, including token contrast and DTCG checks
+- `npm run generate` - Regenerate Swift, Figma, agent and component-token files from `src/tokens/`
+- `npm run adoption -- <path>` - Measure how much of an app uses Sitka tokens and components
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) and the [deprecation policy](docs/DEPRECATION.md). Past audits are in [docs/audits](docs/audits/).
 
 ## Learn More
 
-To learn more about Sitka Design System, visit the [documentation](https://github.com/username/Sitka/wiki).
+Documentation: https://jsrothwell.github.io/Sitka. Coding agents can start from [`llms.txt`](https://jsrothwell.github.io/Sitka/llms.txt) or the MCP server in [`packages/mcp`](packages/mcp/).
 
 ## License
 

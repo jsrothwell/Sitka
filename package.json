@@ -27,7 +27,8 @@
     "typecheck:stories": "tsc --noEmit -p tsconfig.stories.json",
     "test:e2e": "playwright test",
     "test:a11y": "playwright test e2e/a11y.spec.ts",
-    "test:visual": "playwright test e2e/visual.spec.ts"
+    "test:visual": "playwright test e2e/visual.spec.ts",
+    "adoption": "node scripts/adoption/scan.mjs"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
@@ -43,7 +44,6 @@
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "run-deepseek-cli": "^0.1.1",
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {

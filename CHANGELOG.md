@@ -67,6 +67,14 @@ Resolves the two token decisions from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §
 - Raw-colour lint rules for native apps: SwiftLint (`platforms/swift/lint/sitka.swiftlint.yml`) and detekt (`platforms/android-compose/lint/sitka-detekt.yml`), the native counterparts of the ESLint token plugin. `src/__tests__/lint-rules.test.ts` checks the Swift patterns and that the Code Connect SwiftUI templates pass them.
 - `llms.txt` points agents at both.
 
+### 2027 readiness: Area 6, governance and adoption
+
+- `CONTRIBUTING.md`: where each kind of change goes, which files are generated, what CI enforces and how to propose a component.
+- `docs/DEPRECATION.md`: what counts as breaking, deprecate-in-minor / remove-in-major, a 90-day minimum, and never changing a token's meaning in place. DTCG `$deprecated` on a token now generates a Swift `@available(*, deprecated)`.
+- `.github/pull_request_template.md` with the token, contrast, accessibility and changelog checklist.
+- `npm run adoption -- <app>`: scans an app's web, Swift and Kotlin source for token references vs raw colours, lists the `sitka-ui` components it imports and the worst files, and can fail CI below a threshold (`--min`). The docs site itself scores 85.9%.
+- Repo cleanup: 12 audit reports moved to `docs/audits/` (with an index), 16 one-off Figma scripts and payloads to `scripts/figma/legacy/`. Removed the unused `run-deepseek-cli` dependency.
+
 #### Fixed
 - `packages/sitka-ui` imported `../../src/…`, which resolves to a folder that doesn't exist; it now type-checks. `CardHeader`, `CardBody` and `CardFooter` are exported.
 - ESLint never loaded the Sitka token plugin (`require` in an ES module); `npm run lint` failed because eslint wasn't installed. Lint now runs with 0 errors.

@@ -61,14 +61,18 @@ const rgba = (v) => {
 };
 const num = (n) => (Number.isInteger(n) ? `${n}` : `${+n.toFixed(4)}`);
 
+// DTCG `$deprecated` (true or a message) becomes a Swift deprecation, per docs/DEPRECATION.md.
+const deprecated = (t, indent = "        ") =>
+  t?.$deprecated ? `${indent}@available(*, deprecated, message: ${JSON.stringify(typeof t.$deprecated === "string" ? t.$deprecated : "Deprecated Sitka token.")})\n` : "";
+
 const palette = [];
 for (const [path, t] of leaves(tokens.color)) {
   if (path[0] === "themes") continue;
   const name = path[0] === "categorical" ? `categorical${path[1]}` : camel(path[0], ...path.slice(1).map((p) => (/^\d+$/.test(p) ? p : swiftIdent(p))));
-  palette.push(`        /// \`color.${path.join(".")}\` — ${toHex(parseColor(t.$value))}\n        public static let ${name} = ${rgba(t.$value)}`);
+  palette.push(`        /// \`color.${path.join(".")}\` — ${toHex(parseColor(t.$value))}\n${deprecated(t)}        public static let ${name} = ${rgba(t.$value)}`);
 }
 
-const themeProps = THEME_KEYS.map((k) => `        public let ${k}: SitkaRGBA`).join("\n");
+const themeProps = THEME_KEYS.map((k) => `${deprecated(themes.dark[k])}        public let ${k}: SitkaRGBA`).join("\n");
 const themeInit = (mode) => `    public static let ${mode} = Theme(\n${THEME_KEYS.map((k) => `        ${k}: ${rgba(themes[mode][k].$value)}`).join(",\n")}\n    )`;
 
 const numberEnum = (name, doc, group, transform = (x) => x, keyName = swiftIdent) =>

@@ -5,7 +5,7 @@ import { contrastRatio } from '@/lib';
 import tokens from '@/tokens/tokens.json';
 
 /**
- * Locks in the two token decisions from CROSS_APP_PATTERN_AUDIT_2026-11-21.md §3:
+ * Locks in the two token decisions from docs/audits/CROSS_APP_PATTERN_AUDIT_2026-11-21.md §3:
  * status text tones, and the categorical palette exposed as CSS variables.
  * Also locks text-on-fill tokens (onAccent, onDanger) added after the 2027 readiness review.
  */

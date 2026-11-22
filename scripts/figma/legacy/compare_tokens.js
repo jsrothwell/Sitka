@@ -17,7 +17,7 @@ const https = require('https');
 // Configuration
 const FIGMA_FILE_KEY = process.argv.find(arg => arg.startsWith('--file='))?.split('=')[1] || 'kMO3RdXXNoZrpHh24hQTl1';
 const FIGMA_TOKEN = process.argv.find(arg => arg.startsWith('--token='))?.split('=')[1] || process.env.FIGMA_TOKEN || '';
-const LOCAL_TOKENS_PATH = './src/tokens/tokens.json';
+const LOCAL_TOKENS_PATH = './src/tokens/tokens.json'; // run from the repo root
 
 // Colors for console output
 const colors = {
@@ -188,7 +188,7 @@ function generateReport(comparison) {
   };
   
   // Save report to file
-  const reportPath = './figma-token-comparison-report.json';
+  const reportPath = './docs/audits/figma-token-comparison-report.json';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   log(`\nReport saved to: ${reportPath}`, 'green');
   

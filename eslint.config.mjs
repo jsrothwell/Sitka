@@ -42,11 +42,12 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Generated output and one-off Figma scripts at the repo root
+    // Generated output and legacy one-off Figma scripts
     "storybook-static/**",
     "packages/*/dist/**",
     "platforms/*/lib/**",
     "*.js",
+    "scripts/figma/legacy/**",
   ]),
 ]);
 
