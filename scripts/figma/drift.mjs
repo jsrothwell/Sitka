@@ -6,16 +6,17 @@
 //
 // Run: npm run figma:drift   (also runs before `npm run build`, after tokens:build)
 // Pass --strict to exit 1 when the file has drifted (for a release gate).
-import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { ROOT, writeIfChanged } from "../tokens/lib.mjs";
+import { openZip } from "./zip.mjs";
 
 const FIGCRAFT = "public/downloads/sitka-design-system.figcraft";
 const OUT = "src/site/home/figma-drift.json";
 
 const expected = JSON.parse(readFileSync(resolve(ROOT, "platforms/figma/variables.json"), "utf8"));
-const doc = JSON.parse(execFileSync("unzip", ["-p", resolve(ROOT, FIGCRAFT), "document.json"], { maxBuffer: 64 * 1024 * 1024 }).toString("utf8"));
+const unzip = openZip(resolve(ROOT, FIGCRAFT));
+const doc = JSON.parse(unzip("document.json").toString("utf8"));
 
 const { collections, variables } = doc.variables;
 const byId = new Map(variables.map((v) => [v.id, v]));
@@ -54,7 +55,6 @@ for (const collection of expected.collections) {
 }
 
 // File stats for the download card, read from the file so they can't go stale.
-const unzip = (entry) => execFileSync("unzip", ["-p", resolve(ROOT, FIGCRAFT), entry], { maxBuffer: 64 * 1024 * 1024 });
 const nodes = Array.isArray(doc.nodes) ? doc.nodes : Object.values(doc.nodes);
 const versions = JSON.parse(unzip("versions/index.json").toString("utf8")).versions;
 const stats = {
