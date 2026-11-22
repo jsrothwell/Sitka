@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Removed
+- The pair of Figma download buttons under the homepage introduction. They repeated the download card directly below it, which keeps both downloads.
+
 ## [1.13.0] - 2026-11-21
 
 Resolves the two token decisions from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §3.
@@ -29,7 +32,6 @@ Resolves the two token decisions from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §
 ### Figma library
 
 - New export of the Figma library (`.fig`) and Figcraft source (`.figcraft`). It now has all 142 variables, adding the 1.13.0 tokens the previous export lacked: status text tones, categorical 5–8, `dangerSolid`, `onDanger`, `accentText` and the `prefers-contrast: more` values. It also fixes `onAccent`, which was white in the old file. `npm run figma:drift` reports 0 missing and 0 mismatched variables, and the documentation pages in the file match this site.
-- The hero now has download buttons for both files directly under the introduction, with format and size on each button, and a link to the details card. The live site didn't show either download before, because this work hadn't reached `main`.
 - The download card's export date, page, component-set, variable and version counts, and cover image are read from the `.figcraft` by `scripts/figma/drift.mjs` on every build. To ship a new export, replace the two files in `public/downloads/` and run `npm run generate`.
 
 ### 2027 readiness: fix-first items

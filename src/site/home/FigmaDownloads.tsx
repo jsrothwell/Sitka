@@ -75,49 +75,10 @@ const primaryBtn =
 const secondaryBtn =
   "inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg border border-[rgb(var(--border))] px-4 text-[13px] font-semibold text-[rgb(var(--text-primary))] transition-standard hover:border-[rgb(var(--accent))] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(var(--accent))]";
 
-/**
- * Hero call to action: direct downloads for both files, with format and size in the button so
- * nobody downloads blind, plus a link to the details card below.
- */
-export function FigmaHeroCtas() {
-  return (
-    <div className="mb-10 flex flex-col gap-3">
-      <div className="flex flex-wrap items-center gap-3">
-        {FILES.map(({ id, file, ext, title, primary }) => {
-          const size = sizeOf(file);
-          return (
-            <a
-              key={id}
-              href={`${BASE}/downloads/${file}`}
-              download={`SitkaDesignSystem-${SNAPSHOT}${ext}`}
-              className={primary ? primaryBtn : secondaryBtn}
-            >
-              <Download className="h-4 w-4" aria-hidden />
-              Download {title}
-              <span className="font-mono text-[11px] font-medium opacity-75">
-                {ext}
-                {size && ` · ${size}`}
-              </span>
-            </a>
-          );
-        })}
-      </div>
-      <p className="text-[12px] text-[rgb(var(--text-tertiary))]">
-        Exported {SNAPSHOT_LABEL}
-        {drift.inSync ? " · matches the tokens on this site" : ""} ·{" "}
-        <a href="#figma-library" className="underline underline-offset-2 hover:text-[rgb(var(--text-primary))]">
-          What&apos;s in the files
-        </a>
-      </p>
-    </div>
-  );
-}
-
 export function FigmaDownloads() {
   return (
     <div
-      id="figma-library"
-      className="mt-2 scroll-mt-20 overflow-hidden rounded-2xl border border-[rgb(var(--border))]"
+      className="mt-2 overflow-hidden rounded-2xl border border-[rgb(var(--border))]"
       style={{ backgroundColor: "var(--card-tint-bg)" }}
     >
       <div className="grid gap-0 md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">

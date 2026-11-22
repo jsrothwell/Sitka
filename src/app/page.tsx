@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Box, Layers, Sparkles, Zap } from "lucide-react";
-import { FigmaDownloads, FigmaHeroCtas } from "@/site/home/FigmaDownloads";
+import { FigmaDownloads } from "@/site/home/FigmaDownloads";
 
 export const metadata: Metadata = { title: "Introduction" };
 
@@ -60,14 +60,12 @@ export default function HomePage() {
         </div>
 
         <p
-          className="text-[rgb(var(--text-secondary))] max-w-[480px] mb-6"
+          className="text-[rgb(var(--text-secondary))] max-w-[480px] mb-9"
           style={{ fontSize: "clamp(1rem, 2vw, 1.1875rem)", lineHeight: 1.65, fontWeight: 500 }}
         >
           Sitka bridges engineering and design with a single source of truth —
           consistent, accessible, and built to scale across Web, iOS, macOS, Android, and visionOS.
         </p>
-
-        <FigmaHeroCtas />
 
         <FigmaDownloads />
       </section>
