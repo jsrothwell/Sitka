@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - The pair of Figma download buttons under the homepage introduction. They repeated the download card directly below it, which keeps both downloads.
+- The page, component-set, variable and colour-mode counts from the download card.
 
 ## [1.13.0] - 2026-11-21
 

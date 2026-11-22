@@ -62,14 +62,6 @@ const FILES = [
   },
 ] as const;
 
-/** Counts read from the file's document.json by scripts/figma/drift.mjs. */
-const STATS = [
-  { value: drift.stats.pages, label: "pages" },
-  { value: drift.stats.componentSets, label: "component sets" },
-  { value: drift.stats.variables, label: "variables" },
-  { value: drift.stats.colourModes, label: "colour modes" },
-];
-
 const primaryBtn =
   "inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-[rgb(var(--accent))] px-4 text-[13px] font-semibold text-[rgb(var(--on-accent))] transition-standard hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(var(--accent))]";
 const secondaryBtn =
@@ -144,19 +136,6 @@ export function FigmaDownloads() {
               <code className="font-mono text-[0.85em]">tokens.json</code>.
             </p>
           </div>
-
-          <dl className="grid grid-cols-2 gap-x-4 gap-y-2 sm:grid-cols-4">
-            {STATS.map((s) => (
-              <div key={s.label} className="flex flex-col-reverse">
-                <dt className="text-[11px] text-[rgb(var(--text-tertiary))]">
-                  {s.label}
-                </dt>
-                <dd className="text-[1rem] font-bold tabular-nums text-[rgb(var(--text-primary))]">
-                  {s.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </div>
       <div className="flex flex-col gap-3 border-t border-[rgb(var(--border))] p-4 md:p-6">
