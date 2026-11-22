@@ -62,6 +62,8 @@ function resolveRef(tokens, value, depth = 0) {
   return target && "$value" in target ? resolveRef(tokens, target.$value, depth + 1) : value;
 }
 function parseColor(input) {
+  // DTCG colour object (tokens.json stores OKLCH with an sRGB hex fallback).
+  if (input && typeof input === "object" && typeof input.hex === "string") return parseColor(input.hex);
   const s = String(input).trim();
   let m = s.match(/^#([0-9a-f]{6})([0-9a-f]{2})?$/i);
   if (m) return [0, 2, 4].map((i) => parseInt(m[1].slice(i, i + 2), 16));
@@ -135,7 +137,12 @@ const TOOLS = [
       if (!node) throw new Error(`No tokens at "${path}".`);
       const rows = [...leaves(node, path.split("."))].map((t) => {
         const resolved = resolveRef(tokens, t.value);
-        const v = typeof resolved === "string" ? resolved : JSON.stringify(resolved);
+        const v =
+          typeof resolved === "string"
+            ? resolved
+            : resolved?.colorSpace === "oklch"
+              ? `oklch(${+(resolved.components[0] * 100).toFixed(2)}% ${resolved.components[1]} ${resolved.components[2]}${resolved.alpha !== undefined ? ` / ${resolved.alpha}` : ""}) (${resolved.hex})`
+              : JSON.stringify(resolved);
         return `${t.path} (${t.type ?? "?"}) = ${v}${t.description ? ` — ${t.description}` : ""}`;
       });
       return rows.length ? rows.join("\n") : JSON.stringify(node, null, 2);

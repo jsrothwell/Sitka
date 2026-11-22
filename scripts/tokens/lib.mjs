@@ -3,6 +3,8 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { toRgba } from "../../src/tokens/oklch.mjs";
+export { toCssOklch, toRgba } from "../../src/tokens/oklch.mjs";
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 export const tokens = JSON.parse(readFileSync(resolve(ROOT, "src/tokens/tokens.json"), "utf8"));
@@ -36,16 +38,9 @@ export function* leaves(node, path = []) {
   }
 }
 
-/** Parses "#rrggbb", "#rgb", "rgb(r, g, b)" or "rgba(r, g, b, a)" into 0–255 channels + alpha 0–1. */
+/** Parses any Sitka colour value (DTCG OKLCH object, hex or rgb()) into 0–255 channels + alpha 0–1. */
 export function parseColor(input) {
-  const v = resolveValue(input).trim();
-  if (v.startsWith("#")) {
-    const h = v.length === 4 ? [...v.slice(1)].map((c) => c + c).join("") : v.slice(1);
-    return { r: parseInt(h.slice(0, 2), 16), g: parseInt(h.slice(2, 4), 16), b: parseInt(h.slice(4, 6), 16), a: h.length === 8 ? parseInt(h.slice(6, 8), 16) / 255 : 1 };
-  }
-  const m = v.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(?:,\s*([\d.]+)\s*)?\)/);
-  if (!m) throw new Error(`Unparseable colour: ${v}`);
-  return { r: +m[1], g: +m[2], b: +m[3], a: m[4] === undefined ? 1 : +m[4] };
+  return toRgba(resolveValue(input));
 }
 
 export const toHex = ({ r, g, b }) => "#" + [r, g, b].map((c) => c.toString(16).padStart(2, "0")).join("");

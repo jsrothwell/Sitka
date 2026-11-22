@@ -34,7 +34,20 @@ const lookup = (ref: string) => {
 
 const dim = (v: unknown) => isRef(v) || (typeof v === 'string' && /^-?\d+(\.\d+)?(px|rem|em)$/.test(v));
 const dur = (v: unknown) => isRef(v) || (typeof v === 'string' && /^\d+(\.\d+)?m?s$/.test(v));
-const col = (v: unknown) => isRef(v) || (typeof v === 'string' && (/^#([0-9a-f]{3}|[0-9a-f]{6}|[0-9a-f]{8})$/i.test(v) || /^rgba?\(/.test(v)));
+// DTCG 2025.10 colour: an object with a colour space, components and optional alpha/hex. Sitka stores OKLCH.
+const col = (v: unknown) => {
+  if (isRef(v)) return true;
+  if (!v || typeof v !== 'object') return false;
+  const c = v as { colorSpace?: unknown; components?: unknown; alpha?: unknown; hex?: unknown };
+  return (
+    c.colorSpace === 'oklch' &&
+    Array.isArray(c.components) &&
+    c.components.length === 3 &&
+    c.components.every((x) => typeof x === 'number') &&
+    (c.alpha === undefined || (typeof c.alpha === 'number' && c.alpha >= 0 && c.alpha <= 1)) &&
+    (c.hex === undefined || (typeof c.hex === 'string' && /^#[0-9a-f]{6}$/.test(c.hex)))
+  );
+};
 const shadowLayer = (s: Node) => col(s.color) && ['offsetX', 'offsetY', 'blur', 'spread'].every((k) => dim(s[k]));
 
 const CHECK: Record<string, (v: unknown) => boolean> = {

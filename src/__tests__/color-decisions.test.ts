@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { describe, it, expect } from 'vitest';
 import { contrastRatio } from '@/lib';
 import tokens from '@/tokens/tokens.json';
+import { oklchToSrgb, toRgba } from '@/tokens/oklch.mjs';
 
 /**
  * Locks in the two token decisions from docs/audits/CROSS_APP_PATTERN_AUDIT_2026-11-21.md §3:
@@ -12,20 +13,17 @@ import tokens from '@/tokens/tokens.json';
 
 type Rgb = [number, number, number];
 
-function parse(value: string): Rgb {
-  if (value.startsWith('#')) {
-    return [1, 3, 5].map((i) => parseInt(value.slice(i, i + 2), 16)) as Rgb;
-  }
-  const m = value.match(/(\d+)\D+(\d+)\D+(\d+)/);
-  if (!m) throw new Error(`Unparseable colour: ${value}`);
-  return [Number(m[1]), Number(m[2]), Number(m[3])];
+/** Any tokens.json colour (DTCG OKLCH object, hex or rgb()) or CSS triplet → sRGB channels. */
+function parse(value: unknown): Rgb {
+  const { r, g, b } = toRgba(value);
+  return [r, g, b];
 }
 
 const hex = ([r, g, b]: Rgb) => `#${[r, g, b].map((c) => c.toString(16).padStart(2, '0')).join('')}`;
 const mix = (fg: Rgb, bg: Rgb, alpha: number): Rgb =>
   fg.map((c, i) => Math.round(c * alpha + bg[i] * (1 - alpha))) as Rgb;
 
-const themes = tokens.color.themes as Record<'dark' | 'light', Record<string, { $value: string }>>;
+const themes = tokens.color.themes as unknown as Record<'dark' | 'light', Record<string, { $value: unknown }>>;
 const STATUSES = ['Success', 'Warning', 'Danger', 'Caution'] as const;
 const SURFACES = ['surface', 'surfaceRaised', 'background', 'surfaceHover'] as const;
 
@@ -75,7 +73,7 @@ describe.each(['light', 'dark'] as const)('text on solid fills — %s theme', (t
 });
 
 describe.each(['light', 'dark'] as const)('prefers-contrast: more — %s theme', (theme) => {
-  const more = (tokens.color as unknown as { contrastMore: Record<string, Record<string, { $value: string }>> }).contrastMore[theme];
+  const more = (tokens.color as unknown as { contrastMore: Record<string, Record<string, { $value: unknown }>> }).contrastMore[theme];
   const t = themes[theme];
 
   it.each(['textSecondary', 'textTertiary'])('%s reaches 7:1 (AAA) on every surface', (key) => {
@@ -98,14 +96,14 @@ describe.each(['light', 'dark'] as const)('prefers-contrast: more — %s theme',
 });
 
 describe('categorical palette', () => {
-  const entries = Object.entries(tokens.color.categorical).filter(([k]) => k !== 'comment') as [string, { $value: string }][];
+  const entries = Object.entries(tokens.color.categorical).filter(([k]) => k !== 'comment') as unknown as [string, { $value: unknown }][];
 
   it('has eight colours', () => {
     expect(entries.map(([k]) => k)).toEqual(['1', '2', '3', '4', '5', '6', '7', '8']);
   });
 
   it.each(entries)('categorical.%s clears 4.5:1 under white text', (_, { $value }) => {
-    expect(contrastRatio($value.toLowerCase(), '#ffffff')).toBeGreaterThanOrEqual(4.5);
+    expect(contrastRatio(hex(parse($value)), '#ffffff')).toBeGreaterThanOrEqual(4.5);
   });
 });
 
@@ -117,7 +115,7 @@ describe('globals.css mirrors tokens.json', () => {
     return m ? ([Number(m[1]), Number(m[2]), Number(m[3])] as Rgb) : null;
   };
 
-  it.each(Object.entries(tokens.color.categorical).filter(([k]) => k !== 'comment') as [string, { $value: string }][])(
+  it.each(Object.entries(tokens.color.categorical).filter(([k]) => k !== 'comment') as unknown as [string, { $value: unknown }][])(
     '--categorical-%s matches',
     (k, { $value }) => {
       expect(cssVar(darkBlock, `categorical-${k}`)).toEqual(parse($value));
@@ -137,5 +135,43 @@ describe('globals.css mirrors tokens.json', () => {
     const name = `status-${status.toLowerCase()}-text`;
     expect(cssVar(darkBlock, name)).toEqual(parse(themes.dark[`status${status}Text`].$value));
     expect(cssVar(lightBlock, name)).toEqual(parse(themes.light[`status${status}Text`].$value));
+  });
+});
+
+describe('OKLCH colour source', () => {
+  type ColorToken = { colorSpace: string; components: [number, number, number]; alpha?: number; hex: string };
+  const colours: [string, ColorToken][] = [];
+  (function walk(node: unknown, path: string, type?: string) {
+    if (!node || typeof node !== 'object') return;
+    const n = node as Record<string, unknown>;
+    const t = (n.$type as string | undefined) ?? type;
+    if ('$value' in n) {
+      if (t === 'color' && typeof n.$value === 'object') colours.push([path, n.$value as ColorToken]);
+      return;
+    }
+    for (const [k, v] of Object.entries(n)) if (!k.startsWith('$')) walk(v, path ? `${path}.${k}` : k, t);
+  })(tokens, '');
+
+  it('stores every literal colour in OKLCH with an sRGB hex fallback', () => {
+    expect(colours.length).toBeGreaterThan(100);
+    for (const [path, v] of colours) {
+      expect(v.colorSpace, path).toBe('oklch');
+      expect(v.hex, path).toMatch(/^#[0-9a-f]{6}$/);
+    }
+  });
+
+  it('OKLCH components convert to exactly the hex fallback (what Swift, Figma and contrast tests use)', () => {
+    for (const [path, v] of colours) expect(hex(oklchToSrgb(v.components) as Rgb), path).toBe(v.hex);
+  });
+
+  it('tokens.oklch.css defines every theme colour with light-dark() and the computed tints', () => {
+    const css = readFileSync(resolve(__dirname, '../app/tokens.oklch.css'), 'utf8');
+    for (const key of Object.keys(themes.dark)) {
+      const name = key.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+      expect(css, key).toMatch(new RegExp(`--color-${name}: light-dark\\(oklch\\(`));
+    }
+    for (const s of ['success', 'warning', 'danger', 'caution']) {
+      expect(css).toContain(`--status-${s}-tint: color-mix(in oklch, var(--color-status-${s}) 12%, transparent);`);
+    }
   });
 });

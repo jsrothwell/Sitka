@@ -367,3 +367,10 @@ h3 {
   --nav-active-color: rgb(22, 110, 60);
   --card-tint-bg: rgba(11, 55, 30, 0.06);
 }
+/* The OKLCH layer (tokens.oklch.css) follows the brand layer: same accent, as full colours. */
+:root[data-theme] {
+  --color-accent: rgb(var(--accent));
+  --color-accent-subtle: rgb(var(--accent-subtle));
+  --color-accent-muted: rgb(var(--accent-muted));
+  --color-accent-text: rgb(var(--accent-text));
+}

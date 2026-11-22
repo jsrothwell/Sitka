@@ -82,6 +82,28 @@ export default function LibraryTokensPage() {
           />
         </section>
 
+        {/* OKLCH */}
+        <section>
+          <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1">Colours are defined in OKLCH</h2>
+          <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
+            Every colour in <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">tokens.json</code> is a DTCG colour object in OKLCH, with an sRGB <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">hex</code> fallback that the components convert to exactly (a test enforces it). Swift, Figma and the contrast tests use the sRGB value. On the web, <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">tokens.oklch.css</code> exposes each theme colour as a full OKLCH value that switches with <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">light-dark()</code>, and tints are computed with <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">color-mix()</code> rather than picked by hand.
+          </p>
+          <CodeBlock
+            language="css"
+            filename="tokens.oklch.css (generated)"
+            code={`:root {
+  --color-status-success: light-dark(oklch(69.59% 0.1491 162.48), oklch(69.59% 0.1491 162.48));
+  --status-success-tint:  color-mix(in oklch, var(--color-status-success) 12%, transparent);
+  --status-success-edge:  color-mix(in oklch, var(--color-status-success) 30%, transparent);
+}
+
+.pill { background: var(--status-success-tint); border-color: var(--status-success-edge); }`}
+          />
+          <p className="mt-3 text-[13px] text-[rgb(var(--text-secondary))]">
+            The RGB triplets (<code className="font-mono text-[12px]">rgb(var(--accent))</code>) still work everywhere, including Tailwind opacity modifiers.
+          </p>
+        </section>
+
         {/* Component tier */}
         <section>
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1">Component tokens</h2>
@@ -121,27 +143,26 @@ export default function LibraryTokensPage() {
             language="json"
             filename="tokens.json (excerpt)"
             code={`{
-  "$schema": "https://sitka.design/tokens/v1",
   "color": {
     "brand": {
-      "cyan": { "$value": "#00C0E8", "$type": "color" },
-      "500":  { "$value": "#34a865", "$type": "color" }
+      "500": {
+        "$type": "color",
+        "$value": { "colorSpace": "oklch", "components": [0.6507, 0.1434, 153.72], "hex": "#34a865" }
+      }
     },
-    "semantic": {
-      "success": { "$value": "#22c55e", "$type": "color" },
-      "warning": { "$value": "#f59e0b", "$type": "color" },
-      "error":   { "$value": "#ef4444", "$type": "color" }
+    "themes": {
+      "dark": {
+        "statusSuccessText": { "$type": "color", "$value": "{semantic.success}" }
+      }
     }
   },
   "spacing": {
-    "4":  { "$value": "16px", "$type": "dimension" },
-    "8":  { "$value": "32px", "$type": "dimension" },
-    "16": { "$value": "64px", "$type": "dimension" }
+    "4": { "$value": "16px", "$type": "dimension" }
   },
-  "borderRadius": {
-    "md":  { "$value": "10px", "$type": "dimension" },
-    "lg":  { "$value": "14px", "$type": "dimension" },
-    "full":{ "$value": "9999px", "$type": "dimension" }
+  "motion": {
+    "easing": {
+      "spring": { "$value": [0.16, 1, 0.3, 1], "$type": "cubicBezier" }
+    }
   }
 }`}
           />

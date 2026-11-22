@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Check, Copy, Download } from "lucide-react";
 import tokens from "@/tokens/tokens.json";
 import { cn } from "@/lib";
+import { toCssOklch, toHex6 } from "@/tokens/oklch.mjs";
 
 function CopyButton({ value }: { value: string }) {
   const [copied, setCopied] = useState(false);
@@ -25,16 +26,19 @@ function CopyButton({ value }: { value: string }) {
   );
 }
 
-function ColorSwatch({ name, value }: { name: string; value: string }) {
+function ColorSwatch({ name, token }: { name: string; token: unknown }) {
+  const hex = toHex6(token);
+  const value = toCssOklch(token);
   return (
     <div className="group flex items-center gap-3 p-2 rounded-lg hover:bg-[rgb(var(--surface))] transition-colors">
       <div
         className="w-8 h-8 rounded-lg flex-shrink-0 border border-black/10 dark:border-white/10"
-        style={{ backgroundColor: value }}
+        style={{ backgroundColor: hex }}
       />
       <div className="flex-1 min-w-0">
         <div className="text-[12px] font-medium text-[rgb(var(--text-primary))]">{name}</div>
         <div className="text-[11px] text-[rgb(var(--text-tertiary))] font-mono">{value}</div>
+        <div className="text-[10px] text-[rgb(var(--text-tertiary))] font-mono">{hex}</div>
       </div>
       <CopyButton value={value} />
     </div>
@@ -112,17 +116,17 @@ export function TokensGrid() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <TokenCard title="Brand">
             {Object.entries(tokens.color.brand).map(([k, v]) => (
-              <ColorSwatch key={k} name={`brand.${k}`} value={(v as { $value: string }).$value} />
+              <ColorSwatch key={k} name={`brand.${k}`} token={(v as { $value: unknown }).$value} />
             ))}
           </TokenCard>
           <TokenCard title="Neutral">
             {Object.entries(tokens.color.neutral).map(([k, v]) => (
-              <ColorSwatch key={k} name={`neutral.${k}`} value={(v as { $value: string }).$value} />
+              <ColorSwatch key={k} name={`neutral.${k}`} token={(v as { $value: unknown }).$value} />
             ))}
           </TokenCard>
           <TokenCard title="Semantic">
             {Object.entries(tokens.color.semantic).map(([k, v]) => (
-              <ColorSwatch key={k} name={k} value={(v as { $value: string }).$value} />
+              <ColorSwatch key={k} name={k} token={(v as { $value: unknown }).$value} />
             ))}
           </TokenCard>
         </div>

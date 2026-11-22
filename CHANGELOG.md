@@ -59,7 +59,8 @@ Resolves the two token decisions from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §
 - Component tier: `src/tokens/components.json` maps Button, Badge, Input, Card and Link parts to theme tokens. `npm run generate` emits `--button-primary-background`-style CSS variables (`src/app/tokens.components.css`) and `SitkaTokens.Component.*` key paths in Swift, and fails on unknown theme tokens.
 - Icons: Lucide is the web standard, alongside SF Symbols for native apps. The last two Phosphor uses (Pricing Table, Prompt Input page) moved to Lucide; the Icons page marks Phosphor and Font Awesome as alternatives.
 - The Tokens page's export buttons generated a Swift file in the browser from stale values; they now download the generated files.
-- Not done: OKLCH colour values. Colours stay sRGB hex until the Figma and Swift pipelines read OKLCH.
+- OKLCH: every colour in `tokens.json` (including shadow colours) is now a DTCG 2025.10 colour object in OKLCH with an sRGB `hex` fallback, stored at the shortest precision that converts back to the exact same 8-bit colour, so Swift, Figma and contrast results are unchanged. `src/tokens/oklch.mjs` does the conversion for the generators, site and tests. `npm run generate` writes `src/app/tokens.oklch.css`: every theme colour as `--color-*` using `light-dark()`, plus `--status-*-tint` / `--status-*-edge` and `--accent-tint` / `--accent-edge` computed with `color-mix(in oklch, …)`. Tests check the round-trip, the DTCG shape and the generated CSS.
+- Badge's success, warning and danger variants used raw Tailwind colours (`emerald-500` text on light surfaces was about 2.5:1). They now use the computed tints with `--status-*-text`.
 
 ### 2027 readiness: Area 5, agent readiness
 

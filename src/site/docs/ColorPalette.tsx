@@ -4,16 +4,13 @@ import { useState } from "react";
 import { Check, Copy } from "lucide-react";
 import tokens from "@/tokens/tokens.json";
 import { contrastRatio } from "@/lib";
+import { toHex6 } from "@/tokens/oklch.mjs";
 
-/** "rgb(r, g, b)" or "#rrggbb" → "#rrggbb" for the contrast helpers. */
-function toHex(value: string) {
-  if (value.startsWith("#")) return value.toLowerCase();
-  const [r, g, b] = value.match(/\d+/g)!.map(Number);
-  return "#" + [r, g, b].map((c) => c.toString(16).padStart(2, "0")).join("");
-}
+/** Any tokens.json colour (OKLCH object, hex or rgb()) → "#rrggbb" for swatches and the contrast helpers. */
+const toHex = (value: unknown): string => toHex6(value);
 
 const STATUS = ["Success", "Warning", "Danger", "Caution"] as const;
-type ThemeTokens = Record<string, { $value: string }>;
+type ThemeTokens = Record<string, { $value: unknown }>;
 const THEMES = tokens.color.themes as unknown as Record<"light" | "dark", ThemeTokens>;
 
 function Swatch({ step, hex }: { step: string; hex: string }) {
@@ -67,7 +64,7 @@ export function ColorPalette() {
         </p>
         <div className="grid grid-cols-5 md:grid-cols-11 gap-2">
           {Object.entries(tokens.color.brand).map(([k, v]) => (
-            <Swatch key={k} step={k} hex={(v as { $value: string }).$value} />
+            <Swatch key={k} step={k} hex={toHex((v as { $value: unknown }).$value)} />
           ))}
         </div>
       </section>
@@ -79,7 +76,7 @@ export function ColorPalette() {
         </p>
         <div className="grid grid-cols-5 md:grid-cols-13 gap-2">
           {Object.entries(tokens.color.neutral).map(([k, v]) => (
-            <Swatch key={k} step={k} hex={(v as { $value: string }).$value} />
+            <Swatch key={k} step={k} hex={toHex((v as { $value: unknown }).$value)} />
           ))}
         </div>
       </section>
@@ -91,7 +88,7 @@ export function ColorPalette() {
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {Object.entries(tokens.color.semantic).map(([k, v]) => {
-            const hex = (v as { $value: string }).$value;
+            const hex = toHex((v as { $value: unknown }).$value);
             return (
               <div key={k} className="flex items-center gap-3 p-3 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))]">
                 <div className="w-10 h-10 rounded-lg flex-shrink-0 border border-black/10 dark:border-white/10" style={{ backgroundColor: hex }} />
@@ -169,7 +166,7 @@ export function ColorPalette() {
           {Object.entries(tokens.color.categorical)
             .filter(([k]) => k !== "comment")
             .map(([k, v]) => {
-              const hex = (v as { $value: string }).$value;
+              const hex = toHex((v as { $value: unknown }).$value);
               return (
                 <div key={k} className="overflow-hidden rounded-xl border border-[rgb(var(--border))]">
                   <div className="flex h-14 items-end p-2.5 text-[13px] font-semibold text-white" style={{ background: hex }}>
