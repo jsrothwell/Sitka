@@ -421,32 +421,32 @@
           "name": "theme/accent",
           "type": "COLOR",
           "values": {
-            "Light": "#00c0e8",
-            "Dark": "#00c0e8"
+            "Light": "#34a865",
+            "Dark": "#34a865"
           }
         },
         {
           "name": "theme/accentSubtle",
           "type": "COLOR",
           "values": {
-            "Light": "#e0f7fc",
-            "Dark": "#00262e"
+            "Light": "#e8f8ef",
+            "Dark": "#0a2615"
           }
         },
         {
           "name": "theme/accentMuted",
           "type": "COLOR",
           "values": {
-            "Light": "#b3edf9",
-            "Dark": "#004856"
+            "Light": "#a6dcbe",
+            "Dark": "#144827"
           }
         },
         {
           "name": "theme/accentText",
           "type": "COLOR",
           "values": {
-            "Light": "#00728a",
-            "Dark": "#00c0e8"
+            "Light": "#166e3c",
+            "Dark": "#34a865"
           }
         },
         {
@@ -613,8 +613,8 @@
           "name": "theme/brandUser",
           "type": "COLOR",
           "values": {
-            "Light": "#00c0e8",
-            "Dark": "#00c0e8"
+            "Light": "#34a865",
+            "Dark": "#34a865"
           }
         }
       ]

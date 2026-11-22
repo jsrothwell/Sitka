@@ -62,10 +62,10 @@ export default function LibraryReactPage() {
   --surface-raised: 22  22  28;
   --surface-hover:  32  32  40;
 
-  --accent:         0 192 232;
-  --accent-hover:   0 160 200;
-  --accent-subtle:  0  38  46;
-  --accent-muted:   0  72  86;
+  --accent:         52 168 101;
+  --accent-hover:   40 148  84;
+  --accent-subtle:  10  38  21;
+  --accent-muted:   20  72  39;
 
   --text-primary:   242 242 246;
   --text-secondary: 155 155 170;
@@ -87,9 +87,9 @@ export default function LibraryReactPage() {
   --surface-raised:  246 246 248;
   --surface-hover:   240 240 244;
 
-  --accent:          0 192 232;
-  --accent-subtle:   224 247 252;
-  --accent-muted:    179 237 249;
+  --accent:          52 168 101;
+  --accent-subtle:   232 248 239;
+  --accent-muted:    166 220 190;
 
   --text-primary:    40  40  40;
   --text-secondary:  116 116 116;

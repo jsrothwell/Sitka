@@ -161,10 +161,10 @@ public enum SitkaTokens {
         surface: SitkaRGBA(red: 0.0510, green: 0.0510, blue: 0.0667, alpha: 1),
         surfaceRaised: SitkaRGBA(red: 0.0863, green: 0.0863, blue: 0.1098, alpha: 1),
         surfaceHover: SitkaRGBA(red: 0.1255, green: 0.1255, blue: 0.1569, alpha: 1),
-        accent: SitkaRGBA(red: 0.0000, green: 0.7529, blue: 0.9098, alpha: 1),
-        accentSubtle: SitkaRGBA(red: 0.0000, green: 0.1490, blue: 0.1804, alpha: 1),
-        accentMuted: SitkaRGBA(red: 0.0000, green: 0.2824, blue: 0.3373, alpha: 1),
-        accentText: SitkaRGBA(red: 0.0000, green: 0.7529, blue: 0.9098, alpha: 1),
+        accent: SitkaRGBA(red: 0.2039, green: 0.6588, blue: 0.3961, alpha: 1),
+        accentSubtle: SitkaRGBA(red: 0.0392, green: 0.1490, blue: 0.0824, alpha: 1),
+        accentMuted: SitkaRGBA(red: 0.0784, green: 0.2824, blue: 0.1529, alpha: 1),
+        accentText: SitkaRGBA(red: 0.2039, green: 0.6588, blue: 0.3961, alpha: 1),
         textPrimary: SitkaRGBA(red: 0.9490, green: 0.9490, blue: 0.9647, alpha: 1),
         textSecondary: SitkaRGBA(red: 0.6667, green: 0.6667, blue: 0.7255, alpha: 1),
         textTertiary: SitkaRGBA(red: 0.5294, green: 0.5294, blue: 0.6078, alpha: 1),
@@ -185,7 +185,7 @@ public enum SitkaTokens {
         progressSuccess: SitkaRGBA(red: 0.1333, green: 0.7725, blue: 0.3686, alpha: 1),
         progressWarning: SitkaRGBA(red: 0.9608, green: 0.6196, blue: 0.0431, alpha: 1),
         progressDanger: SitkaRGBA(red: 0.9373, green: 0.2667, blue: 0.2667, alpha: 1),
-        brandUser: SitkaRGBA(red: 0.0000, green: 0.7529, blue: 0.9098, alpha: 1)
+        brandUser: SitkaRGBA(red: 0.2039, green: 0.6588, blue: 0.3961, alpha: 1)
     )
 
     public static let light = Theme(
@@ -193,10 +193,10 @@ public enum SitkaTokens {
         surface: SitkaRGBA(red: 1.0000, green: 1.0000, blue: 1.0000, alpha: 1),
         surfaceRaised: SitkaRGBA(red: 0.9647, green: 0.9647, blue: 0.9725, alpha: 1),
         surfaceHover: SitkaRGBA(red: 0.9412, green: 0.9412, blue: 0.9569, alpha: 1),
-        accent: SitkaRGBA(red: 0.0000, green: 0.7529, blue: 0.9098, alpha: 1),
-        accentSubtle: SitkaRGBA(red: 0.8784, green: 0.9686, blue: 0.9882, alpha: 1),
-        accentMuted: SitkaRGBA(red: 0.7020, green: 0.9294, blue: 0.9765, alpha: 1),
-        accentText: SitkaRGBA(red: 0.0000, green: 0.4471, blue: 0.5412, alpha: 1),
+        accent: SitkaRGBA(red: 0.2039, green: 0.6588, blue: 0.3961, alpha: 1),
+        accentSubtle: SitkaRGBA(red: 0.9098, green: 0.9725, blue: 0.9373, alpha: 1),
+        accentMuted: SitkaRGBA(red: 0.6510, green: 0.8627, blue: 0.7451, alpha: 1),
+        accentText: SitkaRGBA(red: 0.0863, green: 0.4314, blue: 0.2353, alpha: 1),
         textPrimary: SitkaRGBA(red: 0.1176, green: 0.1176, blue: 0.1176, alpha: 1),
         textSecondary: SitkaRGBA(red: 0.3333, green: 0.3333, blue: 0.3529, alpha: 1),
         textTertiary: SitkaRGBA(red: 0.4235, green: 0.4235, blue: 0.4431, alpha: 1),
@@ -217,7 +217,7 @@ public enum SitkaTokens {
         progressSuccess: SitkaRGBA(red: 0.1333, green: 0.7725, blue: 0.3686, alpha: 1),
         progressWarning: SitkaRGBA(red: 0.9608, green: 0.6196, blue: 0.0431, alpha: 1),
         progressDanger: SitkaRGBA(red: 0.9373, green: 0.2667, blue: 0.2667, alpha: 1),
-        brandUser: SitkaRGBA(red: 0.0000, green: 0.7529, blue: 0.9098, alpha: 1)
+        brandUser: SitkaRGBA(red: 0.2039, green: 0.6588, blue: 0.3961, alpha: 1)
     )
 
     /// Spacing scale in points (`spacing.*`).

@@ -11,7 +11,68 @@
     "versions": 6,
     "savedAt": "2026-11-22"
   },
-  "inSync": true,
+  "inSync": false,
   "missing": [],
-  "mismatched": []
+  "mismatched": [
+    {
+      "name": "theme/accent",
+      "mode": "Light",
+      "file": "#00c0e8",
+      "code": "#34a865"
+    },
+    {
+      "name": "theme/accent",
+      "mode": "Dark",
+      "file": "#00c0e8",
+      "code": "#34a865"
+    },
+    {
+      "name": "theme/accentSubtle",
+      "mode": "Light",
+      "file": "#e0f7fc",
+      "code": "#e8f8ef"
+    },
+    {
+      "name": "theme/accentSubtle",
+      "mode": "Dark",
+      "file": "#00262e",
+      "code": "#0a2615"
+    },
+    {
+      "name": "theme/accentMuted",
+      "mode": "Light",
+      "file": "#b3edf9",
+      "code": "#a6dcbe"
+    },
+    {
+      "name": "theme/accentMuted",
+      "mode": "Dark",
+      "file": "#004856",
+      "code": "#144827"
+    },
+    {
+      "name": "theme/accentText",
+      "mode": "Light",
+      "file": "#00728a",
+      "code": "#166e3c"
+    },
+    {
+      "name": "theme/accentText",
+      "mode": "Dark",
+      "file": "#00c0e8",
+      "code": "#34a865"
+    },
+    {
+      "name": "theme/brandUser",
+      "mode": "Light",
+      "file": "#00c0e8",
+      "code": "#34a865"
+    },
+    {
+      "name": "theme/brandUser",
+      "mode": "Dark",
+      "file": "#00c0e8",
+      "code": "#34a865"
+    }
+  ]
 }

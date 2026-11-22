@@ -16,11 +16,11 @@
   --surface-raised: 22  22  28;
   --surface-hover:  32  32  40;
 
-  --accent:         0 192 232;
-  --accent-hover:   0 160 200;
-  --accent-subtle:  0  38  46;
-  --accent-muted:   0  72  86;
-  --accent-text:    0 192 232;  /* accent as text/links: 4.5:1+ on every surface */
+  --accent:         52 168 101;
+  --accent-hover:   40 148  84;
+  --accent-subtle:  10  38  21;
+  --accent-muted:   20  72  39;
+  --accent-text:    52 168 101;  /* accent as text/links: 4.5:1+ on every surface */
 
   --text-primary:   242 242 246;
   --text-secondary: 170 170 185;
@@ -41,7 +41,7 @@
   --status-danger-text: 248 113 113;
   --status-caution-text: 249 115 22;
 
-  /* Text on solid fills — white on the cyan accent is ~2.2:1, so it takes near-black */
+  /* Text on solid fills — white on the green accent is ~2.9:1, so it takes near-black (6.6:1) */
   --on-accent: 9 9 12;
   --danger-solid: 220 38 38;
   --on-danger: 255 255 255;
@@ -79,8 +79,8 @@
   --motion-sheet-entry-from:     0.97;
 
   /* Full-value tokens (used with var() directly, not rgb(var())) */
-  --nav-active-color: rgb(99, 102, 241);
-  --card-tint-bg:    rgb(22, 22, 28);
+  --nav-active-color: rgb(52, 168, 101);
+  --card-tint-bg:    rgb(12, 28, 18);
 
   --radius-sm:  4px;
   --radius:     6px;
@@ -110,10 +110,10 @@
   --surface-raised:  246 246 248;
   --surface-hover:   240 240 244;
 
-  --accent:          0 192 232;
-  --accent-subtle:   224 247 252;
-  --accent-muted:    179 237 249;
-  --accent-text:     0 114 138;
+  --accent:          52 168 101;
+  --accent-subtle:   232 248 239;
+  --accent-muted:    166 220 190;
+  --accent-text:     22 110  60;
 
   --text-primary:    30  30  30;
   --text-secondary:  85  85  90;
@@ -122,8 +122,8 @@
   --border:          224 224 231;
   --border-subtle:   240 240 244;
 
-  --nav-active-color: rgb(0, 192, 232);
-  --card-tint-bg:    rgba(0, 192, 232, 0.04);
+  --nav-active-color: rgb(22, 110, 60);
+  --card-tint-bg:    rgba(11, 55, 30, 0.06);
 
   /* Status colours */
   --status-success:  16 185 129;
@@ -137,7 +137,7 @@
   --status-danger-text: 191 28 28;
   --status-caution-text: 177 59 10;
 
-  /* Text on solid fills — white on the cyan accent is ~2.2:1, so it takes near-black */
+  /* Text on solid fills — white on the green accent is ~2.9:1, so it takes near-black (6.6:1) */
   --on-accent: 9 9 12;
   --danger-solid: 191 28 28;
   --on-danger: 255 255 255;
@@ -340,37 +340,4 @@ h3 {
     --text-tertiary: 70 70 76;
     --border: 128 128 138;
   }
-}
-
-/*
- * Docs-site brand layer. tokens.json sets the accent to brand.cyan; this site has always shown
- * the spruce-green brand ramp (brand.500) as its accent instead. These overrides were previously
- * written inline by ThemeProvider, which also overrode every other token; now only the accent
- * family differs, and it's declared here where it's visible. Text on it uses --on-accent
- * (near-black, 6.6:1 on this green).
- */
-[data-theme] {
-  --accent: 52 168 101;
-  --accent-hover: 40 148 84;
-}
-[data-theme="dark"] {
-  --accent-subtle: 10 38 21;
-  --accent-muted: 20 72 39;
-  --accent-text: 52 168 101;
-  --nav-active-color: rgb(52, 168, 101);
-  --card-tint-bg: rgb(12, 28, 18);
-}
-[data-theme="light"] {
-  --accent-subtle: 232 248 239;
-  --accent-muted: 166 220 190;
-  --accent-text: 22 110 60;
-  --nav-active-color: rgb(22, 110, 60);
-  --card-tint-bg: rgba(11, 55, 30, 0.06);
-}
-/* The OKLCH layer (tokens.oklch.css) follows the brand layer: same accent, as full colours. */
-:root[data-theme] {
-  --color-accent: rgb(var(--accent));
-  --color-accent-subtle: rgb(var(--accent-subtle));
-  --color-accent-muted: rgb(var(--accent-muted));
-  --color-accent-text: rgb(var(--accent-text));
 }

@@ -44,7 +44,7 @@ const TOKEN_GROUPS: TokenGroup[] = [
   {
     label: "Brand · Accent",
     tokens: [
-      { label: "Accent",        cssVar: "--accent",        type: "color", defaultVal: "#00c0e8" },
+      { label: "Accent",        cssVar: "--accent",        type: "color", defaultVal: "#34a865" },
       { label: "Accent Hover",  cssVar: "--accent-hover",  type: "color", defaultVal: "#00a0c8" },
       { label: "Accent Subtle", cssVar: "--accent-subtle", type: "color", defaultVal: "#00262e" },
       { label: "Accent Muted",  cssVar: "--accent-muted",  type: "color", defaultVal: "#004856" },
@@ -461,7 +461,7 @@ function KitchenSink() {
                 </thead>
                 <tbody>
                   {[
-                    ["--accent",       "#00c0e8", "Color"],
+                    ["--accent",       "#34a865", "Color"],
                     ["--background",   "#09090c", "Color"],
                     ["--radius",       "6px",     "Dimension"],
                     ["--text-primary", "#f2f2f6", "Color"],
