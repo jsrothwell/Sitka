@@ -62,62 +62,15 @@ const FILES = [
   },
 ] as const;
 
-/** Counts read from the file's document.json by scripts/figma/drift.mjs. */
-const STATS = [
-  { value: drift.stats.pages, label: "pages" },
-  { value: drift.stats.componentSets, label: "component sets" },
-  { value: drift.stats.variables, label: "variables" },
-  { value: drift.stats.colourModes, label: "colour modes" },
-];
-
 const primaryBtn =
   "inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-[rgb(var(--accent))] px-4 text-[13px] font-semibold text-[rgb(var(--on-accent))] transition-standard hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(var(--accent))]";
 const secondaryBtn =
   "inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg border border-[rgb(var(--border))] px-4 text-[13px] font-semibold text-[rgb(var(--text-primary))] transition-standard hover:border-[rgb(var(--accent))] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(var(--accent))]";
 
-/**
- * Hero call to action: direct downloads for both files, with format and size in the button so
- * nobody downloads blind, plus a link to the details card below.
- */
-export function FigmaHeroCtas() {
-  return (
-    <div className="mb-10 flex flex-col gap-3">
-      <div className="flex flex-wrap items-center gap-3">
-        {FILES.map(({ id, file, ext, title, primary }) => {
-          const size = sizeOf(file);
-          return (
-            <a
-              key={id}
-              href={`${BASE}/downloads/${file}`}
-              download={`SitkaDesignSystem-${SNAPSHOT}${ext}`}
-              className={primary ? primaryBtn : secondaryBtn}
-            >
-              <Download className="h-4 w-4" aria-hidden />
-              Download {title}
-              <span className="font-mono text-[11px] font-medium opacity-75">
-                {ext}
-                {size && ` · ${size}`}
-              </span>
-            </a>
-          );
-        })}
-      </div>
-      <p className="text-[12px] text-[rgb(var(--text-tertiary))]">
-        Exported {SNAPSHOT_LABEL}
-        {drift.inSync ? " · matches the tokens on this site" : ""} ·{" "}
-        <a href="#figma-library" className="underline underline-offset-2 hover:text-[rgb(var(--text-primary))]">
-          What&apos;s in the files
-        </a>
-      </p>
-    </div>
-  );
-}
-
 export function FigmaDownloads() {
   return (
     <div
-      id="figma-library"
-      className="mt-2 scroll-mt-20 overflow-hidden rounded-2xl border border-[rgb(var(--border))]"
+      className="mt-2 overflow-hidden rounded-2xl border border-[rgb(var(--border))]"
       style={{ backgroundColor: "var(--card-tint-bg)" }}
     >
       <div className="grid gap-0 md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
@@ -183,19 +136,6 @@ export function FigmaDownloads() {
               <code className="font-mono text-[0.85em]">tokens.json</code>.
             </p>
           </div>
-
-          <dl className="grid grid-cols-2 gap-x-4 gap-y-2 sm:grid-cols-4">
-            {STATS.map((s) => (
-              <div key={s.label} className="flex flex-col-reverse">
-                <dt className="text-[11px] text-[rgb(var(--text-tertiary))]">
-                  {s.label}
-                </dt>
-                <dd className="text-[1rem] font-bold tabular-nums text-[rgb(var(--text-primary))]">
-                  {s.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </div>
       <div className="flex flex-col gap-3 border-t border-[rgb(var(--border))] p-4 md:p-6">
