@@ -23,8 +23,14 @@ Resolves the two token decisions from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §
 #### Docs
 - Color: new Status text and Categorical sections, with ratios computed from `tokens.json`.
 - Contrast: status text tones and a categorical fill added to Approved Token Pairings.
-- Homepage hero: download cards for the Figma library (`.fig`) and Figcraft source (`.figcraft`) with format, size, which app opens each, and a note on which 1.13.0 tokens the file doesn't include yet. Files are served from `public/downloads/`.
+- Homepage hero: download cards for the Figma library (`.fig`) and Figcraft source (`.figcraft`) with format, size, which app opens each, and whether the file matches the code. Files are served from `public/downloads/`.
 - Libraries → Figma: replaces the "coming soon" placeholder with the downloads and setup steps.
+
+### Figma library
+
+- New export of the Figma library (`.fig`) and Figcraft source (`.figcraft`). It now has all 142 variables, adding the 1.13.0 tokens the previous export lacked: status text tones, categorical 5–8, `dangerSolid`, `onDanger`, `accentText` and the `prefers-contrast: more` values. It also fixes `onAccent`, which was white in the old file. `npm run figma:drift` reports 0 missing and 0 mismatched variables, and the documentation pages in the file match this site.
+- The hero now has download buttons for both files directly under the introduction, with format and size on each button, and a link to the details card. The live site didn't show either download before, because this work hadn't reached `main`.
+- The download card's export date, page, component-set, variable and version counts, and cover image are read from the `.figcraft` by `scripts/figma/drift.mjs` on every build. To ship a new export, replace the two files in `public/downloads/` and run `npm run generate`.
 
 ### 2027 readiness: fix-first items
 
