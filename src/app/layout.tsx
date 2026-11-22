@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import "./tokens.components.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { DocsShell } from "@/site/layout/DocsShell";
 

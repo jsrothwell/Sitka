@@ -1,0 +1,34 @@
+{
+  "$description": "Component tier. Each component part names the theme token it uses (keys of color.themes.* in tokens.json). Generated into CSS variables (--button-primary-background) and Swift key paths, so restyling a component means editing one line here. Run npm run generate after changes.",
+  "button": {
+    "primary":   { "background": "accent",        "foreground": "onAccent" },
+    "secondary": { "background": "surface",       "foreground": "textPrimary", "border": "border", "borderHover": "accent" },
+    "ghost":     { "foreground": "textSecondary", "backgroundHover": "surface", "foregroundHover": "textPrimary" },
+    "danger":    { "background": "dangerSolid",   "foreground": "onDanger" }
+  },
+  "badge": {
+    "default": { "background": "surfaceRaised",  "foreground": "textSecondary" },
+    "primary": { "background": "accentSubtle",   "foreground": "accentText" },
+    "success": { "background": "statusSuccess",  "foreground": "statusSuccessText" },
+    "warning": { "background": "statusWarning",  "foreground": "statusWarningText" },
+    "danger":  { "background": "statusDanger",   "foreground": "statusDangerText" }
+  },
+  "input": {
+    "background": "surface",
+    "foreground": "textPrimary",
+    "placeholder": "textTertiary",
+    "border": "border",
+    "borderFocus": "accent",
+    "borderError": "statusDanger",
+    "errorText": "statusDangerText"
+  },
+  "card": {
+    "background": "surface",
+    "border": "border",
+    "title": "textPrimary",
+    "body": "textSecondary"
+  },
+  "link": {
+    "foreground": "accentText"
+  }
+}

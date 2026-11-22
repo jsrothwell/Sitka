@@ -121,20 +121,22 @@ export function IconsShowcase() {
           <table className="w-full text-[13px]">
             <thead>
               <tr className="border-b border-[rgb(var(--border))] bg-[rgb(var(--surface-raised))]">
-                {["Library", "Platform", "Style", "Free tier"].map((h) => (
+                {["Library", "Platform", "Status", "Style", "Free tier"].map((h) => (
                   <th key={h} className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-[rgb(var(--text-tertiary))]">{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody className="divide-y divide-[rgb(var(--border-subtle))]">
               {[
-                { lib: "SF Symbols",      platform: "iOS · macOS · watchOS · tvOS", style: "9 weights · 4 rendering modes",    free: "6,000+ symbols"     },
-                { lib: "Phosphor Icons",  platform: "Web · React · Vue · Svelte",   style: "6 weights (thin → duotone)",        free: "1,248 icons"        },
-                { lib: "Font Awesome",    platform: "Web · React",                  style: "Solid · Regular · Brands",          free: "~2,000 solid icons" },
-              ].map(({ lib, platform, style, free }) => (
+                { lib: "SF Symbols",      platform: "iOS · macOS · watchOS · tvOS", status: "Standard (native)", style: "9 weights · 4 rendering modes",    free: "6,000+ symbols"     },
+                { lib: "Lucide",          platform: "Web · React",                  status: "Standard (web)",    style: "Outline · adjustable stroke",      free: "1,500+ icons"       },
+                { lib: "Phosphor Icons",  platform: "Web · React · Vue · Svelte",   status: "Alternative",       style: "6 weights (thin → duotone)",        free: "1,248 icons"        },
+                { lib: "Font Awesome",    platform: "Web · React",                  status: "Alternative",       style: "Solid · Regular · Brands",          free: "~2,000 solid icons" },
+              ].map(({ lib, platform, status, style, free }) => (
                 <tr key={lib} className="bg-[rgb(var(--surface))] hover:bg-[rgb(var(--surface-raised))] transition-standard">
                   <td className="px-4 py-3 font-semibold text-[rgb(var(--text-primary))]">{lib}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{platform}</td>
+                  <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{status}</td>
                   <td className="px-4 py-3 text-[rgb(var(--text-secondary))]">{style}</td>
                   <td className="px-4 py-3 font-mono text-[rgb(var(--text-tertiary))]">{free}</td>
                 </tr>
@@ -144,9 +146,24 @@ export function IconsShowcase() {
         </div>
       </section>
 
+      {/* ── Lucide (web standard) ──────────────────────── */}
+      <section>
+        <h2 className={sectionH}>Lucide — the web standard</h2>
+        <p className={sectionSub}>
+          Every Sitka React component uses Lucide. Use it in product code too, so icons match the components around them. Size icons with the text they sit next to, keep the default 2px stroke, and mark decorative icons <code className="font-mono text-[12px]">aria-hidden</code>.
+        </p>
+        <CodeBlock
+          language="tsx"
+          code={`import { Search, Bell } from "lucide-react";
+
+<Search className="h-4 w-4" aria-hidden="true" />
+<button aria-label="Notifications"><Bell className="h-5 w-5" /></button>`}
+        />
+      </section>
+
       {/* ── Phosphor Icons ─────────────────────────────── */}
       <section>
-        <h2 className={sectionH}>Phosphor Icons</h2>
+        <h2 className={sectionH}>Phosphor Icons (alternative)</h2>
         <p className={sectionSub}>
           A flexible icon family with six weight variants that share the same underlying geometry. Use a consistent weight across a surface — mixing weights should be intentional.
         </p>
@@ -288,7 +305,7 @@ struct IconExamples: View {
 
       {/* ── Font Awesome ───────────────────────────────── */}
       <section>
-        <h2 className={sectionH}>Font Awesome</h2>
+        <h2 className={sectionH}>Font Awesome (alternative)</h2>
         <p className={sectionSub}>
           Font Awesome's free tier includes ~2,000 solid icons and a limited set of regular and brand icons. Use it where FA-specific icon names are already part of your design language or you need broad browser compatibility.
         </p>

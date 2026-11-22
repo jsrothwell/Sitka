@@ -53,6 +53,14 @@ Resolves the two token decisions from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §
 - Playwright checks in CI, run in the `mcr.microsoft.com/playwright:v1.65.1-noble` image: axe on all 171 pages in light and dark, ratcheted against `e2e/a11y-baseline.json` so new violations fail, plus visual regression on all 60 component pages in both themes (120 baselines). Fixing the shared shell shrank the baseline from 308 to 134 page/scheme entries: preview toggles are now 24 px targets, and code blocks and scrollable tables are focusable regions.
 - Stories for Box, Stack, Context Menu, Gauge, KPI Tile and Progress. CI type-checks stories (`tsconfig.stories.json`) and builds Storybook. Fixed a type error in the Toggle group story.
 
+### 2027 readiness: Area 4, token architecture
+
+- `tokens.json` now validates as DTCG: numbers and font weights are JSON numbers, cubic-bézier curves are arrays, shadows are shadow objects, timed motion presets are `transition` tokens that reference the easing curves, and spring presets are groups of `stiffness`/`damping` numbers. Values with no DTCG type (haptics, text transforms) moved to `$extensions`. `src/__tests__/tokens-dtcg.test.ts` checks every token's type, value shape and references.
+- Component tier: `src/tokens/components.json` maps Button, Badge, Input, Card and Link parts to theme tokens. `npm run generate` emits `--button-primary-background`-style CSS variables (`src/app/tokens.components.css`) and `SitkaTokens.Component.*` key paths in Swift, and fails on unknown theme tokens.
+- Icons: Lucide is the web standard, alongside SF Symbols for native apps. The last two Phosphor uses (Pricing Table, Prompt Input page) moved to Lucide; the Icons page marks Phosphor and Font Awesome as alternatives.
+- The Tokens page's export buttons generated a Swift file in the browser from stale values; they now download the generated files.
+- Not done: OKLCH colour values. Colours stay sRGB hex until the Figma and Swift pipelines read OKLCH.
+
 #### Fixed
 - `packages/sitka-ui` imported `../../src/…`, which resolves to a folder that doesn't exist; it now type-checks. `CardHeader`, `CardBody` and `CardFooter` are exported.
 - ESLint never loaded the Sitka token plugin (`require` in an ES module); `npm run lint` failed because eslint wasn't installed. Lint now runs with 0 errors.

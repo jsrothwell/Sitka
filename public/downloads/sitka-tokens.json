@@ -595,37 +595,37 @@
     },
     "fontWeight": {
       "regular": {
-        "$value": "400",
+        "$value": 400,
         "$type": "fontWeight"
       },
       "medium": {
-        "$value": "500",
+        "$value": 500,
         "$type": "fontWeight"
       },
       "semibold": {
-        "$value": "600",
+        "$value": 600,
         "$type": "fontWeight"
       },
       "bold": {
-        "$value": "700",
+        "$value": 700,
         "$type": "fontWeight"
       }
     },
     "lineHeight": {
       "tight": {
-        "$value": "1.25",
+        "$value": 1.25,
         "$type": "number"
       },
       "snug": {
-        "$value": "1.375",
+        "$value": 1.375,
         "$type": "number"
       },
       "normal": {
-        "$value": "1.5",
+        "$value": 1.5,
         "$type": "number"
       },
       "relaxed": {
-        "$value": "1.625",
+        "$value": 1.625,
         "$type": "number"
       }
     },
@@ -673,9 +673,10 @@
           "$value": "{typography.letterSpacing.overline}",
           "$type": "dimension"
         },
-        "textTransform": {
-          "$value": "uppercase",
-          "$type": "string"
+        "$extensions": {
+          "design.sitka": {
+            "textTransform": "uppercase"
+          }
         }
       }
     }
@@ -708,51 +709,209 @@
   },
   "shadow": {
     "sm": {
-      "$value": "0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06)",
+      "$value": [
+        {
+          "color": "#00000014",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "3px",
+          "spread": "0px"
+        },
+        {
+          "color": "#0000000f",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "2px",
+          "spread": "0px"
+        }
+      ],
       "$type": "shadow"
     },
     "md": {
-      "$value": "0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.06)",
+      "$value": [
+        {
+          "color": "#00000014",
+          "offsetX": "0px",
+          "offsetY": "4px",
+          "blur": "16px",
+          "spread": "0px"
+        },
+        {
+          "color": "#0000000f",
+          "offsetX": "0px",
+          "offsetY": "2px",
+          "blur": "6px",
+          "spread": "0px"
+        }
+      ],
       "$type": "shadow"
     },
     "lg": {
-      "$value": "0 8px 32px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.06)",
+      "$value": [
+        {
+          "color": "#0000001a",
+          "offsetX": "0px",
+          "offsetY": "8px",
+          "blur": "32px",
+          "spread": "0px"
+        },
+        {
+          "color": "#0000000f",
+          "offsetX": "0px",
+          "offsetY": "4px",
+          "blur": "12px",
+          "spread": "0px"
+        }
+      ],
       "$type": "shadow"
     },
     "xl": {
-      "$value": "0 16px 48px rgba(0,0,0,0.14), 0 8px 20px rgba(0,0,0,0.08)",
+      "$value": [
+        {
+          "color": "#00000024",
+          "offsetX": "0px",
+          "offsetY": "16px",
+          "blur": "48px",
+          "spread": "0px"
+        },
+        {
+          "color": "#00000014",
+          "offsetX": "0px",
+          "offsetY": "8px",
+          "blur": "20px",
+          "spread": "0px"
+        }
+      ],
       "$type": "shadow"
     },
     "glass": {
-      "$value": "0 0 0 1px rgba(255,255,255,0.08), 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)",
+      "$value": [
+        {
+          "color": "#ffffff14",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "blur": "0px",
+          "spread": "1px"
+        },
+        {
+          "color": "#0000001f",
+          "offsetX": "0px",
+          "offsetY": "8px",
+          "blur": "32px",
+          "spread": "0px"
+        },
+        {
+          "color": "#00000014",
+          "offsetX": "0px",
+          "offsetY": "2px",
+          "blur": "8px",
+          "spread": "0px"
+        }
+      ],
       "$type": "shadow"
     },
     "glassDark": {
-      "$value": "0 0 0 1px rgba(255,255,255,0.06), 0 8px 40px rgba(0,0,0,0.4), 0 2px 12px rgba(0,0,0,0.3)",
+      "$value": [
+        {
+          "color": "#ffffff0f",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "blur": "0px",
+          "spread": "1px"
+        },
+        {
+          "color": "#00000066",
+          "offsetX": "0px",
+          "offsetY": "8px",
+          "blur": "40px",
+          "spread": "0px"
+        },
+        {
+          "color": "#0000004c",
+          "offsetX": "0px",
+          "offsetY": "2px",
+          "blur": "12px",
+          "spread": "0px"
+        }
+      ],
       "$type": "shadow"
     },
     "glow": {
-      "$value": "0 0 0 1px rgba(52,168,101,0.3), 0 0 20px rgba(52,168,101,0.15)",
+      "$value": [
+        {
+          "color": "#34a8654c",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "blur": "0px",
+          "spread": "1px"
+        },
+        {
+          "color": "#34a86526",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "blur": "20px",
+          "spread": "0px"
+        }
+      ],
       "$type": "shadow"
     },
     "card": {
-      "$value": "0 2px 12px rgba(0,0,0,0.10)",
+      "$value": {
+        "color": "#0000001a",
+        "offsetX": "0px",
+        "offsetY": "2px",
+        "blur": "12px",
+        "spread": "0px"
+      },
       "$type": "shadow"
     },
     "lifted": {
-      "$value": "0 4px 18px rgba(0,0,0,0.14)",
+      "$value": {
+        "color": "#00000024",
+        "offsetX": "0px",
+        "offsetY": "4px",
+        "blur": "18px",
+        "spread": "0px"
+      },
       "$type": "shadow"
     },
     "sheet": {
-      "$value": "0 8px 28px rgba(0,0,0,0.20)",
+      "$value": {
+        "color": "#00000033",
+        "offsetX": "0px",
+        "offsetY": "8px",
+        "blur": "28px",
+        "spread": "0px"
+      },
       "$type": "shadow"
     },
     "overlay": {
-      "$value": "0 16px 48px rgba(0,0,0,0.28), 0 8px 20px rgba(0,0,0,0.12)",
+      "$value": [
+        {
+          "color": "#00000047",
+          "offsetX": "0px",
+          "offsetY": "16px",
+          "blur": "48px",
+          "spread": "0px"
+        },
+        {
+          "color": "#0000001f",
+          "offsetX": "0px",
+          "offsetY": "8px",
+          "blur": "20px",
+          "spread": "0px"
+        }
+      ],
       "$type": "shadow"
     },
     "chromium": {
-      "$value": "0 -2px 12px rgba(0,0,0,0.2)",
+      "$value": {
+        "color": "#00000033",
+        "offsetX": "0px",
+        "offsetY": "-2px",
+        "blur": "12px",
+        "spread": "0px"
+      },
       "$type": "shadow"
     }
   },
@@ -785,117 +944,220 @@
     },
     "easing": {
       "linear": {
-        "$value": "linear",
+        "$value": [
+          0,
+          0,
+          1,
+          1
+        ],
         "$type": "cubicBezier"
       },
       "easeIn": {
-        "$value": "cubic-bezier(0.4, 0, 1, 1)",
+        "$value": [
+          0.4,
+          0,
+          1,
+          1
+        ],
         "$type": "cubicBezier"
       },
       "easeOut": {
-        "$value": "cubic-bezier(0, 0, 0.2, 1)",
+        "$value": [
+          0,
+          0,
+          0.2,
+          1
+        ],
         "$type": "cubicBezier"
       },
       "easeInOut": {
-        "$value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "$value": [
+          0.4,
+          0,
+          0.2,
+          1
+        ],
         "$type": "cubicBezier"
       },
       "spring": {
-        "$value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "$value": [
+          0.16,
+          1,
+          0.3,
+          1
+        ],
         "$type": "cubicBezier"
       },
       "springBouncy": {
-        "$value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "$value": [
+          0.34,
+          1.56,
+          0.64,
+          1
+        ],
         "$type": "cubicBezier"
       }
     },
     "presets": {
       "pressSpring": {
-        "$value": "stiffness 500, damping 40",
-        "$type": "string"
+        "$description": "Spring (no DTCG type yet): stiffness and damping as numbers.",
+        "stiffness": {
+          "$value": 500,
+          "$type": "number"
+        },
+        "damping": {
+          "$value": 40,
+          "$type": "number"
+        }
       },
       "panelSpring": {
-        "$value": "stiffness 300, damping 30",
-        "$type": "string"
+        "$description": "Spring (no DTCG type yet): stiffness and damping as numbers.",
+        "stiffness": {
+          "$value": 300,
+          "$type": "number"
+        },
+        "damping": {
+          "$value": 30,
+          "$type": "number"
+        }
       },
       "pageTransition": {
-        "$value": "easeOut 300ms",
-        "$type": "string"
+        "$value": {
+          "duration": "300ms",
+          "delay": "0ms",
+          "timingFunction": "{motion.easing.easeOut}"
+        },
+        "$type": "transition"
       },
       "hoverTransition": {
-        "$value": "easeOut 150ms",
-        "$type": "string"
+        "$value": {
+          "duration": "150ms",
+          "delay": "0ms",
+          "timingFunction": "{motion.easing.easeOut}"
+        },
+        "$type": "transition"
       },
       "stream": {
-        "$value": "stiffness 200, damping 25",
-        "$type": "string"
+        "$description": "Spring (no DTCG type yet): stiffness and damping as numbers.",
+        "stiffness": {
+          "$value": 200,
+          "$type": "number"
+        },
+        "damping": {
+          "$value": 25,
+          "$type": "number"
+        }
       },
       "sheetEntry": {
-        "$value": "easeOut 250ms",
-        "$type": "string"
+        "$value": {
+          "duration": "250ms",
+          "delay": "0ms",
+          "timingFunction": "{motion.easing.easeOut}"
+        },
+        "$type": "transition"
       },
       "cardAppear": {
-        "$value": "easeOut 300ms",
-        "$type": "string"
+        "$value": {
+          "duration": "300ms",
+          "delay": "0ms",
+          "timingFunction": "{motion.easing.easeOut}"
+        },
+        "$type": "transition"
       },
       "dropSpring": {
-        "$value": "stiffness 300, damping 30",
-        "$type": "string"
+        "$description": "Spring (no DTCG type yet): stiffness and damping as numbers.",
+        "stiffness": {
+          "$value": 300,
+          "$type": "number"
+        },
+        "damping": {
+          "$value": 30,
+          "$type": "number"
+        }
       },
       "progressFill": {
-        "$value": "stiffness 400, damping 75",
-        "$type": "string"
+        "$description": "Spring (no DTCG type yet): stiffness and damping as numbers.",
+        "stiffness": {
+          "$value": 400,
+          "$type": "number"
+        },
+        "damping": {
+          "$value": 75,
+          "$type": "number"
+        }
       },
       "alluvial": {
-        "$value": "stiffness 650, damping 82",
-        "$type": "string"
+        "$description": "Spring (no DTCG type yet): stiffness and damping as numbers.",
+        "stiffness": {
+          "$value": 650,
+          "$type": "number"
+        },
+        "damping": {
+          "$value": 82,
+          "$type": "number"
+        }
       },
       "arcRing": {
-        "$value": "easeOut 400ms",
-        "$type": "string"
+        "$value": {
+          "duration": "400ms",
+          "delay": "0ms",
+          "timingFunction": "{motion.easing.easeOut}"
+        },
+        "$type": "transition"
       },
       "chipTap": {
-        "$value": "stiffness 220, damping 65",
-        "$type": "string",
-        "comment": "Restored — announced in 1.6.0 but missing from tokens.json since. Derived from the iOS spring(response: 0.22, dampingFraction: 0.65) used consistently in the SF-dialect apps via stiffness=response*1000, damping=dampingFraction*100 (the same conversion that holds exactly for progressFill and alluvial above)."
+        "$description": "Spring (no DTCG type yet): stiffness and damping as numbers.",
+        "stiffness": {
+          "$value": 220,
+          "$type": "number"
+        },
+        "damping": {
+          "$value": 65,
+          "$type": "number"
+        },
+        "$extensions": {
+          "design.sitka": {
+            "note": "Restored — announced in 1.6.0 but missing from tokens.json since. Derived from the iOS spring(response: 0.22, dampingFraction: 0.65) used consistently in the SF-dialect apps via stiffness=response*1000, damping=dampingFraction*100 (the same conversion that holds exactly for progressFill and alluvial above)."
+          }
+        }
       }
     }
   },
   "zIndex": {
     "base": {
-      "$value": "0",
+      "$value": 0,
       "$type": "number"
     },
     "raised": {
-      "$value": "1",
+      "$value": 1,
       "$type": "number"
     },
     "dropdown": {
-      "$value": "10",
+      "$value": 10,
       "$type": "number"
     },
     "sticky": {
-      "$value": "20",
+      "$value": 20,
       "$type": "number"
     },
     "overlay": {
-      "$value": "30",
+      "$value": 30,
       "$type": "number"
     },
     "modal": {
-      "$value": "40",
+      "$value": 40,
       "$type": "number"
     },
     "toast": {
-      "$value": "50",
+      "$value": 50,
       "$type": "number"
     },
     "window": {
-      "$value": "100",
+      "$value": 100,
       "$type": "number"
     },
     "systemOverlay": {
-      "$value": "200",
+      "$value": 200,
       "$type": "number"
     }
   },
@@ -974,19 +1236,19 @@
     },
     "scale": {
       "none": {
-        "$value": "1",
+        "$value": 1,
         "$type": "number"
       },
       "sm": {
-        "$value": "1.02",
+        "$value": 1.02,
         "$type": "number"
       },
       "md": {
-        "$value": "1.04",
+        "$value": 1.04,
         "$type": "number"
       },
       "lg": {
-        "$value": "1.08",
+        "$value": 1.08,
         "$type": "number"
       }
     }
@@ -994,19 +1256,19 @@
   "materials": {
     "opacity": {
       "transparent": {
-        "$value": "0",
+        "$value": 0,
         "$type": "number"
       },
       "translucent": {
-        "$value": "0.3",
+        "$value": 0.3,
         "$type": "number"
       },
       "frosted": {
-        "$value": "0.5",
+        "$value": 0.5,
         "$type": "number"
       },
       "opaque": {
-        "$value": "0.8",
+        "$value": 0.8,
         "$type": "number"
       }
     },
@@ -1050,7 +1312,7 @@
     },
     "tint": {
       "none": {
-        "$value": "transparent",
+        "$value": "#00000000",
         "$type": "color"
       },
       "subtle": {
@@ -1112,19 +1374,43 @@
     },
     "glow": {
       "none": {
-        "$value": "0 0 0 0 transparent",
+        "$value": {
+          "color": "#00000000",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "blur": "0px",
+          "spread": "0px"
+        },
         "$type": "shadow"
       },
       "soft": {
-        "$value": "0 0 8px 2px rgba(0,192,232,0.2)",
+        "$value": {
+          "color": "#00c0e833",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "blur": "8px",
+          "spread": "2px"
+        },
         "$type": "shadow"
       },
       "medium": {
-        "$value": "0 0 16px 4px rgba(0,192,232,0.25)",
+        "$value": {
+          "color": "#00c0e840",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "blur": "16px",
+          "spread": "4px"
+        },
         "$type": "shadow"
       },
       "strong": {
-        "$value": "0 0 24px 6px rgba(0,192,232,0.3)",
+        "$value": {
+          "color": "#00c0e84c",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "blur": "24px",
+          "spread": "6px"
+        },
         "$type": "shadow"
       }
     }
@@ -1174,48 +1460,35 @@
     },
     "shadow": {
       "value": {
-        "$value": "0 -2px 12px rgba(0,0,0,0.2)",
+        "$value": {
+          "color": "#00000033",
+          "offsetX": "0px",
+          "offsetY": "-2px",
+          "blur": "12px",
+          "spread": "0px"
+        },
         "$type": "shadow"
       }
     }
   },
   "haptic": {
-    "impact": {
-      "light": {
-        "$value": "light",
-        "$type": "string"
-      },
-      "medium": {
-        "$value": "medium",
-        "$type": "string"
-      },
-      "heavy": {
-        "$value": "heavy",
-        "$type": "string"
-      }
-    },
-    "notification": {
-      "success": {
-        "$value": "success",
-        "$type": "string"
-      },
-      "warning": {
-        "$value": "warning",
-        "$type": "string"
-      },
-      "error": {
-        "$value": "error",
-        "$type": "string"
-      }
-    },
-    "selection": {
-      "click": {
-        "$value": "click",
-        "$type": "string"
-      },
-      "pick": {
-        "$value": "pick",
-        "$type": "string"
+    "$description": "Haptic feedback names per platform API. Not visual tokens, so stored as extension data rather than typed tokens.",
+    "$extensions": {
+      "design.sitka.haptics": {
+        "impact": [
+          "light",
+          "medium",
+          "heavy"
+        ],
+        "notification": [
+          "success",
+          "warning",
+          "error"
+        ],
+        "selection": [
+          "click",
+          "pick"
+        ]
       }
     }
   },
@@ -1223,7 +1496,7 @@
     "tap": {
       "duration": {
         "$value": "{motion.duration.instant}",
-        "$type": "reference"
+        "$type": "duration"
       },
       "maxDelay": {
         "$value": "300ms",
@@ -1232,8 +1505,9 @@
     },
     "swipe": {
       "velocity": {
-        "$value": "800px/s",
-        "$type": "string"
+        "$value": 800,
+        "$type": "number",
+        "$description": "Minimum swipe velocity in points per second."
       },
       "threshold": {
         "$value": "50px",
@@ -1258,21 +1532,21 @@
     },
     "pinch": {
       "minScale": {
-        "$value": "0.5",
+        "$value": 0.5,
         "$type": "number"
       },
       "maxScale": {
-        "$value": "2.0",
+        "$value": 2,
         "$type": "number"
       }
     },
     "rotation": {
       "minDegrees": {
-        "$value": "-180",
+        "$value": -180,
         "$type": "number"
       },
       "maxDegrees": {
-        "$value": "180",
+        "$value": 180,
         "$type": "number"
       }
     }

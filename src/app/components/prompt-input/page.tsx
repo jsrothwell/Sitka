@@ -21,7 +21,7 @@ const CODE = {
   react: {
     filename: "PromptInput.tsx",
     code: `import { PromptInput } from "@/components/ui/PromptInput";
-import { PaperclipIcon, SendIcon } from "@phosphor-icons/react";
+import { Paperclip as PaperclipIcon, Send as SendIcon } from "lucide-react";
 import { useState } from "react";
 
 export default function ChatInputDemo() {

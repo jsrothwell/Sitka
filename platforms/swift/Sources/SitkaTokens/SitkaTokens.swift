@@ -287,6 +287,54 @@ public enum SitkaTokens {
         public static let slower: Double = 0.6
         public static let typewriter: Double = 0.03
     }
+
+    /// Component tier (src/tokens/components.json): which theme token each component part uses.
+    /// Use with `Color.sitka(SitkaTokens.Component.Button.primaryBackground)`.
+    public enum Component {
+        public enum Button {
+            public static var primaryBackground: KeyPath<Theme, SitkaRGBA> { \.accent }
+            public static var primaryForeground: KeyPath<Theme, SitkaRGBA> { \.onAccent }
+            public static var secondaryBackground: KeyPath<Theme, SitkaRGBA> { \.surface }
+            public static var secondaryForeground: KeyPath<Theme, SitkaRGBA> { \.textPrimary }
+            public static var secondaryBorder: KeyPath<Theme, SitkaRGBA> { \.border }
+            public static var secondaryBorderHover: KeyPath<Theme, SitkaRGBA> { \.accent }
+            public static var ghostForeground: KeyPath<Theme, SitkaRGBA> { \.textSecondary }
+            public static var ghostBackgroundHover: KeyPath<Theme, SitkaRGBA> { \.surface }
+            public static var ghostForegroundHover: KeyPath<Theme, SitkaRGBA> { \.textPrimary }
+            public static var dangerBackground: KeyPath<Theme, SitkaRGBA> { \.dangerSolid }
+            public static var dangerForeground: KeyPath<Theme, SitkaRGBA> { \.onDanger }
+        }
+        public enum Badge {
+            public static var defaultBackground: KeyPath<Theme, SitkaRGBA> { \.surfaceRaised }
+            public static var defaultForeground: KeyPath<Theme, SitkaRGBA> { \.textSecondary }
+            public static var primaryBackground: KeyPath<Theme, SitkaRGBA> { \.accentSubtle }
+            public static var primaryForeground: KeyPath<Theme, SitkaRGBA> { \.accentText }
+            public static var successBackground: KeyPath<Theme, SitkaRGBA> { \.statusSuccess }
+            public static var successForeground: KeyPath<Theme, SitkaRGBA> { \.statusSuccessText }
+            public static var warningBackground: KeyPath<Theme, SitkaRGBA> { \.statusWarning }
+            public static var warningForeground: KeyPath<Theme, SitkaRGBA> { \.statusWarningText }
+            public static var dangerBackground: KeyPath<Theme, SitkaRGBA> { \.statusDanger }
+            public static var dangerForeground: KeyPath<Theme, SitkaRGBA> { \.statusDangerText }
+        }
+        public enum Input {
+            public static var background: KeyPath<Theme, SitkaRGBA> { \.surface }
+            public static var foreground: KeyPath<Theme, SitkaRGBA> { \.textPrimary }
+            public static var placeholder: KeyPath<Theme, SitkaRGBA> { \.textTertiary }
+            public static var border: KeyPath<Theme, SitkaRGBA> { \.border }
+            public static var borderFocus: KeyPath<Theme, SitkaRGBA> { \.accent }
+            public static var borderError: KeyPath<Theme, SitkaRGBA> { \.statusDanger }
+            public static var errorText: KeyPath<Theme, SitkaRGBA> { \.statusDangerText }
+        }
+        public enum Card {
+            public static var background: KeyPath<Theme, SitkaRGBA> { \.surface }
+            public static var border: KeyPath<Theme, SitkaRGBA> { \.border }
+            public static var title: KeyPath<Theme, SitkaRGBA> { \.textPrimary }
+            public static var body: KeyPath<Theme, SitkaRGBA> { \.textSecondary }
+        }
+        public enum Link {
+            public static var foreground: KeyPath<Theme, SitkaRGBA> { \.accentText }
+        }
+    }
 }
 
 #if canImport(SwiftUI)

@@ -82,6 +82,27 @@ export default function LibraryTokensPage() {
           />
         </section>
 
+        {/* Component tier */}
+        <section>
+          <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1">Component tokens</h2>
+          <p className="text-[14px] text-[rgb(var(--text-secondary))] mb-4">
+            A third tier sits on top of the theme tokens. <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">src/tokens/components.json</code> names the theme token each component part uses, and <code className="font-mono text-[rgb(var(--accent-text))] text-[12px]">npm run generate</code> turns it into CSS variables and Swift key paths. Restyle a component by changing one line there, not every usage.
+          </p>
+          <CodeBlock
+            language="css"
+            filename="tokens.components.css (generated)"
+            code={`--button-primary-background: var(--accent);
+--button-primary-foreground: var(--on-accent);
+--badge-success-foreground:  var(--status-success-text);
+
+.my-button { background: rgb(var(--button-primary-background)); color: rgb(var(--button-primary-foreground)); }`}
+          />
+          <CodeBlock
+            language="swift"
+            code={`Color.sitka(SitkaTokens.Component.Button.primaryBackground)`}
+          />
+        </section>
+
         {/* Option B — JSON */}
         <section>
           <h2 className="text-[20px] font-semibold text-[rgb(var(--text-primary))] mb-1">Option B — JSON (DTCG)</h2>
