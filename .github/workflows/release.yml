@@ -1,0 +1,41 @@
+name: Release
+
+# After a merge to main, tags the version in package.json (if it isn't tagged yet) and
+# publishes a GitHub release whose notes come from CHANGELOG.md. The tag is what Swift
+# Package Manager resolves, so `from: "1.13.0"` works as soon as the release exists.
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+
+      - name: Tag and release if this version is new
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          TAG="v$VERSION"
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "$TAG already exists; nothing to release."
+            exit 0
+          fi
+          node scripts/release/notes.mjs "$VERSION" > notes.md
+          gh release create "$TAG" --target "$GITHUB_SHA" --title "Sitka $VERSION" --notes-file notes.md \
+            public/downloads/SitkaTokens.swift public/downloads/sitka-tokens.json \
+            public/downloads/sitka-design-system.fig public/downloads/sitka-design-system.figcraft

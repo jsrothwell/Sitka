@@ -21,7 +21,9 @@
     "figma:publish": "figma connect publish && figma connect publish --dir .figma/swiftui",
     "generate": "node scripts/tokens/build.mjs && node scripts/figma/drift.mjs && node scripts/agents/build.mjs",
     "figma:drift": "node scripts/figma/drift.mjs",
-    "agents:build": "node scripts/agents/build.mjs"
+    "agents:build": "node scripts/agents/build.mjs",
+    "version:sync": "node scripts/release/sync-versions.mjs",
+    "version": "node scripts/release/sync-versions.mjs && npm run generate && git add -A packages/sitka-ui/package.json platforms/react-native/package.json src/tokens/tokens.json platforms/swift platforms/figma public/downloads public/llms.txt public/components.json src/site/home/figma-drift.json"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.8",

@@ -36,6 +36,14 @@ Resolves the two token decisions from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §
 - Code Connect: 11 most-imported components (Button, Input, Badge, Checkbox, Radio, Select, Avatar, CodeBlock, Card, Tabs, Switch) mapped for React (`sitka-ui` imports) and SwiftUI (native SwiftUI + SitkaTokens), checked against the live Figma file. The 26 older mappings had node IDs or property names that don't exist in the file and moved to `.figma/unverified/`.
 - `public/llms.txt` and `public/components.json` for coding agents, generated from navigation, page descriptions and component prop types.
 
+### 2027 readiness: Area 2, distribution and versioning
+
+- One version source: `npm version <patch|minor|major>` now syncs `sitka-ui`, React Native and `tokens.json` (`scripts/release/sync-versions.mjs`) and regenerates platform files. `src/__tests__/versions.test.ts` fails if any of them, the lockfile or the Swift tokens disagree. `sitka-ui` moves from 1.3.0 to 1.13.0; the lockfile root from 1.6.0.
+- `.github/workflows/release.yml` tags `v<version>` after a merge to main and publishes a GitHub release with notes from `CHANGELOG.md` and the token, Swift and Figma files attached. The tag is what Swift Package Manager resolves.
+- The changelog page renders from `CHANGELOG.md` instead of a hand-copied array. 1.7.0, which only existed on the site, is now in `CHANGELOG.md`, and every release has a summary. `src/__tests__/changelog.test.ts` checks order, dates and that the current version has an entry.
+- The homepage footer version reads `package.json`.
+- `platforms/react-native/package.json` was a JavaScript module, not JSON, so npm couldn't read it; it's now valid JSON.
+
 #### Fixed
 - `packages/sitka-ui` imported `../../src/…`, which resolves to a folder that doesn't exist; it now type-checks. `CardHeader`, `CardBody` and `CardFooter` are exported.
 - ESLint never loaded the Sitka token plugin (`require` in an ES module); `npm run lint` failed because eslint wasn't installed. Lint now runs with 0 errors.
@@ -76,6 +84,8 @@ Completes the candidate list from `CROSS_APP_PATTERN_AUDIT_2026-11-21.md` §2. N
 
 ## [1.11.0] - 2026-11-21
 
+Cross-app pattern pass over Get Parked, JobFlo, scanflo, Fractionflo and Blackbox 1981: one new component, eight new patterns and a new paywall variant, all built from existing tokens. Closes the open items from the 2026-09-22 JobFlo audit. No token changes; token findings are in CROSS_APP_PATTERN_AUDIT_2026-11-21.md.
+
 ### Added
 
 Cross-app pattern pass over Get Parked, JobFlo (since 2026-09-22), scanflo, Fractionflo and Blackbox 1981. Full findings in `CROSS_APP_PATTERN_AUDIT_2026-11-21.md`.
@@ -101,6 +111,8 @@ Cross-app pattern pass over Get Parked, JobFlo (since 2026-09-22), scanflo, Frac
 
 ## [1.10.0] - 2026-09-22
 
+Kitchen-sink internal QA page, a blur-behind-lock paywall variant, and two new patterns (Journey Timeline, Live Activities) from a JobFlo delta audit — a follow-up pass on ~91 commits since the 1.9.0 ecosystem audit. No token changes this pass; two new ad-hoc accent colors were deliberately left out pending the still-open per-app-accent decision from 1.9.0.
+
 ### Added
 
 - `/kitchen-sink` — internal-only live component preview page (Button, Input, Card, Badge, Typography, Layout, Glassmorphism) for visual QA and token verification. Not linked from the sidebar.
@@ -118,6 +130,8 @@ Reviewed JobFlo's ~91 commits since the 1.9.0 ecosystem audit for new design-sys
 - Two new ad-hoc violet accents surfaced (paywall lock CTA, letter-grade badge) — both are the same unresolved per-app accent question from 1.9.0's audit (§2.2), not new problems.
 
 ## [1.9.0] - 2026-07-29
+
+Ecosystem audit across all 8 consuming app repos (workflo, Warren, orgflo, Muse, matchflo, JobFlo, invoiceflo, habitflo) and the central SitkaFlo Swift package. New ghost/personalization/categorical color tokens and a restored chipTap motion preset; every finding requiring a design decision — three incompatible motion vocabularies, a light-mode contrast failure, five diverging brand accents, a gap/caution naming collision, and 17 candidate new components — is catalogued in ECOSYSTEM_AUDIT_2026-07-29.md rather than auto-applied.
 
 ### Ecosystem audit
 
@@ -141,6 +155,8 @@ Reviewed all eight consuming app repos (`workflo`, `Warren`, `orgflo`, `Muse`, `
 - `motion.presets.chipTap` — announced as added in 1.6.0 but absent from `tokens.json` since; restored as `stiffness 220, damping 65`.
 
 ## [1.8.0] - 2026-07-09
+
+Progress Bar, KPI Tile, Gauge, and Context Menu components with new design tokens for progress tracking and typography.
 
 ### Added
 
@@ -172,7 +188,27 @@ Reviewed all eight consuming app repos (`workflo`, `Warren`, `orgflo`, `Muse`, `
 - Typography scale: renamed `3xl` to 28px, `4xl` to 34px, removed `5xl` in favor of `display` at 48px
 - Progress tokens now defined in both dark and light theme sections
 
+## [1.7.0] - 2026-07-02
+
+Source alignment: typed TypeScript token layer, design-system umbrella, site/library separation, and a vitest test suite — bringing the web codebase into structural parity with the Swift SitkaTokens convention.
+
+### Added
+- Typed token layer — src/design-system/tokens/ with typed TS constants (colors, spacing, typography, motion, radius) mirroring the Swift SitkaTokens namespace
+- Glass abstraction — glassSurface() className factory centralising blur/opacity values; Button and Card now consume it instead of inline Tailwind strings
+- Motion presets — src/design-system/motion/ with spring(), fadeIn(), scaleIn() constants mirroring SFMotion.press / SFMotion.cardAppear
+- Platform hooks — useReducedMotion and usePlatform in src/design-system/hooks/
+- Design-system umbrella — src/design-system/index.ts barrel re-exporting tokens, glass, motion, and hooks
+- Component barrel — src/components/ui/index.ts named-export barrel for all 43 UI components
+- Vitest test suite — 11 tests covering token values, Button rendering, and Card variants; vitest.config.ts with @/ path alias
+
+### Changed
+- Website chrome isolated to src/site/ (layout, docs, search, navigation) — no longer co-mingled with the component library under src/components/
+- 37 *.figma.tsx Figma Code Connect sidecars relocated from src/components/ui/ to .figma/src/ — eliminating IDE noise and Git conflict risk on every Figma sync
+- src/lib/ scoped to library utilities only; navigation.ts moved to src/site/navigation.ts
+
 ## [1.6.0] - 2026-06-12
+
+watchOS habit-tracking patterns, Quick Log, Barcode Scanner, GTD Task Inbox, new components (KPI Tile, Arc Gauge, Streak Ring, Payment Progress, Snackbar, Segmented Button Simple) — sourced from habitflo, workflo, scanflo, orgflo, invoiceflo, and JobFlo.
 
 ### Added
 
@@ -208,6 +244,8 @@ Reviewed all eight consuming app repos (`workflo`, `Warren`, `orgflo`, `Muse`, `
 
 ## [1.5.0] - 2026-06-03
 
+Interview Prep Hub, Ghost Employer Tracking, multi-provider Timesheet Sync, and QR local-network pairing — all sourced from JobFlo v1.5 and Warren's May sprint.
+
 ### Added
 
 #### New Pattern Pages
@@ -223,6 +261,8 @@ Reviewed all eight consuming app repos (`workflo`, `Warren`, `orgflo`, `Muse`, `
 
 ## [1.4.0] - 2026-06-02
 
+Voice Memo & Dictation, Interview Email Parser, Document Assembler, and Compensation Take-Home Calculator.
+
 ### Added
 
 #### New Pattern Pages
@@ -237,6 +277,8 @@ Reviewed all eight consuming app repos (`workflo`, `Warren`, `orgflo`, `Muse`, `
 - Added Voice Memo, Interview Parser, and Document Assembler to the "Mobile" patterns group with "New" badges.
 
 ## [1.3.0] - 2026-05-08
+
+New components, expanded CLI registry, sitka-ui npm package, and Figma library documentation.
 
 ### Added
 
@@ -268,6 +310,8 @@ Reviewed all eight consuming app repos (`workflo`, `Warren`, `orgflo`, `Muse`, `
 
 ## [1.2.0] - 2026-05-08
 
+Eight new components and full documentation for eight previously undocumented components.
+
 ### Added
 - **New Components (8)**: Collapsible, Pagination, Spinner, Divider, Label, Toggle / Toggle Group, File Upload / Drop Zone, Drawer — each with full doc pages (Preview, States/Sizes, Motion, Implementation, Props, ARIA roles, Keyboard, Accessibility).
 - **New Component Pages (8)**: Checkbox, Radio, Select, Switch, Tabs, Textarea, Command Palette, Sidebar — previously undocumented components now have complete reference pages.
@@ -276,6 +320,8 @@ Reviewed all eight consuming app repos (`workflo`, `Warren`, `orgflo`, `Muse`, `
 - **Keyboard navigation tables**: Added keyboard interaction model tables to all 13 interactive component pages, covering focus management, activation keys, and dismiss gestures.
 
 ## [1.1.0] - 2026-05-08
+
+New components, patterns, and accessibility improvements.
 
 ### Added
 - **New Components**: Slider (single/range), Date-Time Pickers (calendar/time), Carousel (auto-advancing), and Snackbar (notifications).
@@ -287,6 +333,8 @@ Reviewed all eight consuming app repos (`workflo`, `Warren`, `orgflo`, `Muse`, `
 - **Accessibility**: Replaced hardcoded grey hex values with semantic tokens for consistent accessibility.
 
 ## [1.0.0] - 2026-05-05
+
+Initial public release of Sitka Design System.
 
 ### Added
 - **17 Component Pages**: Button, Input, Modal, Navigation, Card, Badge, Avatar, Tooltip, Form Controls, Table, Split Button, Segmented Button, Breadcrumb, Combobox, Date Range Picker, Bottom Tab Bar, Bottom Sheet, Chip, Slider, Snackbar, Carousel.
